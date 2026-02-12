@@ -15,7 +15,7 @@ const WhyFit: React.FC = () => {
         </div>
         <h2 className="text-3xl md:text-5xl font-serif-heading font-bold text-white mb-6">
           Why I am the Perfect Fit for <br className="md:hidden" />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-gold to-white">Mazelon</span>
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-gold to-white">Mazelone</span>
         </h2>
         <p className="text-primary-muted max-w-2xl mx-auto font-light leading-relaxed">
           AI 모델 최적화부터 MLOps 파이프라인 구축까지.<br className="hidden md:block"/>
@@ -53,7 +53,7 @@ const WhyFit: React.FC = () => {
                 <div className="pt-6 border-t border-white/5 mt-auto">
                   <p className="text-xs text-accent-soft font-medium flex items-center gap-2 mb-2">
                     <Target className="w-3 h-3" />
-                    Mazelon Needs:
+                    Mazelone Needs:
                   </p>
                   <p className="text-xs text-white/70 pl-5 leading-relaxed bg-white/5 p-2 rounded">
                     {item.match}
