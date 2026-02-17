@@ -10,8 +10,14 @@ import { Certifications, EducationAndLanguages, Footer } from './components/Extr
 const App: React.FC = () => {
   return (
     <div className="antialiased min-h-screen bg-[#050505]">
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-white focus:px-4 focus:py-2 focus:text-black"
+      >
+        Skip to main content
+      </a>
       <Navbar />
-      <main>
+      <main id="main-content">
         <Hero />
         <WhyFit />
         <Skills />
