@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -12,14 +12,55 @@ const navItems = [
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const scrollRaf = useRef<number | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      if (scrollRaf.current !== null) {
+        return;
+      }
+      scrollRaf.current = window.requestAnimationFrame(() => {
+        setScrolled(window.scrollY > 50);
+        scrollRaf.current = null;
+      });
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (scrollRaf.current !== null) {
+        window.cancelAnimationFrame(scrollRaf.current);
+      }
+    };
   }, []);
+
+  useEffect(() => {
+    if (!isOpen) {
+      return;
+    }
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setIsOpen(false);
+      }
+    };
+    window.addEventListener('keydown', handleEscape);
+    return () => window.removeEventListener('keydown', handleEscape);
+  }, [isOpen]);
+
+  useEffect(() => {
+    if (!isOpen) {
+      return;
+    }
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [isOpen]);
+
+  const getScrollBehavior = (): ScrollBehavior => {
+    return window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+  };
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
@@ -30,7 +71,7 @@ const Navbar: React.FC = () => {
       const offsetPosition = elementPosition + window.pageYOffset - offset;
       window.scrollTo({
         top: offsetPosition,
-        behavior: 'smooth'
+        behavior: getScrollBehavior()
       });
       setIsOpen(false);
     }
@@ -43,7 +84,7 @@ const Navbar: React.FC = () => {
           <div className="flex-shrink-0 flex items-center">
             <button
               type="button"
-              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              onClick={() => window.scrollTo({ top: 0, behavior: getScrollBehavior() })}
               className="text-xl font-serif-heading font-medium text-white tracking-tight focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 rounded-sm"
               aria-label="Scroll to top"
             >
