@@ -5,6 +5,7 @@ import WhyFit from './components/WhyFit';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Experience from './components/Experience';
+import CommunityHub from './components/CommunityHub';
 import { Certifications, EducationAndLanguages, Footer } from './components/Extras';
 
 const App: React.FC = () => {
@@ -25,6 +26,7 @@ const App: React.FC = () => {
         <Experience />
         <Certifications />
         <EducationAndLanguages />
+        <CommunityHub />
       </main>
       <Footer />
     </div>
