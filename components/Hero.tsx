@@ -42,15 +42,31 @@ const Hero: React.FC = () => {
             </h2>
 
             <div className="flex justify-center lg:justify-start gap-6">
-              <a href={`mailto:${PROFILE.email}`} className="flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 hover:border-accent-gold/50 transition-all group">
+              <a
+                href={`mailto:${PROFILE.email}`}
+                className="flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 hover:border-accent-gold/50 transition-all group"
+                aria-label="Send email"
+              >
                 <Mail className="w-5 h-5 text-accent-gold group-hover:scale-110 transition-transform" />
                 <span className="text-sm font-medium text-primary">Contact Me</span>
               </a>
               <div className="flex gap-4">
-                <a href={PROFILE.github} target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/30 transition-all text-primary hover:text-white">
+                <a
+                  href={PROFILE.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/30 transition-all text-primary hover:text-white"
+                  aria-label="Open GitHub profile"
+                >
                     <Github className="w-5 h-5" />
                 </a>
-                <a href={PROFILE.linkedin} target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/30 transition-all text-primary hover:text-white">
+                <a
+                  href={PROFILE.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/30 transition-all text-primary hover:text-white"
+                  aria-label="Open LinkedIn profile"
+                >
                     <Linkedin className="w-5 h-5" />
                 </a>
               </div>
