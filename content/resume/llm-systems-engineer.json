@@ -1,0 +1,153 @@
+{
+  "output_name": "Doeon_Kim_Resume_LLM_Systems_Engineer",
+  "name": "DOEON KIM",
+  "headline": "LLM Systems Engineer | Reliability, Evaluation, Runtime Delivery",
+  "contact_lines": [
+    "Busan, South Korea | +82 10-5791-8465 | ehdjs1351@gmail.com",
+    "linkedin.com/in/doeon-kim-4742a2388 | github.com/KIM3310 | kim3310.github.io/doeon-kim-portfolio"
+  ],
+  "summary": [
+    "Builds production-minded AI systems with strongest public proof in tool-calling reliability, multimodal incident workflows, and reviewable runtime design.",
+    "Improved StagePilot benchmark success from 25% baseline to 90% on a 40-case expanded suite (13 edge cases including adversarial, unicode, oversized payloads) with parser recovery and bounded retry, then exposed the same runtime story through live review, OpenTelemetry traces, and regression-gate surfaces.",
+    "Extends the same reliability posture into bounded live reviewer APIs for incident review, governed analytics, document QA, air-gapped operations, and high-trust workflow delivery."
+  ],
+  "skill_groups": [
+    {
+      "label": "LLM Systems",
+      "items": [
+        "tool calling",
+        "evals and benchmarks",
+        "prompt-mode experimentation",
+        "multimodal AI",
+        "agent runtimes"
+      ]
+    },
+    {
+      "label": "Backend / Infra",
+      "items": [
+        "TypeScript",
+        "Python",
+        "FastAPI",
+        "Node.js",
+        "React",
+        "WebSocket/SSE",
+        "Docker",
+        "CI/CD",
+        "Cloud Run"
+      ]
+    },
+    {
+      "label": "Cloud / Data",
+      "items": [
+        "GCP",
+        "Azure OpenAI",
+        "Azure AI Search",
+        "AWS",
+        "Databricks",
+        "Snowflake",
+        "Palantir"
+      ]
+    },
+    {
+      "label": "Ops / Safety",
+      "items": [
+        "incident response",
+        "IAM/RBAC",
+        "audit logging",
+        "replayability",
+        "fallback design",
+        "governance controls"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "company": "Microsoft AI School",
+      "role": "Trainee",
+      "location": "Seoul, South Korea",
+      "date": "Sep 2025 - Feb 26, 2026",
+      "bullets": [
+        "Delivered AI systems across RAG, incident operations, and real-time operator workflows under practitioner and Microsoft Korea review cycles.",
+        "Improved Haptix multi-label performance to AP 96.8 on single-tag and AP 85.0 on triple-tag cases while also building backend and RAG delivery surfaces for Honeypot and TwinCity UI.",
+        "Turned ambiguous project asks into reviewable runtime surfaces, demos, and handoff artifacts across multiple team systems."
+      ]
+    },
+    {
+      "company": "ATOM TECH SOLUTIONS LTD",
+      "role": "Full Stack Engineer (AI Integration) Intern",
+      "location": "Berkeley, CA, United States",
+      "date": "Jun 2025 - Sep 2025",
+      "bullets": [
+        "Shipped customer-facing Node.js, Express, MongoDB, HTML/CSS/JavaScript product features and integrated OpenAI-powered chatbot workflows.",
+        "Collaborated asynchronously across US time zones to keep feature delivery stable across frontend, backend, and AI integration boundaries."
+      ]
+    },
+    {
+      "company": "ROK Defense Communication Command",
+      "role": "Strategic Backbone Network & Security Team Lead",
+      "location": "Seongnam, South Korea",
+      "date": "Nov 2023 - May 2025",
+      "bullets": [
+        "Led a 6-person squad in a 24/7 mission-critical environment with no-fail operational expectations.",
+        "Handled roughly 8-9 incidents per month and led triage, mitigation, IAM/access control, and emergency recovery.",
+        "Owned security readiness, configuration control, and high-trust handoff discipline across production operations."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "StagePilot",
+      "tagline": "Tool-Calling Reliability Runtime",
+      "subhead": "Primary public proof",
+      "bullets": [
+        "Built the primary repo for parser middleware, StagePilot orchestration, and BenchLab eval tooling.",
+        "Improved 40-case expanded benchmark (13 edge cases: adversarial, unicode, oversized payloads) from 25% to 90% with middleware and bounded retry, with reviewable project pages.",
+        "Added live-review, failure-taxonomy, trace-observability, regression-gate, and protocol-matrix APIs so parser drift, retries, and cross-protocol behavior stay inspectable."
+      ]
+    },
+    {
+      "name": "AegisOps",
+      "tagline": "Multimodal Incident Copilot",
+      "subhead": "Postmortem and escalation surfaces",
+      "bullets": [
+        "Turned logs and monitoring screenshots into structured RCA, action plans, and handoff artifacts.",
+        "Added JSON/schema guardrails, BYOK and no-key modes, plus postmortem-pack, escalation-readiness, and live-escalation-preview surfaces for reviewable incident handoff."
+      ]
+    },
+    {
+      "name": "Aegis-Air",
+      "tagline": "Local-First Incident Review Engine",
+      "subhead": "32 / 32 replay rubric checks",
+      "bullets": [
+        "Built a local-first incident review system for teams that cannot send production telemetry to public model APIs.",
+        "Returned structured RCA with severity, failure bucket, evidence, immediate actions, and offline deployment proof under deterministic fallback paths."
+      ]
+    },
+    {
+      "name": "Enterprise LLM Adoption Kit",
+      "tagline": "Governance Readiness Control Tower",
+      "subhead": "Governance and rollout evidence",
+      "bullets": [
+        "Implemented RBAC, prompt-injection detection, PII redaction, audit logging, JSONL eval pipelines, and rollout artifacts.",
+        "Added rollout-gates and customer-architecture-pack surfaces so governance and deployment decisions stay reviewable."
+      ]
+    },
+    {
+      "name": "Applied Ops Archive",
+      "tagline": "Archived High-Trust Operations Case Study",
+      "subhead": "Action-heavy system design",
+      "bullets": [
+        "Applied reliability, approval-boundary, and handoff design to a high-stakes operational system with visible evidence and decision traces."
+      ]
+    }
+  ],
+  "education": [
+    "Korea National Open University | B.S. in Computer Science (In Progress, Entered Mar 2026)"
+  ],
+  "certifications": [
+    "AI-900, SnowPro Associate, Palantir Foundry Data Engineer Associate, Databricks Platform Architect (AWS/GCP), Datadog Observability"
+  ],
+  "languages": [
+    "Korean (Native), English (Business / Working), Japanese (Business / Working)"
+  ]
+}

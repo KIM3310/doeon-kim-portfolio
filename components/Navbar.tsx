@@ -1,0 +1,165 @@
+import React, { useState, useEffect, useRef } from 'react';
+import { Menu, X } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+
+const navItems = [
+  { name: '90-sec', href: '#visitor-mode' },
+  { name: 'Readiness', href: '#readiness' },
+  { name: 'Packets', href: '#packets' },
+  { name: 'Live Proof', href: '#live-proof' },
+  { name: 'Verified', href: '#verification' },
+  { name: 'Evidence', href: '#evidence' },
+  { name: 'Briefing', href: '#briefing' },
+  { name: 'Projects', href: '#projects' },
+  { name: 'Repo Map', href: '#operating-map' },
+  { name: 'Surfaces', href: '#proof-surfaces' },
+  { name: 'Proof Paths', href: '#focus-paths' },
+  { name: 'Targets', href: '#targets' },
+  { name: 'Why Fit', href: '#why-me' },
+  { name: 'Experience', href: '#experience' },
+  { name: 'Contact', href: '#community' },
+];
+
+const desktopNavItems = [
+  { name: 'Start', href: '#visitor-mode' },
+  { name: 'Proof', href: '#verification' },
+  { name: 'Projects', href: '#projects' },
+  { name: 'Repo Map', href: '#operating-map' },
+  { name: 'Targets', href: '#targets' },
+  { name: 'Experience', href: '#experience' },
+  { name: 'Contact', href: '#community' },
+];
+
+const Navbar: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const scrollRaf = useRef<number | null>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (scrollRaf.current !== null) return;
+      scrollRaf.current = window.requestAnimationFrame(() => {
+        setScrolled(window.scrollY > 40);
+        scrollRaf.current = null;
+      });
+    };
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (scrollRaf.current !== null) window.cancelAnimationFrame(scrollRaf.current);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setIsOpen(false);
+    };
+    window.addEventListener('keydown', handleEscape);
+    return () => window.removeEventListener('keydown', handleEscape);
+  }, [isOpen]);
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [isOpen]);
+
+  const getScrollBehavior = (): ScrollBehavior =>
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const element = document.querySelector(href);
+    if (!element) return;
+    const offset = 80;
+    const top = element.getBoundingClientRect().top + window.pageYOffset - offset;
+    window.scrollTo({ top, behavior: getScrollBehavior() });
+    setIsOpen(false);
+  };
+
+  return (
+    <nav className={`fixed w-full z-50 transition-all duration-500 ${scrolled ? 'bg-[#050505]/82 backdrop-blur-xl border-b border-white/5' : 'bg-transparent'} print:absolute print:bg-[#050505] print:border-none`}>
+      <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
+        <div className="flex items-center justify-between h-20">
+          <div className="flex-shrink-0 flex items-center">
+            <button
+              type="button"
+              onClick={() => window.scrollTo({ top: 0, behavior: getScrollBehavior() })}
+              className="text-xl font-serif-heading font-medium text-white tracking-tight focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 rounded-sm"
+              aria-label="Scroll to top"
+            >
+              DOEON KIM.
+            </button>
+          </div>
+
+          <div className="hidden md:flex items-center gap-6">
+            <nav aria-label="Main navigation" className="flex items-baseline gap-6 lg:gap-8 print:hidden">
+              {desktopNavItems.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  onClick={(e) => handleClick(e, item.href)}
+                  className="text-sm text-white/60 hover:text-white transition-colors font-medium tracking-wide relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-accent-gold after:transition-all after:duration-300 hover:after:w-full"
+                >
+                  {item.name}
+                </a>
+              ))}
+            </nav>
+            <a
+              href="#packets"
+              onClick={(e) => handleClick(e, '#packets')}
+              className="rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs font-medium uppercase tracking-[0.2em] text-white/75 transition-colors hover:border-accent-gold/40 hover:text-white print:hidden"
+            >
+              Review Pack
+            </a>
+          </div>
+
+          <div className="md:hidden print:hidden">
+            <button
+              type="button"
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-white/60 hover:text-white p-2 focus:outline-none"
+              aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
+              aria-expanded={isOpen}
+              aria-controls="mobile-nav-menu"
+            >
+              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            id="mobile-nav-menu"
+            className="md:hidden bg-[#050505] border-b border-white/10 overflow-hidden print:hidden"
+          >
+            <div className="px-6 pt-4 pb-8 space-y-4">
+              {navItems.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  onClick={(e) => handleClick(e, item.href)}
+                  className="text-white/80 hover:text-white block text-lg font-serif-heading"
+                >
+                  {item.name}
+                </a>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </nav>
+  );
+};
+
+export default Navbar;
