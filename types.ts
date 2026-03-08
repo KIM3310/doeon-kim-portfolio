@@ -18,12 +18,12 @@ export interface SecondaryProject {
   note?: string;
 }
 
-export interface HiringLane {
+export interface UpgradeTrack {
   title: string;
-  companies: string[];
-  currentProof: string[];
-  nextMove: string;
-  posture: string;
+  systems: string[];
+  currentBase: string[];
+  nextBuild: string;
+  outcome: string;
 }
 
 export interface Experience {
