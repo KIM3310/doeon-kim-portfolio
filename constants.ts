@@ -1,4 +1,4 @@
-import { Project, Experience, SkillCategory, Certification, Profile, SecondaryProject, HiringLane } from './types';
+import { Project, Experience, SkillCategory, Certification, Profile, SecondaryProject, UpgradeTrack } from './types';
 
 export const PROFILE: Profile = {
   name: "김도언 (Doeon Kim)",
@@ -263,34 +263,34 @@ export const CERTIFICATIONS: Certification[] = [
   { issuer: "SAP", name: "SAP Cloud Platform Integration Service" }
 ];
 
-export const HIRING_LANES: HiringLane[] = [
+export const UPGRADE_TRACKS: UpgradeTrack[] = [
   {
-    title: "Frontier LLM / Big Tech",
-    companies: ["OpenAI", "Anthropic", "AI infra teams"],
-    currentProof: ["StagePilot", "AegisOps", "Aegis-Air", "Enterprise LLM Adoption Kit"],
-    nextMove: "Keep packaging evals, deployment proof, screenshots, and operator workflows around the flagship set instead of adding more repos.",
-    posture: "Already strong if the proof surfaces stay sharp."
+    title: "Governed Analytics Platform",
+    systems: ["Nexus-Hive", "The Logistics Prophet", "TwinCity UI"],
+    currentBase: ["Natural-language analytics", "Control-tower operations", "Audit and explainability"],
+    nextBuild: "Expand Nexus-Hive with warehouse adapters, data contracts, lineage, quality gates, and governed NL2SQL evaluation instead of adding another BI demo.",
+    outcome: "A real data-platform flagship with audited queries, security posture, and reviewer-grade evidence."
   },
   {
-    title: "Data Platform Field Engineering",
-    companies: ["Snowflake", "Databricks"],
-    currentProof: ["Nexus-Hive", "The Logistics Prophet", "TwinCity UI"],
-    nextMove: "Turn Nexus-Hive into a governed analytics flagship with warehouse adapters, lineage, quality gates, and NL2SQL evaluation evidence.",
-    posture: "One flagship away from being convincingly aligned."
+    title: "Ontology + Action Workflow",
+    systems: ["The Logistics Prophet", "TwinCity UI", "Aegis-Air"],
+    currentBase: ["Entity-aware operations", "Rule-driven actions", "Incident and queue workflows"],
+    nextBuild: "Make objects, actions, approval rules, and audit trails louder than the copilot layer so each workflow reads like operational software, not just inference.",
+    outcome: "Stronger object-centric systems with visible operator handoff, write-back logic, and governance."
   },
   {
-    title: "Ontology / Operational Software",
-    companies: ["Palantir", "Foundry ecosystem"],
-    currentProof: ["The Logistics Prophet", "TwinCity UI", "Aegis-Air"],
-    nextMove: "Sharpen ontology-backed workflows, approval gates, and write-back style operator actions rather than building another generic AI copilot.",
-    posture: "Promising, but the ontology and action layer should get louder."
+    title: "Business Workflow Platform",
+    systems: ["enterprise-llm-adoption-kit", "honeypot", "smallbiz-ops-copilot"],
+    currentBase: ["Governance", "Async document flows", "Approval-safe support ops"],
+    nextBuild: "Build one clean order or procurement exception workbench with object timeline, approval gates, audit history, and grounded AI summaries.",
+    outcome: "A focused workflow product that proves business-process AI can stay structured, reviewable, and safe."
   },
   {
-    title: "Business AI Platform",
-    companies: ["SAP", "SAP partners"],
-    currentProof: ["SAP Integration cert", "Enterprise LLM Adoption Kit", "Honeypot"],
-    nextMove: "Build one SAP-native BTP workflow product with CAP service, Fiori/UI5 front-end, approval flow, and business-object-grounded AI.",
-    posture: "Needs a dedicated flagship before it becomes a serious lane."
+    title: "Flagship Proof Packaging",
+    systems: ["stage-pilot", "AegisOps", "Aegis-Air", "Enterprise LLM Adoption Kit"],
+    currentBase: ["CI", "Runtime briefs", "Review packs", "Deployment surfaces"],
+    nextBuild: "Add the missing screenshots, architecture diagrams, benchmark tables, and operator walkthrough assets that make strong systems easy to review in two minutes.",
+    outcome: "The strongest repos become easier to trust immediately without extra explanation."
   }
 ];
 
