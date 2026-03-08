@@ -1,4 +1,4 @@
-import { Project, Experience, SkillCategory, Certification, Profile, SecondaryProject } from './types';
+import { Project, Experience, SkillCategory, Certification, Profile, SecondaryProject, HiringLane } from './types';
 
 export const PROFILE: Profile = {
   name: "김도언 (Doeon Kim)",
@@ -37,9 +37,9 @@ export const PORTFOLIO_SIGNAL_DECK = [
     detail: "Merged duplicate repos and kept a smaller flagship set with clearer ownership and stronger proof."
   },
   {
-    label: "Collaboration Mode",
-    value: "Hackathon speed, production mindset",
-    detail: "Fast iteration loops with concrete tests, docs, and deployment paths."
+    label: "Next Flagship",
+    value: "Governed Data Platform",
+    detail: "Expanding Nexus-Hive and logistics control-tower proof toward warehouse governance, lineage, and semantic operations."
   }
 ];
 
@@ -263,10 +263,41 @@ export const CERTIFICATIONS: Certification[] = [
   { issuer: "SAP", name: "SAP Cloud Platform Integration Service" }
 ];
 
+export const HIRING_LANES: HiringLane[] = [
+  {
+    title: "Frontier LLM / Big Tech",
+    companies: ["OpenAI", "Anthropic", "AI infra teams"],
+    currentProof: ["StagePilot", "AegisOps", "Aegis-Air", "Enterprise LLM Adoption Kit"],
+    nextMove: "Keep packaging evals, deployment proof, screenshots, and operator workflows around the flagship set instead of adding more repos.",
+    posture: "Already strong if the proof surfaces stay sharp."
+  },
+  {
+    title: "Data Platform Field Engineering",
+    companies: ["Snowflake", "Databricks"],
+    currentProof: ["Nexus-Hive", "The Logistics Prophet", "TwinCity UI"],
+    nextMove: "Turn Nexus-Hive into a governed analytics flagship with warehouse adapters, lineage, quality gates, and NL2SQL evaluation evidence.",
+    posture: "One flagship away from being convincingly aligned."
+  },
+  {
+    title: "Ontology / Operational Software",
+    companies: ["Palantir", "Foundry ecosystem"],
+    currentProof: ["The Logistics Prophet", "TwinCity UI", "Aegis-Air"],
+    nextMove: "Sharpen ontology-backed workflows, approval gates, and write-back style operator actions rather than building another generic AI copilot.",
+    posture: "Promising, but the ontology and action layer should get louder."
+  },
+  {
+    title: "Business AI Platform",
+    companies: ["SAP", "SAP partners"],
+    currentProof: ["SAP Integration cert", "Enterprise LLM Adoption Kit", "Honeypot"],
+    nextMove: "Build one SAP-native BTP workflow product with CAP service, Fiori/UI5 front-end, approval flow, and business-object-grounded AI.",
+    posture: "Needs a dedicated flagship before it becomes a serious lane."
+  }
+];
+
 export const PORTFOLIO_RUNTIME_META = [
   { label: "Scope", value: "7 flagship / 17 product repos" },
   { label: "Stack", value: "React 19 + Vite 6" },
-  { label: "Focus", value: "LLM Reliability / Runtime Ops" },
+  { label: "Focus", value: "LLM Reliability / Data Platforms / Runtime Ops" },
 ];
 
 export const SECONDARY_PROJECTS: SecondaryProject[] = [
@@ -283,7 +314,8 @@ export const SECONDARY_PROJECTS: SecondaryProject[] = [
   {
     title: "The Logistics Prophet",
     focus: "Predictive logistics control tower with auditability and explainability",
-    github: "https://github.com/KIM3310/the-logistics-prophet"
+    github: "https://github.com/KIM3310/the-logistics-prophet",
+    note: "Ontology, audit chain, and action workflow proof"
   },
   {
     title: "Upstage DocuAgent",
@@ -293,7 +325,8 @@ export const SECONDARY_PROJECTS: SecondaryProject[] = [
   {
     title: "Nexus-Hive",
     focus: "Multi-agent BI copilot for enterprise analytics workflows",
-    github: "https://github.com/KIM3310/Nexus-Hive"
+    github: "https://github.com/KIM3310/Nexus-Hive",
+    note: "Data platform flagship expansion in progress"
   },
   {
     title: "secure-xl2hwp-local",
