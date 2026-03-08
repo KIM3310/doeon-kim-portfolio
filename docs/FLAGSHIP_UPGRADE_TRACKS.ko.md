@@ -57,22 +57,24 @@
 
 중심 repo:
 
+- `regulated-case-workbench`
 - `enterprise-llm-adoption-kit`
 - `honeypot`
 - `smallbiz-ops-copilot`
 
 현재 기반:
 
+- regulated workflow baseline
 - governance
 - async document handling
 - approval-safe support flow
 
 다음 고도화:
 
-- 하나의 business object 중심 workflow product 만들기
-- object timeline / audit trail
-- operator approval action bar
-- grounded AI summary with strict structured outputs
+- regulated-case-workbench를 중심으로 reviewer assignment / signed export manifest / cross-case audit view 강화
+- object timeline / audit trail 심화
+- operator approval action bar 고도화
+- grounded AI summary with strict structured outputs 유지
 
 ## Track 4: Flagship Proof Packaging
 

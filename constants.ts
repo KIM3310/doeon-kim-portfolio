@@ -280,10 +280,10 @@ export const UPGRADE_TRACKS: UpgradeTrack[] = [
   },
   {
     title: "Business Workflow Platform",
-    systems: ["enterprise-llm-adoption-kit", "honeypot", "smallbiz-ops-copilot"],
-    currentBase: ["Governance", "Async document flows", "Approval-safe support ops"],
-    nextBuild: "Build one clean order or procurement exception workbench with object timeline, approval gates, audit history, and grounded AI summaries.",
-    outcome: "A focused workflow product that proves business-process AI can stay structured, reviewable, and safe."
+    systems: ["regulated-case-workbench", "enterprise-llm-adoption-kit", "honeypot", "smallbiz-ops-copilot"],
+    currentBase: ["Governance", "Async document flows", "Approval-safe support ops", "Regulated case workflow baseline"],
+    nextBuild: "Deepen regulated-case-workbench with richer policy packs, reviewer assignments, signed export manifests, and cross-case audit views while keeping grounded AI summaries strict and inspectable.",
+    outcome: "A focused workflow product family that proves business-process AI can stay structured, reviewable, and safe."
   },
   {
     title: "Flagship Proof Packaging",
@@ -295,7 +295,7 @@ export const UPGRADE_TRACKS: UpgradeTrack[] = [
 ];
 
 export const PORTFOLIO_RUNTIME_META = [
-  { label: "Scope", value: "7 flagship / 18 product repos" },
+  { label: "Scope", value: "7 flagship / 19 product repos" },
   { label: "Stack", value: "React 19 + Vite 6" },
   { label: "Focus", value: "LLM Reliability / Data Platforms / Runtime Ops" },
 ];
@@ -333,6 +333,12 @@ export const SECONDARY_PROJECTS: SecondaryProject[] = [
     focus: "Semiconductor-style alarm triage, lot risk ranking, and shift handoff control tower",
     github: "https://github.com/KIM3310/fab-ops-yield-control-tower",
     note: "New manufacturing flagship baseline"
+  },
+  {
+    title: "regulated-case-workbench",
+    focus: "Case inbox, evidence review, redaction preview, approval, and export manifest workflow",
+    github: "https://github.com/KIM3310/regulated-case-workbench",
+    note: "New regulated workflow flagship baseline"
   },
   {
     title: "secure-xl2hwp-local",
