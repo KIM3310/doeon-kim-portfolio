@@ -295,7 +295,7 @@ export const UPGRADE_TRACKS: UpgradeTrack[] = [
 ];
 
 export const PORTFOLIO_RUNTIME_META = [
-  { label: "Scope", value: "7 flagship / 17 product repos" },
+  { label: "Scope", value: "7 flagship / 18 product repos" },
   { label: "Stack", value: "React 19 + Vite 6" },
   { label: "Focus", value: "LLM Reliability / Data Platforms / Runtime Ops" },
 ];
@@ -327,6 +327,12 @@ export const SECONDARY_PROJECTS: SecondaryProject[] = [
     focus: "Multi-agent BI copilot for enterprise analytics workflows",
     github: "https://github.com/KIM3310/Nexus-Hive",
     note: "Data platform flagship expansion in progress"
+  },
+  {
+    title: "fab-ops-yield-control-tower",
+    focus: "Semiconductor-style alarm triage, lot risk ranking, and shift handoff control tower",
+    github: "https://github.com/KIM3310/fab-ops-yield-control-tower",
+    note: "New manufacturing flagship baseline"
   },
   {
     title: "secure-xl2hwp-local",
