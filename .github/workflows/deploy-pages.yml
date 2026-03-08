@@ -12,7 +12,6 @@ concurrency:
 
 jobs:
   deploy:
-    if: ${{ secrets.CLOUDFLARE_API_TOKEN != '' && secrets.CLOUDFLARE_ACCOUNT_ID != '' }}
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -21,10 +20,21 @@ jobs:
       CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
     steps:
+      - name: Check Cloudflare configuration
+        id: cloudflare
+        run: |
+          if [ -n "${CLOUDFLARE_API_TOKEN:-}" ] && [ -n "${CLOUDFLARE_ACCOUNT_ID:-}" ]; then
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Checkout
+        if: steps.cloudflare.outputs.enabled == 'true'
         uses: actions/checkout@v4
 
       - name: Setup Node
+        if: steps.cloudflare.outputs.enabled == 'true'
         uses: actions/setup-node@v4
         with:
           node-version: "20"
@@ -32,12 +42,14 @@ jobs:
           cache-dependency-path: package-lock.json
 
       - name: Build
+        if: steps.cloudflare.outputs.enabled == 'true'
         run: |
           npm ci
           npm run typecheck
           npm run build
 
       - name: Deploy to Cloudflare Pages (retry)
+        if: steps.cloudflare.outputs.enabled == 'true'
         run: |
           set -euo pipefail
           for attempt in 1 2 3; do
@@ -51,3 +63,7 @@ jobs:
           done
           echo "Cloudflare deploy failed after retries"
           exit 1
+
+      - name: Skip optional Cloudflare deploy
+        if: steps.cloudflare.outputs.enabled != 'true'
+        run: echo "Cloudflare secrets are not configured; skipping optional Cloudflare Pages deploy."
