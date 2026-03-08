@@ -4,7 +4,7 @@
 
 # Doeon Kim Portfolio
 
-Production portfolio surface for Doeon Kim. Built with React + Vite and tuned for flagship-project storytelling around LLM reliability, incident systems, and operator-style delivery.
+Production portfolio surface for Doeon Kim. Built with React + Vite and tuned for flagship-project storytelling around LLM reliability, incident systems, operator-style delivery, and target-company fit mapping.
 
 ## Run Locally
 
@@ -38,6 +38,7 @@ Optional environment variables below enable embedded widgets on top of that base
 - Cloudflare Pages deploy is optional and only runs when Cloudflare secrets are configured
 - The site now includes:
   - operator briefing section
+  - target company fit section
   - flagship + secondary active-repo index
   - runtime/service profile footer
   - JSON-LD structured data for search engines

@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Briefing from './components/Briefing';
 import WhyFit from './components/WhyFit';
+import HiringLanes from './components/HiringLanes';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Experience from './components/Experience';
@@ -25,6 +26,7 @@ const App: React.FC = () => {
         <Hero />
         <Briefing />
         <WhyFit />
+        <HiringLanes />
         <Skills />
         <Projects />
         <Experience />
