@@ -161,7 +161,7 @@ const Projects: React.FC = () => {
        <div className="flex flex-col md:flex-row justify-between items-end mb-16 border-b border-white/10 pb-8">
         <div>
            <h2 className="text-3xl md:text-4xl font-serif-heading font-medium text-white mb-2">Selected Works</h2>
-           <p className="text-primary-muted font-light">7 flagship systems in front, with a broader active repo index behind them.</p>
+           <p className="text-primary-muted font-light">A smaller set of selected systems in front, with a broader active repo index behind them.</p>
         </div>
       </div>
 
@@ -178,7 +178,7 @@ const Projects: React.FC = () => {
             <h3 className="font-serif-heading text-2xl text-white md:text-3xl">Additional active repos</h3>
           </div>
           <p className="max-w-2xl text-sm leading-relaxed text-primary-muted">
-            These are active canonical repos that stay visible in the portfolio, but are intentionally positioned behind the flagship set.
+            These are active canonical repos that stay visible in the portfolio, but are intentionally positioned behind the selected set.
           </p>
         </div>
 

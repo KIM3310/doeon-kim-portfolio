@@ -1,4 +1,4 @@
-import { Project, Experience, SkillCategory, Certification, Profile, SecondaryProject, UpgradeTrack, RolePath } from './types';
+import { Project, Experience, SkillCategory, Certification, Profile, SecondaryProject, UpgradeTrack, FocusPath } from './types';
 
 export const PROFILE: Profile = {
   name: "김도언 (Doeon Kim)",
@@ -34,12 +34,12 @@ export const PORTFOLIO_SIGNAL_DECK = [
   {
     label: "Portfolio Shape",
     value: "Curated canonical repos",
-    detail: "Merged duplicate repos and kept a smaller flagship set with clearer ownership and stronger proof."
+    detail: "Merged duplicate repos and kept a smaller core set with clearer ownership and cleaner boundaries."
   },
   {
-    label: "Next Flagship",
+    label: "Next Focus",
     value: "Governed Data Platform",
-    detail: "Expanding Nexus-Hive and logistics control-tower proof toward warehouse governance, lineage, and semantic operations."
+    detail: "Expanding Nexus-Hive and logistics control-tower depth around warehouse governance, lineage, and semantic operations."
   }
 ];
 
@@ -77,7 +77,7 @@ export const WHY_TEAMS_HIRE_ME = [
   {
     keyword: "Enterprise Delivery",
     title: "데모가 아니라 거버넌스와 운영까지 닫습니다",
-    description: "Enterprise LLM Adoption Kit, Honeypot, TwinCity UI에서 audit, fallback, async jobs, transport resilience, evidence-pack export까지 production surface를 설계했습니다.",
+    description: "Enterprise LLM Adoption Kit, Honeypot, TwinCity UI에서 audit, fallback, async jobs, transport resilience, export flows까지 production surface를 설계했습니다.",
     match: "Enterprise rollout, governance controls, runtime observability and ops"
   }
 ];
@@ -269,7 +269,7 @@ export const UPGRADE_TRACKS: UpgradeTrack[] = [
     systems: ["Nexus-Hive", "The Logistics Prophet", "TwinCity UI"],
     currentBase: ["Natural-language analytics", "Control-tower operations", "Audit and explainability"],
     nextBuild: "Expand Nexus-Hive with warehouse adapters, data contracts, lineage, quality gates, and governed NL2SQL evaluation instead of adding another BI demo.",
-    outcome: "A real data-platform flagship with audited queries, security posture, and reviewer-grade evidence."
+    outcome: "A stronger data-platform system with audited queries, security posture, and clear operating surfaces."
   },
   {
     title: "Ontology + Action Workflow",
@@ -286,20 +286,20 @@ export const UPGRADE_TRACKS: UpgradeTrack[] = [
     outcome: "A focused workflow product family that proves business-process AI can stay structured, reviewable, and safe."
   },
   {
-    title: "Flagship Proof Packaging",
+    title: "Core Project Packaging",
     systems: ["stage-pilot", "AegisOps", "Aegis-Air", "Enterprise LLM Adoption Kit"],
     currentBase: ["CI", "Runtime briefs", "Review packs", "Deployment surfaces"],
     nextBuild: "Add the missing screenshots, architecture diagrams, benchmark tables, and operator walkthrough assets that make strong systems easy to review in two minutes.",
-    outcome: "The strongest repos become easier to trust immediately without extra explanation."
+    outcome: "The strongest repos become easier to inspect quickly without extra explanation."
   }
 ];
 
-export const ROLE_PATHS: RolePath[] = [
+export const FOCUS_PATHS: FocusPath[] = [
   {
-    title: "AI Engineer",
+    title: "LLM Reliability",
     summary: "평가, fallback, audit, schema, runtime surface가 강한 시스템부터 보는 경로입니다.",
     strengths: ["Evals + benchmarks", "Runtime guardrails", "Failure handling", "Auditable AI flows"],
-    flagships: ["StagePilot", "AegisOps", "Nexus-Hive"],
+    systems: ["StagePilot", "AegisOps", "Nexus-Hive"],
     links: [
       { label: "StagePilot architecture", href: "https://github.com/KIM3310/stage-pilot/blob/main/docs/solution-architecture.md" },
       { label: "AegisOps architecture", href: "https://github.com/KIM3310/AegisOps/blob/main/docs/solution-architecture.md" },
@@ -307,10 +307,10 @@ export const ROLE_PATHS: RolePath[] = [
     ]
   },
   {
-    title: "Solutions Architect",
+    title: "Platform Delivery",
     summary: "브라우저, API, model runtime, governance, deployment boundary가 선명한 시스템 위주 경로입니다.",
     strengths: ["Trust boundary", "Integration surfaces", "Deployment story", "Review-first architecture"],
-    flagships: ["Aegis-Air", "Enterprise LLM Adoption Kit", "Nexus-Hive"],
+    systems: ["Aegis-Air", "Enterprise LLM Adoption Kit", "Nexus-Hive"],
     links: [
       { label: "Aegis-Air architecture", href: "https://github.com/KIM3310/Aegis-Air/blob/main/docs/solution-architecture.md" },
       { label: "Enterprise role paths", href: "https://github.com/KIM3310/enterprise-llm-adoption-kit/blob/main/docs/application/role_ready_paths.md" },
@@ -318,10 +318,10 @@ export const ROLE_PATHS: RolePath[] = [
     ]
   },
   {
-    title: "Sales / Solution Consultant",
-    summary: "buyer narrative, discovery flow, proof path가 빠르게 읽히는 자료 중심 경로입니다.",
+    title: "Adoption Materials",
+    summary: "설명 자료와 운영 흐름이 빠르게 읽히는 자료 중심 경로입니다.",
     strengths: ["Executive one-pagers", "Discovery questions", "Two-minute proof path", "Buyer-safe rollout story"],
-    flagships: ["Enterprise LLM Adoption Kit", "AegisOps", "StagePilot"],
+    systems: ["Enterprise LLM Adoption Kit", "AegisOps", "StagePilot"],
     links: [
       { label: "Enterprise role paths", href: "https://github.com/KIM3310/enterprise-llm-adoption-kit/blob/main/docs/application/role_ready_paths.md" },
       { label: "AegisOps exec packet", href: "https://github.com/KIM3310/AegisOps/blob/main/docs/executive-one-pager.md" },
@@ -331,7 +331,7 @@ export const ROLE_PATHS: RolePath[] = [
 ];
 
 export const PORTFOLIO_RUNTIME_META = [
-  { label: "Scope", value: "7 flagship / 19 product repos" },
+  { label: "Scope", value: "7 selected systems / 19 product repos" },
   { label: "Stack", value: "React 19 + Vite 6" },
   { label: "Focus", value: "LLM Reliability / Data Platforms / Runtime Ops" },
 ];
@@ -362,19 +362,19 @@ export const SECONDARY_PROJECTS: SecondaryProject[] = [
     title: "Nexus-Hive",
     focus: "Multi-agent BI copilot for enterprise analytics workflows",
     github: "https://github.com/KIM3310/Nexus-Hive",
-    note: "Data platform flagship expansion in progress"
+    note: "Data platform expansion in progress"
   },
   {
     title: "fab-ops-yield-control-tower",
     focus: "Semiconductor-style alarm triage, lot risk ranking, and shift handoff control tower",
     github: "https://github.com/KIM3310/fab-ops-yield-control-tower",
-    note: "New manufacturing flagship baseline"
+    note: "Manufacturing control tower baseline"
   },
   {
     title: "regulated-case-workbench",
     focus: "Case inbox, evidence review, redaction preview, approval, and export manifest workflow",
     github: "https://github.com/KIM3310/regulated-case-workbench",
-    note: "New regulated workflow flagship baseline"
+    note: "Regulated workflow baseline"
   },
   {
     title: "secure-xl2hwp-local",

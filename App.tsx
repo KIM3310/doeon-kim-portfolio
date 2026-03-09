@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Briefing from './components/Briefing';
-import RolePaths from './components/RolePaths';
+import FocusPaths from './components/FocusPaths';
 import WhyFit from './components/WhyFit';
 import UpgradeTracks from './components/UpgradeTracks';
 import Skills from './components/Skills';
@@ -26,7 +26,7 @@ const App: React.FC = () => {
       <main id="main-content">
         <Hero />
         <Briefing />
-        <RolePaths />
+        <FocusPaths />
         <WhyFit />
         <UpgradeTracks />
         <Skills />
