@@ -324,8 +324,8 @@ export const FOCUS_PATHS: FocusPath[] = [
     systems: ["Enterprise LLM Adoption Kit", "AegisOps", "StagePilot"],
     links: [
       { label: "Enterprise role paths", href: "https://github.com/KIM3310/enterprise-llm-adoption-kit/blob/main/docs/application/role_ready_paths.md" },
-      { label: "AegisOps exec packet", href: "https://github.com/KIM3310/AegisOps/blob/main/docs/executive-one-pager.md" },
-      { label: "StagePilot exec packet", href: "https://github.com/KIM3310/stage-pilot/blob/main/docs/executive-one-pager.md" }
+      { label: "AegisOps overview", href: "https://github.com/KIM3310/AegisOps/blob/main/docs/executive-one-pager.md" },
+      { label: "StagePilot overview", href: "https://github.com/KIM3310/stage-pilot/blob/main/docs/executive-one-pager.md" }
     ]
   }
 ];
