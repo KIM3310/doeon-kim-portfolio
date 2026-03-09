@@ -1,4 +1,4 @@
-import { Project, Experience, SkillCategory, Certification, Profile, SecondaryProject, UpgradeTrack } from './types';
+import { Project, Experience, SkillCategory, Certification, Profile, SecondaryProject, UpgradeTrack, RolePath } from './types';
 
 export const PROFILE: Profile = {
   name: "김도언 (Doeon Kim)",
@@ -291,6 +291,42 @@ export const UPGRADE_TRACKS: UpgradeTrack[] = [
     currentBase: ["CI", "Runtime briefs", "Review packs", "Deployment surfaces"],
     nextBuild: "Add the missing screenshots, architecture diagrams, benchmark tables, and operator walkthrough assets that make strong systems easy to review in two minutes.",
     outcome: "The strongest repos become easier to trust immediately without extra explanation."
+  }
+];
+
+export const ROLE_PATHS: RolePath[] = [
+  {
+    title: "AI Engineer",
+    summary: "평가, fallback, audit, schema, runtime surface가 강한 시스템부터 보는 경로입니다.",
+    strengths: ["Evals + benchmarks", "Runtime guardrails", "Failure handling", "Auditable AI flows"],
+    flagships: ["StagePilot", "AegisOps", "Nexus-Hive"],
+    links: [
+      { label: "StagePilot architecture", href: "https://github.com/KIM3310/stage-pilot/blob/main/docs/solution-architecture.md" },
+      { label: "AegisOps architecture", href: "https://github.com/KIM3310/AegisOps/blob/main/docs/solution-architecture.md" },
+      { label: "Nexus-Hive architecture", href: "https://github.com/KIM3310/Nexus-Hive/blob/main/docs/solution-architecture.md" }
+    ]
+  },
+  {
+    title: "Solutions Architect",
+    summary: "브라우저, API, model runtime, governance, deployment boundary가 선명한 시스템 위주 경로입니다.",
+    strengths: ["Trust boundary", "Integration surfaces", "Deployment story", "Review-first architecture"],
+    flagships: ["Aegis-Air", "Enterprise LLM Adoption Kit", "Nexus-Hive"],
+    links: [
+      { label: "Aegis-Air architecture", href: "https://github.com/KIM3310/Aegis-Air/blob/main/docs/solution-architecture.md" },
+      { label: "Enterprise role paths", href: "https://github.com/KIM3310/enterprise-llm-adoption-kit/blob/main/docs/application/role_ready_paths.md" },
+      { label: "Nexus-Hive architecture", href: "https://github.com/KIM3310/Nexus-Hive/blob/main/docs/solution-architecture.md" }
+    ]
+  },
+  {
+    title: "Sales / Solution Consultant",
+    summary: "buyer narrative, discovery flow, proof path가 빠르게 읽히는 자료 중심 경로입니다.",
+    strengths: ["Executive one-pagers", "Discovery questions", "Two-minute proof path", "Buyer-safe rollout story"],
+    flagships: ["Enterprise LLM Adoption Kit", "AegisOps", "StagePilot"],
+    links: [
+      { label: "Enterprise role paths", href: "https://github.com/KIM3310/enterprise-llm-adoption-kit/blob/main/docs/application/role_ready_paths.md" },
+      { label: "AegisOps exec packet", href: "https://github.com/KIM3310/AegisOps/blob/main/docs/executive-one-pager.md" },
+      { label: "StagePilot exec packet", href: "https://github.com/KIM3310/stage-pilot/blob/main/docs/executive-one-pager.md" }
+    ]
   }
 ];
 
