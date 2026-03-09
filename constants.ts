@@ -24,7 +24,7 @@ export const PORTFOLIO_SIGNAL_DECK = [
   {
     label: "Delivery Surface",
     value: "LLM Systems -> Product Ops",
-    detail: "Architecture, implementation, evals, rollout, and hardening for production-minded AI products."
+    detail: "Architecture, implementation, evals, rollout, and hardening for real-world AI products."
   },
   {
     label: "Reliability Focus",
