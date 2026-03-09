@@ -26,6 +26,19 @@ export interface UpgradeTrack {
   outcome: string;
 }
 
+export interface RolePathLink {
+  label: string;
+  href: string;
+}
+
+export interface RolePath {
+  title: string;
+  summary: string;
+  strengths: string[];
+  flagships: string[];
+  links: RolePathLink[];
+}
+
 export interface Experience {
   company: string;
   role: string;
