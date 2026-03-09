@@ -1,27 +1,27 @@
 import React from 'react';
 import { ArrowUpRight, BriefcaseBusiness, BrainCircuit, Network } from 'lucide-react';
 
-import { ROLE_PATHS } from '../constants';
+import { FOCUS_PATHS } from '../constants';
 import Section from './Section';
 
 const icons = [BrainCircuit, Network, BriefcaseBusiness];
 
-const RolePaths: React.FC = () => {
+const FocusPaths: React.FC = () => {
   return (
-    <Section id="role-paths" className="bg-[#070709]">
+    <Section id="focus-paths" className="bg-[#070709]">
       <div className="mb-14 flex flex-col gap-4 border-b border-white/10 pb-8 md:flex-row md:items-end md:justify-between">
         <div>
-          <p className="mb-2 text-xs uppercase tracking-[0.32em] text-accent-gold/80">Role Paths</p>
-          <h2 className="font-serif-heading text-3xl text-white md:text-4xl">Start from the strongest evidence</h2>
+          <p className="mb-2 text-xs uppercase tracking-[0.32em] text-accent-gold/80">Focus Paths</p>
+          <h2 className="font-serif-heading text-3xl text-white md:text-4xl">Start from the strongest systems</h2>
         </div>
         <p className="max-w-3xl text-sm leading-relaxed text-primary-muted">
-          같은 프로젝트라도 읽는 직무가 다르면 먼저 보는 표면이 달라집니다.
-          아래 경로는 AI engineer, solutions architect, sales / solution consultant 기준으로 가장 설득력이 강한 proof path만 압축한 것입니다.
+          같은 포트폴리오라도 어디서부터 읽느냐에 따라 보이는 강점이 달라집니다.
+          아래 경로는 reliability, platform delivery, adoption materials 기준으로 먼저 볼 시스템과 자료를 정리한 것입니다.
         </p>
       </div>
 
       <div className="grid grid-cols-1 gap-6 xl:grid-cols-3">
-        {ROLE_PATHS.map((path, index) => {
+        {FOCUS_PATHS.map((path, index) => {
           const Icon = icons[index] || BrainCircuit;
           return (
             <article
@@ -30,7 +30,7 @@ const RolePaths: React.FC = () => {
             >
               <div className="mb-5 flex items-start justify-between gap-4">
                 <div>
-                  <p className="mb-2 text-xs uppercase tracking-[0.24em] text-accent-gold/80">Hiring lane</p>
+                  <p className="mb-2 text-xs uppercase tracking-[0.24em] text-accent-gold/80">System lens</p>
                   <h3 className="font-serif-heading text-2xl text-white">{path.title}</h3>
                 </div>
                 <div className="rounded-full border border-white/10 bg-white/[0.03] p-3 text-accent-gold">
@@ -41,7 +41,7 @@ const RolePaths: React.FC = () => {
               <p className="mb-6 text-sm leading-7 text-primary-muted">{path.summary}</p>
 
               <div className="mb-6">
-                <p className="mb-3 text-xs uppercase tracking-[0.24em] text-white/45">Strongest signals</p>
+                <p className="mb-3 text-xs uppercase tracking-[0.24em] text-white/45">What stands out</p>
                 <div className="flex flex-wrap gap-2">
                   {path.strengths.map((item) => (
                     <span
@@ -55,9 +55,9 @@ const RolePaths: React.FC = () => {
               </div>
 
               <div className="mb-6">
-                <p className="mb-3 text-xs uppercase tracking-[0.24em] text-white/45">Flagships to open first</p>
+                <p className="mb-3 text-xs uppercase tracking-[0.24em] text-white/45">Start here</p>
                 <div className="flex flex-wrap gap-2">
-                  {path.flagships.map((system) => (
+                  {path.systems.map((system) => (
                     <span
                       key={system}
                       className="rounded-full border border-white/10 px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-white/55"
@@ -90,4 +90,4 @@ const RolePaths: React.FC = () => {
   );
 };
 
-export default RolePaths;
+export default FocusPaths;

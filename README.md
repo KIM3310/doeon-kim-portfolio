@@ -4,7 +4,7 @@
 
 # Doeon Kim Portfolio
 
-Production portfolio surface for Doeon Kim. Built with React + Vite and tuned for flagship-project storytelling around LLM reliability, incident systems, operator-style delivery, and concrete upgrade tracks.
+Production portfolio surface for Doeon Kim. Built with React + Vite and focused on LLM reliability, incident systems, operator-style delivery, and concrete upgrade tracks.
 
 ## Run Locally
 
@@ -39,7 +39,7 @@ Optional environment variables below enable embedded widgets on top of that base
 - The site now includes:
   - operator briefing section
   - system upgrade track section
-  - flagship + secondary active-repo index
+  - selected + secondary active-repo index
   - runtime/service profile footer
   - JSON-LD structured data for search engines
   - social meta tags for richer shares
