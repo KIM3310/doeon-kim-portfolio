@@ -134,12 +134,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
 
 const SecondaryProjectCard: React.FC<{ project: SecondaryProject }> = ({ project }) => {
   return (
-    <a
-      href={project.github}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group border border-white/8 bg-white/[0.02] p-5 transition-all hover:border-accent-gold/30 hover:bg-white/[0.04]"
-    >
+    <article className="group border border-white/8 bg-white/[0.02] p-5 transition-all hover:border-accent-gold/30 hover:bg-white/[0.04]">
       <div className="mb-3 flex items-start justify-between gap-4">
         <h3 className="font-serif-heading text-xl text-white transition-colors group-hover:text-accent-gold">
           {project.title}
@@ -150,8 +145,35 @@ const SecondaryProjectCard: React.FC<{ project: SecondaryProject }> = ({ project
       {project.note ? (
         <p className="mb-3 text-xs uppercase tracking-[0.22em] text-white/35">{project.note}</p>
       ) : null}
-      <p className="font-mono text-[11px] text-white/45">{formatActionUrl(project.github)}</p>
-    </a>
+      <div className="flex flex-wrap gap-2">
+        <a
+          href={project.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex min-w-[12rem] flex-col items-start gap-1 rounded-2xl border border-white/10 bg-white/[0.03] px-3 py-2 text-left transition-all hover:border-accent-gold/40 hover:text-white"
+        >
+          <span className="inline-flex items-center gap-2 text-xs font-medium text-primary">
+            <Github className="h-4 w-4 text-accent-gold" />
+            <span>GitHub Repo</span>
+          </span>
+          <span className="font-mono text-[11px] text-white/45">{formatActionUrl(project.github)}</span>
+        </a>
+        {project.demo ? (
+          <a
+            href={project.demo}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex min-w-[12rem] flex-col items-start gap-1 rounded-2xl border border-white/10 bg-white/[0.03] px-3 py-2 text-left transition-all hover:border-accent-gold/40 hover:text-white"
+          >
+            <span className="inline-flex items-center gap-2 text-xs font-medium text-primary">
+              <ExternalLink className="h-4 w-4 text-accent-gold" />
+              <span>Live Surface</span>
+            </span>
+            <span className="font-mono text-[11px] text-white/45">{formatActionUrl(project.demo)}</span>
+          </a>
+        ) : null}
+      </div>
+    </article>
   );
 };
 

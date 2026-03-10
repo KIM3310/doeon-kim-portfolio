@@ -7,14 +7,15 @@ export const PROFILE: Profile = {
   github: "https://github.com/KIM3310",
   linkedin: "https://www.linkedin.com/in/doeon-kim-4742a2388",
   catchphrase: "Reliable AI systems, from evals to runtime ops",
-  intro: "툴콜링 신뢰성, incident copilot, enterprise governance, real-time ops에 강한 AI 엔지니어입니다. LLM 시스템을 설계부터 배포, 평가, 운영까지 end-to-end로 구현합니다."
+  intro: "툴콜링 신뢰성, incident copilot, enterprise governance, real-time ops에 강한 AI 엔지니어입니다. 현재 19개 레포 전반에 public proof surface를 정리해, 시스템을 설계부터 배포, 평가, 운영까지 end-to-end로 검토 가능하게 만들고 있습니다."
 };
 
-export const PORTFOLIO_REPO_URL = "https://github.com/KIM3310/doeon-kim-portfolio";
-export const PORTFOLIO_DISCUSSIONS_URL = `${PORTFOLIO_REPO_URL}/discussions`;
-export const PORTFOLIO_QA_URL = `${PORTFOLIO_DISCUSSIONS_URL}/categories/q-a`;
-export const PORTFOLIO_IDEAS_URL = `${PORTFOLIO_DISCUSSIONS_URL}/categories/ideas`;
-export const PORTFOLIO_FEEDBACK_ISSUE_URL = `${PORTFOLIO_REPO_URL}/issues/new?template=portfolio-feedback.yml`;
+export const PORTFOLIO_LIVE_URL = "https://doeon-kim-portfolio.pages.dev";
+export const PORTFOLIO_REPO_URL = PROFILE.github;
+export const PORTFOLIO_DISCUSSIONS_URL = PROFILE.github;
+export const PORTFOLIO_QA_URL = PROFILE.linkedin;
+export const PORTFOLIO_IDEAS_URL = `mailto:${PROFILE.email}?subject=Portfolio%20Ideas`;
+export const PORTFOLIO_FEEDBACK_ISSUE_URL = PROFILE.github;
 export const PORTFOLIO_GISCUS_REPO = "KIM3310/doeon-kim-portfolio";
 export const PORTFOLIO_GISCUS_REPO_ID = "R_kgDOROWHZg";
 export const PORTFOLIO_GISCUS_CATEGORY = "Q&A";
@@ -33,13 +34,13 @@ export const PORTFOLIO_SIGNAL_DECK = [
   },
   {
     label: "Portfolio Shape",
-    value: "Curated canonical repos",
-    detail: "Merged duplicate repos and kept a smaller core set with clearer ownership and cleaner boundaries."
+    value: "19 repos / 19 public surfaces",
+    detail: "Canonical repos plus public Pages surfaces so each system can be reviewed quickly without cloning the full runtime first."
   },
   {
     label: "Next Focus",
     value: "Governed Data Platform",
-    detail: "Expanding Nexus-Hive and logistics control-tower depth around warehouse governance, lineage, and semantic operations."
+    detail: "Expanding Nexus-Hive and logistics control-tower depth around warehouse governance, lineage, semantic operations, and stronger hosted proof surfaces."
   }
 ];
 
@@ -53,6 +54,16 @@ export const PORTFOLIO_ACTIONS = [
     label: "GitHub Proof",
     href: PROFILE.github,
     helper: "Review canonical repos, tests, and deployment surfaces."
+  },
+  {
+    label: "Live Portfolio",
+    href: PORTFOLIO_LIVE_URL,
+    helper: "Open the hosted portfolio surface with direct links to public Pages demos."
+  },
+  {
+    label: "Live Surfaces",
+    href: "#projects",
+    helper: "Open hosted Pages surfaces for flagship and secondary repos directly from the portfolio."
   },
   {
     label: "Community Thread",
@@ -121,6 +132,7 @@ export const PROJECTS: Project[] = [
     ],
     tech: ["TypeScript", "AI SDK", "Tool Calling", "BenchLab", "Cloud Run"],
     links: {
+      demo: "https://stage-pilot.pages.dev",
       github: "https://github.com/KIM3310/stage-pilot",
       youtube: "https://youtu.be/6trgTH1vX4M"
     }
@@ -197,7 +209,7 @@ export const PROJECTS: Project[] = [
     ],
     tech: ["Azure OpenAI", "Azure AI Search", "FastAPI", "RAG", "Docker"],
     links: {
-      demo: "https://honeypot-proto.vercel.app/",
+      demo: "https://honeypot-3st.pages.dev",
       github: "https://github.com/KIM3310/honeypot"
     }
   },
@@ -212,6 +224,7 @@ export const PROJECTS: Project[] = [
     ],
     tech: ["TypeScript", "Gemini", "tmux", "CLI", "Cloud Run"],
     links: {
+      demo: "https://ogx-4dp.pages.dev",
       github: "https://github.com/KIM3310/ogx"
     }
   },
@@ -334,61 +347,79 @@ export const PORTFOLIO_RUNTIME_META = [
   { label: "Scope", value: "7 selected systems / 19 product repos" },
   { label: "Stack", value: "React 19 + Vite 6" },
   { label: "Focus", value: "LLM Reliability / Data Platforms / Runtime Ops" },
+  { label: "Public Proof", value: "19 Pages surfaces" },
+  { label: "Portfolio URL", value: "doeon-kim-portfolio.pages.dev" },
 ];
 
 export const SECONDARY_PROJECTS: SecondaryProject[] = [
   {
     title: "SteadyTap",
     focus: "Accessibility-first iOS app with integrated FastAPI backend",
-    github: "https://github.com/KIM3310/SteadyTap"
+    github: "https://github.com/KIM3310/SteadyTap",
+    demo: "https://steadytap.pages.dev"
   },
   {
     title: "smallbiz-ops-copilot",
     focus: "Cloudflare-based SMB ops copilot with governance-oriented support workflow",
-    github: "https://github.com/KIM3310/smallbiz-ops-copilot"
+    github: "https://github.com/KIM3310/smallbiz-ops-copilot",
+    demo: "https://smallbiz-ops-copilot.pages.dev"
   },
   {
     title: "The Logistics Prophet",
     focus: "Predictive logistics control tower with auditability and explainability",
     github: "https://github.com/KIM3310/the-logistics-prophet",
+    demo: "https://the-logistics-prophet.pages.dev",
     note: "Ontology, audit chain, and action workflow proof"
   },
   {
     title: "Upstage DocuAgent",
     focus: "Document analysis and learning-package export pipeline",
-    github: "https://github.com/KIM3310/Upstage-DocuAgent"
+    github: "https://github.com/KIM3310/Upstage-DocuAgent",
+    demo: "https://upstage-docuagent.pages.dev"
   },
   {
     title: "Nexus-Hive",
     focus: "Multi-agent BI copilot for enterprise analytics workflows",
     github: "https://github.com/KIM3310/Nexus-Hive",
+    demo: "https://nexus-hive.pages.dev",
     note: "Data platform expansion in progress"
   },
   {
     title: "fab-ops-yield-control-tower",
     focus: "Semiconductor-style alarm triage, lot risk ranking, and shift handoff control tower",
     github: "https://github.com/KIM3310/fab-ops-yield-control-tower",
+    demo: "https://fab-ops-yield-control-tower.pages.dev",
     note: "Manufacturing control tower baseline"
   },
   {
     title: "regulated-case-workbench",
     focus: "Case inbox, evidence review, redaction preview, approval, and export manifest workflow",
     github: "https://github.com/KIM3310/regulated-case-workbench",
+    demo: "https://regulated-case-workbench.pages.dev",
     note: "Regulated workflow baseline"
   },
   {
     title: "secure-xl2hwp-local",
     focus: "Air-gapped document automation pipeline for local environments",
-    github: "https://github.com/KIM3310/secure-xl2hwp-local"
+    github: "https://github.com/KIM3310/secure-xl2hwp-local",
+    demo: "https://secure-xl2hwp-local.pages.dev"
   },
   {
     title: "beaver-study-orchestrator",
     focus: "Syllabus parsing and study-plan orchestration service",
-    github: "https://github.com/KIM3310/beaver-study-orchestrator"
+    github: "https://github.com/KIM3310/beaver-study-orchestrator",
+    demo: "https://beaver-study-orchestrator.pages.dev"
   },
   {
     title: "the-savior",
     focus: "Wellness app with AI coaching and journaling surface",
-    github: "https://github.com/KIM3310/the-savior"
+    github: "https://github.com/KIM3310/the-savior",
+    demo: "https://the-savior-9z8.pages.dev"
+  },
+  {
+    title: "EcoTide",
+    focus: "SwiftUI environmental simulation app with reviewer-friendly telemetry surface",
+    github: "https://github.com/KIM3310/ecotide",
+    demo: "https://ecotide.pages.dev"
   }
 ];

@@ -33,9 +33,9 @@ const DIRECT_FEEDBACK_LINKS = [
     Icon: Mail,
   },
   {
-    label: 'GitHub Issue',
+    label: 'GitHub Profile',
     href: PORTFOLIO_FEEDBACK_ISSUE_URL,
-    helper: 'Structured bug report or improvement request tied to the portfolio repo.',
+    helper: 'Canonical repo index and public code surface while the portfolio source repo stays local-only.',
     Icon: Github,
   },
   {
@@ -48,21 +48,21 @@ const DIRECT_FEEDBACK_LINKS = [
 
 const DISCUSSION_LINKS = [
   {
-    label: 'Discussion Board',
+    label: 'GitHub Repos',
     href: PORTFOLIO_DISCUSSIONS_URL,
-    helper: 'Open-ended thread list for feedback, hiring discussions, and collaboration topics.',
+    helper: 'Browse the full public repo set directly from the GitHub profile.',
     Icon: MessageCircle,
   },
   {
-    label: 'Q&A Thread',
+    label: 'LinkedIn Message',
     href: PORTFOLIO_QA_URL,
-    helper: 'Technical questions, architecture follow-ups, and implementation details.',
+    helper: 'Best path for recruiting or collaboration follow-up if you prefer direct messaging.',
     Icon: Github,
   },
   {
-    label: 'Ideas Thread',
+    label: 'Portfolio Ideas',
     href: PORTFOLIO_IDEAS_URL,
-    helper: 'Feature requests and next-step proposals for the portfolio itself.',
+    helper: 'Send portfolio improvement ideas straight to email.',
     Icon: Github,
   },
 ];

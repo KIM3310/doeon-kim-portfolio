@@ -15,6 +15,7 @@ export interface SecondaryProject {
   title: string;
   focus: string;
   github: string;
+  demo?: string;
   note?: string;
 }
 
