@@ -4,4 +4,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://kim3310.github.io/doeon-kim-portfolio/sitemap.xml
+Sitemap: https://doeon-kim-portfolio.pages.dev/sitemap.xml
