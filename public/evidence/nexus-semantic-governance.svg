@@ -1,0 +1,41 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Nexus-Hive semantic governance pack</title>
+  <desc id="desc">Visual evidence card summarizing semantic governance for Nexus-Hive.</desc>
+  <rect width="1200" height="760" fill="#081012"/>
+  <rect x="36" y="36" width="1128" height="688" rx="28" fill="#10212A" stroke="#32505B"/>
+  <text x="72" y="96" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="30" font-weight="700">Nexus-Hive Semantic Governance Pack</text>
+  <text x="72" y="132" fill="#94A3B8" font-family="Arial, sans-serif" font-size="17">Data-platform evidence: certified metrics, warehouse-target posture, and approval-safe analytics.</text>
+
+  <rect x="72" y="172" width="210" height="116" rx="18" fill="#16323A" stroke="#14B8A6"/>
+  <text x="96" y="210" fill="#99F6E4" font-family="Arial, sans-serif" font-size="14" font-weight="700">CERTIFIED METRICS</text>
+  <text x="96" y="252" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="42" font-weight="700">4</text>
+  <text x="96" y="278" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="16">Net revenue, gross revenue, profit, units sold</text>
+
+  <rect x="306" y="172" width="210" height="116" rx="18" fill="#16323A" stroke="#F59E0B"/>
+  <text x="330" y="210" fill="#FCD34D" font-family="Arial, sans-serif" font-size="14" font-weight="700">REVIEW-REQUIRED</text>
+  <text x="330" y="252" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="42" font-weight="700">1</text>
+  <text x="330" y="278" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="16">Average discount stays visible, not hidden</text>
+
+  <rect x="540" y="172" width="210" height="116" rx="18" fill="#16323A" stroke="#3B82F6"/>
+  <text x="564" y="210" fill="#93C5FD" font-family="Arial, sans-serif" font-size="14" font-weight="700">WAREHOUSE TARGETS</text>
+  <text x="564" y="252" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="42" font-weight="700">3</text>
+  <text x="564" y="278" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="16">SQLite demo, governed analytics contract, lakehouse contract</text>
+
+  <rect x="774" y="172" width="318" height="116" rx="18" fill="#16323A" stroke="#A855F7"/>
+  <text x="798" y="210" fill="#E9D5FF" font-family="Arial, sans-serif" font-size="14" font-weight="700">APPROVAL BOUNDARY</text>
+  <text x="798" y="252" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="28" font-weight="700">Query approval + policy + audit</text>
+  <text x="798" y="278" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="16">One governed path before SQL is trusted externally</text>
+
+  <rect x="72" y="330" width="1020" height="320" rx="24" fill="#0F1C22" stroke="#475569"/>
+  <text x="104" y="378" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="24" font-weight="700">What platform reviewers should see first</text>
+  <text x="104" y="428" fill="#99F6E4" font-family="Arial, sans-serif" font-size="18" font-weight="700">1. Semantic contract</text>
+  <text x="340" y="428" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="18">Certified metrics and review-required rules are explicit before the question is run.</text>
+  <text x="104" y="482" fill="#93C5FD" font-family="Arial, sans-serif" font-size="18" font-weight="700">2. Warehouse survival</text>
+  <text x="340" y="482" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="18">Governed analytics and lakehouse fit stay visible as a contract story instead of being implied by SQLite alone.</text>
+  <text x="104" y="536" fill="#FCD34D" font-family="Arial, sans-serif" font-size="18" font-weight="700">3. Approval posture</text>
+  <text x="340" y="536" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="18">Query approval board and policy rules keep risky analytics separated from healthy traffic.</text>
+  <text x="104" y="590" fill="#E9D5FF" font-family="Arial, sans-serif" font-size="18" font-weight="700">4. Review pack</text>
+  <text x="340" y="590" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="18">The review path ends in an audited answer, not in a disconnected SQL demo.</text>
+
+  <text x="104" y="642" fill="#94A3B8" font-family="Arial, sans-serif" font-size="16">Source surfaces: /api/runtime/semantic-governance-pack, /api/runtime/warehouse-target-scorecard, /api/query-approval-board</text>
+</svg>

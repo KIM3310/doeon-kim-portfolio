@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doeon Kim | Runtime Systems Review Brief</title>
+  <meta name="description" content="Runtime systems review brief for Doeon Kim: reliability proof, incident/runtime support systems, and reviewed delivery surfaces.">
+  <link rel="canonical" href="https://kim3310.github.io/doeon-kim-portfolio/briefs/frontier-llm-review-brief.html">
+  <meta property="og:title" content="Doeon Kim | Runtime Systems Review Brief">
+  <meta property="og:description" content="A short review brief for teams that care about tool reliability, eval discipline, and runtime posture.">
+  <meta property="og:url" content="https://kim3310.github.io/doeon-kim-portfolio/briefs/frontier-llm-review-brief.html">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2307111f'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Georgia,serif' font-size='24' fill='%23f5f5f5'%3EDK%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../fabpilot-static.css">
+</head>
+<body data-tone="critical">
+  <header class="topbar shell">
+    <a class="brand" href="../index.html"><span class="brand-mark"></span><span><strong>Doeon Kim</strong><em>runtime systems review brief</em></span></a>
+    <nav class="topnav"><a href="#fit">Fit</a><a href="#proof">Proof</a><a href="#path">Review path</a></nav>
+    <div class="topbar-actions"><a class="ghost" href="../index.html#reader-mode">Portfolio</a><a class="ghost strong" href="../resume/Doeon_Kim_Resume_LLM_Systems_Engineer.pdf">Resume</a></div>
+  </header>
+  <main class="shell">
+    <section class="hero">
+      <article class="panel hero-copy">
+        <div class="eyebrow-row"><span class="eyebrow">Project brief</span><span class="badge">Runtime Systems</span></div>
+        <h1>This portfolio shows <span>runtime and evaluation systems</span>.</h1>
+        <p class="lede">The strongest public signal is simple: benchmarked tool-calling reliability first, then incident and runtime systems that prove the reliability story survives outside a chart.</p>
+        <div class="cta">
+          <a class="btn primary" href="https://stage-pilot.pages.dev">Open StagePilot proof</a>
+          <a class="btn secondary" href="https://github.com/KIM3310/AegisOps">Open AegisOps</a>
+        </div>
+      </article>
+      <article class="panel hero-side">
+        <div class="cards">
+          <article class="card"><strong>Core proof</strong><p>StagePilot shows checked-in reliability lift with parser recovery and bounded retry.</p></article>
+          <article class="card"><strong>Runtime depth</strong><p>AegisOps, Aegis-Air (archived), and ogx (archived) extend the story into incident review and agent runtime control.</p></article>
+          <article class="card"><strong>Why it matters</strong><p>The work reads as reliability engineering, not generic agent-wrapper experimentation.</p></article>
+        </div>
+      </article>
+    </section>
+
+    <section class="section-wrap" id="fit">
+      <div class="section-title"><div><span class="eyebrow">Core signals</span><h2>Signals a frontier reviewer should see quickly</h2></div></div>
+      <div class="grid3">
+        <article class="panel section"><h3>Evals first</h3><p class="copy">The benchmark is checked in and legible, so the main claim does not rely on hand-wavy demo language.</p></article>
+        <article class="panel section"><h3>Failure handling</h3><p class="copy">Parser recovery, bounded retry, replay surfaces, and runtime guardrails show defensive engineering posture.</p></article>
+        <article class="panel section"><h3>Operator reality</h3><p class="copy">The supporting systems keep evidence, handoff, and observability visible instead of stopping at model output.</p></article>
+      </div>
+    </section>
+
+    <section class="section-wrap" id="proof">
+      <div class="section-title"><div><span class="eyebrow">Proof chain</span><h2>The smallest believable set</h2></div></div>
+      <div class="grid2">
+        <article class="panel section"><h3>Primary public proof</h3><ul class="checklist"><li><a href="https://stage-pilot.pages.dev">StagePilot proof</a></li><li><a href="https://github.com/KIM3310/stage-pilot">StagePilot repo</a></li><li><a href="https://youtu.be/6trgTH1vX4M">StagePilot walkthrough</a></li></ul></article>
+        <article class="panel section"><h3>Supporting runtime systems</h3><ul class="checklist"><li><a href="https://github.com/KIM3310/AegisOps">AegisOps</a></li><li><a href="https://github.com/KIM3310/Aegis-Air">Aegis-Air (archived)</a></li><li><a href="https://github.com/KIM3310/ogx">ogx (archived)</a></li></ul></article>
+      </div>
+    </section>
+
+    <section class="section-wrap" id="path">
+      <div class="section-title"><div><span class="eyebrow">Suggested reading order</span><h2>Three clicks that should land</h2></div></div>
+      <div class="grid3">
+        <article class="panel section"><h3>1. StagePilot</h3><p class="copy">See the benchmark lift and bounded recovery logic first.</p></article>
+        <article class="panel section"><h3>2. AegisOps</h3><p class="copy">Verify the same mindset in a multimodal incident workflow with postmortem surfaces.</p></article>
+        <article class="panel section"><h3>3. ogx (archived)</h3><p class="copy">See the operator/runtime control-plane story rather than stopping at one benchmarked system.</p></article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

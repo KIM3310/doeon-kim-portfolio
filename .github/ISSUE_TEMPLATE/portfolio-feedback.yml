@@ -1,0 +1,50 @@
+name: Portfolio feedback
+description: Report a broken link, UX issue, or improvement idea for the portfolio.
+title: "[Portfolio] "
+labels:
+  - portfolio
+  - feedback
+body:
+  - type: dropdown
+    id: feedback_type
+    attributes:
+      label: Feedback type
+      options:
+        - Broken link
+        - UI/UX improvement
+        - Content update
+        - Deployment issue
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Surface
+      options:
+        - Hero
+        - Projects
+        - Community
+        - Resume/Experience
+        - General
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened or what should change?
+      description: Include the page section, the expected behavior, and any relevant URLs.
+      placeholder: The GitHub button for Project X should open the repo, but it currently ...
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Why it matters
+      description: Explain the user or recruiting impact.
+      placeholder: This blocks reviewers from opening the live demo directly.
+  - type: textarea
+    id: supporting_notes
+    attributes:
+      label: Supporting notes
+      description: Screenshots, browser details, or reproduction steps.
