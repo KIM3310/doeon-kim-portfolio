@@ -8,7 +8,9 @@
     "typecheck": "tsc --noEmit",
     "build": "vite build",
     "preview": "vite preview",
-    "verify:content": "node scripts/verify-portfolio.mjs"
+    "verify:content": "node scripts/verify-portfolio.mjs",
+    "fabpilot:runtime": "node server/index.mjs",
+    "fabpilot:runtime:mock": "FABPILOT_ALLOW_MOCK=1 node server/index.mjs"
   },
   "dependencies": {
     "react": "^19.2.4",

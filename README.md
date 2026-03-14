@@ -33,6 +33,18 @@ npm run build
 npm run verify:content
 ```
 
+## Optional FabPilot runtime bridge
+
+FabPilot Live X can now talk to an optional Gemini-backed runtime for generating a live operator brief.
+
+```bash
+npm run fabpilot:runtime:mock
+```
+
+For setup details, see:
+
+- `docs/FABPILOT_GEMINI_RUNTIME.md`
+
 ## Deploy intent
 
 The live portfolio is designed to act as the fastest path from first impression to technical confidence:
