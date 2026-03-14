@@ -1,16 +1,16 @@
-# SK hynix AI/SW One-Pager
+# Samsung AI/SW One-Pager
 
 ## Core positioning
-Doeon Kim is strongest when the problem is not "make an AI demo" but "make a risky system reviewable, trustworthy, and operable." FabTwin Guardian is the clearest expression of that strength.
+Doeon Kim is strongest when the problem is not "make an AI demo" but "make a risky system reviewable, trustworthy, and operable." FabPilot Live X is the clearest expression of that strength.
 
-## Why this fits SK hynix AI/SW
+## Why this fits Samsung AI/SW
 - semiconductor-style software operations, not generic SaaS storytelling
 - release safety, handoff continuity, and operator decision support
 - evidence-first AI system design with visible approval boundaries
 - public proof in reliability, incident AI, governance, and operator workflows
 
-## Flagship proof: FabTwin Guardian
-FabTwin Guardian is a GitLab-native incident-to-fix command system for semiconductor and industrial AI software teams.
+## Flagship proof: FabPilot Live X
+FabPilot Live X is a operator-grade decision-to-action command system for semiconductor and industrial AI software teams.
 It turns risky changes, fragmented evidence, and operational ambiguity into:
 - evidence graph
 - smallest safe patch plan

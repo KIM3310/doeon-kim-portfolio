@@ -1,7 +1,7 @@
-# GitLab AI Hackathon Submission Package
+# Gemini Live Agent Challenge Submission Package
 
 ## Submission thesis
-FabTwin Guardian is not a chatbot. It is a GitLab-native incident-to-fix workflow for risky software delivery in semiconductor and industrial AI environments.
+FabPilot Live X is not a chatbot. It is a operator-grade decision-to-action workflow for risky software delivery in semiconductor and industrial AI environments.
 
 ## Why it fits the hackathon
 - clear trigger -> action flow
@@ -28,4 +28,4 @@ FabTwin Guardian is not a chatbot. It is a GitLab-native incident-to-fix workflo
 - potential impact
 - quality of idea
 
-FabTwin Guardian is strongest when judged as a high-trust workflow system with premium operator UX and clear execution boundaries.
+FabPilot Live X is strongest when judged as a high-trust workflow system with premium operator UX and clear execution boundaries.
