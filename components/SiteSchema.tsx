@@ -15,15 +15,15 @@ const schema = {
       knowsAbout: [
         'LLM reliability',
         'Incident AI',
-        'GitLab Duo workflows',
-        'Semiconductor software operations',
+        'GitLab AI Hackathon workflows',
+        'AI factory operations',
         'Enterprise governance',
         'Operator workflows',
       ],
     },
     {
       '@type': 'CreativeWork',
-      name: 'FabTwin Guardian',
+      name: 'SignalForge',
       description: 'flagship semiconductor cognitive operations system for high-trust AI software teams.',
       about: { '@id': '#doeon-kim' },
     },

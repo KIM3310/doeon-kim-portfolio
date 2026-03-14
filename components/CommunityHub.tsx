@@ -12,20 +12,20 @@ const cards = [
   },
   {
     label: 'Open flagship',
-    href: PORTFOLIO_LIVE_URL,
-    helper: 'Interactive FabTwin Guardian surface with the fastest path to the main product story.',
+    href: `${PORTFOLIO_LIVE_URL}/signalforge.html`,
+    helper: 'Interactive SignalForge surface with the fastest path to the main product story.',
     Icon: ArrowUpRight,
   },
   {
-    label: 'Read dossier',
-    href: `${PORTFOLIO_LIVE_URL.replace(/\/$/, '')}/fabpilot-dossier.html`,
+    label: 'Read system brief',
+    href: `${PORTFOLIO_LIVE_URL.replace(/\/$/, '')}/fabpilot-brief.html`,
     helper: 'Architecture, trust surfaces, and delivery rationale behind the flagship.',
     Icon: FileText,
   },
   {
     label: 'GitHub proof',
     href: PROFILE.github,
-    helper: 'Canonical repos, implementation detail, and public code review surface.',
+    helper: 'Canonical repos, implementation detail, and public proof surface.',
     Icon: Github,
   },
   {

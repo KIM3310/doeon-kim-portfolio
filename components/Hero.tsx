@@ -22,13 +22,13 @@ const Hero: React.FC = () => {
             className="border border-white/10 bg-[#09090b] p-8 md:p-10"
           >
             <div className="mb-6 flex items-center justify-between gap-4 border-b border-white/10 pb-5">
-              <span className="text-accent-gold text-xs font-medium tracking-[0.3em] uppercase">FabTwin Guardian</span>
-              <span className="rounded-full border border-white/10 px-3 py-1 text-[11px] uppercase tracking-[0.22em] text-white/45">SK hynix-ready · GitLab-ready</span>
+              <span className="text-accent-gold text-xs font-medium tracking-[0.3em] uppercase">SignalForge</span>
+              <span className="rounded-full border border-white/10 px-3 py-1 text-[11px] uppercase tracking-[0.22em] text-white/45">GitLab AI Hackathon-ready · SK hynix-ready</span>
             </div>
 
             <h1 className="mb-6 font-serif-heading text-[3rem] font-medium leading-[1.02] tracking-tight text-white sm:text-5xl lg:text-7xl">
               Reviewable <span className="soft-gradient-text">AI systems</span><br />
-              for high-trust operations.
+              for AI factories and high-trust operations.
             </h1>
 
             <p className="max-w-3xl text-base font-light leading-8 text-primary-muted sm:text-lg">{PROFILE.intro}</p>
@@ -38,7 +38,7 @@ const Hero: React.FC = () => {
                 href={PORTFOLIO_LIVE_URL}
                 className="inline-flex items-center gap-2 rounded-full bg-accent-gold px-6 py-3 text-sm font-medium text-black transition-transform hover:scale-[1.02]"
               >
-                Launch FabTwin Guardian
+                Launch SignalForge
                 <ArrowRight className="h-4 w-4" />
               </a>
               <a
@@ -60,15 +60,15 @@ const Hero: React.FC = () => {
             <div className="mt-8 grid gap-4 sm:grid-cols-3">
               <div className="border border-white/10 bg-black/20 p-4">
                 <p className="text-[11px] uppercase tracking-[0.24em] text-white/35">Role fit</p>
-                <p className="mt-2 text-sm text-white">AI/SW · Reliability · Operations</p>
+                <p className="mt-2 text-sm text-white">LLM · Reliability · Operations</p>
               </div>
               <div className="border border-white/10 bg-black/20 p-4">
                 <p className="text-[11px] uppercase tracking-[0.24em] text-white/35">Flagship</p>
-                <p className="mt-2 text-sm text-white">FabTwin Guardian</p>
+                <p className="mt-2 text-sm text-white">SignalForge</p>
               </div>
               <div className="border border-white/10 bg-black/20 p-4">
                 <p className="text-[11px] uppercase tracking-[0.24em] text-white/35">Domain</p>
-                <p className="mt-2 text-sm text-white">Semiconductor ops + high-trust AI</p>
+                <p className="mt-2 text-sm text-white">AI factory ops + high-trust AI</p>
               </div>
             </div>
 
@@ -88,13 +88,13 @@ const Hero: React.FC = () => {
             <div className="mb-6 flex items-center justify-between gap-4 border-b border-white/10 pb-5">
               <div>
                 <p className="text-xs uppercase tracking-[0.28em] text-accent-gold/80">Flagship thesis</p>
-                <h2 className="mt-2 font-serif-heading text-3xl text-white">FabTwin Guardian</h2>
+                <h2 className="mt-2 font-serif-heading text-3xl text-white">SignalForge</h2>
               </div>
-              <span className="rounded-full border border-white/10 px-3 py-1 text-[11px] uppercase tracking-[0.22em] text-white/45">Evidence → decision → approval</span>
+              <span className="rounded-full border border-white/10 px-3 py-1 text-[11px] uppercase tracking-[0.22em] text-white/45">Evidence → decision → action</span>
             </div>
 
             <p className="mb-6 text-sm leading-7 text-primary-muted">
-              Semiconductor command surface for operator voice, dashboard context, change state, SPC drift, SOP grounding, signed handoff, and replayable debugging.
+              AI factory command surface for operator voice, dashboard context, change state, SPC drift, SOP grounding, signed handoff, and replayable debugging.
             </p>
 
             <div className="grid gap-4 md:grid-cols-3">
@@ -114,15 +114,15 @@ const Hero: React.FC = () => {
 
             <div className="mt-6 rounded-2xl border border-white/10 bg-black/20 p-5">
               <p className="text-[11px] uppercase tracking-[0.24em] text-accent-gold/70">Current mission posture</p>
-              <h3 className="mt-3 text-2xl font-serif-heading text-white">Wafer scheduler release risk</h3>
+              <h3 className="mt-3 text-2xl font-serif-heading text-white">AI factory mission posture</h3>
               <p className="mt-3 text-sm leading-7 text-primary-muted">
-                One workflow demonstrates the whole product: detect a risky operational situation, assemble the right evidence, rank the strongest explanation, then stop cleanly at the approval boundary.
+                One workflow demonstrates the whole product: detect a risky operational situation, assemble the right evidence, rank the strongest explanation, and stop cleanly at the approval boundary.
               </p>
               <div className="mt-5 flex flex-wrap gap-2 text-xs uppercase tracking-[0.16em] text-white/50">
-                <span className="rounded-full border border-white/10 px-3 py-2">GitLab Duo</span>
+                <span className="rounded-full border border-white/10 px-3 py-2">GitLab AI Hackathon</span>
                 <span className="rounded-full border border-white/10 px-3 py-2">Evidence graph</span>
                 <span className="rounded-full border border-white/10 px-3 py-2">Decision trace</span>
-                <span className="rounded-full border border-white/10 px-3 py-2">Approval gate</span>
+                <span className="rounded-full border border-white/10 px-3 py-2">Nova Act gate</span>
                 <span className="rounded-full border border-white/10 px-3 py-2">Replayable handoff</span>
               </div>
             </div>
