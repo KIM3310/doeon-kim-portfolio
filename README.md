@@ -1,6 +1,6 @@
 # Doeon Kim Portfolio
 
-High-trust AI systems portfolio centered on **FabPilot Live X** — a flagship product system designed to show reliability, operator workflow design, governance, and reviewable software delivery.
+High-trust AI systems portfolio centered on **FabTwin Guardian** — a flagship-first command system designed to show reliability, operator workflow design, governance, and reviewable software delivery.
 
 ## What this repo is trying to do
 
@@ -13,7 +13,7 @@ This portfolio is not meant to be a generic personal website. It is a **canonica
 
 ## Canonical narrative spine
 
-- **Flagship:** FabPilot Live X
+- **Flagship:** FabTwin Guardian
 - **Utility surface:** mission artifact export, signed handoff, and replayable debugging
 - **Role positioning:** AI/SW Systems Engineer focused on reliable industrial AI
 - **Key themes:** tool-calling reliability, incident AI, operator workflows, governed delivery, review-speed proof surfaces
@@ -30,6 +30,7 @@ npm run dev
 
 ```bash
 npm run build
+npm run verify:content
 ```
 
 ## Deploy intent
@@ -37,7 +38,8 @@ npm run build
 The live portfolio is designed to act as the fastest path from first impression to technical confidence:
 - homepage -> flagship framing
 - projects -> supporting proof chain
-- community/contact -> recruiter follow-up path
+- briefs -> hiring / hackathon support package
+- contact/review path -> recruiter follow-up
 
 ## Notes
 

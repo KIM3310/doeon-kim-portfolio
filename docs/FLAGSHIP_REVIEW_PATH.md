@@ -1,4 +1,4 @@
-# FabPilot Live X Review Path
+# FabTwin Guardian Review Path
 
 ## Goal
 Give recruiters, hiring managers, and hackathon judges the fastest route to the strongest proof in the portfolio.
@@ -6,11 +6,12 @@ Give recruiters, hiring managers, and hackathon judges the fastest route to the 
 ## Canonical path
 1. Homepage / React portfolio surface
 2. Hero + briefing for candidate and flagship orientation
-3. Selected works, with FabPilot Live X first
+3. Selected works, with FabTwin Guardian first
 4. Supporting public repos for reliability, incident AI, governance, and operator systems
+5. Support briefs for hiring and hackathon review
 
 ## What the flagship proves
-- evidence-first decision-to-action design
+- evidence-first incident-to-fix design
 - approval boundaries instead of blind automation
 - high-trust operator workflow thinking
 - reviewable software delivery for risky systems
@@ -19,4 +20,5 @@ Give recruiters, hiring managers, and hackathon judges the fastest route to the 
 - homepage explains candidate + flagship in one glance
 - flagship story is louder than supporting projects
 - top CTA hierarchy points to flagship / GitHub / contact cleanly
+- support briefs are linked from the main portfolio
 - build passes and deployed surface matches repo narrative
