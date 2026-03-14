@@ -15,26 +15,26 @@ const schema = {
       knowsAbout: [
         'LLM reliability',
         'Incident AI',
-        'Gemini Live workflows',
+        'GitLab-native agent workflows',
         'Semiconductor software operations',
         'Enterprise governance',
-        'Operator workflows'
-      ]
+        'Operator workflows',
+      ],
     },
     {
       '@type': 'CreativeWork',
-      name: 'FabPilot Live X',
-      description: 'Semiconductor command surface for multimodal operations, decision trace, approval-gated navigation, and replayable debugging.',
-      about: { '@id': '#doeon-kim' }
+      name: 'FabTwin Guardian',
+      description: 'GitLab-native incident-to-fix command system for semiconductor and industrial AI software teams.',
+      about: { '@id': '#doeon-kim' },
     },
     {
       '@type': 'WebSite',
       name: 'Doeon Kim Portfolio',
       inLanguage: 'ko-KR',
       about: { '@id': '#doeon-kim' },
-      description: 'Portfolio site for Doeon Kim focused on high-trust AI systems, reliability, and operator-grade software.'
-    }
-  ]
+      description: 'Portfolio site for Doeon Kim focused on high-trust AI systems, reliability, and operator-grade software.',
+    },
+  ],
 };
 
 const SiteSchema: React.FC = () => (
