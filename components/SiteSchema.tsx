@@ -13,20 +13,26 @@ const schema = {
       description: PROFILE.intro,
       sameAs: [PROFILE.github, PROFILE.linkedin],
       knowsAbout: [
-        'LLM application development',
-        'RAG optimization',
-        'AI solution architecture',
-        'LLMOps',
-        'FastAPI',
-        'React'
+        'LLM reliability',
+        'Incident AI',
+        'Gemini Live workflows',
+        'Semiconductor software operations',
+        'Enterprise governance',
+        'Operator workflows'
       ]
+    },
+    {
+      '@type': 'CreativeWork',
+      name: 'FabPilot Live X',
+      description: 'Semiconductor command surface for multimodal operations, decision trace, approval-gated navigation, and replayable debugging.',
+      about: { '@id': '#doeon-kim' }
     },
     {
       '@type': 'WebSite',
       name: 'Doeon Kim Portfolio',
       inLanguage: 'ko-KR',
       about: { '@id': '#doeon-kim' },
-      description: 'Portfolio site for Doeon Kim, AI Engineer and Solution Architect.'
+      description: 'Portfolio site for Doeon Kim focused on high-trust AI systems, reliability, and operator-grade software.'
     }
   ]
 };

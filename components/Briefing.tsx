@@ -13,10 +13,10 @@ const Briefing: React.FC = () => {
           <div className="mb-8 flex items-end justify-between gap-4 border-b border-white/10 pb-6">
             <div>
               <p className="mb-2 text-xs uppercase tracking-[0.32em] text-accent-gold/80">Operator Briefing</p>
-              <h2 className="font-serif-heading text-3xl text-white md:text-4xl">AI delivery, not just demos.</h2>
+              <h2 className="font-serif-heading text-3xl text-white md:text-4xl">One candidate, one flagship, one proof chain.</h2>
             </div>
             <p className="max-w-sm text-sm leading-relaxed text-primary-muted">
-              Engineering surface tuned for real products: architecture, rollout, diagnostics, and iteration loops.
+              The goal is fast reviewer confidence: understand the strongest system first, then verify the proof chain around it.
             </p>
           </div>
 
@@ -36,10 +36,10 @@ const Briefing: React.FC = () => {
         </div>
 
         <aside className="border border-white/10 bg-[#050505] p-8 md:p-10">
-          <p className="mb-2 text-xs uppercase tracking-[0.32em] text-accent-gold/80">Engage Fast</p>
-          <h2 className="mb-4 font-serif-heading text-3xl text-white">Pick the shortest path.</h2>
+          <p className="mb-2 text-xs uppercase tracking-[0.32em] text-accent-gold/80">Shortest Path</p>
+          <h2 className="mb-4 font-serif-heading text-3xl text-white">Pick the fastest review route.</h2>
           <p className="mb-8 text-sm leading-relaxed text-primary-muted">
-            If the problem is clear, I prefer moving directly from scope to prototype and from prototype to hardening.
+            The best portfolio surface is the one that removes navigation cost. Start at the flagship, inspect the proof, and then open contact or GitHub if the fit is strong.
           </p>
 
           <div className="space-y-4">
