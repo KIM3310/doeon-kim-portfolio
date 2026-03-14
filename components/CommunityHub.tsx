@@ -5,6 +5,12 @@ import { PORTFOLIO_ACTIONS, PROFILE, PORTFOLIO_LIVE_URL } from '../constants';
 
 const cards = [
   {
+    label: 'Download resume (PDF)',
+    href: '/resume/Doeon_Kim_Resume_Microsoft_Solution_Architect.pdf',
+    helper: 'Latest high-trust AI/SW resume aligned to the flagship narrative.',
+    Icon: FileText,
+  },
+  {
     label: 'Open flagship',
     href: PORTFOLIO_LIVE_URL,
     helper: 'Interactive FabTwin Guardian surface with the fastest path to the main product story.',
