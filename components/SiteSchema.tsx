@@ -16,7 +16,7 @@ const schema = {
         'LLM reliability',
         'Incident AI',
         'GitLab-native agent workflows',
-        'semiconductor operations',
+        'Semiconductor software operations',
         'Enterprise governance',
         'Operator workflows',
       ],
@@ -24,7 +24,7 @@ const schema = {
     {
       '@type': 'CreativeWork',
       name: 'FabTwin Guardian',
-      description: 'flagship semiconductor cognitive operations system for high-trust AI software teams.',
+      description: 'GitLab-native incident-to-fix command system for semiconductor and industrial AI software teams.',
       about: { '@id': '#doeon-kim' },
     },
     {

@@ -26,7 +26,7 @@ export const PORTFOLIO_SIGNAL_DECK = [
   {
     label: 'Flagship',
     value: 'FabTwin Guardian',
-    detail: 'Semiconductor command surface with voice, evidence graph, decision trace, approval-gated action, signed handoff, and replayable debugging.',
+    detail: 'GitLab-native incident-to-fix command system for semiconductor and industrial AI software teams.',
   },
   {
     label: 'Differentiator',
@@ -40,7 +40,7 @@ export const PORTFOLIO_SIGNAL_DECK = [
   },
   {
     label: 'Hiring Signal',
-    value: 'GitLab AI Hackathon + SK hynix-ready',
+    value: 'SK hynix-ready AI/SW',
     detail: 'Semiconductor software, runtime reliability, operator trust, and reviewer speed packaged into one coherent story.',
   },
 ];
@@ -103,19 +103,16 @@ export const SKILLS: SkillCategory[] = [
 
 export const PROJECTS: Project[] = [
   {
-    title: 'FabTwin Guardian — Semiconductor Cognitive Operations System',
+    title: 'FabTwin Guardian — Incident-to-Fix Command System',
     category: 'Flagship / Semiconductor AI-SW',
-    role: 'Product thesis, multimodal ops UX, decision trace, signed handoff, and premium command-center narrative',
+    role: 'Product thesis, incident-to-fix architecture, proof surface design, and premium command-center narrative',
     achievements: [
-      'Frames semiconductor incidents, lot risk, dashboard context, SPC drift, SOP fragments, and shift notes as one evidence-first operator workflow.',
-      'Separates evidence, decision trace, approval-gated action, and signed handoff so the system reads as trustworthy operational software, not a chatbot wrapper.',
+      'Frames risky merge requests, CI regressions, screenshots, SOP fragments, and shift notes as one evidence-first software workflow.',
+      'Separates evidence, patch planning, approval, and signed handoff so the system reads as trustworthy operational software, not a chatbot wrapper.',
       'Optimized to strengthen both SK hynix AI/SW positioning and GitLab AI Hackathon competitiveness.',
     ],
-    tech: ['GitLab Duo', 'TypeScript', 'Evidence Graph', 'Approval Gates', 'Replayable Debugging'],
-    links: {
-      demo: PORTFOLIO_LIVE_URL,
-      github: PROFILE.github,
-    },
+    tech: ['GitLab Duo Agent Platform', 'TypeScript', 'Evidence Graph', 'Approval Gates', 'Replayable Debugging'],
+    links: { demo: PORTFOLIO_LIVE_URL, github: PROFILE.github },
   },
   {
     title: 'AegisOps — Multimodal Incident Copilot',
@@ -143,10 +140,7 @@ export const PROJECTS: Project[] = [
       'Reached 32/32 replay rubric checks with 100% severity and failure-bucket accuracy on the bundled suite.',
     ],
     tech: ['FastAPI', 'Ollama', 'Replay Evals', 'SSE', 'Terraform'],
-    links: {
-      demo: 'https://aegis-air.pages.dev',
-      github: 'https://github.com/KIM3310/Aegis-Air',
-    },
+    links: { demo: 'https://aegis-air.pages.dev', github: 'https://github.com/KIM3310/Aegis-Air' },
   },
   {
     title: 'Fab Ops Yield Control Tower',
@@ -158,9 +152,7 @@ export const PROJECTS: Project[] = [
       'Provides the semiconductor workflow baseline that makes FabTwin Guardian credible.',
     ],
     tech: ['Python', 'FastAPI', 'Manufacturing Ops'],
-    links: {
-      github: 'https://github.com/KIM3310/fab-ops-yield-control-tower',
-    },
+    links: { github: 'https://github.com/KIM3310/fab-ops-yield-control-tower' },
   },
   {
     title: 'StagePilot — Tool-Calling Reliability Runtime',
@@ -172,11 +164,7 @@ export const PROJECTS: Project[] = [
       'Provides the reliability backbone for action-heavy agent products.',
     ],
     tech: ['TypeScript', 'Tool Calling', 'Benchmarks', 'Middleware'],
-    links: {
-      demo: 'https://stage-pilot.pages.dev',
-      github: 'https://github.com/KIM3310/stage-pilot',
-      youtube: 'https://youtu.be/6trgTH1vX4M',
-    },
+    links: { demo: 'https://stage-pilot.pages.dev', github: 'https://github.com/KIM3310/stage-pilot', youtube: 'https://youtu.be/6trgTH1vX4M' },
   },
   {
     title: 'Enterprise LLM Adoption Kit',
@@ -188,9 +176,7 @@ export const PROJECTS: Project[] = [
       'Proves that safe AI delivery requires governance, not just model quality.',
     ],
     tech: ['FastAPI', 'React', 'Security', 'Evaluation'],
-    links: {
-      github: 'https://github.com/KIM3310/enterprise-llm-adoption-kit',
-    },
+    links: { github: 'https://github.com/KIM3310/enterprise-llm-adoption-kit' },
   },
   {
     title: 'TwinCity UI — Digital Twin Ops Console',
@@ -202,10 +188,7 @@ export const PROJECTS: Project[] = [
       'Normalized inconsistent provider payloads into one event schema for deterministic operator workflows.',
     ],
     tech: ['Next.js', 'TypeScript', 'WebSocket', 'SSE'],
-    links: {
-      demo: 'https://twincity-ui.pages.dev',
-      github: 'https://github.com/KIM3310/twincity-ui',
-    },
+    links: { demo: 'https://twincity-ui.pages.dev', github: 'https://github.com/KIM3310/twincity-ui' },
   },
   {
     title: 'ogx — Multi-Agent Orchestration CLI',
@@ -217,32 +200,14 @@ export const PROJECTS: Project[] = [
       'Extends the orchestration story behind high-trust AI systems.',
     ],
     tech: ['TypeScript', 'CLI', 'tmux', 'Cloud Run'],
-    links: {
-      github: 'https://github.com/KIM3310/ogx',
-    },
+    links: { github: 'https://github.com/KIM3310/ogx' },
   },
 ];
 
 export const EXPERIENCE: Experience[] = [
-  {
-    company: 'Microsoft AI School 8기',
-    role: 'Trainee',
-    period: '2025.09 - 2026.02',
-    description: ['AI/클라우드/데이터 분석 교육 이수', 'RAG, incident operations, real-time ops 중심의 팀 프로젝트 수행'],
-  },
-  {
-    company: 'ATOM TECH SOLUTIONS LTD',
-    role: 'Full Stack Intern (Remote)',
-    location: '미국 캘리포니아 버클리',
-    period: '2025.06 - 2025.09',
-    description: ['기존 리뷰 플랫폼에 OpenAI API 기반 문의 챗봇 통합', '풀스택 유지보수 및 기능 개선'],
-  },
-  {
-    company: '대한민국 국방부',
-    role: 'Strategic Backbone Network & Security Team Lead',
-    period: '2023.11 - 2025.05',
-    description: ['지휘통신망 24/7 운영, 네트워크 인프라/보안 관리', '분대장 팀 운영 및 리더십 경험'],
-  },
+  { company: 'Microsoft AI School 8기', role: 'Trainee', period: '2025.09 - 2026.02', description: ['AI/클라우드/데이터 분석 교육 이수', 'RAG, incident operations, real-time ops 중심의 팀 프로젝트 수행'] },
+  { company: 'ATOM TECH SOLUTIONS LTD', role: 'Full Stack Intern (Remote)', location: '미국 캘리포니아 버클리', period: '2025.06 - 2025.09', description: ['기존 리뷰 플랫폼에 OpenAI API 기반 문의 챗봇 통합', '풀스택 유지보수 및 기능 개선'] },
+  { company: '대한민국 국방부', role: 'Strategic Backbone Network & Security Team Lead', period: '2023.11 - 2025.05', description: ['지휘통신망 24/7 운영, 네트워크 인프라/보안 관리', '분대장 팀 운영 및 리더십 경험'] },
 ];
 
 export const CERTIFICATIONS: Certification[] = [

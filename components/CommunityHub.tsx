@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowUpRight, Github, Linkedin, Mail, FileText } from 'lucide-react';
 import Section from './Section';
-import { PORTFOLIO_ACTIONS, PROFILE, PORTFOLIO_LIVE_URL } from '../constants';
+import { PROFILE, PORTFOLIO_LIVE_URL } from '../constants';
 
 const cards = [
   {
