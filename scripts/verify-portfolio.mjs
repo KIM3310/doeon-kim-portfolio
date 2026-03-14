@@ -17,22 +17,22 @@ const checks = [
   {
     file: 'constants.ts',
     mustInclude: ['FabPilot Live X', 'Samsung-ready AI/SW', 'Gemini Live Agent Challenge'],
-    mustNotInclude: ['FabPilot Live X', 'FabPilot Live X', 'Gemini Live', 'Samsung-ready', 'Samsung', 'Gemini Live'],
+    mustNotInclude: ['FabTwin Guardian', 'SignalForge', 'Amazon Nova', 'NVIDIA-ready', 'SK hynix', 'GitLab Duo'],
   },
   {
     file: 'components/Hero.tsx',
     mustInclude: ['FabPilot Live X', 'Gemini Live × Samsung-ready'],
-    mustNotInclude: ['FabPilot Live X', 'FabPilot Live X', 'Gemini Live', 'Samsung-ready', 'Samsung', 'Gemini Live'],
+    mustNotInclude: ['FabTwin Guardian', 'SignalForge', 'Amazon Nova', 'NVIDIA-ready', 'SK hynix', 'GitLab Duo'],
   },
   {
     file: 'public/fabpilot-live-x.html',
     mustInclude: ['FabPilot Live X', 'Samsung-ready', 'Gemini Live'],
-    mustNotInclude: ['FabPilot Live X', 'FabPilot Live X', 'Gemini Live', 'Samsung-ready', 'Samsung', 'Gemini Live'],
+    mustNotInclude: ['FabTwin Guardian', 'SignalForge', 'Amazon Nova', 'NVIDIA-ready', 'SK hynix', 'GitLab Duo'],
   },
   {
     file: 'public/fabpilot-dossier.html',
     mustInclude: ['FabPilot Live X', 'Samsung-ready'],
-    mustNotInclude: ['FabPilot Live X', 'FabPilot Live X', 'Gemini Live', 'Samsung-ready', 'Samsung', 'Gemini Live'],
+    mustNotInclude: ['FabTwin Guardian', 'SignalForge', 'Amazon Nova', 'NVIDIA-ready', 'SK hynix', 'GitLab Duo'],
   },
 ];
 
@@ -54,9 +54,11 @@ for (const check of checks) {
     if (text.includes(token)) failures.push(`${check.file} must not include: ${token}`);
   }
 }
+
 if (failures.length) {
   console.error('PORTFOLIO VERIFY FAILED');
   for (const failure of failures) console.error(`- ${failure}`);
   process.exit(1);
 }
+
 console.log('PORTFOLIO VERIFY OK');
