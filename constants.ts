@@ -8,7 +8,7 @@ export const PROFILE: Profile = {
   linkedin: 'https://www.linkedin.com/in/doeon-kim-4742a2388',
   catchphrase: 'Reviewable AI systems for high-trust operations',
   intro:
-    '툴콜링 신뢰성, multimodal incident AI, operator workflow, enterprise governance에 강한 AI/SW 엔지니어입니다. 지금은 FabPilot Live X를 중심으로, 반도체 운영·의사결정 trace·안전한 action boundary를 reviewable system과 reusable artifact로 바꾸는 제품형 포트폴리오를 만들고 있습니다.',
+    '툴콜링 신뢰성, multimodal incident AI, operator workflow, enterprise governance에 강한 AI/SW 엔지니어입니다. 지금은 FabPilot Live X를 중심으로, 반도체 운영·의사결정 trace·안전한 action boundary를 reviewable system으로 바꾸는 제품형 포트폴리오를 만들고 있습니다.',
 };
 
 export const PORTFOLIO_LIVE_URL = 'https://doeon-kim-portfolio.pages.dev';
