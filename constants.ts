@@ -8,7 +8,7 @@ export const PROFILE: Profile = {
   linkedin: 'https://www.linkedin.com/in/doeon-kim-4742a2388',
   catchphrase: 'Evidence-first AI systems for high-trust operations',
   intro:
-    '툴콜링 신뢰성, multimodal incident AI, operator workflow, enterprise governance에 강한 AI/SW 엔지니어입니다. 지금은 FabPilot Live X을 중심으로, 위험한 변경과 운영 컨텍스트를 reviewable system과 reusable artifact로 바꾸는 제품형 포트폴리오를 만들고 있습니다.',
+    '툴콜링 신뢰성, multimodal incident AI, operator workflow, enterprise governance에 강한 AI/SW 엔지니어입니다. 지금은 FabPilot Live X를 중심으로, 반도체 운영·의사결정 trace·안전한 action boundary를 reviewable system과 reusable artifact로 바꾸는 제품형 포트폴리오를 만들고 있습니다.',
 };
 
 export const PORTFOLIO_LIVE_URL = 'https://doeon-kim-portfolio.pages.dev';
@@ -26,7 +26,7 @@ export const PORTFOLIO_SIGNAL_DECK = [
   {
     label: 'Flagship',
     value: 'FabPilot Live X',
-    detail: 'Semiconductor cognitive operations system for high-trust AI software teams.',
+    detail: 'Semiconductor command surface with voice, evidence graph, decision trace, approval-gated action, signed handoff, and replayable debugging.',
   },
   {
     label: 'Differentiator',
@@ -103,7 +103,7 @@ export const SKILLS: SkillCategory[] = [
 
 export const PROJECTS: Project[] = [
   {
-    title: 'FabPilot Live X — Incident-to-Fix Command System',
+    title: 'FabPilot Live X — Semiconductor Cognitive Operations System',
     category: 'Flagship / Semiconductor AI-SW',
     role: 'Product thesis, multimodal ops UX, decision trace, signed handoff, and premium command-center narrative',
     achievements: [
@@ -112,7 +112,7 @@ export const PROJECTS: Project[] = [
       'Optimized to strengthen both Samsung AI/SW positioning and Gemini Live Agent Challenge competitiveness.',
     ],
     tech: ['Gemini Live', 'TypeScript', 'Evidence Graph', 'Approval Gates', 'Replayable Debugging'],
-    links: { demo: PORTFOLIO_LIVE_URL, github: PROFILE.github },
+    links: { demo: 'fabpilot-live-x.html', github: PROFILE.github },
   },
   {
     title: 'AegisOps — Multimodal Incident Copilot',
