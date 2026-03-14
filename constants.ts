@@ -101,7 +101,7 @@ export const PROJECTS: Project[] = [
       'Separates evidence, decision trace, approval-gated action, and signed handoff so the system reads as trustworthy operational software, not a chatbot wrapper.',
       'Optimized to strengthen both Samsung AI/SW positioning and Gemini Live Agent Challenge competitiveness.',
     ],
-    tech: ['Gemini Live Agent Platform', 'TypeScript', 'Evidence Graph', 'Decision Trace', 'Replayable Debugging'],
+    tech: ['Gemini Live', 'TypeScript', 'Evidence Graph', 'Decision Trace', 'Replayable Debugging'],
     links: { demo: FLAGSHIP_URL, github: PROFILE.github },
   },
   {

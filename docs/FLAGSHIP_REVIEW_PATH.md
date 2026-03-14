@@ -1,8 +1,8 @@
-# FabTwin Guardian Review Path
+# FabPilot Live X Review Path
 
 1. Start on the portfolio homepage
-2. Open the FabTwin Guardian flagship
-3. Read the FabTwin Guardian dossier
+2. Open the FabPilot Live X flagship
+3. Read the FabPilot Live X dossier
 4. Review the supporting proof chain in public repos
 
 ## What should become obvious quickly
