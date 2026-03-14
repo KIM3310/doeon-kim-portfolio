@@ -22,8 +22,8 @@ const Hero: React.FC = () => {
             className="border border-white/10 bg-[#09090b] p-8 md:p-10"
           >
             <div className="mb-6 flex items-center justify-between gap-4 border-b border-white/10 pb-5">
-              <span className="text-accent-gold text-xs font-medium tracking-[0.3em] uppercase">FabPilot Live X</span>
-              <span className="rounded-full border border-white/10 px-3 py-1 text-[11px] uppercase tracking-[0.22em] text-white/45">Gemini Live × Samsung-ready</span>
+              <span className="text-accent-gold text-xs font-medium tracking-[0.3em] uppercase">FabTwin Guardian</span>
+              <span className="rounded-full border border-white/10 px-3 py-1 text-[11px] uppercase tracking-[0.22em] text-white/45">SK hynix-ready · GitLab-ready</span>
             </div>
 
             <h1 className="mb-6 font-serif-heading text-[3rem] font-medium leading-[1.02] tracking-tight text-white sm:text-5xl lg:text-7xl">
@@ -38,7 +38,7 @@ const Hero: React.FC = () => {
                 href={PORTFOLIO_LIVE_URL}
                 className="inline-flex items-center gap-2 rounded-full bg-accent-gold px-6 py-3 text-sm font-medium text-black transition-transform hover:scale-[1.02]"
               >
-                Launch FabPilot Live X
+                Launch FabTwin Guardian
                 <ArrowRight className="h-4 w-4" />
               </a>
               <a
@@ -64,7 +64,7 @@ const Hero: React.FC = () => {
               </div>
               <div className="border border-white/10 bg-black/20 p-4">
                 <p className="text-[11px] uppercase tracking-[0.24em] text-white/35">Flagship</p>
-                <p className="mt-2 text-sm text-white">FabPilot Live X</p>
+                <p className="mt-2 text-sm text-white">FabTwin Guardian</p>
               </div>
               <div className="border border-white/10 bg-black/20 p-4">
                 <p className="text-[11px] uppercase tracking-[0.24em] text-white/35">Domain</p>
@@ -88,7 +88,7 @@ const Hero: React.FC = () => {
             <div className="mb-6 flex items-center justify-between gap-4 border-b border-white/10 pb-5">
               <div>
                 <p className="text-xs uppercase tracking-[0.28em] text-accent-gold/80">Flagship thesis</p>
-                <h2 className="mt-2 font-serif-heading text-3xl text-white">FabPilot Live X</h2>
+                <h2 className="mt-2 font-serif-heading text-3xl text-white">FabTwin Guardian</h2>
               </div>
               <span className="rounded-full border border-white/10 px-3 py-1 text-[11px] uppercase tracking-[0.22em] text-white/45">Evidence → decision → approval</span>
             </div>
@@ -119,7 +119,7 @@ const Hero: React.FC = () => {
                 One workflow demonstrates the whole product: detect a risky operational situation, assemble the right evidence, rank the strongest explanation, then stop cleanly at the approval boundary.
               </p>
               <div className="mt-5 flex flex-wrap gap-2 text-xs uppercase tracking-[0.16em] text-white/50">
-                <span className="rounded-full border border-white/10 px-3 py-2">Gemini Live</span>
+                <span className="rounded-full border border-white/10 px-3 py-2">GitLab Duo</span>
                 <span className="rounded-full border border-white/10 px-3 py-2">Evidence graph</span>
                 <span className="rounded-full border border-white/10 px-3 py-2">Decision trace</span>
                 <span className="rounded-full border border-white/10 px-3 py-2">Approval gate</span>
