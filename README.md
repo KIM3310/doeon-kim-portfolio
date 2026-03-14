@@ -1,6 +1,6 @@
 # Doeon Kim Portfolio
 
-High-trust AI systems portfolio centered on **FabTwin Guardian** — a flagship-first command system designed to show reliability, operator workflow design, governance, and reviewable software delivery.
+High-trust AI systems portfolio centered on **FabPilot Live X** — a flagship-first command system designed to show reliability, operator workflow design, governance, and reviewable software delivery.
 
 ## What this repo is trying to do
 
@@ -13,7 +13,7 @@ This portfolio is not meant to be a generic personal website. It is a **canonica
 
 ## Canonical narrative spine
 
-- **Flagship:** FabTwin Guardian
+- **Flagship:** FabPilot Live X
 - **Utility surface:** mission artifact export, signed handoff, and replayable debugging
 - **Role positioning:** AI/SW Systems Engineer focused on reliable industrial AI
 - **Key themes:** tool-calling reliability, incident AI, operator workflows, governed delivery, review-speed proof surfaces
@@ -29,16 +29,31 @@ npm run dev
 ## Build
 
 ```bash
+npm run typecheck
 npm run build
 npm run verify:content
 ```
 
+## Canonical live surface
+
+Primary deployed portfolio:
+
+- `https://kim3310.github.io/doeon-kim-portfolio/`
+
+GitHub Pages is the canonical public surface for review. Cloudflare Pages is optional and may lag until its project configuration is pointed at the same build output.
+
 ## Optional FabPilot runtime bridge
 
-FabPilot Live X can now talk to an optional Gemini-backed runtime for generating a live operator brief.
+FabPilot Live X can talk to an optional Gemini-backed runtime for generating a live operator brief.
 
 ```bash
 npm run fabpilot:runtime:mock
+```
+
+Legacy `fabtwin:*` aliases remain available:
+
+```bash
+npm run fabtwin:runtime:mock
 ```
 
 For setup details, see:

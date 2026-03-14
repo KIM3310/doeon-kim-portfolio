@@ -9,6 +9,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "verify:content": "node scripts/verify-portfolio.mjs",
+    "fabtwin:runtime": "node server/index.mjs",
+    "fabtwin:runtime:mock": "FABPILOT_ALLOW_MOCK=1 node server/index.mjs",
     "fabpilot:runtime": "node server/index.mjs",
     "fabpilot:runtime:mock": "FABPILOT_ALLOW_MOCK=1 node server/index.mjs"
   },
