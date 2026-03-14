@@ -15,7 +15,7 @@ const schema = {
       knowsAbout: [
         'LLM reliability',
         'Incident AI',
-        'Gemini Live workflows',
+        'GitLab-native agent workflows',
         'Semiconductor software operations',
         'Enterprise governance',
         'Operator workflows',
@@ -23,8 +23,8 @@ const schema = {
     },
     {
       '@type': 'CreativeWork',
-      name: 'FabPilot Live X',
-      description: 'operator-grade semiconductor command surface for multimodal operations, decision trace, approval-gated action, and replayable debugging.',
+      name: 'FabTwin Guardian',
+      description: 'GitLab-native incident-to-fix command system for semiconductor and industrial AI software teams.',
       about: { '@id': '#doeon-kim' },
     },
     {
