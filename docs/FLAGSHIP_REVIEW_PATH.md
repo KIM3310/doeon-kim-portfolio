@@ -1,24 +1,12 @@
 # FabPilot Live X Review Path
 
-## Goal
-Give recruiters, hiring managers, and hackathon judges the fastest route to the strongest proof in the portfolio.
+1. Start on the portfolio homepage
+2. Open the FabPilot Live X flagship
+3. Read the FabPilot dossier
+4. Review the supporting proof chain in public repos
 
-## Canonical path
-1. Homepage / React portfolio surface
-2. Hero + briefing for candidate and flagship orientation
-3. Selected works, with FabPilot Live X first
-4. Supporting public repos for reliability, incident AI, governance, and operator systems
-5. Support briefs for hiring and hackathon review
-
-## What the flagship proves
-- evidence-first decision-to-action design
-- approval boundaries instead of blind automation
-- high-trust operator workflow thinking
-- reviewable software delivery for risky systems
-
-## What to verify before shipping
-- homepage explains candidate + flagship in one glance
-- flagship story is louder than supporting projects
-- top CTA hierarchy points to flagship / GitHub / contact cleanly
-- support briefs are linked from the main portfolio
-- build passes and deployed surface matches repo narrative
+## What should become obvious quickly
+- evidence-first operator workflow design
+- decision trace and approval boundaries
+- replayable debugging and signed handoff artifacts
+- semiconductor-ready AI/SW positioning
