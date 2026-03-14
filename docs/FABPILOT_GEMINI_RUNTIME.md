@@ -18,7 +18,7 @@ npm run fabpilot:runtime:mock
 Legacy aliases remain available:
 
 ```bash
-npm run fabpilot:runtime:mock
+npm run fabtwin:runtime:mock
 ```
 
 This starts the runtime in deterministic mock mode on `http://localhost:8080`.
@@ -50,7 +50,7 @@ The file names stay on the legacy `fabpilot-*` path for backwards-compatible pub
 This runtime is intentionally lightweight so it can be containerized and deployed to Cloud Run with:
 
 - `GEMINI_API_KEY`
-- optional `FABPILOT_MODEL` (legacy `FABTWIN_MODEL` also works)
+- optional `FABPILOT_MODEL` (legacy `FABPILOT_MODEL_LEGACY` also works)
 
 ### Minimal deploy path
 

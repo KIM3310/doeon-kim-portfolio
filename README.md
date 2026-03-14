@@ -47,13 +47,13 @@ GitHub Pages is the canonical public surface for review. Cloudflare Pages is opt
 FabPilot Live X can talk to an optional Gemini-backed runtime for generating a live operator brief.
 
 ```bash
-npm run fabpilot:runtime:mock
+npm run fabtwin:runtime:mock
 ```
 
-Legacy `fabtwin:*` aliases remain available:
+Legacy `fabpilot:*` aliases remain available:
 
 ```bash
-npm run fabtwin:runtime:mock
+npm run fabpilot:runtime:mock
 ```
 
 For setup details, see:
