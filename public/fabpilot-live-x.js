@@ -171,7 +171,7 @@ const MISSIONS = [
     railMeta: 'SEV-2 · Handoff governance',
     railSummary: 'A lot hold is partially staged, but a shift transition risks losing the exact reasoning and approval history.',
     heroBadge: 'SEV-2 governance mission',
-    heroTitle: 'Shift handoff drift around a pending release hold',
+    heroTitle: 'Shift handoff drift around a pending lot hold',
     heroCopy: 'The operational risk is not a broken tool but a broken memory boundary: the next shift may inherit incomplete reasoning and stale UI state.',
     heroStatus: 'Signed handoff required',
     metrics: [
@@ -259,6 +259,7 @@ const refs = {
   heroSummary: document.getElementById('hero-summary'),
   heroMetrics: document.getElementById('hero-metrics'),
   pipelineStrip: document.getElementById('pipeline-strip'),
+  incidentSeverity: document.getElementById('incident-severity'),
   incidentTitle: document.getElementById('incident-title'),
   incidentSummary: document.getElementById('incident-summary'),
   incidentWindow: document.getElementById('incident-window'),
@@ -349,6 +350,7 @@ function setMission(id) {
   renderMissionCards(mission.metrics, refs.heroMetrics, (item) => `<article class="card"><strong>${escapeHtml(item.value)}</strong><span>${escapeHtml(item.label)}</span><p>${escapeHtml(item.detail)}</p></article>`);
   renderMissionCards(mission.pipeline, refs.pipelineStrip, (item) => `<article class="card"><strong>${escapeHtml(item.title)}</strong><p>${escapeHtml(item.copy)}</p></article>`);
 
+  if (refs.incidentSeverity) refs.incidentSeverity.textContent = mission.incident.severity;
   if (refs.incidentTitle) refs.incidentTitle.textContent = mission.incident.title;
   if (refs.incidentSummary) refs.incidentSummary.textContent = mission.incident.summary;
   if (refs.incidentWindow) refs.incidentWindow.textContent = mission.incident.window;
@@ -421,9 +423,9 @@ function fallbackCopyText(value) {
 document.addEventListener('DOMContentLoaded', () => {
   if (refs.rail) {
     refs.rail.innerHTML = MISSIONS.map((mission, index) => `
-      <button class="card" type="button" data-mission-id="${mission.id}" aria-selected="false">
-        <strong>Mission ${index + 1}</strong>
-        <span>${escapeHtml(mission.railTitle)}</span>
+      <button class="scenario-card" type="button" role="tab" data-mission-id="${mission.id}" aria-selected="false" aria-controls="incident-title">
+        <span class="scenario-card__meta">Mission ${index + 1} · ${escapeHtml(mission.railMeta)}</span>
+        <strong class="scenario-card__title">${escapeHtml(mission.railTitle)}</strong>
         <p>${escapeHtml(mission.railSummary)}</p>
       </button>
     `).join('');
