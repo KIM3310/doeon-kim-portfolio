@@ -7,7 +7,7 @@ const cards = [
   {
     label: 'Open flagship',
     href: PORTFOLIO_LIVE_URL,
-    helper: 'Interactive FabPilot Live X surface with the fastest path to the main product story.',
+    helper: 'Interactive FabTwin Guardian surface with the fastest path to the main product story.',
     Icon: ArrowUpRight,
   },
   {
