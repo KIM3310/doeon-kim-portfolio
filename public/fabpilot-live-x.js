@@ -33,6 +33,13 @@ const MISSIONS = [
       rootCause: 'Thermal instability amplified by an unsafe change boundary is the strongest explanation.',
       escalation: 'Escalate release lead, maintenance owner, and shift lead together.'
     },
+    evidenceCaption: 'Correlated service + process evidence',
+    evidenceNodes: [
+      { label: 'SPC', title: 'Critical sigma drift', detail: 'Key process variable breaks its learned envelope inside the review window.' },
+      { label: 'Service', title: 'Alarm cadence', detail: 'Thermal alerts spike before the release posture fully degrades.' },
+      { label: 'History', title: 'Prior incident match', detail: 'Historical similarity surfaces a maintenance-linked release miss with matching symptoms.' },
+      { label: 'Voice', title: 'Operator report', detail: 'Shift operator confirms abnormal stabilization time after the last change set.' }
+    ],
     timeline: [
       { stamp: '09:14', text: 'SPC chart crosses warning threshold while the queue still looks superficially healthy.' },
       { stamp: '09:21', text: 'Repeated service alarms and lot divergence widen the blast radius for recovery.' },
@@ -59,6 +66,19 @@ const MISSIONS = [
       { label: 'Affected scope', value: '6 lots / lane B' },
       { label: 'Immediate ask', value: 'Approve release hold + SOP drill-down' },
       { label: 'Signed artifact', value: 'Shift handoff pack ready' }
+    ],
+    debugPosture: 'Replay-ready',
+    debugSummary: 'Every live event is session-bound and reusable: transcript, evidence retrieval, proposed actions, approvals, and blocked boundaries all survive the live moment.',
+    debugMetrics: [
+      { value: 'trace:fplx-etch-0914', label: 'Trace ID' },
+      { value: '182ms', label: 'Grounding latency' },
+      { value: '0', label: 'Unsafe actions attempted' }
+    ],
+    debugEvents: [
+      { stamp: '09:14:07', text: 'voice.transcript — operator asks for the highest-risk service and lot cluster.' },
+      { stamp: '09:14:18', text: 'evidence.retrieve — dashboard state, SPC context, and SOP fragment linked to the mission.' },
+      { stamp: '09:14:24', text: 'action.plan — release hold and review path staged, awaiting approval.' },
+      { stamp: '09:14:29', text: 'guard.block — physical intervention remains out of bounds for autonomous execution.' }
     ],
     artifact: 'Mission: Etch thermal + yield drift\nObserved: SPC burst + alarm cadence + operator note\nDecision: release hold recommended\nBoundary: physical maintenance blocked without owner approval\nHandoff: signed shift artifact ready'
   },
@@ -96,6 +116,13 @@ const MISSIONS = [
       rootCause: 'Recipe package R-31 likely changed alignment sensitivity under one mask family.',
       escalation: 'Escalate litho engineer and release owner together.'
     },
+    evidenceCaption: 'Release-aligned quality evidence',
+    evidenceNodes: [
+      { label: 'Release', title: 'Recipe package delta', detail: 'Drift begins shortly after the package reaches the affected service family.' },
+      { label: 'Quality', title: 'Overlay envelope break', detail: 'Variance spikes above the model envelope while throughput still looks healthy.' },
+      { label: 'History', title: 'Rollback precedent', detail: 'Past runbook guidance recommends a bounded revert rather than broad rollback theatre.' },
+      { label: 'Voice', title: 'Engineer note', detail: 'On-call engineer confirms neighboring services remain stable.' }
+    ],
     timeline: [
       { stamp: '13:08', text: 'Recipe package R-31 reaches the target service family.' },
       { stamp: '13:16', text: 'Overlay variance breaches learned tolerance while throughput remains stable.' },
@@ -122,6 +149,19 @@ const MISSIONS = [
       { label: 'Affected scope', value: '2 changes / one recipe family' },
       { label: 'Immediate ask', value: 'Approve bounded rollback' },
       { label: 'Signed artifact', value: 'Validation hold plan ready' }
+    ],
+    debugPosture: 'Rollback-ready',
+    debugSummary: 'The rollback path, exposed changes, and owner checkpoints are preserved in one trace so the recommendation can be audited after the fact.',
+    debugMetrics: [
+      { value: 'trace:fplx-overlay-1308', label: 'Trace ID' },
+      { value: '224ms', label: 'Evidence fusion latency' },
+      { value: '1', label: 'Rollback path prepared' }
+    ],
+    debugEvents: [
+      { stamp: '13:08:11', text: 'release.observe — package R-31 reaches the target service family.' },
+      { stamp: '13:16:04', text: 'quality.alert — overlay variance crosses threshold while neighboring services remain healthy.' },
+      { stamp: '13:16:22', text: 'action.plan — bounded rollback and change review checklist prepared.' },
+      { stamp: '13:16:31', text: 'approval.wait — execution pauses pending owner signoff.' }
     ],
     artifact: 'Mission: Lithography overlay drift\nObserved: release timing + overlay variance\nDecision: bounded rollback\nBoundary: owner signoff required\nHandoff: validation hold plan ready'
   },
@@ -159,6 +199,13 @@ const MISSIONS = [
       rootCause: 'A partially completed hold workflow and incomplete shift documentation created a context-fracture risk.',
       escalation: 'Escalate shift lead and quality owner together.'
     },
+    evidenceCaption: 'Governance-aware evidence',
+    evidenceNodes: [
+      { label: 'Audit', title: 'Approval chain gap', detail: 'The hold click path was opened but not finalized before the shift transition.' },
+      { label: 'UI', title: 'Checkpoint recovery', detail: 'The system can reopen the exact screen where the workflow paused.' },
+      { label: 'History', title: 'Prior miss pattern', detail: 'A past shift handoff failure caused duplicate release notes and owner confusion.' },
+      { label: 'Voice', title: 'Shift recap', detail: 'Outgoing lead requests signed handoff before any state mutation continues.' }
+    ],
     timeline: [
       { stamp: '19:42', text: 'Hold workflow starts but pauses before final confirmation.' },
       { stamp: '19:49', text: 'Shift boundary approaches while two owners still disagree.' },
@@ -186,6 +233,19 @@ const MISSIONS = [
       { label: 'Immediate ask', value: 'Accept signed handoff before mutation' },
       { label: 'Signed artifact', value: 'Checkpoint + rationale preserved' }
     ],
+    debugPosture: 'Audit-safe',
+    debugSummary: 'Trace history, UI checkpoints, and owner actions are preserved so the next shift can resume without guessing what the system saw or why it stopped.',
+    debugMetrics: [
+      { value: 'trace:fplx-handoff-1942', label: 'Trace ID' },
+      { value: '4', label: 'Approval checkpoints' },
+      { value: '1', label: 'Signed handoff generated' }
+    ],
+    debugEvents: [
+      { stamp: '19:42:08', text: 'navigator.pause — hold flow pauses before final confirmation due to shift transition.' },
+      { stamp: '19:49:13', text: 'owner.mismatch — incoming and outgoing owners diverge on final disposition.' },
+      { stamp: '19:56:27', text: 'handoff.generate — signed handoff pack bundles rationale, evidence, and next checkpoint.' },
+      { stamp: '19:56:39', text: 'guard.block — governance mutation remains blocked until context is accepted.' }
+    ],
     artifact: 'Mission: Shift handoff drift\nObserved: incomplete hold workflow + ownership mismatch\nDecision: signed handoff and checkpoint recovery\nBoundary: no mutation before owner acceptance\nHandoff: checkpoint + rationale preserved'
   }
 ];
@@ -201,7 +261,12 @@ const refs = {
   pipelineStrip: document.getElementById('pipeline-strip'),
   incidentTitle: document.getElementById('incident-title'),
   incidentSummary: document.getElementById('incident-summary'),
+  incidentWindow: document.getElementById('incident-window'),
+  incidentOwner: document.getElementById('incident-owner'),
+  incidentMode: document.getElementById('incident-mode'),
   briefCards: document.getElementById('brief-cards'),
+  evidenceCaption: document.getElementById('evidence-caption'),
+  evidenceMap: document.getElementById('evidence-map'),
   timelineList: document.getElementById('timeline-list'),
   decisionPosture: document.getElementById('decision-posture'),
   decisionSummary: document.getElementById('decision-summary'),
@@ -212,6 +277,10 @@ const refs = {
   voiceQuote: document.getElementById('voice-quote'),
   voiceAudience: document.getElementById('voice-audience'),
   handoffStrip: document.getElementById('handoff-strip'),
+  debugPosture: document.getElementById('debug-posture'),
+  debugSummary: document.getElementById('debug-summary'),
+  debugMetrics: document.getElementById('debug-metrics'),
+  debugEvents: document.getElementById('debug-events'),
   artifactPreview: document.getElementById('artifact-preview'),
   copyBrief: document.getElementById('copy-brief'),
   downloadPack: document.getElementById('download-pack'),
@@ -223,6 +292,22 @@ const escapeHtml = (value) => String(value ?? '').replace(/&/g, '&amp;').replace
 function renderMissionCards(items, el, renderer) {
   if (!el) return;
   el.innerHTML = items.map(renderer).join('');
+}
+
+function buildOperatorBrief(mission) {
+  return [
+    `Mission: ${mission.incident.title}`,
+    `Severity: ${mission.incident.severity}`,
+    `Window: ${mission.incident.window}`,
+    `Owner: ${mission.incident.owner}`,
+    '',
+    `Summary: ${mission.incident.summary}`,
+    `Root cause hypothesis: ${mission.incident.rootCause}`,
+    `Escalation posture: ${mission.incident.escalation}`,
+    '',
+    'Next safe actions:',
+    ...mission.automationSteps.map((item) => `- [${item.state}] ${item.title}: ${item.copy}`),
+  ].join('\n');
 }
 
 function buildMissionPack(mission) {
@@ -263,8 +348,13 @@ function setMission(id) {
 
   if (refs.incidentTitle) refs.incidentTitle.textContent = mission.incident.title;
   if (refs.incidentSummary) refs.incidentSummary.textContent = mission.incident.summary;
+  if (refs.incidentWindow) refs.incidentWindow.textContent = mission.incident.window;
+  if (refs.incidentOwner) refs.incidentOwner.textContent = mission.incident.owner;
+  if (refs.incidentMode) refs.incidentMode.textContent = mission.incident.mode;
   renderMissionCards(mission.incident.cards, refs.briefCards, (item) => `<article class="card"><strong>${escapeHtml(item.value)}</strong><span>${escapeHtml(item.label)}</span></article>`);
   renderMissionCards(mission.timeline, refs.timelineList, (item) => `<li><p><strong>${escapeHtml(item.stamp)}</strong> — ${escapeHtml(item.text)}</p></li>`);
+  if (refs.evidenceCaption) refs.evidenceCaption.textContent = mission.evidenceCaption;
+  renderMissionCards(mission.evidenceNodes, refs.evidenceMap, (item) => `<article class="card"><strong>${escapeHtml(item.title)}</strong><p>${escapeHtml(item.detail)}</p></article>`);
 
   if (refs.decisionPosture) refs.decisionPosture.textContent = mission.decisionPosture;
   if (refs.decisionSummary) refs.decisionSummary.textContent = mission.decisionSummary;
@@ -277,6 +367,10 @@ function setMission(id) {
   if (refs.voiceQuote) refs.voiceQuote.textContent = mission.voiceQuote;
   if (refs.voiceAudience) refs.voiceAudience.textContent = mission.incident.owner;
   renderMissionCards(mission.handoff, refs.handoffStrip, (item) => `<article class="card"><span>${escapeHtml(item.label)}</span><strong>${escapeHtml(item.value)}</strong></article>`);
+  if (refs.debugPosture) refs.debugPosture.textContent = mission.debugPosture;
+  if (refs.debugSummary) refs.debugSummary.textContent = mission.debugSummary;
+  renderMissionCards(mission.debugMetrics, refs.debugMetrics, (item) => `<article class="card"><strong>${escapeHtml(item.value)}</strong><span>${escapeHtml(item.label)}</span></article>`);
+  renderMissionCards(mission.debugEvents, refs.debugEvents, (item) => `<li><p><strong>${escapeHtml(item.stamp)}</strong> — ${escapeHtml(item.text)}</p></li>`);
   if (refs.artifactPreview) refs.artifactPreview.textContent = JSON.stringify(buildMissionPack(mission), null, 2);
 
   if (refs.rail) {
@@ -327,7 +421,15 @@ document.addEventListener('DOMContentLoaded', () => {
   })();
   setMission(initial);
 
-  refs.copyBrief?.addEventListener('click', () => copyText(refs.artifactPreview?.textContent || ''));
+  refs.copyBrief?.addEventListener('click', () => {
+    copyText(buildOperatorBrief(MISSIONS.find((mission) => mission.id === (localStorage.getItem('fabpilot_mission') || MISSIONS[0].id)) || MISSIONS[0]));
+    refs.copyBrief.textContent = 'Brief copied';
+    window.setTimeout(() => { if (refs.copyBrief) refs.copyBrief.textContent = 'Copy operator brief'; }, 1400);
+  });
   refs.downloadPack?.addEventListener('click', downloadArtifact);
-  refs.copyShareLink?.addEventListener('click', () => copyText(window.location.href));
+  refs.copyShareLink?.addEventListener('click', () => {
+    copyText(window.location.href);
+    refs.copyShareLink.textContent = 'Share link copied';
+    window.setTimeout(() => { if (refs.copyShareLink) refs.copyShareLink.textContent = 'Copy share link'; }, 1400);
+  });
 });
