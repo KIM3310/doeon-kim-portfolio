@@ -83,6 +83,7 @@ section { margin-top: 28px; scroll-margin-top: 110px; }
  .section-wrap { margin-top: 28px; }
  .scenario-rail { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 14px; }
  .scenario-card { min-height: 126px; padding: 18px; border-radius: 24px; color: var(--text); cursor: pointer; text-align: left; transition: transform .18s ease, border-color .18s ease, background .18s ease; }
+ .scenario-card p { margin: 0; color: color-mix(in srgb, var(--muted) 88%, white); line-height: 1.6; font-size: .92rem; }
  .scenario-card:hover,.scenario-card[aria-selected="true"] { transform: translateY(-2px); border-color: var(--border-strong); background: rgba(255,255,255,.05); }
  .scenario-card__meta,.voice-footer span { display: block; color: var(--muted); font-size: .74rem; text-transform: uppercase; letter-spacing: .08em; }
  .scenario-card__title { display: block; margin: 10px 0 8px; font-size: 1.06rem; }
