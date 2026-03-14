@@ -23,7 +23,7 @@ const Hero: React.FC = () => {
           >
             <div className="mb-6 flex items-center justify-between gap-4 border-b border-white/10 pb-5">
               <span className="text-accent-gold text-xs font-medium tracking-[0.3em] uppercase">FabPilot Live X</span>
-              <span className="rounded-full border border-white/10 px-3 py-1 text-[11px] uppercase tracking-[0.22em] text-white/45">Gemini Live Agent Challenge × Samsung-ready</span>
+              <span className="rounded-full border border-white/10 px-3 py-1 text-[11px] uppercase tracking-[0.22em] text-white/45">Gemini Live × Samsung-ready</span>
             </div>
 
             <h1 className="mb-6 font-serif-heading text-[3rem] font-medium leading-[1.02] tracking-tight text-white sm:text-5xl lg:text-7xl">
