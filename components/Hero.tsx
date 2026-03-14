@@ -23,12 +23,12 @@ const Hero: React.FC = () => {
           >
             <div className="mb-6 flex items-center justify-between gap-4 border-b border-white/10 pb-5">
               <span className="text-accent-gold text-xs font-medium tracking-[0.3em] uppercase">FabTwin Guardian</span>
-              <span className="rounded-full border border-white/10 px-3 py-1 text-[11px] uppercase tracking-[0.22em] text-white/45">SK hynix-ready · GitLab-ready</span>
+              <span className="rounded-full border border-white/10 px-3 py-1 text-[11px] uppercase tracking-[0.22em] text-white/45">GitLab Duo × SK hynix-ready</span>
             </div>
 
             <h1 className="mb-6 font-serif-heading text-[3rem] font-medium leading-[1.02] tracking-tight text-white sm:text-5xl lg:text-7xl">
-              High-trust <span className="soft-gradient-text">AI/SW systems</span><br />
-              for operations that cannot fail quietly.
+              Reviewable <span className="soft-gradient-text">AI systems</span><br />
+              for high-trust operations.
             </h1>
 
             <p className="max-w-3xl text-base font-light leading-8 text-primary-muted sm:text-lg">{PROFILE.intro}</p>
@@ -38,7 +38,7 @@ const Hero: React.FC = () => {
                 href={PORTFOLIO_LIVE_URL}
                 className="inline-flex items-center gap-2 rounded-full bg-accent-gold px-6 py-3 text-sm font-medium text-black transition-transform hover:scale-[1.02]"
               >
-                Open live portfolio
+                Launch FabTwin Guardian
                 <ArrowRight className="h-4 w-4" />
               </a>
               <a
@@ -47,7 +47,7 @@ const Hero: React.FC = () => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-6 py-3 text-sm font-medium text-white transition-colors hover:border-accent-gold/40"
               >
-                View repo
+                GitHub proof
               </a>
               <a
                 href={`mailto:${PROFILE.email}`}
@@ -94,21 +94,21 @@ const Hero: React.FC = () => {
             </div>
 
             <p className="mb-6 text-sm leading-7 text-primary-muted">
-              GitLab-native incident-to-fix command system for semiconductor and industrial AI software teams: risky changes, fragmented signals, and handoff ambiguity become one evidence-first review surface.
+              Semiconductor command surface for operator voice, dashboard context, change state, SPC drift, SOP grounding, signed handoff, and replayable debugging.
             </p>
 
             <div className="grid gap-4 md:grid-cols-3">
               <article className="border border-white/10 bg-black/20 p-4">
-                <p className="text-[11px] uppercase tracking-[0.24em] text-white/35">Trigger</p>
-                <p className="mt-2 text-sm text-white">Risky MR / pipeline blocker / handoff gap</p>
+                <p className="text-[11px] uppercase tracking-[0.24em] text-white/35">Perception</p>
+                <p className="mt-2 text-sm text-white">Voice, screen, change state, SPC drift</p>
               </article>
               <article className="border border-white/10 bg-black/20 p-4">
                 <p className="text-[11px] uppercase tracking-[0.24em] text-white/35">Core artifact</p>
-                <p className="mt-2 text-sm text-white">Evidence graph + patch plan + signed handoff</p>
+                <p className="mt-2 text-sm text-white">Evidence graph + decision trace + signed handoff</p>
               </article>
               <article className="border border-white/10 bg-black/20 p-4">
                 <p className="text-[11px] uppercase tracking-[0.24em] text-white/35">Why it matters</p>
-                <p className="mt-2 text-sm text-white">Unsafe releases become visible, explainable, and governable.</p>
+                <p className="mt-2 text-sm text-white">Risky operational decisions become visible, explainable, and governable.</p>
               </article>
             </div>
 
@@ -116,12 +116,12 @@ const Hero: React.FC = () => {
               <p className="text-[11px] uppercase tracking-[0.24em] text-accent-gold/70">Current mission posture</p>
               <h3 className="mt-3 text-2xl font-serif-heading text-white">Wafer scheduler release risk</h3>
               <p className="mt-3 text-sm leading-7 text-primary-muted">
-                One workflow demonstrates the whole product: detect a risky change, assemble the right evidence, propose the smallest safe patch, then stop cleanly at the approval boundary.
+                One workflow demonstrates the whole product: detect a risky operational situation, assemble the right evidence, rank the strongest explanation, then stop cleanly at the approval boundary.
               </p>
               <div className="mt-5 flex flex-wrap gap-2 text-xs uppercase tracking-[0.16em] text-white/50">
-                <span className="rounded-full border border-white/10 px-3 py-2">GitLab Duo flows</span>
+                <span className="rounded-full border border-white/10 px-3 py-2">GitLab Duo</span>
                 <span className="rounded-full border border-white/10 px-3 py-2">Evidence graph</span>
-                <span className="rounded-full border border-white/10 px-3 py-2">Patch plan</span>
+                <span className="rounded-full border border-white/10 px-3 py-2">Decision trace</span>
                 <span className="rounded-full border border-white/10 px-3 py-2">Approval gate</span>
                 <span className="rounded-full border border-white/10 px-3 py-2">Replayable handoff</span>
               </div>
