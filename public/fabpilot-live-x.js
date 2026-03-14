@@ -429,7 +429,7 @@ function setMission(id) {
   try { window.localStorage.setItem(STORAGE_KEY, mission.id); } catch (error) { console.warn('Mission persistence skipped:', error); }
 
   refs.heroBadge.textContent = mission.heroBadge;
-  refs.heroSummary.textContent = 'FabTwin Guardian turns multimodal operational context into a reviewable command surface: evidence graph, decision trace, approval-gated action, signed handoff, and replayable debug evidence.';
+  refs.heroSummary.textContent = 'FabPilot Live X turns multimodal operational context into a reviewable command surface: evidence graph, decision trace, approval-gated action, signed handoff, and replayable debug evidence.';
   refs.heroTitle.textContent = mission.heroTitle;
   refs.heroCopy.textContent = mission.heroCopy;
   refs.heroStatus.textContent = mission.heroStatus;
