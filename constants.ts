@@ -8,7 +8,7 @@ export const PROFILE: Profile = {
   linkedin: 'https://www.linkedin.com/in/doeon-kim-4742a2388',
   catchphrase: 'Reviewable AI systems for high-trust operations',
   intro:
-    '툴콜링 신뢰성, multimodal incident AI, operator workflow, enterprise governance에 강한 AI/SW 엔지니어입니다. 지금은 FabTwin Guardian를 중심으로, 반도체 운영·의사결정 trace·안전한 action boundary를 reviewable system으로 바꾸는 제품형 포트폴리오를 만들고 있습니다.',
+    '툴콜링 신뢰성, multimodal incident AI, operator workflow, enterprise governance에 강한 AI/SW 엔지니어입니다. 지금은 FabPilot Live X를 중심으로, 반도체 운영·의사결정 trace·안전한 action boundary를 reviewable system으로 바꾸는 제품형 포트폴리오를 만들고 있습니다.',
 };
 
 export const PORTFOLIO_LIVE_URL = 'https://kim3310.github.io/doeon-kim-portfolio/';
@@ -31,7 +31,7 @@ export const HACKATHON_BRIEF_URL = 'briefs/gemini-live-hackathon-package.html';
 export const PORTFOLIO_SIGNAL_DECK = [
   {
     label: 'Flagship',
-    value: 'FabTwin Guardian',
+    value: 'FabPilot Live X',
     detail: 'Semiconductor command surface with voice, evidence graph, decision trace, approval-gated action, signed handoff, and replayable debugging.',
   },
   {
@@ -46,13 +46,13 @@ export const PORTFOLIO_SIGNAL_DECK = [
   },
   {
     label: 'Hiring Signal',
-    value: 'SK hynix-ready AI/SW',
+    value: 'Samsung-ready AI/SW',
     detail: 'Semiconductor software, runtime reliability, operator trust, and reviewer speed packaged into one coherent story.',
   },
 ];
 
 export const PORTFOLIO_ACTIONS = [
-  { label: 'Launch Flagship', href: FLAGSHIP_URL, helper: 'Open the interactive FabTwin Guardian command surface first.' },
+  { label: 'Launch Flagship', href: FLAGSHIP_URL, helper: 'Open the interactive FabPilot Live X command surface first.' },
   { label: 'Read Dossier', href: DOSSIER_URL, helper: 'Review the architecture, trust surfaces, and delivery logic behind the flagship.' },
   { label: 'GitHub Proof', href: PROFILE.github, helper: 'Review canonical repos, implementation history, and public proof surfaces.' },
   { label: 'Email Brief', href: `mailto:${PROFILE.email}`, helper: 'Send a role brief, hiring context, or technical review request directly.' },
@@ -63,14 +63,14 @@ export const WHY_TEAMS_HIRE_ME = [
     keyword: 'LLM Reliability',
     title: '모델이 흔들려도 시스템이 무너지지 않게 만듭니다',
     description:
-      'StagePilot에서 parser recovery, bounded retry, eval surface를 묶어 tool-calling reliability를 benchmarkable하게 끌어올렸습니다. 그 감각을 FabTwin Guardian 같은 action-heavy system에도 이어갑니다.',
+      'StagePilot에서 parser recovery, bounded retry, eval surface를 묶어 tool-calling reliability를 benchmarkable하게 끌어올렸습니다. 그 감각을 FabPilot Live X 같은 action-heavy system에도 이어갑니다.',
     match: 'Tool-calling reliability, agent runtime hardening, eval and regression systems',
   },
   {
     keyword: 'Incident Systems',
     title: '운영 데이터를 구조화된 대응 흐름으로 바꿉니다',
     description:
-      'AegisOps, Aegis-Air, TwinCity UI, Fab Ops Yield Control Tower에서 incident triage, RCA, handoff, operator workflow를 구조화된 product surface로 만들었고, FabTwin Guardian에서는 이를 semiconductor ops 문법으로 확장합니다.',
+      'AegisOps, Aegis-Air, TwinCity UI, Fab Ops Yield Control Tower에서 incident triage, RCA, handoff, operator workflow를 구조화된 product surface로 만들었고, FabPilot Live X에서는 이를 semiconductor ops 문법으로 확장합니다.',
     match: 'Multimodal incident AI, operator UX, runtime observability, handoff continuity',
   },
   {
@@ -93,15 +93,15 @@ export const SKILLS: SkillCategory[] = [
 
 export const PROJECTS: Project[] = [
   {
-    title: 'FabTwin Guardian — Semiconductor Cognitive Operations System',
-    category: 'Flagship / GitLab Duo / Semiconductor AI-SW',
+    title: 'FabPilot Live X — Semiconductor Cognitive Operations System',
+    category: 'Flagship / Gemini Live / Semiconductor AI-SW',
     role: 'Product thesis, multimodal ops UX, decision trace, signed handoff, and premium command-center narrative',
     achievements: [
       'Frames semiconductor incidents, lot risk, dashboard context, SPC drift, SOP fragments, and shift notes as one evidence-first operator workflow.',
       'Separates evidence, decision trace, approval-gated action, and signed handoff so the system reads as trustworthy operational software, not a chatbot wrapper.',
-      'Optimized to strengthen both SK hynix AI/SW positioning and GitLab AI Hackathon competitiveness.',
+      'Optimized to strengthen both Samsung AI/SW positioning and Gemini Live Agent Challenge competitiveness.',
     ],
-    tech: ['GitLab Duo', 'TypeScript', 'Evidence Graph', 'Decision Trace', 'Replayable Debugging'],
+    tech: ['Gemini Live Agent Platform', 'TypeScript', 'Evidence Graph', 'Decision Trace', 'Replayable Debugging'],
     links: { demo: FLAGSHIP_URL, github: PROFILE.github },
   },
   {
@@ -147,7 +147,7 @@ export const PROJECTS: Project[] = [
     achievements: [
       'Built a manufacturing control tower that keeps alarms, lot risk, tool ownership, and signed handoff in one reviewable flow.',
       'Made hold / watch / release-ready posture visible before the next shift acts.',
-      'Provides the semiconductor workflow baseline that makes FabTwin Guardian credible.',
+      'Provides the semiconductor workflow baseline that makes FabPilot Live X credible.',
     ],
     tech: ['Python', 'FastAPI', 'Manufacturing Ops'],
     links: { github: 'https://github.com/KIM3310/fab-ops-yield-control-tower' },
@@ -214,14 +214,14 @@ export const CERTIFICATIONS: Certification[] = [
 export const UPGRADE_TRACKS: UpgradeTrack[] = [
   {
     title: 'Flagship productization',
-    systems: ['FabTwin Guardian', 'AegisOps', 'StagePilot'],
+    systems: ['FabPilot Live X', 'AegisOps', 'StagePilot'],
     currentBase: ['Evidence-first workflow', 'Operator UX', 'Reliability proof'],
-    nextBuild: 'Turn FabTwin Guardian from a strong concept into a tighter execution asset with clearer scenarios, stronger artifacts, and a more inspectable delivery path.',
+    nextBuild: 'Turn FabPilot Live X from a strong concept into a tighter execution asset with clearer scenarios, stronger artifacts, and a more inspectable delivery path.',
     outcome: 'A flagship that feels closer to an actual product system than a polished concept surface.',
   },
   {
     title: 'Semiconductor software narrative',
-    systems: ['Fab Ops Yield Control Tower', 'TwinCity UI', 'FabTwin Guardian'],
+    systems: ['Fab Ops Yield Control Tower', 'TwinCity UI', 'FabPilot Live X'],
     currentBase: ['Operator workflows', 'Spatial control surfaces', 'Release gates'],
     nextBuild: 'Make industrial software concepts louder than generic AI language so the portfolio reads immediately as AI/SW for high-trust operations.',
     outcome: 'A portfolio with stronger domain specificity and better hiring fit for semiconductor and industrial AI roles.',
@@ -238,9 +238,9 @@ export const UPGRADE_TRACKS: UpgradeTrack[] = [
 export const FOCUS_PATHS: FocusPath[] = [
   {
     title: 'Flagship first',
-    summary: 'FabTwin Guardian를 먼저 보고, 그 다음 supporting proof를 읽는 경로입니다.',
+    summary: 'FabPilot Live X를 먼저 보고, 그 다음 supporting proof를 읽는 경로입니다.',
     strengths: ['Flagship thesis', 'Operator-grade UX', 'High-trust AI delivery', 'Semiconductor narrative'],
-    systems: ['FabTwin Guardian', 'Fab Ops Yield Control Tower', 'AegisOps'],
+    systems: ['FabPilot Live X', 'Fab Ops Yield Control Tower', 'AegisOps'],
     links: [
       { label: 'Launch flagship surface', href: FLAGSHIP_URL },
       { label: 'Read dossier', href: DOSSIER_URL },

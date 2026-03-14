@@ -283,6 +283,7 @@ const refs = {
   debugMetrics: document.getElementById('debug-metrics'),
   debugEvents: document.getElementById('debug-events'),
   artifactPreview: document.getElementById('artifact-preview'),
+  runtimeStatus: document.getElementById('runtime-status'),
   copyBrief: document.getElementById('copy-brief'),
   downloadPack: document.getElementById('download-pack'),
   copyShareLink: document.getElementById('copy-share-link')
@@ -322,6 +323,7 @@ function buildOperatorBrief(mission) {
 function buildMissionPack(mission) {
   return {
     mission_id: mission.id,
+    generated_at: new Date().toISOString(),
     title: mission.incident.title,
     severity: mission.incident.severity,
     summary: mission.incident.summary,
@@ -333,6 +335,26 @@ function buildMissionPack(mission) {
     automation_steps: mission.automationSteps,
     handoff: mission.handoff,
   };
+}
+
+async function updateRuntimeStatus() {
+  if (!refs.runtimeStatus) return;
+  const apiBase = getApiBase().replace(/\/$/, '');
+  if (!apiBase) {
+    refs.runtimeStatus.textContent = 'Runtime: offline';
+    return;
+  }
+
+  refs.runtimeStatus.textContent = 'Runtime: checking…';
+  try {
+    const response = await fetch(`${apiBase}/health`);
+    if (!response.ok) throw new Error(`status ${response.status}`);
+    const payload = await response.json();
+    const mode = payload?.mode || 'unknown';
+    refs.runtimeStatus.textContent = `Runtime: ${mode}`;
+  } catch (error) {
+    refs.runtimeStatus.textContent = 'Runtime: unavailable';
+  }
 }
 
 async function requestLiveBrief(mission) {
@@ -369,7 +391,7 @@ function setMission(id) {
   if (refs.heroTitle) refs.heroTitle.textContent = mission.heroTitle;
   if (refs.heroCopy) refs.heroCopy.textContent = mission.heroCopy;
   if (refs.heroStatus) refs.heroStatus.textContent = mission.heroStatus;
-  if (refs.heroSummary) refs.heroSummary.textContent = `FabTwin Guardian turns multimodal operational context into a reviewable command surface: evidence graph, decision trace, approval-gated action, signed handoff, and replayable debug evidence.`;
+  if (refs.heroSummary) refs.heroSummary.textContent = `FabPilot Live X turns multimodal operational context into a reviewable command surface: evidence graph, decision trace, approval-gated action, signed handoff, and replayable debug evidence.`;
 
   renderMissionCards(mission.metrics, refs.heroMetrics, (item) => `<article class="card"><strong>${escapeHtml(item.value)}</strong><span>${escapeHtml(item.label)}</span><p>${escapeHtml(item.detail)}</p></article>`);
   renderMissionCards(mission.pipeline, refs.pipelineStrip, (item) => `<article class="card"><strong>${escapeHtml(item.title)}</strong><p>${escapeHtml(item.copy)}</p></article>`);
@@ -453,7 +475,24 @@ document.addEventListener('DOMContentLoaded', () => {
         <p>${escapeHtml(mission.railSummary)}</p>
       </button>
     `).join('');
-    [...refs.rail.querySelectorAll('button')].forEach((button) => button.addEventListener('click', () => setMission(button.dataset.missionId)));
+    [...refs.rail.querySelectorAll('button')].forEach((button, index, buttons) => {
+      button.addEventListener('click', () => setMission(button.dataset.missionId));
+      button.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          setMission(button.dataset.missionId);
+          return;
+        }
+        if (event.key === 'ArrowRight' || event.key === 'ArrowDown') {
+          event.preventDefault();
+          buttons[(index + 1) % buttons.length].focus();
+        }
+        if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') {
+          event.preventDefault();
+          buttons[(index - 1 + buttons.length) % buttons.length].focus();
+        }
+      });
+    });
   }
 
   const initial = (() => {
@@ -467,6 +506,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   })();
   setMission(initial);
+  updateRuntimeStatus();
 
   refs.copyBrief?.addEventListener('click', () => {
     const mission = MISSIONS.find((item) => item.id === activeMissionId) || MISSIONS[0];

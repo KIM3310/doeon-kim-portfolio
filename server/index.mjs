@@ -1,9 +1,10 @@
 import http from 'node:http';
 
 const PORT = Number(process.env.PORT || 8080);
-const MODEL = process.env.FABPILOT_MODEL || 'gemini-2.5-flash';
+const PRODUCT_NAME = 'FabPilot Live X';
+const MODEL = process.env.FABPILOT_MODEL || process.env.FABTWIN_MODEL || 'gemini-2.5-flash';
 const API_KEY = process.env.GEMINI_API_KEY || '';
-const ALLOW_MOCK = process.env.FABPILOT_ALLOW_MOCK === '1';
+const ALLOW_MOCK = process.env.FABTWIN_ALLOW_MOCK === '1' || process.env.FABPILOT_ALLOW_MOCK === '1';
 
 const json = (res, status, body) => {
   res.writeHead(status, {
@@ -23,7 +24,7 @@ const readBody = async (req) => {
 };
 
 const buildPrompt = (mission) => `
-You are generating an operator-ready semiconductor incident brief for FabPilot Live X.
+You are generating an operator-ready semiconductor incident brief for ${PRODUCT_NAME}.
 
 Return ONLY valid JSON with this exact shape:
 {
@@ -69,7 +70,7 @@ const buildMockResponse = (mission) => ({
     `Root cause hypothesis: ${mission.incident?.rootCause || mission.rootCause}`,
     `Approval boundary: ${(mission.automationSteps || []).find((item) => item.state === 'blocked')?.copy || 'Human approval required before real-world action.'}`,
   ].join('\n'),
-  reviewerSummary: `FabPilot Live X identified ${(mission.evidenceNodes || []).length} evidence nodes and staged ${(mission.automationSteps || []).length} bounded next steps for reviewer inspection.`,
+  reviewerSummary: `${PRODUCT_NAME} identified ${(mission.evidenceNodes || []).length} evidence nodes and staged ${(mission.automationSteps || []).length} bounded next steps for reviewer inspection.`,
   nextSafeAction: (mission.automationSteps || []).find((item) => item.state === 'ready')?.title || 'Review evidence and confirm the safest bounded action.',
 });
 

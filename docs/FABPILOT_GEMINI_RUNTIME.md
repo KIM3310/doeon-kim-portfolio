@@ -1,6 +1,6 @@
-# FabPilot Gemini Runtime
+# FabPilot Runtime Bridge
 
-FabPilot Live X now supports an optional runtime bridge for generating a **live operator brief** with Gemini.
+FabPilot Live X supports an optional Gemini-backed runtime bridge for generating a **live operator brief**.
 
 ## What this adds
 
@@ -10,6 +10,12 @@ FabPilot Live X now supports an optional runtime bridge for generating a **live 
 - safe fallback to the existing static mission brief when no runtime is configured
 
 ## Local run
+
+```bash
+npm run fabpilot:runtime:mock
+```
+
+Legacy aliases remain available:
 
 ```bash
 npm run fabpilot:runtime:mock
@@ -37,12 +43,14 @@ Example:
 fabpilot-live-x.html?api=https://your-runtime-url
 ```
 
+The file names stay on the legacy `fabpilot-*` path for backwards-compatible public links; the product narrative is FabPilot Live X.
+
 ## Cloud Run intent
 
 This runtime is intentionally lightweight so it can be containerized and deployed to Cloud Run with:
 
 - `GEMINI_API_KEY`
-- optional `FABPILOT_MODEL`
+- optional `FABPILOT_MODEL` (legacy `FABTWIN_MODEL` also works)
 
 ### Minimal deploy path
 
