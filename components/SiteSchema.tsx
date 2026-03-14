@@ -1,5 +1,8 @@
 import React from 'react';
-import { PROFILE } from '../constants';
+import { DOSSIER_URL, FLAGSHIP_URL, PORTFOLIO_LIVE_URL, PROFILE } from '../constants';
+
+const siteUrl = PORTFOLIO_LIVE_URL.endsWith('/') ? PORTFOLIO_LIVE_URL : `${PORTFOLIO_LIVE_URL}/`;
+const absoluteUrl = (path: string) => new URL(path, siteUrl).toString();
 
 const schema = {
   '@context': 'https://schema.org',
@@ -10,6 +13,7 @@ const schema = {
       name: PROFILE.name,
       jobTitle: PROFILE.title,
       email: PROFILE.email,
+      url: siteUrl,
       description: PROFILE.intro,
       sameAs: [PROFILE.github, PROFILE.linkedin],
       knowsAbout: [
@@ -23,12 +27,21 @@ const schema = {
     },
     {
       '@type': 'CreativeWork',
+      url: absoluteUrl(FLAGSHIP_URL),
       name: 'FabPilot Live X',
       description: 'Semiconductor command surface for multimodal operations, decision trace, approval-gated action, and replayable debugging.',
       about: { '@id': '#doeon-kim' },
     },
     {
+      '@type': 'CreativeWork',
+      url: absoluteUrl(DOSSIER_URL),
+      name: 'FabPilot Live X Dossier',
+      description: 'Supporting dossier covering the trust model, delivery logic, and review path behind FabPilot Live X.',
+      about: { '@id': '#doeon-kim' },
+    },
+    {
       '@type': 'WebSite',
+      url: siteUrl,
       name: 'Doeon Kim Portfolio',
       inLanguage: 'ko-KR',
       about: { '@id': '#doeon-kim' },

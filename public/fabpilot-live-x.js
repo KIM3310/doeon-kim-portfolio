@@ -2,11 +2,11 @@ const MISSIONS = [
   {
     id: 'release',
     railTitle: 'Etch thermal + yield drift',
-    railMeta: 'SEV-1 · Release boundary',
-    railSummary: 'One unstable service lane threatens yield recovery under peak load.',
+    railMeta: 'SEV-1 · Lot hold boundary',
+    railSummary: 'One unstable etch chamber threatens downstream yield on a priority lot lane.',
     heroBadge: 'SEV-1 live mission',
     heroTitle: 'Etch line thermal + yield drift',
-    heroCopy: 'Tool ET-204 shows thermal instability while lot queue divergence hints at release risk across one production lane.',
+    heroCopy: 'Tool ET-204 chamber B shows thermal instability while lot queue divergence hints at imminent yield loss on one production lane.',
     heroStatus: 'Approval gate active',
     metrics: [
       { value: '6', label: 'lots at risk', detail: 'one lane under watch' },
@@ -14,57 +14,57 @@ const MISSIONS = [
       { value: '3', label: 'decision layers', detail: 'observe · reason · approve' }
     ],
     pipeline: [
-      { title: 'Observe', copy: 'Fuse operator speech, service alarms, SPC drift, and shared dashboard state.' },
-      { title: 'Reason', copy: 'Rank thermal instability against config drift and rollback risk.' },
-      { title: 'Approve', copy: 'Stage release hold, SOP drill-down, and console navigation behind approval.' }
+      { title: 'Observe', copy: 'Fuse operator speech, tool alarms, SPC drift, chamber telemetry, and shared dashboard state.' },
+      { title: 'Reason', copy: 'Rank chamber thermal instability against recipe drift and recent maintenance effects.' },
+      { title: 'Approve', copy: 'Stage lot hold, SOP drill-down, and console navigation behind explicit approval.' }
     ],
     incident: {
       severity: 'SEV-1',
       title: 'Etch line thermal + yield drift',
-      summary: 'Cross-modal evidence suggests service instability cascading into yield risk before full recovery failure becomes obvious.',
+      summary: 'Cross-modal evidence suggests chamber instability cascading into yield risk before scrap or lot-hold decisions become obvious.',
       window: 'Window · 09:14 → 09:31',
-      owner: 'Owner · Release lead',
+      owner: 'Owner · Etch process engineer',
       mode: 'Mode · Multimodal risk triage',
       cards: [
         { value: '+4.8σ', label: 'SPC burst' },
         { value: '6', label: 'lots exposed' },
         { value: '0', label: 'unsafe auto-actions' }
       ],
-      rootCause: 'Thermal instability amplified by an unsafe change boundary is the strongest explanation.',
-      escalation: 'Escalate release lead, maintenance owner, and shift lead together.'
+      rootCause: 'Chamber B thermal instability after the last maintenance window is the strongest explanation.',
+      escalation: 'Escalate the etch process engineer, equipment owner, and shift lead together.'
     },
-    evidenceCaption: 'Correlated service + process evidence',
+    evidenceCaption: 'Correlated tool + process evidence',
     evidenceNodes: [
-      { label: 'SPC', title: 'Critical sigma drift', detail: 'Key process variable breaks its learned envelope inside the review window.' },
-      { label: 'Service', title: 'Alarm cadence', detail: 'Thermal alerts spike before the release posture fully degrades.' },
-      { label: 'History', title: 'Prior incident match', detail: 'Historical similarity surfaces a maintenance-linked release miss with matching symptoms.' },
-      { label: 'Voice', title: 'Operator report', detail: 'Shift operator confirms abnormal stabilization time after the last change set.' }
+      { label: 'SPC', title: 'Critical sigma drift', detail: 'A key etch process variable breaks its learned envelope inside the review window.' },
+      { label: 'Tool', title: 'Alarm cadence', detail: 'Chamber thermal alerts spike before yield posture fully degrades.' },
+      { label: 'History', title: 'Prior incident match', detail: 'Historical similarity surfaces a maintenance-linked chamber instability event with matching symptoms.' },
+      { label: 'Voice', title: 'Operator report', detail: 'The shift operator confirms abnormal stabilization time after the last chamber clean.' }
     ],
     timeline: [
-      { stamp: '09:14', text: 'SPC chart crosses warning threshold while the queue still looks superficially healthy.' },
-      { stamp: '09:21', text: 'Repeated service alarms and lot divergence widen the blast radius for recovery.' },
-      { stamp: '09:27', text: 'The system recommends a release hold before rollout drift broadens.' }
+      { stamp: '09:14', text: 'The SPC chart crosses a warning threshold while the lot queue still looks superficially healthy.' },
+      { stamp: '09:21', text: 'Repeated chamber alarms and lot divergence widen the blast radius for downstream yield.' },
+      { stamp: '09:27', text: 'The system recommends a bounded lot hold before the tool state drifts further.' }
     ],
     decisionPosture: 'Grounded reasoning',
     decisionSummary: 'The reasoning is inspectable: observed evidence, strongest hypothesis, alternative explanation, and boundary conditions remain visible.',
     decisionTrace: [
-      { label: 'Observed', state: 'solid', copy: 'Service alarms, SPC drift, and operator note correlate around the same release lane.' },
-      { label: 'Hypothesis #1', state: 'strong', copy: 'Thermal instability is the best fit because alarm cadence and prior incident similarity align tightly.' },
-      { label: 'Hypothesis #2', state: 'moderate', copy: 'Pure change-logic regression remains possible, but it does not explain the thermal signature alone.' },
-      { label: 'Boundary', state: 'caution', copy: 'Real-world intervention still requires explicit owner approval beyond the command surface.' }
+      { label: 'Observed', state: 'solid', copy: 'Tool alarms, SPC drift, lot divergence, and the operator note correlate around ET-204 chamber B.' },
+      { label: 'Hypothesis #1', state: 'strong', copy: 'Chamber thermal instability is the best fit because alarm cadence and prior incident similarity align tightly.' },
+      { label: 'Hypothesis #2', state: 'moderate', copy: 'Recipe drift remains possible, but it does not explain the thermal signature on its own.' },
+      { label: 'Boundary', state: 'caution', copy: 'Real-world intervention and lot disposition still require explicit owner approval beyond the command surface.' }
     ],
     automationPosture: 'Observe → reason → approve',
-    automationSummary: 'The system stages the next safe steps without hiding uncertainty: open the service detail page, prepare a release hold, and attach rollback context.',
+    automationSummary: 'The system stages the next safe steps without hiding uncertainty: open the tool detail page, prepare a lot hold, and attach the exact validation context.',
     automationSteps: [
-      { state: 'ready', title: 'Open ET-204 detail view', copy: 'Deep-link into the service dashboard with the exact alarm window and SPC overlay preselected.' },
-      { state: 'review', title: 'Stage release hold proposal', copy: 'Prepare containment for six lots with blast-radius notes and release criteria.' },
-      { state: 'review', title: 'Launch SOP step window', copy: 'Open the service-stability SOP at the recommended validation step for shift review.' },
-      { state: 'blocked', title: 'Physical maintenance boundary', copy: 'Any real-world intervention remains explicitly outside autonomous action.' }
+      { state: 'ready', title: 'Open ET-204 tool detail', copy: 'Deep-link into the tool dashboard with the exact alarm window, chamber view, and SPC overlay preselected.' },
+      { state: 'review', title: 'Stage lot hold proposal', copy: 'Prepare containment for six lots with blast-radius notes, chamber context, and release criteria.' },
+      { state: 'review', title: 'Launch SOP validation step', copy: 'Open the etch stability SOP at the recommended validation step for shift review.' },
+      { state: 'blocked', title: 'Physical maintenance boundary', copy: 'Any real-world chamber intervention remains explicitly outside autonomous action.' }
     ],
-    voiceQuote: 'ET-204 is the dominant source of risk. The evidence supports thermal instability over simple drift, with six lots requiring immediate containment review.',
+    voiceQuote: 'ET-204 chamber B is the dominant source of risk. The evidence supports thermal instability over simple recipe drift, with six lots requiring immediate containment review.',
     handoff: [
       { label: 'Affected scope', value: '6 lots / lane B' },
-      { label: 'Immediate ask', value: 'Approve release hold + SOP drill-down' },
+      { label: 'Immediate ask', value: 'Approve lot hold + SOP drill-down' },
       { label: 'Signed artifact', value: 'Shift handoff pack ready' }
     ],
     debugPosture: 'Replay-ready',
@@ -75,18 +75,18 @@ const MISSIONS = [
       { value: '0', label: 'Unsafe actions attempted' }
     ],
     debugEvents: [
-      { stamp: '09:14:07', text: 'voice.transcript — operator asks for the highest-risk service and lot cluster.' },
-      { stamp: '09:14:18', text: 'evidence.retrieve — dashboard state, SPC context, and SOP fragment linked to the mission.' },
-      { stamp: '09:14:24', text: 'action.plan — release hold and review path staged, awaiting approval.' },
-      { stamp: '09:14:29', text: 'guard.block — physical intervention remains out of bounds for autonomous execution.' }
+      { stamp: '09:14:07', text: 'voice.transcript — operator asks which etch tool and lot cluster carry the highest yield risk.' },
+      { stamp: '09:14:18', text: 'evidence.retrieve — dashboard state, SPC context, tool alarms, and SOP fragment are linked to the mission.' },
+      { stamp: '09:14:24', text: 'action.plan — lot hold and validation path are staged, awaiting approval.' },
+      { stamp: '09:14:29', text: 'guard.block — physical chamber intervention remains out of bounds for autonomous execution.' }
     ],
-    artifact: 'Mission: Etch thermal + yield drift\nObserved: SPC burst + alarm cadence + operator note\nDecision: release hold recommended\nBoundary: physical maintenance blocked without owner approval\nHandoff: signed shift artifact ready'
+    artifact: 'Mission: Etch thermal + yield drift\nObserved: SPC burst + chamber alarm cadence + operator note\nDecision: bounded lot hold recommended\nBoundary: physical maintenance blocked without owner approval\nHandoff: signed shift artifact ready'
   },
   {
     id: 'overlay',
     railTitle: 'Lithography overlay anomaly',
-    railMeta: 'SEV-2 · Quality drift',
-    railSummary: 'Overlay variance emerges while throughput remains deceptively healthy.',
+    railMeta: 'SEV-2 · Recipe drift',
+    railSummary: 'Overlay variance emerges after a recipe package change while throughput still looks deceptively healthy.',
     heroBadge: 'SEV-2 live mission',
     heroTitle: 'Lithography overlay drift after recipe update',
     heroCopy: 'Alignment variance climbs after a recipe package update while the line still looks healthy from a throughput-only view.',
@@ -97,9 +97,9 @@ const MISSIONS = [
       { value: '1', label: 'rollback path', detail: 'bounded revert only' }
     ],
     pipeline: [
-      { title: 'Observe', copy: 'Connect alignment drift, release history, and quality dashboard state.' },
+      { title: 'Observe', copy: 'Connect alignment drift, recipe history, and quality dashboard state.' },
       { title: 'Reason', copy: 'Separate true process drift from metrology noise.' },
-      { title: 'Approve', copy: 'Prepare bounded rollback and change review with owner signoff.' }
+      { title: 'Approve', copy: 'Prepare bounded recipe rollback and review with owner signoff.' }
     ],
     incident: {
       severity: 'SEV-2',
@@ -107,46 +107,46 @@ const MISSIONS = [
       summary: 'The evidence points to a recipe-linked overlay drift event rather than a broad hardware failure.',
       window: 'Window · 13:08 → 13:24',
       owner: 'Owner · Litho quality engineer',
-      mode: 'Mode · Release-aware process reasoning',
+      mode: 'Mode · Recipe-aware process reasoning',
       cards: [
         { value: '+18%', label: 'overlay variance' },
         { value: '2', label: 'changes pending review' },
         { value: '15 min', label: 'observation hold' }
       ],
       rootCause: 'Recipe package R-31 likely changed alignment sensitivity under one mask family.',
-      escalation: 'Escalate litho engineer and release owner together.'
+      escalation: 'Escalate the lithography engineer and recipe owner together.'
     },
-    evidenceCaption: 'Release-aligned quality evidence',
+    evidenceCaption: 'Recipe-aligned quality evidence',
     evidenceNodes: [
-      { label: 'Release', title: 'Recipe package delta', detail: 'Drift begins shortly after the package reaches the affected service family.' },
+      { label: 'Recipe', title: 'Recipe package delta', detail: 'Drift begins shortly after the package reaches the affected lot family.' },
       { label: 'Quality', title: 'Overlay envelope break', detail: 'Variance spikes above the model envelope while throughput still looks healthy.' },
-      { label: 'History', title: 'Rollback precedent', detail: 'Past runbook guidance recommends a bounded revert rather than broad rollback theatre.' },
+      { label: 'History', title: 'Rollback precedent', detail: 'Past runbook guidance recommends a bounded revert rather than broad fab-wide rollback.' },
       { label: 'Voice', title: 'Engineer note', detail: 'On-call engineer confirms neighboring services remain stable.' }
     ],
     timeline: [
-      { stamp: '13:08', text: 'Recipe package R-31 reaches the target service family.' },
+      { stamp: '13:08', text: 'Recipe package R-31 reaches the target lot family.' },
       { stamp: '13:16', text: 'Overlay variance breaches learned tolerance while throughput remains stable.' },
-      { stamp: '13:21', text: 'The system recommends bounded rollback instead of broad rollback theatre.' }
+      { stamp: '13:21', text: 'The system recommends bounded rollback instead of broad fab-wide rollback.' }
     ],
     decisionPosture: 'Confidence-qualified reasoning',
     decisionSummary: 'The system shows not only the favored hypothesis but also what was ruled out, so rollback proposals feel engineered rather than improvised.',
     decisionTrace: [
-      { label: 'Observed', state: 'solid', copy: 'Overlay drift and release timing align tightly while broader service health remains stable.' },
+      { label: 'Observed', state: 'solid', copy: 'Overlay drift and recipe timing align tightly while neighboring tool health remains stable.' },
       { label: 'Hypothesis #1', state: 'strong', copy: 'Recipe-linked alignment sensitivity is the best fit.' },
       { label: 'Hypothesis #2', state: 'moderate', copy: 'Metrology noise is less likely because the variance persists across repeated checks.' },
-      { label: 'Boundary', state: 'caution', copy: 'Change release cannot be automated until rollback and validation are explicitly approved.' }
+      { label: 'Boundary', state: 'caution', copy: 'Recipe release cannot be automated until rollback and validation are explicitly approved.' }
     ],
     automationPosture: 'Review → prepare → approve',
-    automationSummary: 'The product packages the rollback path, exposed changes, and observation window into one owner-reviewable action bundle.',
+    automationSummary: 'The product packages the rollback path, exposed recipe deltas, and observation window into one owner-reviewable action bundle.',
     automationSteps: [
-      { state: 'ready', title: 'Open recipe release console', copy: 'Pin package history and the affected service family on one screen.' },
+      { state: 'ready', title: 'Open recipe release console', copy: 'Pin package history and the affected lot family on one screen.' },
       { state: 'review', title: 'Stage bounded rollback', copy: 'Prepare a recipe revert while preserving trace context.' },
-      { state: 'review', title: 'Hold change disposition', copy: 'Draft a temporary change review decision for the two exposed changes.' },
-      { state: 'blocked', title: 'Final release decision', copy: 'Change release waits for owner approval.' }
+      { state: 'review', title: 'Hold recipe disposition', copy: 'Draft a temporary review decision for the two exposed recipe deltas.' },
+      { state: 'blocked', title: 'Final release decision', copy: 'Recipe release waits for owner approval.' }
     ],
-    voiceQuote: 'This is a recipe-linked SEV-2 quality event. The strongest path is a bounded rollback of package R-31 for the affected service family.',
+    voiceQuote: 'This is a recipe-linked SEV-2 quality event. The strongest path is a bounded rollback of package R-31 for the affected lot family.',
     handoff: [
-      { label: 'Affected scope', value: '2 changes / one recipe family' },
+      { label: 'Affected scope', value: '2 recipe deltas / one lot family' },
       { label: 'Immediate ask', value: 'Approve bounded rollback' },
       { label: 'Signed artifact', value: 'Validation hold plan ready' }
     ],
@@ -158,63 +158,63 @@ const MISSIONS = [
       { value: '1', label: 'Rollback path prepared' }
     ],
     debugEvents: [
-      { stamp: '13:08:11', text: 'release.observe — package R-31 reaches the target service family.' },
-      { stamp: '13:16:04', text: 'quality.alert — overlay variance crosses threshold while neighboring services remain healthy.' },
-      { stamp: '13:16:22', text: 'action.plan — bounded rollback and change review checklist prepared.' },
+      { stamp: '13:08:11', text: 'release.observe — package R-31 reaches the target lot family.' },
+      { stamp: '13:16:04', text: 'quality.alert — overlay variance crosses threshold while neighboring tools remain healthy.' },
+      { stamp: '13:16:22', text: 'action.plan — bounded rollback and recipe review checklist prepared.' },
       { stamp: '13:16:31', text: 'approval.wait — execution pauses pending owner signoff.' }
     ],
-    artifact: 'Mission: Lithography overlay drift\nObserved: release timing + overlay variance\nDecision: bounded rollback\nBoundary: owner signoff required\nHandoff: validation hold plan ready'
+    artifact: 'Mission: Lithography overlay drift\nObserved: recipe timing + overlay variance\nDecision: bounded rollback\nBoundary: owner signoff required\nHandoff: validation hold plan ready'
   },
   {
     id: 'handoff',
     railTitle: 'Shift handoff + hold drift',
     railMeta: 'SEV-2 · Handoff governance',
-    railSummary: 'A release hold is partially staged, but a shift transition risks losing the exact reasoning and approval history.',
+    railSummary: 'A lot hold is partially staged, but a shift transition risks losing the exact reasoning and approval history.',
     heroBadge: 'SEV-2 governance mission',
     heroTitle: 'Shift handoff drift around a pending release hold',
-    heroCopy: 'The operational risk is not a broken service but a broken memory boundary: the next shift may inherit incomplete reasoning and stale UI state.',
+    heroCopy: 'The operational risk is not a broken tool but a broken memory boundary: the next shift may inherit incomplete reasoning and stale UI state.',
     heroStatus: 'Signed handoff required',
     metrics: [
-      { value: '4', label: 'changes awaiting review', detail: '2 owners still misaligned' },
+      { value: '4', label: 'lots awaiting review', detail: '2 owners still misaligned' },
       { value: '88 sec', label: 'handoff pack ready', detail: 'checkpoint preserved' },
       { value: '4', label: 'approval checkpoints', detail: 'before mutation continues' }
     ],
     pipeline: [
-      { title: 'Observe', copy: 'Bind pending hold state, incomplete approvals, and UI checkpoints together.' },
+      { title: 'Observe', copy: 'Bind pending lot-hold state, incomplete approvals, and UI checkpoints together.' },
       { title: 'Reason', copy: 'Distinguish safe context recovery from unsafe state mutation.' },
       { title: 'Approve', copy: 'Generate a signed handoff record and recover the exact console path for the next shift.' }
     ],
     incident: {
       severity: 'SEV-2',
-      title: 'Shift handoff drift around a pending release hold',
+      title: 'Shift handoff drift around a pending lot hold',
       summary: 'The biggest risk is losing the reasoning and approval chain during shift transition.',
       window: 'Window · 19:42 → 19:58',
-      owner: 'Owner · Release lead + quality owner',
+      owner: 'Owner · Shift lead + quality owner',
       mode: 'Mode · Governance-aware operations',
       cards: [
-        { value: '4', label: 'changes awaiting review' },
+        { value: '4', label: 'lots awaiting review' },
         { value: '2', label: 'owners not aligned' },
         { value: '1', label: 'signed handoff needed' }
       ],
-      rootCause: 'A partially completed hold workflow and incomplete shift documentation created a context-fracture risk.',
+      rootCause: 'A partially completed lot-hold workflow and incomplete shift documentation created a context-fracture risk.',
       escalation: 'Escalate shift lead and quality owner together.'
     },
     evidenceCaption: 'Governance-aware evidence',
     evidenceNodes: [
-      { label: 'Audit', title: 'Approval chain gap', detail: 'The hold click path was opened but not finalized before the shift transition.' },
+      { label: 'Audit', title: 'Approval chain gap', detail: 'The lot-hold click path was opened but not finalized before the shift transition.' },
       { label: 'UI', title: 'Checkpoint recovery', detail: 'The system can reopen the exact screen where the workflow paused.' },
-      { label: 'History', title: 'Prior miss pattern', detail: 'A past shift handoff failure caused duplicate release notes and owner confusion.' },
+      { label: 'History', title: 'Prior miss pattern', detail: 'A past shift handoff failure caused duplicate lot-hold notes and owner confusion.' },
       { label: 'Voice', title: 'Shift recap', detail: 'Outgoing lead requests signed handoff before any state mutation continues.' }
     ],
     timeline: [
-      { stamp: '19:42', text: 'Hold workflow starts but pauses before final confirmation.' },
+      { stamp: '19:42', text: 'Lot-hold workflow starts but pauses before final confirmation.' },
       { stamp: '19:49', text: 'Shift boundary approaches while two owners still disagree.' },
       { stamp: '19:56', text: 'The system pivots to signed handoff generation and state recovery.' }
     ],
     decisionPosture: 'Governance-aware reasoning',
     decisionSummary: 'The system treats ambiguity as a first-class operational risk and explicitly prefers signed handoff over silent completion.',
     decisionTrace: [
-      { label: 'Observed', state: 'solid', copy: 'Hold flow is incomplete and ownership is about to transition.' },
+      { label: 'Observed', state: 'solid', copy: 'Lot-hold flow is incomplete and ownership is about to transition.' },
       { label: 'Hypothesis #1', state: 'strong', copy: 'The dominant risk is reasoning loss across shifts.' },
       { label: 'Safe path', state: 'strong', copy: 'Generate a signed handoff package and restore console state for the next owner.' },
       { label: 'Boundary', state: 'caution', copy: 'No governance mutation proceeds without explicit acceptance.' }
@@ -222,14 +222,14 @@ const MISSIONS = [
     automationPosture: 'Review → document → resume',
     automationSummary: 'The system restores exact console state, packages the approval chain, and prevents silent continuation.',
     automationSteps: [
-      { state: 'ready', title: 'Capture paused console state', copy: 'Freeze the current hold path, pending approvals, and owner context into the session record.' },
+      { state: 'ready', title: 'Capture paused console state', copy: 'Freeze the current lot-hold path, pending approvals, and owner context into the session record.' },
       { state: 'review', title: 'Generate signed handoff pack', copy: 'Package rationale, evidence, and next-click path for the incoming shift lead.' },
       { state: 'review', title: 'Restore navigator checkpoint', copy: 'Open the exact console step where the next shift should resume.' },
-      { state: 'blocked', title: 'Governance mutation boundary', copy: 'No change release or hold mutation occurs until the new owner accepts context.' }
+      { state: 'blocked', title: 'Governance mutation boundary', copy: 'No lot disposition or hold mutation occurs until the new owner accepts context.' }
     ],
     voiceQuote: 'The biggest risk is losing context across the shift boundary. Accept the signed handoff package, reopen the stored checkpoint, and only then continue.',
     handoff: [
-      { label: 'Affected scope', value: '4 changes / 2 owners' },
+      { label: 'Affected scope', value: '4 lots / 2 owners' },
       { label: 'Immediate ask', value: 'Accept signed handoff before mutation' },
       { label: 'Signed artifact', value: 'Checkpoint + rationale preserved' }
     ],
@@ -241,12 +241,12 @@ const MISSIONS = [
       { value: '1', label: 'Signed handoff generated' }
     ],
     debugEvents: [
-      { stamp: '19:42:08', text: 'navigator.pause — hold flow pauses before final confirmation due to shift transition.' },
+      { stamp: '19:42:08', text: 'navigator.pause — lot-hold flow pauses before final confirmation due to shift transition.' },
       { stamp: '19:49:13', text: 'owner.mismatch — incoming and outgoing owners diverge on final disposition.' },
       { stamp: '19:56:27', text: 'handoff.generate — signed handoff pack bundles rationale, evidence, and next checkpoint.' },
       { stamp: '19:56:39', text: 'guard.block — governance mutation remains blocked until context is accepted.' }
     ],
-    artifact: 'Mission: Shift handoff drift\nObserved: incomplete hold workflow + ownership mismatch\nDecision: signed handoff and checkpoint recovery\nBoundary: no mutation before owner acceptance\nHandoff: checkpoint + rationale preserved'
+    artifact: 'Mission: Shift handoff drift\nObserved: incomplete lot-hold workflow + ownership mismatch\nDecision: signed handoff and checkpoint recovery\nBoundary: no mutation before owner acceptance\nHandoff: checkpoint + rationale preserved'
   }
 ];
 
@@ -286,6 +286,8 @@ const refs = {
   downloadPack: document.getElementById('download-pack'),
   copyShareLink: document.getElementById('copy-share-link')
 };
+
+let activeMissionId = MISSIONS[0]?.id || 'release';
 
 const escapeHtml = (value) => String(value ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 
@@ -335,6 +337,7 @@ function syncMissionUrl(id) {
 function setMission(id) {
   const mission = MISSIONS.find((item) => item.id === id) || MISSIONS[0];
   if (!mission) return;
+  activeMissionId = mission.id;
   syncMissionUrl(mission.id);
 
   if (refs.heroBadge) refs.heroBadge.textContent = mission.heroBadge;
@@ -388,13 +391,31 @@ function downloadArtifact() {
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
-  a.download = 'fabpilot-mission-pack.json';
+  a.download = `fabpilot-${activeMissionId}-mission-pack.json`;
   a.click();
   URL.revokeObjectURL(url);
 }
 
 function copyText(value) {
-  navigator.clipboard?.writeText(value).catch(() => {});
+  if (navigator.clipboard?.writeText) {
+    navigator.clipboard.writeText(value).catch(() => fallbackCopyText(value));
+    return;
+  }
+  fallbackCopyText(value);
+}
+
+function fallbackCopyText(value) {
+  const textarea = document.createElement('textarea');
+  textarea.value = value;
+  textarea.setAttribute('readonly', 'true');
+  textarea.style.position = 'absolute';
+  textarea.style.left = '-9999px';
+  document.body.appendChild(textarea);
+  textarea.select();
+  try {
+    document.execCommand('copy');
+  } catch {}
+  document.body.removeChild(textarea);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -422,7 +443,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setMission(initial);
 
   refs.copyBrief?.addEventListener('click', () => {
-    copyText(buildOperatorBrief(MISSIONS.find((mission) => mission.id === (localStorage.getItem('fabpilot_mission') || MISSIONS[0].id)) || MISSIONS[0]));
+    copyText(buildOperatorBrief(MISSIONS.find((mission) => mission.id === activeMissionId) || MISSIONS[0]));
     refs.copyBrief.textContent = 'Brief copied';
     window.setTimeout(() => { if (refs.copyBrief) refs.copyBrief.textContent = 'Copy operator brief'; }, 1400);
   });

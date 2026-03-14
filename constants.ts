@@ -11,7 +11,7 @@ export const PROFILE: Profile = {
     '툴콜링 신뢰성, multimodal incident AI, operator workflow, enterprise governance에 강한 AI/SW 엔지니어입니다. 지금은 FabPilot Live X를 중심으로, 반도체 운영·의사결정 trace·안전한 action boundary를 reviewable system으로 바꾸는 제품형 포트폴리오를 만들고 있습니다.',
 };
 
-export const PORTFOLIO_LIVE_URL = 'https://doeon-kim-portfolio.pages.dev';
+export const PORTFOLIO_LIVE_URL = 'https://kim3310.github.io/doeon-kim-portfolio/';
 export const PORTFOLIO_REPO_URL = PROFILE.github;
 export const PORTFOLIO_DISCUSSIONS_URL = PROFILE.github;
 export const PORTFOLIO_QA_URL = PROFILE.linkedin;
@@ -276,7 +276,7 @@ export const PORTFOLIO_RUNTIME_META = [
   { label: 'Stack', value: 'React 19 + Vite 6' },
   { label: 'Focus', value: 'Reliability / Runtime Ops / High-Trust AI' },
   { label: 'Public Proof', value: 'Canonical repos + live surfaces' },
-  { label: 'Portfolio URL', value: 'doeon-kim-portfolio.pages.dev' },
+  { label: 'Portfolio URL', value: 'kim3310.github.io/doeon-kim-portfolio' },
 ];
 
 export const SECONDARY_PROJECTS: SecondaryProject[] = [
