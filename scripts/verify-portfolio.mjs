@@ -9,30 +9,30 @@ const requiredFiles = [
   'public/fabpilot-live-x.js',
   'public/fabpilot-static.css',
   'public/resume/Doeon_Kim_Resume_Microsoft_Solution_Architect.pdf',
-  'public/briefs/sk-hynix-ai-sw-one-pager.html',
-  'public/briefs/gitlab-hackathon-submission-package.html',
+  'public/briefs/samsung-ai-sw-one-pager.html',
+  'public/briefs/gemini-live-hackathon-package.html',
 ];
 
 const checks = [
   {
     file: 'constants.ts',
-    mustInclude: ['FabTwin Guardian', 'SK hynix-ready AI/SW', 'GitLab AI Hackathon'],
-    mustNotInclude: ['FabPilot Live X', 'SignalForge', 'Amazon Nova', 'NVIDIA-ready', 'Gemini Live Agent Challenge', 'Samsung-ready'],
+    mustInclude: ['FabPilot Live X', 'Samsung-ready AI/SW', 'Gemini Live Agent Challenge'],
+    mustNotInclude: ['FabTwin Guardian', 'SignalForge', 'Amazon Nova', 'NVIDIA-ready', 'SK hynix', 'GitLab Duo'],
   },
   {
     file: 'components/Hero.tsx',
-    mustInclude: ['FabTwin Guardian', 'SK hynix-ready · GitLab-ready'],
-    mustNotInclude: ['FabPilot Live X', 'SignalForge', 'Amazon Nova', 'NVIDIA-ready', 'Gemini Live × Samsung-ready'],
+    mustInclude: ['FabPilot Live X', 'Gemini Live × Samsung-ready'],
+    mustNotInclude: ['FabTwin Guardian', 'SignalForge', 'Amazon Nova', 'NVIDIA-ready', 'SK hynix', 'GitLab Duo'],
   },
   {
     file: 'public/fabpilot-live-x.html',
-    mustInclude: ['FabTwin Guardian', 'SK hynix-ready', 'GitLab AI Hackathon'],
-    mustNotInclude: ['FabPilot Live X', 'SignalForge', 'Amazon Nova', 'NVIDIA-ready', 'Samsung-ready'],
+    mustInclude: ['FabPilot Live X', 'Samsung-ready', 'Gemini Live'],
+    mustNotInclude: ['FabTwin Guardian', 'SignalForge', 'Amazon Nova', 'NVIDIA-ready', 'SK hynix', 'GitLab Duo'],
   },
   {
-    file: 'docs/SK_HYNIX_AI_SW_ONE_PAGER.md',
-    mustInclude: ['FabTwin Guardian', 'SK hynix AI/SW'],
-    mustNotInclude: ['FabPilot Live X', 'SignalForge', 'Samsung AI/SW'],
+    file: 'public/fabpilot-dossier.html',
+    mustInclude: ['FabPilot Live X', 'Samsung-ready'],
+    mustNotInclude: ['FabTwin Guardian', 'SignalForge', 'Amazon Nova', 'NVIDIA-ready', 'SK hynix', 'GitLab Duo'],
   },
 ];
 
@@ -54,11 +54,9 @@ for (const check of checks) {
     if (text.includes(token)) failures.push(`${check.file} must not include: ${token}`);
   }
 }
-
 if (failures.length) {
   console.error('PORTFOLIO VERIFY FAILED');
   for (const failure of failures) console.error(`- ${failure}`);
   process.exit(1);
 }
-
 console.log('PORTFOLIO VERIFY OK');

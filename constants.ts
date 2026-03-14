@@ -6,46 +6,56 @@ export const PROFILE: Profile = {
   email: 'ehdjs1351@gmail.com',
   github: 'https://github.com/KIM3310',
   linkedin: 'https://www.linkedin.com/in/doeon-kim-4742a2388',
-  catchphrase: 'Evidence-first AI systems for high-trust operations',
+  catchphrase: 'Reviewable AI systems for high-trust operations',
   intro:
-    '툴콜링 신뢰성, multimodal incident AI, operator workflow, enterprise governance에 강한 AI/SW 엔지니어입니다. 지금은 FabTwin Guardian을 중심으로, 위험한 변경과 운영 컨텍스트를 reviewable system과 reusable artifact로 바꾸는 제품형 포트폴리오를 만들고 있습니다.',
+    '툴콜링 신뢰성, multimodal incident AI, operator workflow, enterprise governance에 강한 AI/SW 엔지니어입니다. 지금은 FabPilot Live X를 중심으로, 반도체 운영·의사결정 trace·안전한 action boundary를 reviewable system과 reusable artifact로 바꾸는 제품형 포트폴리오를 만들고 있습니다.',
 };
 
 export const PORTFOLIO_LIVE_URL = 'https://doeon-kim-portfolio.pages.dev';
-export const FLAGSHIP_URL = '/fabpilot-live-x.html';
-export const DOSSIER_URL = '/fabpilot-dossier.html';
-export const SK_HYNIX_BRIEF_URL = '/briefs/sk-hynix-ai-sw-one-pager.html';
-export const HACKATHON_BRIEF_URL = '/briefs/gitlab-hackathon-submission-package.html';
-export const RESUME_PDF_URL = '/resume/Doeon_Kim_Resume_Microsoft_Solution_Architect.pdf';
+export const PORTFOLIO_REPO_URL = PROFILE.github;
+export const PORTFOLIO_DISCUSSIONS_URL = PROFILE.github;
+export const PORTFOLIO_QA_URL = PROFILE.linkedin;
+export const PORTFOLIO_IDEAS_URL = `mailto:${PROFILE.email}?subject=Portfolio%20Ideas`;
+export const PORTFOLIO_FEEDBACK_ISSUE_URL = PROFILE.github;
+export const PORTFOLIO_GISCUS_REPO = 'KIM3310/doeon-kim-portfolio';
+export const PORTFOLIO_GISCUS_REPO_ID = 'R_kgDOROWHZg';
+export const PORTFOLIO_GISCUS_CATEGORY = 'Q&A';
+export const PORTFOLIO_GISCUS_CATEGORY_ID = 'DIC_kwDOROWHZs4C3zga';
+
+export const FLAGSHIP_URL = 'fabpilot-live-x.html';
+export const DOSSIER_URL = 'fabpilot-dossier.html';
+export const RESUME_PDF_URL = 'resume/Doeon_Kim_Resume_Microsoft_Solution_Architect.pdf';
+export const SAMSUNG_BRIEF_URL = 'briefs/samsung-ai-sw-one-pager.html';
+export const HACKATHON_BRIEF_URL = 'briefs/gemini-live-hackathon-package.html';
 
 export const PORTFOLIO_SIGNAL_DECK = [
   {
     label: 'Flagship',
-    value: 'FabTwin Guardian',
-    detail: 'GitLab-native incident-to-fix command system for semiconductor and industrial AI software teams.',
+    value: 'FabPilot Live X',
+    detail: 'Semiconductor command surface with voice, evidence graph, decision trace, approval-gated action, signed handoff, and replayable debugging.',
   },
   {
     label: 'Differentiator',
-    value: 'Evidence → decision → approval',
-    detail: 'The system makes reasoning, boundaries, and next actions visible instead of hiding them behind AI theater.',
+    value: 'Reliability + Operator Trust',
+    detail: 'The system exposes observed evidence, bounded next actions, and human approval boundaries instead of hiding them behind assistant theatre.',
   },
   {
     label: 'Proof Shape',
     value: 'Flagship + dossier + proof chain',
-    detail: 'One dominant product thesis with public systems that make the flagship credible fast.',
+    detail: 'One dominant product thesis plus supporting public systems that make the flagship believable to judges and hiring managers.',
   },
   {
     label: 'Hiring Signal',
-    value: 'SK hynix-ready AI/SW',
+    value: 'Samsung-ready AI/SW',
     detail: 'Semiconductor software, runtime reliability, operator trust, and reviewer speed packaged into one coherent story.',
   },
 ];
 
 export const PORTFOLIO_ACTIONS = [
-  { label: 'Launch Flagship', href: FLAGSHIP_URL, helper: 'Open the canonical FabTwin Guardian surface first.' },
-  { label: 'Read Dossier', href: DOSSIER_URL, helper: 'Review the trust model, architecture, and delivery logic behind the flagship.' },
-  { label: 'GitHub Proof', href: PROFILE.github, helper: 'Inspect canonical repos, implementation details, and public proof surfaces.' },
-  { label: 'Download Resume', href: RESUME_PDF_URL, helper: 'Open the latest resume aligned to the flagship and hiring narrative.' },
+  { label: 'Launch Flagship', href: FLAGSHIP_URL, helper: 'Open the interactive FabPilot Live X command surface first.' },
+  { label: 'Read Dossier', href: DOSSIER_URL, helper: 'Review the architecture, trust surfaces, and delivery logic behind the flagship.' },
+  { label: 'GitHub Proof', href: PROFILE.github, helper: 'Review canonical repos, implementation history, and public proof surfaces.' },
+  { label: 'Email Brief', href: `mailto:${PROFILE.email}`, helper: 'Send a role brief, hiring context, or technical review request directly.' },
 ];
 
 export const WHY_TEAMS_HIRE_ME = [
@@ -53,21 +63,21 @@ export const WHY_TEAMS_HIRE_ME = [
     keyword: 'LLM Reliability',
     title: '모델이 흔들려도 시스템이 무너지지 않게 만듭니다',
     description:
-      'StagePilot과 관련 실험에서 parser recovery, bounded retry, eval surface를 묶어 tool-calling reliability를 benchmarkable하게 끌어올렸습니다. 이 감각을 FabTwin Guardian 같은 action-heavy system에도 이어갑니다.',
+      'StagePilot에서 parser recovery, bounded retry, eval surface를 묶어 tool-calling reliability를 benchmarkable하게 끌어올렸습니다. 그 감각을 FabPilot Live X 같은 action-heavy system에도 이어갑니다.',
     match: 'Tool-calling reliability, agent runtime hardening, eval and regression systems',
   },
   {
     keyword: 'Incident Systems',
     title: '운영 데이터를 구조화된 대응 흐름으로 바꿉니다',
     description:
-      'AegisOps, Aegis-Air, TwinCity UI, Fab Ops Yield Control Tower에서 incident triage, RCA, handoff, operator workflow를 구조화된 product surface로 만들었습니다.',
+      'AegisOps, Aegis-Air, TwinCity UI, Fab Ops Yield Control Tower에서 incident triage, RCA, handoff, operator workflow를 구조화된 product surface로 만들었고, FabPilot Live X에서는 이를 semiconductor ops 문법으로 확장합니다.',
     match: 'Multimodal incident AI, operator UX, runtime observability, handoff continuity',
   },
   {
     keyword: 'Governed Delivery',
     title: '데모가 아니라 승인과 검토까지 닫습니다',
     description:
-      'Enterprise LLM Adoption Kit, Honeypot, 그리고 FabTwin Guardian narrative를 통해 audit, approval boundary, rollout posture, reviewable delivery를 함께 설계했습니다.',
+      'Enterprise LLM Adoption Kit, Honeypot, TwinCity UI에서 audit, fallback, async jobs, transport resilience, export flows까지 production surface를 설계했습니다. 그래서 flagship도 예쁜 챗봇이 아니라 trust boundary가 보이는 시스템으로 설계합니다.',
     match: 'Enterprise rollout, governance controls, high-trust software delivery',
   },
 ];
@@ -83,16 +93,28 @@ export const SKILLS: SkillCategory[] = [
 
 export const PROJECTS: Project[] = [
   {
-    title: 'FabTwin Guardian — Incident-to-Fix Command System',
-    category: 'Flagship / Semiconductor AI-SW',
-    role: 'Product thesis, incident-to-fix architecture, proof surface design, and premium command-center narrative',
+    title: 'FabPilot Live X — Semiconductor Cognitive Operations System',
+    category: 'Flagship / Gemini Live / Semiconductor AI-SW',
+    role: 'Product thesis, multimodal ops UX, decision trace, signed handoff, and premium command-center narrative',
     achievements: [
-      'Frames risky merge requests, CI regressions, screenshots, SOP fragments, and shift notes as one evidence-first software workflow.',
-      'Separates evidence, patch planning, approval, and signed handoff so the system reads as trustworthy operational software, not a chatbot wrapper.',
-      'Optimized to strengthen both SK hynix AI/SW positioning and GitLab AI Hackathon competitiveness.',
+      'Frames semiconductor incidents, lot risk, dashboard context, SPC drift, SOP fragments, and shift notes as one evidence-first operator workflow.',
+      'Separates evidence, decision trace, approval-gated action, and signed handoff so the system reads as trustworthy operational software, not a chatbot wrapper.',
+      'Optimized to strengthen both Samsung AI/SW positioning and Gemini Live Agent Challenge competitiveness.',
     ],
-    tech: ['GitLab Duo Agent Platform', 'TypeScript', 'Evidence Graph', 'Approval Gates', 'Replayable Debugging'],
+    tech: ['Gemini Live', 'TypeScript', 'Evidence Graph', 'Decision Trace', 'Replayable Debugging'],
     links: { demo: FLAGSHIP_URL, github: PROFILE.github },
+  },
+  {
+    title: 'StagePilot — Tool-Calling Reliability Runtime',
+    category: 'Flagship / LLM Reliability',
+    role: 'Parser middleware, orchestration, benchmark-driven tool-calling hardening',
+    achievements: [
+      'Improved benchmark success from 29.17% baseline to 87.50%, and 100% with bounded retry.',
+      'Unifies middleware, orchestration, and evaluation into one inspectable proof surface.',
+      'Provides the reliability backbone for action-heavy agent products.',
+    ],
+    tech: ['TypeScript', 'Tool Calling', 'Benchmarks', 'Middleware'],
+    links: { demo: 'https://stage-pilot.pages.dev', github: 'https://github.com/KIM3310/stage-pilot', youtube: 'https://youtu.be/6trgTH1vX4M' },
   },
   {
     title: 'AegisOps — Multimodal Incident Copilot',
@@ -104,11 +126,7 @@ export const PROJECTS: Project[] = [
       'Validated replay and workflow coverage with 34 passing tests.',
     ],
     tech: ['Gemini', 'GCP', 'Google Workspace', 'Multimodal AI'],
-    links: {
-      demo: 'https://aegisops-ai-incident-doctor.pages.dev',
-      github: 'https://github.com/KIM3310/AegisOps',
-      youtube: 'https://www.youtube.com/watch?v=FOcjPcMheIg',
-    },
+    links: { demo: 'https://aegisops-ai-incident-doctor.pages.dev', github: 'https://github.com/KIM3310/AegisOps', youtube: 'https://www.youtube.com/watch?v=FOcjPcMheIg' },
   },
   {
     title: 'Aegis-Air — Local-First Incident Review Engine',
@@ -129,34 +147,10 @@ export const PROJECTS: Project[] = [
     achievements: [
       'Built a manufacturing control tower that keeps alarms, lot risk, tool ownership, and signed handoff in one reviewable flow.',
       'Made hold / watch / release-ready posture visible before the next shift acts.',
-      'Provides the semiconductor workflow baseline that makes FabTwin Guardian credible.',
+      'Provides the semiconductor workflow baseline that makes FabPilot Live X credible.',
     ],
     tech: ['Python', 'FastAPI', 'Manufacturing Ops'],
     links: { github: 'https://github.com/KIM3310/fab-ops-yield-control-tower' },
-  },
-  {
-    title: 'StagePilot — Tool-Calling Reliability Runtime',
-    category: 'LLM Reliability',
-    role: 'Parser middleware, orchestration, benchmark-driven tool-calling hardening',
-    achievements: [
-      'Improved benchmark success from 29.17% baseline to 87.50%, and 100% with bounded retry.',
-      'Unifies middleware, orchestration, and evaluation into one inspectable proof surface.',
-      'Provides the reliability backbone for action-heavy agent products.',
-    ],
-    tech: ['TypeScript', 'Tool Calling', 'Benchmarks', 'Middleware'],
-    links: { demo: 'https://stage-pilot.pages.dev', github: 'https://github.com/KIM3310/stage-pilot', youtube: 'https://youtu.be/6trgTH1vX4M' },
-  },
-  {
-    title: 'Enterprise LLM Adoption Kit',
-    category: 'Governance / Enterprise Delivery',
-    role: 'Backend API, frontend, eval harness, governance controls',
-    achievements: [
-      'Implemented RBAC, injection detection, PII redaction, audit hash logging, and citation-oriented response controls.',
-      'Added JSONL eval pipelines, red-team reporting, and rollout drafts to support enterprise rollout decisions.',
-      'Proves that safe AI delivery requires governance, not just model quality.',
-    ],
-    tech: ['FastAPI', 'React', 'Security', 'Evaluation'],
-    links: { github: 'https://github.com/KIM3310/enterprise-llm-adoption-kit' },
   },
   {
     title: 'TwinCity UI — Digital Twin Ops Console',
@@ -169,6 +163,18 @@ export const PROJECTS: Project[] = [
     ],
     tech: ['Next.js', 'TypeScript', 'WebSocket', 'SSE'],
     links: { demo: 'https://twincity-ui.pages.dev', github: 'https://github.com/KIM3310/twincity-ui' },
+  },
+  {
+    title: 'Enterprise LLM Adoption Kit',
+    category: 'Governance / Enterprise Delivery',
+    role: 'Backend API, frontend, eval harness, governance controls',
+    achievements: [
+      'Implemented RBAC, injection detection, PII redaction, audit hash logging, and citation-oriented response controls.',
+      'Added JSONL eval pipelines, red-team reporting, and rollout drafts to support enterprise rollout decisions.',
+      'Proves that safe AI delivery requires governance, not just model quality.',
+    ],
+    tech: ['FastAPI', 'React', 'Security', 'Evaluation'],
+    links: { github: 'https://github.com/KIM3310/enterprise-llm-adoption-kit' },
   },
   {
     title: 'ogx — Multi-Agent Orchestration CLI',
@@ -208,14 +214,14 @@ export const CERTIFICATIONS: Certification[] = [
 export const UPGRADE_TRACKS: UpgradeTrack[] = [
   {
     title: 'Flagship productization',
-    systems: ['FabTwin Guardian', 'AegisOps', 'StagePilot'],
+    systems: ['FabPilot Live X', 'AegisOps', 'StagePilot'],
     currentBase: ['Evidence-first workflow', 'Operator UX', 'Reliability proof'],
-    nextBuild: 'Turn FabTwin Guardian from a strong concept into a tighter execution asset with clearer scenarios, stronger artifacts, and a more inspectable delivery path.',
+    nextBuild: 'Turn FabPilot Live X from a strong concept into a tighter execution asset with clearer scenarios, stronger artifacts, and a more inspectable delivery path.',
     outcome: 'A flagship that feels closer to an actual product system than a polished concept surface.',
   },
   {
     title: 'Semiconductor software narrative',
-    systems: ['Fab Ops Yield Control Tower', 'TwinCity UI', 'FabTwin Guardian'],
+    systems: ['Fab Ops Yield Control Tower', 'TwinCity UI', 'FabPilot Live X'],
     currentBase: ['Operator workflows', 'Spatial control surfaces', 'Release gates'],
     nextBuild: 'Make industrial software concepts louder than generic AI language so the portfolio reads immediately as AI/SW for high-trust operations.',
     outcome: 'A portfolio with stronger domain specificity and better hiring fit for semiconductor and industrial AI roles.',
@@ -232,13 +238,13 @@ export const UPGRADE_TRACKS: UpgradeTrack[] = [
 export const FOCUS_PATHS: FocusPath[] = [
   {
     title: 'Flagship first',
-    summary: 'FabTwin Guardian을 먼저 보고, 그 다음 supporting proof를 읽는 경로입니다.',
+    summary: 'FabPilot Live X를 먼저 보고, 그 다음 supporting proof를 읽는 경로입니다.',
     strengths: ['Flagship thesis', 'Operator-grade UX', 'High-trust AI delivery', 'Semiconductor narrative'],
-    systems: ['FabTwin Guardian', 'Fab Ops Yield Control Tower', 'AegisOps'],
+    systems: ['FabPilot Live X', 'Fab Ops Yield Control Tower', 'AegisOps'],
     links: [
       { label: 'Launch flagship surface', href: FLAGSHIP_URL },
+      { label: 'Read dossier', href: DOSSIER_URL },
       { label: 'GitHub proof index', href: PROFILE.github },
-      { label: 'LinkedIn overview', href: PROFILE.linkedin },
     ],
   },
   {
@@ -274,14 +280,12 @@ export const PORTFOLIO_RUNTIME_META = [
 ];
 
 export const SECONDARY_PROJECTS: SecondaryProject[] = [
-  { title: 'SteadyTap', focus: 'Accessibility-first iOS app with integrated FastAPI backend', github: 'https://github.com/KIM3310/SteadyTap', demo: 'https://steadytap.pages.dev' },
-  { title: 'smallbiz-ops-copilot', focus: 'Cloudflare-based SMB ops copilot with governance-oriented support workflow', github: 'https://github.com/KIM3310/smallbiz-ops-copilot', demo: 'https://smallbiz-ops-copilot.pages.dev' },
+  { title: 'Nexus-Hive', focus: 'Multi-agent BI copilot for enterprise analytics workflows', github: 'https://github.com/KIM3310/Nexus-Hive', demo: 'https://nexus-hive.pages.dev', note: 'Data platform expansion in progress' },
+  { title: 'Honeypot', focus: 'Azure document handover copilot with retrieval structure and async ingest', github: 'https://github.com/KIM3310/honeypot', demo: 'https://honeypot-3st.pages.dev' },
+  { title: 'regulated-case-workbench', focus: 'Case inbox, evidence review, approval, and export manifest workflow', github: 'https://github.com/KIM3310/regulated-case-workbench', demo: 'https://regulated-case-workbench.pages.dev', note: 'Regulated workflow baseline' },
+  { title: 'secure-xl2hwp-local', focus: 'Air-gapped document automation pipeline for local environments', github: 'https://github.com/KIM3310/secure-xl2hwp-local', demo: 'https://secure-xl2hwp-local.pages.dev' },
+  { title: 'smallbiz-ops-copilot', focus: 'Governance-oriented SMB ops copilot workflow', github: 'https://github.com/KIM3310/smallbiz-ops-copilot', demo: 'https://smallbiz-ops-copilot.pages.dev' },
   { title: 'The Logistics Prophet', focus: 'Predictive logistics control tower with auditability and explainability', github: 'https://github.com/KIM3310/the-logistics-prophet', demo: 'https://the-logistics-prophet.pages.dev', note: 'Ontology, audit chain, and action workflow proof' },
   { title: 'Upstage DocuAgent', focus: 'Document analysis and learning-package export pipeline', github: 'https://github.com/KIM3310/Upstage-DocuAgent', demo: 'https://upstage-docuagent.pages.dev' },
-  { title: 'Nexus-Hive', focus: 'Multi-agent BI copilot for enterprise analytics workflows', github: 'https://github.com/KIM3310/Nexus-Hive', demo: 'https://nexus-hive.pages.dev', note: 'Data platform expansion in progress' },
-  { title: 'regulated-case-workbench', focus: 'Case inbox, evidence review, redaction preview, approval, and export manifest workflow', github: 'https://github.com/KIM3310/regulated-case-workbench', demo: 'https://regulated-case-workbench.pages.dev', note: 'Regulated workflow baseline' },
-  { title: 'secure-xl2hwp-local', focus: 'Air-gapped document automation pipeline for local environments', github: 'https://github.com/KIM3310/secure-xl2hwp-local', demo: 'https://secure-xl2hwp-local.pages.dev' },
-  { title: 'beaver-study-orchestrator', focus: 'Syllabus parsing and study-plan orchestration service', github: 'https://github.com/KIM3310/beaver-study-orchestrator', demo: 'https://beaver-study-orchestrator.pages.dev' },
-  { title: 'the-savior', focus: 'Wellness app with AI coaching and journaling surface', github: 'https://github.com/KIM3310/the-savior', demo: 'https://the-savior-9z8.pages.dev' },
-  { title: 'EcoTide', focus: 'SwiftUI environmental simulation app with reviewer-friendly telemetry surface', github: 'https://github.com/KIM3310/ecotide', demo: 'https://ecotide.pages.dev' },
+  { title: 'SteadyTap', focus: 'Accessibility-first iOS app with integrated FastAPI backend', github: 'https://github.com/KIM3310/SteadyTap', demo: 'https://steadytap.pages.dev' },
 ];

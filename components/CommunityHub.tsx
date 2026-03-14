@@ -1,13 +1,13 @@
 import React from 'react';
 import { ArrowUpRight, Github, Linkedin, Mail, FileText } from 'lucide-react';
 import Section from './Section';
-import { PROFILE, FLAGSHIP_URL, DOSSIER_URL, SK_HYNIX_BRIEF_URL, HACKATHON_BRIEF_URL, RESUME_PDF_URL } from '../constants';
+import { PROFILE, FLAGSHIP_URL, DOSSIER_URL, SAMSUNG_BRIEF_URL, HACKATHON_BRIEF_URL, RESUME_PDF_URL } from '../constants';
 
 const cards = [
-  { label: 'Download resume (PDF)', href: RESUME_PDF_URL, helper: 'Latest high-trust AI/SW resume aligned to the flagship narrative.', Icon: FileText },
-  { label: 'SK hynix one-pager', href: SK_HYNIX_BRIEF_URL, helper: 'Hiring-focused summary of why FabTwin Guardian strengthens AI/SW fit.', Icon: FileText },
+  { label: 'Samsung one-pager', href: SAMSUNG_BRIEF_URL, helper: 'Hiring-focused summary of why FabPilot Live X strengthens Samsung AI/SW fit.', Icon: FileText },
   { label: 'Hackathon package', href: HACKATHON_BRIEF_URL, helper: 'Submission-focused summary of the demo arc, review path, and judging fit.', Icon: FileText },
-  { label: 'Open flagship', href: FLAGSHIP_URL, helper: 'Interactive FabTwin Guardian surface with the fastest path to the main product story.', Icon: ArrowUpRight },
+  { label: 'Download resume (PDF)', href: RESUME_PDF_URL, helper: 'Latest high-trust AI/SW resume aligned to the flagship narrative.', Icon: FileText },
+  { label: 'Open flagship', href: FLAGSHIP_URL, helper: 'Interactive FabPilot Live X surface with the fastest path to the main product story.', Icon: ArrowUpRight },
   { label: 'Read dossier', href: DOSSIER_URL, helper: 'Architecture, trust surfaces, and delivery rationale behind the flagship.', Icon: FileText },
   { label: 'GitHub proof', href: PROFILE.github, helper: 'Canonical repos, implementation detail, and public proof surface.', Icon: Github },
   { label: 'LinkedIn', href: PROFILE.linkedin, helper: 'Best path for recruiting follow-up and fast professional context.', Icon: Linkedin },
@@ -27,8 +27,8 @@ const CommunityHub: React.FC = () => {
           <a
             key={label}
             href={href}
-            target={href.startsWith('mailto:') || href.startsWith('#') || href.startsWith('/') ? undefined : '_blank'}
-            rel={href.startsWith('mailto:') || href.startsWith('#') || href.startsWith('/') ? undefined : 'noopener noreferrer'}
+            target={href.startsWith('mailto:') || href.startsWith('#') ? undefined : '_blank'}
+            rel={href.startsWith('mailto:') || href.startsWith('#') ? undefined : 'noopener noreferrer'}
             className="group border border-white/10 bg-[#0a0a0c] p-6 transition-all hover:border-accent-gold/40 hover:bg-black/30"
           >
             <div className="mb-4 flex items-center justify-between gap-3">
