@@ -225,9 +225,32 @@ function renderMissionCards(items, el, renderer) {
   el.innerHTML = items.map(renderer).join('');
 }
 
+function buildMissionPack(mission) {
+  return {
+    mission_id: mission.id,
+    title: mission.incident.title,
+    severity: mission.incident.severity,
+    summary: mission.incident.summary,
+    window: mission.incident.window,
+    owner: mission.incident.owner,
+    root_cause: mission.incident.rootCause,
+    escalation: mission.incident.escalation,
+    decision_trace: mission.decisionTrace,
+    automation_steps: mission.automationSteps,
+    handoff: mission.handoff,
+  };
+}
+
+function syncMissionUrl(id) {
+  const url = new URL(window.location.href);
+  url.searchParams.set('mission', id);
+  window.history.replaceState({}, '', url.toString());
+}
+
 function setMission(id) {
   const mission = MISSIONS.find((item) => item.id === id) || MISSIONS[0];
   if (!mission) return;
+  syncMissionUrl(mission.id);
 
   if (refs.heroBadge) refs.heroBadge.textContent = mission.heroBadge;
   if (refs.heroTitle) refs.heroTitle.textContent = mission.heroTitle;
@@ -254,7 +277,7 @@ function setMission(id) {
   if (refs.voiceQuote) refs.voiceQuote.textContent = mission.voiceQuote;
   if (refs.voiceAudience) refs.voiceAudience.textContent = mission.incident.owner;
   renderMissionCards(mission.handoff, refs.handoffStrip, (item) => `<article class="card"><span>${escapeHtml(item.label)}</span><strong>${escapeHtml(item.value)}</strong></article>`);
-  if (refs.artifactPreview) refs.artifactPreview.textContent = mission.artifact;
+  if (refs.artifactPreview) refs.artifactPreview.textContent = JSON.stringify(buildMissionPack(mission), null, 2);
 
   if (refs.rail) {
     [...refs.rail.querySelectorAll('button')].forEach((button) => {
@@ -267,11 +290,11 @@ function setMission(id) {
 
 function downloadArtifact() {
   if (!refs.artifactPreview) return;
-  const blob = new Blob([refs.artifactPreview.textContent || ''], { type: 'text/plain;charset=utf-8' });
+  const blob = new Blob([refs.artifactPreview.textContent || ''], { type: 'application/json;charset=utf-8' });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
-  a.download = 'fabpilot-mission-pack.txt';
+  a.download = 'fabpilot-mission-pack.json';
   a.click();
   URL.revokeObjectURL(url);
 }
@@ -293,7 +316,14 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const initial = (() => {
-    try { return localStorage.getItem('fabpilot_mission') || MISSIONS[0].id; } catch { return MISSIONS[0].id; }
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const requested = params.get('mission');
+      if (requested && MISSIONS.some((mission) => mission.id === requested)) return requested;
+      return localStorage.getItem('fabpilot_mission') || MISSIONS[0].id;
+    } catch {
+      return MISSIONS[0].id;
+    }
   })();
   setMission(initial);
 
