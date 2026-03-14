@@ -13,12 +13,12 @@ const cards = [
   {
     label: 'Open flagship',
     href: `${PORTFOLIO_LIVE_URL}/signalforge.html`,
-    helper: 'Interactive SignalForge surface with the fastest path to the main product story.',
+    helper: 'Interactive FabPilot Live X surface with the fastest path to the main product story.',
     Icon: ArrowUpRight,
   },
   {
-    label: 'Read system brief',
-    href: `${PORTFOLIO_LIVE_URL.replace(/\/$/, '')}/fabpilot-brief.html`,
+    label: 'Read dossier',
+    href: `${PORTFOLIO_LIVE_URL.replace(/\/$/, '')}/signalforge-brief.html`,
     helper: 'Architecture, trust surfaces, and delivery rationale behind the flagship.',
     Icon: FileText,
   },
