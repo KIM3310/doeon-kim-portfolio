@@ -93,30 +93,12 @@ export const WHY_TEAMS_HIRE_ME = [
 ];
 
 export const SKILLS: SkillCategory[] = [
-  {
-    category: 'AI/ML & LLM',
-    skills: ['LLM Systems', 'Tool Calling', 'Evals & Benchmarks', 'RAG', 'Multimodal AI'],
-  },
-  {
-    category: 'Data & Platform',
-    skills: ['Palantir Foundry', 'Snowflake', 'Databricks', 'Data Pipelines'],
-  },
-  {
-    category: 'Cloud Infrastructure',
-    skills: ['Azure (OpenAI, AI Search)', 'GCP', 'AWS', 'Cloud Run', 'Terraform'],
-  },
-  {
-    category: 'Backend Engineering',
-    skills: ['Python (FastAPI)', 'Node.js (Express)', 'TypeScript', 'API Design', 'Schema Guardrails'],
-  },
-  {
-    category: 'DevOps & Tools',
-    skills: ['Docker', 'CI/CD (GitHub Actions)', 'Observability', 'Git', 'tmux'],
-  },
-  {
-    category: 'Frontend',
-    skills: ['React', 'Next.js', 'Tailwind CSS', 'Vite'],
-  },
+  { category: 'AI/ML & LLM', skills: ['LLM Systems', 'Tool Calling', 'Evals & Benchmarks', 'RAG', 'Multimodal AI'] },
+  { category: 'Data & Platform', skills: ['Palantir Foundry', 'Snowflake', 'Databricks', 'Data Pipelines'] },
+  { category: 'Cloud Infrastructure', skills: ['Azure (OpenAI, AI Search)', 'GCP', 'AWS', 'Cloud Run', 'Terraform'] },
+  { category: 'Backend Engineering', skills: ['Python (FastAPI)', 'Node.js (Express)', 'TypeScript', 'API Design', 'Schema Guardrails'] },
+  { category: 'DevOps & Tools', skills: ['Docker', 'CI/CD (GitHub Actions)', 'Observability', 'Git', 'tmux'] },
+  { category: 'Frontend', skills: ['React', 'Next.js', 'Tailwind CSS', 'Vite'] },
 ];
 
 export const PROJECTS: Project[] = [
@@ -347,67 +329,14 @@ export const PORTFOLIO_RUNTIME_META = [
 ];
 
 export const SECONDARY_PROJECTS: SecondaryProject[] = [
-  {
-    title: 'SteadyTap',
-    focus: 'Accessibility-first iOS app with integrated FastAPI backend',
-    github: 'https://github.com/KIM3310/SteadyTap',
-    demo: 'https://steadytap.pages.dev',
-  },
-  {
-    title: 'smallbiz-ops-copilot',
-    focus: 'Cloudflare-based SMB ops copilot with governance-oriented support workflow',
-    github: 'https://github.com/KIM3310/smallbiz-ops-copilot',
-    demo: 'https://smallbiz-ops-copilot.pages.dev',
-  },
-  {
-    title: 'The Logistics Prophet',
-    focus: 'Predictive logistics control tower with auditability and explainability',
-    github: 'https://github.com/KIM3310/the-logistics-prophet',
-    demo: 'https://the-logistics-prophet.pages.dev',
-    note: 'Ontology, audit chain, and action workflow proof',
-  },
-  {
-    title: 'Upstage DocuAgent',
-    focus: 'Document analysis and learning-package export pipeline',
-    github: 'https://github.com/KIM3310/Upstage-DocuAgent',
-    demo: 'https://upstage-docuagent.pages.dev',
-  },
-  {
-    title: 'Nexus-Hive',
-    focus: 'Multi-agent BI copilot for enterprise analytics workflows',
-    github: 'https://github.com/KIM3310/Nexus-Hive',
-    demo: 'https://nexus-hive.pages.dev',
-    note: 'Data platform expansion in progress',
-  },
-  {
-    title: 'regulated-case-workbench',
-    focus: 'Case inbox, evidence review, redaction preview, approval, and export manifest workflow',
-    github: 'https://github.com/KIM3310/regulated-case-workbench',
-    demo: 'https://regulated-case-workbench.pages.dev',
-    note: 'Regulated workflow baseline',
-  },
-  {
-    title: 'secure-xl2hwp-local',
-    focus: 'Air-gapped document automation pipeline for local environments',
-    github: 'https://github.com/KIM3310/secure-xl2hwp-local',
-    demo: 'https://secure-xl2hwp-local.pages.dev',
-  },
-  {
-    title: 'beaver-study-orchestrator',
-    focus: 'Syllabus parsing and study-plan orchestration service',
-    github: 'https://github.com/KIM3310/beaver-study-orchestrator',
-    demo: 'https://beaver-study-orchestrator.pages.dev',
-  },
-  {
-    title: 'the-savior',
-    focus: 'Wellness app with AI coaching and journaling surface',
-    github: 'https://github.com/KIM3310/the-savior',
-    demo: 'https://the-savior-9z8.pages.dev',
-  },
-  {
-    title: 'EcoTide',
-    focus: 'SwiftUI environmental simulation app with reviewer-friendly telemetry surface',
-    github: 'https://github.com/KIM3310/ecotide',
-    demo: 'https://ecotide.pages.dev',
-  },
+  { title: 'SteadyTap', focus: 'Accessibility-first iOS app with integrated FastAPI backend', github: 'https://github.com/KIM3310/SteadyTap', demo: 'https://steadytap.pages.dev' },
+  { title: 'smallbiz-ops-copilot', focus: 'Cloudflare-based SMB ops copilot with governance-oriented support workflow', github: 'https://github.com/KIM3310/smallbiz-ops-copilot', demo: 'https://smallbiz-ops-copilot.pages.dev' },
+  { title: 'The Logistics Prophet', focus: 'Predictive logistics control tower with auditability and explainability', github: 'https://github.com/KIM3310/the-logistics-prophet', demo: 'https://the-logistics-prophet.pages.dev', note: 'Ontology, audit chain, and action workflow proof' },
+  { title: 'Upstage DocuAgent', focus: 'Document analysis and learning-package export pipeline', github: 'https://github.com/KIM3310/Upstage-DocuAgent', demo: 'https://upstage-docuagent.pages.dev' },
+  { title: 'Nexus-Hive', focus: 'Multi-agent BI copilot for enterprise analytics workflows', github: 'https://github.com/KIM3310/Nexus-Hive', demo: 'https://nexus-hive.pages.dev', note: 'Data platform expansion in progress' },
+  { title: 'regulated-case-workbench', focus: 'Case inbox, evidence review, redaction preview, approval, and export manifest workflow', github: 'https://github.com/KIM3310/regulated-case-workbench', demo: 'https://regulated-case-workbench.pages.dev', note: 'Regulated workflow baseline' },
+  { title: 'secure-xl2hwp-local', focus: 'Air-gapped document automation pipeline for local environments', github: 'https://github.com/KIM3310/secure-xl2hwp-local', demo: 'https://secure-xl2hwp-local.pages.dev' },
+  { title: 'beaver-study-orchestrator', focus: 'Syllabus parsing and study-plan orchestration service', github: 'https://github.com/KIM3310/beaver-study-orchestrator', demo: 'https://beaver-study-orchestrator.pages.dev' },
+  { title: 'the-savior', focus: 'Wellness app with AI coaching and journaling surface', github: 'https://github.com/KIM3310/the-savior', demo: 'https://the-savior-9z8.pages.dev' },
+  { title: 'EcoTide', focus: 'SwiftUI environmental simulation app with reviewer-friendly telemetry surface', github: 'https://github.com/KIM3310/ecotide', demo: 'https://ecotide.pages.dev' },
 ];

@@ -12,8 +12,8 @@ const cards = [
   },
   {
     label: 'Read dossier',
-    href: `${PORTFOLIO_LIVE_URL}#projects`,
-    helper: 'Canonical portfolio review path plus the strongest public proof surfaces.',
+    href: `${PORTFOLIO_LIVE_URL.replace(/\/$/, '')}/fabpilot-dossier.html`,
+    helper: 'Architecture, trust surfaces, and delivery rationale behind the flagship.',
     Icon: FileText,
   },
   {
