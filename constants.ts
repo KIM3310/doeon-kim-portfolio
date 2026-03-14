@@ -2,13 +2,13 @@ import { Project, Experience, SkillCategory, Certification, Profile, SecondaryPr
 
 export const PROFILE: Profile = {
   name: '김도언 (Doeon Kim)',
-  title: 'AI/SW Systems Engineer | Reliable Industrial AI',
+  title: 'AI/SW Systems Engineer | High-Trust AI Systems',
   email: 'ehdjs1351@gmail.com',
   github: 'https://github.com/KIM3310',
   linkedin: 'https://www.linkedin.com/in/doeon-kim-4742a2388',
   catchphrase: 'Evidence-first AI systems for high-trust operations',
   intro:
-    '툴콜링 신뢰성, multimodal incident AI, operator workflow, enterprise governance에 강한 AI/SW 엔지니어입니다. 지금은 FabPilot Live X을 중심으로, 위험한 변경과 운영 컨텍스트를 reviewable system으로 바꾸는 제품형 포트폴리오를 만들고 있습니다.',
+    '툴콜링 신뢰성, multimodal incident AI, operator workflow, enterprise governance에 강한 AI/SW 엔지니어입니다. 지금은 FabPilot Live X를 중심으로, 위험한 변경과 운영 컨텍스트를 reviewable system과 reusable artifact로 바꾸는 제품형 포트폴리오를 만들고 있습니다.',
 };
 
 export const PORTFOLIO_LIVE_URL = 'https://doeon-kim-portfolio.pages.dev';
@@ -40,8 +40,8 @@ export const PORTFOLIO_SIGNAL_DECK = [
   },
   {
     label: 'Hiring Signal',
-    value: 'Samsung-ready AI/SW',
-    detail: 'Semiconductor software, runtime reliability, operator trust, and reviewer speed packaged into one coherent story.',
+    value: 'High-trust AI/SW',
+    detail: 'Runtime reliability, operator trust, reviewer speed, and reusable artifacts packaged into one coherent story.',
   },
 ];
 
@@ -103,7 +103,7 @@ export const SKILLS: SkillCategory[] = [
 
 export const PROJECTS: Project[] = [
   {
-    title: 'FabPilot Live X — Incident-to-Fix Command System',
+    title: 'FabPilot Live X — Operator-Grade Incident Command System',
     category: 'Flagship / Semiconductor AI-SW',
     role: 'Product thesis, flagship-first architecture, proof surface design, and premium command-center narrative',
     achievements: [
@@ -273,7 +273,7 @@ export const UPGRADE_TRACKS: UpgradeTrack[] = [
     systems: ['Fab Ops Yield Control Tower', 'TwinCity UI', 'FabPilot Live X'],
     currentBase: ['Operator workflows', 'Spatial control surfaces', 'Release gates'],
     nextBuild: 'Make industrial software concepts louder than generic AI language so the portfolio reads immediately as AI/SW for high-trust operations.',
-    outcome: 'A portfolio with stronger domain specificity and better hiring fit for semiconductor and industrial AI roles.',
+    outcome: 'A portfolio with stronger domain specificity and better fit for high-trust AI software roles.',
   },
   {
     title: 'Review-speed surfaces',
