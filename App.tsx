@@ -4,7 +4,6 @@ import Hero from './components/Hero';
 import Briefing from './components/Briefing';
 import FocusPaths from './components/FocusPaths';
 import WhyFit from './components/WhyFit';
-import UpgradeTracks from './components/UpgradeTracks';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Experience from './components/Experience';

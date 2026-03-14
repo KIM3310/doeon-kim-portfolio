@@ -14,6 +14,7 @@ This portfolio is not meant to be a generic personal website. It is a **canonica
 ## Canonical narrative spine
 
 - **Flagship:** FabPilot Live X
+- **Utility surface:** mission artifact export, signed handoff, and replayable debugging
 - **Role positioning:** AI/SW Systems Engineer focused on reliable industrial AI
 - **Key themes:** tool-calling reliability, incident AI, operator workflows, governed delivery, review-speed proof surfaces
 - **Primary external proof:** public GitHub repos + demos + dossier-style narrative
