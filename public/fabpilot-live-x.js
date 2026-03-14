@@ -289,6 +289,12 @@ const refs = {
 };
 
 let activeMissionId = MISSIONS[0]?.id || 'release';
+const runtimeConfig = window.FABPILOT_RUNTIME || {};
+
+function getApiBase() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get('api') || runtimeConfig.apiBase || '';
+}
 
 const escapeHtml = (value) => String(value ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 
@@ -327,6 +333,24 @@ function buildMissionPack(mission) {
     automation_steps: mission.automationSteps,
     handoff: mission.handoff,
   };
+}
+
+async function requestLiveBrief(mission) {
+  const apiBase = getApiBase().replace(/\/$/, '');
+  if (!apiBase) return null;
+
+  const response = await fetch(`${apiBase}/api/mission-brief`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ mission }),
+  });
+
+  if (!response.ok) {
+    const payload = await response.json().catch(() => ({}));
+    throw new Error(payload.error || `Runtime request failed (${response.status})`);
+  }
+
+  return response.json();
 }
 
 function syncMissionUrl(id) {
@@ -445,9 +469,37 @@ document.addEventListener('DOMContentLoaded', () => {
   setMission(initial);
 
   refs.copyBrief?.addEventListener('click', () => {
-    copyText(buildOperatorBrief(MISSIONS.find((mission) => mission.id === activeMissionId) || MISSIONS[0]));
-    refs.copyBrief.textContent = 'Brief copied';
-    window.setTimeout(() => { if (refs.copyBrief) refs.copyBrief.textContent = 'Copy operator brief'; }, 1400);
+    const mission = MISSIONS.find((item) => item.id === activeMissionId) || MISSIONS[0];
+    const defaultLabel = 'Copy operator brief';
+    const shouldUseLive = Boolean(getApiBase()) || runtimeConfig.preferLiveBriefs === true;
+    refs.copyBrief.textContent = 'Generating…';
+    Promise.resolve()
+      .then(async () => {
+        const livePayload = shouldUseLive ? await requestLiveBrief(mission) : null;
+        if (livePayload?.operatorBrief) {
+          copyText(livePayload.operatorBrief);
+          if (refs.artifactPreview) {
+            refs.artifactPreview.textContent = JSON.stringify({
+              mode: livePayload.mode,
+              operatorBrief: livePayload.operatorBrief,
+              reviewerSummary: livePayload.reviewerSummary,
+              nextSafeAction: livePayload.nextSafeAction,
+            }, null, 2);
+          }
+          refs.copyBrief.textContent = 'Live brief copied';
+          return;
+        }
+
+        copyText(buildOperatorBrief(mission));
+        refs.copyBrief.textContent = 'Brief copied';
+      })
+      .catch(() => {
+        copyText(buildOperatorBrief(mission));
+        refs.copyBrief.textContent = 'Fallback brief copied';
+      })
+      .finally(() => {
+        window.setTimeout(() => { if (refs.copyBrief) refs.copyBrief.textContent = defaultLabel; }, 1600);
+      });
   });
   refs.downloadPack?.addEventListener('click', downloadArtifact);
   refs.copyShareLink?.addEventListener('click', () => {
