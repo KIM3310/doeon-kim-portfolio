@@ -15,7 +15,7 @@ const schema = {
       knowsAbout: [
         'LLM reliability',
         'Incident AI',
-        'Gemini Live workflows',
+        'GitLab-native agent workflows',
         'semiconductor operations',
         'Enterprise governance',
         'Operator workflows',
@@ -23,7 +23,7 @@ const schema = {
     },
     {
       '@type': 'CreativeWork',
-      name: 'FabPilot Live X',
+      name: 'FabTwin Guardian',
       description: 'flagship semiconductor cognitive operations system for high-trust AI software teams.',
       about: { '@id': '#doeon-kim' },
     },
