@@ -1,1 +1,1 @@
-// Legacy redirect placeholder. Canonical surface is FabTwin Guardian.
+// Legacy redirect placeholder. Canonical surface is FabPilot Live X.

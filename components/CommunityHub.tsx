@@ -5,14 +5,14 @@ import { PROFILE, PORTFOLIO_LIVE_URL } from '../constants';
 
 const cards = [
   {
-    label: 'SK hynix one-pager',
-    href: '/briefs/sk-hynix-ai-sw-one-pager.html',
-    helper: 'Hiring-focused summary of why FabTwin Guardian strengthens AI/SW fit.',
+    label: 'Samsung one-pager',
+    href: '/briefs/samsung-ai-sw-one-pager.html',
+    helper: 'Hiring-focused summary of why FabPilot Live X strengthens AI/SW fit.',
     Icon: FileText,
   },
   {
     label: 'Hackathon package',
-    href: '/briefs/gitlab-hackathon-submission-package.html',
+    href: '/briefs/gemini-live-hackathon-package.html',
     helper: 'Submission-focused summary of the demo arc, review path, and judging fit.',
     Icon: FileText,
   },
@@ -24,8 +24,8 @@ const cards = [
   },
   {
     label: 'Open flagship',
-    href: `${PORTFOLIO_LIVE_URL}/signalforge.html`,
-    helper: 'Interactive FabTwin Guardian surface with the fastest path to the main product story.',
+    href: `${PORTFOLIO_LIVE_URL}/fabpilot-live-x.html`,
+    helper: 'Interactive FabPilot Live X surface with the fastest path to the main product story.',
     Icon: ArrowUpRight,
   },
   {
