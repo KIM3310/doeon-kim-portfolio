@@ -4,6 +4,7 @@ import { FOCUS_PATHS } from '../constants';
 import Section from './Section';
 
 const icons = [BrainCircuit, Network, BriefcaseBusiness];
+const isExternalHref = (href: string) => /^(https?:)?\/\//.test(href);
 
 const FocusPaths: React.FC = () => {
   return (
@@ -62,8 +63,8 @@ const FocusPaths: React.FC = () => {
                   <a
                     key={link.label}
                     href={link.href}
-                    target="_blank"
-                    rel="noreferrer"
+                    target={isExternalHref(link.href) ? '_blank' : undefined}
+                    rel={isExternalHref(link.href) ? 'noreferrer' : undefined}
                     className="group flex items-center justify-between gap-3 border border-white/10 bg-white/[0.02] px-4 py-3 text-sm text-white/80 transition-colors hover:border-accent-gold/30 hover:bg-white/[0.04]"
                   >
                     <span>{link.label}</span>

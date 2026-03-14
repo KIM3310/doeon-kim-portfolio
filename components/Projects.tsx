@@ -10,6 +10,8 @@ type ProjectAction = {
   Icon: LucideIcon;
 };
 
+const isExternalHref = (href: string) => /^(https?:)?\/\//.test(href);
+
 const formatActionUrl = (href: string) => {
   try {
     const url = new URL(href);
@@ -68,7 +70,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
         <div className="mt-auto border-t border-white/5 pt-6">
           <div className="mb-5 flex flex-wrap gap-2">
             {actions.length > 0 ? actions.map(({ href, label, Icon }) => (
-              <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="inline-flex min-w-[14rem] flex-col items-start gap-1 rounded-2xl border border-white/10 bg-white/[0.03] px-3 py-2 text-left transition-all hover:border-accent-gold/40 hover:text-white">
+              <a key={label} href={href} target={isExternalHref(href) ? '_blank' : undefined} rel={isExternalHref(href) ? 'noopener noreferrer' : undefined} className="inline-flex min-w-[14rem] flex-col items-start gap-1 rounded-2xl border border-white/10 bg-white/[0.03] px-3 py-2 text-left transition-all hover:border-accent-gold/40 hover:text-white">
                 <span className="inline-flex items-center gap-2 text-xs font-medium text-primary"><Icon className="h-4 w-4 text-accent-gold" /><span>{label}</span></span>
                 <span className="font-mono text-[11px] text-white/45">{formatActionUrl(href)}</span>
               </a>

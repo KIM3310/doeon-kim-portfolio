@@ -3,8 +3,10 @@ import { ArrowUpRight, Github, Linkedin, Mail, FileText } from 'lucide-react';
 import Section from './Section';
 import { PROFILE, FLAGSHIP_URL, DOSSIER_URL, SAMSUNG_BRIEF_URL, HACKATHON_BRIEF_URL, RESUME_PDF_URL } from '../constants';
 
+const isExternalHref = (href: string) => /^(https?:)?\/\//.test(href);
+
 const cards = [
-  { label: 'Samsung one-pager', href: SAMSUNG_BRIEF_URL, helper: 'Hiring-focused summary of why FabPilot Live X strengthens Samsung AI/SW fit.', Icon: FileText },
+  { label: 'SK hynix one-pager', href: SAMSUNG_BRIEF_URL, helper: 'Hiring-focused summary of why FabPilot Live X strengthens Samsung AI/SW fit.', Icon: FileText },
   { label: 'Hackathon package', href: HACKATHON_BRIEF_URL, helper: 'Submission-focused summary of the demo arc, review path, and judging fit.', Icon: FileText },
   { label: 'Download resume (PDF)', href: RESUME_PDF_URL, helper: 'Latest high-trust AI/SW resume aligned to the flagship narrative.', Icon: FileText },
   { label: 'Open flagship', href: FLAGSHIP_URL, helper: 'Interactive FabPilot Live X surface with the fastest path to the main product story.', Icon: ArrowUpRight },
@@ -27,8 +29,8 @@ const CommunityHub: React.FC = () => {
           <a
             key={label}
             href={href}
-            target={href.startsWith('mailto:') || href.startsWith('#') ? undefined : '_blank'}
-            rel={href.startsWith('mailto:') || href.startsWith('#') ? undefined : 'noopener noreferrer'}
+            target={isExternalHref(href) ? '_blank' : undefined}
+            rel={isExternalHref(href) ? 'noopener noreferrer' : undefined}
             className="group border border-white/10 bg-[#0a0a0c] p-6 transition-all hover:border-accent-gold/40 hover:bg-black/30"
           >
             <div className="mb-4 flex items-center justify-between gap-3">

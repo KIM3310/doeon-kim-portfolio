@@ -9,30 +9,30 @@ const requiredFiles = [
   'public/fabpilot-live-x.js',
   'public/fabpilot-static.css',
   'public/resume/Doeon_Kim_Resume_Microsoft_Solution_Architect.pdf',
-  'public/briefs/samsung-ai-sw-one-pager.html',
-  'public/briefs/gemini-live-hackathon-package.html',
+  'public/briefs/sk-hynix-ai-sw-one-pager.html',
+  'public/briefs/gitlab-hackathon-submission-package.html',
 ];
 
 const checks = [
   {
     file: 'constants.ts',
     mustInclude: ['FabPilot Live X', 'Samsung-ready AI/SW', 'Gemini Live Agent Challenge'],
-    mustNotInclude: ['FabTwin Guardian', 'SignalForge', 'Amazon Nova', 'NVIDIA-ready', 'SK hynix', 'GitLab Duo'],
+    mustNotInclude: ['FabPilot Live X', 'SignalForge', 'Amazon Nova', 'NVIDIA-ready', 'Samsung-ready', 'Gemini Live Agent Challenge'],
   },
   {
     file: 'components/Hero.tsx',
-    mustInclude: ['FabPilot Live X', 'Gemini Live × Samsung-ready'],
-    mustNotInclude: ['FabTwin Guardian', 'SignalForge', 'Amazon Nova', 'NVIDIA-ready', 'SK hynix', 'GitLab Duo'],
+    mustInclude: ['FabPilot Live X', 'Samsung-ready'],
+    mustNotInclude: ['FabPilot Live X', 'SignalForge', 'Amazon Nova', 'NVIDIA-ready', 'Samsung-ready'],
   },
   {
     file: 'public/fabpilot-live-x.html',
-    mustInclude: ['FabPilot Live X', 'Samsung-ready', 'Gemini Live'],
-    mustNotInclude: ['FabTwin Guardian', 'SignalForge', 'Amazon Nova', 'NVIDIA-ready', 'SK hynix', 'GitLab Duo'],
+    mustInclude: ['FabPilot Live X', 'Samsung-ready', 'Gemini Live Agent Challenge'],
+    mustNotInclude: ['FabPilot Live X', 'SignalForge', 'Amazon Nova', 'NVIDIA-ready', 'Samsung-ready'],
   },
   {
-    file: 'public/fabpilot-dossier.html',
-    mustInclude: ['FabPilot Live X', 'Samsung-ready'],
-    mustNotInclude: ['FabTwin Guardian', 'SignalForge', 'Amazon Nova', 'NVIDIA-ready', 'SK hynix', 'GitLab Duo'],
+    file: 'docs/SK_HYNIX_AI_SW_ONE_PAGER.md',
+    mustInclude: ['FabPilot Live X', 'Samsung AI/SW'],
+    mustNotInclude: ['FabPilot Live X', 'SignalForge', 'Samsung AI/SW'],
   },
 ];
 
