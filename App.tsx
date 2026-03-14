@@ -26,11 +26,10 @@ const App: React.FC = () => {
       <main id="main-content">
         <Hero />
         <Briefing />
+        <Projects />
         <FocusPaths />
         <WhyFit />
-        <UpgradeTracks />
         <Skills />
-        <Projects />
         <Experience />
         <Certifications />
         <EducationAndLanguages />

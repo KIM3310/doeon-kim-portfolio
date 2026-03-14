@@ -4,7 +4,7 @@
 
 # Doeon Kim Portfolio
 
-Production portfolio surface for Doeon Kim. Built with React + Vite and focused on LLM reliability, incident systems, operator-style delivery, and concrete upgrade tracks.
+Canonical portfolio surface for Doeon Kim, centered on **FabPilot Live X** — a flagship product thesis around reviewable AI systems for semiconductor operations, operator trust, and high-stakes runtime workflows.
 
 ## Run Locally
 
@@ -37,12 +37,20 @@ Optional environment variables below enable embedded widgets on top of that base
 - GitHub Pages deploy is handled by `.github/workflows/deploy-github-pages.yml`
 - Cloudflare Pages deploy is optional and only runs when Cloudflare secrets are configured
 - The site now includes:
-  - operator briefing section
-  - system upgrade track section
+  - flagship-first landing page
+  - FabPilot Live X static flagship surface
+  - FabPilot dossier / product thesis page
+  - proof-chain positioning around AegisOps, StagePilot, TwinCity UI, and governance/control-tower systems
   - selected + secondary active-repo index
   - runtime/service profile footer
   - JSON-LD structured data for search engines
   - social meta tags for richer shares
+
+## Flagship Review Path
+1. Open the portfolio landing page
+2. Launch **FabPilot Live X**
+3. Read the **FabPilot dossier**
+4. Follow the proof chain into public repos for reliability, incident AI, governance, and operator workflows
 
 ## Local Verification
 ```bash

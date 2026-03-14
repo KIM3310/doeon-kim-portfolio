@@ -4,12 +4,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const navItems = [
   { name: 'Briefing', href: '#briefing' },
-  { name: 'Focus Paths', href: '#focus-paths' },
-  { name: 'Why Me', href: '#why-me' },
   { name: 'Projects', href: '#projects' },
-  { name: 'Skills', href: '#skills' },
+  { name: 'Proof Paths', href: '#focus-paths' },
+  { name: 'Why Fit', href: '#why-me' },
   { name: 'Experience', href: '#experience' },
-  { name: 'Community', href: '#community' },
+  { name: 'Contact', href: '#community' },
 ];
 
 const Navbar: React.FC = () => {
@@ -19,11 +18,9 @@ const Navbar: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (scrollRaf.current !== null) {
-        return;
-      }
+      if (scrollRaf.current !== null) return;
       scrollRaf.current = window.requestAnimationFrame(() => {
-        setScrolled(window.scrollY > 50);
+        setScrolled(window.scrollY > 40);
         scrollRaf.current = null;
       });
     };
@@ -31,29 +28,21 @@ const Navbar: React.FC = () => {
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => {
       window.removeEventListener('scroll', handleScroll);
-      if (scrollRaf.current !== null) {
-        window.cancelAnimationFrame(scrollRaf.current);
-      }
+      if (scrollRaf.current !== null) window.cancelAnimationFrame(scrollRaf.current);
     };
   }, []);
 
   useEffect(() => {
-    if (!isOpen) {
-      return;
-    }
+    if (!isOpen) return;
     const handleEscape = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
-        setIsOpen(false);
-      }
+      if (event.key === 'Escape') setIsOpen(false);
     };
     window.addEventListener('keydown', handleEscape);
     return () => window.removeEventListener('keydown', handleEscape);
   }, [isOpen]);
 
   useEffect(() => {
-    if (!isOpen) {
-      return;
-    }
+    if (!isOpen) return;
     const prevOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
     return () => {
@@ -61,27 +50,21 @@ const Navbar: React.FC = () => {
     };
   }, [isOpen]);
 
-  const getScrollBehavior = (): ScrollBehavior => {
-    return window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
-  };
+  const getScrollBehavior = (): ScrollBehavior =>
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     const element = document.querySelector(href);
-    if (element) {
-      const offset = 80;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: getScrollBehavior()
-      });
-      setIsOpen(false);
-    }
+    if (!element) return;
+    const offset = 80;
+    const top = element.getBoundingClientRect().top + window.pageYOffset - offset;
+    window.scrollTo({ top, behavior: getScrollBehavior() });
+    setIsOpen(false);
   };
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-500 ${scrolled ? 'bg-[#050505]/80 backdrop-blur-xl border-b border-white/5' : 'bg-transparent'} print:absolute print:bg-[#050505] print:border-none`}>
+    <nav className={`fixed w-full z-50 transition-all duration-500 ${scrolled ? 'bg-[#050505]/82 backdrop-blur-xl border-b border-white/5' : 'bg-transparent'} print:absolute print:bg-[#050505] print:border-none`}>
       <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
         <div className="flex items-center justify-between h-20">
           <div className="flex-shrink-0 flex items-center">
@@ -94,7 +77,7 @@ const Navbar: React.FC = () => {
               DOEON KIM.
             </button>
           </div>
-          
+
           <div className="hidden md:flex items-center gap-8">
             <div className="flex items-baseline space-x-8 lg:space-x-12 print:hidden">
               {navItems.map((item) => (
