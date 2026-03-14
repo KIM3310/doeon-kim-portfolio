@@ -22,8 +22,8 @@ const Hero: React.FC = () => {
             className="border border-white/10 bg-[#09090b] p-8 md:p-10"
           >
             <div className="mb-6 flex items-center justify-between gap-4 border-b border-white/10 pb-5">
-              <span className="text-accent-gold text-xs font-medium tracking-[0.3em] uppercase">FabTwin Guardian</span>
-              <span className="rounded-full border border-white/10 px-3 py-1 text-[11px] uppercase tracking-[0.22em] text-white/45">SK hynix-ready · GitLab-ready</span>
+              <span className="text-accent-gold text-xs font-medium tracking-[0.3em] uppercase">FabPilot Live X</span>
+              <span className="rounded-full border border-white/10 px-3 py-1 text-[11px] uppercase tracking-[0.22em] text-white/45">Samsung-ready · Gemini Live-ready</span>
             </div>
 
             <h1 className="mb-6 font-serif-heading text-[3rem] font-medium leading-[1.02] tracking-tight text-white sm:text-5xl lg:text-7xl">
@@ -66,7 +66,7 @@ const Hero: React.FC = () => {
               </div>
               <div className="border border-white/10 bg-black/20 p-4">
                 <p className="text-[11px] uppercase tracking-[0.24em] text-white/35">Flagship</p>
-                <p className="mt-2 text-sm text-white">FabTwin Guardian</p>
+                <p className="mt-2 text-sm text-white">FabPilot Live X</p>
               </div>
               <div className="border border-white/10 bg-black/20 p-4">
                 <p className="text-[11px] uppercase tracking-[0.24em] text-white/35">Domain</p>
@@ -90,13 +90,13 @@ const Hero: React.FC = () => {
             <div className="mb-6 flex items-center justify-between gap-4 border-b border-white/10 pb-5">
               <div>
                 <p className="text-xs uppercase tracking-[0.28em] text-accent-gold/80">Flagship thesis</p>
-                <h2 className="mt-2 font-serif-heading text-3xl text-white">FabTwin Guardian</h2>
+                <h2 className="mt-2 font-serif-heading text-3xl text-white">FabPilot Live X</h2>
               </div>
               <span className="rounded-full border border-white/10 px-3 py-1 text-[11px] uppercase tracking-[0.22em] text-white/45">Evidence → decision → approval</span>
             </div>
 
             <p className="mb-6 text-sm leading-7 text-primary-muted">
-              GitLab-native incident-to-fix command system for semiconductor and industrial AI software teams: risky changes, fragmented signals, and handoff ambiguity become one evidence-first review surface.
+              operator-grade flagship-first command system for semiconductor and industrial AI software teams: risky changes, fragmented signals, and handoff ambiguity become one evidence-first review surface.
             </p>
 
             <div className="grid gap-4 md:grid-cols-3">
@@ -121,7 +121,7 @@ const Hero: React.FC = () => {
                 One workflow demonstrates the whole product: detect a risky change, assemble the right evidence, propose the smallest safe patch, then stop cleanly at the approval boundary.
               </p>
               <div className="mt-5 flex flex-wrap gap-2 text-xs uppercase tracking-[0.16em] text-white/50">
-                <span className="rounded-full border border-white/10 px-3 py-2">GitLab Duo flows</span>
+                <span className="rounded-full border border-white/10 px-3 py-2">Gemini Live flows</span>
                 <span className="rounded-full border border-white/10 px-3 py-2">Evidence graph</span>
                 <span className="rounded-full border border-white/10 px-3 py-2">Patch plan</span>
                 <span className="rounded-full border border-white/10 px-3 py-2">Approval gate</span>

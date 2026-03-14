@@ -1,6 +1,6 @@
 # Doeon Kim Portfolio
 
-High-trust AI systems portfolio centered on **FabPilot Live X** — a flagship incident-to-fix command system designed to show reliability, operator workflow design, governance, and reviewable software delivery.
+High-trust AI systems portfolio centered on **FabPilot Live X** — a flagship flagship-first command system designed to show reliability, operator workflow design, governance, and reviewable software delivery.
 
 ## What this repo is trying to do
 
