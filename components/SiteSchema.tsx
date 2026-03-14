@@ -19,7 +19,7 @@ const schema = {
       knowsAbout: [
         'LLM reliability',
         'Incident AI',
-        'Gemini Live agent workflows',
+        'GitLab Duo agent workflows',
         'Semiconductor software operations',
         'Enterprise governance',
         'Operator workflows',
@@ -28,15 +28,15 @@ const schema = {
     {
       '@type': 'CreativeWork',
       url: absoluteUrl(FLAGSHIP_URL),
-      name: 'FabPilot Live X',
+      name: 'FabTwin Guardian',
       description: 'Semiconductor command surface for multimodal operations, decision trace, approval-gated action, and replayable debugging.',
       about: { '@id': '#doeon-kim' },
     },
     {
       '@type': 'CreativeWork',
       url: absoluteUrl(DOSSIER_URL),
-      name: 'FabPilot Live X Dossier',
-      description: 'Supporting dossier covering the trust model, delivery logic, and review path behind FabPilot Live X.',
+      name: 'FabTwin Guardian Dossier',
+      description: 'Supporting dossier covering the trust model, delivery logic, and review path behind FabTwin Guardian.',
       about: { '@id': '#doeon-kim' },
     },
     {

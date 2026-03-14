@@ -1,83 +1,63 @@
-# FabPilot Live X — Next Steps
+# FabTwin Guardian — Final Closeout and Next Steps
 
-Last updated: 2026-03-14
+_Last updated: 2026-03-14_
 
-## Current stable status
+## Final verification status
 
-- Canonical portfolio surface: GitHub Pages
-- Flagship narrative: **FabPilot Live X**
-- Hiring target: **Samsung DS / MX**
-- Hackathon target: **Gemini Live Agent Challenge**
-- Verification baseline:
-  - `npm run verify:content`
-  - `npm run typecheck`
-  - `npm run build`
+The portfolio repo was re-checked before closeout with the following baseline:
 
-## Highest-priority next steps
+- `npm run typecheck` ✅
+- `npm run build` ✅
+- `npm run verify:content` ✅
+- Headless Chrome render checks completed for:
+  - homepage
+  - flagship
+  - dossier
+- Local verification green ✅
 
-### 1. Choose the demo lane
+## Current live review path
 
-- **Local demo lane**: keep the current built-in mission data and optional local runtime
-- **Cloud lane**: deploy the runtime to Cloud Run after IAM/billing is fixed
+- Canonical homepage: `https://kim3310.github.io/doeon-kim-portfolio/`
+- Flagship: `https://kim3310.github.io/doeon-kim-portfolio/fabpilot-live-x.html`
+- Dossier: `https://kim3310.github.io/doeon-kim-portfolio/fabpilot-dossier.html`
+- Resume PDF: `https://kim3310.github.io/doeon-kim-portfolio/resume/Doeon_Kim_Resume_Microsoft_Solution_Architect.pdf`
 
-### 2. Finish demo assets
+## What is already strong
 
-1. record a 90s–3m walkthrough
-2. capture 5 polished screenshots
-3. add one architecture diagram
-4. finalize Devpost copy
-5. finalize Samsung-facing one-pager export
+- Flagship-first reviewer flow
+- Reusable mission artifacts (`Copy operator brief`, `Download mission pack`)
+- Signed handoff / replayable debug narrative
+- Public proof chain behind the flagship
+- Resume download integrated into the review path
 
-### 3. Keep the flagship narrow
+## Highest-value next work
 
-The strongest path is still:
+### 1. Record the demo package
+- capture a 60–90 second flagship walkthrough
+- export 4–6 polished screenshots from the best mission
+- prepare a short voiceover script for recruiter / judge review
 
-1. etch thermal + yield drift mission
-2. evidence graph
-3. decision trace
-4. approval boundary
-5. signed handoff / replayable debug
+### 2. Use the runtime bridge live
+- deploy `server/` to a stable runtime target
+- set the runtime URL in `public/fabpilot-runtime-config.js`
+- verify that live operator-brief generation behaves better than mock mode
 
-## Infrastructure blockers found
+### 3. Tighten content consistency further
+- keep all public copy aligned to the same hiring/hackathon story
+- avoid reintroducing stale alias language on public surfaces
+- update resume bullets whenever the flagship narrative changes materially
 
-### GCP / Cloud Run
+### 4. Submission package completion
+- finalize the hackathon package page
+- finalize the SK hynix one-pager language
+- prepare a single shareable outreach message that links homepage + flagship + dossier + resume
 
-For the attempted GCP deployment, the blockers discovered were:
+### 5. Optional advanced upgrades
+- add one architecture diagram to the dossier
+- add one eval/benchmark visual to the proof chain
+- add a small runtime status card to the homepage if a live runtime is deployed
 
-- billing not linked or not visible to the active account
-- missing project-level permission to use the project as a billing/API consumer
+## Recommended operating rule
 
-If the team wants Cloud Run deployment, resolve:
-
-- billing account attachment
-- IAM access sufficient for service usage and deployment
-
-## Recommended implementation order
-
-### A. No-cloud path
-
-1. keep GitHub Pages as canonical public surface
-2. run `npm run fabpilot:runtime:mock` locally when needed
-3. optionally point `public/fabpilot-runtime-config.js` to a local runtime URL
-4. record the demo and submit
-
-### B. Cloud path
-
-1. fix IAM + billing on the chosen GCP project
-2. enable Cloud Run / Artifact Registry / Cloud Build
-3. deploy `server/` as `fabpilot-runtime`
-4. set runtime URL in `public/fabpilot-runtime-config.js`
-5. verify live operator brief generation
-
-## Quality tasks still worth doing
-
-- add one architecture image to the dossier
-- add one benchmark/eval visual to the review path
-- tighten flagship copy density for small screens
-- add a short README section for local demo recording
-
-## Guardrails
-
-- keep `scripts/verify-portfolio.mjs` aligned with the canonical story
-- do not let legacy naming drift back into public surfaces
-- prefer stable, verified demo behavior over speculative new features
+Keep the flagship narrow and extremely credible.
+A small number of polished, believable interactions is better than adding speculative features that weaken trust.
