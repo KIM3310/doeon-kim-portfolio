@@ -23,7 +23,7 @@ const Hero: React.FC = () => {
           >
             <div className="mb-6 flex items-center justify-between gap-4 border-b border-white/10 pb-5">
               <span className="text-accent-gold text-xs font-medium tracking-[0.3em] uppercase">FabPilot Live X</span>
-              <span className="rounded-full border border-white/10 px-3 py-1 text-[11px] uppercase tracking-[0.22em] text-white/45">Gemini Live × Samsung-ready</span>
+              <span className="rounded-full border border-white/10 px-3 py-1 text-[11px] uppercase tracking-[0.22em] text-white/45">Amazon Nova × NVIDIA-ready</span>
             </div>
 
             <h1 className="mb-6 font-serif-heading text-[3rem] font-medium leading-[1.02] tracking-tight text-white sm:text-5xl lg:text-7xl">
@@ -35,14 +35,14 @@ const Hero: React.FC = () => {
 
             <div className="mt-8 flex flex-wrap gap-4">
               <a
-                href="fabpilot-live-x.html"
+                href="signalforge.html"
                 className="inline-flex items-center gap-2 rounded-full bg-accent-gold px-6 py-3 text-sm font-medium text-black transition-transform hover:scale-[1.02]"
               >
                 Launch FabPilot Live X
                 <ArrowRight className="h-4 w-4" />
               </a>
               <a
-                href="fabpilot-dossier.html"
+                href="signalforge-brief.html"
                 className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-6 py-3 text-sm font-medium text-white transition-colors hover:border-accent-gold/40"
               >
                 Read dossier
