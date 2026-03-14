@@ -1,6 +1,6 @@
-# FabPilot Runtime Bridge
+# FabTwin Runtime Bridge
 
-FabPilot Live X supports an optional Gemini-backed runtime bridge for generating a **live operator brief**.
+FabTwin Guardian supports an optional Gemini-backed runtime bridge for generating a **live operator brief**.
 
 ## What this adds
 
@@ -12,7 +12,7 @@ FabPilot Live X supports an optional Gemini-backed runtime bridge for generating
 ## Local run
 
 ```bash
-npm run fabpilot:runtime:mock
+npm run fabtwin:runtime:mock
 ```
 
 Legacy aliases remain available:
@@ -27,7 +27,7 @@ For a real Gemini-backed run:
 
 ```bash
 export GEMINI_API_KEY=your_key_here
-npm run fabpilot:runtime
+npm run fabtwin:runtime
 ```
 
 ## Frontend hookup
@@ -43,22 +43,22 @@ Example:
 fabpilot-live-x.html?api=https://your-runtime-url
 ```
 
-The file names stay on the legacy `fabpilot-*` path for backwards-compatible public links; the product narrative is FabPilot Live X.
+The file names stay on the legacy `fabpilot-*` path for backwards-compatible public links; the product narrative is FabTwin Guardian.
 
 ## Cloud Run intent
 
 This runtime is intentionally lightweight so it can be containerized and deployed to Cloud Run with:
 
 - `GEMINI_API_KEY`
-- optional `FABPILOT_MODEL` (legacy `FABPILOT_MODEL_LEGACY` also works)
+- optional `FABTWIN_MODEL` (legacy `FABPILOT_MODEL` also works)
 
 ### Minimal deploy path
 
 ```bash
 cd server
-gcloud builds submit --tag gcr.io/$PROJECT_ID/fabpilot-runtime
-gcloud run deploy fabpilot-runtime \
-  --image gcr.io/$PROJECT_ID/fabpilot-runtime \
+gcloud builds submit --tag gcr.io/$PROJECT_ID/fabtwin-runtime
+gcloud run deploy fabtwin-runtime \
+  --image gcr.io/$PROJECT_ID/fabtwin-runtime \
   --region $REGION \
   --allow-unauthenticated \
   --set-env-vars GEMINI_API_KEY=$GEMINI_API_KEY

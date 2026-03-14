@@ -1,10 +1,10 @@
 import http from 'node:http';
 
 const PORT = Number(process.env.PORT || 8080);
-const PRODUCT_NAME = 'FabPilot Live X';
-const MODEL = process.env.FABPILOT_MODEL || process.env.FABTWIN_MODEL || 'gemini-2.5-flash';
+const PRODUCT_NAME = 'FabTwin Guardian';
+const MODEL = process.env.FABTWIN_MODEL || process.env.FABPILOT_MODEL || 'gemini-2.5-flash';
 const API_KEY = process.env.GEMINI_API_KEY || '';
-const ALLOW_MOCK = process.env.FABPILOT_ALLOW_MOCK === '1' || process.env.FABTWIN_ALLOW_MOCK === '1';
+const ALLOW_MOCK = process.env.FABTWIN_ALLOW_MOCK === '1' || process.env.FABPILOT_ALLOW_MOCK === '1';
 
 const json = (res, status, body) => {
   res.writeHead(status, {
@@ -113,7 +113,7 @@ const server = http.createServer(async (req, res) => {
   if (req.method === 'GET' && req.url === '/health') {
     return json(res, 200, {
       ok: true,
-      service: 'fabpilot-runtime',
+      service: 'fabtwin-runtime',
       ready: Boolean(API_KEY) || ALLOW_MOCK,
       mode: API_KEY ? 'gemini' : ALLOW_MOCK ? 'mock' : 'unconfigured',
       model: MODEL,
@@ -139,6 +139,6 @@ const server = http.createServer(async (req, res) => {
 });
 
 server.listen(PORT, () => {
-  console.log(`[fabpilot-runtime] listening on http://localhost:${PORT}`);
-  console.log(`[fabpilot-runtime] mode=${API_KEY ? 'gemini' : ALLOW_MOCK ? 'mock' : 'unconfigured'} model=${MODEL}`);
+  console.log(`[fabtwin-runtime] listening on http://localhost:${PORT}`);
+  console.log(`[fabtwin-runtime] mode=${API_KEY ? 'gemini' : ALLOW_MOCK ? 'mock' : 'unconfigured'} model=${MODEL}`);
 });

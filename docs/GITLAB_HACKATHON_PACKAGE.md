@@ -1,6 +1,6 @@
-# Gemini Live Agent Challenge Submission Package
+# GitLab AI Hackathon Submission Package
 
-FabPilot Live X is not a chatbot. It is an operator-grade semiconductor command surface for high-trust AI software workflows.
+FabTwin Guardian is not a chatbot. It is an operator-grade semiconductor command surface for high-trust AI software workflows.
 
 ## Why it fits the hackathon
 - clear multimodal mission flow

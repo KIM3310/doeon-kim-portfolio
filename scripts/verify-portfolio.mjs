@@ -16,14 +16,14 @@ const requiredFiles = [
 ];
 
 const checks = [
-  { file: 'constants.ts', mustInclude: ['FabPilot Live X', 'Samsung-ready AI/SW', 'Gemini Live Agent Challenge'], mustNotInclude: ['FabTwin Guardian', 'SignalForge', 'Amazon Nova', 'NVIDIA-ready', 'SK hynix', 'GitLab Duo'] },
-  { file: 'components/Hero.tsx', mustInclude: ['FabPilot Live X', 'Gemini Live × Samsung-ready'], mustNotInclude: ['FabTwin Guardian', 'SignalForge', 'Amazon Nova', 'NVIDIA-ready', 'SK hynix', 'GitLab Duo'] },
-  { file: 'public/fabpilot-live-x.html', mustInclude: ['FabPilot Live X', 'Samsung-ready', 'Gemini Live Agent Challenge'], mustNotInclude: ['FabTwin Guardian', 'SignalForge', 'Amazon Nova', 'NVIDIA-ready', 'SK hynix', 'GitLab Duo'] },
-  { file: 'public/fabpilot-dossier.html', mustInclude: ['FabPilot Live X', 'Samsung-ready'], mustNotInclude: ['FabTwin Guardian', 'SignalForge', 'SK hynix', 'GitLab Duo'] },
-  { file: 'README.md', mustInclude: ['FabPilot Live X', 'https://kim3310.github.io/doeon-kim-portfolio/'], mustNotInclude: ['FabTwin Guardian', 'SignalForge'] },
-  { file: 'server/index.mjs', mustInclude: ['FabPilot Live X', 'fabpilot-runtime'], mustNotInclude: ['FabTwin Guardian'] },
-  { file: 'docs/FABPILOT_GEMINI_RUNTIME.md', mustInclude: ['FabPilot Live X', 'fabpilot-runtime'], mustNotInclude: ['FabTwin Guardian'] },
-  { file: 'docs/SK_HYNIX_AI_SW_ONE_PAGER.md', mustInclude: ['FabPilot Live X', 'Samsung AI/SW'], mustNotInclude: ['FabTwin Guardian', 'SignalForge', 'SK hynix', 'GitLab Duo'] },
+  { file: 'constants.ts', mustInclude: ['FabTwin Guardian', 'SK hynix-ready AI/SW', 'GitLab AI Hackathon'], mustNotInclude: ['FabPilot Live X', 'SignalForge', 'Amazon Nova', 'NVIDIA-ready', 'Gemini Live Agent Challenge', 'Samsung-ready'] },
+  { file: 'components/Hero.tsx', mustInclude: ['FabTwin Guardian', 'SK hynix-ready'], mustNotInclude: ['FabPilot Live X', 'SignalForge', 'Amazon Nova', 'NVIDIA-ready', 'Samsung-ready'] },
+  { file: 'public/fabpilot-live-x.html', mustInclude: ['FabTwin Guardian', 'SK hynix-ready', 'GitLab AI Hackathon'], mustNotInclude: ['FabPilot Live X', 'SignalForge', 'Amazon Nova', 'NVIDIA-ready', 'Samsung-ready'] },
+  { file: 'public/fabpilot-dossier.html', mustInclude: ['FabTwin Guardian', 'SK hynix-ready'], mustNotInclude: ['FabPilot Live X', 'SignalForge', 'Samsung-ready'] },
+  { file: 'README.md', mustInclude: ['FabTwin Guardian', 'https://kim3310.github.io/doeon-kim-portfolio/'], mustNotInclude: ['FabPilot Live X', 'SignalForge'] },
+  { file: 'server/index.mjs', mustInclude: ['FabTwin Guardian', 'fabtwin-runtime'], mustNotInclude: ['FabPilot Live X'] },
+  { file: 'docs/FABPILOT_GEMINI_RUNTIME.md', mustInclude: ['FabTwin Guardian', 'fabtwin-runtime'], mustNotInclude: ['FabPilot Live X'] },
+  { file: 'docs/SK_HYNIX_AI_SW_ONE_PAGER.md', mustInclude: ['FabTwin Guardian', 'SK hynix AI/SW'], mustNotInclude: ['FabPilot Live X', 'SignalForge', 'Samsung AI/SW'] },
 ];
 
 const failures = [];
