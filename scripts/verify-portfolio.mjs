@@ -8,7 +8,7 @@ const requiredFiles = [
   'public/fabpilot-dossier.html',
   'public/fabpilot-live-x.js',
   'public/fabpilot-static.css',
-  'public/resume/Doeon_Kim_Resume_Microsoft_Solution_Architect.pdf',
+  'public/resume/Doeon_Kim_Resume_LLM_Systems_Engineer.pdf',
   'public/briefs/samsung-ai-sw-one-pager.html',
   'public/briefs/gemini-live-hackathon-package.html',
   'docs/FABPILOT_GEMINI_RUNTIME.md',
@@ -16,11 +16,11 @@ const requiredFiles = [
 ];
 
 const checks = [
-  { file: 'constants.ts', mustInclude: ['FabTwin Guardian', 'SK hynix-ready AI/SW', 'GitLab AI Hackathon'], mustNotInclude: ['FabPilot Live X', 'SignalForge', 'Amazon Nova', 'NVIDIA-ready', 'Gemini Live Agent Challenge', 'Samsung-ready'] },
-  { file: 'components/Hero.tsx', mustInclude: ['FabTwin Guardian', 'SK hynix-ready'], mustNotInclude: ['FabPilot Live X', 'SignalForge', 'Amazon Nova', 'NVIDIA-ready', 'Samsung-ready'] },
+  { file: 'constants.ts', mustInclude: ['StagePilot', 'FabTwin Guardian', 'LLM systems + runtime safety'], mustNotInclude: ['FabPilot Live X', 'SignalForge', 'Amazon Nova', 'NVIDIA-ready', 'Gemini Live Agent Challenge', 'Samsung-ready'] },
+  { file: 'components/Hero.tsx', mustInclude: ['StagePilot', '29.17% to 87.50% to 100.00%', 'FabTwin case study'], mustNotInclude: ['FabPilot Live X', 'SignalForge', 'Amazon Nova', 'NVIDIA-ready', 'Samsung-ready'] },
   { file: 'public/fabpilot-live-x.html', mustInclude: ['FabTwin Guardian', 'SK hynix-ready', 'GitLab AI Hackathon'], mustNotInclude: ['FabPilot Live X', 'SignalForge', 'Amazon Nova', 'NVIDIA-ready', 'Samsung-ready'] },
   { file: 'public/fabpilot-dossier.html', mustInclude: ['FabTwin Guardian', 'SK hynix-ready'], mustNotInclude: ['FabPilot Live X', 'SignalForge', 'Samsung-ready'] },
-  { file: 'README.md', mustInclude: ['FabTwin Guardian', 'https://kim3310.github.io/doeon-kim-portfolio/'], mustNotInclude: ['FabPilot Live X', 'SignalForge'] },
+  { file: 'README.md', mustInclude: ['StagePilot', 'FabTwin Guardian', 'https://kim3310.github.io/doeon-kim-portfolio/'], mustNotInclude: ['FabPilot Live X', 'SignalForge'] },
   { file: 'server/index.mjs', mustInclude: ['FabTwin Guardian', 'fabtwin-runtime'], mustNotInclude: ['FabPilot Live X'] },
   { file: 'docs/FABPILOT_GEMINI_RUNTIME.md', mustInclude: ['FabTwin Guardian', 'fabtwin-runtime'], mustNotInclude: ['FabPilot Live X'] },
   { file: 'docs/SK_HYNIX_AI_SW_ONE_PAGER.md', mustInclude: ['FabTwin Guardian', 'SK hynix AI/SW'], mustNotInclude: ['FabPilot Live X', 'SignalForge', 'Samsung AI/SW'] },

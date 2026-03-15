@@ -1,5 +1,5 @@
 import React from 'react';
-import { DOSSIER_URL, FLAGSHIP_URL, PORTFOLIO_LIVE_URL, PROFILE } from '../constants';
+import { DOSSIER_URL, FLAGSHIP_URL, PORTFOLIO_LIVE_URL, PRIMARY_PROOF_URL, PROFILE } from '../constants';
 
 const siteUrl = PORTFOLIO_LIVE_URL.endsWith('/') ? PORTFOLIO_LIVE_URL : `${PORTFOLIO_LIVE_URL}/`;
 const absoluteUrl = (path: string) => new URL(path, siteUrl).toString();
@@ -17,19 +17,27 @@ const schema = {
       description: PROFILE.intro,
       sameAs: [PROFILE.github, PROFILE.linkedin],
       knowsAbout: [
-        'LLM reliability',
+        'Agent reliability',
+        'LLM evals',
+        'Tool-calling reliability',
         'Incident AI',
-        'GitLab Duo agent workflows',
-        'Semiconductor software operations',
+        'Runtime safety',
         'Enterprise governance',
         'Operator workflows',
       ],
     },
     {
       '@type': 'CreativeWork',
+      url: PRIMARY_PROOF_URL,
+      name: 'StagePilot',
+      description: 'Benchmark-led tool-calling reliability runtime with parser recovery, bounded retry, and evaluator-facing proof surfaces.',
+      about: { '@id': '#doeon-kim' },
+    },
+    {
+      '@type': 'CreativeWork',
       url: absoluteUrl(FLAGSHIP_URL),
       name: 'FabTwin Guardian',
-      description: 'Semiconductor command surface for multimodal operations, decision trace, approval-gated action, and replayable debugging.',
+      description: 'Applied high-trust operations case study covering evidence, decision trace, approval-gated action, and signed handoff.',
       about: { '@id': '#doeon-kim' },
     },
     {
@@ -45,7 +53,7 @@ const schema = {
       name: 'Doeon Kim Portfolio',
       inLanguage: 'ko-KR',
       about: { '@id': '#doeon-kim' },
-      description: 'Portfolio site for Doeon Kim focused on high-trust AI systems, reliability, and operator-grade software.',
+      description: 'Portfolio site for Doeon Kim focused on agent reliability, evals, runtime safety, and high-trust product systems.',
     },
   ],
 };
