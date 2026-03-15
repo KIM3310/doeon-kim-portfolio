@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import BenchmarkProof from './components/BenchmarkProof';
 import Briefing from './components/Briefing';
 import FocusPaths from './components/FocusPaths';
 import WhyFit from './components/WhyFit';
@@ -24,6 +25,7 @@ const App: React.FC = () => {
       <Navbar />
       <main id="main-content">
         <Hero />
+        <BenchmarkProof />
         <Briefing />
         <Projects />
         <FocusPaths />

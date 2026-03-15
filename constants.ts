@@ -2,13 +2,13 @@ import { Project, Experience, SkillCategory, Certification, Profile, SecondaryPr
 
 export const PROFILE: Profile = {
   name: '김도언 (Doeon Kim)',
-  title: 'AI/SW Systems Engineer | Reliable Industrial AI',
+  title: 'LLM Systems Engineer | Agent Reliability, Evals, Runtime Safety',
   email: 'ehdjs1351@gmail.com',
   github: 'https://github.com/KIM3310',
   linkedin: 'https://www.linkedin.com/in/doeon-kim-4742a2388',
-  catchphrase: 'Reviewable AI systems for high-trust operations',
+  catchphrase: 'Benchmarked LLM systems for real-world failure modes',
   intro:
-    '툴콜링 신뢰성, multimodal incident AI, operator workflow, enterprise governance에 강한 AI/SW 엔지니어입니다. 지금은 FabTwin Guardian를 중심으로, 반도체 운영·의사결정 trace·안전한 action boundary를 reviewable system으로 바꾸는 제품형 포트폴리오를 만들고 있습니다.',
+    'Agent reliability, evals, multimodal incident AI, and operator-safe runtime design are my strongest public proof areas. I lead with StagePilot as the reliability surface, then show how that reliability maps into applied systems like FabTwin Guardian, AegisOps, and governance-heavy delivery.',
 };
 
 export const PORTFOLIO_LIVE_URL = 'https://kim3310.github.io/doeon-kim-portfolio/';
@@ -24,61 +24,110 @@ export const PORTFOLIO_GISCUS_CATEGORY_ID = 'DIC_kwDOROWHZs4C3zga';
 
 export const FLAGSHIP_URL = 'fabpilot-live-x.html';
 export const DOSSIER_URL = 'fabpilot-dossier.html';
-export const RESUME_PDF_URL = 'resume/Doeon_Kim_Resume_Microsoft_Solution_Architect.pdf';
+export const PRIMARY_PROOF_URL = 'https://stage-pilot.pages.dev';
+export const RESUME_PDF_URL = 'resume/Doeon_Kim_Resume_LLM_Systems_Engineer.pdf';
 export const SAMSUNG_BRIEF_URL = 'briefs/samsung-ai-sw-one-pager.html';
 export const HACKATHON_BRIEF_URL = 'briefs/gemini-live-hackathon-package.html';
 
 export const PORTFOLIO_SIGNAL_DECK = [
   {
-    label: 'Flagship',
+    label: 'Primary proof',
+    value: 'StagePilot',
+    detail: 'Checked-in tool-calling benchmark lift from 29.17% baseline to 87.50% with middleware and 100.00% with bounded retry.',
+  },
+  {
+    label: 'Applied case',
     value: 'FabTwin Guardian',
-    detail: 'Semiconductor command surface with voice, evidence graph, decision trace, approval-gated action, signed handoff, and replayable debugging.',
+    detail: 'Shows how reliability thinking extends into approval-gated, action-heavy software instead of stopping at benchmark charts.',
   },
   {
-    label: 'Differentiator',
-    value: 'Reliability + Operator Trust',
-    detail: 'The system exposes observed evidence, bounded next actions, and human approval boundaries instead of hiding them behind assistant theatre.',
-  },
-  {
-    label: 'Proof Shape',
-    value: 'Flagship + dossier + proof chain',
-    detail: 'One dominant product thesis plus supporting public systems that make the flagship believable to judges and hiring managers.',
+    label: 'Supporting proof',
+    value: 'AegisOps + Aegis-Air + Enterprise Kit',
+    detail: 'Multimodal incident review, local-first fallback, and governance-heavy delivery make the main reliability claim believable.',
   },
   {
     label: 'Hiring Signal',
-    value: 'SK hynix-ready AI/SW',
-    detail: 'Semiconductor software, runtime reliability, operator trust, and reviewer speed packaged into one coherent story.',
+    value: 'LLM systems + runtime safety',
+    detail: 'Evaluator-facing proof comes first, then applied product systems that show what trustworthy automation looks like.',
   },
 ];
 
 export const PORTFOLIO_ACTIONS = [
-  { label: 'Launch Flagship', href: FLAGSHIP_URL, helper: 'Open the interactive FabTwin Guardian command surface first.' },
-  { label: 'Read Dossier', href: DOSSIER_URL, helper: 'Review the architecture, trust surfaces, and delivery logic behind the flagship.' },
-  { label: 'GitHub Proof', href: PROFILE.github, helper: 'Review canonical repos, implementation history, and public proof surfaces.' },
-  { label: 'Email Brief', href: `mailto:${PROFILE.email}`, helper: 'Send a role brief, hiring context, or technical review request directly.' },
+  { label: 'Open StagePilot Proof', href: PRIMARY_PROOF_URL, helper: 'Start from the benchmarked reliability surface and inspect the proof path first.' },
+  { label: 'Open FabTwin Case Study', href: FLAGSHIP_URL, helper: 'Then inspect how the same reliability mindset maps into an action-heavy product surface.' },
+  { label: 'Read FabTwin Dossier', href: DOSSIER_URL, helper: 'Review architecture, trust surfaces, and delivery logic behind the applied case study.' },
+  { label: 'Download Resume', href: RESUME_PDF_URL, helper: 'Get the frontier-leaning resume version aligned to reliability, evals, and runtime safety.' },
 ];
+
+export const STAGEPILOT_BENCHMARK_STEPS = [
+  {
+    label: 'Baseline',
+    rate: 29.17,
+    helper: 'Prompt-mode tool calls before parser hardening',
+    accentClass: 'bg-white/20',
+    textClass: 'text-white/70',
+  },
+  {
+    label: 'Middleware',
+    rate: 87.5,
+    helper: 'Parser recovery plus schema coercion',
+    accentClass: 'bg-accent-soft/70',
+    textClass: 'text-accent-soft',
+  },
+  {
+    label: 'Bounded retry',
+    rate: 100,
+    helper: 'One controlled retry closes the remaining failures',
+    accentClass: 'bg-accent-gold',
+    textClass: 'text-accent-gold',
+  },
+] as const;
+
+export const STAGEPILOT_BENCHMARK_DELTAS = [
+  { label: 'Middleware vs baseline', value: '+58.33pp' },
+  { label: 'Retry vs middleware', value: '+12.50pp' },
+  { label: 'Retry vs baseline', value: '+70.83pp' },
+] as const;
+
+export const STAGEPILOT_REVIEW_FLOW = [
+  {
+    step: '01',
+    title: 'See the lift',
+    detail: 'Benchmark numbers establish that the reliability claim is backed by checked-in evidence, not just demo copy.',
+  },
+  {
+    step: '02',
+    title: 'Inspect the proof surface',
+    detail: 'Review pack, runtime brief, and benchmark artifacts shorten the path from curiosity to technical confidence.',
+  },
+  {
+    step: '03',
+    title: 'Open the applied case',
+    detail: 'FabTwin Guardian shows how the same reliability mindset survives approval boundaries, handoff, and action-heavy product UX.',
+  },
+] as const;
 
 export const WHY_TEAMS_HIRE_ME = [
   {
-    keyword: 'LLM Reliability',
-    title: '모델이 흔들려도 시스템이 무너지지 않게 만듭니다',
+    keyword: 'Agent Reliability',
+    title: '깨지는 지점을 먼저 증명하고 닫습니다',
     description:
-      'StagePilot에서 parser recovery, bounded retry, eval surface를 묶어 tool-calling reliability를 benchmarkable하게 끌어올렸습니다. 그 감각을 FabTwin Guardian 같은 action-heavy system에도 이어갑니다.',
-    match: 'Tool-calling reliability, agent runtime hardening, eval and regression systems',
+      'StagePilot에서 parser recovery, bounded retry, BenchLab eval surface를 묶어 tool-calling reliability를 benchmarkable하게 끌어올렸습니다. 중요한 건 데모가 아니라 실패 지점을 재현 가능하게 잡고 닫는 방식입니다.',
+    match: 'Tool-calling reliability, eval harnesses, schema recovery, bounded retries',
   },
   {
     keyword: 'Incident Systems',
-    title: '운영 데이터를 구조화된 대응 흐름으로 바꿉니다',
+    title: '운영 데이터를 구조화된 evidence flow로 바꿉니다',
     description:
-      'AegisOps, Aegis-Air, TwinCity UI, Fab Ops Yield Control Tower에서 incident triage, RCA, handoff, operator workflow를 구조화된 product surface로 만들었고, FabTwin Guardian에서는 이를 semiconductor ops 문법으로 확장합니다.',
+      'AegisOps, Aegis-Air, TwinCity UI에서 incident triage, RCA, handoff, fallback을 구조화된 product surface로 만들었습니다. 그래서 multimodal input이 들어와도 결과를 operator가 읽을 수 있는 evidence flow로 정리합니다.',
     match: 'Multimodal incident AI, operator UX, runtime observability, handoff continuity',
   },
   {
-    keyword: 'Governed Delivery',
-    title: '데모가 아니라 승인과 검토까지 닫습니다',
+    keyword: 'Runtime Safety',
+    title: '승인 경계와 handoff를 제품 기능으로 만듭니다',
     description:
-      'Enterprise LLM Adoption Kit, Honeypot, TwinCity UI에서 audit, fallback, async jobs, transport resilience, export flows까지 production surface를 설계했습니다. 그래서 flagship도 예쁜 챗봇이 아니라 trust boundary가 보이는 시스템으로 설계합니다.',
-    match: 'Enterprise rollout, governance controls, high-trust software delivery',
+      'Enterprise LLM Adoption Kit, FabTwin Guardian, Honeypot에서 audit, fallback, async jobs, signed handoff, export flows를 설계했습니다. 그래서 시스템이 멈춰야 할 지점과 사람이 이어받아야 할 지점이 명확합니다.',
+    match: 'Runtime safety, approval boundaries, governance controls, high-trust delivery',
   },
 ];
 
@@ -93,32 +142,20 @@ export const SKILLS: SkillCategory[] = [
 
 export const PROJECTS: Project[] = [
   {
-    title: 'FabTwin Guardian — Semiconductor Cognitive Operations System',
-    category: 'Flagship / GitLab-native / Semiconductor AI-SW',
-    role: 'Product thesis, multimodal ops UX, decision trace, signed handoff, and premium command-center narrative',
-    achievements: [
-      'Frames semiconductor incidents, lot risk, dashboard context, SPC drift, SOP fragments, and shift notes as one evidence-first operator workflow.',
-      'Separates evidence, decision trace, approval-gated action, and signed handoff so the system reads as trustworthy operational software, not a chatbot wrapper.',
-      'Optimized to strengthen both SK hynix AI/SW positioning and GitLab AI Hackathon competitiveness.',
-    ],
-    tech: ['GitLab Duo Agent Platform', 'TypeScript', 'Evidence Graph', 'Decision Trace', 'Replayable Debugging'],
-    links: { demo: FLAGSHIP_URL, github: PROFILE.github },
-  },
-  {
     title: 'StagePilot — Tool-Calling Reliability Runtime',
-    category: 'Flagship / LLM Reliability',
-    role: 'Parser middleware, orchestration, benchmark-driven tool-calling hardening',
+    category: 'Primary proof / LLM Reliability',
+    role: 'Parser middleware, orchestration, and benchmark-driven tool-calling hardening',
     achievements: [
-      'Improved benchmark success from 29.17% baseline to 87.50%, and 100% with bounded retry.',
-      'Unifies middleware, orchestration, and evaluation into one inspectable proof surface.',
-      'Provides the reliability backbone for action-heavy agent products.',
+      'Improved checked-in benchmark success from 29.17% baseline to 87.50%, and 100.00% with bounded retry.',
+      'Unifies parser middleware, orchestration, and BenchLab evaluation into one inspectable proof surface.',
+      'Provides the strongest public reliability signal before the portfolio moves into applied product systems.',
     ],
-    tech: ['TypeScript', 'Tool Calling', 'Benchmarks', 'Middleware'],
-    links: { demo: 'https://stage-pilot.pages.dev', github: 'https://github.com/KIM3310/stage-pilot', youtube: 'https://youtu.be/6trgTH1vX4M' },
+    tech: ['TypeScript', 'Tool Calling', 'Benchmarks', 'Middleware', 'Runtime APIs'],
+    links: { demo: PRIMARY_PROOF_URL, github: 'https://github.com/KIM3310/stage-pilot', youtube: 'https://youtu.be/6trgTH1vX4M' },
   },
   {
     title: 'AegisOps — Multimodal Incident Copilot',
-    category: 'Flagship / Incident AI',
+    category: 'Supporting proof / Incident AI',
     role: 'Multimodal incident analysis, JSON guardrails, replayable operator outputs',
     achievements: [
       'Combines logs and monitoring screenshots into structured RCA, action plans, and handoff artifacts.',
@@ -130,7 +167,7 @@ export const PROJECTS: Project[] = [
   },
   {
     title: 'Aegis-Air — Local-First Incident Review Engine',
-    category: 'Flagship / Air-Gapped Ops',
+    category: 'Supporting proof / Local-First Reliability',
     role: 'Local inference pipeline, replay suite, secure incident review UX',
     achievements: [
       'Built a local-first incident review engine for teams that cannot send production telemetry to public APIs.',
@@ -141,20 +178,32 @@ export const PROJECTS: Project[] = [
     links: { demo: 'https://aegis-air.pages.dev', github: 'https://github.com/KIM3310/Aegis-Air' },
   },
   {
-    title: 'Fab Ops Yield Control Tower',
-    category: 'Semiconductor / Operator Systems',
-    role: 'Alarm triage, lot-risk workflow, release gates, signed handoff',
+    title: 'Enterprise LLM Adoption Kit',
+    category: 'Supporting proof / Governance',
+    role: 'Backend API, frontend, eval harness, and governance controls',
     achievements: [
-      'Built a manufacturing control tower that keeps alarms, lot risk, tool ownership, and signed handoff in one reviewable flow.',
-      'Made hold / watch / release-ready posture visible before the next shift acts.',
-      'Provides the semiconductor workflow baseline that makes FabTwin Guardian credible.',
+      'Implemented RBAC, injection detection, PII redaction, audit hash logging, and citation-oriented response controls.',
+      'Added JSONL eval pipelines, red-team reporting, and rollout drafts to support enterprise rollout decisions.',
+      'Proves that safe AI delivery requires governance, not just model quality.',
     ],
-    tech: ['Python', 'FastAPI', 'Manufacturing Ops'],
-    links: { github: 'https://github.com/KIM3310/fab-ops-yield-control-tower' },
+    tech: ['FastAPI', 'React', 'Security', 'Evaluation'],
+    links: { github: 'https://github.com/KIM3310/enterprise-llm-adoption-kit' },
+  },
+  {
+    title: 'FabTwin Guardian — Applied High-Trust Operations System',
+    category: 'Applied case study / High-Trust Ops',
+    role: 'Multimodal ops UX, decision trace, signed handoff, and approval-boundary design',
+    achievements: [
+      'Frames action-heavy operational workflows as evidence-first software instead of assistant theatre.',
+      'Separates evidence, decision trace, approval-gated action, and signed handoff so the system reads as trustworthy operational software.',
+      'Acts as the applied product case study layered on top of the reliability foundation shown in StagePilot.',
+    ],
+    tech: ['GitLab Duo Agent Platform', 'TypeScript', 'Evidence Graph', 'Decision Trace', 'Replayable Debugging'],
+    links: { demo: FLAGSHIP_URL, github: PROFILE.github },
   },
   {
     title: 'TwinCity UI — Digital Twin Ops Console',
-    category: 'Real-Time Ops Console',
+    category: 'Applied operator systems',
     role: 'Operator UX, event normalization, transport fallback reliability',
     achievements: [
       'Built a floorplan-based triage console with live/history views, timeline actions, and list-map-detail state sync.',
@@ -165,20 +214,20 @@ export const PROJECTS: Project[] = [
     links: { demo: 'https://twincity-ui.pages.dev', github: 'https://github.com/KIM3310/twincity-ui' },
   },
   {
-    title: 'Enterprise LLM Adoption Kit',
-    category: 'Governance / Enterprise Delivery',
-    role: 'Backend API, frontend, eval harness, governance controls',
+    title: 'Fab Ops Yield Control Tower',
+    category: 'Applied operator systems',
+    role: 'Alarm triage, lot-risk workflow, release gates, and signed handoff',
     achievements: [
-      'Implemented RBAC, injection detection, PII redaction, audit hash logging, and citation-oriented response controls.',
-      'Added JSONL eval pipelines, red-team reporting, and rollout drafts to support enterprise rollout decisions.',
-      'Proves that safe AI delivery requires governance, not just model quality.',
+      'Built a manufacturing control tower that keeps alarms, lot risk, tool ownership, and signed handoff in one reviewable flow.',
+      'Made hold / watch / release-ready posture visible before the next shift acts.',
+      'Provides the operator-workflow baseline that makes FabTwin Guardian credible as a product system.',
     ],
-    tech: ['FastAPI', 'React', 'Security', 'Evaluation'],
-    links: { github: 'https://github.com/KIM3310/enterprise-llm-adoption-kit' },
+    tech: ['Python', 'FastAPI', 'Manufacturing Ops'],
+    links: { github: 'https://github.com/KIM3310/fab-ops-yield-control-tower' },
   },
   {
     title: 'ogx — Multi-Agent Orchestration CLI',
-    category: 'Agent Systems / CLI',
+    category: 'Agent systems / CLI',
     role: 'Project-scoped runtime state, safe worker control, operational API surface',
     achievements: [
       'Built a multi-agent orchestration CLI with safe-by-default local execution and project-scoped runtime state.',
@@ -213,49 +262,49 @@ export const CERTIFICATIONS: Certification[] = [
 
 export const UPGRADE_TRACKS: UpgradeTrack[] = [
   {
-    title: 'Flagship productization',
-    systems: ['FabTwin Guardian', 'AegisOps', 'StagePilot'],
-    currentBase: ['Evidence-first workflow', 'Operator UX', 'Reliability proof'],
-    nextBuild: 'Turn FabTwin Guardian from a strong concept into a tighter execution asset with clearer scenarios, stronger artifacts, and a more inspectable delivery path.',
-    outcome: 'A flagship that feels closer to an actual product system than a polished concept surface.',
+    title: 'Reliability flagship',
+    systems: ['StagePilot', 'AegisOps', 'Aegis-Air'],
+    currentBase: ['Benchmark lift', 'Replay coverage', 'Failure handling'],
+    nextBuild: 'Turn the reliability story into an even sharper reviewer asset with stronger benchmark visuals, failure taxonomy views, and one 60-second proof path.',
+    outcome: 'A public proof surface that reads immediately as frontier-adjacent systems work.',
   },
   {
-    title: 'Semiconductor software narrative',
-    systems: ['Fab Ops Yield Control Tower', 'TwinCity UI', 'FabTwin Guardian'],
-    currentBase: ['Operator workflows', 'Spatial control surfaces', 'Release gates'],
-    nextBuild: 'Make industrial software concepts louder than generic AI language so the portfolio reads immediately as AI/SW for high-trust operations.',
-    outcome: 'A portfolio with stronger domain specificity and better hiring fit for semiconductor and industrial AI roles.',
+    title: 'Applied system depth',
+    systems: ['FabTwin Guardian', 'TwinCity UI', 'Fab Ops Yield Control Tower'],
+    currentBase: ['Operator workflows', 'Approval boundaries', 'Stateful control surfaces'],
+    nextBuild: 'Make the applied case study feel even more inspectable by tightening scenarios, artifacts, and visual evidence around action boundaries.',
+    outcome: 'A stronger bridge from reliability proof to real product-system judgment.',
   },
   {
     title: 'Review-speed surfaces',
-    systems: ['Homepage', 'Dossier', 'Selected repos'],
-    currentBase: ['Public demos', 'Architecture notes', 'Canonical links'],
-    nextBuild: 'Shorten the path from first impression to technical confidence by improving screenshots, diagrams, walkthroughs, and summary artifacts.',
+    systems: ['Homepage', 'Resume', 'Selected repos'],
+    currentBase: ['Public demos', 'Architecture notes', 'Benchmark artifacts'],
+    nextBuild: 'Shorten the path from first impression to technical confidence by tightening the resume, top-of-page copy, and first-click review route.',
     outcome: 'Recruiters and judges understand the strongest systems faster.',
   },
 ];
 
 export const FOCUS_PATHS: FocusPath[] = [
   {
-    title: 'Flagship first',
-    summary: 'FabTwin Guardian를 먼저 보고, 그 다음 supporting proof를 읽는 경로입니다.',
-    strengths: ['Flagship thesis', 'Operator-grade UX', 'High-trust AI delivery', 'Semiconductor narrative'],
-    systems: ['FabTwin Guardian', 'Fab Ops Yield Control Tower', 'AegisOps'],
+    title: 'Reliability first',
+    summary: 'StagePilot와 supporting eval systems부터 보고, 그 다음 applied case study로 넘어가는 경로입니다.',
+    strengths: ['Benchmarks', 'Failure recovery', 'Replayability', 'Runtime hardening'],
+    systems: ['StagePilot', 'AegisOps', 'Aegis-Air'],
     links: [
-      { label: 'Launch flagship surface', href: FLAGSHIP_URL },
-      { label: 'Read dossier', href: DOSSIER_URL },
-      { label: 'GitHub proof index', href: PROFILE.github },
+      { label: 'Open StagePilot proof', href: PRIMARY_PROOF_URL },
+      { label: 'StagePilot repo', href: 'https://github.com/KIM3310/stage-pilot' },
+      { label: 'AegisOps repo', href: 'https://github.com/KIM3310/AegisOps' },
     ],
   },
   {
-    title: 'Reliability systems',
-    summary: '평가, fallback, replay, guardrails가 강한 시스템부터 보는 경로입니다.',
-    strengths: ['Evals + benchmarks', 'Runtime guardrails', 'Failure handling', 'Replayability'],
-    systems: ['StagePilot', 'AegisOps', 'Aegis-Air'],
+    title: 'Applied high-trust systems',
+    summary: 'Reliability가 action-heavy product에 어떻게 들어가는지 보고 싶을 때의 경로입니다.',
+    strengths: ['Approval boundaries', 'Operator workflows', 'Decision trace', 'Handoff continuity'],
+    systems: ['FabTwin Guardian', 'TwinCity UI', 'Fab Ops Yield Control Tower'],
     links: [
-      { label: 'StagePilot repo', href: 'https://github.com/KIM3310/stage-pilot' },
-      { label: 'AegisOps repo', href: 'https://github.com/KIM3310/AegisOps' },
-      { label: 'Aegis-Air repo', href: 'https://github.com/KIM3310/Aegis-Air' },
+      { label: 'Open FabTwin case study', href: FLAGSHIP_URL },
+      { label: 'Read FabTwin dossier', href: DOSSIER_URL },
+      { label: 'TwinCity UI repo', href: 'https://github.com/KIM3310/twincity-ui' },
     ],
   },
   {
@@ -274,7 +323,7 @@ export const FOCUS_PATHS: FocusPath[] = [
 export const PORTFOLIO_RUNTIME_META = [
   { label: 'Scope', value: '8 selected systems / broader active repo set' },
   { label: 'Stack', value: 'React 19 + Vite 6' },
-  { label: 'Focus', value: 'Reliability / Runtime Ops / High-Trust AI' },
+  { label: 'Focus', value: 'Agent Reliability / Runtime Safety / High-Trust AI' },
   { label: 'Public Proof', value: 'Canonical repos + live surfaces' },
   { label: 'Portfolio URL', value: 'kim3310.github.io/doeon-kim-portfolio' },
 ];

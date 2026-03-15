@@ -1,16 +1,16 @@
 import React from 'react';
 import { ArrowUpRight, Github, Linkedin, Mail, FileText } from 'lucide-react';
 import Section from './Section';
-import { PROFILE, FLAGSHIP_URL, DOSSIER_URL, SAMSUNG_BRIEF_URL, HACKATHON_BRIEF_URL, RESUME_PDF_URL } from '../constants';
+import { PROFILE, PRIMARY_PROOF_URL, FLAGSHIP_URL, DOSSIER_URL, HACKATHON_BRIEF_URL, RESUME_PDF_URL } from '../constants';
 
 const isExternalHref = (href: string) => /^(https?:)?\/\//.test(href);
 
 const cards = [
-  { label: 'SK hynix one-pager', href: SAMSUNG_BRIEF_URL, helper: 'Hiring-focused summary of why FabTwin Guardian strengthens SK hynix AI/SW fit.', Icon: FileText },
-  { label: 'Hackathon package', href: HACKATHON_BRIEF_URL, helper: 'Submission-focused summary of the demo arc, review path, and judging fit.', Icon: FileText },
-  { label: 'Download resume (PDF)', href: RESUME_PDF_URL, helper: 'Latest high-trust AI/SW resume aligned to the flagship narrative.', Icon: FileText },
-  { label: 'Open flagship', href: FLAGSHIP_URL, helper: 'Interactive FabTwin Guardian surface with the fastest path to the main product story.', Icon: ArrowUpRight },
-  { label: 'Read dossier', href: DOSSIER_URL, helper: 'Architecture, trust surfaces, and delivery rationale behind the flagship.', Icon: FileText },
+  { label: 'Download resume (PDF)', href: RESUME_PDF_URL, helper: 'Frontier-leaning resume aligned to reliability, evals, and runtime safety.', Icon: FileText },
+  { label: 'Open StagePilot proof', href: PRIMARY_PROOF_URL, helper: 'Fastest path to the benchmarked reliability story and review surfaces.', Icon: ArrowUpRight },
+  { label: 'Open FabTwin case study', href: FLAGSHIP_URL, helper: 'Applied high-trust system showing where reliability, approval, and handoff meet product UX.', Icon: ArrowUpRight },
+  { label: 'Read FabTwin dossier', href: DOSSIER_URL, helper: 'Architecture, trust surfaces, and delivery rationale behind the applied case study.', Icon: FileText },
+  { label: 'Hackathon package', href: HACKATHON_BRIEF_URL, helper: 'Submission-focused summary of the FabTwin demo arc and judging fit.', Icon: FileText },
   { label: 'GitHub proof', href: PROFILE.github, helper: 'Canonical repos, implementation detail, and public proof surface.', Icon: Github },
   { label: 'LinkedIn', href: PROFILE.linkedin, helper: 'Best path for recruiting follow-up and fast professional context.', Icon: Linkedin },
   { label: 'Email brief', href: `mailto:${PROFILE.email}`, helper: 'Send a role brief, hiring context, or technical challenge directly.', Icon: Mail },

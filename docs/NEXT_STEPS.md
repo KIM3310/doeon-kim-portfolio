@@ -20,7 +20,7 @@ The portfolio repo was re-checked before closeout with the following baseline:
 - Canonical homepage: `https://kim3310.github.io/doeon-kim-portfolio/`
 - Flagship: `https://kim3310.github.io/doeon-kim-portfolio/fabpilot-live-x.html`
 - Dossier: `https://kim3310.github.io/doeon-kim-portfolio/fabpilot-dossier.html`
-- Resume PDF: `https://kim3310.github.io/doeon-kim-portfolio/resume/Doeon_Kim_Resume_Microsoft_Solution_Architect.pdf`
+- Resume PDF: `https://kim3310.github.io/doeon-kim-portfolio/resume/Doeon_Kim_Resume_LLM_Systems_Engineer.pdf`
 
 ## What is already strong
 
