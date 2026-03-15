@@ -26,6 +26,7 @@ export const FLAGSHIP_URL = 'fabpilot-live-x.html';
 export const DOSSIER_URL = 'fabpilot-dossier.html';
 export const PRIMARY_PROOF_URL = 'https://stage-pilot.pages.dev';
 export const RESUME_PDF_URL = 'resume/Doeon_Kim_Resume_LLM_Systems_Engineer.pdf';
+export const SOLUTION_ARCHITECT_RESUME_PDF_URL = 'resume/Doeon_Kim_Resume_Microsoft_Solution_Architect.pdf';
 export const SAMSUNG_BRIEF_URL = 'briefs/samsung-ai-sw-one-pager.html';
 export const HACKATHON_BRIEF_URL = 'briefs/gemini-live-hackathon-package.html';
 
