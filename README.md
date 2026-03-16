@@ -41,6 +41,17 @@ The GitHub account is organized around a small number of hiring signals:
 - **Data, platform, and analytics systems:** `enterprise-llm-adoption-kit`, `Nexus-Hive`, `the-logistics-prophet`, `beaver-study-orchestrator`, `Upstage-DocuAgent`
 - **Product and mobile experiments:** `SteadyTap`, `ecotide`, `the-savior`, `kbbq-idle-unity`, `dream-interpretation-pages`
 
+## Extended proof surfaces
+
+Recent support repos now expose explicit reviewer handoff surfaces, which makes the portfolio read like a system family instead of a few strong flagships plus hidden demos.
+
+- `beaver-study-orchestrator` now exposes `/api/outcomes/board` for study recovery delta and next-action review.
+- `fab-ops-yield-control-tower` now exposes `/api/release-board` for queue-level release posture before lot-level claims.
+- `SteadyTap` now exposes `/v1/review-queue` for clinician/reviewer handoff before cloud guidance is trusted.
+- `honeypot` now exposes `/api/approval-matrix` for handover coverage and blocked-section review.
+- `ogx` now exposes `/v1/automation-guardrails`, and `gemini-cli-tool-runtime` adds `omg_team_operator_brief`, so the runtime/agent cluster has explicit operator-handoff surfaces too.
+- `smallbiz-ops-copilot`, `the-savior`, `kbbq-idle-unity`, and `ecotide` now expose owner handoff, escalation readiness, release readiness, and CLI reviewer fallback surfaces instead of relying on narrative alone.
+
 ## Local development
 
 ```bash
