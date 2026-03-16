@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import RecruiterMode from './components/RecruiterMode';
 import SubmissionReadiness from './components/SubmissionReadiness';
+import EvidenceGallery from './components/EvidenceGallery';
 import BenchmarkProof from './components/BenchmarkProof';
 import Briefing from './components/Briefing';
 import FocusPaths from './components/FocusPaths';
@@ -31,6 +32,7 @@ const App: React.FC = () => {
         <Hero />
         <RecruiterMode />
         <SubmissionReadiness />
+        <EvidenceGallery />
         <BenchmarkProof />
         <Briefing />
         <Projects />
