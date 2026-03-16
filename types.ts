@@ -107,6 +107,15 @@ export interface SubmissionReadinessTrack {
   remainingGap: string;
 }
 
+export interface ApplicationPacket {
+  title: string;
+  audience: string;
+  claim: string;
+  packetHref: string;
+  resumeHref: string;
+  links: FocusPathLink[];
+}
+
 export interface Experience {
   company: string;
   role: string;

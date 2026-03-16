@@ -63,6 +63,9 @@ The site now includes role-targeted interview support pages in addition to the c
 - `frontier-llm-interview-pack.html`
 - `big-tech-systems-walkthrough.html`
 - `data-platform-architecture-pack.html`
+- `frontier-llm-application-packet.html`
+- `big-tech-systems-application-packet.html`
+- `data-platform-application-packet.html`
 
 These are meant to shorten the path from "interesting portfolio" to "I know how to walk this in an interview loop."
 
