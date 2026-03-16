@@ -1,7 +1,6 @@
 import React from 'react';
 import { ArrowUpRight, BarChart3, ShieldCheck, Waypoints } from 'lucide-react';
 import {
-  FLAGSHIP_URL,
   PRIMARY_PROOF_URL,
   STAGEPILOT_BENCHMARK_DELTAS,
   STAGEPILOT_BENCHMARK_STEPS,
@@ -97,7 +96,7 @@ const BenchmarkProof: React.FC = () => {
             <div className="mt-auto grid gap-3 pt-2">
               {[
                 { label: 'Open StagePilot proof', href: PRIMARY_PROOF_URL, icon: BarChart3 },
-                { label: 'Open FabTwin case study', href: FLAGSHIP_URL, icon: ShieldCheck },
+                { label: 'Open AegisOps system', href: 'https://aegisops-ai-incident-doctor.pages.dev', icon: ShieldCheck },
               ].map(({ label, href, icon: Icon }) => (
                 <a
                   key={label}

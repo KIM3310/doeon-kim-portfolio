@@ -31,10 +31,12 @@ This portfolio is not meant to be a generic personal website. It is a **canonica
 Use the portfolio like a guided proof surface, not a flat project gallery.
 
 - **Frontier LLM teams:** start with `StagePilot`, then `AegisOps`, `Aegis-Air`, and `ogx`
-- **Big tech product / SRE orgs:** start with `StagePilot`, `TwinCity UI`, `AegisOps`, and the `FabTwin Guardian` case study
+- **Big tech product / SRE orgs:** start with `StagePilot`, `AegisOps`, `TwinCity UI`, and `enterprise-llm-adoption-kit`
 - **Snowflake:** start with `Nexus-Hive`, `lakehouse-contract-lab`, and `enterprise-llm-adoption-kit`
 - **Databricks:** start with `lakehouse-contract-lab`, `the-logistics-prophet`, `Nexus-Hive`, and `enterprise-llm-adoption-kit`
-- **Palantir:** start with `FabTwin Guardian`, `regulated-case-workbench`, `fab-ops-yield-control-tower`, and `twincity-ui`
+- **Palantir:** start with `regulated-case-workbench`, `fab-ops-yield-control-tower`, `twincity-ui`, and use `FabTwin Guardian` as an archived supporting case when needed
+- **Brokerage / securities:** start with `advisor-review-desk`, `Nexus-Hive`, and `StagePilot`
+- **Quant / systematic:** start with `signal-risk-lab`, `lakehouse-contract-lab`, and `StagePilot`
 
 The site now includes a target-company matrix plus an account-wide repo taxonomy so each reviewer path is explicit.
 
@@ -145,9 +147,9 @@ Primary deployed portfolio:
 
 GitHub Pages is the canonical public surface for review. Cloudflare Pages is optional and may lag until its project configuration is pointed at the same build output.
 
-## Optional FabTwin runtime bridge
+## Archived FabTwin runtime bridge
 
-FabTwin Guardian can talk to an optional Gemini-backed runtime for generating a live operator brief.
+FabTwin Guardian can still talk to an optional Gemini-backed runtime for generating a live operator brief, but it now sits outside the default recruiter-first path.
 
 ```bash
 npm run fabtwin:runtime:mock

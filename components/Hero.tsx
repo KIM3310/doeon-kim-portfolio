@@ -15,11 +15,10 @@ import { motion } from 'framer-motion';
 import {
   PROFILE,
   PRIMARY_PROOF_URL,
-  FLAGSHIP_URL,
   RESUME_PDF_URL,
-  DOSSIER_URL,
   SOLUTION_ARCHITECT_RESUME_PDF_URL,
   STAGEPILOT_BENCHMARK_STEPS,
+  DATA_PLATFORM_ARCHITECTURE_PACK_URL,
 } from '../constants';
 
 const proofLinks = [
@@ -42,15 +41,15 @@ const proofLinks = [
     Icon: PlayCircle,
   },
   {
-    label: 'FabTwin case study',
-    helper: 'Applied high-trust product surface built on the same thesis.',
-    href: FLAGSHIP_URL,
+    label: 'Open AegisOps system',
+    helper: 'Applied incident system showing the same reliability posture in an operator-facing workflow.',
+    href: 'https://aegisops-ai-incident-doctor.pages.dev',
     Icon: ShieldCheck,
   },
   {
-    label: 'FabTwin dossier',
-    helper: 'Architecture and decision-trace depth behind the case study.',
-    href: DOSSIER_URL,
+    label: 'Open data-platform pack',
+    helper: 'Governed delivery and warehouse-facing routing for solution-architecture loops.',
+    href: DATA_PLATFORM_ARCHITECTURE_PACK_URL,
     Icon: FileText,
   },
 ] as const;
@@ -106,8 +105,8 @@ const Hero: React.FC = () => {
                 Open StagePilot proof
                 <ArrowRight className="h-4 w-4" />
               </a>
-              <a href={FLAGSHIP_URL} className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-6 py-3 text-sm font-medium text-white transition-colors hover:border-accent-gold/40">
-                Open FabTwin case study
+              <a href="https://aegisops-ai-incident-doctor.pages.dev" className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-6 py-3 text-sm font-medium text-white transition-colors hover:border-accent-gold/40">
+                Open AegisOps system
               </a>
               <a href={RESUME_PDF_URL} className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-6 py-3 text-sm font-medium text-white transition-colors hover:border-accent-gold/40">
                 Download resume
@@ -125,7 +124,7 @@ const Hero: React.FC = () => {
               </div>
               <div className="border border-white/10 bg-black/20 p-4">
                 <p className="text-[11px] uppercase tracking-[0.24em] text-white/45">Applied case</p>
-                <p className="mt-2 text-sm text-white">FabTwin Guardian + dossier</p>
+                <p className="mt-2 text-sm text-white">AegisOps + Enterprise Kit</p>
               </div>
               <div className="border border-white/10 bg-black/20 p-4">
                 <p className="text-[11px] uppercase tracking-[0.24em] text-white/45">Review order</p>
@@ -226,14 +225,14 @@ const Hero: React.FC = () => {
               <p className="text-[11px] uppercase tracking-[0.24em] text-accent-gold/70">Why this matters</p>
               <h3 className="mt-3 text-2xl font-serif-heading text-white">Reliability before product theatre</h3>
               <p className="mt-3 text-sm leading-7 text-white/70">
-                The proof path starts with failure recovery and evaluator-facing evidence, then moves into applied systems like FabTwin Guardian where approval boundaries, handoff, and action safety have to survive real workflow complexity.
+                The proof path starts with failure recovery and evaluator-facing evidence, then moves into applied systems like AegisOps and Enterprise LLM Adoption Kit where incident review, handoff, and governed delivery have to survive real workflow complexity.
               </p>
               <div className="mt-5 flex flex-wrap gap-2 text-xs uppercase tracking-[0.16em] text-white/50">
                 <span className="rounded-full border border-white/10 px-3 py-2">Parser recovery</span>
                 <span className="rounded-full border border-white/10 px-3 py-2">BenchLab evals</span>
                 <span className="rounded-full border border-white/10 px-3 py-2">Bounded retry</span>
                 <span className="rounded-full border border-white/10 px-3 py-2">Review pack</span>
-                <span className="rounded-full border border-white/10 px-3 py-2">FabTwin case study</span>
+                <span className="rounded-full border border-white/10 px-3 py-2">AegisOps system</span>
               </div>
             </div>
 
