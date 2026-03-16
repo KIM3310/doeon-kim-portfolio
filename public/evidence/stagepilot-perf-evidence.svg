@@ -1,0 +1,36 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" rx="24" fill="#07090D"/>
+  <rect x="40" y="32" width="1120" height="104" rx="20" fill="#111721" stroke="#303D52"/>
+  <text x="68" y="78" fill="#F8FAFC" font-family="Helvetica, Arial, sans-serif" font-size="34" font-weight="700">StagePilot Perf Evidence Pack</text>
+  <text x="68" y="110" fill="#AFBDD1" font-family="Helvetica, Arial, sans-serif" font-size="18">Checked-in local k6 rehearsal that keeps runtime pressure, benchmark proof, and release guardrails in one reviewer path.</text>
+
+  <rect x="56" y="170" width="320" height="214" rx="20" fill="#101722" stroke="#314259"/>
+  <text x="82" y="214" fill="#F8FAFC" font-family="Helvetica, Arial, sans-serif" font-size="24" font-weight="700">Observed Run</text>
+  <text x="82" y="252" fill="#DCE5EE" font-family="Helvetica, Arial, sans-serif" font-size="18">6 VUs / 36 iterations / 75s cap</text>
+  <text x="82" y="284" fill="#DCE5EE" font-family="Helvetica, Arial, sans-serif" font-size="18">108 requests / 100% checks pass</text>
+  <text x="82" y="316" fill="#DCE5EE" font-family="Helvetica, Arial, sans-serif" font-size="18">0% failed requests</text>
+  <text x="82" y="348" fill="#8DDFC6" font-family="Helvetica, Arial, sans-serif" font-size="18">p95 1668ms / max 2241ms</text>
+
+  <rect x="426" y="170" width="330" height="214" rx="20" fill="#101722" stroke="#314259"/>
+  <text x="452" y="214" fill="#F8FAFC" font-family="Helvetica, Arial, sans-serif" font-size="24" font-weight="700">Route Mix</text>
+  <text x="452" y="252" fill="#DCE5EE" font-family="Helvetica, Arial, sans-serif" font-size="18">/v1/plan ................. 33%</text>
+  <text x="452" y="284" fill="#DCE5EE" font-family="Helvetica, Arial, sans-serif" font-size="18">/v1/benchmark ............ 33%</text>
+  <text x="452" y="316" fill="#DCE5EE" font-family="Helvetica, Arial, sans-serif" font-size="18">/v1/runtime-scorecard .... 34%</text>
+  <text x="452" y="348" fill="#8DDFC6" font-family="Helvetica, Arial, sans-serif" font-size="18">All tied back to benchmark + protocol surfaces</text>
+
+  <rect x="806" y="170" width="338" height="214" rx="20" fill="#101722" stroke="#314259"/>
+  <text x="832" y="214" fill="#F8FAFC" font-family="Helvetica, Arial, sans-serif" font-size="24" font-weight="700">Why It Matters</text>
+  <text x="832" y="252" fill="#DCE5EE" font-family="Helvetica, Arial, sans-serif" font-size="18">Speed is not treated as correctness.</text>
+  <text x="832" y="284" fill="#DCE5EE" font-family="Helvetica, Arial, sans-serif" font-size="18">Perf posture stays paired with</text>
+  <text x="832" y="306" fill="#DCE5EE" font-family="Helvetica, Arial, sans-serif" font-size="18">provider scorecard, failure taxonomy,</text>
+  <text x="832" y="328" fill="#DCE5EE" font-family="Helvetica, Arial, sans-serif" font-size="18">and benchmark summary before any</text>
+  <text x="832" y="350" fill="#DCE5EE" font-family="Helvetica, Arial, sans-serif" font-size="18">frontier/runtime claim is repeated.</text>
+
+  <rect x="56" y="436" width="1088" height="248" rx="20" fill="#0F141C" stroke="#303D52"/>
+  <text x="84" y="482" fill="#F8FAFC" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="700">Reviewer Path</text>
+  <text x="84" y="524" fill="#DCE5EE" font-family="Helvetica, Arial, sans-serif" font-size="19">1. `/v1/perf-evidence-pack` -> checked-in runtime rehearsal</text>
+  <text x="84" y="556" fill="#DCE5EE" font-family="Helvetica, Arial, sans-serif" font-size="19">2. `/v1/runtime-scorecard` -> live route telemetry and bounded runtime posture</text>
+  <text x="84" y="588" fill="#DCE5EE" font-family="Helvetica, Arial, sans-serif" font-size="19">3. `/v1/provider-benchmark-scorecard` + `/v1/benchmark-summary` -> contract-safe correctness</text>
+  <text x="84" y="620" fill="#DCE5EE" font-family="Helvetica, Arial, sans-serif" font-size="19">4. `/v1/developer-ops-pack` -> release/MR/pipeline guardrails before automation claims</text>
+  <text x="84" y="654" fill="#91E0C4" font-family="Helvetica, Arial, sans-serif" font-size="18">Public claim: disciplined runtime under bounded load, not hyperscale mythology.</text>
+</svg>
