@@ -23,7 +23,7 @@ This portfolio is not meant to be a generic personal website. It is a **canonica
 ## Current career packaging
 
 - **Lead application story:** AI engineer with strong public proof in runtime reliability, multimodal incident systems, and reviewable software.
-- **Support story:** junior solutions architect who can translate the same rigor into governed delivery, data-platform proof, and approval-heavy operational systems.
+- **Support story:** solutions architect candidate who can translate the same rigor into governed delivery, data-platform proof, and approval-heavy operational systems.
 - **Reviewer rule:** do not send the full repo family first. Send one flagship chain plus one company-matched support cluster.
 
 ## Target-company review map
