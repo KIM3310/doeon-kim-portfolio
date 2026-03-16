@@ -5,9 +5,11 @@ import RecruiterMode from './components/RecruiterMode';
 import SubmissionReadiness from './components/SubmissionReadiness';
 import ApplicationPackets from './components/ApplicationPackets';
 import LiveProofMatrix from './components/LiveProofMatrix';
+import VerificationBoard from './components/VerificationBoard';
 import EvidenceGallery from './components/EvidenceGallery';
 import BenchmarkProof from './components/BenchmarkProof';
 import Briefing from './components/Briefing';
+import RepoOperatingMatrix from './components/RepoOperatingMatrix';
 import FocusPaths from './components/FocusPaths';
 import Targets from './components/Targets';
 import ExtendedProofSurfaces from './components/ExtendedProofSurfaces';
@@ -36,10 +38,12 @@ const App: React.FC = () => {
         <SubmissionReadiness />
         <ApplicationPackets />
         <LiveProofMatrix />
+        <VerificationBoard />
         <EvidenceGallery />
         <BenchmarkProof />
         <Briefing />
         <Projects />
+        <RepoOperatingMatrix />
         <ExtendedProofSurfaces />
         <FocusPaths />
         <Targets />

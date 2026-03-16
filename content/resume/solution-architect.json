@@ -9,7 +9,7 @@
   "summary": [
     "Designs and delivers reviewable AI systems from discovery and pilot planning to governed rollout, with strongest public proof in enterprise LLM governance, multimodal operations, and operator-facing workflows.",
     "Turns ambiguous requirements into inspectable architectures with clear trust boundaries, review paths, and handoff artifacts instead of one-off demos.",
-    "Pairs hands-on implementation with customer-facing architecture judgment across cloud, data, runtime, and governance-heavy delivery contexts, including live workshop preview and reviewer-safe warehouse proof.",
+    "Pairs hands-on implementation with customer-facing architecture judgment across cloud, data, runtime, and governance-heavy delivery contexts, including live workshop preview, reviewer-safe warehouse proof, and verified bounded reviewer lanes.",
     "Certified across Microsoft, Snowflake, Databricks, and Palantir-aligned stacks, with public proof surfaces that let reviewers inspect shipped systems quickly."
   ],
   "skill_groups": [
