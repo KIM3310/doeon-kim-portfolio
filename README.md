@@ -35,6 +35,8 @@ Use the portfolio like a guided proof surface, not a flat project gallery.
 - **Snowflake:** start with `Nexus-Hive`, `lakehouse-contract-lab`, and `enterprise-llm-adoption-kit`
 - **Databricks:** start with `lakehouse-contract-lab`, `the-logistics-prophet`, `Nexus-Hive`, and `enterprise-llm-adoption-kit`
 - **Palantir:** start with `regulated-case-workbench`, `fab-ops-yield-control-tower`, `twincity-ui`, and use `FabTwin Guardian` as an archived supporting case when needed
+- **IT operations:** start with `AegisOps`, `ogx`, `the-logistics-prophet`, and `secure-xl2hwp-local`
+- **Security operations:** start with `Aegis-Air`, `secure-xl2hwp-local`, `honeypot`, and `regulated-case-workbench`
 - **Brokerage / securities:** start with `advisor-review-desk`, `Nexus-Hive`, and `StagePilot`
 - **Quant / systematic:** start with `signal-risk-lab`, `lakehouse-contract-lab`, and `StagePilot`
 
