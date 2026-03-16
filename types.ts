@@ -96,6 +96,17 @@ export interface RecruiterQuickPath {
   links: FocusPathLink[];
 }
 
+export interface SubmissionReadinessTrack {
+  title: string;
+  companies: string;
+  readinessPct: number;
+  status: string;
+  summary: string;
+  strongestSignals: string[];
+  proofLinks: FocusPathLink[];
+  remainingGap: string;
+}
+
 export interface Experience {
   company: string;
   role: string;

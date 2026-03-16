@@ -12,6 +12,7 @@ import {
   ExtendedProofCluster,
   RecruiterStep,
   RecruiterQuickPath,
+  SubmissionReadinessTrack,
 } from './types';
 
 export const PROFILE: Profile = {
@@ -345,6 +346,84 @@ export const PROJECTS: Project[] = [
     ],
     tech: ['TypeScript', 'CLI', 'tmux', 'Cloud Run'],
     links: { github: 'https://github.com/KIM3310/ogx' },
+  },
+];
+
+export const SUBMISSION_READINESS_TRACKS: SubmissionReadinessTrack[] = [
+  {
+    title: 'Frontier LLM',
+    companies: 'OpenAI · Anthropic · reliability/evals teams',
+    readinessPct: 89,
+    status: 'Review-ready public package',
+    summary:
+      'The public package now clearly shows runtime reliability, protocol coverage, failure taxonomy, and provider tradeoff thinking instead of a generic agent demo story.',
+    strongestSignals: ['Benchmarked tool reliability', 'Protocol coverage', 'Failure taxonomy', 'Provider tradeoff surface'],
+    proofLinks: [
+      { label: 'Frontier brief', href: FRONTIER_LLM_BRIEF_URL },
+      { label: 'StagePilot repo', href: 'https://github.com/KIM3310/stage-pilot' },
+      { label: 'LLM systems resume', href: RESUME_PDF_URL },
+    ],
+    remainingGap: 'The last gap is live large-scale inference/performance proof, not basic runtime credibility.',
+  },
+  {
+    title: 'Big Tech Systems',
+    companies: 'Google · Meta · Amazon · Microsoft-style product/SRE orgs',
+    readinessPct: 92,
+    status: 'Strong submission surface',
+    summary:
+      'Defensive engineering, fallback posture, operator workflows, and reviewable APIs now read quickly across the portfolio and GitHub surface.',
+    strongestSignals: ['Service boundaries', 'Operational UX', 'Fallback design', 'Incident/replay evidence'],
+    proofLinks: [
+      { label: 'Big-tech brief', href: BIG_TECH_SYSTEMS_BRIEF_URL },
+      { label: 'AegisOps repo', href: 'https://github.com/KIM3310/AegisOps' },
+      { label: 'LLM systems resume', href: RESUME_PDF_URL },
+    ],
+    remainingGap: 'The remaining gap is harder scale evidence and longer-lived production ownership, not portfolio clarity.',
+  },
+  {
+    title: 'Snowflake',
+    companies: 'Snowflake',
+    readinessPct: 91,
+    status: 'High-fit submission package',
+    summary:
+      'Nexus-Hive, enterprise delivery assets, and the governed analytics story now expose metric certification, query approval, and warehouse-target posture clearly.',
+    strongestSignals: ['Semantic metric layer', 'Governance pack', 'Warehouse target scorecard', 'Solution architecture framing'],
+    proofLinks: [
+      { label: 'Snowflake brief', href: SNOWFLAKE_BRIEF_URL },
+      { label: 'Nexus-Hive repo', href: 'https://github.com/KIM3310/Nexus-Hive' },
+      { label: 'Solution architect resume', href: SOLUTION_ARCHITECT_RESUME_PDF_URL },
+    ],
+    remainingGap: 'The last gap is live customer-grade Snowflake connector proof, not governed analytics credibility.',
+  },
+  {
+    title: 'Databricks',
+    companies: 'Databricks',
+    readinessPct: 90,
+    status: 'Near-ready public package',
+    summary:
+      'The data-platform story now reads through semantic governance, decision boards, and solution-architecture assets instead of isolated ML or dashboard demos.',
+    strongestSignals: ['Lakehouse-fit narrative', 'Operational analytics', 'Decision surfaces', 'Platform-oriented proofs'],
+    proofLinks: [
+      { label: 'Databricks brief', href: DATABRICKS_BRIEF_URL },
+      { label: 'The Logistics Prophet repo', href: 'https://github.com/KIM3310/the-logistics-prophet' },
+      { label: 'Solution architect resume', href: SOLUTION_ARCHITECT_RESUME_PDF_URL },
+    ],
+    remainingGap: 'The remaining gap is more explicit public Spark/Delta execution proof, not platform storytelling.',
+  },
+  {
+    title: 'Palantir',
+    companies: 'Palantir',
+    readinessPct: 94,
+    status: 'Strongest fit in public',
+    summary:
+      'Approval boundaries, evidence trails, spatial/operational consoles, and governed delivery now read as one coherent high-trust software portfolio.',
+    strongestSignals: ['Approval-safe workflows', 'Evidence chain', 'Operator software', 'Action-heavy systems'],
+    proofLinks: [
+      { label: 'Palantir brief', href: PALANTIR_BRIEF_URL },
+      { label: 'regulated-case-workbench repo', href: 'https://github.com/KIM3310/regulated-case-workbench' },
+      { label: 'Solution architect resume', href: SOLUTION_ARCHITECT_RESUME_PDF_URL },
+    ],
+    remainingGap: 'The main remaining gap is more real deployment narrative, not fit of the public system design surface.',
   },
 ];
 

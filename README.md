@@ -31,6 +31,17 @@ Use the portfolio like a guided proof surface, not a flat project gallery.
 
 The site now includes a target-company matrix plus an account-wide repo taxonomy so each reviewer path is explicit.
 
+## Submission readiness snapshot
+
+The portfolio now includes a dedicated submission-readiness section that estimates the current public package by track:
+
+- **Frontier LLM:** runtime reliability, provider tradeoff posture, and eval discipline are now explicit.
+- **Big tech systems:** defensive engineering, operator workflows, and fallback surfaces read quickly.
+- **Snowflake / Databricks:** semantic governance, warehouse-target posture, and solution-architecture routing are visible.
+- **Palantir:** approval boundaries, evidence trails, and action-heavy operational software remain the strongest public fit.
+
+Those percentages are intentionally framed as **public-package readiness**, not a claim that interviewing or production history is already complete.
+
 ## Account-wide repo map
 
 The GitHub account is organized around a small number of hiring signals:
