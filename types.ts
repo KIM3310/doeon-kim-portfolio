@@ -40,6 +40,29 @@ export interface FocusPath {
   links: FocusPathLink[];
 }
 
+export interface TargetTrack {
+  title: string;
+  companies: string;
+  summary: string;
+  signals: string[];
+  reviewPath: string[];
+  links: FocusPathLink[];
+}
+
+export interface RepoClusterEntry {
+  name: string;
+  focus: string;
+  github?: string;
+  demo?: string;
+  note?: string;
+}
+
+export interface RepoCluster {
+  title: string;
+  summary: string;
+  repos: RepoClusterEntry[];
+}
+
 export interface Experience {
   company: string;
   role: string;

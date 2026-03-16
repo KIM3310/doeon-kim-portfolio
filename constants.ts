@@ -1,4 +1,15 @@
-import { Project, Experience, SkillCategory, Certification, Profile, SecondaryProject, UpgradeTrack, FocusPath } from './types';
+import {
+  Project,
+  Experience,
+  SkillCategory,
+  Certification,
+  Profile,
+  SecondaryProject,
+  UpgradeTrack,
+  FocusPath,
+  TargetTrack,
+  RepoCluster,
+} from './types';
 
 export const PROFILE: Profile = {
   name: '김도언 (Doeon Kim)',
@@ -12,11 +23,11 @@ export const PROFILE: Profile = {
 };
 
 export const PORTFOLIO_LIVE_URL = 'https://kim3310.github.io/doeon-kim-portfolio/';
-export const PORTFOLIO_REPO_URL = PROFILE.github;
-export const PORTFOLIO_DISCUSSIONS_URL = PROFILE.github;
+export const PORTFOLIO_REPO_URL = 'https://github.com/KIM3310/doeon-kim-portfolio';
+export const PORTFOLIO_DISCUSSIONS_URL = 'https://github.com/KIM3310/doeon-kim-portfolio/discussions';
 export const PORTFOLIO_QA_URL = PROFILE.linkedin;
 export const PORTFOLIO_IDEAS_URL = `mailto:${PROFILE.email}?subject=Portfolio%20Ideas`;
-export const PORTFOLIO_FEEDBACK_ISSUE_URL = PROFILE.github;
+export const PORTFOLIO_FEEDBACK_ISSUE_URL = 'https://github.com/KIM3310/doeon-kim-portfolio/issues/new';
 export const PORTFOLIO_GISCUS_REPO = 'KIM3310/doeon-kim-portfolio';
 export const PORTFOLIO_GISCUS_REPO_ID = 'R_kgDOROWHZg';
 export const PORTFOLIO_GISCUS_CATEGORY = 'Q&A';
@@ -321,6 +332,74 @@ export const FOCUS_PATHS: FocusPath[] = [
   },
 ];
 
+export const TARGET_TRACKS: TargetTrack[] = [
+  {
+    title: 'Frontier LLM',
+    companies: 'OpenAI · Anthropic · reliability/evals teams',
+    summary:
+      'Best fit when a reviewer wants benchmarked runtime behavior, tool reliability, and fast proof surfaces instead of generic agent demos.',
+    signals: ['Tool-calling reliability', 'Evals and benchmarks', 'Runtime safety', 'Reviewable APIs'],
+    reviewPath: ['StagePilot', 'AegisOps', 'Aegis-Air', 'ogx'],
+    links: [
+      { label: 'Open StagePilot proof', href: PRIMARY_PROOF_URL },
+      { label: 'StagePilot repo', href: 'https://github.com/KIM3310/stage-pilot' },
+      { label: 'AegisOps repo', href: 'https://github.com/KIM3310/AegisOps' },
+    ],
+  },
+  {
+    title: 'Big Tech Systems',
+    companies: 'Google · Meta · Amazon · Microsoft-style product/SRE orgs',
+    summary:
+      'Strongest where the bar is defensive engineering: clear service boundaries, failure handling, observability, and user-facing systems that survive real operational complexity.',
+    signals: ['Defensive engineering', 'Operator workflows', 'Fallback paths', 'Service-grade surfaces'],
+    reviewPath: ['StagePilot', 'TwinCity UI', 'AegisOps', 'FabTwin Guardian'],
+    links: [
+      { label: 'TwinCity UI repo', href: 'https://github.com/KIM3310/twincity-ui' },
+      { label: 'Open FabTwin case study', href: FLAGSHIP_URL },
+      { label: 'Read FabTwin dossier', href: DOSSIER_URL },
+    ],
+  },
+  {
+    title: 'Snowflake',
+    companies: 'Snowflake',
+    summary:
+      'Best fit around governed analytics, warehouse-adjacent product thinking, query reviewability, and data workflows that need trustworthy operator handoff.',
+    signals: ['Analytics workflows', 'Governed delivery', 'Auditability', 'Warehouse-adjacent product design'],
+    reviewPath: ['Nexus-Hive', 'The Logistics Prophet', 'Enterprise LLM Adoption Kit'],
+    links: [
+      { label: 'Nexus-Hive repo', href: 'https://github.com/KIM3310/Nexus-Hive' },
+      { label: 'The Logistics Prophet repo', href: 'https://github.com/KIM3310/the-logistics-prophet' },
+      { label: 'Enterprise kit repo', href: 'https://github.com/KIM3310/enterprise-llm-adoption-kit' },
+    ],
+  },
+  {
+    title: 'Databricks',
+    companies: 'Databricks',
+    summary:
+      'Best fit where data/ML platform work needs pipelines, experimentation discipline, explainability, and APIs that translate model output into reliable operational action.',
+    signals: ['Data pipelines', 'Platform thinking', 'Experiment loops', 'Operational analytics'],
+    reviewPath: ['The Logistics Prophet', 'Nexus-Hive', 'Upstage DocuAgent', 'beaver-study-orchestrator'],
+    links: [
+      { label: 'The Logistics Prophet repo', href: 'https://github.com/KIM3310/the-logistics-prophet' },
+      { label: 'Upstage DocuAgent repo', href: 'https://github.com/KIM3310/Upstage-DocuAgent' },
+      { label: 'beaver-study-orchestrator repo', href: 'https://github.com/KIM3310/beaver-study-orchestrator' },
+    ],
+  },
+  {
+    title: 'Palantir',
+    companies: 'Palantir',
+    summary:
+      'Strongest where software has to support high-stakes operator decisions with approval boundaries, evidence trails, and action-heavy workflows instead of chat-only UX.',
+    signals: ['Decision support', 'Audit trails', 'Approval boundaries', 'Operational software'],
+    reviewPath: ['FabTwin Guardian', 'regulated-case-workbench', 'Fab Ops Yield Control Tower', 'TwinCity UI'],
+    links: [
+      { label: 'regulated-case-workbench repo', href: 'https://github.com/KIM3310/regulated-case-workbench' },
+      { label: 'Fab Ops Yield Control Tower repo', href: 'https://github.com/KIM3310/fab-ops-yield-control-tower' },
+      { label: 'TwinCity UI repo', href: 'https://github.com/KIM3310/twincity-ui' },
+    ],
+  },
+];
+
 export const PORTFOLIO_RUNTIME_META = [
   { label: 'Scope', value: '8 selected systems / broader active repo set' },
   { label: 'Stack', value: 'React 19 + Vite 6' },
@@ -329,12 +408,68 @@ export const PORTFOLIO_RUNTIME_META = [
   { label: 'Portfolio URL', value: 'kim3310.github.io/doeon-kim-portfolio' },
 ];
 
+export const REPO_CLUSTERS: RepoCluster[] = [
+  {
+    title: 'Review surfaces',
+    summary: 'The two places that should explain the whole account fastest: the profile hub and the canonical portfolio site.',
+    repos: [
+      { name: 'KIM3310', focus: 'GitHub profile README that defines the review order and flagship thesis.', github: 'https://github.com/KIM3310/KIM3310' },
+      { name: 'doeon-kim-portfolio', focus: 'Canonical portfolio site and review surface for the flagship systems.', github: PORTFOLIO_REPO_URL, demo: PORTFOLIO_LIVE_URL },
+    ],
+  },
+  {
+    title: 'Reliability and agent runtimes',
+    summary: 'Where tool use, runtime safety, replayability, and bounded automation are clearest in public.',
+    repos: [
+      { name: 'stage-pilot', focus: 'Benchmark-led tool-calling reliability runtime with parser recovery and bounded retry.', github: 'https://github.com/KIM3310/stage-pilot', demo: PRIMARY_PROOF_URL },
+      { name: 'AegisOps', focus: 'Multimodal incident copilot with replayable handoff and structured RCA output.', github: 'https://github.com/KIM3310/AegisOps', demo: 'https://aegisops-ai-incident-doctor.pages.dev' },
+      { name: 'Aegis-Air', focus: 'Local-first incident review engine for restricted or air-gapped environments.', github: 'https://github.com/KIM3310/Aegis-Air', demo: 'https://aegis-air.pages.dev' },
+      { name: 'ogx', focus: 'Project-scoped multi-agent orchestration CLI with safe worker control.', github: 'https://github.com/KIM3310/ogx' },
+      { name: 'gemini-cli-tool-runtime', focus: 'Private runtime/orchestration layer behind earlier Gemini CLI experiments.', note: 'Private repo' },
+    ],
+  },
+  {
+    title: 'Operational software and governed workflows',
+    summary: 'Repos that show operator UX, approval boundaries, audit trails, and action-heavy software instead of generic assistant patterns.',
+    repos: [
+      { name: 'twincity-ui', focus: 'Digital twin triage console with spatial context and realtime fallback posture.', github: 'https://github.com/KIM3310/twincity-ui', demo: 'https://twincity-ui.pages.dev' },
+      { name: 'fab-ops-yield-control-tower', focus: 'Semiconductor-style release-gate and handoff workflow for alarms, lot risk, and recovery.', github: 'https://github.com/KIM3310/fab-ops-yield-control-tower' },
+      { name: 'regulated-case-workbench', focus: 'Case inbox, redaction review, approval, and signed export manifest workflow.', github: 'https://github.com/KIM3310/regulated-case-workbench', demo: 'https://regulated-case-workbench.pages.dev' },
+      { name: 'secure-xl2hwp-local', focus: 'Air-gapped document automation pipeline for controlled local environments.', github: 'https://github.com/KIM3310/secure-xl2hwp-local', demo: 'https://secure-xl2hwp-local.pages.dev' },
+      { name: 'honeypot', focus: 'Azure-based document handover copilot with retrieval-backed review flow.', github: 'https://github.com/KIM3310/honeypot', demo: 'https://honeypot-proto.vercel.app' },
+      { name: 'smallbiz-ops-copilot', focus: 'Private SMB operations copilot with tickets, KPI dashboards, and guarded actions.', note: 'Private repo' },
+    ],
+  },
+  {
+    title: 'Data, platform, and analytics systems',
+    summary: 'Projects that show governed analytics, platform APIs, explainability, and data-heavy product thinking.',
+    repos: [
+      { name: 'enterprise-llm-adoption-kit', focus: 'Governance-first enterprise AI control tower with RBAC, evals, and rollout assets.', github: 'https://github.com/KIM3310/enterprise-llm-adoption-kit' },
+      { name: 'Nexus-Hive', focus: 'Governed BI copilot that turns executive questions into auditable SQL and charts.', github: 'https://github.com/KIM3310/Nexus-Hive', demo: 'https://nexus-hive.pages.dev' },
+      { name: 'the-logistics-prophet', focus: 'Predictive logistics control tower with ontology, model comparison, and explainability.', github: 'https://github.com/KIM3310/the-logistics-prophet', demo: 'https://the-logistics-prophet.pages.dev' },
+      { name: 'beaver-study-orchestrator', focus: 'Syllabus parsing and study-plan orchestration with deadline risk analytics.', github: 'https://github.com/KIM3310/beaver-study-orchestrator' },
+      { name: 'Upstage-DocuAgent', focus: 'Document analysis and learning-package export pipeline with structured extraction.', github: 'https://github.com/KIM3310/Upstage-DocuAgent', demo: 'https://upstage-docuagent.pages.dev' },
+    ],
+  },
+  {
+    title: 'Product and mobile experiments',
+    summary: 'Smaller product surfaces that broaden the account beyond infra without diluting the main thesis.',
+    repos: [
+      { name: 'SteadyTap', focus: 'Accessibility-first iOS app with calibration, coaching, and progress tracking.', github: 'https://github.com/KIM3310/SteadyTap', demo: 'https://steadytap.pages.dev' },
+      { name: 'ecotide', focus: 'SwiftUI environmental simulation app with motion-driven telemetry overlays.', github: 'https://github.com/KIM3310/ecotide' },
+      { name: 'the-savior', focus: 'Mind-body stabilization app with BYOK/fallback providers and mobile packaging.', github: 'https://github.com/KIM3310/the-savior' },
+      { name: 'kbbq-idle-unity', focus: 'Unity WebGL idle tycoon game with economy, progression, and prestige systems.', github: 'https://github.com/KIM3310/kbbq-idle-unity' },
+      { name: 'dream-interpretation-pages', focus: 'Cloudflare Pages app for OpenAI-backed dream interpretation flows.', github: 'https://github.com/KIM3310/dream-interpretation-pages' },
+    ],
+  },
+];
+
 export const SECONDARY_PROJECTS: SecondaryProject[] = [
   { title: 'Nexus-Hive', focus: 'Multi-agent BI copilot for enterprise analytics workflows', github: 'https://github.com/KIM3310/Nexus-Hive', demo: 'https://nexus-hive.pages.dev', note: 'Data platform expansion in progress' },
   { title: 'Honeypot', focus: 'Azure document handover copilot with retrieval structure and async ingest', github: 'https://github.com/KIM3310/honeypot', demo: 'https://honeypot-3st.pages.dev' },
   { title: 'regulated-case-workbench', focus: 'Case inbox, evidence review, approval, and export manifest workflow', github: 'https://github.com/KIM3310/regulated-case-workbench', demo: 'https://regulated-case-workbench.pages.dev', note: 'Regulated workflow baseline' },
   { title: 'secure-xl2hwp-local', focus: 'Air-gapped document automation pipeline for local environments', github: 'https://github.com/KIM3310/secure-xl2hwp-local', demo: 'https://secure-xl2hwp-local.pages.dev' },
-  { title: 'smallbiz-ops-copilot', focus: 'Governance-oriented SMB ops copilot workflow', github: 'https://github.com/KIM3310/smallbiz-ops-copilot', demo: 'https://smallbiz-ops-copilot.pages.dev' },
+  { title: 'beaver-study-orchestrator', focus: 'Syllabus parsing, risk analysis, and study-plan orchestration workflow', github: 'https://github.com/KIM3310/beaver-study-orchestrator' },
   { title: 'The Logistics Prophet', focus: 'Predictive logistics control tower with auditability and explainability', github: 'https://github.com/KIM3310/the-logistics-prophet', demo: 'https://the-logistics-prophet.pages.dev', note: 'Ontology, audit chain, and action workflow proof' },
   { title: 'Upstage DocuAgent', focus: 'Document analysis and learning-package export pipeline', github: 'https://github.com/KIM3310/Upstage-DocuAgent', demo: 'https://upstage-docuagent.pages.dev' },
   { title: 'SteadyTap', focus: 'Accessibility-first iOS app with integrated FastAPI backend', github: 'https://github.com/KIM3310/SteadyTap', demo: 'https://steadytap.pages.dev' },
