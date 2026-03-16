@@ -1,6 +1,6 @@
 # Doeon Kim Portfolio
 
-Portfolio for production-minded AI systems, governed delivery, and reviewable software. **StagePilot** is the clearest reliability surface, while **AegisOps**, **Enterprise LLM Adoption Kit**, **Nexus-Hive**, and **regulated-case-workbench** show how the same engineering posture carries into incident response, rollout design, analytics, and high-trust workflows.
+Portfolio for production-minded AI systems, governed delivery, and reviewable software. **StagePilot** is the clearest reliability surface, while **AegisOps**, **Enterprise LLM Adoption Kit**, **Nexus-Hive**, **regulated-case-workbench**, and **FabTwin Guardian** show how the same engineering posture carries into incident response, rollout design, analytics, and high-trust workflows.
 
 ## What this repo is trying to do
 
@@ -14,7 +14,7 @@ This portfolio is not meant to be a generic personal website. It is a **canonica
 ## Canonical narrative spine
 
 - **Primary proof:** StagePilot
-- **Applied systems:** AegisOps, Enterprise LLM Adoption Kit, Nexus-Hive, regulated-case-workbench
+- **Applied systems:** AegisOps, Enterprise LLM Adoption Kit, Nexus-Hive, regulated-case-workbench, FabTwin Guardian
 - **Primary role positioning:** AI Systems Engineer focused on runtime reliability, evaluation, and operational software
 - **Secondary role positioning:** Solutions Architect for governed AI delivery, warehouse-adjacent systems, and reviewer-safe rollout design
 - **Key themes:** reliability, incident response, governed delivery, analytics trust, review-speed proof surfaces

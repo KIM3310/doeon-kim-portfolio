@@ -28,7 +28,7 @@ export const PROFILE: Profile = {
   linkedin: 'https://www.linkedin.com/in/doeon-kim-4742a2388',
   catchphrase: 'Production-minded AI systems with clear proof surfaces',
   intro:
-    'I build production-minded AI systems, governed delivery workflows, and operational software that are easy to review. StagePilot is the clearest reliability surface, while AegisOps, Enterprise LLM Adoption Kit, Nexus-Hive, and regulated-case-workbench show how the same engineering posture carries into incident response, rollout design, analytics, and high-trust workflows.',
+    'I build production-minded AI systems, governed delivery workflows, and operational software that are easy to review. StagePilot is the clearest reliability surface, while AegisOps, Enterprise LLM Adoption Kit, Nexus-Hive, regulated-case-workbench, and FabTwin Guardian show how the same engineering posture carries into incident response, rollout design, analytics, and high-trust workflows.',
 };
 
 export const PORTFOLIO_LIVE_URL = 'https://kim3310.github.io/doeon-kim-portfolio/';
@@ -89,7 +89,7 @@ export const PORTFOLIO_ACTIONS = [
   { label: 'Open StagePilot Proof', href: PRIMARY_PROOF_URL, helper: 'Start from the benchmarked reliability surface and inspect the proof path first.' },
   { label: 'Open AegisOps System', href: 'https://aegisops-ai-incident-doctor.pages.dev', helper: 'Then inspect how the same reliability mindset maps into a structured incident system.' },
   { label: 'Open Data Platform Track', href: DATA_PLATFORM_ARCHITECTURE_PACK_URL, helper: 'Review how the same engineering posture carries into governed delivery and data-platform systems.' },
-  { label: 'Download Resume', href: RESUME_PDF_URL, helper: 'Get the AI systems resume aligned to reliability, reviewability, and runtime delivery.' },
+  { label: 'Download Resume', href: RESUME_PDF_URL, helper: 'Get the LLM systems resume aligned to reliability, reviewability, and runtime delivery.' },
 ];
 
 export const RECRUITER_90_SECOND_STEPS: RecruiterStep[] = [
@@ -110,7 +110,7 @@ export const RECRUITER_90_SECOND_STEPS: RecruiterStep[] = [
   {
     window: '45-70 sec',
     title: 'Inspect the applied system',
-    detail: 'AegisOps turns the same reliability mindset into incident review, postmortem, and handoff surfaces.',
+    detail: 'AegisOps and FabTwin Guardian show how the same reliability mindset survives incident review, handoff, and approval-heavy product workflows.',
     label: 'Open AegisOps',
     href: 'https://aegisops-ai-incident-doctor.pages.dev',
   },
@@ -256,7 +256,7 @@ export const WHY_TEAMS_HIRE_ME = [
     keyword: 'Runtime Safety',
     title: '승인 경계와 handoff를 제품 기능으로 만듭니다',
     description:
-      'Enterprise LLM Adoption Kit, FabTwin Guardian, Honeypot에서 audit, fallback, async jobs, signed handoff, export flows를 설계했습니다. 그래서 시스템이 멈춰야 할 지점과 사람이 이어받아야 할 지점이 명확합니다.',
+      'Enterprise LLM Adoption Kit, regulated-case-workbench, Honeypot, FabTwin Guardian에서 audit, fallback, async jobs, signed handoff, export flows를 설계했습니다. 그래서 시스템이 멈춰야 할 지점과 사람이 이어받아야 할 지점이 명확합니다.',
     match: 'Runtime safety, approval boundaries, governance controls, high-trust delivery',
   },
 ];
