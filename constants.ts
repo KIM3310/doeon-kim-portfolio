@@ -43,6 +43,11 @@ export const RESUME_PDF_URL = 'resume/Doeon_Kim_Resume_LLM_Systems_Engineer.pdf'
 export const SOLUTION_ARCHITECT_RESUME_PDF_URL = 'resume/Doeon_Kim_Resume_Microsoft_Solution_Architect.pdf';
 export const SAMSUNG_BRIEF_URL = 'briefs/samsung-ai-sw-one-pager.html';
 export const HACKATHON_BRIEF_URL = 'briefs/gemini-live-hackathon-package.html';
+export const FRONTIER_LLM_BRIEF_URL = 'briefs/frontier-llm-review-brief.html';
+export const BIG_TECH_SYSTEMS_BRIEF_URL = 'briefs/big-tech-systems-review-brief.html';
+export const SNOWFLAKE_BRIEF_URL = 'briefs/snowflake-review-brief.html';
+export const DATABRICKS_BRIEF_URL = 'briefs/databricks-review-brief.html';
+export const PALANTIR_BRIEF_URL = 'briefs/palantir-review-brief.html';
 
 export const PORTFOLIO_SIGNAL_DECK = [
   {
@@ -111,6 +116,7 @@ export const RECRUITER_QUICK_PATHS: RecruiterQuickPath[] = [
     audience: 'OpenAI / Anthropic / runtime-evals teams',
     outcome: 'Tool reliability, evaluator discipline, and agent runtime posture should be obvious in three clicks.',
     links: [
+      { label: 'Frontier brief', href: FRONTIER_LLM_BRIEF_URL },
       { label: 'StagePilot proof', href: PRIMARY_PROOF_URL },
       { label: 'AegisOps repo', href: 'https://github.com/KIM3310/AegisOps' },
       { label: 'ogx repo', href: 'https://github.com/KIM3310/ogx' },
@@ -121,6 +127,7 @@ export const RECRUITER_QUICK_PATHS: RecruiterQuickPath[] = [
     audience: 'Google / Meta / Amazon / Microsoft-style product and SRE orgs',
     outcome: 'Defensive engineering, stateful operator UX, and service-grade surfaces should read clearly.',
     links: [
+      { label: 'Big-tech brief', href: BIG_TECH_SYSTEMS_BRIEF_URL },
       { label: 'StagePilot proof', href: PRIMARY_PROOF_URL },
       { label: 'TwinCity UI repo', href: 'https://github.com/KIM3310/twincity-ui' },
       { label: 'FabTwin case study', href: FLAGSHIP_URL },
@@ -131,6 +138,7 @@ export const RECRUITER_QUICK_PATHS: RecruiterQuickPath[] = [
     audience: 'Governed analytics and warehouse-adjacent teams',
     outcome: 'Analytics trust, governed delivery, and auditable operator handoff should show up immediately.',
     links: [
+      { label: 'Snowflake brief', href: SNOWFLAKE_BRIEF_URL },
       { label: 'Nexus-Hive repo', href: 'https://github.com/KIM3310/Nexus-Hive' },
       { label: 'The Logistics Prophet', href: 'https://the-logistics-prophet.pages.dev' },
       { label: 'Enterprise Kit', href: 'https://enterprise-llm-kit.pages.dev' },
@@ -141,6 +149,7 @@ export const RECRUITER_QUICK_PATHS: RecruiterQuickPath[] = [
     audience: 'Data + ML platform teams',
     outcome: 'Pipelines, experimentation, explainability, and operational decision layers should be visible fast.',
     links: [
+      { label: 'Databricks brief', href: DATABRICKS_BRIEF_URL },
       { label: 'The Logistics Prophet', href: 'https://the-logistics-prophet.pages.dev' },
       { label: 'Nexus-Hive repo', href: 'https://github.com/KIM3310/Nexus-Hive' },
       { label: 'Beaver repo', href: 'https://github.com/KIM3310/beaver-study-orchestrator' },
@@ -151,6 +160,7 @@ export const RECRUITER_QUICK_PATHS: RecruiterQuickPath[] = [
     audience: 'Operational software and high-trust workflow teams',
     outcome: 'Approval boundaries, evidence trails, and action-heavy UX should come through in one short path.',
     links: [
+      { label: 'Palantir brief', href: PALANTIR_BRIEF_URL },
       { label: 'FabTwin case study', href: FLAGSHIP_URL },
       { label: 'regulated-case-workbench', href: 'https://regulated-case-workbench.pages.dev' },
       { label: 'Fab Ops repo', href: 'https://github.com/KIM3310/fab-ops-yield-control-tower' },
@@ -428,6 +438,7 @@ export const TARGET_TRACKS: TargetTrack[] = [
     signals: ['Tool-calling reliability', 'Evals and benchmarks', 'Runtime safety', 'Reviewable APIs'],
     reviewPath: ['StagePilot', 'AegisOps', 'Aegis-Air', 'ogx'],
     links: [
+      { label: 'Frontier brief', href: FRONTIER_LLM_BRIEF_URL },
       { label: 'Open StagePilot proof', href: PRIMARY_PROOF_URL },
       { label: 'StagePilot repo', href: 'https://github.com/KIM3310/stage-pilot' },
       { label: 'AegisOps repo', href: 'https://github.com/KIM3310/AegisOps' },
@@ -441,6 +452,7 @@ export const TARGET_TRACKS: TargetTrack[] = [
     signals: ['Defensive engineering', 'Operator workflows', 'Fallback paths', 'Service-grade surfaces'],
     reviewPath: ['StagePilot', 'TwinCity UI', 'AegisOps', 'FabTwin Guardian'],
     links: [
+      { label: 'Big-tech brief', href: BIG_TECH_SYSTEMS_BRIEF_URL },
       { label: 'TwinCity UI repo', href: 'https://github.com/KIM3310/twincity-ui' },
       { label: 'Open FabTwin case study', href: FLAGSHIP_URL },
       { label: 'Read FabTwin dossier', href: DOSSIER_URL },
@@ -454,6 +466,7 @@ export const TARGET_TRACKS: TargetTrack[] = [
     signals: ['Analytics workflows', 'Governed delivery', 'Auditability', 'Warehouse-adjacent product design'],
     reviewPath: ['Nexus-Hive', 'The Logistics Prophet', 'Enterprise LLM Adoption Kit'],
     links: [
+      { label: 'Snowflake brief', href: SNOWFLAKE_BRIEF_URL },
       { label: 'Nexus-Hive repo', href: 'https://github.com/KIM3310/Nexus-Hive' },
       { label: 'The Logistics Prophet repo', href: 'https://github.com/KIM3310/the-logistics-prophet' },
       { label: 'Enterprise kit repo', href: 'https://github.com/KIM3310/enterprise-llm-adoption-kit' },
@@ -467,6 +480,7 @@ export const TARGET_TRACKS: TargetTrack[] = [
     signals: ['Data pipelines', 'Platform thinking', 'Experiment loops', 'Operational analytics'],
     reviewPath: ['The Logistics Prophet', 'Nexus-Hive', 'Upstage DocuAgent', 'beaver-study-orchestrator'],
     links: [
+      { label: 'Databricks brief', href: DATABRICKS_BRIEF_URL },
       { label: 'The Logistics Prophet repo', href: 'https://github.com/KIM3310/the-logistics-prophet' },
       { label: 'Upstage DocuAgent repo', href: 'https://github.com/KIM3310/Upstage-DocuAgent' },
       { label: 'beaver-study-orchestrator repo', href: 'https://github.com/KIM3310/beaver-study-orchestrator' },
@@ -480,6 +494,7 @@ export const TARGET_TRACKS: TargetTrack[] = [
     signals: ['Decision support', 'Audit trails', 'Approval boundaries', 'Operational software'],
     reviewPath: ['FabTwin Guardian', 'regulated-case-workbench', 'Fab Ops Yield Control Tower', 'TwinCity UI'],
     links: [
+      { label: 'Palantir brief', href: PALANTIR_BRIEF_URL },
       { label: 'regulated-case-workbench repo', href: 'https://github.com/KIM3310/regulated-case-workbench' },
       { label: 'Fab Ops Yield Control Tower repo', href: 'https://github.com/KIM3310/fab-ops-yield-control-tower' },
       { label: 'TwinCity UI repo', href: 'https://github.com/KIM3310/twincity-ui' },
