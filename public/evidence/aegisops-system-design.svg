@@ -1,0 +1,41 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" rx="24" fill="#081118"/>
+  <rect x="40" y="32" width="1120" height="104" rx="20" fill="#11202A" stroke="#365061"/>
+  <text x="68" y="78" fill="#F8FAFC" font-family="Helvetica, Arial, sans-serif" font-size="34" font-weight="700">AegisOps System Design Pack</text>
+  <text x="68" y="110" fill="#B1C4D3" font-family="Helvetica, Arial, sans-serif" font-size="18">Big-tech review path for multimodal incident intake, runtime telemetry, replay quality, and commander handoff.</text>
+
+  <rect x="56" y="168" width="248" height="180" rx="18" fill="#132531" stroke="#395564"/>
+  <text x="82" y="208" fill="#F8FAFC" font-family="Helvetica, Arial, sans-serif" font-size="24" font-weight="700">Operator UI</text>
+  <text x="82" y="242" fill="#DCE6ED" font-family="Helvetica, Arial, sans-serif" font-size="16">Screenshots, logs,</text>
+  <text x="82" y="264" fill="#DCE6ED" font-family="Helvetica, Arial, sans-serif" font-size="16">voice, and follow-up</text>
+  <text x="82" y="286" fill="#DCE6ED" font-family="Helvetica, Arial, sans-serif" font-size="16">questions in one shell.</text>
+
+  <rect x="334" y="168" width="252" height="180" rx="18" fill="#132531" stroke="#395564"/>
+  <text x="360" y="208" fill="#F8FAFC" font-family="Helvetica, Arial, sans-serif" font-size="24" font-weight="700">Incident API</text>
+  <text x="360" y="242" fill="#DCE6ED" font-family="Helvetica, Arial, sans-serif" font-size="16">Structured analysis,</text>
+  <text x="360" y="264" fill="#DCE6ED" font-family="Helvetica, Arial, sans-serif" font-size="16">follow-up, and TTS</text>
+  <text x="360" y="286" fill="#DCE6ED" font-family="Helvetica, Arial, sans-serif" font-size="16">share one report contract.</text>
+
+  <rect x="616" y="168" width="266" height="180" rx="18" fill="#132531" stroke="#395564"/>
+  <text x="642" y="208" fill="#F8FAFC" font-family="Helvetica, Arial, sans-serif" font-size="24" font-weight="700">Runtime Telemetry</text>
+  <text x="642" y="242" fill="#DCE6ED" font-family="Helvetica, Arial, sans-serif" font-size="16">Latency, error posture,</text>
+  <text x="642" y="264" fill="#DCE6ED" font-family="Helvetica, Arial, sans-serif" font-size="16">cache reuse, and hot</text>
+  <text x="642" y="286" fill="#DCE6ED" font-family="Helvetica, Arial, sans-serif" font-size="16">endpoints stay visible.</text>
+
+  <rect x="912" y="168" width="232" height="180" rx="18" fill="#132531" stroke="#395564"/>
+  <text x="938" y="208" fill="#F8FAFC" font-family="Helvetica, Arial, sans-serif" font-size="24" font-weight="700">Handoff</text>
+  <text x="938" y="242" fill="#DCE6ED" font-family="Helvetica, Arial, sans-serif" font-size="16">Postmortem pack,</text>
+  <text x="938" y="264" fill="#DCE6ED" font-family="Helvetica, Arial, sans-serif" font-size="16">escalation readiness,</text>
+  <text x="938" y="286" fill="#DCE6ED" font-family="Helvetica, Arial, sans-serif" font-size="16">and export-safe schema.</text>
+
+  <path d="M304 256H334" stroke="#83D9C7" stroke-width="6" stroke-linecap="round"/>
+  <path d="M586 256H616" stroke="#83D9C7" stroke-width="6" stroke-linecap="round"/>
+  <path d="M882 256H912" stroke="#83D9C7" stroke-width="6" stroke-linecap="round"/>
+
+  <rect x="56" y="412" width="1088" height="272" rx="18" fill="#101E27" stroke="#365061"/>
+  <text x="84" y="454" fill="#F8FAFC" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="700">Big-Tech Review Surface</text>
+  <text x="84" y="496" fill="#DCE6ED" font-family="Helvetica, Arial, sans-serif" font-size="19">Hot path: `/api/system-design-pack` -> `/api/runtime/scorecard?focus=reliability`</text>
+  <text x="84" y="528" fill="#DCE6ED" font-family="Helvetica, Arial, sans-serif" font-size="19">Failure drills: provider degradation, evidence gap, auth boundary regression, replay mismatch</text>
+  <text x="84" y="560" fill="#DCE6ED" font-family="Helvetica, Arial, sans-serif" font-size="19">Why it matters: runtime telemetry, replay quality, and commander handoff stay in the same review story</text>
+  <text x="84" y="602" fill="#90E0C7" font-family="Helvetica, Arial, sans-serif" font-size="18">Public claim: reviewable incident runtime design under bounded load, not hyperscale theater.</text>
+</svg>

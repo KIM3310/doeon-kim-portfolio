@@ -11,6 +11,13 @@ const evidenceItems = [
     detail: 'Shows provider-family tradeoffs, contract confidence, latency/cost posture, and the benchmarked runtime story in one visual.',
   },
   {
+    title: 'StagePilot Perf Evidence',
+    subtitle: 'Frontier + big-tech runtime evidence',
+    image: 'evidence/stagepilot-perf-evidence.svg',
+    href: 'https://github.com/KIM3310/stage-pilot',
+    detail: 'Makes the checked-in k6 rehearsal legible so runtime pressure, release guardrails, and benchmark-backed correctness can be read before the code.',
+  },
+  {
     title: 'Nexus-Hive Semantic Governance',
     subtitle: 'Data-platform evidence',
     image: 'evidence/nexus-semantic-governance.svg',
@@ -18,11 +25,25 @@ const evidenceItems = [
     detail: 'Makes certified metrics, approval boundaries, and warehouse-target survival legible before anyone reads the SQL or API payloads.',
   },
   {
+    title: 'Nexus-Hive Lakehouse Readiness',
+    subtitle: 'Snowflake / Databricks evidence',
+    image: 'evidence/nexus-lakehouse-readiness.svg',
+    href: 'https://github.com/KIM3310/Nexus-Hive',
+    detail: 'Compresses connector posture, query-tag transport, and platform-facing delivery boundaries into one lakehouse reviewer surface.',
+  },
+  {
     title: 'Enterprise Workshop Readout',
     subtitle: 'Solution architecture evidence',
     image: 'evidence/enterprise-workshop-readout.svg',
     href: 'https://github.com/KIM3310/enterprise-llm-adoption-kit',
     detail: 'Turns discovery output, pilot lane, rollout gates, and handoff assets into a field-ready closeout board rather than a vague workshop recap.',
+  },
+  {
+    title: 'AegisOps System Design',
+    subtitle: 'Big-tech operational evidence',
+    image: 'evidence/aegisops-system-design.svg',
+    href: 'https://github.com/KIM3310/AegisOps',
+    detail: 'Shows topology, hot endpoints, failure drills, and commander handoff in one architecture surface instead of making reviewers infer the system from screenshots.',
   },
 ];
 

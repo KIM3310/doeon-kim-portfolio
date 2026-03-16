@@ -1,0 +1,27 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" rx="24" fill="#07110E"/>
+  <rect x="40" y="32" width="1120" height="104" rx="20" fill="#0E201B" stroke="#335548"/>
+  <text x="68" y="78" fill="#F8FAFC" font-family="Helvetica, Arial, sans-serif" font-size="34" font-weight="700">Nexus-Hive Lakehouse Readiness Pack</text>
+  <text x="68" y="110" fill="#B6CBBF" font-family="Helvetica, Arial, sans-serif" font-size="18">Snowflake and Databricks fit compressed into connector posture, query-tag transport, and governed delivery proof.</text>
+
+  <rect x="56" y="170" width="514" height="220" rx="20" fill="#11241E" stroke="#355848"/>
+  <text x="84" y="214" fill="#F8FAFC" font-family="Helvetica, Arial, sans-serif" font-size="26" font-weight="700">Snowflake Contract Preview</text>
+  <text x="84" y="252" fill="#DCE6E1" font-family="Helvetica, Arial, sans-serif" font-size="18">Execution mode: contract-preview</text>
+  <text x="84" y="284" fill="#DCE6E1" font-family="Helvetica, Arial, sans-serif" font-size="18">Tag transport: QUERY_TAG / statement param style governance metadata</text>
+  <text x="84" y="316" fill="#DCE6E1" font-family="Helvetica, Arial, sans-serif" font-size="18">Proof chain: warehouse target scorecard -> semantic governance -> query-tag schema</text>
+  <text x="84" y="350" fill="#92E0C7" font-family="Helvetica, Arial, sans-serif" font-size="18">Honest blocker: live connector not configured</text>
+
+  <rect x="628" y="170" width="516" height="220" rx="20" fill="#11241E" stroke="#355848"/>
+  <text x="656" y="214" fill="#F8FAFC" font-family="Helvetica, Arial, sans-serif" font-size="26" font-weight="700">Databricks Contract Preview</text>
+  <text x="656" y="252" fill="#DCE6E1" font-family="Helvetica, Arial, sans-serif" font-size="18">Execution mode: contract-preview</text>
+  <text x="656" y="284" fill="#DCE6E1" font-family="Helvetica, Arial, sans-serif" font-size="18">Tag transport: medallion / lakehouse governance review mapping</text>
+  <text x="656" y="316" fill="#DCE6E1" font-family="Helvetica, Arial, sans-serif" font-size="18">Proof chain: metric certification -> approval boundary -> delivery posture</text>
+  <text x="656" y="350" fill="#92E0C7" font-family="Helvetica, Arial, sans-serif" font-size="18">Honest blocker: live connector not configured</text>
+
+  <rect x="56" y="438" width="1088" height="246" rx="20" fill="#0D1A16" stroke="#355848"/>
+  <text x="84" y="482" fill="#F8FAFC" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="700">What the Pack Proves</text>
+  <text x="84" y="522" fill="#DCE6E1" font-family="Helvetica, Arial, sans-serif" font-size="19">Certified metrics, approval rules, and query-tag transport survive across warehouse targets.</text>
+  <text x="84" y="554" fill="#DCE6E1" font-family="Helvetica, Arial, sans-serif" font-size="19">Platform fit is presented as an explicit contract preview, not fake live connectivity.</text>
+  <text x="84" y="586" fill="#DCE6E1" font-family="Helvetica, Arial, sans-serif" font-size="19">Field / solution-architecture conversations can start from governed delivery posture instead of just NL2SQL output.</text>
+  <text x="84" y="626" fill="#92E0C7" font-family="Helvetica, Arial, sans-serif" font-size="18">Reviewer path: `/api/runtime/lakehouse-readiness-pack` -> `/api/runtime/semantic-governance-pack` -> `/api/schema/query-tag`</text>
+</svg>

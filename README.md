@@ -44,13 +44,16 @@ Those percentages are intentionally framed as **public-package readiness**, not 
 
 ## Visual evidence gallery
 
-The site now also includes a visual evidence section with three recruiter-fast artifacts:
+The site now also includes a visual evidence section with recruiter-fast artifacts for the three target tracks:
 
 - `StagePilot provider benchmark scorecard`
+- `StagePilot perf evidence pack`
 - `Nexus-Hive semantic governance board`
+- `Nexus-Hive lakehouse readiness board`
 - `Enterprise workshop readout board`
+- `AegisOps system design board`
 
-The goal is to let a reviewer confirm frontier, data-platform, and solution-architecture proof with images before opening source files.
+The goal is to let a reviewer confirm frontier, big-tech, data-platform, and solution-architecture proof with images before opening source files.
 
 ## Account-wide repo map
 
