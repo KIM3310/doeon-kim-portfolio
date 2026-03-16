@@ -9,7 +9,7 @@
   "summary": [
     "Builds reviewable LLM runtimes with strongest public proof in tool-calling reliability, multimodal incident AI, and operator-safe runtime design.",
     "Improved StagePilot benchmark success from 29.17% baseline to 87.50% with parser recovery and to 100.00% with bounded retry, then exposed the same runtime story through live-review, trace-observability, and regression-gate surfaces.",
-    "Extends the same reliability mindset into multimodal incident review, live escalation preview, air-gapped operations, and governance-heavy enterprise delivery."
+    "Extends the same review-safe reliability posture into bounded live reviewer APIs for multimodal incident review, governed analytics, document QA, air-gapped operations, and high-trust workflow delivery."
   ],
   "skill_groups": [
     {

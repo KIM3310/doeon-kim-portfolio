@@ -129,6 +129,42 @@ export interface LiveProofTrack {
   note: string;
 }
 
+export interface VerificationLiveCheck {
+  title: string;
+  repo: string;
+  href: string;
+  mode: 'public-capped-live' | 'review-only-live' | 'artifact-refresh-only';
+  route: string;
+  statusCode: number;
+  checkedAt: string;
+  scenarioId: string;
+  model: string;
+  nextReviewPath: string;
+  summary: string;
+}
+
+export interface DeploymentCheck {
+  repo: string;
+  href: string;
+  title: string;
+  statusCode: number;
+  checkedAt: string;
+  category: 'portfolio' | 'flagship' | 'support';
+}
+
+export interface RepoOperatingEntry {
+  name: string;
+  tier: 'Lead with' | 'Selective use' | 'De-emphasize';
+  href: string;
+  primaryRole: 'AI Engineer' | 'Solutions Architect' | 'Shared hub';
+  aiEngineerFit: number;
+  solutionArchitectFit: number;
+  targetTracks: string[];
+  strength: string;
+  note: string;
+  visibility?: 'public' | 'private';
+}
+
 export interface Experience {
   company: string;
   role: string;

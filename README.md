@@ -55,6 +55,15 @@ The portfolio now includes a dedicated submission-readiness section that estimat
 
 Those percentages are intentionally framed as **public-package readiness**, not a claim that interviewing or production history is already complete.
 
+## Verified now
+
+The site now includes a dedicated verification board that records two things:
+
+- **Deployed pages opened directly over HTTP:** portfolio, flagship Pages sites, and support demo surfaces currently returning `200`
+- **Bounded live OpenAI lanes exercised locally:** `stage-pilot`, `AegisOps`, `Nexus-Hive`, `enterprise-llm-adoption-kit`, `Upstage-DocuAgent`, and `regulated-case-workbench`
+
+This matters because the package is no longer only narrative. It now contains explicit evidence that the public pages load and that the review-safe live routes actually answer fixed scenario ids with a real model.
+
 ## Visual evidence gallery
 
 The site now also includes a visual evidence section with recruiter-fast artifacts for the three target tracks:
@@ -91,6 +100,16 @@ The GitHub account is organized around a small number of hiring signals:
 - **Operational software and governed workflows:** `twincity-ui`, `fab-ops-yield-control-tower`, `regulated-case-workbench`, `secure-xl2hwp-local`, `honeypot`, `smallbiz-ops-copilot`
 - **Data, platform, and analytics systems:** `enterprise-llm-adoption-kit`, `lakehouse-contract-lab`, `Nexus-Hive`, `the-logistics-prophet`, `beaver-study-orchestrator`, `Upstage-DocuAgent`
 - **Product and mobile experiments:** `SteadyTap`, `ecotide`, `the-savior`, `kbbq-idle-unity`, `dream-interpretation-pages`
+
+## Repo operating map
+
+The portfolio also now carries a repo operating map that assigns each repo to one of three buckets:
+
+- **Lead with**
+- **Selective use**
+- **De-emphasize**
+
+Each entry now spells out whether it strengthens the **AI Engineer** story, the **Solutions Architect** story, or acts as a **shared hub**, plus a simple fit score for both tracks.
 
 ## Extended proof surfaces
 
