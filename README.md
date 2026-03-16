@@ -15,9 +15,16 @@ This portfolio is not meant to be a generic personal website. It is a **canonica
 
 - **Primary proof:** StagePilot
 - **Applied case study:** FabTwin Guardian
-- **Role positioning:** LLM Systems Engineer focused on agent reliability, evals, runtime safety, and high-trust delivery
+- **Primary role positioning:** AI / LLM Systems Engineer focused on agent reliability, evals, runtime safety, and high-trust delivery
+- **Secondary role positioning:** Solutions Architect for governed AI delivery, warehouse-adjacent systems, and reviewer-safe rollout design
 - **Key themes:** tool-calling reliability, incident AI, operator workflows, governed delivery, review-speed proof surfaces
 - **Primary external proof:** public GitHub repos + demos + dossier-style narrative
+
+## Current career packaging
+
+- **Lead application story:** AI engineer with the clearest public proof in runtime reliability, multimodal incident AI, and reviewable agent systems.
+- **Support story:** junior solutions architect who can translate the same rigor into governed enterprise AI, lakehouse/data-platform proof, and approval-heavy operational systems.
+- **Reviewer rule:** do not send the full repo family first. Send one flagship chain plus one company-matched support cluster.
 
 ## Target-company review map
 
@@ -30,6 +37,12 @@ Use the portfolio like a guided proof surface, not a flat project gallery.
 - **Palantir:** start with `FabTwin Guardian`, `regulated-case-workbench`, `fab-ops-yield-control-tower`, and `twincity-ui`
 
 The site now includes a target-company matrix plus an account-wide repo taxonomy so each reviewer path is explicit.
+
+## Focus and selective-use repo policy
+
+- **Always lead with:** `stage-pilot`, `AegisOps`, `enterprise-llm-adoption-kit`, `lakehouse-contract-lab`, `regulated-case-workbench`, and the portfolio front door itself.
+- **Rotate in by target company / domain:** `Aegis-Air`, `Nexus-Hive`, `twincity-ui`, `secure-xl2hwp-local`, `fab-ops-yield-control-tower`, `Upstage-DocuAgent`, `ogx`.
+- **Keep out of the first pass unless the role explicitly benefits from broader product signals:** `ecotide`, `the-savior`, `dream-interpretation-pages`, `kbbq-idle-unity`.
 
 ## Submission readiness snapshot
 
@@ -76,7 +89,7 @@ The GitHub account is organized around a small number of hiring signals:
 - **Review surfaces:** `KIM3310`, `doeon-kim-portfolio`
 - **Reliability and agent runtimes:** `stage-pilot`, `AegisOps`, `Aegis-Air`, `ogx`, `gemini-cli-tool-runtime`
 - **Operational software and governed workflows:** `twincity-ui`, `fab-ops-yield-control-tower`, `regulated-case-workbench`, `secure-xl2hwp-local`, `honeypot`, `smallbiz-ops-copilot`
-- **Data, platform, and analytics systems:** `enterprise-llm-adoption-kit`, `Nexus-Hive`, `the-logistics-prophet`, `beaver-study-orchestrator`, `Upstage-DocuAgent`
+- **Data, platform, and analytics systems:** `enterprise-llm-adoption-kit`, `lakehouse-contract-lab`, `Nexus-Hive`, `the-logistics-prophet`, `beaver-study-orchestrator`, `Upstage-DocuAgent`
 - **Product and mobile experiments:** `SteadyTap`, `ecotide`, `the-savior`, `kbbq-idle-unity`, `dream-interpretation-pages`
 
 ## Extended proof surfaces
