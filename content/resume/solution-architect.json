@@ -1,15 +1,15 @@
 {
   "output_name": "Doeon_Kim_Resume_Microsoft_Solution_Architect",
   "name": "DOEON KIM",
-  "headline": "AI Solutions Architect | Governed AI Delivery, Data Workflows, Reviewer-Safe Systems",
+  "headline": "AI Solutions Architect | Governed Delivery, Data Workflows, Operational AI",
   "contact_lines": [
     "Busan, South Korea | +82 10-5791-8465 | ehdjs1351@gmail.com",
     "linkedin.com/in/doeon-kim-4742a2388 | github.com/KIM3310 | kim3310.github.io/doeon-kim-portfolio"
   ],
   "summary": [
-    "Designs and delivers reviewable AI systems from discovery and pilot planning to governed rollout, with strongest public proof in enterprise LLM governance, multimodal operations, and operator-facing workflows.",
+    "Designs and delivers reviewable AI systems from discovery and pilot planning to governed rollout, with public proof in enterprise delivery, multimodal operations, and operator-facing workflows.",
     "Turns ambiguous requirements into inspectable architectures with clear trust boundaries, review paths, and handoff artifacts instead of one-off demos.",
-    "Pairs hands-on implementation with customer-facing architecture judgment across cloud, data, runtime, and governance-heavy delivery contexts, including live workshop preview, reviewer-safe warehouse proof, and verified bounded reviewer lanes.",
+    "Pairs hands-on implementation with customer-facing architecture judgment across cloud, data, runtime, and governance-heavy delivery contexts, including live workshop preview, warehouse proof, and verified reviewer lanes.",
     "Certified across Microsoft, Snowflake, Databricks, and Palantir-aligned stacks, with public proof surfaces that let reviewers inspect shipped systems quickly."
   ],
   "skill_groups": [
