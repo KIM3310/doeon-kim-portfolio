@@ -45,6 +45,13 @@ const evidenceItems = [
     href: 'https://github.com/KIM3310/AegisOps',
     detail: 'Shows topology, hot endpoints, failure drills, and commander handoff in one architecture surface instead of making reviewers infer the system from screenshots.',
   },
+  {
+    title: 'Lakehouse Contract Board',
+    subtitle: 'Spark + Delta evidence',
+    image: 'evidence/lakehouse-contract-board.svg',
+    href: 'https://github.com/KIM3310/lakehouse-contract-lab',
+    detail: 'Makes the medallion flow, Delta execution, quality gates, and platform-facing KPI contract legible before anyone opens the Spark script.',
+  },
 ];
 
 const EvidenceGallery: React.FC = () => {

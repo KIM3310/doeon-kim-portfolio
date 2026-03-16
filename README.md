@@ -25,8 +25,8 @@ Use the portfolio like a guided proof surface, not a flat project gallery.
 
 - **Frontier LLM teams:** start with `StagePilot`, then `AegisOps`, `Aegis-Air`, and `ogx`
 - **Big tech product / SRE orgs:** start with `StagePilot`, `TwinCity UI`, `AegisOps`, and the `FabTwin Guardian` case study
-- **Snowflake:** start with `Nexus-Hive`, `the-logistics-prophet`, and `enterprise-llm-adoption-kit`
-- **Databricks:** start with `the-logistics-prophet`, `Nexus-Hive`, `Upstage-DocuAgent`, and `beaver-study-orchestrator`
+- **Snowflake:** start with `Nexus-Hive`, `lakehouse-contract-lab`, and `enterprise-llm-adoption-kit`
+- **Databricks:** start with `lakehouse-contract-lab`, `the-logistics-prophet`, `Nexus-Hive`, and `enterprise-llm-adoption-kit`
 - **Palantir:** start with `FabTwin Guardian`, `regulated-case-workbench`, `fab-ops-yield-control-tower`, and `twincity-ui`
 
 The site now includes a target-company matrix plus an account-wide repo taxonomy so each reviewer path is explicit.
@@ -35,9 +35,9 @@ The site now includes a target-company matrix plus an account-wide repo taxonomy
 
 The portfolio now includes a dedicated submission-readiness section that estimates the current public package by track:
 
-- **Frontier LLM:** runtime reliability, provider tradeoff posture, and eval discipline are now explicit.
+- **Frontier LLM:** runtime reliability, provider tradeoff posture, trace observability, and eval discipline are now explicit.
 - **Big tech systems:** defensive engineering, operator workflows, and fallback surfaces read quickly.
-- **Snowflake / Databricks:** semantic governance, warehouse-target posture, and solution-architecture routing are visible.
+- **Snowflake / Databricks:** semantic governance, explicit Spark + Delta proof, warehouse-target posture, and solution-architecture routing are visible.
 - **Palantir:** approval boundaries, evidence trails, and action-heavy operational software remain the strongest public fit.
 
 Those percentages are intentionally framed as **public-package readiness**, not a claim that interviewing or production history is already complete.
@@ -52,8 +52,19 @@ The site now also includes a visual evidence section with recruiter-fast artifac
 - `Nexus-Hive lakehouse readiness board`
 - `Enterprise workshop readout board`
 - `AegisOps system design board`
+- `Lakehouse Contract Lab board`
 
 The goal is to let a reviewer confirm frontier, big-tech, data-platform, and solution-architecture proof with images before opening source files.
+
+## Interview and application packs
+
+The site now includes role-targeted interview support pages in addition to the company briefs:
+
+- `frontier-llm-interview-pack.html`
+- `big-tech-systems-walkthrough.html`
+- `data-platform-architecture-pack.html`
+
+These are meant to shorten the path from "interesting portfolio" to "I know how to walk this in an interview loop."
 
 ## Account-wide repo map
 
@@ -122,7 +133,7 @@ For setup details, see:
 The live portfolio is designed to act as the fastest path from first impression to technical confidence:
 - homepage -> reliability framing
 - projects -> supporting proof chain
-- briefs -> applied-case and hackathon support package
+- briefs -> company review briefs plus interview/application packs
 - contact/review path -> recruiter follow-up
 
 ## Notes
