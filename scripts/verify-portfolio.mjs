@@ -43,7 +43,7 @@ const requiredFiles = [
 ];
 
 const checks = [
-  { file: 'constants.ts', mustInclude: ['StagePilot', 'FabTwin Guardian', 'LLM systems + runtime safety'], mustNotInclude: ['FabPilot Live X', 'SignalForge', 'Amazon Nova', 'NVIDIA-ready', 'Gemini Live Agent Challenge', 'Samsung-ready'] },
+  { file: 'constants.ts', mustInclude: ['StagePilot', 'AegisOps', 'AI engineer + solutions architect'], mustNotInclude: ['FabPilot Live X', 'SignalForge', 'Amazon Nova', 'NVIDIA-ready', 'Gemini Live Agent Challenge', 'Samsung-ready'] },
   { file: 'components/Hero.tsx', mustInclude: ['StagePilot', '29.17% to 87.50% to 100.00%', 'FabTwin case study'], mustNotInclude: ['FabPilot Live X', 'SignalForge', 'Amazon Nova', 'NVIDIA-ready', 'Samsung-ready'] },
   { file: 'public/fabpilot-live-x.html', mustInclude: ['FabTwin Guardian', 'SK hynix-ready', 'GitLab AI Hackathon'], mustNotInclude: ['FabPilot Live X', 'SignalForge', 'Amazon Nova', 'NVIDIA-ready', 'Samsung-ready'] },
   { file: 'public/fabpilot-dossier.html', mustInclude: ['FabTwin Guardian', 'SK hynix-ready'], mustNotInclude: ['FabPilot Live X', 'SignalForge', 'Samsung-ready'] },

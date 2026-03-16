@@ -22,13 +22,13 @@ import {
 
 export const PROFILE: Profile = {
   name: '김도언 (Doeon Kim)',
-  title: 'LLM Systems Engineer | Agent Reliability, Evals, Runtime Safety',
+  title: 'AI Systems Engineer | Reliability, Evaluation, Runtime Delivery',
   email: 'ehdjs1351@gmail.com',
   github: 'https://github.com/KIM3310',
   linkedin: 'https://www.linkedin.com/in/doeon-kim-4742a2388',
-  catchphrase: 'Benchmarked LLM systems for real-world failure modes',
+  catchphrase: 'Production-minded AI systems with clear proof surfaces',
   intro:
-    'Agent reliability, evals, multimodal incident AI, and operator-safe runtime design are my strongest public proof areas. I lead with StagePilot as the reliability surface, then show how that reliability maps into applied systems like FabTwin Guardian, AegisOps, and governance-heavy delivery.',
+    'I build production-minded AI systems, governed delivery workflows, and operational software that are easy to review. StagePilot is the clearest reliability surface, while AegisOps, Enterprise LLM Adoption Kit, Nexus-Hive, and regulated-case-workbench show how the same engineering posture carries into incident response, rollout design, analytics, and high-trust workflows.',
 };
 
 export const PORTFOLIO_LIVE_URL = 'https://kim3310.github.io/doeon-kim-portfolio/';
@@ -69,27 +69,27 @@ export const PORTFOLIO_SIGNAL_DECK = [
     detail: 'Checked-in tool-calling benchmark lift from 29.17% baseline to 87.50% with middleware and 100.00% with bounded retry.',
   },
   {
-    label: 'Applied case',
-    value: 'FabTwin Guardian',
-    detail: 'Shows how reliability thinking extends into approval-gated, action-heavy software instead of stopping at benchmark charts.',
+    label: 'Applied system',
+    value: 'AegisOps',
+    detail: 'Shows how the same reliability thinking extends into incident review, handoff, and operational software instead of stopping at benchmark charts.',
   },
   {
     label: 'Supporting proof',
-    value: 'AegisOps + Aegis-Air + Enterprise Kit',
-    detail: 'Multimodal incident review, local-first fallback, and governance-heavy delivery make the main reliability claim believable.',
+    value: 'Enterprise Kit + Nexus-Hive + Lakehouse Lab',
+    detail: 'Governed rollout, analytics trust, and warehouse-facing proof make the main reliability claim believable outside a single runtime demo.',
   },
   {
     label: 'Hiring Signal',
-    value: 'LLM systems + runtime safety',
-    detail: 'Evaluator-facing proof comes first, then applied product systems that show what trustworthy automation looks like.',
+    value: 'AI engineer + solutions architect',
+    detail: 'Evidence comes first, then applied systems that show how reliable automation turns into delivery, operations, and platform software.',
   },
 ];
 
 export const PORTFOLIO_ACTIONS = [
   { label: 'Open StagePilot Proof', href: PRIMARY_PROOF_URL, helper: 'Start from the benchmarked reliability surface and inspect the proof path first.' },
-  { label: 'Open FabTwin Case Study', href: FLAGSHIP_URL, helper: 'Then inspect how the same reliability mindset maps into an action-heavy product surface.' },
-  { label: 'Read FabTwin Dossier', href: DOSSIER_URL, helper: 'Review architecture, trust surfaces, and delivery logic behind the applied case study.' },
-  { label: 'Download Resume', href: RESUME_PDF_URL, helper: 'Get the frontier-leaning resume version aligned to reliability, evals, and runtime safety.' },
+  { label: 'Open AegisOps System', href: 'https://aegisops-ai-incident-doctor.pages.dev', helper: 'Then inspect how the same reliability mindset maps into a structured incident system.' },
+  { label: 'Open Data Platform Track', href: DATA_PLATFORM_ARCHITECTURE_PACK_URL, helper: 'Review how the same engineering posture carries into governed delivery and data-platform systems.' },
+  { label: 'Download Resume', href: RESUME_PDF_URL, helper: 'Get the AI systems resume aligned to reliability, reviewability, and runtime delivery.' },
 ];
 
 export const RECRUITER_90_SECOND_STEPS: RecruiterStep[] = [
@@ -109,10 +109,10 @@ export const RECRUITER_90_SECOND_STEPS: RecruiterStep[] = [
   },
   {
     window: '45-70 sec',
-    title: 'Check product judgment',
-    detail: 'FabTwin Guardian translates the same reliability mindset into approval boundaries, handoff, and action safety.',
-    label: 'Open FabTwin case study',
-    href: FLAGSHIP_URL,
+    title: 'Inspect the applied system',
+    detail: 'AegisOps turns the same reliability mindset into incident review, postmortem, and handoff surfaces.',
+    label: 'Open AegisOps',
+    href: 'https://aegisops-ai-incident-doctor.pages.dev',
   },
   {
     window: '70-90 sec',
@@ -892,6 +892,28 @@ export const REPO_OPERATING_MATRIX: RepoOperatingEntry[] = [
     note: 'Bring it forward when a role is explicitly warehouse-adjacent.',
   },
   {
+    name: 'advisor-review-desk',
+    tier: 'Selective use',
+    href: 'https://github.com/KIM3310/advisor-review-desk',
+    primaryRole: 'Solutions Architect',
+    aiEngineerFit: 5,
+    solutionArchitectFit: 7,
+    targetTracks: ['Brokerage', 'Customer-facing workflow AI'],
+    strength: 'Client suitability, portfolio rationale, and advisor handoff stay visible in one reviewer-safe workflow.',
+    note: 'Use when a role values customer-facing decision support and reviewable operational logic.',
+  },
+  {
+    name: 'signal-risk-lab',
+    tier: 'Selective use',
+    href: 'https://github.com/KIM3310/signal-risk-lab',
+    primaryRole: 'AI Engineer',
+    aiEngineerFit: 6,
+    solutionArchitectFit: 5,
+    targetTracks: ['Quant', 'Research-oriented systems'],
+    strength: 'Signal, risk, and execution posture stay inspectable through one bounded research surface.',
+    note: 'Useful when a role values factor logic, explicit risk posture, and reviewer-readable artifacts.',
+  },
+  {
     name: 'twincity-ui',
     tier: 'Selective use',
     href: 'https://github.com/KIM3310/twincity-ui',
@@ -1403,4 +1425,6 @@ export const SECONDARY_PROJECTS: SecondaryProject[] = [
   { title: 'The Logistics Prophet', focus: 'Predictive logistics control tower with auditability and explainability', github: 'https://github.com/KIM3310/the-logistics-prophet', demo: 'https://the-logistics-prophet.pages.dev', note: 'Ontology, audit chain, and action workflow proof' },
   { title: 'Upstage DocuAgent', focus: 'Document analysis and learning-package export pipeline', github: 'https://github.com/KIM3310/Upstage-DocuAgent', demo: 'https://upstage-docuagent.pages.dev' },
   { title: 'SteadyTap', focus: 'Accessibility-first iOS app with integrated FastAPI backend', github: 'https://github.com/KIM3310/SteadyTap', demo: 'https://steadytap.pages.dev' },
+  { title: 'advisor-review-desk', focus: 'Client suitability, portfolio rationale, and advisor handoff workflow for brokerage-style reviews', github: 'https://github.com/KIM3310/advisor-review-desk', demo: 'https://kim3310.github.io/advisor-review-desk/' },
+  { title: 'signal-risk-lab', focus: 'Factor signal, risk posture, and execution review surface for quant-style workflows', github: 'https://github.com/KIM3310/signal-risk-lab', demo: 'https://kim3310.github.io/signal-risk-lab/' },
 ];

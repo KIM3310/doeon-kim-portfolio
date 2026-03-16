@@ -1,6 +1,6 @@
 # Doeon Kim Portfolio
 
-Benchmark-led AI systems portfolio centered on **StagePilot** as the primary public proof surface, with **FabTwin Guardian** as the applied case study for approval boundaries, operator workflows, and high-trust delivery.
+Portfolio for production-minded AI systems, governed delivery, and reviewable software. **StagePilot** is the clearest reliability surface, while **AegisOps**, **Enterprise LLM Adoption Kit**, **Nexus-Hive**, and **regulated-case-workbench** show how the same engineering posture carries into incident response, rollout design, analytics, and high-trust workflows.
 
 ## What this repo is trying to do
 
@@ -9,21 +9,21 @@ This portfolio is not meant to be a generic personal website. It is a **canonica
 1. **What is the strongest public proof?**
 2. **How does that proof extend into applied systems?**
 3. **What supporting evidence exists in public?**
-4. **Why does this candidate fit frontier-adjacent and high-trust AI/SW roles?**
+4. **Why does this candidate fit AI engineer and solutions architect roles that care about operational clarity?**
 
 ## Canonical narrative spine
 
 - **Primary proof:** StagePilot
-- **Applied case study:** FabTwin Guardian
-- **Primary role positioning:** AI / LLM Systems Engineer focused on agent reliability, evals, runtime safety, and high-trust delivery
+- **Applied systems:** AegisOps, Enterprise LLM Adoption Kit, Nexus-Hive, regulated-case-workbench
+- **Primary role positioning:** AI Systems Engineer focused on runtime reliability, evaluation, and operational software
 - **Secondary role positioning:** Solutions Architect for governed AI delivery, warehouse-adjacent systems, and reviewer-safe rollout design
-- **Key themes:** tool-calling reliability, incident AI, operator workflows, governed delivery, review-speed proof surfaces
+- **Key themes:** reliability, incident response, governed delivery, analytics trust, review-speed proof surfaces
 - **Primary external proof:** public GitHub repos + demos + dossier-style narrative
 
 ## Current career packaging
 
-- **Lead application story:** AI engineer with the clearest public proof in runtime reliability, multimodal incident AI, and reviewable agent systems.
-- **Support story:** junior solutions architect who can translate the same rigor into governed enterprise AI, lakehouse/data-platform proof, and approval-heavy operational systems.
+- **Lead application story:** AI engineer with strong public proof in runtime reliability, multimodal incident systems, and reviewable software.
+- **Support story:** junior solutions architect who can translate the same rigor into governed delivery, data-platform proof, and approval-heavy operational systems.
 - **Reviewer rule:** do not send the full repo family first. Send one flagship chain plus one company-matched support cluster.
 
 ## Target-company review map

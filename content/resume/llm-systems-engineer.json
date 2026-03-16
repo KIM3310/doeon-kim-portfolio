@@ -1,15 +1,15 @@
 {
   "output_name": "Doeon_Kim_Resume_LLM_Systems_Engineer",
   "name": "DOEON KIM",
-  "headline": "LLM Systems Engineer | Agent Reliability, Evals, Runtime Safety",
+  "headline": "AI Systems Engineer | Reliability, Evaluation, Runtime Delivery",
   "contact_lines": [
     "Busan, South Korea | +82 10-5791-8465 | ehdjs1351@gmail.com",
     "linkedin.com/in/doeon-kim-4742a2388 | github.com/KIM3310 | kim3310.github.io/doeon-kim-portfolio"
   ],
   "summary": [
-    "Builds reviewable LLM runtimes with strongest public proof in tool-calling reliability, multimodal incident AI, and operator-safe runtime design.",
-    "Improved StagePilot benchmark success from 29.17% baseline to 87.50% with parser recovery and to 100.00% with bounded retry, then exposed the same runtime story through live-review, trace-observability, and regression-gate surfaces.",
-    "Extends the same review-safe reliability posture into bounded live reviewer APIs for multimodal incident review, governed analytics, document QA, air-gapped operations, and high-trust workflow delivery."
+    "Builds production-minded AI systems with strongest public proof in tool-calling reliability, multimodal incident workflows, and reviewable runtime design.",
+    "Improved StagePilot benchmark success from 29.17% baseline to 87.50% with parser recovery and to 100.00% with bounded retry, then exposed the same runtime story through live review, trace observability, and regression-gate surfaces.",
+    "Extends the same reliability posture into bounded live reviewer APIs for incident review, governed analytics, document QA, air-gapped operations, and high-trust workflow delivery."
   ],
   "skill_groups": [
     {
