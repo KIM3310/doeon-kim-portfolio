@@ -49,6 +49,9 @@ export const BIG_TECH_SYSTEMS_BRIEF_URL = 'briefs/big-tech-systems-review-brief.
 export const SNOWFLAKE_BRIEF_URL = 'briefs/snowflake-review-brief.html';
 export const DATABRICKS_BRIEF_URL = 'briefs/databricks-review-brief.html';
 export const PALANTIR_BRIEF_URL = 'briefs/palantir-review-brief.html';
+export const FRONTIER_INTERVIEW_PACK_URL = 'briefs/frontier-llm-interview-pack.html';
+export const BIG_TECH_WALKTHROUGH_URL = 'briefs/big-tech-systems-walkthrough.html';
+export const DATA_PLATFORM_ARCHITECTURE_PACK_URL = 'briefs/data-platform-architecture-pack.html';
 
 export const PORTFOLIO_SIGNAL_DECK = [
   {
@@ -117,6 +120,7 @@ export const RECRUITER_QUICK_PATHS: RecruiterQuickPath[] = [
     audience: 'OpenAI / Anthropic / runtime-evals teams',
     outcome: 'Tool reliability, evaluator discipline, and agent runtime posture should be obvious in three clicks.',
     links: [
+      { label: 'Frontier interview pack', href: FRONTIER_INTERVIEW_PACK_URL },
       { label: 'Frontier brief', href: FRONTIER_LLM_BRIEF_URL },
       { label: 'StagePilot proof', href: PRIMARY_PROOF_URL },
       { label: 'AegisOps repo', href: 'https://github.com/KIM3310/AegisOps' },
@@ -128,6 +132,7 @@ export const RECRUITER_QUICK_PATHS: RecruiterQuickPath[] = [
     audience: 'Google / Meta / Amazon / Microsoft-style product and SRE orgs',
     outcome: 'Defensive engineering, stateful operator UX, and service-grade surfaces should read clearly.',
     links: [
+      { label: 'Big-tech walkthrough', href: BIG_TECH_WALKTHROUGH_URL },
       { label: 'Big-tech brief', href: BIG_TECH_SYSTEMS_BRIEF_URL },
       { label: 'StagePilot proof', href: PRIMARY_PROOF_URL },
       { label: 'TwinCity UI repo', href: 'https://github.com/KIM3310/twincity-ui' },
@@ -139,10 +144,11 @@ export const RECRUITER_QUICK_PATHS: RecruiterQuickPath[] = [
     audience: 'Governed analytics and warehouse-adjacent teams',
     outcome: 'Analytics trust, governed delivery, and auditable operator handoff should show up immediately.',
     links: [
+      { label: 'Data-platform pack', href: DATA_PLATFORM_ARCHITECTURE_PACK_URL },
       { label: 'Snowflake brief', href: SNOWFLAKE_BRIEF_URL },
       { label: 'Nexus-Hive repo', href: 'https://github.com/KIM3310/Nexus-Hive' },
+      { label: 'Lakehouse lab', href: 'https://github.com/KIM3310/lakehouse-contract-lab' },
       { label: 'The Logistics Prophet', href: 'https://the-logistics-prophet.pages.dev' },
-      { label: 'Enterprise Kit', href: 'https://enterprise-llm-kit.pages.dev' },
     ],
   },
   {
@@ -150,10 +156,11 @@ export const RECRUITER_QUICK_PATHS: RecruiterQuickPath[] = [
     audience: 'Data + ML platform teams',
     outcome: 'Pipelines, experimentation, explainability, and operational decision layers should be visible fast.',
     links: [
+      { label: 'Data-platform pack', href: DATA_PLATFORM_ARCHITECTURE_PACK_URL },
       { label: 'Databricks brief', href: DATABRICKS_BRIEF_URL },
+      { label: 'Lakehouse lab', href: 'https://github.com/KIM3310/lakehouse-contract-lab' },
       { label: 'The Logistics Prophet', href: 'https://the-logistics-prophet.pages.dev' },
       { label: 'Nexus-Hive repo', href: 'https://github.com/KIM3310/Nexus-Hive' },
-      { label: 'Beaver repo', href: 'https://github.com/KIM3310/beaver-study-orchestrator' },
     ],
   },
   {
@@ -353,12 +360,13 @@ export const SUBMISSION_READINESS_TRACKS: SubmissionReadinessTrack[] = [
   {
     title: 'Frontier LLM',
     companies: 'OpenAI · Anthropic · reliability/evals teams',
-    readinessPct: 93,
+    readinessPct: 94,
     status: 'Strong submission surface',
     summary:
-      'The public package now shows runtime reliability, protocol coverage, provider tradeoffs, failure taxonomy, and checked-in perf evidence instead of a generic agent demo story.',
-    strongestSignals: ['Benchmarked tool reliability', 'Protocol coverage', 'Failure taxonomy', 'Provider tradeoff surface'],
+      'The public package now shows runtime reliability, protocol coverage, provider tradeoffs, trace observability, failure taxonomy, and checked-in perf evidence instead of a generic agent demo story.',
+    strongestSignals: ['Benchmarked tool reliability', 'Protocol coverage', 'Trace observability', 'Provider tradeoff surface'],
     proofLinks: [
+      { label: 'Frontier interview pack', href: FRONTIER_INTERVIEW_PACK_URL },
       { label: 'Frontier brief', href: FRONTIER_LLM_BRIEF_URL },
       { label: 'StagePilot repo', href: 'https://github.com/KIM3310/stage-pilot' },
       { label: 'LLM systems resume', href: RESUME_PDF_URL },
@@ -374,6 +382,7 @@ export const SUBMISSION_READINESS_TRACKS: SubmissionReadinessTrack[] = [
       'Defensive engineering, fallback posture, reviewable APIs, system-design surfaces, and failure-drill thinking now read quickly across the portfolio and GitHub surface.',
     strongestSignals: ['Service boundaries', 'Operational UX', 'Fallback design', 'Incident/replay evidence'],
     proofLinks: [
+      { label: 'Big-tech walkthrough', href: BIG_TECH_WALKTHROUGH_URL },
       { label: 'Big-tech brief', href: BIG_TECH_SYSTEMS_BRIEF_URL },
       { label: 'AegisOps repo', href: 'https://github.com/KIM3310/AegisOps' },
       { label: 'LLM systems resume', href: RESUME_PDF_URL },
@@ -383,32 +392,36 @@ export const SUBMISSION_READINESS_TRACKS: SubmissionReadinessTrack[] = [
   {
     title: 'Snowflake',
     companies: 'Snowflake',
-    readinessPct: 94,
+    readinessPct: 96,
     status: 'High-fit submission package',
     summary:
-      'Nexus-Hive, enterprise delivery assets, and the governed analytics story now expose metric certification, query approval, warehouse-target posture, and lakehouse delivery framing clearly.',
-    strongestSignals: ['Semantic metric layer', 'Governance pack', 'Warehouse target scorecard', 'Solution architecture framing'],
+      'Nexus-Hive, Lakehouse Contract Lab, enterprise delivery assets, and the governed analytics story now expose metric certification, Spark/Delta proof, warehouse-target posture, and lakehouse delivery framing clearly.',
+    strongestSignals: ['Semantic metric layer', 'Spark + Delta proof', 'Warehouse target scorecard', 'Solution architecture framing'],
     proofLinks: [
+      { label: 'Data-platform pack', href: DATA_PLATFORM_ARCHITECTURE_PACK_URL },
       { label: 'Snowflake brief', href: SNOWFLAKE_BRIEF_URL },
       { label: 'Nexus-Hive repo', href: 'https://github.com/KIM3310/Nexus-Hive' },
+      { label: 'Lakehouse lab', href: 'https://github.com/KIM3310/lakehouse-contract-lab' },
       { label: 'Solution architect resume', href: SOLUTION_ARCHITECT_RESUME_PDF_URL },
     ],
-    remainingGap: 'The last gap is live customer-grade Snowflake connector proof, not governance or field-facing warehouse readiness.',
+    remainingGap: 'The last gap is live customer-grade Snowflake delivery history, not explicit platform proof or architecture clarity.',
   },
   {
     title: 'Databricks',
     companies: 'Databricks',
-    readinessPct: 93,
+    readinessPct: 96,
     status: 'Strong submission surface',
     summary:
-      'The data-platform story now reads through semantic governance, lakehouse readiness, decision boards, and solution-architecture assets instead of isolated ML or dashboard demos.',
-    strongestSignals: ['Lakehouse-fit narrative', 'Operational analytics', 'Decision surfaces', 'Platform-oriented proofs'],
+      'The data-platform story now reads through semantic governance, explicit Spark + Delta execution, lakehouse readiness, decision boards, and solution-architecture assets instead of isolated ML or dashboard demos.',
+    strongestSignals: ['Spark + Delta execution', 'Lakehouse-fit narrative', 'Decision surfaces', 'Platform-oriented proofs'],
     proofLinks: [
+      { label: 'Data-platform pack', href: DATA_PLATFORM_ARCHITECTURE_PACK_URL },
       { label: 'Databricks brief', href: DATABRICKS_BRIEF_URL },
+      { label: 'Lakehouse lab', href: 'https://github.com/KIM3310/lakehouse-contract-lab' },
       { label: 'The Logistics Prophet repo', href: 'https://github.com/KIM3310/the-logistics-prophet' },
       { label: 'Solution architect resume', href: SOLUTION_ARCHITECT_RESUME_PDF_URL },
     ],
-    remainingGap: 'The remaining gap is more explicit public Spark/Delta execution proof, not lakehouse framing or governed delivery posture.',
+    remainingGap: 'The remaining gap is live customer or production lakehouse ownership, not public Spark/Delta proof.',
   },
   {
     title: 'Palantir',
