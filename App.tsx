@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import BenchmarkProof from './components/BenchmarkProof';
 import Briefing from './components/Briefing';
 import FocusPaths from './components/FocusPaths';
+import Targets from './components/Targets';
 import WhyFit from './components/WhyFit';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
@@ -29,6 +30,7 @@ const App: React.FC = () => {
         <Briefing />
         <Projects />
         <FocusPaths />
+        <Targets />
         <WhyFit />
         <Skills />
         <Experience />

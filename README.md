@@ -19,6 +19,28 @@ This portfolio is not meant to be a generic personal website. It is a **canonica
 - **Key themes:** tool-calling reliability, incident AI, operator workflows, governed delivery, review-speed proof surfaces
 - **Primary external proof:** public GitHub repos + demos + dossier-style narrative
 
+## Target-company review map
+
+Use the portfolio like a guided proof surface, not a flat project gallery.
+
+- **Frontier LLM teams:** start with `StagePilot`, then `AegisOps`, `Aegis-Air`, and `ogx`
+- **Big tech product / SRE orgs:** start with `StagePilot`, `TwinCity UI`, `AegisOps`, and the `FabTwin Guardian` case study
+- **Snowflake:** start with `Nexus-Hive`, `the-logistics-prophet`, and `enterprise-llm-adoption-kit`
+- **Databricks:** start with `the-logistics-prophet`, `Nexus-Hive`, `Upstage-DocuAgent`, and `beaver-study-orchestrator`
+- **Palantir:** start with `FabTwin Guardian`, `regulated-case-workbench`, `fab-ops-yield-control-tower`, and `twincity-ui`
+
+The site now includes a target-company matrix plus an account-wide repo taxonomy so each reviewer path is explicit.
+
+## Account-wide repo map
+
+The GitHub account is organized around a small number of hiring signals:
+
+- **Review surfaces:** `KIM3310`, `doeon-kim-portfolio`
+- **Reliability and agent runtimes:** `stage-pilot`, `AegisOps`, `Aegis-Air`, `ogx`, `gemini-cli-tool-runtime`
+- **Operational software and governed workflows:** `twincity-ui`, `fab-ops-yield-control-tower`, `regulated-case-workbench`, `secure-xl2hwp-local`, `honeypot`, `smallbiz-ops-copilot`
+- **Data, platform, and analytics systems:** `enterprise-llm-adoption-kit`, `Nexus-Hive`, `the-logistics-prophet`, `beaver-study-orchestrator`, `Upstage-DocuAgent`
+- **Product and mobile experiments:** `SteadyTap`, `ecotide`, `the-savior`, `kbbq-idle-unity`, `dream-interpretation-pages`
+
 ## Local development
 
 ```bash
