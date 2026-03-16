@@ -10,6 +10,8 @@ import {
   TargetTrack,
   RepoCluster,
   ExtendedProofCluster,
+  RecruiterStep,
+  RecruiterQuickPath,
 } from './types';
 
 export const PROFILE: Profile = {
@@ -70,6 +72,90 @@ export const PORTFOLIO_ACTIONS = [
   { label: 'Open FabTwin Case Study', href: FLAGSHIP_URL, helper: 'Then inspect how the same reliability mindset maps into an action-heavy product surface.' },
   { label: 'Read FabTwin Dossier', href: DOSSIER_URL, helper: 'Review architecture, trust surfaces, and delivery logic behind the applied case study.' },
   { label: 'Download Resume', href: RESUME_PDF_URL, helper: 'Get the frontier-leaning resume version aligned to reliability, evals, and runtime safety.' },
+];
+
+export const RECRUITER_90_SECOND_STEPS: RecruiterStep[] = [
+  {
+    window: '00-20 sec',
+    title: 'Read the main claim',
+    detail: 'Confirm this is a reliability-first LLM systems portfolio, not a flat collection of demos.',
+    label: 'Jump to hero proof',
+    href: '#main-content',
+  },
+  {
+    window: '20-45 sec',
+    title: 'Inspect the benchmark proof',
+    detail: 'StagePilot shows the strongest public evidence: checked-in lift, parser recovery, and bounded retry.',
+    label: 'Open StagePilot proof',
+    href: PRIMARY_PROOF_URL,
+  },
+  {
+    window: '45-70 sec',
+    title: 'Check product judgment',
+    detail: 'FabTwin Guardian translates the same reliability mindset into approval boundaries, handoff, and action safety.',
+    label: 'Open FabTwin case study',
+    href: FLAGSHIP_URL,
+  },
+  {
+    window: '70-90 sec',
+    title: 'Choose the right supporting cluster',
+    detail: 'Use the recruiter quick paths below to jump straight to the systems that match your org.',
+    label: 'Open quick paths',
+    href: '#recruiter-mode',
+  },
+];
+
+export const RECRUITER_QUICK_PATHS: RecruiterQuickPath[] = [
+  {
+    title: 'Frontier LLM',
+    audience: 'OpenAI / Anthropic / runtime-evals teams',
+    outcome: 'Tool reliability, evaluator discipline, and agent runtime posture should be obvious in three clicks.',
+    links: [
+      { label: 'StagePilot proof', href: PRIMARY_PROOF_URL },
+      { label: 'AegisOps repo', href: 'https://github.com/KIM3310/AegisOps' },
+      { label: 'ogx repo', href: 'https://github.com/KIM3310/ogx' },
+    ],
+  },
+  {
+    title: 'Big Tech Systems',
+    audience: 'Google / Meta / Amazon / Microsoft-style product and SRE orgs',
+    outcome: 'Defensive engineering, stateful operator UX, and service-grade surfaces should read clearly.',
+    links: [
+      { label: 'StagePilot proof', href: PRIMARY_PROOF_URL },
+      { label: 'TwinCity UI repo', href: 'https://github.com/KIM3310/twincity-ui' },
+      { label: 'FabTwin case study', href: FLAGSHIP_URL },
+    ],
+  },
+  {
+    title: 'Snowflake',
+    audience: 'Governed analytics and warehouse-adjacent teams',
+    outcome: 'Analytics trust, governed delivery, and auditable operator handoff should show up immediately.',
+    links: [
+      { label: 'Nexus-Hive repo', href: 'https://github.com/KIM3310/Nexus-Hive' },
+      { label: 'The Logistics Prophet', href: 'https://the-logistics-prophet.pages.dev' },
+      { label: 'Enterprise Kit', href: 'https://enterprise-llm-kit.pages.dev' },
+    ],
+  },
+  {
+    title: 'Databricks',
+    audience: 'Data + ML platform teams',
+    outcome: 'Pipelines, experimentation, explainability, and operational decision layers should be visible fast.',
+    links: [
+      { label: 'The Logistics Prophet', href: 'https://the-logistics-prophet.pages.dev' },
+      { label: 'Nexus-Hive repo', href: 'https://github.com/KIM3310/Nexus-Hive' },
+      { label: 'Beaver repo', href: 'https://github.com/KIM3310/beaver-study-orchestrator' },
+    ],
+  },
+  {
+    title: 'Palantir',
+    audience: 'Operational software and high-trust workflow teams',
+    outcome: 'Approval boundaries, evidence trails, and action-heavy UX should come through in one short path.',
+    links: [
+      { label: 'FabTwin case study', href: FLAGSHIP_URL },
+      { label: 'regulated-case-workbench', href: 'https://regulated-case-workbench.pages.dev' },
+      { label: 'Fab Ops repo', href: 'https://github.com/KIM3310/fab-ops-yield-control-tower' },
+    ],
+  },
 ];
 
 export const STAGEPILOT_BENCHMARK_STEPS = [
