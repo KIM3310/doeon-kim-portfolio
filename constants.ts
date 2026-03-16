@@ -9,6 +9,7 @@ import {
   FocusPath,
   TargetTrack,
   RepoCluster,
+  ExtendedProofCluster,
 } from './types';
 
 export const PROFILE: Profile = {
@@ -401,11 +402,127 @@ export const TARGET_TRACKS: TargetTrack[] = [
 ];
 
 export const PORTFOLIO_RUNTIME_META = [
-  { label: 'Scope', value: '8 selected systems / broader active repo set' },
+  { label: 'Scope', value: '8 selected systems + 11 extended proof surfaces' },
   { label: 'Stack', value: 'React 19 + Vite 6' },
   { label: 'Focus', value: 'Agent Reliability / Runtime Safety / High-Trust AI' },
-  { label: 'Public Proof', value: 'Canonical repos + live surfaces' },
+  { label: 'Public Proof', value: 'Canonical repos + live surfaces + reviewer handoff routes' },
   { label: 'Portfolio URL', value: 'kim3310.github.io/doeon-kim-portfolio' },
+];
+
+export const EXTENDED_PROOF_CLUSTERS: ExtendedProofCluster[] = [
+  {
+    title: 'Boards and approval gates',
+    summary:
+      'These repos now expose the moment where operational judgment becomes reviewable: recovery delta, release posture, approval coverage, and ownership continuity.',
+    surfaces: [
+      {
+        repo: 'beaver-study-orchestrator',
+        surface: '/api/outcomes/board',
+        surfaceType: 'HTTP route',
+        summary: 'Turns study risk, capacity delta, and unscheduled spillover into a reviewer board instead of leaving the result at a single score.',
+        teams: ['Databricks', 'Platform APIs', 'Decision systems'],
+        github: 'https://github.com/KIM3310/beaver-study-orchestrator',
+      },
+      {
+        repo: 'fab-ops-yield-control-tower',
+        surface: '/api/release-board',
+        surfaceType: 'HTTP route',
+        summary: 'Makes queue-level release posture visible before anyone argues from a single lot or tool page.',
+        teams: ['Palantir', 'Ops software', 'Industrial systems'],
+        github: 'https://github.com/KIM3310/fab-ops-yield-control-tower',
+      },
+      {
+        repo: 'honeypot',
+        surface: '/api/approval-matrix',
+        surfaceType: 'HTTP route',
+        summary: 'Shows role coverage, blocked sections, and handover-readiness gating before a generated draft is treated as deliverable.',
+        teams: ['Enterprise AI', 'Governed delivery', 'High-trust workflows'],
+        github: 'https://github.com/KIM3310/honeypot',
+        demo: 'https://honeypot-proto.vercel.app',
+      },
+      {
+        repo: 'smallbiz-ops-copilot',
+        surface: '/dashboard/owner-handoff-board',
+        surfaceType: 'HTTP route',
+        summary: 'Keeps queue ownership, blockers, and next-operator posture visible before outbound work changes hands.',
+        teams: ['Ops tooling', 'Workflow systems', 'Private artifact'],
+        note: 'Private repo',
+        visibility: 'private',
+      },
+    ],
+  },
+  {
+    title: 'Runtime guardrails',
+    summary:
+      'The runtime cluster now exposes explicit automation boundaries and operator-handoff tools, so reviewer trust does not depend on reading raw logs or CLI state.',
+    surfaces: [
+      {
+        repo: 'ogx',
+        surface: '/v1/automation-guardrails',
+        surfaceType: 'HTTP route',
+        summary: 'Compresses unattended-run posture, approval mode, and risky automation boundaries into one route.',
+        teams: ['Frontier LLM', 'Agent runtimes', 'Automation safety'],
+        github: 'https://github.com/KIM3310/ogx',
+      },
+      {
+        repo: 'gemini-cli-tool-runtime',
+        surface: 'omg_team_operator_brief',
+        surfaceType: 'MCP tool',
+        summary: 'Provides blocked tasks, unhealthy workers, and next operator moves without requiring a tmux attach or raw state inspection.',
+        teams: ['Runtime infra', 'Agent control planes', 'Private artifact'],
+        note: 'Private repo',
+        visibility: 'private',
+      },
+      {
+        repo: 'dream-interpretation-pages',
+        surface: '/api/review-pack',
+        surfaceType: 'HTTP route',
+        summary: 'Packages abuse posture, model contract, and fail-closed rules so the public AI surface reads as controlled, not naive.',
+        teams: ['Consumer AI', 'Abuse controls', 'Cloudflare delivery'],
+        github: 'https://github.com/KIM3310/dream-interpretation-pages',
+      },
+    ],
+  },
+  {
+    title: 'Human-centered handoff',
+    summary:
+      'Product-oriented repos now expose the clinician, operator, escalation, or fallback surface that sits between the live experience and a trustworthy handoff.',
+    surfaces: [
+      {
+        repo: 'SteadyTap',
+        surface: '/v1/review-queue?user_id=demo-user',
+        surfaceType: 'HTTP route',
+        summary: 'Shows stale users and clinician/reviewer follow-up before remote coaching is treated as authoritative.',
+        teams: ['Apple/Google product', 'Accessibility', 'Health-adjacent UX'],
+        github: 'https://github.com/KIM3310/SteadyTap',
+        demo: 'https://steadytap.pages.dev',
+      },
+      {
+        repo: 'the-savior',
+        surface: '/api/escalation-readiness',
+        surfaceType: 'HTTP route',
+        summary: 'Exposes crisis-escalation and fallback posture before public traffic is allowed to trust the coaching layer.',
+        teams: ['Consumer AI', 'Safety UX', 'Fallback design'],
+        github: 'https://github.com/KIM3310/the-savior',
+      },
+      {
+        repo: 'kbbq-idle-unity',
+        surface: '/ops/release-readiness',
+        surfaceType: 'HTTP route',
+        summary: 'Makes launch blockers and release posture explicit instead of treating gameplay polish as the whole product story.',
+        teams: ['Product systems', 'Release engineering', 'Gameplay ops'],
+        github: 'https://github.com/KIM3310/kbbq-idle-unity',
+      },
+      {
+        repo: 'ecotide',
+        surface: 'EcoTideCLI reviewer handoff contract',
+        surfaceType: 'CLI contract',
+        summary: 'Preserves scenario focus, drift, and next action when iOS rendering or motion telemetry is unavailable.',
+        teams: ['Native product', 'Fallback UX', 'Simulation systems'],
+        github: 'https://github.com/KIM3310/ecotide',
+      },
+    ],
+  },
 ];
 
 export const REPO_CLUSTERS: RepoCluster[] = [
