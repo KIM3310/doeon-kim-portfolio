@@ -14,6 +14,7 @@ import {
   RecruiterQuickPath,
   SubmissionReadinessTrack,
   ApplicationPacket,
+  LiveProofTrack,
 } from './types';
 
 export const PROFILE: Profile = {
@@ -56,6 +57,7 @@ export const DATA_PLATFORM_ARCHITECTURE_PACK_URL = 'briefs/data-platform-archite
 export const FRONTIER_APPLICATION_PACKET_URL = 'briefs/frontier-llm-application-packet.html';
 export const BIG_TECH_APPLICATION_PACKET_URL = 'briefs/big-tech-systems-application-packet.html';
 export const DATA_PLATFORM_APPLICATION_PACKET_URL = 'briefs/data-platform-application-packet.html';
+export const PALANTIR_APPLICATION_PACKET_URL = 'briefs/palantir-application-packet.html';
 
 export const PORTFOLIO_SIGNAL_DECK = [
   {
@@ -488,6 +490,69 @@ export const APPLICATION_PACKETS: ApplicationPacket[] = [
       { label: 'Lakehouse lab', href: 'https://github.com/KIM3310/lakehouse-contract-lab' },
       { label: 'Enterprise Kit', href: 'https://enterprise-llm-kit.pages.dev' },
     ],
+  },
+  {
+    title: 'Palantir / High-Trust',
+    audience: 'Palantir · governed ops · workflow software',
+    claim: 'Submit the approval-boundary story: regulated-case-workbench first, then FabTwin Guardian, then TwinCity UI or fab-ops control surfaces.',
+    packetHref: PALANTIR_APPLICATION_PACKET_URL,
+    resumeHref: SOLUTION_ARCHITECT_RESUME_PDF_URL,
+    links: [
+      { label: 'regulated-case-workbench repo', href: 'https://github.com/KIM3310/regulated-case-workbench' },
+      { label: 'FabTwin dossier', href: DOSSIER_URL },
+      { label: 'TwinCity UI repo', href: 'https://github.com/KIM3310/twincity-ui' },
+    ],
+  },
+];
+
+export const LIVE_PROOF_TRACKS: LiveProofTrack[] = [
+  {
+    title: 'Frontier LLM',
+    audience: 'runtime reliability · evals · reviewer-safe live proof',
+    status: 'public-capped-live',
+    staticProof: { label: 'StagePilot benchmark + scorecard', href: PRIMARY_PROOF_URL },
+    liveRepo: { label: 'stage-pilot repo', href: 'https://github.com/KIM3310/stage-pilot' },
+    liveRoute: 'POST /v1/live-review-run',
+    walkthrough: { label: 'Frontier interview pack', href: 'briefs/frontier-llm-interview-pack.html' },
+    packet: { label: 'Frontier application packet', href: FRONTIER_APPLICATION_PACKET_URL },
+    resume: { label: 'LLM systems resume', href: RESUME_PDF_URL },
+    note: 'Bounded scenario catalog only. Public live lane stays separated from full operator mutation routes.',
+  },
+  {
+    title: 'Big Tech Systems',
+    audience: 'incident systems · service boundaries · multimodal ops',
+    status: 'public-capped-live',
+    staticProof: { label: 'AegisOps system design', href: 'https://github.com/KIM3310/AegisOps' },
+    liveRepo: { label: 'AegisOps repo', href: 'https://github.com/KIM3310/AegisOps' },
+    liveRoute: 'POST /api/live-escalation-preview',
+    walkthrough: { label: 'Big-tech walkthrough', href: 'briefs/big-tech-systems-walkthrough.html' },
+    packet: { label: 'Big-tech application packet', href: BIG_TECH_APPLICATION_PACKET_URL },
+    resume: { label: 'LLM systems resume', href: RESUME_PDF_URL },
+    note: 'Fixed incident bundle ids only. Live preview summarizes escalation stance without opening the full analyst surface.',
+  },
+  {
+    title: 'Data Platform',
+    audience: 'governed analytics · warehouse fit · field engineering',
+    status: 'public-capped-live',
+    staticProof: { label: 'Lakehouse contract board', href: 'https://github.com/KIM3310/lakehouse-contract-lab' },
+    liveRepo: { label: 'Nexus-Hive repo', href: 'https://github.com/KIM3310/Nexus-Hive' },
+    liveRoute: 'POST /api/runtime/reviewer-query-demo + GET /api/runtime/review-summary',
+    walkthrough: { label: 'Data-platform architecture pack', href: 'briefs/data-platform-architecture-pack.html' },
+    packet: { label: 'Data-platform application packet', href: DATA_PLATFORM_APPLICATION_PACKET_URL },
+    resume: { label: 'Solution architect resume', href: SOLUTION_ARCHITECT_RESUME_PDF_URL },
+    note: 'Nexus-Hive carries the bounded live query lane. Lakehouse Contract Lab stays artifact-refresh-only and exposes read-only review summaries.',
+  },
+  {
+    title: 'Palantir / High-Trust',
+    audience: 'approval boundaries · evidence chains · governed release',
+    status: 'public-capped-live',
+    staticProof: { label: 'regulated-case-workbench review pack', href: 'https://github.com/KIM3310/regulated-case-workbench' },
+    liveRepo: { label: 'regulated-case-workbench repo', href: 'https://github.com/KIM3310/regulated-case-workbench' },
+    liveRoute: 'POST /api/live-case-brief',
+    walkthrough: { label: 'Palantir review brief', href: 'briefs/palantir-review-brief.html' },
+    packet: { label: 'Palantir application packet', href: PALANTIR_APPLICATION_PACKET_URL },
+    resume: { label: 'Solution architect resume', href: SOLUTION_ARCHITECT_RESUME_PDF_URL },
+    note: 'Fixed case packets only. The live lane summarizes evidence, approval boundary, and redaction posture without exposing arbitrary uploads.',
   },
 ];
 

@@ -8,8 +8,8 @@
   ],
   "summary": [
     "Builds reviewable LLM runtimes with strongest public proof in tool-calling reliability, multimodal incident AI, and operator-safe runtime design.",
-    "Improved StagePilot benchmark success from 29.17% baseline to 87.50% with parser recovery and to 100.00% with bounded retry plus explicit failure-taxonomy and protocol-matrix surfaces.",
-    "Extends the same reliability mindset into multimodal incident review, air-gapped operations, and governance-heavy enterprise delivery."
+    "Improved StagePilot benchmark success from 29.17% baseline to 87.50% with parser recovery and to 100.00% with bounded retry, then exposed the same runtime story through live-review, trace-observability, and regression-gate surfaces.",
+    "Extends the same reliability mindset into multimodal incident review, live escalation preview, air-gapped operations, and governance-heavy enterprise delivery."
   ],
   "skill_groups": [
     {
@@ -102,7 +102,7 @@
       "bullets": [
         "Built the canonical repo for parser middleware, StagePilot orchestration, and BenchLab eval tooling.",
         "Improved checked-in benchmark success from 29.17% to 87.50% and 100.00% with bounded retry and reviewable proof surfaces.",
-        "Added failure-taxonomy and protocol-matrix review APIs so parser drift, retries, and cross-protocol behavior stay inspectable."
+        "Added live-review, failure-taxonomy, trace-observability, regression-gate, and protocol-matrix APIs so parser drift, retries, and cross-protocol behavior stay inspectable."
       ]
     },
     {
@@ -111,7 +111,7 @@
       "subhead": "Postmortem and escalation surfaces",
       "bullets": [
         "Turned logs and monitoring screenshots into structured RCA, action plans, and handoff artifacts.",
-        "Added JSON/schema guardrails, BYOK and no-key modes, plus postmortem-pack and escalation-readiness surfaces for reviewable incident handoff."
+        "Added JSON/schema guardrails, BYOK and no-key modes, plus postmortem-pack, escalation-readiness, and live-escalation-preview surfaces for reviewable incident handoff."
       ]
     },
     {

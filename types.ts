@@ -116,6 +116,19 @@ export interface ApplicationPacket {
   links: FocusPathLink[];
 }
 
+export interface LiveProofTrack {
+  title: string;
+  audience: string;
+  status: 'public-capped-live' | 'review-only-live' | 'artifact-refresh-only';
+  staticProof: FocusPathLink;
+  liveRepo: FocusPathLink;
+  liveRoute: string;
+  walkthrough: FocusPathLink;
+  packet: FocusPathLink;
+  resume: FocusPathLink;
+  note: string;
+}
+
 export interface Experience {
   company: string;
   role: string;
