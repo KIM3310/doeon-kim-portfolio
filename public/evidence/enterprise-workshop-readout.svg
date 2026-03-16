@@ -1,0 +1,42 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Enterprise workshop readout evidence</title>
+  <desc id="desc">Visual evidence card summarizing the enterprise workshop readout pack.</desc>
+  <rect width="1200" height="760" fill="#0A0B12"/>
+  <rect x="36" y="36" width="1128" height="688" rx="28" fill="#171A28" stroke="#3B425B"/>
+  <text x="72" y="96" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="30" font-weight="700">Enterprise Workshop Readout Pack</text>
+  <text x="72" y="132" fill="#94A3B8" font-family="Arial, sans-serif" font-size="17">Solution-architecture evidence: discovery, platform fit, pilot lane, rollout gates, and visual handoff assets.</text>
+
+  <rect x="72" y="176" width="1020" height="108" rx="20" fill="#1E2235" stroke="#F59E0B"/>
+  <text x="104" y="218" fill="#FCD34D" font-family="Arial, sans-serif" font-size="14" font-weight="700">WORKSHOP CLOSEOUT THESIS</text>
+  <text x="104" y="256" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="24" font-weight="700">The workshop now ends with a chosen pilot lane, named blockers, go/no-go logic, and visual artifacts.</text>
+
+  <rect x="72" y="326" width="224" height="130" rx="18" fill="#20263B" stroke="#3B82F6"/>
+  <text x="96" y="366" fill="#93C5FD" font-family="Arial, sans-serif" font-size="14" font-weight="700">DISCOVERY</text>
+  <text x="96" y="410" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="28" font-weight="700">Questionnaire</text>
+  <text x="96" y="438" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="16">Buyer ambiguity becomes architecture input</text>
+
+  <rect x="318" y="326" width="224" height="130" rx="18" fill="#20263B" stroke="#14B8A6"/>
+  <text x="342" y="366" fill="#99F6E4" font-family="Arial, sans-serif" font-size="14" font-weight="700">PLATFORM FIT</text>
+  <text x="342" y="410" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="28" font-weight="700">Snowflake / DBX / Palantir</text>
+  <text x="342" y="438" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="16">Customer architecture pack decides the story</text>
+
+  <rect x="564" y="326" width="224" height="130" rx="18" fill="#20263B" stroke="#A855F7"/>
+  <text x="588" y="366" fill="#E9D5FF" font-family="Arial, sans-serif" font-size="14" font-weight="700">PILOT LANE</text>
+  <text x="588" y="410" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="28" font-weight="700">Rollout board</text>
+  <text x="588" y="438" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="16">Hybrid control tower and buyer fit remain explicit</text>
+
+  <rect x="810" y="326" width="282" height="130" rx="18" fill="#20263B" stroke="#EF4444"/>
+  <text x="834" y="366" fill="#FCA5A5" font-family="Arial, sans-serif" font-size="14" font-weight="700">GO / NO-GO</text>
+  <text x="834" y="410" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="28" font-weight="700">Runtime + Governance + Rollback</text>
+  <text x="834" y="438" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="16">Gates and drills stay visible before promises</text>
+
+  <rect x="72" y="500" width="1020" height="168" rx="24" fill="#121827" stroke="#475569"/>
+  <text x="104" y="546" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="24" font-weight="700">Visual handoff assets</text>
+  <text x="104" y="588" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="18">- exec value dashboard snapshot</text>
+  <text x="104" y="620" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="18">- workshop readout board</text>
+  <text x="104" y="652" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="18">- review pack diagram + facilitator guide</text>
+
+  <text x="624" y="588" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="18">- /ops/workshop-readout-pack</text>
+  <text x="624" y="620" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="18">- /ops/customer-architecture-pack</text>
+  <text x="624" y="652" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="18">- /ops/rollout-gates + /ops/rollout-drill</text>
+</svg>

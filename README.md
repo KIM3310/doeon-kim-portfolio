@@ -42,6 +42,16 @@ The portfolio now includes a dedicated submission-readiness section that estimat
 
 Those percentages are intentionally framed as **public-package readiness**, not a claim that interviewing or production history is already complete.
 
+## Visual evidence gallery
+
+The site now also includes a visual evidence section with three recruiter-fast artifacts:
+
+- `StagePilot provider benchmark scorecard`
+- `Nexus-Hive semantic governance board`
+- `Enterprise workshop readout board`
+
+The goal is to let a reviewer confirm frontier, data-platform, and solution-architecture proof with images before opening source files.
+
 ## Account-wide repo map
 
 The GitHub account is organized around a small number of hiring signals:
