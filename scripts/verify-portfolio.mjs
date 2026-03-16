@@ -9,6 +9,11 @@ const requiredFiles = [
   'public/fabpilot-live-x.js',
   'public/fabpilot-static.css',
   'public/resume/Doeon_Kim_Resume_LLM_Systems_Engineer.pdf',
+  'public/resume/Doeon_Kim_Resume_Microsoft_Solution_Architect.pdf',
+  'content/resume/llm-systems-engineer.json',
+  'content/resume/solution-architect.json',
+  'docs/resume-json/Doeon_Kim_Resume_LLM_Systems_Engineer.json',
+  'docs/resume-json/Doeon_Kim_Resume_Microsoft_Solution_Architect.json',
   'public/briefs/samsung-ai-sw-one-pager.html',
   'public/briefs/gemini-live-hackathon-package.html',
   'public/briefs/frontier-llm-review-brief.html',
@@ -18,6 +23,7 @@ const requiredFiles = [
   'public/briefs/palantir-review-brief.html',
   'docs/FABPILOT_GEMINI_RUNTIME.md',
   'docs/NEXT_STEPS.md',
+  'docs/RESUME_PIPELINE.md',
 ];
 
 const checks = [

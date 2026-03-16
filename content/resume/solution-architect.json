@@ -1,0 +1,157 @@
+{
+  "output_name": "Doeon_Kim_Resume_Microsoft_Solution_Architect",
+  "name": "DOEON KIM",
+  "headline": "AI Solutions Architect | Governed AI Delivery, Data Workflows, Reviewer-Safe Systems",
+  "contact_lines": [
+    "Busan, South Korea | +82 10-5791-8465 | ehdjs1351@gmail.com",
+    "linkedin.com/in/doeon-kim-4742a2388 | github.com/KIM3310 | kim3310.github.io/doeon-kim-portfolio"
+  ],
+  "summary": [
+    "Designs and delivers reviewable AI systems from discovery and pilot planning to governed rollout, with strongest public proof in enterprise LLM governance, multimodal operations, and operator-facing workflows.",
+    "Turns ambiguous requirements into inspectable architectures with clear trust boundaries, review paths, and handoff artifacts instead of one-off demos.",
+    "Pairs hands-on implementation with customer-facing architecture judgment across cloud, data, runtime, and governance-heavy delivery contexts.",
+    "Certified across Microsoft, Snowflake, Databricks, and Palantir-aligned stacks, with public proof surfaces that let reviewers inspect shipped systems quickly."
+  ],
+  "skill_groups": [
+    {
+      "label": "AI & Solution Design",
+      "items": [
+        "solution architecture",
+        "LLM systems",
+        "RAG",
+        "agent runtimes",
+        "multimodal AI",
+        "eval design"
+      ]
+    },
+    {
+      "label": "Cloud & Data Platforms",
+      "items": [
+        "Azure OpenAI",
+        "Azure AI Search",
+        "AWS",
+        "GCP",
+        "Databricks",
+        "Snowflake",
+        "Palantir"
+      ]
+    },
+    {
+      "label": "Engineering Delivery",
+      "items": [
+        "Python",
+        "FastAPI",
+        "TypeScript",
+        "React",
+        "Next.js",
+        "Node.js",
+        "WebSocket/SSE",
+        "Docker",
+        "CI/CD"
+      ]
+    },
+    {
+      "label": "Governance & Ops",
+      "items": [
+        "IAM/RBAC",
+        "audit logging",
+        "incident response",
+        "rollout gates",
+        "reviewer handoff",
+        "operator workflows"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "company": "Microsoft AI School",
+      "role": "Trainee",
+      "location": "Seoul, South Korea",
+      "date": "Sep 2025 - Feb 26, 2026",
+      "bullets": [
+        "Delivered project work across RAG, incident operations, and real-time operator workflows under practitioner and Microsoft Korea feedback loops.",
+        "Converted ambiguous project requirements into reviewable system designs, live demos, and handoff-ready delivery surfaces across multiple team systems.",
+        "Improved Haptix multi-label performance to AP 96.8 on single-tag and AP 85.0 on triple-tag cases while building backend and retrieval delivery surfaces."
+      ]
+    },
+    {
+      "company": "ATOM TECH SOLUTIONS LTD",
+      "role": "Full Stack Engineer (AI Integration) Intern",
+      "location": "Berkeley, CA, United States",
+      "date": "Jun 2025 - Sep 2025",
+      "bullets": [
+        "Built customer-facing full-stack features and integrated OpenAI-powered chatbot workflows for a US startup product environment.",
+        "Worked asynchronously across US time zones and kept delivery moving across application, AI integration, and stakeholder communication boundaries."
+      ]
+    },
+    {
+      "company": "ROK Defense Communication Command",
+      "role": "Strategic Backbone Network & Security Team Lead",
+      "location": "Seongnam, South Korea",
+      "date": "Nov 2023 - May 2025",
+      "bullets": [
+        "Led a 6-person squad in a 24/7 mission-critical environment and kept operations reviewable under no-fail expectations.",
+        "Handled roughly 8-9 incidents per month, leading triage, mitigation, IAM/access control, emergency recovery, and compliance-oriented handoff."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Enterprise LLM Adoption Kit",
+      "tagline": "Pilot-to-Production Governance Control Tower",
+      "subhead": "Customer architecture and rollout evidence",
+      "bullets": [
+        "Implemented RBAC, prompt-injection detection, PII redaction, audit logging, JSONL eval pipelines, and rollout artifacts.",
+        "Added rollout-gates and customer-architecture-pack surfaces to support discovery, pilot, rollout, and handoff decisions."
+      ]
+    },
+    {
+      "name": "Nexus-Hive",
+      "tagline": "Governed Analytics Runtime",
+      "subhead": "Warehouse-target review surface",
+      "bullets": [
+        "Built governed analytics review surfaces with warehouse brief, runtime meta, and target scorecards for SQLite, Snowflake, and Databricks-aligned review."
+      ]
+    },
+    {
+      "name": "The Logistics Prophet",
+      "tagline": "Decision Intelligence Control Tower",
+      "subhead": "Action-to-KPI evidence",
+      "bullets": [
+        "Connected recommendation flows to KPI delta using decision-board and action-impact-board surfaces so operational decisions stay inspectable."
+      ]
+    },
+    {
+      "name": "secure-xl2hwp-local",
+      "tagline": "Offline Regulated Workflow Platform",
+      "subhead": "Air-gapped deployment proof",
+      "bullets": [
+        "Built a local spreadsheet-to-document workflow with signed export verification, readiness checks, and offline-deployment-pack surfaces for constrained environments."
+      ]
+    },
+    {
+      "name": "AegisOps",
+      "tagline": "Multimodal Incident Copilot",
+      "subhead": "Operational review and handoff",
+      "bullets": [
+        "Combined logs, screenshots, RCA, postmortem-pack, and escalation-readiness surfaces into a reviewer-safe incident workflow."
+      ]
+    }
+  ],
+  "education": [
+    "Korea National Open University (KNOU) | B.S. in Computer Science (In Progress, Entered Mar 2026)"
+  ],
+  "certifications": [
+    "Microsoft / Snowflake / Palantir: AI-900, SnowPro Associate, Foundry Data Engineer Associate, Foundry Foundations",
+    "Databricks / Datadog / IBM: AWS Databricks Platform Architect, GCP Databricks Platform Architect, Databricks Fundamentals, Observability Certifications, AI / Cloud / Cyber Fundamentals",
+    "Other: SAP Cloud Platform Integration Service"
+  ],
+  "languages": [
+    "Korean (Native), English (Business / Working), Japanese (Business / Working)"
+  ],
+  "value_i_bring": [
+    "Translate technical ambiguity into reviewable systems with clearer operating boundaries and proof.",
+    "Work well across engineers, specialists, and customer-facing stakeholders to support trusted delivery.",
+    "Pair architecture judgment with enough implementation depth to build the proof surface, not just describe it."
+  ]
+}
