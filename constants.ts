@@ -54,6 +54,8 @@ export const BIG_TECH_SYSTEMS_BRIEF_URL = 'briefs/big-tech-systems-review-brief.
 export const SNOWFLAKE_BRIEF_URL = 'briefs/snowflake-review-brief.html';
 export const DATABRICKS_BRIEF_URL = 'briefs/databricks-review-brief.html';
 export const PALANTIR_BRIEF_URL = 'briefs/palantir-review-brief.html';
+export const BROKERAGE_BRIEF_URL = 'briefs/brokerage-review-brief.html';
+export const QUANT_BRIEF_URL = 'briefs/quant-review-brief.html';
 export const FRONTIER_INTERVIEW_PACK_URL = 'briefs/frontier-llm-interview-pack.html';
 export const BIG_TECH_WALKTHROUGH_URL = 'briefs/big-tech-systems-walkthrough.html';
 export const DATA_PLATFORM_ARCHITECTURE_PACK_URL = 'briefs/data-platform-architecture-pack.html';
@@ -61,6 +63,8 @@ export const FRONTIER_APPLICATION_PACKET_URL = 'briefs/frontier-llm-application-
 export const BIG_TECH_APPLICATION_PACKET_URL = 'briefs/big-tech-systems-application-packet.html';
 export const DATA_PLATFORM_APPLICATION_PACKET_URL = 'briefs/data-platform-application-packet.html';
 export const PALANTIR_APPLICATION_PACKET_URL = 'briefs/palantir-application-packet.html';
+export const BROKERAGE_APPLICATION_PACKET_URL = 'briefs/brokerage-application-packet.html';
+export const QUANT_APPLICATION_PACKET_URL = 'briefs/quant-application-packet.html';
 
 export const PORTFOLIO_SIGNAL_DECK = [
   {
@@ -146,8 +150,8 @@ export const RECRUITER_QUICK_PATHS: RecruiterQuickPath[] = [
       { label: 'Big-tech walkthrough', href: BIG_TECH_WALKTHROUGH_URL },
       { label: 'Big-tech brief', href: BIG_TECH_SYSTEMS_BRIEF_URL },
       { label: 'StagePilot proof', href: PRIMARY_PROOF_URL },
+      { label: 'AegisOps repo', href: 'https://github.com/KIM3310/AegisOps' },
       { label: 'TwinCity UI repo', href: 'https://github.com/KIM3310/twincity-ui' },
-      { label: 'FabTwin case study', href: FLAGSHIP_URL },
     ],
   },
   {
@@ -182,9 +186,33 @@ export const RECRUITER_QUICK_PATHS: RecruiterQuickPath[] = [
     outcome: 'Approval boundaries, evidence trails, and action-heavy UX should come through in one short path.',
     links: [
       { label: 'Palantir brief', href: PALANTIR_BRIEF_URL },
-      { label: 'FabTwin case study', href: FLAGSHIP_URL },
       { label: 'regulated-case-workbench', href: 'https://regulated-case-workbench.pages.dev' },
       { label: 'Fab Ops repo', href: 'https://github.com/KIM3310/fab-ops-yield-control-tower' },
+      { label: 'TwinCity UI repo', href: 'https://github.com/KIM3310/twincity-ui' },
+    ],
+  },
+  {
+    title: 'Brokerage / Securities',
+    audience: 'Brokerage · wealth management · advisor workflow teams',
+    outcome: 'Suitability logic, portfolio rationale, and client handoff should read as one reviewer-safe workflow.',
+    links: [
+      { label: 'Brokerage application packet', href: BROKERAGE_APPLICATION_PACKET_URL },
+      { label: 'Brokerage brief', href: BROKERAGE_BRIEF_URL },
+      { label: 'Advisor Review Desk', href: 'https://github.com/KIM3310/advisor-review-desk' },
+      { label: 'Nexus-Hive repo', href: 'https://github.com/KIM3310/Nexus-Hive' },
+      { label: 'StagePilot proof', href: PRIMARY_PROOF_URL },
+    ],
+  },
+  {
+    title: 'Quant / Systematic',
+    audience: 'Quant research · systematic trading · risk systems teams',
+    outcome: 'Signal, risk, and execution posture should stay inspectable before anyone treats the strategy as usable.',
+    links: [
+      { label: 'Quant application packet', href: QUANT_APPLICATION_PACKET_URL },
+      { label: 'Quant brief', href: QUANT_BRIEF_URL },
+      { label: 'Signal Risk Lab', href: 'https://github.com/KIM3310/signal-risk-lab' },
+      { label: 'Lakehouse lab', href: 'https://github.com/KIM3310/lakehouse-contract-lab' },
+      { label: 'StagePilot proof', href: PRIMARY_PROOF_URL },
     ],
   },
 ];
@@ -232,8 +260,8 @@ export const STAGEPILOT_REVIEW_FLOW = [
   },
   {
     step: '03',
-    title: 'Open the applied case',
-    detail: 'FabTwin Guardian shows how the same reliability mindset survives approval boundaries, handoff, and action-heavy product UX.',
+    title: 'Open the applied systems',
+    detail: 'AegisOps and the governed delivery cluster show how the same reliability mindset survives incident review, handoff, and operational workflow complexity.',
   },
 ] as const;
 
@@ -473,7 +501,7 @@ export const APPLICATION_PACKETS: ApplicationPacket[] = [
   {
     title: 'Big Tech Systems',
     audience: 'Google · Meta · Amazon · Microsoft-style product / infra',
-    claim: 'Submit the service-boundary story: AegisOps system design, StagePilot runtime posture, and operator-heavy product surfaces like TwinCity UI or FabTwin.',
+    claim: 'Submit the service-boundary story: AegisOps system design, StagePilot runtime posture, and operator-heavy product surfaces like TwinCity UI or Enterprise Kit.',
     packetHref: BIG_TECH_APPLICATION_PACKET_URL,
     resumeHref: RESUME_PDF_URL,
     links: [
@@ -497,13 +525,37 @@ export const APPLICATION_PACKETS: ApplicationPacket[] = [
   {
     title: 'Palantir / High-Trust',
     audience: 'Palantir · governed ops · workflow software',
-    claim: 'Submit the approval-boundary story: regulated-case-workbench first, then FabTwin Guardian, then TwinCity UI or fab-ops control surfaces.',
+    claim: 'Submit the approval-boundary story: regulated-case-workbench first, then fab-ops control surfaces, then TwinCity UI. FabTwin can stay as an archived supporting case when needed.',
     packetHref: PALANTIR_APPLICATION_PACKET_URL,
     resumeHref: SOLUTION_ARCHITECT_RESUME_PDF_URL,
     links: [
       { label: 'regulated-case-workbench repo', href: 'https://github.com/KIM3310/regulated-case-workbench' },
-      { label: 'FabTwin dossier', href: DOSSIER_URL },
+      { label: 'Fab Ops repo', href: 'https://github.com/KIM3310/fab-ops-yield-control-tower' },
       { label: 'TwinCity UI repo', href: 'https://github.com/KIM3310/twincity-ui' },
+    ],
+  },
+  {
+    title: 'Brokerage / Securities',
+    audience: 'Brokerage · advisor workflow · client review',
+    claim: 'Submit the client-review story: advisor-review-desk first, then Nexus-Hive for governed analytics posture, then StagePilot for reliability depth behind the workflow.',
+    packetHref: BROKERAGE_APPLICATION_PACKET_URL,
+    resumeHref: SOLUTION_ARCHITECT_RESUME_PDF_URL,
+    links: [
+      { label: 'Advisor Review Desk', href: 'https://github.com/KIM3310/advisor-review-desk' },
+      { label: 'Nexus-Hive repo', href: 'https://github.com/KIM3310/Nexus-Hive' },
+      { label: 'StagePilot proof', href: PRIMARY_PROOF_URL },
+    ],
+  },
+  {
+    title: 'Quant / Systematic',
+    audience: 'Quant research · systematic trading · risk review',
+    claim: 'Submit the research-surface story: signal-risk-lab first, then lakehouse-contract-lab for data posture, then StagePilot for reliability and evaluation depth.',
+    packetHref: QUANT_APPLICATION_PACKET_URL,
+    resumeHref: RESUME_PDF_URL,
+    links: [
+      { label: 'Signal Risk Lab', href: 'https://github.com/KIM3310/signal-risk-lab' },
+      { label: 'Lakehouse lab', href: 'https://github.com/KIM3310/lakehouse-contract-lab' },
+      { label: 'StagePilot proof', href: PRIMARY_PROOF_URL },
     ],
   },
 ];
@@ -556,6 +608,30 @@ export const LIVE_PROOF_TRACKS: LiveProofTrack[] = [
     packet: { label: 'Palantir application packet', href: PALANTIR_APPLICATION_PACKET_URL },
     resume: { label: 'Solution architect resume', href: SOLUTION_ARCHITECT_RESUME_PDF_URL },
     note: 'Fixed case packets only. The live lane summarizes evidence, approval boundary, and redaction posture without exposing arbitrary uploads.',
+  },
+  {
+    title: 'Brokerage / Securities',
+    audience: 'client suitability · advisor workflow · review-safe portfolio change logic',
+    status: 'review-only-live',
+    staticProof: { label: 'Advisor Review Desk', href: 'https://github.com/KIM3310/advisor-review-desk' },
+    liveRepo: { label: 'advisor-review-desk repo', href: 'https://github.com/KIM3310/advisor-review-desk' },
+    liveRoute: 'GET /api/review-pack + GET /api/advisor-handoff',
+    walkthrough: { label: 'Brokerage brief', href: BROKERAGE_BRIEF_URL },
+    packet: { label: 'Brokerage application packet', href: BROKERAGE_APPLICATION_PACKET_URL },
+    resume: { label: 'Solution architect resume', href: SOLUTION_ARCHITECT_RESUME_PDF_URL },
+    note: 'Reviewer-safe finance workflow surface focused on suitability, rationale, and handoff rather than live trading claims.',
+  },
+  {
+    title: 'Quant / Systematic',
+    audience: 'factor research · risk posture · execution viability',
+    status: 'review-only-live',
+    staticProof: { label: 'Signal Risk Lab', href: 'https://github.com/KIM3310/signal-risk-lab' },
+    liveRepo: { label: 'signal-risk-lab repo', href: 'https://github.com/KIM3310/signal-risk-lab' },
+    liveRoute: 'GET /api/research-pack + GET /api/execution-posture',
+    walkthrough: { label: 'Quant brief', href: QUANT_BRIEF_URL },
+    packet: { label: 'Quant application packet', href: QUANT_APPLICATION_PACKET_URL },
+    resume: { label: 'LLM systems resume', href: RESUME_PDF_URL },
+    note: 'Compact research-review surface focused on signal, risk, and execution viability rather than unsupported performance claims.',
   },
 ];
 
@@ -1113,7 +1189,7 @@ export const UPGRADE_TRACKS: UpgradeTrack[] = [
   },
   {
     title: 'Applied system depth',
-    systems: ['FabTwin Guardian', 'TwinCity UI', 'Fab Ops Yield Control Tower'],
+    systems: ['regulated-case-workbench', 'TwinCity UI', 'Fab Ops Yield Control Tower'],
     currentBase: ['Operator workflows', 'Approval boundaries', 'Stateful control surfaces'],
     nextBuild: 'Make the applied case study feel even more inspectable by tightening scenarios, artifacts, and visual evidence around action boundaries.',
     outcome: 'A stronger bridge from reliability proof to real product-system judgment.',
@@ -1143,10 +1219,10 @@ export const FOCUS_PATHS: FocusPath[] = [
     title: 'Applied high-trust systems',
     summary: 'Reliability가 action-heavy product에 어떻게 들어가는지 보고 싶을 때의 경로입니다.',
     strengths: ['Approval boundaries', 'Operator workflows', 'Decision trace', 'Handoff continuity'],
-    systems: ['FabTwin Guardian', 'TwinCity UI', 'Fab Ops Yield Control Tower'],
+    systems: ['regulated-case-workbench', 'TwinCity UI', 'Fab Ops Yield Control Tower'],
     links: [
-      { label: 'Open FabTwin case study', href: FLAGSHIP_URL },
-      { label: 'Read FabTwin dossier', href: DOSSIER_URL },
+      { label: 'regulated-case-workbench repo', href: 'https://github.com/KIM3310/regulated-case-workbench' },
+      { label: 'Fab Ops repo', href: 'https://github.com/KIM3310/fab-ops-yield-control-tower' },
       { label: 'TwinCity UI repo', href: 'https://github.com/KIM3310/twincity-ui' },
     ],
   },
@@ -1184,12 +1260,12 @@ export const TARGET_TRACKS: TargetTrack[] = [
     summary:
       'Strongest where the bar is defensive engineering: clear service boundaries, failure handling, observability, and user-facing systems that survive real operational complexity.',
     signals: ['Defensive engineering', 'Operator workflows', 'Fallback paths', 'Service-grade surfaces'],
-    reviewPath: ['StagePilot', 'TwinCity UI', 'AegisOps', 'FabTwin Guardian'],
+    reviewPath: ['StagePilot', 'AegisOps', 'TwinCity UI', 'Enterprise LLM Adoption Kit'],
     links: [
       { label: 'Big-tech brief', href: BIG_TECH_SYSTEMS_BRIEF_URL },
+      { label: 'AegisOps repo', href: 'https://github.com/KIM3310/AegisOps' },
       { label: 'TwinCity UI repo', href: 'https://github.com/KIM3310/twincity-ui' },
-      { label: 'Open FabTwin case study', href: FLAGSHIP_URL },
-      { label: 'Read FabTwin dossier', href: DOSSIER_URL },
+      { label: 'Enterprise kit repo', href: 'https://github.com/KIM3310/enterprise-llm-adoption-kit' },
     ],
   },
   {
@@ -1226,12 +1302,40 @@ export const TARGET_TRACKS: TargetTrack[] = [
     summary:
       'Strongest where software has to support high-stakes operator decisions with approval boundaries, evidence trails, and action-heavy workflows instead of chat-only UX.',
     signals: ['Decision support', 'Audit trails', 'Approval boundaries', 'Operational software'],
-    reviewPath: ['FabTwin Guardian', 'regulated-case-workbench', 'Fab Ops Yield Control Tower', 'TwinCity UI'],
+    reviewPath: ['regulated-case-workbench', 'Fab Ops Yield Control Tower', 'TwinCity UI', 'FabTwin Guardian'],
     links: [
       { label: 'Palantir brief', href: PALANTIR_BRIEF_URL },
       { label: 'regulated-case-workbench repo', href: 'https://github.com/KIM3310/regulated-case-workbench' },
       { label: 'Fab Ops Yield Control Tower repo', href: 'https://github.com/KIM3310/fab-ops-yield-control-tower' },
       { label: 'TwinCity UI repo', href: 'https://github.com/KIM3310/twincity-ui' },
+    ],
+  },
+  {
+    title: 'Brokerage / Securities',
+    companies: 'Brokerage · securities · advisor workflow teams',
+    summary:
+      'Best fit where client suitability, portfolio rationale, governed analytics, and advisor handoff need to stay visible in one reviewer-safe workflow.',
+    signals: ['Suitability logic', 'Portfolio review', 'Client handoff', 'Review-safe workflow'],
+    reviewPath: ['advisor-review-desk', 'Nexus-Hive', 'StagePilot'],
+    links: [
+      { label: 'Brokerage brief', href: BROKERAGE_BRIEF_URL },
+      { label: 'Advisor Review Desk', href: 'https://github.com/KIM3310/advisor-review-desk' },
+      { label: 'Nexus-Hive repo', href: 'https://github.com/KIM3310/Nexus-Hive' },
+      { label: 'StagePilot proof', href: PRIMARY_PROOF_URL },
+    ],
+  },
+  {
+    title: 'Quant / Systematic',
+    companies: 'Quant research · systematic trading · risk systems teams',
+    summary:
+      'Best fit where factor research, explicit risk posture, data contracts, and execution readiness matter more than flashy dashboards or unsupported alpha claims.',
+    signals: ['Factor logic', 'Risk posture', 'Execution viability', 'Research artifacts'],
+    reviewPath: ['signal-risk-lab', 'lakehouse-contract-lab', 'StagePilot'],
+    links: [
+      { label: 'Quant brief', href: QUANT_BRIEF_URL },
+      { label: 'Signal Risk Lab', href: 'https://github.com/KIM3310/signal-risk-lab' },
+      { label: 'Lakehouse lab', href: 'https://github.com/KIM3310/lakehouse-contract-lab' },
+      { label: 'StagePilot proof', href: PRIMARY_PROOF_URL },
     ],
   },
 ];
