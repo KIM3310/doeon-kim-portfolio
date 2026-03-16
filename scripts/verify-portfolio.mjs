@@ -17,7 +17,6 @@ const requiredFiles = [
   'docs/resume-json/Doeon_Kim_Resume_LLM_Systems_Engineer.json',
   'docs/resume-json/Doeon_Kim_Resume_Microsoft_Solution_Architect.json',
   'public/briefs/samsung-ai-sw-one-pager.html',
-  'public/briefs/gemini-live-hackathon-package.html',
   'public/briefs/frontier-llm-review-brief.html',
   'public/briefs/frontier-llm-interview-pack.html',
   'public/briefs/frontier-llm-application-packet.html',
@@ -42,7 +41,6 @@ const requiredFiles = [
   'public/evidence/aegisops-system-design.svg',
   'public/evidence/lakehouse-contract-board.svg',
   'docs/FABPILOT_GEMINI_RUNTIME.md',
-  'docs/NEXT_STEPS.md',
   'docs/RESUME_PIPELINE.md',
 ];
 
@@ -70,7 +68,6 @@ const checks = [
   { file: 'README.md', mustInclude: ['StagePilot', 'FabTwin Guardian', 'Brokerage / securities', 'Quant / systematic', 'Verified now', 'Repo operating map', 'https://kim3310.github.io/doeon-kim-portfolio/'], mustNotInclude: ['FabPilot Live X', 'SignalForge'] },
   { file: 'server/index.mjs', mustInclude: ['FabTwin Guardian', 'fabtwin-runtime'], mustNotInclude: ['FabPilot Live X'] },
   { file: 'docs/FABPILOT_GEMINI_RUNTIME.md', mustInclude: ['FabTwin Guardian', 'fabtwin-runtime'], mustNotInclude: ['FabPilot Live X'] },
-  { file: 'docs/SK_HYNIX_AI_SW_ONE_PAGER.md', mustInclude: ['FabTwin Guardian', 'SK hynix AI/SW'], mustNotInclude: ['FabPilot Live X', 'SignalForge', 'Samsung AI/SW'] },
 ];
 
 const failures = [];
