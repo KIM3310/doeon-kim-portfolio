@@ -13,6 +13,7 @@ import {
   RecruiterStep,
   RecruiterQuickPath,
   SubmissionReadinessTrack,
+  ApplicationPacket,
 } from './types';
 
 export const PROFILE: Profile = {
@@ -52,6 +53,9 @@ export const PALANTIR_BRIEF_URL = 'briefs/palantir-review-brief.html';
 export const FRONTIER_INTERVIEW_PACK_URL = 'briefs/frontier-llm-interview-pack.html';
 export const BIG_TECH_WALKTHROUGH_URL = 'briefs/big-tech-systems-walkthrough.html';
 export const DATA_PLATFORM_ARCHITECTURE_PACK_URL = 'briefs/data-platform-architecture-pack.html';
+export const FRONTIER_APPLICATION_PACKET_URL = 'briefs/frontier-llm-application-packet.html';
+export const BIG_TECH_APPLICATION_PACKET_URL = 'briefs/big-tech-systems-application-packet.html';
+export const DATA_PLATFORM_APPLICATION_PACKET_URL = 'briefs/data-platform-application-packet.html';
 
 export const PORTFOLIO_SIGNAL_DECK = [
   {
@@ -120,6 +124,7 @@ export const RECRUITER_QUICK_PATHS: RecruiterQuickPath[] = [
     audience: 'OpenAI / Anthropic / runtime-evals teams',
     outcome: 'Tool reliability, evaluator discipline, and agent runtime posture should be obvious in three clicks.',
     links: [
+      { label: 'Frontier application packet', href: FRONTIER_APPLICATION_PACKET_URL },
       { label: 'Frontier interview pack', href: FRONTIER_INTERVIEW_PACK_URL },
       { label: 'Frontier brief', href: FRONTIER_LLM_BRIEF_URL },
       { label: 'StagePilot proof', href: PRIMARY_PROOF_URL },
@@ -132,6 +137,7 @@ export const RECRUITER_QUICK_PATHS: RecruiterQuickPath[] = [
     audience: 'Google / Meta / Amazon / Microsoft-style product and SRE orgs',
     outcome: 'Defensive engineering, stateful operator UX, and service-grade surfaces should read clearly.',
     links: [
+      { label: 'Big-tech application packet', href: BIG_TECH_APPLICATION_PACKET_URL },
       { label: 'Big-tech walkthrough', href: BIG_TECH_WALKTHROUGH_URL },
       { label: 'Big-tech brief', href: BIG_TECH_SYSTEMS_BRIEF_URL },
       { label: 'StagePilot proof', href: PRIMARY_PROOF_URL },
@@ -144,6 +150,7 @@ export const RECRUITER_QUICK_PATHS: RecruiterQuickPath[] = [
     audience: 'Governed analytics and warehouse-adjacent teams',
     outcome: 'Analytics trust, governed delivery, and auditable operator handoff should show up immediately.',
     links: [
+      { label: 'Data-platform application packet', href: DATA_PLATFORM_APPLICATION_PACKET_URL },
       { label: 'Data-platform pack', href: DATA_PLATFORM_ARCHITECTURE_PACK_URL },
       { label: 'Snowflake brief', href: SNOWFLAKE_BRIEF_URL },
       { label: 'Nexus-Hive repo', href: 'https://github.com/KIM3310/Nexus-Hive' },
@@ -156,6 +163,7 @@ export const RECRUITER_QUICK_PATHS: RecruiterQuickPath[] = [
     audience: 'Data + ML platform teams',
     outcome: 'Pipelines, experimentation, explainability, and operational decision layers should be visible fast.',
     links: [
+      { label: 'Data-platform application packet', href: DATA_PLATFORM_APPLICATION_PACKET_URL },
       { label: 'Data-platform pack', href: DATA_PLATFORM_ARCHITECTURE_PACK_URL },
       { label: 'Databricks brief', href: DATABRICKS_BRIEF_URL },
       { label: 'Lakehouse lab', href: 'https://github.com/KIM3310/lakehouse-contract-lab' },
@@ -360,12 +368,13 @@ export const SUBMISSION_READINESS_TRACKS: SubmissionReadinessTrack[] = [
   {
     title: 'Frontier LLM',
     companies: 'OpenAI · Anthropic · reliability/evals teams',
-    readinessPct: 94,
+    readinessPct: 95,
     status: 'Strong submission surface',
     summary:
       'The public package now shows runtime reliability, protocol coverage, provider tradeoffs, trace observability, failure taxonomy, and checked-in perf evidence instead of a generic agent demo story.',
     strongestSignals: ['Benchmarked tool reliability', 'Protocol coverage', 'Trace observability', 'Provider tradeoff surface'],
     proofLinks: [
+      { label: 'Frontier application packet', href: FRONTIER_APPLICATION_PACKET_URL },
       { label: 'Frontier interview pack', href: FRONTIER_INTERVIEW_PACK_URL },
       { label: 'Frontier brief', href: FRONTIER_LLM_BRIEF_URL },
       { label: 'StagePilot repo', href: 'https://github.com/KIM3310/stage-pilot' },
@@ -376,12 +385,13 @@ export const SUBMISSION_READINESS_TRACKS: SubmissionReadinessTrack[] = [
   {
     title: 'Big Tech Systems',
     companies: 'Google · Meta · Amazon · Microsoft-style product/SRE orgs',
-    readinessPct: 95,
+    readinessPct: 96,
     status: 'Strong submission surface',
     summary:
       'Defensive engineering, fallback posture, reviewable APIs, system-design surfaces, and failure-drill thinking now read quickly across the portfolio and GitHub surface.',
     strongestSignals: ['Service boundaries', 'Operational UX', 'Fallback design', 'Incident/replay evidence'],
     proofLinks: [
+      { label: 'Big-tech application packet', href: BIG_TECH_APPLICATION_PACKET_URL },
       { label: 'Big-tech walkthrough', href: BIG_TECH_WALKTHROUGH_URL },
       { label: 'Big-tech brief', href: BIG_TECH_SYSTEMS_BRIEF_URL },
       { label: 'AegisOps repo', href: 'https://github.com/KIM3310/AegisOps' },
@@ -392,12 +402,13 @@ export const SUBMISSION_READINESS_TRACKS: SubmissionReadinessTrack[] = [
   {
     title: 'Snowflake',
     companies: 'Snowflake',
-    readinessPct: 96,
+    readinessPct: 97,
     status: 'High-fit submission package',
     summary:
       'Nexus-Hive, Lakehouse Contract Lab, enterprise delivery assets, and the governed analytics story now expose metric certification, Spark/Delta proof, warehouse-target posture, and lakehouse delivery framing clearly.',
     strongestSignals: ['Semantic metric layer', 'Spark + Delta proof', 'Warehouse target scorecard', 'Solution architecture framing'],
     proofLinks: [
+      { label: 'Data-platform application packet', href: DATA_PLATFORM_APPLICATION_PACKET_URL },
       { label: 'Data-platform pack', href: DATA_PLATFORM_ARCHITECTURE_PACK_URL },
       { label: 'Snowflake brief', href: SNOWFLAKE_BRIEF_URL },
       { label: 'Nexus-Hive repo', href: 'https://github.com/KIM3310/Nexus-Hive' },
@@ -409,12 +420,13 @@ export const SUBMISSION_READINESS_TRACKS: SubmissionReadinessTrack[] = [
   {
     title: 'Databricks',
     companies: 'Databricks',
-    readinessPct: 96,
+    readinessPct: 97,
     status: 'Strong submission surface',
     summary:
       'The data-platform story now reads through semantic governance, explicit Spark + Delta execution, lakehouse readiness, decision boards, and solution-architecture assets instead of isolated ML or dashboard demos.',
     strongestSignals: ['Spark + Delta execution', 'Lakehouse-fit narrative', 'Decision surfaces', 'Platform-oriented proofs'],
     proofLinks: [
+      { label: 'Data-platform application packet', href: DATA_PLATFORM_APPLICATION_PACKET_URL },
       { label: 'Data-platform pack', href: DATA_PLATFORM_ARCHITECTURE_PACK_URL },
       { label: 'Databricks brief', href: DATABRICKS_BRIEF_URL },
       { label: 'Lakehouse lab', href: 'https://github.com/KIM3310/lakehouse-contract-lab' },
@@ -437,6 +449,45 @@ export const SUBMISSION_READINESS_TRACKS: SubmissionReadinessTrack[] = [
       { label: 'Solution architect resume', href: SOLUTION_ARCHITECT_RESUME_PDF_URL },
     ],
     remainingGap: 'The main remaining gap is more real deployment narrative, not fit of the public system design surface.',
+  },
+];
+
+export const APPLICATION_PACKETS: ApplicationPacket[] = [
+  {
+    title: 'Frontier LLM',
+    audience: 'OpenAI · Anthropic · runtime / evals',
+    claim: 'Submit the runtime-reliability story: StagePilot first, then AegisOps, then ogx. The main proof is bounded failure handling and reviewer-fast observability.',
+    packetHref: FRONTIER_APPLICATION_PACKET_URL,
+    resumeHref: RESUME_PDF_URL,
+    links: [
+      { label: 'StagePilot proof', href: PRIMARY_PROOF_URL },
+      { label: 'AegisOps repo', href: 'https://github.com/KIM3310/AegisOps' },
+      { label: 'ogx repo', href: 'https://github.com/KIM3310/ogx' },
+    ],
+  },
+  {
+    title: 'Big Tech Systems',
+    audience: 'Google · Meta · Amazon · Microsoft-style product / infra',
+    claim: 'Submit the service-boundary story: AegisOps system design, StagePilot runtime posture, and operator-heavy product surfaces like TwinCity UI or FabTwin.',
+    packetHref: BIG_TECH_APPLICATION_PACKET_URL,
+    resumeHref: RESUME_PDF_URL,
+    links: [
+      { label: 'AegisOps repo', href: 'https://github.com/KIM3310/AegisOps' },
+      { label: 'StagePilot proof', href: PRIMARY_PROOF_URL },
+      { label: 'TwinCity UI repo', href: 'https://github.com/KIM3310/twincity-ui' },
+    ],
+  },
+  {
+    title: 'Data Platform',
+    audience: 'Snowflake · Databricks · solution architecture',
+    claim: 'Submit the governed platform story: Nexus-Hive semantic governance, Lakehouse Contract Lab Spark + Delta proof, and Enterprise Kit rollout posture.',
+    packetHref: DATA_PLATFORM_APPLICATION_PACKET_URL,
+    resumeHref: SOLUTION_ARCHITECT_RESUME_PDF_URL,
+    links: [
+      { label: 'Nexus-Hive repo', href: 'https://github.com/KIM3310/Nexus-Hive' },
+      { label: 'Lakehouse lab', href: 'https://github.com/KIM3310/lakehouse-contract-lab' },
+      { label: 'Enterprise Kit', href: 'https://enterprise-llm-kit.pages.dev' },
+    ],
   },
 ];
 
