@@ -9,7 +9,7 @@
   "summary": [
     "Designs and delivers reviewable AI systems from discovery and pilot planning to governed rollout, with strongest public proof in enterprise LLM governance, multimodal operations, and operator-facing workflows.",
     "Turns ambiguous requirements into inspectable architectures with clear trust boundaries, review paths, and handoff artifacts instead of one-off demos.",
-    "Pairs hands-on implementation with customer-facing architecture judgment across cloud, data, runtime, and governance-heavy delivery contexts.",
+    "Pairs hands-on implementation with customer-facing architecture judgment across cloud, data, runtime, and governance-heavy delivery contexts, including live workshop preview and reviewer-safe warehouse proof.",
     "Certified across Microsoft, Snowflake, Databricks, and Palantir-aligned stacks, with public proof surfaces that let reviewers inspect shipped systems quickly."
   ],
   "skill_groups": [
@@ -102,7 +102,7 @@
       "subhead": "Customer architecture and rollout evidence",
       "bullets": [
         "Implemented RBAC, prompt-injection detection, PII redaction, audit logging, JSONL eval pipelines, and rollout artifacts.",
-        "Added rollout-gates and customer-architecture-pack surfaces to support discovery, pilot, rollout, and handoff decisions."
+        "Added rollout-gates, live-workshop-preview, and customer-architecture-pack surfaces to support discovery, pilot, rollout, and handoff decisions."
       ]
     },
     {
@@ -110,15 +110,15 @@
       "tagline": "Governed Analytics Runtime",
       "subhead": "Warehouse-target review surface",
       "bullets": [
-        "Built governed analytics review surfaces with warehouse brief, runtime meta, and target scorecards for SQLite, Snowflake, and Databricks-aligned review."
+        "Built governed analytics review surfaces with warehouse brief, reviewer-query-demo, semantic governance, and target scorecards for SQLite, Snowflake, and Databricks-aligned review."
       ]
     },
     {
-      "name": "The Logistics Prophet",
-      "tagline": "Decision Intelligence Control Tower",
-      "subhead": "Action-to-KPI evidence",
+      "name": "Lakehouse Contract Lab",
+      "tagline": "Spark + Delta Review Surface",
+      "subhead": "Artifact-refresh-only platform proof",
       "bullets": [
-        "Connected recommendation flows to KPI delta using decision-board and action-impact-board surfaces so operational decisions stay inspectable."
+        "Built explicit Spark + Delta medallion proof with quality gates, reviewer-readable table previews, and artifact-refresh review summaries for Snowflake- and Databricks-style architecture conversations."
       ]
     },
     {
@@ -134,7 +134,7 @@
       "tagline": "Multimodal Incident Copilot",
       "subhead": "Operational review and handoff",
       "bullets": [
-        "Combined logs, screenshots, RCA, postmortem-pack, and escalation-readiness surfaces into a reviewer-safe incident workflow."
+        "Combined logs, screenshots, RCA, postmortem-pack, escalation-readiness, and live escalation preview surfaces into a reviewer-safe incident workflow."
       ]
     }
   ],

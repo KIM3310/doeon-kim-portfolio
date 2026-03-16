@@ -6,6 +6,7 @@ const navItems = [
   { name: '90-sec', href: '#recruiter-mode' },
   { name: 'Readiness', href: '#readiness' },
   { name: 'Packets', href: '#packets' },
+  { name: 'Live Proof', href: '#live-proof' },
   { name: 'Evidence', href: '#evidence' },
   { name: 'Briefing', href: '#briefing' },
   { name: 'Projects', href: '#projects' },
