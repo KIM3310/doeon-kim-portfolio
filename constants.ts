@@ -190,6 +190,28 @@ export const RECRUITER_QUICK_PATHS: RecruiterQuickPath[] = [
     ],
   },
   {
+    title: 'IT Operations',
+    audience: 'IT infrastructure · operations · platform support teams',
+    outcome: 'Diagnostics, runtime scorecards, operational handoff, and controlled execution should read clearly across the selected systems.',
+    links: [
+      { label: 'AegisOps repo', href: 'https://github.com/KIM3310/AegisOps' },
+      { label: 'ogx repo', href: 'https://github.com/KIM3310/ogx' },
+      { label: 'The Logistics Prophet', href: 'https://the-logistics-prophet.pages.dev' },
+      { label: 'secure-xl2hwp-local', href: 'https://github.com/KIM3310/secure-xl2hwp-local' },
+    ],
+  },
+  {
+    title: 'Security Operations',
+    audience: 'security operations · restricted environments · governed review teams',
+    outcome: 'Air-gapped posture, auditability, approval boundaries, and review-safe handoff should be obvious quickly.',
+    links: [
+      { label: 'Aegis-Air repo', href: 'https://github.com/KIM3310/Aegis-Air' },
+      { label: 'secure-xl2hwp-local', href: 'https://github.com/KIM3310/secure-xl2hwp-local' },
+      { label: 'honeypot repo', href: 'https://github.com/KIM3310/honeypot' },
+      { label: 'regulated-case-workbench', href: 'https://github.com/KIM3310/regulated-case-workbench' },
+    ],
+  },
+  {
     title: 'Brokerage / Securities',
     audience: 'Brokerage · wealth management · advisor workflow teams',
     outcome: 'Suitability logic, portfolio rationale, and client handoff should read as one reviewer-safe workflow.',
