@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const navItems = [
   { name: '90-sec', href: '#recruiter-mode' },
+  { name: 'Readiness', href: '#readiness' },
   { name: 'Briefing', href: '#briefing' },
   { name: 'Projects', href: '#projects' },
   { name: 'Surfaces', href: '#proof-surfaces' },
