@@ -5,6 +5,7 @@ import BenchmarkProof from './components/BenchmarkProof';
 import Briefing from './components/Briefing';
 import FocusPaths from './components/FocusPaths';
 import Targets from './components/Targets';
+import ExtendedProofSurfaces from './components/ExtendedProofSurfaces';
 import WhyFit from './components/WhyFit';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
@@ -29,6 +30,7 @@ const App: React.FC = () => {
         <BenchmarkProof />
         <Briefing />
         <Projects />
+        <ExtendedProofSurfaces />
         <FocusPaths />
         <Targets />
         <WhyFit />

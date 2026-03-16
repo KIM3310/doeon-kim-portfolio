@@ -63,6 +63,24 @@ export interface RepoCluster {
   repos: RepoClusterEntry[];
 }
 
+export interface ExtendedProofSurface {
+  repo: string;
+  surface: string;
+  surfaceType: string;
+  summary: string;
+  teams: string[];
+  github?: string;
+  demo?: string;
+  note?: string;
+  visibility?: 'public' | 'private';
+}
+
+export interface ExtendedProofCluster {
+  title: string;
+  summary: string;
+  surfaces: ExtendedProofSurface[];
+}
+
 export interface Experience {
   company: string;
   role: string;
