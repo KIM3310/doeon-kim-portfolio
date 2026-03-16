@@ -81,6 +81,21 @@ export interface ExtendedProofCluster {
   surfaces: ExtendedProofSurface[];
 }
 
+export interface RecruiterStep {
+  window: string;
+  title: string;
+  detail: string;
+  label: string;
+  href: string;
+}
+
+export interface RecruiterQuickPath {
+  title: string;
+  audience: string;
+  outcome: string;
+  links: FocusPathLink[];
+}
+
 export interface Experience {
   company: string;
   role: string;

@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import RecruiterMode from './components/RecruiterMode';
 import BenchmarkProof from './components/BenchmarkProof';
 import Briefing from './components/Briefing';
 import FocusPaths from './components/FocusPaths';
@@ -27,6 +28,7 @@ const App: React.FC = () => {
       <Navbar />
       <main id="main-content">
         <Hero />
+        <RecruiterMode />
         <BenchmarkProof />
         <Briefing />
         <Projects />
