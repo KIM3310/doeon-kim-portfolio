@@ -36,15 +36,15 @@ const schema = {
     {
       '@type': 'CreativeWork',
       url: absoluteUrl(FLAGSHIP_URL),
-      name: 'FabTwin Guardian',
-      description: 'Applied high-trust operations case study covering evidence, decision trace, approval-gated action, and signed handoff.',
+      name: 'Applied Ops Archive',
+      description: 'Archived high-trust operations case study covering evidence, decision trace, approval-gated action, and signed handoff.',
       about: { '@id': '#doeon-kim' },
     },
     {
       '@type': 'CreativeWork',
       url: absoluteUrl(DOSSIER_URL),
-      name: 'FabTwin Guardian Dossier',
-      description: 'Supporting dossier covering the trust model, delivery logic, and review path behind FabTwin Guardian.',
+      name: 'Applied Ops Archive Dossier',
+      description: 'Supporting dossier covering the trust model, delivery logic, and review path behind the archived ops case study.',
       about: { '@id': '#doeon-kim' },
     },
     {

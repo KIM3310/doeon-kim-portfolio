@@ -1,7 +1,7 @@
 import http from 'node:http';
 
 const PORT = Number(process.env.PORT || 8080);
-const PRODUCT_NAME = 'FabTwin Guardian';
+const PRODUCT_NAME = 'Applied Ops Archive';
 const MODEL = process.env.FABTWIN_MODEL || process.env.FABPILOT_MODEL || 'gemini-2.5-flash';
 const API_KEY = process.env.GEMINI_API_KEY || '';
 const ALLOW_MOCK = process.env.FABTWIN_ALLOW_MOCK === '1' || process.env.FABPILOT_ALLOW_MOCK === '1';

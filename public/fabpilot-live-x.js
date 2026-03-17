@@ -391,7 +391,7 @@ function setMission(id) {
   if (refs.heroTitle) refs.heroTitle.textContent = mission.heroTitle;
   if (refs.heroCopy) refs.heroCopy.textContent = mission.heroCopy;
   if (refs.heroStatus) refs.heroStatus.textContent = mission.heroStatus;
-  if (refs.heroSummary) refs.heroSummary.textContent = `FabTwin Guardian turns multimodal operational context into a reviewable command surface: evidence graph, decision trace, approval-gated action, signed handoff, and replayable debug evidence.`;
+  if (refs.heroSummary) refs.heroSummary.textContent = `Applied Ops Archive turns multimodal operational context into a reviewable command surface: evidence graph, decision trace, approval-gated action, signed handoff, and replayable debug evidence.`;
 
   renderMissionCards(mission.metrics, refs.heroMetrics, (item) => `<article class="card"><strong>${escapeHtml(item.value)}</strong><span>${escapeHtml(item.label)}</span><p>${escapeHtml(item.detail)}</p></article>`);
   renderMissionCards(mission.pipeline, refs.pipelineStrip, (item) => `<article class="card"><strong>${escapeHtml(item.title)}</strong><p>${escapeHtml(item.copy)}</p></article>`);

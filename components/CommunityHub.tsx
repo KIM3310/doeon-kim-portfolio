@@ -9,7 +9,7 @@ const cards = [
   { label: 'Download resume (PDF)', href: RESUME_PDF_URL, helper: 'Primary AI systems resume aligned to reliability, evaluation, and runtime delivery.', Icon: FileText },
   { label: 'Open StagePilot proof', href: PRIMARY_PROOF_URL, helper: 'Fastest path to the benchmarked reliability story and review surfaces.', Icon: ArrowUpRight },
   { label: 'Open AegisOps system', href: 'https://aegisops-ai-incident-doctor.pages.dev', helper: 'Applied incident system showing reviewable topology, postmortem, and handoff.', Icon: ArrowUpRight },
-  { label: 'Open data-platform pack', href: DATA_PLATFORM_ARCHITECTURE_PACK_URL, helper: 'Fast path for Snowflake, Databricks, and governed analytics conversations.', Icon: FileText },
+  { label: 'Open data-platform pack', href: DATA_PLATFORM_ARCHITECTURE_PACK_URL, helper: 'Fast path for governed analytics, lakehouse delivery, and reviewable platform conversations.', Icon: FileText },
   { label: 'Brokerage packet', href: BROKERAGE_APPLICATION_PACKET_URL, helper: 'Client-review, suitability, and advisor-handoff routing for finance conversations.', Icon: FileText },
   { label: 'GitHub proof', href: PROFILE.github, helper: 'Canonical repos, implementation detail, and public proof surface.', Icon: Github },
   { label: 'LinkedIn', href: PROFILE.linkedin, helper: 'Best path for recruiting follow-up and fast professional context.', Icon: Linkedin },

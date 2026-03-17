@@ -133,8 +133,8 @@
       ]
     },
     {
-      "name": "FabTwin Guardian",
-      "tagline": "Applied High-Trust Operations Case Study",
+      "name": "Applied Ops Archive",
+      "tagline": "Archived High-Trust Operations Case Study",
       "subhead": "Action-heavy system design",
       "bullets": [
         "Applied reliability, approval-boundary, and handoff design to a high-stakes operational system with visible evidence and decision traces."
