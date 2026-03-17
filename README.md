@@ -1,6 +1,6 @@
 # Doeon Kim Portfolio
 
-Portfolio for production-minded AI systems, governed delivery, and reviewable software. **StagePilot** is the clearest reliability surface, while **AegisOps**, **Enterprise LLM Adoption Kit**, **Nexus-Hive**, **regulated-case-workbench**, and an archived ops case study show how the same engineering posture carries into incident response, rollout design, analytics, and high-trust workflows.
+Portfolio for production-minded AI systems, governed delivery, and reviewable software. **StagePilot** is the clearest reliability surface, while **AegisOps**, **quantum-workflow-lab**, **Enterprise LLM Adoption Kit**, **Nexus-Hive**, **regulated-case-workbench**, and an archived ops case study show how the same engineering posture carries into incident response, runtime proof, analytics, and high-trust workflows.
 
 ## What this repo is trying to do
 
@@ -14,7 +14,7 @@ This portfolio is not meant to be a generic personal website. It is a **canonica
 ## Canonical narrative spine
 
 - **Primary proof:** StagePilot
-- **Applied systems:** AegisOps, Enterprise LLM Adoption Kit, Nexus-Hive, regulated-case-workbench, archived ops case study
+- **Applied systems:** AegisOps, quantum-workflow-lab, Enterprise LLM Adoption Kit, Nexus-Hive, regulated-case-workbench, archived ops case study
 - **Primary role positioning:** AI Systems Engineer focused on runtime reliability, evaluation, and operational software
 - **Secondary role positioning:** Solutions Architect for governed AI delivery, warehouse-adjacent systems, and reviewer-safe rollout design
 - **Key themes:** reliability, incident response, governed delivery, analytics trust, review-speed proof surfaces
@@ -32,6 +32,7 @@ Use the portfolio like a guided proof surface, not a flat project gallery.
 
 - **Frontier LLM teams:** start with `StagePilot`, then `AegisOps`, `Aegis-Air`, and `ogx`
 - **Big tech product / SRE orgs:** start with `StagePilot`, `AegisOps`, `TwinCity UI`, and `enterprise-llm-adoption-kit`
+- **Quantum systems / scientific compute:** start with `quantum-workflow-lab`, then `StagePilot`, and use `lakehouse-contract-lab` as the supporting proof for productized execution and artifact discipline
 - **Governed analytics:** start with `Nexus-Hive`, `lakehouse-contract-lab`, and `enterprise-llm-adoption-kit`
 - **Lakehouse delivery:** start with `lakehouse-contract-lab`, `the-logistics-prophet`, `Nexus-Hive`, and `enterprise-llm-adoption-kit`
 - **High-trust workflows:** start with `regulated-case-workbench`, `fab-ops-yield-control-tower`, `twincity-ui`, and use the archived ops case study only when needed
@@ -45,7 +46,7 @@ The site now includes a target-company matrix plus an account-wide repo taxonomy
 ## Focus and selective-use repo policy
 
 - **Always lead with:** `stage-pilot`, `AegisOps`, `enterprise-llm-adoption-kit`, `lakehouse-contract-lab`, `regulated-case-workbench`, and the portfolio front door itself.
-- **Rotate in by target capability / domain:** `Aegis-Air`, `Nexus-Hive`, `twincity-ui`, `secure-xl2hwp-local`, `DocFlow Agent`, `ogx`.
+- **Rotate in by target capability / domain:** `Aegis-Air`, `Nexus-Hive`, `twincity-ui`, `secure-xl2hwp-local`, `DocFlow Agent`, `ogx`, `quantum-workflow-lab`.
 - **Keep out of the first pass unless the role explicitly benefits from broader product signals:** `ecotide`, `the-savior`, `dream-interpretation-pages`, `kbbq-idle-unity`.
 
 ## Submission readiness snapshot
@@ -74,6 +75,7 @@ The site now also includes a visual evidence section with recruiter-fast artifac
 
 - `StagePilot provider benchmark scorecard`
 - `StagePilot perf evidence pack`
+- `Quantum Workflow Lab IBM proof pack`
 - `Nexus-Hive semantic governance board`
 - `Nexus-Hive lakehouse readiness board`
 - `Enterprise workshop readout board`
@@ -101,6 +103,7 @@ The GitHub account is organized around a small number of hiring signals:
 
 - **Review surfaces:** `KIM3310`, `doeon-kim-portfolio`
 - **Reliability and agent runtimes:** `stage-pilot`, `AegisOps`, `Aegis-Air`, `ogx`, `gemini-cli-tool-runtime`
+- **Quantum and scientific workflows:** `quantum-workflow-lab`
 - **Operational software and governed workflows:** `twincity-ui`, `fab-ops-yield-control-tower`, `regulated-case-workbench`, `secure-xl2hwp-local`, `honeypot`, `smallbiz-ops-copilot`
 - **Data, platform, and analytics systems:** `enterprise-llm-adoption-kit`, `lakehouse-contract-lab`, `Nexus-Hive`, `the-logistics-prophet`, `beaver-study-orchestrator`, `DocFlow Agent`
 - **Product and mobile experiments:** `SteadyTap`, `ecotide`, `the-savior`, `kbbq-idle-unity`, `dream-interpretation-pages`
