@@ -8,7 +8,7 @@
   ],
   "summary": [
     "Builds production-minded AI systems with strongest public proof in tool-calling reliability, multimodal incident workflows, and reviewable runtime design.",
-    "Improved StagePilot benchmark success from 29.17% baseline to 87.50% with parser recovery and to 100.00% with bounded retry, then exposed the same runtime story through live review, trace observability, and regression-gate surfaces.",
+    "Improved StagePilot benchmark success from 29.17% baseline to 87.50% with parser recovery, and to 100.00% on the current checked-in 24-case benchmark with bounded retry, then exposed the same runtime story through live review, trace observability, and regression-gate surfaces.",
     "Extends the same reliability posture into bounded live reviewer APIs for incident review, governed analytics, document QA, air-gapped operations, and high-trust workflow delivery."
   ],
   "skill_groups": [
@@ -101,7 +101,7 @@
       "subhead": "Primary public proof",
       "bullets": [
         "Built the canonical repo for parser middleware, StagePilot orchestration, and BenchLab eval tooling.",
-        "Improved checked-in benchmark success from 29.17% to 87.50% and 100.00% with bounded retry and reviewable proof surfaces.",
+        "Improved checked-in 24-case benchmark success from 29.17% to 87.50%, and to 100.00% with bounded retry on the current snapshot and reviewable proof surfaces.",
         "Added live-review, failure-taxonomy, trace-observability, regression-gate, and protocol-matrix APIs so parser drift, retries, and cross-protocol behavior stay inspectable."
       ]
     },

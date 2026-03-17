@@ -69,7 +69,7 @@ export const PORTFOLIO_SIGNAL_DECK = [
   {
     label: 'Primary proof',
     value: 'StagePilot',
-    detail: 'Checked-in tool-calling benchmark lift from 29.17% baseline to 87.50% with middleware and 100.00% with bounded retry.',
+    detail: 'Checked-in 24-case benchmark lift from 29.17% baseline to 87.50% with middleware, and 100.00% with bounded retry on the current snapshot.',
   },
   {
     label: 'Applied system',
@@ -342,7 +342,7 @@ export const PROJECTS: Project[] = [
     category: 'Primary proof / LLM Reliability',
     role: 'Parser middleware, orchestration, and benchmark-driven tool-calling hardening',
     achievements: [
-      'Improved checked-in benchmark success from 29.17% baseline to 87.50%, and 100.00% with bounded retry.',
+      'Improved checked-in 24-case benchmark success from 29.17% baseline to 87.50%, and to 100.00% with bounded retry on the current snapshot.',
       'Unifies parser middleware, orchestration, and BenchLab evaluation into one inspectable proof surface.',
       'Provides the strongest public reliability signal before the portfolio moves into applied product systems.',
     ],
@@ -368,7 +368,7 @@ export const PROJECTS: Project[] = [
     achievements: [
       'Built a local-first incident review engine for teams that cannot send production telemetry to public APIs.',
       'Returned structured RCA with severity, failure bucket, evidence, and immediate actions through FastAPI endpoints.',
-      'Reached 32/32 replay rubric checks with 100% severity and failure-bucket accuracy on the bundled suite.',
+      'Reached 32/32 replay rubric checks on the bundled suite, with severity and failure-bucket labels matching expected outputs across all 4 replay cases.',
     ],
     tech: ['FastAPI', 'Ollama', 'Replay Evals', 'SSE', 'Terraform'],
     links: { demo: 'https://aegis-air.pages.dev', github: 'https://github.com/KIM3310/Aegis-Air' },

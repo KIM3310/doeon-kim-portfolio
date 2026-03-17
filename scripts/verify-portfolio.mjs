@@ -46,7 +46,7 @@ const requiredFiles = [
 
 const checks = [
   { file: 'constants.ts', mustInclude: ['StagePilot', 'AegisOps', 'AI engineer + solutions architect'], mustNotInclude: ['FabPilot Live X', 'SignalForge', 'Amazon Nova', 'NVIDIA-ready', 'Gemini Live Agent Challenge', 'Samsung-ready'] },
-  { file: 'components/Hero.tsx', mustInclude: ['StagePilot', '29.17% to 87.50% to 100.00%', 'Open AegisOps system'], mustNotInclude: ['FabPilot Live X', 'SignalForge', 'Amazon Nova', 'NVIDIA-ready', 'Samsung-ready'] },
+  { file: 'components/Hero.tsx', mustInclude: ['StagePilot', 'Current checked-in 24-case benchmark snapshot', 'Open AegisOps system'], mustNotInclude: ['FabPilot Live X', 'SignalForge', 'Amazon Nova', 'NVIDIA-ready', 'Samsung-ready'] },
   { file: 'public/fabpilot-live-x.html', mustInclude: ['Applied Ops Archive', 'Archived high-trust ops proof'], mustNotInclude: ['FabPilot Live X', 'SignalForge', 'Amazon Nova', 'NVIDIA-ready', 'Samsung-ready', 'GitLab AI Hackathon', 'SK hynix-ready'] },
   { file: 'public/fabpilot-dossier.html', mustInclude: ['Applied Ops Archive', 'high-trust-ops-ready'], mustNotInclude: ['FabPilot Live X', 'SignalForge', 'Samsung-ready', 'SK hynix-ready'] },
   { file: 'public/briefs/frontier-llm-review-brief.html', mustInclude: ['Frontier LLM', 'StagePilot', 'AegisOps'], mustNotInclude: ['FabPilot Live X', 'SignalForge'] },

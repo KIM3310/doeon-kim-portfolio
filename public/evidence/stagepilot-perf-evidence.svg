@@ -7,7 +7,7 @@
   <rect x="56" y="170" width="320" height="214" rx="20" fill="#101722" stroke="#314259"/>
   <text x="82" y="214" fill="#F8FAFC" font-family="Helvetica, Arial, sans-serif" font-size="24" font-weight="700">Observed Run</text>
   <text x="82" y="252" fill="#DCE5EE" font-family="Helvetica, Arial, sans-serif" font-size="18">6 VUs / 36 iterations / 75s cap</text>
-  <text x="82" y="284" fill="#DCE5EE" font-family="Helvetica, Arial, sans-serif" font-size="18">108 requests / 100% checks pass</text>
+  <text x="82" y="284" fill="#DCE5EE" font-family="Helvetica, Arial, sans-serif" font-size="18">108 requests / all scripted checks pass</text>
   <text x="82" y="316" fill="#DCE5EE" font-family="Helvetica, Arial, sans-serif" font-size="18">0% failed requests</text>
   <text x="82" y="348" fill="#8DDFC6" font-family="Helvetica, Arial, sans-serif" font-size="18">p95 1668ms / max 2241ms</text>
 

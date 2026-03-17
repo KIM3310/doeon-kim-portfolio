@@ -64,7 +64,7 @@ const SubmissionReadiness: React.FC = () => {
               </div>
 
               <div className="mb-6 border border-white/8 bg-white/[0.02] p-4">
-                <p className="mb-2 text-xs uppercase tracking-[0.24em] text-white/45">Remaining gap to true 100%</p>
+                <p className="mb-2 text-xs uppercase tracking-[0.24em] text-white/45">Remaining gap to production-ready confidence</p>
                 <p className="text-sm leading-7 text-white/72">{track.remainingGap}</p>
               </div>
 
