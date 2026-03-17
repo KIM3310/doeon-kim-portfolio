@@ -45,6 +45,7 @@ export const PORTFOLIO_GISCUS_CATEGORY_ID = 'DIC_kwDOROWHZs4C3zga';
 export const FLAGSHIP_URL = 'fabpilot-live-x.html';
 export const DOSSIER_URL = 'fabpilot-dossier.html';
 export const PRIMARY_PROOF_URL = 'https://stage-pilot.pages.dev';
+export const QUANTUM_WORKFLOW_URL = 'https://github.com/KIM3310/quantum-workflow-lab';
 export const RESUME_PDF_URL = 'resume/Doeon_Kim_Resume_LLM_Systems_Engineer.pdf';
 export const SOLUTION_ARCHITECT_RESUME_PDF_URL = 'resume/Doeon_Kim_Resume_Microsoft_Solution_Architect.pdf';
 export const FRONTIER_LLM_BRIEF_URL = 'briefs/frontier-llm-review-brief.html';
@@ -77,8 +78,8 @@ export const PORTFOLIO_SIGNAL_DECK = [
   },
   {
     label: 'Supporting proof',
-    value: 'Enterprise Kit + Nexus-Hive + Lakehouse Lab',
-    detail: 'Governed rollout, analytics trust, and warehouse-facing proof make the main reliability claim believable outside a single runtime demo.',
+    value: 'Quantum Workflow Lab + Enterprise Kit + Nexus-Hive',
+    detail: 'Quantum workflow proof, governed rollout, and analytics trust make the main reliability claim believable outside a single runtime demo.',
   },
   {
     label: 'Hiring Signal',
@@ -150,6 +151,16 @@ export const RECRUITER_QUICK_PATHS: RecruiterQuickPath[] = [
       { label: 'StagePilot proof', href: PRIMARY_PROOF_URL },
       { label: 'AegisOps repo', href: 'https://github.com/KIM3310/AegisOps' },
       { label: 'TwinCity UI repo', href: 'https://github.com/KIM3310/twincity-ui' },
+    ],
+  },
+  {
+    title: 'Quantum Systems',
+    audience: 'Quantum software · scientific compute · runtime product teams',
+    outcome: 'Real IBM hardware proof, local-backend comparison, and chemistry mini-workflow should read as one backend product story.',
+    links: [
+      { label: 'Quantum Workflow Lab repo', href: QUANTUM_WORKFLOW_URL },
+      { label: 'StagePilot proof', href: PRIMARY_PROOF_URL },
+      { label: 'Lakehouse lab', href: 'https://github.com/KIM3310/lakehouse-contract-lab' },
     ],
   },
   {
@@ -307,6 +318,13 @@ export const WHY_TEAMS_HIRE_ME = [
       'Enterprise LLM Adoption Kit, regulated-case-workbench, Honeypot, archived ops case에서 audit, fallback, async jobs, signed handoff, export flows를 설계했습니다. 그래서 시스템이 멈춰야 할 지점과 사람이 이어받아야 할 지점이 명확합니다.',
     match: 'Runtime safety, approval boundaries, governance controls, high-trust delivery',
   },
+  {
+    keyword: 'Quantum Systems',
+    title: '양자 실행을 제품형 백엔드로 구조화합니다',
+    description:
+      'quantum-workflow-lab에서 IBM Quantum real hardware, Braket local/hardware 경로, ISA transpilation, runtime options, usage 기록, chemistry mini-workflow를 하나의 reviewer-safe API/UI로 묶었습니다.',
+    match: 'Quantum software, backend productization, runtime orchestration, scientific workflow',
+  },
 ];
 
 export const SKILLS: SkillCategory[] = [
@@ -354,6 +372,18 @@ export const PROJECTS: Project[] = [
     ],
     tech: ['FastAPI', 'Ollama', 'Replay Evals', 'SSE', 'Terraform'],
     links: { demo: 'https://aegis-air.pages.dev', github: 'https://github.com/KIM3310/Aegis-Air' },
+  },
+  {
+    title: 'Quantum Workflow Lab — Real-Backend Quantum Workflow Surface',
+    category: 'Supporting proof / Quantum Systems',
+    role: 'IBM Quantum Runtime, Braket execution, experiment APIs, and review-safe quantum workflow packaging',
+    achievements: [
+      'Captured real IBM Quantum hardware evidence across Bell, GHZ, QAOA-style, and runtime-option experiments on ibm_torino.',
+      'Exposed ISA transpilation, usage, queue posture, local-backend comparison, and chemistry mini-workflow through API and UI surfaces.',
+      'Turns quantum execution into a backend product surface rather than leaving it as notebook-only proof.',
+    ],
+    tech: ['Python', 'FastAPI', 'Qiskit Runtime', 'Amazon Braket', 'Quantum workflow APIs'],
+    links: { github: QUANTUM_WORKFLOW_URL },
   },
   {
     title: 'Enterprise LLM Adoption Kit',
@@ -1289,6 +1319,19 @@ export const TARGET_TRACKS: TargetTrack[] = [
     ],
   },
   {
+    title: 'Quantum Systems',
+    companies: 'Quantum software · scientific compute · backend product teams',
+    summary:
+      'Best fit where real hardware execution, transpilation, runtime options, and domain workflow packaging need to stay inspectable as one backend system.',
+    signals: ['IBM Quantum Runtime', 'ISA-aware transpilation', 'Usage and queue visibility', 'Chemistry mini-workflow'],
+    reviewPath: ['quantum-workflow-lab', 'StagePilot', 'Lakehouse Contract Lab'],
+    links: [
+      { label: 'Quantum Workflow Lab repo', href: QUANTUM_WORKFLOW_URL },
+      { label: 'StagePilot proof', href: PRIMARY_PROOF_URL },
+      { label: 'Lakehouse lab', href: 'https://github.com/KIM3310/lakehouse-contract-lab' },
+    ],
+  },
+  {
     title: 'Governed Analytics',
     companies: 'Governed analytics teams',
     summary:
@@ -1494,6 +1537,13 @@ export const REPO_CLUSTERS: RepoCluster[] = [
     ],
   },
   {
+    title: 'Quantum and scientific systems',
+    summary: 'Projects that show real quantum execution, scientific workflow packaging, and backend productization instead of notebook-only proof.',
+    repos: [
+      { name: 'quantum-workflow-lab', focus: 'IBM Quantum + Braket workflow surface with ISA-aware proof, runtime options, and chemistry mini-workflow.', github: QUANTUM_WORKFLOW_URL },
+    ],
+  },
+  {
     title: 'Reliability and agent runtimes',
     summary: 'Where tool use, runtime safety, replayability, and bounded automation are clearest in public.',
     repos: [
@@ -1547,6 +1597,7 @@ export const SECONDARY_PROJECTS: SecondaryProject[] = [
   { title: 'secure-xl2hwp-local', focus: 'Air-gapped document automation pipeline for local environments', github: 'https://github.com/KIM3310/secure-xl2hwp-local', demo: 'https://secure-xl2hwp-local.pages.dev' },
   { title: 'beaver-study-orchestrator', focus: 'Syllabus parsing, risk analysis, and study-plan orchestration workflow', github: 'https://github.com/KIM3310/beaver-study-orchestrator' },
   { title: 'The Logistics Prophet', focus: 'Predictive logistics control tower with auditability and explainability', github: 'https://github.com/KIM3310/the-logistics-prophet', demo: 'https://the-logistics-prophet.pages.dev', note: 'Ontology, audit chain, and action workflow proof' },
+  { title: 'Quantum Workflow Lab', focus: 'IBM Quantum and Braket execution with ISA-aware proof and chemistry mini-workflow packaging', github: QUANTUM_WORKFLOW_URL },
   { title: 'DocFlow Agent', focus: 'Document analysis and learning-package export pipeline', github: 'https://github.com/KIM3310/Upstage-DocuAgent', demo: 'https://upstage-docuagent.pages.dev' },
   { title: 'SteadyTap', focus: 'Accessibility-first iOS app with integrated FastAPI backend', github: 'https://github.com/KIM3310/SteadyTap', demo: 'https://steadytap.pages.dev' },
   { title: 'advisor-review-desk', focus: 'Client suitability, portfolio rationale, and advisor handoff workflow for brokerage-style reviews', github: 'https://github.com/KIM3310/advisor-review-desk', demo: 'https://kim3310.github.io/advisor-review-desk/' },
