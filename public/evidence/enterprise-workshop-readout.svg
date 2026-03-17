@@ -17,7 +17,7 @@
 
   <rect x="318" y="326" width="224" height="130" rx="18" fill="#20263B" stroke="#14B8A6"/>
   <text x="342" y="366" fill="#99F6E4" font-family="Arial, sans-serif" font-size="14" font-weight="700">PLATFORM FIT</text>
-  <text x="342" y="410" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="28" font-weight="700">Snowflake / DBX / Palantir</text>
+  <text x="342" y="410" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="28" font-weight="700">Governed analytics / lakehouse / high-trust</text>
   <text x="342" y="438" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="16">Customer architecture pack decides the story</text>
 
   <rect x="564" y="326" width="224" height="130" rx="18" fill="#20263B" stroke="#A855F7"/>

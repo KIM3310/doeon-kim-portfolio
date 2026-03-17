@@ -19,7 +19,7 @@
   <rect x="540" y="172" width="210" height="116" rx="18" fill="#16323A" stroke="#3B82F6"/>
   <text x="564" y="210" fill="#93C5FD" font-family="Arial, sans-serif" font-size="14" font-weight="700">WAREHOUSE TARGETS</text>
   <text x="564" y="252" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="42" font-weight="700">3</text>
-  <text x="564" y="278" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="16">SQLite demo, Snowflake contract, Databricks contract</text>
+  <text x="564" y="278" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="16">SQLite demo, governed analytics contract, lakehouse contract</text>
 
   <rect x="774" y="172" width="318" height="116" rx="18" fill="#16323A" stroke="#A855F7"/>
   <text x="798" y="210" fill="#E9D5FF" font-family="Arial, sans-serif" font-size="14" font-weight="700">APPROVAL BOUNDARY</text>
@@ -31,7 +31,7 @@
   <text x="104" y="428" fill="#99F6E4" font-family="Arial, sans-serif" font-size="18" font-weight="700">1. Semantic contract</text>
   <text x="340" y="428" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="18">Certified metrics and review-required rules are explicit before the question is run.</text>
   <text x="104" y="482" fill="#93C5FD" font-family="Arial, sans-serif" font-size="18" font-weight="700">2. Warehouse survival</text>
-  <text x="340" y="482" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="18">Snowflake and Databricks fit stays visible as a contract story instead of being implied by SQLite alone.</text>
+  <text x="340" y="482" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="18">Governed analytics and lakehouse fit stay visible as a contract story instead of being implied by SQLite alone.</text>
   <text x="104" y="536" fill="#FCD34D" font-family="Arial, sans-serif" font-size="18" font-weight="700">3. Approval posture</text>
   <text x="340" y="536" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="18">Query approval board and policy rules keep risky analytics separated from healthy traffic.</text>
   <text x="104" y="590" fill="#E9D5FF" font-family="Arial, sans-serif" font-size="18" font-weight="700">4. Review pack</text>

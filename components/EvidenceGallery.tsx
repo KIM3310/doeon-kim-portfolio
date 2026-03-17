@@ -26,7 +26,7 @@ const evidenceItems = [
   },
   {
     title: 'Nexus-Hive Lakehouse Readiness',
-    subtitle: 'Snowflake / Databricks evidence',
+    subtitle: 'Governed analytics / lakehouse evidence',
     image: 'evidence/nexus-lakehouse-readiness.svg',
     href: 'https://github.com/KIM3310/Nexus-Hive',
     detail: 'Compresses connector posture, query-tag transport, and platform-facing delivery boundaries into one lakehouse reviewer surface.',

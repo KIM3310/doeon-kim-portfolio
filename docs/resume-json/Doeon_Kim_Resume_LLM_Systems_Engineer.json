@@ -50,7 +50,7 @@
       "Governance and rollout evidence",
       "Implemented RBAC, prompt-injection detection, PII redaction, audit logging, JSONL eval pipelines, and rollout artifacts.",
       "Added rollout-gates and customer-architecture-pack surfaces so governance and deployment decisions stay reviewable.",
-      "FabTwin Guardian | Applied High-Trust Operations Case Study",
+      "Applied Ops Archive | Applied High-Trust Operations Case Study",
       "Action-heavy system design",
       "Applied reliability, approval-boundary, and handoff design to a high-stakes operational system with visible evidence and decision traces.",
       "EDUCATION",

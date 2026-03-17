@@ -1,6 +1,6 @@
 # FabTwin Runtime Bridge
 
-FabTwin Guardian supports an optional Gemini-backed runtime bridge for generating a **live operator brief**.
+Applied Ops Archive supports an optional Gemini-backed runtime bridge for generating a **live operator brief**.
 
 ## What this adds
 
@@ -43,7 +43,7 @@ Example:
 fabpilot-live-x.html?api=https://your-runtime-url
 ```
 
-The file names stay on the legacy `fabpilot-*` path for backwards-compatible public links; the product narrative is FabTwin Guardian.
+The file names stay on the legacy `fabpilot-*` path for backwards-compatible public links; the product narrative is Applied Ops Archive.
 
 ## Cloud Run intent
 
