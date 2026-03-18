@@ -20,7 +20,14 @@ const readBody = async (req) => {
   const chunks = [];
   for await (const chunk of req) chunks.push(chunk);
   const raw = Buffer.concat(chunks).toString('utf8');
-  return raw ? JSON.parse(raw) : {};
+  if (!raw) return {};
+  try {
+    return JSON.parse(raw);
+  } catch {
+    const err = new Error('Invalid JSON in request body');
+    err.statusCode = 400;
+    throw err;
+  }
 };
 
 const buildPrompt = (mission) => `
@@ -128,7 +135,8 @@ const server = http.createServer(async (req, res) => {
       const result = await generateLiveBrief(mission);
       return json(res, 200, { ok: true, mode: API_KEY ? 'gemini' : 'mock', ...result });
     } catch (error) {
-      return json(res, 500, {
+      const status = error?.statusCode || 500;
+      return json(res, status, {
         ok: false,
         error: error instanceof Error ? error.message : 'Unknown runtime failure',
       });
