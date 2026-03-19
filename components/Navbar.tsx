@@ -88,18 +88,18 @@ const Navbar: React.FC = () => {
           </div>
 
           <div className="hidden md:flex items-center gap-8">
-            <div className="flex items-baseline space-x-8 lg:space-x-12 print:hidden">
+            <nav aria-label="Main navigation" className="flex items-baseline space-x-8 lg:space-x-12 print:hidden">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
                   onClick={(e) => handleClick(e, item.href)}
-                  className="text-sm text-white/60 hover:text-white transition-colors font-medium tracking-wide"
+                  className="text-sm text-white/60 hover:text-white transition-colors font-medium tracking-wide relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-accent-gold after:transition-all after:duration-300 hover:after:w-full"
                 >
                   {item.name}
                 </a>
               ))}
-            </div>
+            </nav>
           </div>
 
           <div className="md:hidden print:hidden">
