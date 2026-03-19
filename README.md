@@ -2,6 +2,17 @@
 
 Personal portfolio site showcasing AI systems, operational software, and data platform projects. Built with React + TypeScript, deployed on GitHub Pages.
 
+## Quick Start
+
+```bash
+git clone https://github.com/KIM3310/doeon-kim-portfolio.git
+cd doeon-kim-portfolio
+npm install
+npm run dev
+```
+
+Open `http://localhost:5173` in your browser.
+
 ## Projects
 
 The portfolio is organized around a few focus areas:
