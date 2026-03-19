@@ -28,7 +28,7 @@ export const PROFILE: Profile = {
   linkedin: 'https://www.linkedin.com/in/doeon-kim-4742a2388',
   catchphrase: 'Production-minded AI systems with clear proof surfaces',
   intro:
-    'I build production-minded AI systems, governed delivery workflows, and operational software that are easy to review. StagePilot is the clearest reliability surface, while AegisOps, Enterprise LLM Adoption Kit, Nexus-Hive, regulated-case-workbench, and an archived ops case study show how the same engineering posture carries into incident response, rollout design, analytics, and high-trust workflows.',
+    'I build production-minded AI systems, governed delivery workflows, and operational software that are easy to review. StagePilot (25% to 90% on 40-case expanded suite) is the clearest reliability surface, while AegisOps, Enterprise LLM Adoption Kit, Nexus-Hive, regulated-case-workbench, and an archived ops case study show how the same engineering posture carries into incident response, rollout design, analytics, and high-trust workflows. 2,050 tests across the portfolio.',
 };
 
 export const PORTFOLIO_LIVE_URL = 'https://kim3310.github.io/doeon-kim-portfolio/';
@@ -69,7 +69,7 @@ export const PORTFOLIO_SIGNAL_DECK = [
   {
     label: 'Primary proof',
     value: 'StagePilot',
-    detail: 'Checked-in 24-case benchmark lift from 29.17% baseline to 87.50% with middleware, and 100.00% with bounded retry on the current snapshot.',
+    detail: 'Expanded 40-case benchmark suite (13 edge cases including adversarial, unicode, oversized payloads) lifted from 25% baseline to 90% with middleware and bounded retry.',
   },
   {
     label: 'Applied system',
@@ -229,7 +229,7 @@ export const RECRUITER_QUICK_PATHS: RecruiterQuickPath[] = [
     links: [
       { label: 'Brokerage application packet', href: BROKERAGE_APPLICATION_PACKET_URL },
       { label: 'Brokerage brief', href: BROKERAGE_BRIEF_URL },
-      { label: 'Advisor Review Desk', href: 'https://github.com/KIM3310/advisor-review-desk' },
+      { label: 'Finance Review Platform', href: 'https://github.com/KIM3310/signal-risk-lab' },
       { label: 'Nexus-Hive repo', href: 'https://github.com/KIM3310/Nexus-Hive' },
       { label: 'StagePilot proof', href: PRIMARY_PROOF_URL },
     ],
@@ -241,7 +241,7 @@ export const RECRUITER_QUICK_PATHS: RecruiterQuickPath[] = [
     links: [
       { label: 'Quant application packet', href: QUANT_APPLICATION_PACKET_URL },
       { label: 'Quant brief', href: QUANT_BRIEF_URL },
-      { label: 'Signal Risk Lab', href: 'https://github.com/KIM3310/signal-risk-lab' },
+      { label: 'Finance Review Platform', href: 'https://github.com/KIM3310/signal-risk-lab' },
       { label: 'Lakehouse lab', href: 'https://github.com/KIM3310/lakehouse-contract-lab' },
       { label: 'StagePilot proof', href: PRIMARY_PROOF_URL },
     ],
@@ -251,31 +251,24 @@ export const RECRUITER_QUICK_PATHS: RecruiterQuickPath[] = [
 export const STAGEPILOT_BENCHMARK_STEPS = [
   {
     label: 'Baseline',
-    rate: 29.17,
-    helper: 'Prompt-mode tool calls before parser hardening',
+    rate: 25,
+    helper: 'Prompt-mode tool calls before parser hardening (40-case expanded suite)',
     accentClass: 'bg-white/20',
     textClass: 'text-white/70',
   },
   {
-    label: 'Middleware',
-    rate: 87.5,
-    helper: 'Parser recovery plus schema coercion',
-    accentClass: 'bg-accent-soft/70',
-    textClass: 'text-accent-soft',
-  },
-  {
-    label: 'Bounded retry',
-    rate: 100,
-    helper: 'One controlled retry closes the remaining failures',
+    label: 'Middleware + bounded retry',
+    rate: 90,
+    helper: '13 edge cases (adversarial, unicode, oversized payloads) included',
     accentClass: 'bg-accent-gold',
     textClass: 'text-accent-gold',
   },
 ] as const;
 
 export const STAGEPILOT_BENCHMARK_DELTAS = [
-  { label: 'Middleware vs baseline', value: '+58.33pp' },
-  { label: 'Retry vs middleware', value: '+12.50pp' },
-  { label: 'Retry vs baseline', value: '+70.83pp' },
+  { label: 'Expanded suite vs baseline', value: '+65pp' },
+  { label: 'Edge-case coverage', value: '13 adversarial / unicode / oversized' },
+  { label: 'Total cases', value: '40 (up from 24)' },
 ] as const;
 
 export const STAGEPILOT_REVIEW_FLOW = [
@@ -342,11 +335,11 @@ export const PROJECTS: Project[] = [
     category: 'Primary proof / LLM Reliability',
     role: 'Parser middleware, orchestration, and benchmark-driven tool-calling hardening',
     achievements: [
-      'Improved checked-in 24-case benchmark success from 29.17% baseline to 87.50%, and to 100.00% with bounded retry on the current snapshot.',
-      'Unifies parser middleware, orchestration, and BenchLab evaluation into one inspectable proof surface.',
+      'Improved 40-case expanded benchmark (13 edge cases: adversarial, unicode, oversized payloads) from 25% baseline to 90% with middleware and bounded retry.',
+      'Unifies parser middleware, orchestration, OpenTelemetry traces, and BenchLab evaluation into one inspectable proof surface.',
       'Provides the strongest public reliability signal before the portfolio moves into applied product systems.',
     ],
-    tech: ['TypeScript', 'Tool Calling', 'Benchmarks', 'Middleware', 'Runtime APIs'],
+    tech: ['TypeScript', 'Tool Calling', 'Benchmarks', 'Middleware', 'Runtime APIs', 'OpenTelemetry'],
     links: { demo: PRIMARY_PROOF_URL, github: 'https://github.com/KIM3310/stage-pilot', youtube: 'https://youtu.be/6trgTH1vX4M' },
   },
   {
@@ -356,6 +349,7 @@ export const PROJECTS: Project[] = [
     achievements: [
       'Combines logs and monitoring screenshots into structured RCA, action plans, and handoff artifacts.',
       'Added JSON/schema guardrails plus BYOK and no-key modes to keep the incident flow demoable across environments.',
+      'Shares a common eval framework with Aegis-Air for consistent replay and regression discipline.',
       'Validated replay and workflow coverage with 34 passing tests.',
     ],
     tech: ['Gemini', 'GCP', 'Google Workspace', 'Multimodal AI'],
@@ -368,6 +362,7 @@ export const PROJECTS: Project[] = [
     achievements: [
       'Built a local-first incident review engine for teams that cannot send production telemetry to public APIs.',
       'Returned structured RCA with severity, failure bucket, evidence, and immediate actions through FastAPI endpoints.',
+      'Shares a common eval framework with AegisOps for consistent replay and regression discipline.',
       'Reached 32/32 replay rubric checks on the bundled suite, with severity and failure-bucket labels matching expected outputs across all 4 replay cases.',
     ],
     tech: ['FastAPI', 'Ollama', 'Replay Evals', 'SSE', 'Terraform'],
@@ -392,9 +387,10 @@ export const PROJECTS: Project[] = [
     achievements: [
       'Implemented RBAC, injection detection, PII redaction, audit hash logging, and citation-oriented response controls.',
       'Added JSONL eval pipelines, red-team reporting, and rollout drafts to support enterprise rollout decisions.',
+      'Integrated OpenTelemetry for end-to-end trace visibility across governance and rollout workflows.',
       'Proves that safe AI delivery requires governance, not just model quality.',
     ],
-    tech: ['FastAPI', 'React', 'Security', 'Evaluation'],
+    tech: ['FastAPI', 'React', 'Security', 'Evaluation', 'OpenTelemetry'],
     links: { github: 'https://github.com/KIM3310/enterprise-llm-adoption-kit' },
   },
   {
@@ -422,11 +418,12 @@ export const PROJECTS: Project[] = [
     links: { demo: 'https://twincity-ui.pages.dev', github: 'https://github.com/KIM3310/twincity-ui' },
   },
   {
-    title: 'Fab Ops Yield Control Tower',
+    title: 'Semiconductor Ops Platform (fab-ops + scanner-field-response)',
     category: 'Applied operator systems',
-    role: 'Alarm triage, lot-risk workflow, release gates, and signed handoff',
+    role: 'Alarm triage, lot-risk workflow, release gates, scanner-field response, and signed handoff',
     achievements: [
       'Built a manufacturing control tower that keeps alarms, lot risk, tool ownership, and signed handoff in one reviewable flow.',
+      'Consolidated scanner-field-response domain into a unified semiconductor ops surface.',
       'Made hold / watch / release-ready posture visible before the next shift acts.',
       'Provides the operator-workflow baseline that makes the archived ops case credible as a product system.',
     ],
@@ -434,15 +431,16 @@ export const PROJECTS: Project[] = [
     links: { github: 'https://github.com/KIM3310/fab-ops-yield-control-tower' },
   },
   {
-    title: 'ogx — Multi-Agent Orchestration CLI',
+    title: 'oh-my-gemini v1.0.0 (ogx) — Unified Agent CLI',
     category: 'Agent systems / CLI',
-    role: 'Project-scoped runtime state, safe worker control, operational API surface',
+    role: 'HUD, MCP integration, task graphs, deep replan, safe worker control',
     achievements: [
-      'Built a multi-agent orchestration CLI with safe-by-default local execution and project-scoped runtime state.',
+      'Unified CLI with HUD, MCP server integration, task graphs, and deep replan for multi-agent orchestration.',
+      'Built safe-by-default local execution with project-scoped runtime state and automation guardrails.',
       'Added setup, doctor, launch, team, status, and cancel flows plus notification hooks.',
       'Extends the orchestration story behind high-trust AI systems.',
     ],
-    tech: ['TypeScript', 'CLI', 'tmux', 'Cloud Run'],
+    tech: ['TypeScript', 'CLI', 'tmux', 'Cloud Run', 'MCP'],
     links: { github: 'https://github.com/KIM3310/ogx' },
   },
 ];
@@ -454,8 +452,8 @@ export const SUBMISSION_READINESS_TRACKS: SubmissionReadinessTrack[] = [
     readinessPct: 95,
     status: 'Strong submission surface',
     summary:
-      'The public package now shows runtime reliability, protocol coverage, provider tradeoffs, trace observability, failure taxonomy, and checked-in perf evidence instead of a generic agent demo story.',
-    strongestSignals: ['Benchmarked tool reliability', 'Protocol coverage', 'Trace observability', 'Provider tradeoff surface'],
+      'The public package now shows runtime reliability on a 40-case expanded suite (25% to 90%), protocol coverage, provider tradeoffs, OpenTelemetry traces, failure taxonomy, and 2,050 tests across the portfolio.',
+    strongestSignals: ['Benchmarked tool reliability (40-case expanded)', 'Protocol coverage', 'OpenTelemetry traces', 'Provider tradeoff surface'],
     proofLinks: [
       { label: 'Frontier application packet', href: FRONTIER_APPLICATION_PACKET_URL },
       { label: 'Frontier interview pack', href: FRONTIER_INTERVIEW_PACK_URL },
@@ -587,11 +585,11 @@ export const APPLICATION_PACKETS: ApplicationPacket[] = [
   {
     title: 'Brokerage / Securities',
     audience: 'Brokerage · advisor workflow · client review',
-    claim: 'Submit the client-review story: advisor-review-desk first, then Nexus-Hive for governed analytics posture, then StagePilot for reliability depth behind the workflow.',
+    claim: 'Submit the client-review story: Finance Review Platform first, then Nexus-Hive for governed analytics posture, then StagePilot for reliability depth behind the workflow.',
     packetHref: BROKERAGE_APPLICATION_PACKET_URL,
     resumeHref: SOLUTION_ARCHITECT_RESUME_PDF_URL,
     links: [
-      { label: 'Advisor Review Desk', href: 'https://github.com/KIM3310/advisor-review-desk' },
+      { label: 'Finance Review Platform', href: 'https://github.com/KIM3310/signal-risk-lab' },
       { label: 'Nexus-Hive repo', href: 'https://github.com/KIM3310/Nexus-Hive' },
       { label: 'StagePilot proof', href: PRIMARY_PROOF_URL },
     ],
@@ -599,11 +597,11 @@ export const APPLICATION_PACKETS: ApplicationPacket[] = [
   {
     title: 'Quant / Systematic',
     audience: 'Quant research · systematic trading · risk review',
-    claim: 'Submit the research-surface story: signal-risk-lab first, then lakehouse-contract-lab for data posture, then StagePilot for reliability and evaluation depth.',
+    claim: 'Submit the research-surface story: Finance Review Platform first, then lakehouse-contract-lab for data posture, then StagePilot for reliability and evaluation depth.',
     packetHref: QUANT_APPLICATION_PACKET_URL,
     resumeHref: RESUME_PDF_URL,
     links: [
-      { label: 'Signal Risk Lab', href: 'https://github.com/KIM3310/signal-risk-lab' },
+      { label: 'Finance Review Platform', href: 'https://github.com/KIM3310/signal-risk-lab' },
       { label: 'Lakehouse lab', href: 'https://github.com/KIM3310/lakehouse-contract-lab' },
       { label: 'StagePilot proof', href: PRIMARY_PROOF_URL },
     ],
@@ -663,8 +661,8 @@ export const LIVE_PROOF_TRACKS: LiveProofTrack[] = [
     title: 'Brokerage / Securities',
     audience: 'client suitability · advisor workflow · review-safe portfolio change logic',
     status: 'review-only-live',
-    staticProof: { label: 'Advisor Review Desk', href: 'https://github.com/KIM3310/advisor-review-desk' },
-    liveRepo: { label: 'advisor-review-desk repo', href: 'https://github.com/KIM3310/advisor-review-desk' },
+    staticProof: { label: 'Finance Review Platform', href: 'https://github.com/KIM3310/signal-risk-lab' },
+    liveRepo: { label: 'Finance Review Platform repo', href: 'https://github.com/KIM3310/signal-risk-lab' },
     liveRoute: 'GET /api/review-pack + GET /api/advisor-handoff',
     walkthrough: { label: 'Brokerage brief', href: BROKERAGE_BRIEF_URL },
     packet: { label: 'Brokerage application packet', href: BROKERAGE_APPLICATION_PACKET_URL },
@@ -675,8 +673,8 @@ export const LIVE_PROOF_TRACKS: LiveProofTrack[] = [
     title: 'Quant / Systematic',
     audience: 'factor research · risk posture · execution viability',
     status: 'review-only-live',
-    staticProof: { label: 'Signal Risk Lab', href: 'https://github.com/KIM3310/signal-risk-lab' },
-    liveRepo: { label: 'signal-risk-lab repo', href: 'https://github.com/KIM3310/signal-risk-lab' },
+    staticProof: { label: 'Finance Review Platform', href: 'https://github.com/KIM3310/signal-risk-lab' },
+    liveRepo: { label: 'Finance Review Platform repo', href: 'https://github.com/KIM3310/signal-risk-lab' },
     liveRoute: 'GET /api/research-pack + GET /api/execution-posture',
     walkthrough: { label: 'Quant brief', href: QUANT_BRIEF_URL },
     packet: { label: 'Quant application packet', href: QUANT_APPLICATION_PACKET_URL },
@@ -899,14 +897,7 @@ export const VERIFIED_DEPLOYMENTS: DeploymentCheck[] = [
     checkedAt: '2026-03-16T23:08:00+09:00',
     category: 'support',
   },
-  {
-    repo: 'kbbq-idle-unity',
-    href: 'https://kbbq-idle-unity.pages.dev',
-    title: 'KBBQ Idle | Playable WebGL',
-    statusCode: 200,
-    checkedAt: '2026-03-16T23:08:00+09:00',
-    category: 'support',
-  },
+  /* kbbq-idle-unity — archived */
   {
     repo: 'SteadyTap',
     href: 'https://steadytap.pages.dev',
@@ -926,7 +917,7 @@ export const REPO_OPERATING_MATRIX: RepoOperatingEntry[] = [
     aiEngineerFit: 10,
     solutionArchitectFit: 6,
     targetTracks: ['Frontier LLM', 'Big tech systems'],
-    strength: 'Benchmarked tool-calling reliability, live review lane, trace observability, and regression gates.',
+    strength: 'Benchmarked tool-calling reliability (40-case expanded suite), live review lane, OpenTelemetry traces, and regression gates.',
     note: 'Best first-pass repo for runtime, evals, and failure-recovery interviews.',
   },
   {
@@ -1017,27 +1008,17 @@ export const REPO_OPERATING_MATRIX: RepoOperatingEntry[] = [
     strength: 'Governed analytics runtime with reviewer-query-demo, semantic governance, and warehouse-target scorecards.',
     note: 'Bring it forward when a role is explicitly warehouse-adjacent.',
   },
+  /* advisor-review-desk consolidated into Finance Review Platform (signal-risk-lab) */
   {
-    name: 'advisor-review-desk',
-    tier: 'Selective use',
-    href: 'https://github.com/KIM3310/advisor-review-desk',
-    primaryRole: 'Solutions Architect',
-    aiEngineerFit: 5,
-    solutionArchitectFit: 7,
-    targetTracks: ['Brokerage', 'Customer-facing workflow AI'],
-    strength: 'Client suitability, portfolio rationale, and advisor handoff stay visible in one reviewer-safe workflow.',
-    note: 'Use when a role values customer-facing decision support and reviewable operational logic.',
-  },
-  {
-    name: 'signal-risk-lab',
+    name: 'Finance Review Platform (signal-risk-lab + advisor-review-desk)',
     tier: 'Selective use',
     href: 'https://github.com/KIM3310/signal-risk-lab',
     primaryRole: 'AI Engineer',
     aiEngineerFit: 6,
-    solutionArchitectFit: 5,
-    targetTracks: ['Quant', 'Research-oriented systems'],
-    strength: 'Signal, risk, and execution posture stay inspectable through one bounded research surface.',
-    note: 'Useful when a role values factor logic, explicit risk posture, and reviewer-readable artifacts.',
+    solutionArchitectFit: 6,
+    targetTracks: ['Quant', 'Brokerage', 'Research-oriented systems'],
+    strength: 'Unified finance review platform covering signal/risk research and advisory review desk in one surface.',
+    note: 'Consolidates signal-risk-lab and advisor-review-desk into a single finance review platform.',
   },
   {
     name: 'twincity-ui',
@@ -1073,25 +1054,25 @@ export const REPO_OPERATING_MATRIX: RepoOperatingEntry[] = [
     note: 'Best as a document-workflow supplement, not the main flagship.',
   },
   {
-    name: 'fab-ops-yield-control-tower',
+    name: 'Semiconductor Ops Platform (fab-ops + scanner-field-response)',
     tier: 'Selective use',
     href: 'https://github.com/KIM3310/fab-ops-yield-control-tower',
     primaryRole: 'Solutions Architect',
     aiEngineerFit: 6,
     solutionArchitectFit: 8,
     targetTracks: ['High-trust workflows', 'Industrial software'],
-    strength: 'Release board, lot-risk workflow, and signed shift handoff.',
-    note: 'Good when reviewers value industrial ops and action-heavy workflow software.',
+    strength: 'Release board, lot-risk workflow, scanner-field response, and signed shift handoff.',
+    note: 'Consolidated fab-ops and scanner-field-response into a unified semiconductor ops surface.',
   },
   {
-    name: 'ogx',
+    name: 'oh-my-gemini v1.0.0 (ogx)',
     tier: 'Selective use',
     href: 'https://github.com/KIM3310/ogx',
     primaryRole: 'AI Engineer',
     aiEngineerFit: 7,
     solutionArchitectFit: 5,
     targetTracks: ['Frontier LLM', 'Runtime ops'],
-    strength: 'CLI-first agent runtime with automation guardrails, tmux teams, and operator surfaces.',
+    strength: 'Unified CLI with HUD, MCP, task graphs, deep replan, automation guardrails, and operator surfaces.',
     note: 'Useful for runtime tooling conversations after StagePilot.',
   },
   {
@@ -1162,17 +1143,7 @@ export const REPO_OPERATING_MATRIX: RepoOperatingEntry[] = [
     note: 'Private and secondary to ogx for recruiter-first stories.',
     visibility: 'private',
   },
-  {
-    name: 'ecotide',
-    tier: 'De-emphasize',
-    href: 'https://github.com/KIM3310/ecotide',
-    primaryRole: 'AI Engineer',
-    aiEngineerFit: 2,
-    solutionArchitectFit: 3,
-    targetTracks: ['Product breadth'],
-    strength: 'SwiftUI polish and product-minded simulation design.',
-    note: 'Keep for breadth, not for first-pass target-company routing.',
-  },
+  /* ecotide — archived */
   {
     name: 'the-savior',
     tier: 'De-emphasize',
@@ -1184,28 +1155,8 @@ export const REPO_OPERATING_MATRIX: RepoOperatingEntry[] = [
     strength: 'Cloudflare delivery, provider fallback, and escalation readiness.',
     note: 'Do not lead with it unless a role explicitly values consumer/wellness signals.',
   },
-  {
-    name: 'dream-interpretation-pages',
-    tier: 'De-emphasize',
-    href: 'https://github.com/KIM3310/dream-interpretation-pages',
-    primaryRole: 'AI Engineer',
-    aiEngineerFit: 4,
-    solutionArchitectFit: 3,
-    targetTracks: ['Consumer web AI'],
-    strength: 'Pages Functions + OpenAI integration with abuse controls and review pack.',
-    note: 'Technically fine, but weaker than the flagship tracks for target hiring lanes.',
-  },
-  {
-    name: 'kbbq-idle-unity',
-    tier: 'De-emphasize',
-    href: 'https://github.com/KIM3310/kbbq-idle-unity',
-    primaryRole: 'AI Engineer',
-    aiEngineerFit: 2,
-    solutionArchitectFit: 2,
-    targetTracks: ['Game/product breadth'],
-    strength: 'WebGL shipping, release readiness, and simulation execution.',
-    note: 'Keep for personality and breadth, not for the recruiter-first path.',
-  },
+  /* dream-interpretation-pages — archived */
+  /* kbbq-idle-unity — archived */
 ];
 
 export const EXPERIENCE: Experience[] = [
@@ -1215,17 +1166,19 @@ export const EXPERIENCE: Experience[] = [
 ];
 
 export const CERTIFICATIONS: Certification[] = [
-  { issuer: 'Microsoft', name: 'AI-900: Microsoft Azure AI Fundamentals' },
+  /* --- Highlight tier --- */
   { issuer: 'Snowflake', name: 'SnowPro Associate: Platform Certification' },
-  { issuer: 'Palantir', name: 'Foundry Data Engineer Associate' },
-  { issuer: 'Palantir', name: 'Foundry Foundations' },
   { issuer: 'Databricks', name: 'AWS Databricks Platform Architect' },
+  { issuer: 'Palantir', name: 'Foundry Data Engineer Associate' },
+  { issuer: 'Datadog', name: 'Datadog Observability Certifications' },
+  /* --- Supporting --- */
   { issuer: 'Databricks', name: 'GCP Databricks Platform Architect' },
+  { issuer: 'Palantir', name: 'Foundry Foundations' },
+  { issuer: 'Microsoft', name: 'AI-900: Microsoft Azure AI Fundamentals' },
   { issuer: 'Databricks', name: 'Databricks Fundamentals' },
   { issuer: 'IBM', name: 'IBM Artificial Intelligence Fundamentals' },
   { issuer: 'IBM', name: 'IBM Cloud Computing Fundamentals' },
   { issuer: 'IBM', name: 'IBM Cyber Security Fundamentals' },
-  { issuer: 'Datadog', name: 'Datadog Observability Certifications' },
   { issuer: 'SAP', name: 'SAP Cloud Platform Integration Service' },
 ];
 
@@ -1239,7 +1192,7 @@ export const UPGRADE_TRACKS: UpgradeTrack[] = [
   },
   {
     title: 'Applied system depth',
-    systems: ['regulated-case-workbench', 'TwinCity UI', 'Fab Ops Yield Control Tower'],
+    systems: ['regulated-case-workbench', 'TwinCity UI', 'Semiconductor Ops Platform'],
     currentBase: ['Operator workflows', 'Approval boundaries', 'Stateful control surfaces'],
     nextBuild: 'Make the applied case study feel even more inspectable by tightening scenarios, artifacts, and visual evidence around action boundaries.',
     outcome: 'A stronger bridge from reliability proof to real product-system judgment.',
@@ -1269,7 +1222,7 @@ export const FOCUS_PATHS: FocusPath[] = [
     title: 'Applied high-trust systems',
     summary: 'Reliability가 action-heavy product에 어떻게 들어가는지 보고 싶을 때의 경로입니다.',
     strengths: ['Approval boundaries', 'Operator workflows', 'Decision trace', 'Handoff continuity'],
-    systems: ['regulated-case-workbench', 'TwinCity UI', 'Fab Ops Yield Control Tower'],
+    systems: ['regulated-case-workbench', 'TwinCity UI', 'Semiconductor Ops Platform'],
     links: [
       { label: 'regulated-case-workbench repo', href: 'https://github.com/KIM3310/regulated-case-workbench' },
       { label: 'Fab Ops repo', href: 'https://github.com/KIM3310/fab-ops-yield-control-tower' },
@@ -1365,11 +1318,11 @@ export const TARGET_TRACKS: TargetTrack[] = [
     summary:
       'Strongest where software has to support high-stakes operator decisions with approval boundaries, evidence trails, and action-heavy workflows instead of chat-only UX.',
     signals: ['Decision support', 'Audit trails', 'Approval boundaries', 'Operational software'],
-    reviewPath: ['regulated-case-workbench', 'Fab Ops Yield Control Tower', 'TwinCity UI', 'Applied Ops Archive'],
+    reviewPath: ['regulated-case-workbench', 'Semiconductor Ops Platform', 'TwinCity UI', 'Applied Ops Archive'],
     links: [
       { label: 'High-trust workflow brief', href: PALANTIR_BRIEF_URL },
       { label: 'regulated-case-workbench repo', href: 'https://github.com/KIM3310/regulated-case-workbench' },
-      { label: 'Fab Ops Yield Control Tower repo', href: 'https://github.com/KIM3310/fab-ops-yield-control-tower' },
+      { label: 'Semiconductor Ops Platform repo', href: 'https://github.com/KIM3310/fab-ops-yield-control-tower' },
       { label: 'TwinCity UI repo', href: 'https://github.com/KIM3310/twincity-ui' },
     ],
   },
@@ -1379,10 +1332,10 @@ export const TARGET_TRACKS: TargetTrack[] = [
     summary:
       'Best fit where client suitability, portfolio rationale, governed analytics, and advisor handoff need to stay visible in one reviewer-safe workflow.',
     signals: ['Suitability logic', 'Portfolio review', 'Client handoff', 'Review-safe workflow'],
-    reviewPath: ['advisor-review-desk', 'Nexus-Hive', 'StagePilot'],
+    reviewPath: ['Finance Review Platform', 'Nexus-Hive', 'StagePilot'],
     links: [
       { label: 'Brokerage brief', href: BROKERAGE_BRIEF_URL },
-      { label: 'Advisor Review Desk', href: 'https://github.com/KIM3310/advisor-review-desk' },
+      { label: 'Finance Review Platform', href: 'https://github.com/KIM3310/signal-risk-lab' },
       { label: 'Nexus-Hive repo', href: 'https://github.com/KIM3310/Nexus-Hive' },
       { label: 'StagePilot proof', href: PRIMARY_PROOF_URL },
     ],
@@ -1393,10 +1346,10 @@ export const TARGET_TRACKS: TargetTrack[] = [
     summary:
       'Best fit where factor research, explicit risk posture, data contracts, and execution readiness matter more than flashy dashboards or unsupported alpha claims.',
     signals: ['Factor logic', 'Risk posture', 'Execution viability', 'Research artifacts'],
-    reviewPath: ['signal-risk-lab', 'lakehouse-contract-lab', 'StagePilot'],
+    reviewPath: ['Finance Review Platform', 'lakehouse-contract-lab', 'StagePilot'],
     links: [
       { label: 'Quant brief', href: QUANT_BRIEF_URL },
-      { label: 'Signal Risk Lab', href: 'https://github.com/KIM3310/signal-risk-lab' },
+      { label: 'Finance Review Platform', href: 'https://github.com/KIM3310/signal-risk-lab' },
       { label: 'Lakehouse lab', href: 'https://github.com/KIM3310/lakehouse-contract-lab' },
       { label: 'StagePilot proof', href: PRIMARY_PROOF_URL },
     ],
@@ -1407,6 +1360,7 @@ export const PORTFOLIO_RUNTIME_META = [
   { label: 'Scope', value: '8 selected systems + 11 extended proof surfaces' },
   { label: 'Stack', value: 'React 19 + Vite 6' },
   { label: 'Focus', value: 'Agent Reliability / Runtime Safety / High-Trust AI' },
+  { label: 'Tests', value: '2,050 tests across portfolio' },
   { label: 'Public Proof', value: 'Canonical repos + live surfaces + reviewer handoff routes' },
   { label: 'Portfolio URL', value: 'kim3310.github.io/doeon-kim-portfolio' },
 ];
@@ -1475,14 +1429,7 @@ export const EXTENDED_PROOF_CLUSTERS: ExtendedProofCluster[] = [
         note: 'Private repo',
         visibility: 'private',
       },
-      {
-        repo: 'dream-interpretation-pages',
-        surface: '/api/review-pack',
-        surfaceType: 'HTTP route',
-        summary: 'Packages abuse posture, model contract, and fail-closed rules so the public AI surface reads as controlled, not naive.',
-        teams: ['Consumer AI', 'Abuse controls', 'Cloudflare delivery'],
-        github: 'https://github.com/KIM3310/dream-interpretation-pages',
-      },
+      /* dream-interpretation-pages — archived */
     ],
   },
   {
@@ -1507,22 +1454,7 @@ export const EXTENDED_PROOF_CLUSTERS: ExtendedProofCluster[] = [
         teams: ['Consumer AI', 'Safety UX', 'Fallback design'],
         github: 'https://github.com/KIM3310/the-savior',
       },
-      {
-        repo: 'kbbq-idle-unity',
-        surface: '/ops/release-readiness',
-        surfaceType: 'HTTP route',
-        summary: 'Makes launch blockers and release posture explicit instead of treating gameplay polish as the whole product story.',
-        teams: ['Product systems', 'Release engineering', 'Gameplay ops'],
-        github: 'https://github.com/KIM3310/kbbq-idle-unity',
-      },
-      {
-        repo: 'ecotide',
-        surface: 'EcoTideCLI reviewer handoff contract',
-        surfaceType: 'CLI contract',
-        summary: 'Preserves scenario focus, drift, and next action when iOS rendering or motion telemetry is unavailable.',
-        teams: ['Native product', 'Fallback UX', 'Simulation systems'],
-        github: 'https://github.com/KIM3310/ecotide',
-      },
+      /* kbbq-idle-unity, ecotide — archived */
     ],
   },
 ];
@@ -1550,7 +1482,7 @@ export const REPO_CLUSTERS: RepoCluster[] = [
       { name: 'stage-pilot', focus: 'Benchmark-led tool-calling reliability runtime with parser recovery and bounded retry.', github: 'https://github.com/KIM3310/stage-pilot', demo: PRIMARY_PROOF_URL },
       { name: 'AegisOps', focus: 'Multimodal incident copilot with replayable handoff and structured RCA output.', github: 'https://github.com/KIM3310/AegisOps', demo: 'https://aegisops-ai-incident-doctor.pages.dev' },
       { name: 'Aegis-Air', focus: 'Local-first incident review engine for restricted or air-gapped environments.', github: 'https://github.com/KIM3310/Aegis-Air', demo: 'https://aegis-air.pages.dev' },
-      { name: 'ogx', focus: 'Project-scoped multi-agent orchestration CLI with safe worker control.', github: 'https://github.com/KIM3310/ogx' },
+      { name: 'oh-my-gemini v1.0.0 (ogx)', focus: 'Unified CLI with HUD, MCP, task graphs, deep replan, and safe worker control.', github: 'https://github.com/KIM3310/ogx' },
       { name: 'gemini-cli-tool-runtime', focus: 'Private runtime/orchestration layer behind earlier Gemini CLI experiments.', note: 'Private repo' },
     ],
   },
@@ -1559,7 +1491,7 @@ export const REPO_CLUSTERS: RepoCluster[] = [
     summary: 'Repos that show operator UX, approval boundaries, audit trails, and action-heavy software instead of generic assistant patterns.',
     repos: [
       { name: 'twincity-ui', focus: 'Digital twin triage console with spatial context and realtime fallback posture.', github: 'https://github.com/KIM3310/twincity-ui', demo: 'https://twincity-ui.pages.dev' },
-      { name: 'fab-ops-yield-control-tower', focus: 'Semiconductor-style release-gate and handoff workflow for alarms, lot risk, and recovery.', github: 'https://github.com/KIM3310/fab-ops-yield-control-tower' },
+      { name: 'Semiconductor Ops Platform (fab-ops + scanner-field-response)', focus: 'Unified semiconductor ops surface covering alarms, lot risk, scanner-field response, release gates, and signed handoff.', github: 'https://github.com/KIM3310/fab-ops-yield-control-tower' },
       { name: 'regulated-case-workbench', focus: 'Case inbox, redaction review, approval, and signed export manifest workflow.', github: 'https://github.com/KIM3310/regulated-case-workbench', demo: 'https://regulated-case-workbench.pages.dev' },
       { name: 'secure-xl2hwp-local', focus: 'Air-gapped document automation pipeline for controlled local environments.', github: 'https://github.com/KIM3310/secure-xl2hwp-local', demo: 'https://secure-xl2hwp-local.pages.dev' },
       { name: 'honeypot', focus: 'Azure-based document handover copilot with retrieval-backed review flow.', github: 'https://github.com/KIM3310/honeypot', demo: 'https://honeypot-proto.vercel.app' },
@@ -1582,10 +1514,8 @@ export const REPO_CLUSTERS: RepoCluster[] = [
     summary: 'Smaller product surfaces that broaden the account beyond infra without diluting the main thesis.',
     repos: [
       { name: 'SteadyTap', focus: 'Accessibility-first iOS app with calibration, coaching, and progress tracking.', github: 'https://github.com/KIM3310/SteadyTap', demo: 'https://steadytap.pages.dev' },
-      { name: 'ecotide', focus: 'SwiftUI environmental simulation app with motion-driven telemetry overlays.', github: 'https://github.com/KIM3310/ecotide' },
       { name: 'the-savior', focus: 'Mind-body stabilization app with BYOK/fallback providers and mobile packaging.', github: 'https://github.com/KIM3310/the-savior' },
-      { name: 'kbbq-idle-unity', focus: 'Unity WebGL idle tycoon game with economy, progression, and prestige systems.', github: 'https://github.com/KIM3310/kbbq-idle-unity' },
-      { name: 'dream-interpretation-pages', focus: 'Cloudflare Pages app for OpenAI-backed dream interpretation flows.', github: 'https://github.com/KIM3310/dream-interpretation-pages' },
+      /* ecotide, kbbq-idle-unity, dream-interpretation-pages — archived */
     ],
   },
 ];
@@ -1600,6 +1530,6 @@ export const SECONDARY_PROJECTS: SecondaryProject[] = [
   { title: 'Quantum Workbench', focus: 'IBM Quantum and Braket execution with ISA-aware proof and chemistry mini-workflow packaging', github: QUANTUM_WORKFLOW_URL },
   { title: 'DocFlow Agent', focus: 'Document analysis and learning-package export pipeline', github: 'https://github.com/KIM3310/Upstage-DocuAgent', demo: 'https://upstage-docuagent.pages.dev' },
   { title: 'SteadyTap', focus: 'Accessibility-first iOS app with integrated FastAPI backend', github: 'https://github.com/KIM3310/SteadyTap', demo: 'https://steadytap.pages.dev' },
-  { title: 'advisor-review-desk', focus: 'Client suitability, portfolio rationale, and advisor handoff workflow for brokerage-style reviews', github: 'https://github.com/KIM3310/advisor-review-desk', demo: 'https://kim3310.github.io/advisor-review-desk/' },
-  { title: 'signal-risk-lab', focus: 'Factor signal, risk posture, and execution review surface for quant-style workflows', github: 'https://github.com/KIM3310/signal-risk-lab', demo: 'https://kim3310.github.io/signal-risk-lab/' },
+  /* advisor-review-desk consolidated into Finance Review Platform */
+  { title: 'Finance Review Platform (signal-risk-lab + advisor-review-desk)', focus: 'Unified finance review: factor signal, risk posture, advisory review desk, and execution viability in one surface', github: 'https://github.com/KIM3310/signal-risk-lab', demo: 'https://kim3310.github.io/signal-risk-lab/' },
 ];

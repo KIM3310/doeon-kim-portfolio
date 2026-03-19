@@ -15,10 +15,11 @@ const Certifications: React.FC = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {CERTIFICATIONS.map((cert, idx) => (
-          <div key={idx} className="bg-white/[0.02] border border-white/5 p-6 hover:border-accent-gold/30 transition-all flex flex-col justify-between group">
+          <div key={idx} className={`p-6 hover:border-accent-gold/30 transition-all flex flex-col justify-between group ${idx < 4 ? 'bg-white/[0.04] border-2 border-accent-gold/25' : 'bg-white/[0.02] border border-white/5'}`}>
             <div>
-              <Award className="w-5 h-5 text-accent-gold mb-4 group-hover:scale-110 transition-transform" />
+              <Award className={`w-5 h-5 mb-4 group-hover:scale-110 transition-transform ${idx < 4 ? 'text-accent-gold' : 'text-accent-gold/60'}`} />
               <h4 className="text-white font-medium text-sm mb-2 leading-snug">{cert.name}</h4>
+              {idx < 4 && <span className="inline-block mt-1 text-[10px] uppercase tracking-[0.2em] text-accent-gold/70 border border-accent-gold/20 px-2 py-0.5">Key credential</span>}
             </div>
             <p className="text-white/30 text-xs mt-4 uppercase tracking-widest">{cert.issuer}</p>
           </div>

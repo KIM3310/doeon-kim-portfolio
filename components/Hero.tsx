@@ -137,8 +137,8 @@ const Hero: React.FC = () => {
                 <div className="flex items-center justify-between gap-3">
                   <div>
                     <p className="text-[11px] uppercase tracking-[0.24em] text-accent-gold/70">Fastest proof to inspect</p>
-                    <h2 className="mt-2 text-2xl font-serif-heading text-white">29.17% to 87.50% to 100.00%</h2>
-                    <p className="mt-2 text-xs text-primary-muted">Current checked-in 24-case benchmark snapshot</p>
+                    <h2 className="mt-2 text-2xl font-serif-heading text-white">25% to 90%</h2>
+                    <p className="mt-2 text-xs text-primary-muted">40-case expanded suite (13 edge cases: adversarial, unicode, oversized payloads)</p>
                   </div>
                   <BarChart3 className="h-5 w-5 text-accent-gold" />
                 </div>
@@ -200,7 +200,7 @@ const Hero: React.FC = () => {
                 <p className="text-xs uppercase tracking-[0.28em] text-accent-gold/80">Primary proof surface</p>
                 <h2 className="mt-2 font-serif-heading text-3xl text-white">StagePilot</h2>
               </div>
-              <span className="rounded-full border border-white/10 px-3 py-1 text-[11px] uppercase tracking-[0.22em] text-white/45">Current 24-case snapshot</span>
+              <span className="rounded-full border border-white/10 px-3 py-1 text-[11px] uppercase tracking-[0.22em] text-white/45">40-case expanded suite</span>
             </div>
 
             <p className="mb-6 text-sm leading-7 text-white/72">
@@ -210,7 +210,7 @@ const Hero: React.FC = () => {
             <div className="grid gap-4 md:grid-cols-3">
               <article className="border border-white/10 bg-black/20 p-4">
                 <p className="text-[11px] uppercase tracking-[0.24em] text-white/35">Baseline</p>
-                <p className="mt-2 text-sm text-white">29.17% success before hardening</p>
+                <p className="mt-2 text-sm text-white">25% success before hardening (40-case suite)</p>
               </article>
               <article className="border border-white/10 bg-black/20 p-4">
                 <p className="text-[11px] uppercase tracking-[0.24em] text-white/35">Middleware</p>
@@ -218,7 +218,7 @@ const Hero: React.FC = () => {
               </article>
               <article className="border border-white/10 bg-black/20 p-4">
                 <p className="text-[11px] uppercase tracking-[0.24em] text-white/35">Bounded retry</p>
-                <p className="mt-2 text-sm text-white">100.00% on the current 24-case set with one controlled recovery pass</p>
+                <p className="mt-2 text-sm text-white">90% on the 40-case expanded suite with middleware and bounded retry</p>
               </article>
             </div>
 
