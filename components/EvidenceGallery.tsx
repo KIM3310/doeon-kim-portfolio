@@ -12,7 +12,7 @@ const evidenceItems = [
   },
   {
     title: 'StagePilot Perf Evidence',
-    subtitle: 'Frontier + big-tech runtime evidence',
+    subtitle: 'Frontier runtime evidence',
     image: 'evidence/stagepilot-perf-evidence.svg',
     href: 'https://github.com/KIM3310/stage-pilot',
     detail: 'Makes the checked-in k6 rehearsal legible so runtime pressure, release guardrails, and benchmark-backed correctness can be read before the code.',
@@ -40,7 +40,7 @@ const evidenceItems = [
   },
   {
     title: 'AegisOps System Design',
-    subtitle: 'Big-tech operational evidence',
+    subtitle: 'Operational systems evidence',
     image: 'evidence/aegisops-system-design.svg',
     href: 'https://github.com/KIM3310/AegisOps',
     detail: 'Shows topology, hot endpoints, failure drills, and commander handoff in one architecture surface instead of making reviewers infer the system from screenshots.',

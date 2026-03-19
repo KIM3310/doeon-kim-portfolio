@@ -125,8 +125,8 @@ const Projects: React.FC = () => {
     <Section id="projects">
       <div className="flex flex-col md:flex-row justify-between items-end mb-16 border-b border-white/10 pb-8">
         <div>
-          <h2 className="text-3xl md:text-4xl font-serif-heading font-medium text-white mb-2">Flagship + Proof Chain</h2>
-          <p className="text-primary-muted font-light">A smaller, stronger set of systems organized around one believable flagship thesis.</p>
+          <h2 className="text-3xl md:text-4xl font-serif-heading font-medium text-white mb-2">Featured Systems</h2>
+          <p className="text-primary-muted font-light">A smaller, stronger set of systems organized around one clear reliability thesis.</p>
         </div>
       </div>
 
@@ -143,7 +143,7 @@ const Projects: React.FC = () => {
             <h3 className="font-serif-heading text-2xl text-white md:text-3xl">Additional active repos</h3>
           </div>
           <p className="max-w-2xl text-sm leading-relaxed text-primary-muted">
-            These are active canonical repos that reinforce the flagship story, but are intentionally positioned behind the selected set.
+            These are active repos that reinforce the main project story, but are intentionally positioned behind the selected set.
           </p>
         </div>
 

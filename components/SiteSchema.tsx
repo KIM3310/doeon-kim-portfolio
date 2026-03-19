@@ -1,5 +1,5 @@
 import React from 'react';
-import { DOSSIER_URL, FLAGSHIP_URL, PORTFOLIO_LIVE_URL, PRIMARY_PROOF_URL, PROFILE } from '../constants';
+import { DOSSIER_URL, FEATURED_CASE_URL, PORTFOLIO_LIVE_URL, PRIMARY_PROOF_URL, PROFILE } from '../constants';
 
 const siteUrl = PORTFOLIO_LIVE_URL.endsWith('/') ? PORTFOLIO_LIVE_URL : `${PORTFOLIO_LIVE_URL}/`;
 const absoluteUrl = (path: string) => new URL(path, siteUrl).toString();
@@ -35,7 +35,7 @@ const schema = {
     },
     {
       '@type': 'CreativeWork',
-      url: absoluteUrl(FLAGSHIP_URL),
+      url: absoluteUrl(FEATURED_CASE_URL),
       name: 'Applied Ops Archive',
       description: 'Archived reliable operations case study covering evidence, decision trace, approval-gated action, and signed handoff.',
       about: { '@id': '#doeon-kim' },

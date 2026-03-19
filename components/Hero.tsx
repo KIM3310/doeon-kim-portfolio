@@ -128,7 +128,7 @@ const Hero: React.FC = () => {
               </div>
               <div className="border border-white/10 bg-black/20 p-4">
                 <p className="text-[11px] uppercase tracking-[0.24em] text-white/45">Review order</p>
-                <p className="mt-2 text-sm text-white">Proof → flagship → hiring track</p>
+                <p className="mt-2 text-sm text-white">Proof → featured system → hiring track</p>
               </div>
             </div>
 

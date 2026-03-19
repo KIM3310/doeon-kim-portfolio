@@ -10,7 +10,7 @@ const statusTone = (statusCode: number) =>
 
 const categoryTone: Record<string, string> = {
   portfolio: 'text-accent-gold',
-  flagship: 'text-sky-200',
+  featured: 'text-sky-200',
   support: 'text-white/60',
 };
 

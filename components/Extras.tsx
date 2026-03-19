@@ -9,7 +9,7 @@ const Certifications: React.FC = () => {
       <div className="flex flex-col md:flex-row justify-between items-end mb-16 border-b border-white/10 pb-8">
         <div>
           <h2 className="text-3xl md:text-4xl font-serif-heading font-medium text-white mb-2">Credentials</h2>
-          <p className="text-primary-muted font-light">Signals that compound the flagship story.</p>
+          <p className="text-primary-muted font-light">Signals that reinforce the project narrative.</p>
         </div>
       </div>
 

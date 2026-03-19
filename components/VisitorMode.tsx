@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowUpRight, BriefcaseBusiness, Clock3, Sparkles } from 'lucide-react';
 import Section from './Section';
-import { RECRUITER_90_SECOND_STEPS, RECRUITER_QUICK_PATHS } from '../constants';
+import { VISITOR_90_SECOND_STEPS, VISITOR_QUICK_PATHS } from '../constants';
 
 const isExternalHref = (href: string) => /^(https?:)?\/\//.test(href);
 
@@ -32,7 +32,7 @@ const VisitorMode: React.FC = () => {
           </div>
 
           <div className="space-y-4">
-            {RECRUITER_90_SECOND_STEPS.map((step) => (
+            {VISITOR_90_SECOND_STEPS.map((step) => (
               <article key={step.window} className="border border-white/8 bg-white/[0.02] p-5">
                 <div className="mb-3 flex items-center justify-between gap-3">
                   <span className="rounded-full border border-white/10 px-3 py-1 text-[11px] uppercase tracking-[0.22em] text-white/55">
@@ -56,7 +56,7 @@ const VisitorMode: React.FC = () => {
         </article>
 
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-2">
-          {RECRUITER_QUICK_PATHS.map((path) => (
+          {VISITOR_QUICK_PATHS.map((path) => (
             <article key={path.title} className="border border-white/10 bg-[#09090b] p-6">
               <div className="mb-5 flex items-start justify-between gap-4 border-b border-white/8 pb-4">
                 <div>

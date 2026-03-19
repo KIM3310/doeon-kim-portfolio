@@ -42,7 +42,7 @@ export const PORTFOLIO_GISCUS_REPO_ID = 'R_kgDOROWHZg';
 export const PORTFOLIO_GISCUS_CATEGORY = 'Q&A';
 export const PORTFOLIO_GISCUS_CATEGORY_ID = 'DIC_kwDOROWHZs4C3zga';
 
-export const FLAGSHIP_URL = 'fabpilot-live-x.html';
+export const FEATURED_CASE_URL = 'fabpilot-live-x.html';
 export const DOSSIER_URL = 'fabpilot-dossier.html';
 export const PRIMARY_PROOF_URL = 'https://stage-pilot.pages.dev';
 export const QUANTUM_WORKFLOW_URL = 'https://github.com/KIM3310/quantum-workbench';
@@ -95,7 +95,7 @@ export const PORTFOLIO_ACTIONS = [
   { label: 'Download Resume', href: RESUME_PDF_URL, helper: 'Get the LLM systems resume aligned to reliability, reviewability, and runtime delivery.' },
 ];
 
-export const RECRUITER_90_SECOND_STEPS: VisitorStep[] = [
+export const VISITOR_90_SECOND_STEPS: VisitorStep[] = [
   {
     window: '00-20 sec',
     title: 'Read the main claim',
@@ -126,7 +126,7 @@ export const RECRUITER_90_SECOND_STEPS: VisitorStep[] = [
   },
 ];
 
-export const RECRUITER_QUICK_PATHS: VisitorQuickPath[] = [
+export const VISITOR_QUICK_PATHS: VisitorQuickPath[] = [
   {
     title: 'Frontier LLM',
     audience: 'OpenAI / Anthropic / runtime-evals teams',
@@ -403,7 +403,7 @@ export const PROJECTS: Project[] = [
       'Acts as the applied product case study layered on top of the reliability foundation shown in StagePilot.',
     ],
     tech: ['GitLab Duo Agent Platform', 'TypeScript', 'Evidence Graph', 'Decision Trace', 'Replayable Debugging'],
-    links: { demo: FLAGSHIP_URL, github: PROFILE.github },
+    links: { demo: FEATURED_CASE_URL, github: PROFILE.github },
   },
   {
     title: 'TwinCity UI — Digital Twin Ops Console',
@@ -411,7 +411,7 @@ export const PROJECTS: Project[] = [
     role: 'Operator UX, event normalization, transport fallback reliability',
     achievements: [
       'Built a floorplan-based triage console with live/history views, timeline actions, and list-map-detail state sync.',
-      'Implemented WS -> SSE -> HTTP polling fallback with connection-state handling and demo-first mock feeds.',
+      'Implemented WS -> SSE -> HTTP polling fallback with connection-state handling and local mock feeds.',
       'Normalized inconsistent provider payloads into one event schema for deterministic operator workflows.',
     ],
     tech: ['Next.js', 'TypeScript', 'WebSocket', 'SSE'],
@@ -807,7 +807,7 @@ export const VERIFIED_DEPLOYMENTS: DeploymentCheck[] = [
     title: 'StagePilot',
     statusCode: 200,
     checkedAt: '2026-03-16T23:08:00+09:00',
-    category: 'flagship',
+    category: 'featured',
   },
   {
     repo: 'AegisOps',
@@ -815,7 +815,7 @@ export const VERIFIED_DEPLOYMENTS: DeploymentCheck[] = [
     title: 'AegisOps - Incident Review Console',
     statusCode: 200,
     checkedAt: '2026-03-16T23:08:00+09:00',
-    category: 'flagship',
+    category: 'featured',
   },
   {
     repo: 'enterprise-llm-adoption-kit',
@@ -823,7 +823,7 @@ export const VERIFIED_DEPLOYMENTS: DeploymentCheck[] = [
     title: 'LLM Adoption Atelier',
     statusCode: 200,
     checkedAt: '2026-03-16T23:08:00+09:00',
-    category: 'flagship',
+    category: 'featured',
   },
   {
     repo: 'regulated-case-workbench',
@@ -831,7 +831,7 @@ export const VERIFIED_DEPLOYMENTS: DeploymentCheck[] = [
     title: 'Regulated Case Workbench',
     statusCode: 200,
     checkedAt: '2026-03-16T23:08:00+09:00',
-    category: 'flagship',
+    category: 'featured',
   },
   {
     repo: 'Nexus-Hive',
@@ -839,7 +839,7 @@ export const VERIFIED_DEPLOYMENTS: DeploymentCheck[] = [
     title: 'Nexus-Hive | Executive BI Copilot',
     statusCode: 200,
     checkedAt: '2026-03-16T23:08:00+09:00',
-    category: 'flagship',
+    category: 'featured',
   },
   {
     repo: 'Aegis-Air',
@@ -983,8 +983,8 @@ export const REPO_OPERATING_MATRIX: RepoOperatingEntry[] = [
     aiEngineerFit: 8,
     solutionArchitectFit: 8,
     targetTracks: ['All target tracks'],
-    strength: 'Canonical routing hub with briefs, packets, live matrix, and evidence surfaces.',
-    note: 'Use as the visitor-first entry point after one flagship repo.',
+    strength: 'Central routing hub with briefs, packets, live matrix, and evidence surfaces.',
+    note: 'Use as the visitor-first entry point after one primary repo.',
   },
   {
     name: 'KIM3310',
@@ -994,7 +994,7 @@ export const REPO_OPERATING_MATRIX: RepoOperatingEntry[] = [
     aiEngineerFit: 7,
     solutionArchitectFit: 7,
     targetTracks: ['All target tracks'],
-    strength: 'Profile hub with quick starts, flagship chain, and repo routing.',
+    strength: 'Profile hub with quick starts, project chain, and repo routing.',
     note: 'Good for profile-first reviewers who never open the portfolio site first.',
   },
   {
@@ -1051,7 +1051,7 @@ export const REPO_OPERATING_MATRIX: RepoOperatingEntry[] = [
     solutionArchitectFit: 7,
     targetTracks: ['Document workflow AI', 'Workflow delivery'],
     strength: 'Document extraction, LMS export, review queue, and live sample-review lane.',
-    note: 'Best as a document-workflow supplement, not the main flagship.',
+    note: 'Best as a document-workflow supplement, not the main project.',
   },
   {
     name: 'Semiconductor Ops Platform (fab-ops + scanner-field-response)',
@@ -1184,7 +1184,7 @@ export const CERTIFICATIONS: Certification[] = [
 
 export const UPGRADE_TRACKS: UpgradeTrack[] = [
   {
-    title: 'Reliability flagship',
+    title: 'Reliability core',
     systems: ['StagePilot', 'AegisOps', 'Aegis-Air'],
     currentBase: ['Benchmark lift', 'Replay coverage', 'Failure handling'],
     nextBuild: 'Turn the reliability story into an even sharper reviewer asset with stronger benchmark visuals, failure taxonomy views, and one 60-second walkthrough.',
@@ -1361,7 +1361,7 @@ export const PORTFOLIO_RUNTIME_META = [
   { label: 'Stack', value: 'React 19 + Vite 6' },
   { label: 'Focus', value: 'Agent Reliability / Runtime Safety / High-Trust AI' },
   { label: 'Tests', value: '2,050 tests across portfolio' },
-  { label: 'Public Proof', value: 'Canonical repos + live surfaces + reviewer handoff routes' },
+  { label: 'Public Proof', value: 'Public repos + live surfaces + review routes' },
   { label: 'Portfolio URL', value: 'kim3310.github.io/doeon-kim-portfolio' },
 ];
 
@@ -1462,10 +1462,10 @@ export const EXTENDED_PROOF_CLUSTERS: ExtendedProofCluster[] = [
 export const REPO_CLUSTERS: RepoCluster[] = [
   {
     title: 'Review surfaces',
-    summary: 'The two places that should explain the whole account fastest: the profile hub and the canonical portfolio site.',
+    summary: 'The two places that should explain the whole account fastest: the profile hub and the portfolio site.',
     repos: [
-      { name: 'KIM3310', focus: 'GitHub profile README that defines the review order and flagship thesis.', github: 'https://github.com/KIM3310/KIM3310' },
-      { name: 'doeon-kim-portfolio', focus: 'Canonical portfolio site and review surface for the flagship systems.', github: PORTFOLIO_REPO_URL, demo: PORTFOLIO_LIVE_URL },
+      { name: 'KIM3310', focus: 'GitHub profile README that defines the review order and project thesis.', github: 'https://github.com/KIM3310/KIM3310' },
+      { name: 'doeon-kim-portfolio', focus: 'Portfolio site and review surface for the featured systems.', github: PORTFOLIO_REPO_URL, demo: PORTFOLIO_LIVE_URL },
     ],
   },
   {

@@ -15,7 +15,7 @@ const FocusPaths: React.FC = () => {
           <h2 className="font-serif-heading text-3xl text-white md:text-4xl">Start from the strongest systems</h2>
         </div>
         <p className="max-w-3xl text-sm leading-relaxed text-primary-muted">
-          같은 포트폴리오라도 어디서부터 읽느냐에 따라 보이는 강점이 달라집니다. 아래 경로는 flagship, reliability, governed delivery 관점에서 먼저 볼 시스템을 정리한 것입니다.
+          같은 포트폴리오라도 어디서부터 읽느냐에 따라 보이는 강점이 달라집니다. 아래 경로는 reliability, governed delivery, applied systems 관점에서 먼저 볼 시스템을 정리한 것입니다.
         </p>
       </div>
 

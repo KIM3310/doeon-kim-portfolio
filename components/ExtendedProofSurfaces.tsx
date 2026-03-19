@@ -33,7 +33,7 @@ const ExtendedProofSurfaces: React.FC = () => {
           <h2 className="font-serif-heading text-3xl text-white md:text-4xl">The rest of the account now has explicit review paths too</h2>
         </div>
         <p className="max-w-3xl text-sm leading-relaxed text-primary-muted">
-          The flagship story is stronger when the supporting repos also expose clear boards, gates, guardrails, and handoff surfaces. These are the
+          The main project story is stronger when the supporting repos also expose clear boards, gates, guardrails, and handoff surfaces. These are the
           routes and tools that make the broader account read like one coherent systems portfolio instead of a few good demos plus hidden complexity.
         </p>
       </div>

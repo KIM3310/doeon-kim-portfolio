@@ -57,7 +57,7 @@ const WhyFit: React.FC = () => {
           <h3 className="text-2xl md:text-3xl font-serif-heading text-white mb-4 relative z-10">Explore deeper project notes</h3>
           <p className="text-primary-muted mb-8 font-light leading-relaxed max-w-2xl mx-auto relative z-10">
             상세한 프로젝트 회고와 기술적 의사결정 과정, 트러블슈팅 로그는 <strong>LinkedIn</strong>과 <strong>GitHub</strong>에서 더 깊게 확인할 수 있습니다.
-            canonical repo 기준으로 빠르게 연결해 두었습니다.
+            주요 repo 기준으로 빠르게 연결해 두었습니다.
           </p>
           <a
             href={PROFILE.linkedin}

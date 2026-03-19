@@ -149,7 +149,7 @@ export interface DeploymentCheck {
   title: string;
   statusCode: number;
   checkedAt: string;
-  category: 'portfolio' | 'flagship' | 'support';
+  category: 'portfolio' | 'featured' | 'support';
 }
 
 export interface RepoOperatingEntry {
