@@ -5,9 +5,9 @@ import { REPO_OPERATING_MATRIX } from '../constants';
 
 const tierOrder = ['Lead with', 'Selective use', 'De-emphasize'] as const;
 const tierCopy: Record<(typeof tierOrder)[number], string> = {
-  'Lead with': 'These repos should appear in the first recruiter pass for the target hiring lanes.',
+  'Lead with': 'These repos should appear in the first visitor pass for the target hiring lanes.',
   'Selective use': 'These repos are strong, but they should be introduced when the role or interviewer context makes them relevant.',
-  'De-emphasize': 'These are valid breadth signals, but they should stay behind the recruiter-first chain unless the role explicitly benefits from them.',
+  'De-emphasize': 'These are valid breadth signals, but they should stay behind the visitor-first chain unless the role explicitly benefits from them.',
 };
 
 const fitTone = (score: number) => {
@@ -26,7 +26,7 @@ const RepoOperatingMatrix: React.FC = () => {
         </div>
         <p className="max-w-3xl text-sm leading-relaxed text-primary-muted">
           The problem is no longer “not enough projects.” It is ordering. This map makes every repo explicit about whether it should lead an AI Engineer story,
-          support a Solutions Architect story, or stay out of the default recruiter pass.
+          support a Solutions Architect story, or stay out of the default visitor pass.
         </p>
       </div>
 

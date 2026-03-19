@@ -12,7 +12,7 @@ const cards = [
   { label: 'Open quantum workbench', href: QUANTUM_WORKFLOW_URL, helper: 'IBM Quantum and Braket execution, transpilation proof, and chemistry mini-workflow in one backend product surface.', Icon: ArrowUpRight },
   { label: 'Open data-platform pack', href: DATA_PLATFORM_ARCHITECTURE_PACK_URL, helper: 'Fast path for governed analytics, lakehouse delivery, and reviewable platform conversations.', Icon: FileText },
   { label: 'Brokerage packet', href: BROKERAGE_APPLICATION_PACKET_URL, helper: 'Client-review, suitability, and advisor-handoff routing for finance conversations.', Icon: FileText },
-  { label: 'GitHub proof', href: PROFILE.github, helper: 'Canonical repos, implementation detail, and public proof surface.', Icon: Github },
+  { label: 'GitHub proof', href: PROFILE.github, helper: 'Canonical repos, implementation detail, and public project page.', Icon: Github },
   { label: 'LinkedIn', href: PROFILE.linkedin, helper: 'Best path for recruiting follow-up and fast professional context.', Icon: Linkedin },
   { label: 'Email brief', href: `mailto:${PROFILE.email}`, helper: 'Send a role brief, hiring context, or technical challenge directly.', Icon: Mail },
 ];

@@ -101,7 +101,7 @@
       "subhead": "Primary public proof",
       "bullets": [
         "Built the canonical repo for parser middleware, StagePilot orchestration, and BenchLab eval tooling.",
-        "Improved 40-case expanded benchmark (13 edge cases: adversarial, unicode, oversized payloads) from 25% to 90% with middleware and bounded retry, with reviewable proof surfaces.",
+        "Improved 40-case expanded benchmark (13 edge cases: adversarial, unicode, oversized payloads) from 25% to 90% with middleware and bounded retry, with reviewable project pages.",
         "Added live-review, failure-taxonomy, trace-observability, regression-gate, and protocol-matrix APIs so parser drift, retries, and cross-protocol behavior stay inspectable."
       ]
     },

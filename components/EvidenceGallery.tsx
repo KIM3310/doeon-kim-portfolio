@@ -29,7 +29,7 @@ const evidenceItems = [
     subtitle: 'Governed analytics / lakehouse evidence',
     image: 'evidence/nexus-lakehouse-readiness.svg',
     href: 'https://github.com/KIM3310/Nexus-Hive',
-    detail: 'Compresses connector posture, query-tag transport, and platform-facing delivery boundaries into one lakehouse reviewer surface.',
+    detail: 'Compresses connector posture, query-tag transport, and platform-facing delivery boundaries into one lakehouse status page.',
   },
   {
     title: 'Enterprise Workshop Readout',
@@ -63,7 +63,7 @@ const EvidenceGallery: React.FC = () => {
           <h2 className="font-serif-heading text-3xl text-white md:text-4xl">Proof that can be scanned before the code is read</h2>
         </div>
         <p className="max-w-3xl text-sm leading-relaxed text-primary-muted">
-          These are not decorative mockups. They compress the strongest frontier, data-platform, and solution-architecture proof surfaces into recruiter-fast visual evidence.
+          These are not decorative mockups. They compress the strongest frontier, data-platform, and solution-architecture project pages into visitor-fast visual evidence.
         </p>
       </div>
 
@@ -93,7 +93,7 @@ const EvidenceGallery: React.FC = () => {
                 className="group inline-flex items-center gap-2 text-sm text-white/78 transition-colors hover:text-accent-gold"
               >
                 <GalleryHorizontal className="h-4 w-4 text-accent-gold" />
-                <span>Open repo and proof surface</span>
+                <span>Open repo and project page</span>
                 <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
               </a>
             </div>

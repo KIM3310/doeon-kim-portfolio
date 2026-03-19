@@ -36,7 +36,7 @@ const proofLinks = [
   },
   {
     label: 'StagePilot walkthrough',
-    helper: 'Quick proof review if a recruiter starts with video.',
+    helper: 'Quick proof review if a visitor starts with video.',
     href: 'https://youtu.be/6trgTH1vX4M',
     Icon: PlayCircle,
   },
@@ -63,7 +63,7 @@ const hiringTracks = [
   },
   {
     title: 'Solution Architect track',
-    summary: 'Approval boundaries, governed delivery, high-trust product framing, handoff design.',
+    summary: 'Approval boundaries, governed delivery, reliable product framing, handoff design.',
     cta: 'Open Solution Architect resume',
     href: SOLUTION_ARCHITECT_RESUME_PDF_URL,
   },
@@ -197,7 +197,7 @@ const Hero: React.FC = () => {
           >
             <div className="mb-6 flex items-center justify-between gap-4 border-b border-white/10 pb-5">
               <div>
-                <p className="text-xs uppercase tracking-[0.28em] text-accent-gold/80">Primary proof surface</p>
+                <p className="text-xs uppercase tracking-[0.28em] text-accent-gold/80">Primary project page</p>
                 <h2 className="mt-2 font-serif-heading text-3xl text-white">StagePilot</h2>
               </div>
               <span className="rounded-full border border-white/10 px-3 py-1 text-[11px] uppercase tracking-[0.22em] text-white/45">40-case expanded suite</span>
@@ -226,7 +226,7 @@ const Hero: React.FC = () => {
               <p className="text-[11px] uppercase tracking-[0.24em] text-accent-gold/70">Why this matters</p>
               <h3 className="mt-3 text-2xl font-serif-heading text-white">Reliability before product theatre</h3>
               <p className="mt-3 text-sm leading-7 text-white/70">
-                The proof path starts with failure recovery and evaluator-facing evidence, then moves into applied systems like AegisOps and Enterprise LLM Adoption Kit where incident review, handoff, and governed delivery have to survive real workflow complexity.
+                The walkthrough starts with failure recovery and evaluator-facing evidence, then moves into applied systems like AegisOps and Enterprise LLM Adoption Kit where incident review, handoff, and governed delivery have to survive real workflow complexity.
               </p>
               <div className="mt-5 flex flex-wrap gap-2 text-xs uppercase tracking-[0.16em] text-white/50">
                 <span className="rounded-full border border-white/10 px-3 py-2">Parser recovery</span>

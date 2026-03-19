@@ -5,12 +5,12 @@ import { RECRUITER_90_SECOND_STEPS, RECRUITER_QUICK_PATHS } from '../constants';
 
 const isExternalHref = (href: string) => /^(https?:)?\/\//.test(href);
 
-const RecruiterMode: React.FC = () => {
+const VisitorMode: React.FC = () => {
   return (
-    <Section id="recruiter-mode" className="bg-[#070709] pt-8">
+    <Section id="visitor-mode" className="bg-[#070709] pt-8">
       <div className="mb-14 flex flex-col gap-4 border-b border-white/10 pb-8 md:flex-row md:items-end md:justify-between">
         <div>
-          <p className="mb-2 text-xs uppercase tracking-[0.32em] text-accent-gold/80">Recruiter 90-Second Mode</p>
+          <p className="mb-2 text-xs uppercase tracking-[0.32em] text-accent-gold/80">Visitor 90-Second Mode</p>
           <h2 className="font-serif-heading text-3xl text-white md:text-4xl">If you only have one minute, use this path</h2>
         </div>
         <p className="max-w-3xl text-sm leading-relaxed text-primary-muted">
@@ -99,8 +99,8 @@ const RecruiterMode: React.FC = () => {
               <p className="text-xs uppercase tracking-[0.24em] text-accent-gold/80">Why this exists</p>
             </div>
             <p className="max-w-4xl text-sm leading-7 text-white/75">
-              The strongest portfolio is not the one with the most content. It is the one where a recruiter, hiring manager, or engineer can land on the
-              right proof surface with almost no translation cost. This section exists to make that first move obvious.
+              The strongest portfolio is not the one with the most content. It is the one where a visitor, hiring manager, or engineer can land on the
+              right project page with almost no translation cost. This section exists to make that first move obvious.
             </p>
           </article>
         </div>
@@ -109,4 +109,4 @@ const RecruiterMode: React.FC = () => {
   );
 };
 
-export default RecruiterMode;
+export default VisitorMode;

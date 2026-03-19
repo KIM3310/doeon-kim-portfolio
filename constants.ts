@@ -10,8 +10,8 @@ import {
   TargetTrack,
   RepoCluster,
   ExtendedProofCluster,
-  RecruiterStep,
-  RecruiterQuickPath,
+  VisitorStep,
+  VisitorQuickPath,
   SubmissionReadinessTrack,
   ApplicationPacket,
   LiveProofTrack,
@@ -26,7 +26,7 @@ export const PROFILE: Profile = {
   email: 'ehdjs1351@gmail.com',
   github: 'https://github.com/KIM3310',
   linkedin: 'https://www.linkedin.com/in/doeon-kim-4742a2388',
-  catchphrase: 'Production-minded AI systems with clear proof surfaces',
+  catchphrase: 'Production-minded AI systems with clear project pages',
   intro:
     'I build production-minded AI systems, governed delivery workflows, and operational software that are easy to review. StagePilot (25% to 90% on 40-case expanded suite) is the clearest reliability surface, while AegisOps, Enterprise LLM Adoption Kit, Nexus-Hive, regulated-case-workbench, and an archived ops case study show how the same engineering posture carries into incident response, rollout design, analytics, and high-trust workflows. 2,050 tests across the portfolio.',
 };
@@ -89,13 +89,13 @@ export const PORTFOLIO_SIGNAL_DECK = [
 ];
 
 export const PORTFOLIO_ACTIONS = [
-  { label: 'Open StagePilot Proof', href: PRIMARY_PROOF_URL, helper: 'Start from the benchmarked reliability surface and inspect the proof path first.' },
+  { label: 'Open StagePilot Proof', href: PRIMARY_PROOF_URL, helper: 'Start from the benchmarked reliability surface and inspect the walkthrough first.' },
   { label: 'Open AegisOps System', href: 'https://aegisops-ai-incident-doctor.pages.dev', helper: 'Then inspect how the same reliability mindset maps into a structured incident system.' },
   { label: 'Open Data Platform Track', href: DATA_PLATFORM_ARCHITECTURE_PACK_URL, helper: 'Review how the same engineering posture carries into governed delivery and data-platform systems.' },
   { label: 'Download Resume', href: RESUME_PDF_URL, helper: 'Get the LLM systems resume aligned to reliability, reviewability, and runtime delivery.' },
 ];
 
-export const RECRUITER_90_SECOND_STEPS: RecruiterStep[] = [
+export const RECRUITER_90_SECOND_STEPS: VisitorStep[] = [
   {
     window: '00-20 sec',
     title: 'Read the main claim',
@@ -120,13 +120,13 @@ export const RECRUITER_90_SECOND_STEPS: RecruiterStep[] = [
   {
     window: '70-90 sec',
     title: 'Choose the right supporting cluster',
-    detail: 'Use the recruiter quick paths below to jump straight to the systems that match your org.',
+    detail: 'Use the visitor quick paths below to jump straight to the systems that match your org.',
     label: 'Open quick paths',
-    href: '#recruiter-mode',
+    href: '#visitor-mode',
   },
 ];
 
-export const RECRUITER_QUICK_PATHS: RecruiterQuickPath[] = [
+export const RECRUITER_QUICK_PATHS: VisitorQuickPath[] = [
   {
     title: 'Frontier LLM',
     audience: 'OpenAI / Anthropic / runtime-evals teams',
@@ -143,7 +143,7 @@ export const RECRUITER_QUICK_PATHS: RecruiterQuickPath[] = [
   {
     title: 'Big Tech Systems',
     audience: 'Google / Meta / Amazon / Microsoft-style product and SRE orgs',
-    outcome: 'Defensive engineering, stateful operator UX, and service-grade surfaces should read clearly.',
+    outcome: 'Defensive engineering, stateful operator UX, and production surfaces should read clearly.',
     links: [
       { label: 'Big-tech application packet', href: BIG_TECH_APPLICATION_PACKET_URL },
       { label: 'Big-tech walkthrough', href: BIG_TECH_WALKTHROUGH_URL },
@@ -279,7 +279,7 @@ export const STAGEPILOT_REVIEW_FLOW = [
   },
   {
     step: '02',
-    title: 'Inspect the proof surface',
+    title: 'Inspect the project page',
     detail: 'Review pack, runtime brief, and benchmark artifacts shorten the path from curiosity to technical confidence.',
   },
   {
@@ -309,7 +309,7 @@ export const WHY_TEAMS_HIRE_ME = [
     title: '승인 경계와 handoff를 제품 기능으로 만듭니다',
     description:
       'Enterprise LLM Adoption Kit, regulated-case-workbench, Honeypot, archived ops case에서 audit, fallback, async jobs, signed handoff, export flows를 설계했습니다. 그래서 시스템이 멈춰야 할 지점과 사람이 이어받아야 할 지점이 명확합니다.',
-    match: 'Runtime safety, approval boundaries, governance controls, high-trust delivery',
+    match: 'Runtime safety, approval boundaries, governance controls, reliable delivery',
   },
   {
     keyword: 'Quantum Systems',
@@ -336,7 +336,7 @@ export const PROJECTS: Project[] = [
     role: 'Parser middleware, orchestration, and benchmark-driven tool-calling hardening',
     achievements: [
       'Improved 40-case expanded benchmark (13 edge cases: adversarial, unicode, oversized payloads) from 25% baseline to 90% with middleware and bounded retry.',
-      'Unifies parser middleware, orchestration, OpenTelemetry traces, and BenchLab evaluation into one inspectable proof surface.',
+      'Unifies parser middleware, orchestration, OpenTelemetry traces, and BenchLab evaluation into one inspectable project page.',
       'Provides the strongest public reliability signal before the portfolio moves into applied product systems.',
     ],
     tech: ['TypeScript', 'Tool Calling', 'Benchmarks', 'Middleware', 'Runtime APIs', 'OpenTelemetry'],
@@ -537,7 +537,7 @@ export const APPLICATION_PACKETS: ApplicationPacket[] = [
   {
     title: 'Frontier LLM',
     audience: 'OpenAI · Anthropic · runtime / evals',
-    claim: 'Submit the runtime-reliability story: StagePilot first, then AegisOps, then ogx. The main proof is bounded failure handling and reviewer-fast observability.',
+    claim: 'Submit the runtime-reliability story: StagePilot first, then AegisOps, then ogx. The main proof is bounded failure handling and quick-view observability.',
     packetHref: FRONTIER_APPLICATION_PACKET_URL,
     resumeHref: RESUME_PDF_URL,
     links: [
@@ -649,7 +649,7 @@ export const LIVE_PROOF_TRACKS: LiveProofTrack[] = [
     title: 'Palantir / High-Trust',
     audience: 'approval boundaries · evidence chains · governed release',
     status: 'public-capped-live',
-    staticProof: { label: 'regulated-case-workbench review pack', href: 'https://github.com/KIM3310/regulated-case-workbench' },
+    staticProof: { label: 'regulated-case-workbench status summary', href: 'https://github.com/KIM3310/regulated-case-workbench' },
     liveRepo: { label: 'regulated-case-workbench repo', href: 'https://github.com/KIM3310/regulated-case-workbench' },
     liveRoute: 'POST /api/live-case-brief',
     walkthrough: { label: 'Palantir review brief', href: 'briefs/palantir-review-brief.html' },
@@ -950,7 +950,7 @@ export const REPO_OPERATING_MATRIX: RepoOperatingEntry[] = [
     aiEngineerFit: 7,
     solutionArchitectFit: 10,
     targetTracks: ['Governed analytics', 'Lakehouse delivery', 'Big tech SA'],
-    strength: 'Rollout gates, workshop preview, customer-architecture pack, and governance-first delivery surfaces.',
+    strength: 'Rollout gates, workshop preview, customer-architecture pack, and well-governed delivery surfaces.',
     note: 'Best first-pass repo for solution architecture and field engineering loops.',
   },
   {
@@ -961,8 +961,8 @@ export const REPO_OPERATING_MATRIX: RepoOperatingEntry[] = [
     aiEngineerFit: 5,
     solutionArchitectFit: 10,
     targetTracks: ['Governed analytics', 'Lakehouse delivery'],
-    strength: 'Explicit Spark + Delta proof with medallion layers, quality gates, and reviewer-fast artifact refresh.',
-    note: 'Use as the cleanest data-platform proof surface.',
+    strength: 'Explicit Spark + Delta proof with medallion layers, quality gates, and quick-view artifact refresh.',
+    note: 'Use as the cleanest data-platform project page.',
   },
   {
     name: 'regulated-case-workbench',
@@ -984,7 +984,7 @@ export const REPO_OPERATING_MATRIX: RepoOperatingEntry[] = [
     solutionArchitectFit: 8,
     targetTracks: ['All target tracks'],
     strength: 'Canonical routing hub with briefs, packets, live matrix, and evidence surfaces.',
-    note: 'Use as the recruiter-first entry point after one flagship repo.',
+    note: 'Use as the visitor-first entry point after one flagship repo.',
   },
   {
     name: 'KIM3310',
@@ -1117,7 +1117,7 @@ export const REPO_OPERATING_MATRIX: RepoOperatingEntry[] = [
     solutionArchitectFit: 5,
     targetTracks: ['Health workflow AI'],
     strength: 'Review queue, progress tracking, and accessibility-minded product execution.',
-    note: 'Keep as breadth proof, not a first-pass recruiter anchor.',
+    note: 'Keep as breadth proof, not a first-pass visitor anchor.',
   },
   {
     name: 'smallbiz-ops-copilot',
@@ -1140,7 +1140,7 @@ export const REPO_OPERATING_MATRIX: RepoOperatingEntry[] = [
     solutionArchitectFit: 3,
     targetTracks: ['Runtime ops'],
     strength: 'CLI orchestration, MCP operator brief, and tmux-team runtime state.',
-    note: 'Private and secondary to ogx for recruiter-first stories.',
+    note: 'Private and secondary to ogx for visitor-first stories.',
     visibility: 'private',
   },
   /* ecotide — archived */
@@ -1187,8 +1187,8 @@ export const UPGRADE_TRACKS: UpgradeTrack[] = [
     title: 'Reliability flagship',
     systems: ['StagePilot', 'AegisOps', 'Aegis-Air'],
     currentBase: ['Benchmark lift', 'Replay coverage', 'Failure handling'],
-    nextBuild: 'Turn the reliability story into an even sharper reviewer asset with stronger benchmark visuals, failure taxonomy views, and one 60-second proof path.',
-    outcome: 'A public proof surface that reads immediately as frontier-adjacent systems work.',
+    nextBuild: 'Turn the reliability story into an even sharper reviewer asset with stronger benchmark visuals, failure taxonomy views, and one 60-second walkthrough.',
+    outcome: 'A public project page that reads immediately as frontier-adjacent systems work.',
   },
   {
     title: 'Applied system depth',
@@ -1202,7 +1202,7 @@ export const UPGRADE_TRACKS: UpgradeTrack[] = [
     systems: ['Homepage', 'Resume', 'Selected repos'],
     currentBase: ['Public demos', 'Architecture notes', 'Benchmark artifacts'],
     nextBuild: 'Shorten the path from first impression to technical confidence by tightening the resume, top-of-page copy, and first-click review route.',
-    outcome: 'Recruiters and judges understand the strongest systems faster.',
+    outcome: 'Visitors and judges understand the strongest systems faster.',
   },
 ];
 
@@ -1247,7 +1247,7 @@ export const TARGET_TRACKS: TargetTrack[] = [
     title: 'Frontier LLM',
     companies: 'OpenAI · Anthropic · reliability/evals teams',
     summary:
-      'Best fit when a reviewer wants benchmarked runtime behavior, tool reliability, and fast proof surfaces instead of generic agent demos.',
+      'Best fit when a reviewer wants benchmarked runtime behavior, tool reliability, and fast project pages instead of generic agent demos.',
     signals: ['Tool-calling reliability', 'Evals and benchmarks', 'Runtime safety', 'Reviewable APIs'],
     reviewPath: ['StagePilot', 'AegisOps', 'Aegis-Air', 'ogx'],
     links: [
@@ -1357,7 +1357,7 @@ export const TARGET_TRACKS: TargetTrack[] = [
 ];
 
 export const PORTFOLIO_RUNTIME_META = [
-  { label: 'Scope', value: '8 selected systems + 11 extended proof surfaces' },
+  { label: 'Scope', value: '8 selected systems + 11 extended project pages' },
   { label: 'Stack', value: 'React 19 + Vite 6' },
   { label: 'Focus', value: 'Agent Reliability / Runtime Safety / High-Trust AI' },
   { label: 'Tests', value: '2,050 tests across portfolio' },

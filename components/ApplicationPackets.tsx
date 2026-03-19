@@ -14,7 +14,7 @@ const ApplicationPackets: React.FC = () => {
           <h2 className="font-serif-heading text-3xl text-white md:text-4xl">What to submit for each track</h2>
         </div>
         <p className="max-w-3xl text-sm leading-relaxed text-primary-muted">
-          These packets are the recruiter-safe layer between a strong public portfolio and an actual application. Each one fixes the first-click order,
+          These packets are the visitor-safe layer between a strong public portfolio and an actual application. Each one fixes the first-click order,
           the right resume, and the shortest believable proof chain.
         </p>
       </div>

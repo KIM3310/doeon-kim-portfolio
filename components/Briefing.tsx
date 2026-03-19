@@ -22,7 +22,7 @@ const Briefing: React.FC = () => {
 
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
             {PORTFOLIO_SIGNAL_DECK.map((signal, index) => {
-              const Icon = icons[index % icons.length];
+              const Icon = icons[index % icons.length] ?? Rocket;
               return (
                 <article key={signal.label} className="border border-white/8 bg-white/[0.025] p-5 transition-colors hover:border-accent-gold/30">
                   <Icon className="mb-4 h-5 w-5 text-accent-gold" />

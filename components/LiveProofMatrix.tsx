@@ -20,7 +20,7 @@ const LiveProofMatrix: React.FC = () => {
           <h2 className="font-serif-heading text-3xl text-white md:text-4xl">Static proof, live lane, walkthrough, and resume in one place</h2>
         </div>
         <p className="max-w-3xl text-sm leading-relaxed text-primary-muted">
-          This is the recruiter-safe matrix for the OpenAI rollout. Each track shows which repo carries the public bounded live route, which static proof to open first,
+          This is the visitor-safe matrix for the OpenAI rollout. Each track shows which repo carries the public bounded live route, which static proof to open first,
           which walkthrough to use in an interview, and which resume version should travel with it.
         </p>
       </div>

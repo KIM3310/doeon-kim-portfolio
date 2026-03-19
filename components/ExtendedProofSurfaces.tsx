@@ -40,7 +40,7 @@ const ExtendedProofSurfaces: React.FC = () => {
 
       <div className="mb-12 grid grid-cols-1 gap-4 md:grid-cols-3">
         <article className="border border-white/8 bg-[#0a0a0c] p-5">
-          <p className="text-[11px] uppercase tracking-[0.24em] text-white/35">Support proof surfaces</p>
+          <p className="text-[11px] uppercase tracking-[0.24em] text-white/35">Support project pages</p>
           <p className="mt-3 font-serif-heading text-3xl text-white">{totalSurfaces}</p>
           <p className="mt-2 text-sm leading-6 text-primary-muted">Additional routes and tools now visible in the public reviewer path.</p>
         </article>

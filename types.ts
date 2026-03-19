@@ -81,7 +81,7 @@ export interface ExtendedProofCluster {
   surfaces: ExtendedProofSurface[];
 }
 
-export interface RecruiterStep {
+export interface VisitorStep {
   window: string;
   title: string;
   detail: string;
@@ -89,7 +89,7 @@ export interface RecruiterStep {
   href: string;
 }
 
-export interface RecruiterQuickPath {
+export interface VisitorQuickPath {
   title: string;
   audience: string;
   outcome: string;

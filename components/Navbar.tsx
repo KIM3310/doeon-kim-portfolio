@@ -3,7 +3,7 @@ import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const navItems = [
-  { name: '90-sec', href: '#recruiter-mode' },
+  { name: '90-sec', href: '#visitor-mode' },
   { name: 'Readiness', href: '#readiness' },
   { name: 'Packets', href: '#packets' },
   { name: 'Live Proof', href: '#live-proof' },

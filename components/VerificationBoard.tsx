@@ -72,7 +72,7 @@ const VerificationBoard: React.FC = () => {
                 rel="noreferrer"
                 className="group mt-5 inline-flex items-center gap-2 text-sm text-white/78 transition-colors hover:text-accent-gold"
               >
-                <span>Open repo and proof surface</span>
+                <span>Open repo and project page</span>
                 <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
               </a>
             </article>

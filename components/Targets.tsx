@@ -27,7 +27,7 @@ const Targets: React.FC = () => {
         </div>
         <p className="max-w-3xl text-sm leading-relaxed text-primary-muted">
           The point is not to make every repo look identical. The point is to make the account read as one coherent system portfolio,
-          with a clear first-click path for frontier AI, big tech, data platform, and high-trust operational software teams.
+          with a clear first-click path for frontier AI, big tech, data platform, and reliable operational software teams.
         </p>
       </div>
 

@@ -16,7 +16,7 @@ const SubmissionReadiness: React.FC = () => {
           <h2 className="font-serif-heading text-3xl text-white md:text-4xl">How close the public package is for each track</h2>
         </div>
         <p className="max-w-3xl text-sm leading-relaxed text-primary-muted">
-          These percentages describe the current public submission package: repos, proof surfaces, portfolio routing, and role-specific resumes. They are
+          These percentages describe the current public submission package: repos, project pages, portfolio routing, and role-specific resumes. They are
           not a claim that interviewing or production history is complete.
         </p>
       </div>

@@ -15,7 +15,7 @@ const WhyFit: React.FC = () => {
         </div>
         <h2 className="text-3xl md:text-5xl font-serif-heading font-bold text-white mb-6">
           Why teams trust me with <br className="md:hidden" />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-gold to-white">high-trust AI systems</span>
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-gold to-white">reliable AI systems</span>
         </h2>
         <p className="text-primary-muted max-w-2xl mx-auto font-light leading-relaxed">
           프로젝트 수를 늘리는 대신, 대표 시스템만 남겨 신뢰성, 운영성, 평가 가능성이 드러나게 정리했습니다.

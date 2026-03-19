@@ -1,7 +1,7 @@
 import React from 'react';
 import { SKILLS } from '../constants';
 import Section from './Section';
-import { Cpu, Database, Cloud, Server, Layout, Settings, Layers } from 'lucide-react';
+import { Layers } from 'lucide-react';
 
 const Skills: React.FC = () => {
   return (
