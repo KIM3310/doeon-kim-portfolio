@@ -2,6 +2,8 @@
 
 Personal portfolio site showcasing AI systems, operational software, and data platform projects. Built with React + TypeScript, deployed on GitHub Pages.
 
+Verified now: local typecheck, production build, and content verification all run from the repository root.
+
 ## Quick Start
 
 ```bash
@@ -21,7 +23,17 @@ The portfolio is organized around a few focus areas:
 - **Quantum / Scientific:** quantum-workbench
 - **Operational Software:** twincity-ui, fab-ops-yield-control-tower, regulated-case-workbench, smallbiz-ops-copilot
 - **Data & Analytics:** enterprise-llm-adoption-kit, lakehouse-contract-lab, Nexus-Hive, the-logistics-prophet
+- **Brokerage / securities:** advisor-review-desk, Nexus-Hive, signal-risk-lab
+- **Quant / systematic:** signal-risk-lab, lakehouse-contract-lab, the-logistics-prophet
 - **Product Experiments:** SteadyTap, ecotide, the-savior, kbbq-idle-unity
+
+## Repo operating map
+
+- `components/`, `constants.ts`, and `content/` define the main portfolio experience.
+- `public/briefs/` contains role- and domain-specific walkthrough packets.
+- `public/fabpilot-live-x.html` and `public/fabpilot-dossier.html` preserve the archived ops case study.
+- `docs/` holds supporting runtime and resume pipeline notes.
+- `server/` exposes the optional archived runtime bridge used by the older ops surface.
 
 ## Local development
 
@@ -37,6 +49,8 @@ npm run typecheck
 npm run build
 npm run verify:content
 ```
+
+The three commands above are the fastest way to verify the current portfolio snapshot before publishing.
 
 ## Deploy
 

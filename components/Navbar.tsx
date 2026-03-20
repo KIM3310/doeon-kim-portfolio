@@ -20,6 +20,16 @@ const navItems = [
   { name: 'Contact', href: '#community' },
 ];
 
+const desktopNavItems = [
+  { name: 'Start', href: '#visitor-mode' },
+  { name: 'Proof', href: '#verification' },
+  { name: 'Projects', href: '#projects' },
+  { name: 'Repo Map', href: '#operating-map' },
+  { name: 'Targets', href: '#targets' },
+  { name: 'Experience', href: '#experience' },
+  { name: 'Contact', href: '#community' },
+];
+
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -87,9 +97,9 @@ const Navbar: React.FC = () => {
             </button>
           </div>
 
-          <div className="hidden md:flex items-center gap-8">
-            <nav aria-label="Main navigation" className="flex items-baseline space-x-8 lg:space-x-12 print:hidden">
-              {navItems.map((item) => (
+          <div className="hidden md:flex items-center gap-6">
+            <nav aria-label="Main navigation" className="flex items-baseline gap-6 lg:gap-8 print:hidden">
+              {desktopNavItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
@@ -100,6 +110,13 @@ const Navbar: React.FC = () => {
                 </a>
               ))}
             </nav>
+            <a
+              href="#packets"
+              onClick={(e) => handleClick(e, '#packets')}
+              className="rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs font-medium uppercase tracking-[0.2em] text-white/75 transition-colors hover:border-accent-gold/40 hover:text-white print:hidden"
+            >
+              Review Pack
+            </a>
           </div>
 
           <div className="md:hidden print:hidden">

@@ -24,7 +24,7 @@ import {
 const proofLinks = [
   {
     label: 'StagePilot benchmark proof',
-    helper: 'Public eval surface with checked-in reliability lift.',
+    helper: 'Current checked-in 24-case benchmark snapshot with public reliability evidence.',
     href: PRIMARY_PROOF_URL,
     Icon: BarChart3,
   },
@@ -200,40 +200,40 @@ const Hero: React.FC = () => {
                 <p className="text-xs uppercase tracking-[0.28em] text-accent-gold/80">Primary project page</p>
                 <h2 className="mt-2 font-serif-heading text-3xl text-white">StagePilot</h2>
               </div>
-              <span className="rounded-full border border-white/10 px-3 py-1 text-[11px] uppercase tracking-[0.22em] text-white/45">40-case expanded suite</span>
+              <span className="rounded-full border border-white/15 bg-white/[0.05] px-3 py-1 text-[11px] uppercase tracking-[0.22em] text-white/70">40-case expanded suite</span>
             </div>
 
-            <p className="mb-6 text-sm leading-7 text-white/72">
+            <p className="mb-6 text-sm leading-7 text-white/78">
               Canonical public surface for parser middleware, prompt-mode BenchLab evals, and bounded retry hardening for tool-calling workflows.
             </p>
 
             <div className="grid gap-4 md:grid-cols-3">
-              <article className="border border-white/10 bg-black/20 p-4">
-                <p className="text-[11px] uppercase tracking-[0.24em] text-white/35">Baseline</p>
-                <p className="mt-2 text-sm text-white">25% success before hardening (40-case suite)</p>
+              <article className="border border-white/12 bg-white/[0.06] p-4">
+                <p className="text-[11px] uppercase tracking-[0.24em] text-white/65">Baseline</p>
+                <p className="mt-2 text-sm text-white/92">25% success before hardening (40-case suite)</p>
               </article>
-              <article className="border border-white/10 bg-black/20 p-4">
-                <p className="text-[11px] uppercase tracking-[0.24em] text-white/35">Middleware</p>
-                <p className="mt-2 text-sm text-white">87.50% with parser recovery</p>
+              <article className="border border-white/12 bg-white/[0.06] p-4">
+                <p className="text-[11px] uppercase tracking-[0.24em] text-white/65">Middleware</p>
+                <p className="mt-2 text-sm text-white/92">87.50% with parser recovery</p>
               </article>
-              <article className="border border-white/10 bg-black/20 p-4">
-                <p className="text-[11px] uppercase tracking-[0.24em] text-white/35">Bounded retry</p>
-                <p className="mt-2 text-sm text-white">90% on the 40-case expanded suite with middleware and bounded retry</p>
+              <article className="border border-white/12 bg-white/[0.06] p-4">
+                <p className="text-[11px] uppercase tracking-[0.24em] text-white/65">Bounded retry</p>
+                <p className="mt-2 text-sm text-white/92">90% on the 40-case expanded suite with middleware and bounded retry</p>
               </article>
             </div>
 
-            <div className="mt-6 rounded-2xl border border-white/10 bg-black/20 p-5">
+            <div className="mt-6 rounded-2xl border border-white/12 bg-white/[0.06] p-5">
               <p className="text-[11px] uppercase tracking-[0.24em] text-accent-gold/70">Why this matters</p>
               <h3 className="mt-3 text-2xl font-serif-heading text-white">Reliability before product theatre</h3>
-              <p className="mt-3 text-sm leading-7 text-white/70">
+              <p className="mt-3 text-sm leading-7 text-white/78">
                 The walkthrough starts with failure recovery and evaluator-facing evidence, then moves into applied systems like AegisOps and Enterprise LLM Adoption Kit where incident review, handoff, and governed delivery have to survive real workflow complexity.
               </p>
-              <div className="mt-5 flex flex-wrap gap-2 text-xs uppercase tracking-[0.16em] text-white/50">
-                <span className="rounded-full border border-white/10 px-3 py-2">Parser recovery</span>
-                <span className="rounded-full border border-white/10 px-3 py-2">BenchLab evals</span>
-                <span className="rounded-full border border-white/10 px-3 py-2">Bounded retry</span>
-                <span className="rounded-full border border-white/10 px-3 py-2">Review pack</span>
-                <span className="rounded-full border border-white/10 px-3 py-2">AegisOps system</span>
+              <div className="mt-5 flex flex-wrap gap-2 text-xs uppercase tracking-[0.16em] text-white/70">
+                <span className="rounded-full border border-white/12 bg-black/10 px-3 py-2">Parser recovery</span>
+                <span className="rounded-full border border-white/12 bg-black/10 px-3 py-2">BenchLab evals</span>
+                <span className="rounded-full border border-white/12 bg-black/10 px-3 py-2">Bounded retry</span>
+                <span className="rounded-full border border-white/12 bg-black/10 px-3 py-2">Review pack</span>
+                <span className="rounded-full border border-white/12 bg-black/10 px-3 py-2">AegisOps system</span>
               </div>
             </div>
 
