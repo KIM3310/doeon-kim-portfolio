@@ -18,17 +18,18 @@ import {
   VerificationLiveCheck,
   DeploymentCheck,
   RepoOperatingEntry,
+  RepoTruthEntry,
 } from './types';
 
 export const PROFILE: Profile = {
   name: '김도언 (Doeon Kim)',
-  title: 'AI Systems Engineer | Reliability, Evaluation, Runtime Delivery',
+  title: 'AI Systems Engineer | Reliability, Reviewability, Delivery',
   email: 'ehdjs1351@gmail.com',
   github: 'https://github.com/KIM3310',
   linkedin: 'https://www.linkedin.com/in/doeon-kim-4742a2388',
-  catchphrase: 'Production-minded AI systems with clear project pages',
+  catchphrase: 'Reviewable AI systems with evidence-first project pages',
   intro:
-    'I build production-minded AI systems, governed delivery workflows, and operational software that are easy to review. StagePilot (25% to 90% on 40-case expanded suite) is the clearest reliability surface, while AegisOps, Enterprise LLM Adoption Kit, Nexus-Hive, regulated-case-workbench, and an archived ops case study show how the same engineering posture carries into incident response, rollout design, analytics, and high-trust workflows. 2,050 tests across the portfolio.',
+    'I build reviewable AI systems, governed delivery workflows, and operational software with local-first foundations plus optional cloud adapters. StagePilot (25% to 90% on the checked-in 40-case suite) is still the clearest public reliability proof, while AegisOps, Enterprise LLM Adoption Kit, Nexus-Hive, regulated-case-workbench, and supporting workflow/data repos show the same engineering posture in incident response, rollout design, analytics, and high-trust delivery. 2,000+ tests are checked into the portfolio.',
 };
 
 export const PORTFOLIO_LIVE_URL = 'https://kim3310.github.io/doeon-kim-portfolio/';
@@ -129,7 +130,7 @@ export const VISITOR_90_SECOND_STEPS: VisitorStep[] = [
 export const VISITOR_QUICK_PATHS: VisitorQuickPath[] = [
   {
     title: 'Frontier LLM',
-    audience: 'OpenAI / Anthropic / runtime-evals teams',
+    audience: 'runtime-evals / reliability teams',
     outcome: 'Tool reliability, evaluator discipline, and agent runtime posture should be obvious in three clicks.',
     links: [
       { label: 'Frontier application packet', href: FRONTIER_APPLICATION_PACKET_URL },
@@ -142,7 +143,7 @@ export const VISITOR_QUICK_PATHS: VisitorQuickPath[] = [
   },
   {
     title: 'Big Tech Systems',
-    audience: 'Google / Meta / Amazon / Microsoft-style product and SRE orgs',
+    audience: 'large-scale product / infra / SRE orgs',
     outcome: 'Defensive engineering, stateful operator UX, and production surfaces should read clearly.',
     links: [
       { label: 'Big-tech application packet', href: BIG_TECH_APPLICATION_PACKET_URL },
@@ -408,7 +409,7 @@ export const PROJECTS: Project[] = [
 export const SUBMISSION_READINESS_TRACKS: SubmissionReadinessTrack[] = [
   {
     title: 'Frontier LLM',
-    companies: 'OpenAI · Anthropic · reliability/evals teams',
+    companies: 'runtime reliability · evals teams',
     readinessPct: 95,
     status: 'Strong submission surface',
     summary:
@@ -425,7 +426,7 @@ export const SUBMISSION_READINESS_TRACKS: SubmissionReadinessTrack[] = [
   },
   {
     title: 'Big Tech Systems',
-    companies: 'Google · Meta · Amazon · Microsoft-style product/SRE orgs',
+    companies: 'large-scale product · infra · SRE teams',
     readinessPct: 96,
     status: 'Strong submission surface',
     summary:
@@ -496,7 +497,7 @@ export const SUBMISSION_READINESS_TRACKS: SubmissionReadinessTrack[] = [
 export const APPLICATION_PACKETS: ApplicationPacket[] = [
   {
     title: 'Frontier LLM',
-    audience: 'OpenAI · Anthropic · runtime / evals',
+    audience: 'runtime / evals',
     claim: 'Submit the runtime-reliability story: StagePilot first, then AegisOps, then ogx. The main proof is bounded failure handling and quick-view observability.',
     packetHref: FRONTIER_APPLICATION_PACKET_URL,
     resumeHref: RESUME_PDF_URL,
@@ -508,7 +509,7 @@ export const APPLICATION_PACKETS: ApplicationPacket[] = [
   },
   {
     title: 'Big Tech Systems',
-    audience: 'Google · Meta · Amazon · Microsoft-style product / infra',
+    audience: 'large-scale product / infra',
     claim: 'Submit the service-boundary story: AegisOps system design, StagePilot runtime posture, and operator-heavy product surfaces like TwinCity UI or Enterprise Kit.',
     packetHref: BIG_TECH_APPLICATION_PACKET_URL,
     resumeHref: RESUME_PDF_URL,
@@ -606,14 +607,14 @@ export const LIVE_PROOF_TRACKS: LiveProofTrack[] = [
     note: 'Nexus-Hive carries the bounded live query lane. Lakehouse Contract Lab stays artifact-refresh-only and exposes read-only review summaries.',
   },
   {
-    title: 'Palantir / High-Trust',
+    title: 'High-Trust Workflows',
     audience: 'approval boundaries · evidence chains · governed release',
     status: 'public-capped-live',
     staticProof: { label: 'regulated-case-workbench status summary', href: 'https://github.com/KIM3310/regulated-case-workbench' },
     liveRepo: { label: 'regulated-case-workbench repo', href: 'https://github.com/KIM3310/regulated-case-workbench' },
     liveRoute: 'POST /api/live-case-brief',
-    walkthrough: { label: 'Palantir review brief', href: 'briefs/palantir-review-brief.html' },
-    packet: { label: 'Palantir application packet', href: PALANTIR_APPLICATION_PACKET_URL },
+    walkthrough: { label: 'High-trust workflow brief', href: 'briefs/palantir-review-brief.html' },
+    packet: { label: 'High-trust workflow packet', href: PALANTIR_APPLICATION_PACKET_URL },
     resume: { label: 'Solution architect resume', href: SOLUTION_ARCHITECT_RESUME_PDF_URL },
     note: 'Fixed case packets only. The live lane summarizes evidence, approval boundary, and redaction posture without exposing arbitrary uploads.',
   },
@@ -656,7 +657,7 @@ export const VERIFIED_LIVE_CHECKS: VerificationLiveCheck[] = [
     model: 'gpt-4.1-mini',
     nextReviewPath: '/v1/failure-taxonomy',
     summary:
-      'Verified a real OpenAI-backed bounded scenario. The live run returned a parser-drift recovery stance with review-safe evidence and no open-ended prompt surface.',
+      'Verified a real model-backed bounded scenario. The live run returned a parser-drift recovery stance with review-safe evidence and no open-ended prompt surface.',
   },
   {
     title: 'Incident escalation preview',
@@ -1044,7 +1045,7 @@ export const REPO_OPERATING_MATRIX: RepoOperatingEntry[] = [
     solutionArchitectFit: 7,
     targetTracks: ['Azure delivery', 'Enterprise workflow AI'],
     strength: 'Document ingestion, retrieval-backed Q&A, and approval matrix.',
-    note: 'Use only when Azure delivery or handover workflows matter.',
+    note: 'Forked repo; use only when Azure delivery or handover workflows matter.',
   },
   {
     name: 'the-logistics-prophet',
@@ -1112,7 +1113,7 @@ export const REPO_OPERATING_MATRIX: RepoOperatingEntry[] = [
     aiEngineerFit: 3,
     solutionArchitectFit: 4,
     targetTracks: ['Consumer AI wellness'],
-    strength: 'Cloudflare delivery, provider fallback, and escalation readiness.',
+    strength: 'Edge delivery, provider fallback, and escalation readiness.',
     note: 'Do not lead with it unless a role explicitly values consumer/wellness signals.',
   },
   /* dream-interpretation-pages — archived */
@@ -1123,6 +1124,99 @@ export const EXPERIENCE: Experience[] = [
   { company: 'Microsoft AI School 8기', role: 'Trainee', period: '2025.09 - 2026.02', description: ['AI/클라우드/데이터 분석 교육 이수', 'RAG, incident operations, real-time ops 중심의 팀 프로젝트 수행'] },
   { company: 'ATOM TECH SOLUTIONS LTD', role: 'Full Stack Intern (Remote)', location: '미국 캘리포니아 버클리', period: '2025.06 - 2025.09', description: ['기존 리뷰 플랫폼에 OpenAI API 기반 문의 챗봇 통합', '풀스택 유지보수 및 기능 개선'] },
   { company: '대한민국 국방부', role: 'Strategic Backbone Network & Security Team Lead', period: '2023.11 - 2025.05', description: ['지휘통신망 24/7 운영, 네트워크 인프라/보안 관리', '분대장 팀 운영 및 리더십 경험'] },
+];
+
+export const PORTFOLIO_TRUTH_CHECKED_AT = '2026-03-22';
+
+export const PORTFOLIO_TRUTH_LEDGER: RepoTruthEntry[] = [
+  {
+    name: 'stage-pilot',
+    lane: 'Featured',
+    repoUrl: 'https://github.com/KIM3310/stage-pilot',
+    homepageUrl: 'https://stage-pilot.pages.dev',
+    statusBadges: ['public', 'active', 'live homepage'],
+    truth: 'Primary runtime-reliability proof with the benchmarked tool-calling surface, checked-in artifacts, and a public walkthrough route.',
+    reviewUse: 'Lead with this for runtime, eval, and frontier-adjacent interviews.',
+  },
+  {
+    name: 'AegisOps',
+    lane: 'Featured',
+    repoUrl: 'https://github.com/KIM3310/AegisOps',
+    homepageUrl: 'https://aegisops-ai-incident-doctor.pages.dev',
+    statusBadges: ['public', 'active', 'live homepage'],
+    truth: 'Applied incident system that turns reliability language into operator workflow, replay, and RCA surfaces.',
+    reviewUse: 'Use right after StagePilot when the conversation needs productized operations software.',
+  },
+  {
+    name: 'enterprise-llm-adoption-kit',
+    lane: 'Featured',
+    repoUrl: 'https://github.com/KIM3310/enterprise-llm-adoption-kit',
+    homepageUrl: 'https://enterprise-llm-kit.pages.dev',
+    statusBadges: ['public', 'active', 'live homepage'],
+    truth: 'Governance-first delivery kit that shows rollout controls, identity boundaries, and enterprise review posture.',
+    reviewUse: 'Use for solutions-architect or enterprise-AI rollout conversations.',
+  },
+  {
+    name: 'Nexus-Hive',
+    lane: 'Support',
+    repoUrl: 'https://github.com/KIM3310/Nexus-Hive',
+    homepageUrl: 'https://nexus-hive.pages.dev',
+    statusBadges: ['public', 'active', 'live homepage'],
+    truth: 'Governed analytics proof for audited NL-to-SQL, review-safe summaries, and warehouse-facing trust boundaries.',
+    reviewUse: 'Use when the interviewer cares about BI governance, analytics safety, or reviewer-facing data tooling.',
+  },
+  {
+    name: 'twincity-ui',
+    lane: 'Support',
+    repoUrl: 'https://github.com/KIM3310/twincity-ui',
+    homepageUrl: 'https://twincity-ui.pages.dev',
+    statusBadges: ['public', 'active', 'live homepage'],
+    truth: 'Operator-facing spatial console that makes dispatch, handoff, and runtime posture readable before the map spectacle.',
+    reviewUse: 'Use for frontend systems, operational UX, and reviewer-first product discussions.',
+  },
+  {
+    name: 'honeypot',
+    lane: 'Support',
+    repoUrl: 'https://github.com/KIM3310/honeypot',
+    homepageUrl: 'https://honeypot-proto.vercel.app',
+    statusBadges: ['public', 'active', 'fork', 'live homepage'],
+    truth: 'Forked Azure document handover prototype with retrieval-backed review flow and guarded export posture.',
+    reviewUse: 'Only bring this forward when document workflow or Azure delivery is relevant, and say immediately that it is forked.',
+  },
+  {
+    name: 'smallbiz-ops-copilot',
+    lane: 'Support',
+    repoUrl: 'https://github.com/KIM3310/smallbiz-ops-copilot',
+    statusBadges: ['private', 'active'],
+    truth: 'Private SMB operations proof with ticketing, KPI review, and guarded action surfaces.',
+    reviewUse: 'Mention only when the conversation needs SMB workflow evidence; it is not a public first-pass artifact.',
+  },
+  {
+    name: 'secure-xl2hwp-local',
+    lane: 'Historical',
+    repoUrl: 'https://github.com/KIM3310/secure-xl2hwp-local',
+    homepageUrl: 'https://secure-xl2hwp-local.pages.dev',
+    statusBadges: ['public', 'archived', 'live homepage'],
+    truth: 'Archived but still valuable air-gapped workflow proof for restricted environments and signed export paths.',
+    reviewUse: 'Use as historical depth for high-trust workflow teams, not as the first repo in a general review.',
+  },
+  {
+    name: 'advisor-review-desk',
+    lane: 'Historical',
+    repoUrl: 'https://github.com/KIM3310/advisor-review-desk',
+    homepageUrl: 'https://kim3310.github.io/advisor-review-desk/',
+    statusBadges: ['public', 'archived', 'live homepage'],
+    truth: 'Archived advisory workflow surface that now mainly serves as historical context behind finance-review storytelling.',
+    reviewUse: 'Treat as supporting history rather than a current flagship.',
+  },
+  {
+    name: 'gemini-cli-tool-runtime',
+    lane: 'Historical',
+    repoUrl: 'https://github.com/KIM3310/gemini-cli-tool-runtime',
+    statusBadges: ['private', 'archived'],
+    truth: 'Private archived runtime/orchestration layer that sits behind earlier CLI runtime experiments.',
+    reviewUse: 'Keep behind ogx; mention only when historical runtime evolution matters.',
+  },
 ];
 
 export const CERTIFICATIONS: Certification[] = [
@@ -1205,7 +1299,7 @@ export const FOCUS_PATHS: FocusPath[] = [
 export const TARGET_TRACKS: TargetTrack[] = [
   {
     title: 'Frontier LLM',
-    companies: 'OpenAI · Anthropic · reliability/evals teams',
+    companies: 'runtime reliability · evals teams',
     summary:
       'Best fit when a reviewer wants benchmarked runtime behavior, tool reliability, and fast project pages instead of generic agent demos.',
     signals: ['Tool-calling reliability', 'Evals and benchmarks', 'Runtime safety', 'Reviewable APIs'],
@@ -1219,7 +1313,7 @@ export const TARGET_TRACKS: TargetTrack[] = [
   },
   {
     title: 'Big Tech Systems',
-    companies: 'Google · Meta · Amazon · Microsoft-style product/SRE orgs',
+    companies: 'large-scale product · infra · SRE teams',
     summary:
       'Strongest where the bar is defensive engineering: clear service boundaries, failure handling, observability, and user-facing systems that survive real operational complexity.',
     signals: ['Defensive engineering', 'Operator workflows', 'Fallback paths', 'Service-grade surfaces'],
@@ -1402,7 +1496,7 @@ export const EXTENDED_PROOF_CLUSTERS: ExtendedProofCluster[] = [
         surface: '/v1/review-queue?user_id=demo-user',
         surfaceType: 'HTTP route',
         summary: 'Shows stale users and clinician/reviewer follow-up before remote coaching is treated as authoritative.',
-        teams: ['Apple/Google product', 'Accessibility', 'Health-adjacent UX'],
+        teams: ['Consumer product', 'Accessibility', 'Health-adjacent UX'],
         github: 'https://github.com/KIM3310/SteadyTap',
         demo: 'https://steadytap.pages.dev',
       },
@@ -1443,7 +1537,7 @@ export const REPO_CLUSTERS: RepoCluster[] = [
       { name: 'AegisOps', focus: 'Multimodal incident copilot with replayable handoff and structured RCA output.', github: 'https://github.com/KIM3310/AegisOps', demo: 'https://aegisops-ai-incident-doctor.pages.dev' },
       { name: 'Aegis-Air', focus: 'Local-first incident review engine for restricted or air-gapped environments.', github: 'https://github.com/KIM3310/Aegis-Air', demo: 'https://aegis-air.pages.dev' },
       { name: 'oh-my-gemini v1.0.0 (ogx)', focus: 'Unified CLI with HUD, MCP, task graphs, deep replan, and safe worker control.', github: 'https://github.com/KIM3310/ogx' },
-      { name: 'gemini-cli-tool-runtime', focus: 'Private runtime/orchestration layer behind earlier Gemini CLI experiments.', note: 'Private repo' },
+      { name: 'gemini-cli-tool-runtime', focus: 'Private runtime/orchestration layer behind earlier CLI experiments.', note: 'Private repo' },
     ],
   },
   {
@@ -1454,7 +1548,7 @@ export const REPO_CLUSTERS: RepoCluster[] = [
       { name: 'Semiconductor Ops Platform (fab-ops + scanner-field-response)', focus: 'Unified semiconductor ops surface covering alarms, lot risk, scanner-field response, release gates, and signed handoff.', github: 'https://github.com/KIM3310/fab-ops-yield-control-tower' },
       { name: 'regulated-case-workbench', focus: 'Case inbox, redaction review, approval, and signed export manifest workflow.', github: 'https://github.com/KIM3310/regulated-case-workbench', demo: 'https://regulated-case-workbench.pages.dev' },
       { name: 'secure-xl2hwp-local', focus: 'Air-gapped document automation pipeline for controlled local environments.', github: 'https://github.com/KIM3310/secure-xl2hwp-local', demo: 'https://secure-xl2hwp-local.pages.dev' },
-      { name: 'honeypot', focus: 'Azure-based document handover copilot with retrieval-backed review flow.', github: 'https://github.com/KIM3310/honeypot', demo: 'https://honeypot-proto.vercel.app' },
+      { name: 'honeypot', focus: 'Forked Azure-based document handover copilot with retrieval-backed review flow.', github: 'https://github.com/KIM3310/honeypot', demo: 'https://honeypot-proto.vercel.app', note: 'Forked repo' },
       { name: 'smallbiz-ops-copilot', focus: 'Private SMB operations copilot with tickets, KPI dashboards, and guarded actions.', note: 'Private repo' },
     ],
   },
@@ -1484,7 +1578,7 @@ export const SECONDARY_PROJECTS: SecondaryProject[] = [
   { title: 'Aegis-Air', focus: 'Local-first incident review engine for air-gapped environments with replay evals', github: 'https://github.com/KIM3310/Aegis-Air', demo: 'https://aegis-air.pages.dev' },
   { title: 'oh-my-gemini (ogx)', focus: 'Unified agent CLI with HUD, MCP integration, task graphs, and deep replan', github: 'https://github.com/KIM3310/ogx' },
   { title: 'TwinCity UI', focus: 'Digital twin ops console with floorplan triage and transport fallback reliability', github: 'https://github.com/KIM3310/twincity-ui', demo: 'https://twincity-ui.pages.dev' },
-  { title: 'Honeypot', focus: 'Azure document handover copilot with retrieval structure and async ingest', github: 'https://github.com/KIM3310/honeypot', demo: 'https://honeypot-3st.pages.dev' },
+  { title: 'Honeypot', focus: 'Forked Azure document handover copilot with retrieval structure and async ingest', github: 'https://github.com/KIM3310/honeypot', demo: 'https://honeypot-3st.pages.dev', note: 'Forked repo' },
   { title: 'regulated-case-workbench', focus: 'Case inbox, evidence review, approval, and export manifest workflow', github: 'https://github.com/KIM3310/regulated-case-workbench', demo: 'https://regulated-case-workbench.pages.dev', note: 'Regulated workflow baseline' },
   { title: 'Quantum Workbench', focus: 'IBM Quantum and Braket execution with ISA-aware proof and chemistry mini-workflow packaging', github: QUANTUM_WORKFLOW_URL },
   { title: 'The Logistics Prophet', focus: 'Predictive logistics control tower with auditability and explainability', github: 'https://github.com/KIM3310/the-logistics-prophet', demo: 'https://the-logistics-prophet.pages.dev', note: 'Ontology, audit chain, and action workflow proof' },

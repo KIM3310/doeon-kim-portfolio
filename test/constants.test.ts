@@ -6,6 +6,7 @@ import {
   CERTIFICATIONS,
   EXPERIENCE,
   SECONDARY_PROJECTS,
+  PORTFOLIO_TRUTH_LEDGER,
   PORTFOLIO_LIVE_URL,
   PORTFOLIO_REPO_URL,
   PRIMARY_PROOF_URL,
@@ -52,6 +53,15 @@ describe('SECONDARY_PROJECTS constant', () => {
     for (const p of SECONDARY_PROJECTS) {
       expect(p.github).toMatch(/github\.com/);
     }
+  });
+});
+
+describe('PORTFOLIO_TRUTH_LEDGER constant', () => {
+  it('captures trust-boundary states that reviewers need to know', () => {
+    expect(PORTFOLIO_TRUTH_LEDGER.length).toBeGreaterThan(5);
+    expect(PORTFOLIO_TRUTH_LEDGER.some((entry) => entry.statusBadges.includes('private'))).toBe(true);
+    expect(PORTFOLIO_TRUTH_LEDGER.some((entry) => entry.statusBadges.includes('archived'))).toBe(true);
+    expect(PORTFOLIO_TRUTH_LEDGER.some((entry) => entry.statusBadges.includes('fork'))).toBe(true);
   });
 });
 

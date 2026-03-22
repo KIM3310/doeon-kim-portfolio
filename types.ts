@@ -165,6 +165,16 @@ export interface RepoOperatingEntry {
   visibility?: 'public' | 'private';
 }
 
+export interface RepoTruthEntry {
+  name: string;
+  lane: 'Featured' | 'Support' | 'Historical';
+  repoUrl: string;
+  homepageUrl?: string;
+  statusBadges: string[];
+  truth: string;
+  reviewUse: string;
+}
+
 export interface Experience {
   company: string;
   role: string;

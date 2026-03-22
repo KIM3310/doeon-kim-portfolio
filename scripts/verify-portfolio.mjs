@@ -13,6 +13,7 @@ const requiredFiles = [
   'content/resume/llm-systems-engineer.json',
   'content/resume/solution-architect.json',
   'components/VerificationBoard.tsx',
+  'components/PortfolioTruthLedger.tsx',
   'components/RepoOperatingMatrix.tsx',
   'docs/resume-json/Doeon_Kim_Resume_LLM_Systems_Engineer.json',
   'docs/resume-json/Doeon_Kim_Resume_Microsoft_Solution_Architect.json',
@@ -45,10 +46,11 @@ const requiredFiles = [
 ];
 
 const checks = [
-  { file: 'constants.ts', mustInclude: ['StagePilot', 'AegisOps', 'AI engineer + solutions architect'], mustNotInclude: ['FabPilot Live X', 'SignalForge', 'Amazon Nova', 'NVIDIA-ready', 'Gemini Live Agent Challenge', 'Samsung-ready'] },
-  { file: 'components/Hero.tsx', mustInclude: ['StagePilot', 'Current checked-in 24-case benchmark snapshot', 'Open AegisOps system'], mustNotInclude: ['FabPilot Live X', 'SignalForge', 'Amazon Nova', 'NVIDIA-ready', 'Samsung-ready'] },
-  { file: 'public/fabpilot-live-x.html', mustInclude: ['Applied Ops Archive', 'Archived high-trust ops proof'], mustNotInclude: ['FabPilot Live X', 'SignalForge', 'Amazon Nova', 'NVIDIA-ready', 'Samsung-ready', 'GitLab AI Hackathon', 'SK hynix-ready'] },
-  { file: 'public/fabpilot-dossier.html', mustInclude: ['Applied Ops Archive', 'high-trust-ops-ready'], mustNotInclude: ['FabPilot Live X', 'SignalForge', 'Samsung-ready', 'SK hynix-ready'] },
+  { file: 'constants.ts', mustInclude: ['StagePilot', 'AegisOps', 'AI engineer + solutions architect', 'PORTFOLIO_TRUTH_LEDGER', '2026-03-22'], mustNotInclude: ['FabPilot Live X', 'SignalForge'] },
+  { file: 'components/Hero.tsx', mustInclude: ['StagePilot', 'Current checked-in 40-case benchmark snapshot', 'Open AegisOps system'], mustNotInclude: ['FabPilot Live X', 'SignalForge'] },
+  { file: 'components/PortfolioTruthLedger.tsx', mustInclude: ['GitHub truth ledger', 'Forked repo surfaces', 'Public, private, archived, and forked repo surfaces are labeled on purpose'], mustNotInclude: ['FabPilot Live X', 'SignalForge'] },
+  { file: 'public/fabpilot-live-x.html', mustInclude: ['Applied Ops Archive', 'Archived high-trust ops proof'], mustNotInclude: ['FabPilot Live X', 'SignalForge'] },
+  { file: 'public/fabpilot-dossier.html', mustInclude: ['Applied Ops Archive', 'high-trust-ops-ready'], mustNotInclude: ['FabPilot Live X', 'SignalForge'] },
   { file: 'public/briefs/frontier-llm-review-brief.html', mustInclude: ['Frontier LLM', 'StagePilot', 'AegisOps'], mustNotInclude: ['FabPilot Live X', 'SignalForge'] },
   { file: 'public/briefs/frontier-llm-interview-pack.html', mustInclude: ['Frontier LLM interview pack', 'StagePilot', 'AegisOps'], mustNotInclude: ['FabPilot Live X', 'SignalForge'] },
   { file: 'public/briefs/frontier-llm-application-packet.html', mustInclude: ['Frontier LLM application packet', 'StagePilot', 'AegisOps'], mustNotInclude: ['FabPilot Live X', 'SignalForge'] },

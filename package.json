@@ -10,6 +10,7 @@
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
+    "verify": "npm run typecheck && npm test && npm run verify:content && npm run build",
     "verify:content": "node scripts/verify-portfolio.mjs",
     "fabtwin:runtime": "node server/index.mjs",
     "fabtwin:runtime:mock": "FABPILOT_ALLOW_MOCK=1 node server/index.mjs",

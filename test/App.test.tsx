@@ -24,4 +24,9 @@ describe('App component', () => {
     render(<App />);
     expect(screen.getByText('DOEON KIM.')).toBeInTheDocument();
   });
+
+  it('renders the GitHub truth ledger section', () => {
+    render(<App />);
+    expect(screen.getByText('GitHub truth ledger')).toBeInTheDocument();
+  });
 });

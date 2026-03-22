@@ -45,12 +45,10 @@ npm run dev
 ## Build
 
 ```bash
-npm run typecheck
-npm run build
-npm run verify:content
+npm run verify
 ```
 
-The three commands above are the fastest way to verify the current portfolio snapshot before publishing.
+The command above is the fastest way to verify the current portfolio snapshot before publishing.
 
 ## Deploy
 
@@ -58,7 +56,7 @@ The site is deployed at `https://kim3310.github.io/doeon-kim-portfolio/` via Git
 
 ## FabTwin Runtime Bridge (archived)
 
-The archived fab ops case study includes an optional Gemini-backed runtime for generating live operator briefs.
+The archived fab ops case study includes an optional model-backed runtime for generating live operator briefs.
 
 ```bash
 npm run fabtwin:runtime:mock

@@ -11,6 +11,7 @@ import VerificationBoard from './components/VerificationBoard';
 import EvidenceGallery from './components/EvidenceGallery';
 import BenchmarkProof from './components/BenchmarkProof';
 import Briefing from './components/Briefing';
+import PortfolioTruthLedger from './components/PortfolioTruthLedger';
 import RepoOperatingMatrix from './components/RepoOperatingMatrix';
 import FocusPaths from './components/FocusPaths';
 import Targets from './components/Targets';
@@ -46,6 +47,7 @@ const App: React.FC = () => {
           <SectionErrorBoundary name="BenchmarkProof"><BenchmarkProof /></SectionErrorBoundary>
           <SectionErrorBoundary name="Briefing"><Briefing /></SectionErrorBoundary>
           <SectionErrorBoundary name="Projects"><Projects /></SectionErrorBoundary>
+          <SectionErrorBoundary name="PortfolioTruthLedger"><PortfolioTruthLedger /></SectionErrorBoundary>
           <SectionErrorBoundary name="RepoOperatingMatrix"><RepoOperatingMatrix /></SectionErrorBoundary>
           <SectionErrorBoundary name="ExtendedProofSurfaces"><ExtendedProofSurfaces /></SectionErrorBoundary>
           <SectionErrorBoundary name="FocusPaths"><FocusPaths /></SectionErrorBoundary>

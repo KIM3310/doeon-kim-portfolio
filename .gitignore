@@ -23,4 +23,5 @@ dist-ssr
 *.sln
 *.sw?
 .codex_runs/
+.omc/
 .venv-resume/
