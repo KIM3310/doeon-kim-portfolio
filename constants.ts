@@ -16,7 +16,7 @@ export const PROFILE: Profile = {
   linkedin: 'https://www.linkedin.com/in/doeon-kim-4742a2388',
   catchphrase: 'Reliable AI systems — from tool-calling middleware to governed data platforms',
   intro:
-    'I build production-grade AI systems with a focus on reliability, governance, and multi-cloud data platform integration. Core expertise spans tool-calling middleware (25% → 90% benchmark lift, npm published), LLM fine-tuning (QLoRA + BFCL evaluation), governed NL-to-SQL with Snowflake and Databricks adapters, enterprise LLM adoption with RBAC and audit trails, and lakehouse pipelines with contract-driven quality gates. 2,000+ tests across the portfolio.',
+    'I build production-grade AI systems with a focus on reliability, governance, and multi-cloud data platform integration. Core expertise spans tool-calling middleware (25% → 90% benchmark lift, npm published), LLM fine-tuning (QLoRA + BFCL evaluation), governed NL-to-SQL with Snowflake and Databricks adapters, enterprise LLM adoption with RBAC and audit trails, and lakehouse pipelines with contract-driven quality gates. 3,500+ tests across 22 repos.',
 };
 
 export const PORTFOLIO_LIVE_URL = 'https://kim3310.github.io/doeon-kim-portfolio/';
@@ -72,9 +72,9 @@ export const PROJECTS: Project[] = [
     achievements: [
       '90% success rate on 40-case benchmark with parser recovery, schema coercion, and bounded retries.',
       'Published as @ai-sdk-tool/parser on npm — composable AI SDK middleware for any provider.',
-      '1,713 tests, codecov integration, multi-cloud deployment (GCP Cloud Run, K8s, Vercel, Cloudflare).',
+      '1,720 tests, codecov integration, multi-cloud deployment (GCP Cloud Run, K8s, Vercel, Cloudflare).',
     ],
-    tech: ['TypeScript', 'AI SDK', 'Zod', 'OpenTelemetry', 'Prometheus', 'Kubernetes'],
+    tech: ['TypeScript', 'AI SDK', 'Vitest', 'Biome', 'Zod', 'OpenTelemetry', 'Prometheus', 'Kubernetes'],
     links: { demo: PRIMARY_PROOF_URL, github: 'https://github.com/KIM3310/stage-pilot', youtube: 'https://youtu.be/6trgTH1vX4M' },
   },
   {
@@ -85,8 +85,9 @@ export const PROJECTS: Project[] = [
       'Fine-tuned Qwen2.5-7B-Instruct with QLoRA (rank=16, 4-bit NF4) on 29K tool-calling examples.',
       'Evaluated against Berkeley Function-Calling Leaderboard — community benchmark, not self-built eval.',
       'Served via vLLM OpenAI-compatible endpoint, plugs directly into stage-pilot middleware.',
+      '108 tests covering data loading, LoRA merge, BFCL evaluation, and inference pipelines.',
     ],
-    tech: ['Python', 'PyTorch', 'PEFT/QLoRA', 'vLLM', 'HuggingFace', 'W&B'],
+    tech: ['Python', 'PyTorch', 'PEFT/QLoRA', 'BFCL', 'Kaggle T4', 'vLLM', 'HuggingFace', 'W&B'],
     links: { github: 'https://github.com/KIM3310/tool-call-finetune-lab' },
   },
   // --- Data Platform + AI ---
@@ -98,8 +99,9 @@ export const PROJECTS: Project[] = [
       'Three-agent pipeline (Translator → Executor → Visualizer) with retry and heuristic fallback.',
       'Policy engine enforces deny/review/allow decisions with full audit trail.',
       'Multi-warehouse adapters: SQLite for demos, Snowflake and Databricks for production.',
+      '166 tests covering agent orchestration, policy enforcement, and multi-warehouse adapters.',
     ],
-    tech: ['Python', 'LangGraph', 'FastAPI', 'Snowflake', 'Databricks', 'Chart.js'],
+    tech: ['Python', 'FastAPI', 'LangGraph', 'Snowflake', 'Databricks', 'Chart.js'],
     links: { github: 'https://github.com/KIM3310/Nexus-Hive', demo: 'https://nexus-hive.pages.dev' },
   },
   // --- Solution Architect ---
@@ -111,8 +113,9 @@ export const PROJECTS: Project[] = [
       'RBAC at retrieval time, prompt injection detection, PII redaction, and audit logging.',
       'Evals harness with baseline diffs, Prometheus LLMOps metrics (latency, tokens, cost).',
       'Snowflake + Databricks integration for eval persistence and MLflow experiment tracking.',
+      '240 tests covering RBAC, PII redaction, RAG retrieval, and eval harness pipelines.',
     ],
-    tech: ['Python', 'FastAPI', 'React', 'Chroma', 'AWS Bedrock', 'Snowflake', 'Databricks'],
+    tech: ['Python', 'FastAPI', 'RBAC', 'PII', 'RAG', 'Snowflake', 'Databricks', 'Chroma', 'AWS Bedrock'],
     links: { github: 'https://github.com/KIM3310/enterprise-llm-adoption-kit' },
   },
   // --- Data Engineering ---
@@ -124,6 +127,7 @@ export const PROJECTS: Project[] = [
       'Full medallion pipeline (Bronze → Silver → Gold) with explicit data contracts at each boundary.',
       'Quality gates enforce schema validation, null checks, range constraints, and deduplication.',
       'Multi-cloud export: Snowflake (MERGE upserts), Databricks Unity Catalog, AWS S3.',
+      '81 tests covering medallion pipeline stages, contract validation, and multi-cloud exports.',
     ],
     tech: ['Python', 'PySpark', 'Delta Lake', 'Snowflake', 'Databricks', 'Terraform'],
     links: { github: 'https://github.com/KIM3310/lakehouse-contract-lab' },
@@ -137,20 +141,29 @@ export const PROJECTS: Project[] = [
       'Combines logs and screenshots into structured RCA with severity classification.',
       'Replay evaluation framework: 4 scenarios, 32 rubric checks, automated regression.',
       'Live demo on Cloudflare Pages with demo mode (no API keys required).',
+      '169 tests covering multimodal analysis, replay evaluation, and postmortem generation.',
     ],
-    tech: ['TypeScript', 'React', 'Gemini', 'Express', 'GCP (GCS, BigQuery)'],
+    tech: ['TypeScript', 'React 19', 'Vite 6', 'Express', 'Gemini', 'GCP (GCS, BigQuery)'],
     links: { demo: 'https://aegisops-ai-incident-doctor.pages.dev', github: 'https://github.com/KIM3310/AegisOps', youtube: 'https://www.youtube.com/watch?v=FOcjPcMheIg' },
   },
 ];
 
 export const SECONDARY_PROJECTS: SecondaryProject[] = [
-  { title: 'Fab-Ops Yield Control Tower', focus: 'Semiconductor ops platform with dual-domain architecture, signed handoff, and release gates', github: 'https://github.com/KIM3310/fab-ops-yield-control-tower' },
-  { title: 'secure-xl2hwp-local', focus: 'Air-gapped data pipeline with SpecKit contracts, CoT processing, and signed exports', github: 'https://github.com/KIM3310/secure-xl2hwp-local' },
-  { title: 'oh-my-gemini (ogx, archived)', focus: 'Multi-agent CLI orchestration with task graphs, MCP tools, and tmux HUD', github: 'https://github.com/KIM3310/ogx' },
-  { title: 'Aegis-Air (archived)', focus: 'Air-gapped incident review engine — predecessor to AegisOps', github: 'https://github.com/KIM3310/Aegis-Air', demo: 'https://aegis-air.pages.dev' },
-  { title: 'Quantum Workbench', focus: 'Multi-backend quantum computing: Qiskit, Braket, real IBM hardware verification', github: QUANTUM_WORKFLOW_URL },
-  { title: 'The Logistics Prophet (archived)', focus: 'ML logistics control tower with SHAP explainability and RDF ontology', github: 'https://github.com/KIM3310/the-logistics-prophet', demo: 'https://the-logistics-prophet.pages.dev' },
-  { title: 'Finance Review Platform (archived)', focus: 'Domain-driven finance platform: quant signals, risk posture, advisory review', github: 'https://github.com/KIM3310/signal-risk-lab', demo: 'https://kim3310.github.io/signal-risk-lab/' },
+  { title: 'Fab-Ops Yield Control Tower', focus: 'Semiconductor ops platform with dual-domain architecture, signed handoff, and release gates (112 tests)', github: 'https://github.com/KIM3310/fab-ops-yield-control-tower' },
+  { title: 'secure-xl2hwp-local', focus: 'Air-gapped data pipeline with SpecKit contracts, CoT processing, and signed exports (97 tests)', github: 'https://github.com/KIM3310/secure-xl2hwp-local' },
+  { title: 'ogx', focus: 'Multi-agent CLI orchestration with task graphs, MCP tools, and tmux HUD (152 tests)', github: 'https://github.com/KIM3310/ogx' },
+  { title: 'TwinCity UI', focus: 'Digital-twin operational dashboard with Next.js 16, React 19, and TypeScript (140 tests)', github: 'https://github.com/KIM3310/twincity-ui', demo: 'https://twincity-ui.pages.dev' },
+  { title: 'the-savior', focus: 'Node.js automation toolkit with Biome linting and structured task runners (86 tests)', github: 'https://github.com/KIM3310/the-savior' },
+  { title: 'Quantum Workbench', focus: 'Multi-backend quantum computing: Qiskit, Amazon Braket, real IBM hardware verification (65 tests)', github: QUANTUM_WORKFLOW_URL },
+  { title: 'Aegis-Air (archived)', focus: 'Air-gapped incident review engine — predecessor to AegisOps (79 tests)', github: 'https://github.com/KIM3310/Aegis-Air', demo: 'https://aegis-air.pages.dev' },
+  { title: 'The Logistics Prophet (archived)', focus: 'ML logistics control tower with SHAP explainability and RDF ontology (112 tests)', github: 'https://github.com/KIM3310/the-logistics-prophet', demo: 'https://the-logistics-prophet.pages.dev' },
+  { title: 'Finance Review Platform (archived)', focus: 'Domain-driven finance platform: quant signals, risk posture, advisory review (43 tests)', github: 'https://github.com/KIM3310/signal-risk-lab', demo: 'https://kim3310.github.io/signal-risk-lab/' },
+  { title: 'SteadyTap', focus: 'Swift/SwiftUI mobile app with Python FastAPI backend (12 tests)', github: 'https://github.com/KIM3310/SteadyTap' },
+  { title: 'beaver-study-orchestrator', focus: 'Study workflow orchestration with Python FastAPI (40 tests)', github: 'https://github.com/KIM3310/beaver-study-orchestrator' },
+  { title: 'dream-interpretation-pages', focus: 'TypeScript + Vite app deployed on Cloudflare Pages (build pass)', github: 'https://github.com/KIM3310/dream-interpretation-pages' },
+  { title: 'dv-regression-lab', focus: 'Data validation and regression testing platform with Python FastAPI (31 tests)', github: 'https://github.com/KIM3310/dv-regression-lab' },
+  { title: 'ecotide', focus: 'Swift/SwiftUI app with Capacitor cross-platform support (build pass)', github: 'https://github.com/KIM3310/ecotide' },
+  { title: 'kbbq-idle-unity', focus: 'Unity/C# idle game with Python FastAPI backend (9 tests)', github: 'https://github.com/KIM3310/kbbq-idle-unity' },
 ];
 
 export const PORTFOLIO_TRUTH_LEDGER: RepoTruthEntry[] = [
@@ -243,10 +256,10 @@ export const CERTIFICATIONS: Certification[] = [
 ];
 
 export const PORTFOLIO_RUNTIME_META = [
-  { label: 'Scope', value: '6 flagship systems + 7 extended projects' },
+  { label: 'Scope', value: '6 flagship systems + 15 extended projects across 22 repos' },
   { label: 'Stack', value: 'React 19 + Vite 6' },
   { label: 'Focus', value: 'AI Reliability / Data Platform / Enterprise Governance' },
-  { label: 'Tests', value: '2,000+ tests across portfolio' },
+  { label: 'Tests', value: '3,500+ tests across 22 repos' },
   { label: 'Public Proof', value: 'Public repos + npm package + live demos' },
   { label: 'Portfolio URL', value: 'kim3310.github.io/doeon-kim-portfolio' },
 ];
