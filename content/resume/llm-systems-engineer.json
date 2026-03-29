@@ -7,9 +7,9 @@
     "linkedin.com/in/doeon-kim-4742a2388 | github.com/KIM3310 | kim3310.github.io/doeon-kim-portfolio"
   ],
   "summary": [
-    "Builds production-minded AI systems with strongest public proof in tool-calling reliability, multimodal incident workflows, and reviewable runtime design.",
-    "Improved StagePilot benchmark success from 25% baseline to 90% on a 40-case expanded suite (13 edge cases including adversarial, unicode, oversized payloads) with parser recovery and bounded retry, then exposed the same runtime story through live review, OpenTelemetry traces, and regression-gate surfaces.",
-    "Extends the same reliability posture into bounded live reviewer APIs for incident review, governed analytics, document QA, air-gapped operations, and high-trust workflow delivery."
+    "Builds production-minded AI systems with strongest public proof in tool-calling reliability, multimodal incident workflows, governed analytics, and reviewable runtime design.",
+    "Improved StagePilot benchmark success from 25% baseline to 90% on a 40-case expanded suite (13 edge cases including adversarial, unicode, oversized payloads) with parser recovery and bounded retry, then exposed the same runtime story through public npm delivery, live review, OpenTelemetry traces, and regression-gate surfaces.",
+    "Extends the same reliability posture into bounded live reviewer APIs for incident review, enterprise governance, warehouse-aware analytics, and high-trust workflow delivery while keeping private customer-style workbenches out of the primary public claim set."
   ],
   "skill_groups": [
     {
@@ -145,7 +145,7 @@
     "Korea National Open University | B.S. in Computer Science (In Progress, Entered Mar 2026)"
   ],
   "certifications": [
-    "AI-900, SnowPro Associate, Palantir Foundry Data Engineer Associate, Databricks Platform Architect (AWS/GCP), Datadog Observability"
+    "AI-900, SnowPro Associate, Palantir Foundry Data Engineer Associate, Databricks Platform Architect (AWS/GCP), Datadog Observability — issuer validation shared on request or in the application packet"
   ],
   "languages": [
     "Korean (Native), English (Business / Working), Japanese (Business / Working)"

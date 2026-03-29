@@ -9,7 +9,8 @@ const Certifications: React.FC = () => {
       <div className="flex flex-col md:flex-row justify-between items-end mb-16 border-b border-white/10 pb-8">
         <div>
           <h2 className="text-3xl md:text-4xl font-serif-heading font-medium text-white mb-2">Credentials</h2>
-          <p className="text-primary-muted font-light">Signals that reinforce the project narrative.</p>
+          <p className="text-primary-muted font-light">Signals that reinforce the project narrative after the public proof surfaces, not instead of them.</p>
+          <p className="text-white/40 text-xs mt-3 uppercase tracking-[0.2em]">Issuer validation links or IDs are shared in targeted packets or on request.</p>
         </div>
       </div>
 
@@ -62,7 +63,7 @@ const EducationAndLanguages: React.FC = () => {
 
 const Footer: React.FC = () => {
   return (
-    <footer className="py-20 border-t border-white/5 bg-[#050505]">
+    <footer id="community" className="py-20 border-t border-white/5 bg-[#050505]">
       <div className="container mx-auto px-6 lg:px-12 max-w-7xl text-center">
         <h2 className="text-3xl font-serif-heading font-medium text-white mb-4">{PROFILE.name}</h2>
         <p className="text-primary-muted mb-8 font-light max-w-md mx-auto">{PROFILE.title}</p>

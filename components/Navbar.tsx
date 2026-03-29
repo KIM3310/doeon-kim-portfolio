@@ -3,20 +3,13 @@ import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const navItems = [
-  { name: '90-sec', href: '#visitor-mode' },
-  { name: 'Readiness', href: '#readiness' },
-  { name: 'Packets', href: '#packets' },
-  { name: 'Live Proof', href: '#live-proof' },
+  { name: 'Start', href: '#visitor-mode' },
   { name: 'Verified', href: '#verification' },
-  { name: 'Evidence', href: '#evidence' },
-  { name: 'Briefing', href: '#briefing' },
   { name: 'Projects', href: '#projects' },
-  { name: 'Repo Map', href: '#operating-map' },
-  { name: 'Surfaces', href: '#proof-surfaces' },
-  { name: 'Proof Paths', href: '#focus-paths' },
-  { name: 'Targets', href: '#targets' },
-  { name: 'Why Fit', href: '#why-me' },
+  { name: 'Skills', href: '#skills' },
   { name: 'Experience', href: '#experience' },
+  { name: 'Credentials', href: '#certifications' },
+  { name: 'Education', href: '#education' },
   { name: 'Contact', href: '#community' },
 ];
 
@@ -24,9 +17,9 @@ const desktopNavItems = [
   { name: 'Start', href: '#visitor-mode' },
   { name: 'Proof', href: '#verification' },
   { name: 'Projects', href: '#projects' },
-  { name: 'Repo Map', href: '#operating-map' },
-  { name: 'Targets', href: '#targets' },
+  { name: 'Skills', href: '#skills' },
   { name: 'Experience', href: '#experience' },
+  { name: 'Credentials', href: '#certifications' },
   { name: 'Contact', href: '#community' },
 ];
 
@@ -111,11 +104,11 @@ const Navbar: React.FC = () => {
               ))}
             </nav>
             <a
-              href="#packets"
-              onClick={(e) => handleClick(e, '#packets')}
+              href="#verification"
+              onClick={(e) => handleClick(e, '#verification')}
               className="rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs font-medium uppercase tracking-[0.2em] text-white/75 transition-colors hover:border-accent-gold/40 hover:text-white print:hidden"
             >
-              Review Pack
+              Verified Proof
             </a>
           </div>
 

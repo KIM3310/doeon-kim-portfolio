@@ -3,6 +3,7 @@ import ErrorBoundary from './components/ErrorBoundary';
 import SectionErrorBoundary from './components/SectionErrorBoundary';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import Verification from './components/Verification';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Experience from './components/Experience';
@@ -23,6 +24,7 @@ const App: React.FC = () => {
         <Navbar />
         <main id="main-content">
           <SectionErrorBoundary name="Hero"><Hero /></SectionErrorBoundary>
+          <SectionErrorBoundary name="Verification"><Verification /></SectionErrorBoundary>
           <SectionErrorBoundary name="Projects"><Projects /></SectionErrorBoundary>
           <SectionErrorBoundary name="Skills"><Skills /></SectionErrorBoundary>
           <SectionErrorBoundary name="Experience"><Experience /></SectionErrorBoundary>

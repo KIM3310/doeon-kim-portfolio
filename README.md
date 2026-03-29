@@ -2,7 +2,21 @@
 
 Personal portfolio site showcasing AI systems, operational software, and data platform projects. Built with React + TypeScript, deployed on GitHub Pages.
 
-Verified now: local typecheck, production build, and content verification all run from the repository root.
+Verified now (2026-03-29): local typecheck, content verification, tests, and production build all run from the repository root.
+
+## Start Here By Target
+
+- **Big tech / applied AI systems:** [`big-tech-systems-review-brief`](https://kim3310.github.io/doeon-kim-portfolio/briefs/big-tech-systems-review-brief.html)
+- **AWS / GenAI SA packet:** [`aws-genai-application-packet`](https://kim3310.github.io/doeon-kim-portfolio/briefs/aws-genai-application-packet.html)
+- **Databricks Korea packet:** [`databricks-korea-application-packet`](https://kim3310.github.io/doeon-kim-portfolio/briefs/databricks-korea-application-packet.html)
+- **Snowflake Korea packet:** [`snowflake-korea-application-packet`](https://kim3310.github.io/doeon-kim-portfolio/briefs/snowflake-korea-application-packet.html)
+- **OpenAI Seoul packet:** [`openai-seoul-application-packet`](https://kim3310.github.io/doeon-kim-portfolio/briefs/openai-seoul-application-packet.html)
+- **Anthropic Seoul packet:** [`anthropic-seoul-application-packet`](https://kim3310.github.io/doeon-kim-portfolio/briefs/anthropic-seoul-application-packet.html)
+- **Frontier LLM / runtime reliability:** [`frontier-llm-review-brief`](https://kim3310.github.io/doeon-kim-portfolio/briefs/frontier-llm-review-brief.html)
+- **Snowflake review brief:** [`snowflake-review-brief`](https://kim3310.github.io/doeon-kim-portfolio/briefs/snowflake-review-brief.html)
+- **Databricks review brief:** [`databricks-review-brief`](https://kim3310.github.io/doeon-kim-portfolio/briefs/databricks-review-brief.html)
+- **Palantir / operational AI packet:** [`palantir-application-packet`](https://kim3310.github.io/doeon-kim-portfolio/briefs/palantir-application-packet.html)
+- **Palantir review brief:** [`palantir-review-brief`](https://kim3310.github.io/doeon-kim-portfolio/briefs/palantir-review-brief.html)
 
 ## Quick Start
 
@@ -25,6 +39,8 @@ The portfolio is organized around a few focus areas:
 - **Applied vision systems:** retina-scan-ai, weld-defect-vision
 - **Supporting experiments and archived context:** Twincity UI, The Logistics Prophet, Signal Risk Lab, ogx, SteadyTap, ecotide, the-savior, kbbq-idle-unity
 
+The public site intentionally leads with authored, reviewable public proof. Private workbenches remain part of the deeper interview story, but they are no longer treated as the first thing a recruiter should read.
+
 ## Repo operating map
 
 - `components/`, `constants.ts`, and `content/` define the main portfolio experience.
@@ -33,18 +49,32 @@ The portfolio is organized around a few focus areas:
 - `docs/` holds supporting runtime and resume pipeline notes.
 - `server/` exposes the optional archived runtime bridge used by the older ops surface.
 
-## Current flagship order
+## Current flagship public order
 
 1. `stage-pilot`
 2. `AegisOps`
-3. `memory-test-master-change-gate`
-4. `ops-reliability-workbench`
+3. `tool-call-finetune-lab`
+4. `Nexus-Hive`
 5. `enterprise-llm-adoption-kit`
 6. `lakehouse-contract-lab`
-7. `retina-scan-ai`
-8. `regulated-case-workbench`
 
-Most of these flagship repos now include a built-in resource pack, review pack, or release-readiness surface, and several now also report locally staged public datasets so reviewers can inspect the strongest proof path without private data or API keys.
+These six repos are the clearest public proof for the current hiring story: applied AI reliability, governed analytics, enterprise AI delivery, and data-platform integration. Most of them include a built-in resource pack, review pack, or release-readiness surface so reviewers can inspect the strongest proof path without private data or API keys.
+
+For `tool-call-finetune-lab`, the strongest public proof is the post-training pipeline, BFCL-aligned harness, Kaggle-ready notebook, and checked-in release-status artifacts. External Kaggle and Hugging Face publication should be treated as separately tracked proof, not silently assumed.
+
+## Selective private depth
+
+- `memory-test-master-change-gate`
+- `ops-reliability-workbench`
+- `regulated-case-workbench`
+- `retina-scan-ai`
+- `Upstage-DocuAgent`
+
+These systems are part of the deeper role-fit story and are shared selectively in targeted interview loops. The public site keeps them behind the public-first flagship set so the portfolio stays legible to external reviewers.
+
+Credential note: the public site keeps certification names and issuers visible, while issuer validation links or IDs are shared in application packets or on request.
+
+Cross-repo verification and residual-risk ledger: [`KIM3310/PORTFOLIO_VERIFICATION_AND_RISK_LEDGER.md`](https://github.com/KIM3310/KIM3310/blob/main/PORTFOLIO_VERIFICATION_AND_RISK_LEDGER.md)
 
 ## Current live integration highlights
 

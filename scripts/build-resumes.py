@@ -3,16 +3,22 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from docx import Document
-from docx.enum.section import WD_SECTION
-from docx.enum.style import WD_STYLE_TYPE
-from docx.shared import Inches, Pt, RGBColor
-from reportlab.lib import colors
-from reportlab.lib.enums import TA_CENTER
-from reportlab.lib.pagesizes import A4
-from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
-from reportlab.lib.units import inch
-from reportlab.platypus import ListFlowable, ListItem, Paragraph, SimpleDocTemplate, Spacer
+try:
+    from docx import Document
+    from docx.enum.section import WD_SECTION
+    from docx.enum.style import WD_STYLE_TYPE
+    from docx.shared import Inches, Pt, RGBColor
+    from reportlab.lib import colors
+    from reportlab.lib.enums import TA_CENTER
+    from reportlab.lib.pagesizes import A4
+    from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
+    from reportlab.lib.units import inch
+    from reportlab.platypus import ListFlowable, ListItem, Paragraph, SimpleDocTemplate, Spacer
+except ModuleNotFoundError as exc:  # pragma: no cover - environment-specific
+    raise SystemExit(
+        "Missing resume build dependencies. Install them with: "
+        "python3.11 -m pip install --user python-docx reportlab"
+    ) from exc
 
 
 ROOT = Path(__file__).resolve().parents[1]

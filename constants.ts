@@ -6,21 +6,25 @@ import {
   Profile,
   SecondaryProject,
   RepoTruthEntry,
+  VerificationOverviewEntry,
+  VerificationSnapshotEntry,
+  ResidualRiskEntry,
 } from './types';
 
 export const PROFILE: Profile = {
   name: '김도언 (Doeon Kim)',
-  title: 'AI Systems Engineer | Reliability, Reviewability, Delivery',
+  title: 'Applied AI Engineer | Solution Architect | Reliability, Reviewability, Delivery',
   email: 'ehdjs1351@gmail.com',
   github: 'https://github.com/KIM3310',
   linkedin: 'https://www.linkedin.com/in/doeon-kim-4742a2388',
   catchphrase: 'Reliable AI systems — from tool-calling middleware to governed data platforms',
   intro:
-    'I build production-grade AI systems with a focus on reliability, governance, and multi-cloud data platform integration. Core expertise spans tool-calling middleware (25% → 90% benchmark lift, npm published), LLM fine-tuning (QLoRA + BFCL evaluation), governed NL-to-SQL with Snowflake and Databricks adapters, enterprise LLM adoption with RBAC and audit trails, and lakehouse pipelines with contract-driven quality gates. 3,500+ tests across 22 repos.',
+    'I build production-grade AI systems with a focus on reliability, governance, and multi-cloud data platform integration. Public proof starts with StagePilot, AegisOps, Nexus-Hive, Enterprise LLM Adoption Kit, Lakehouse Contract Lab, and Tool-Call Fine-Tune Lab; deeper manufacturing and high-trust workflow systems are shared selectively in targeted interviews. Core expertise spans tool-calling middleware (25% → 90% benchmark lift, npm published), LLM post-training (QLoRA + BFCL-aligned evaluation harnesses), governed NL-to-SQL with Snowflake and Databricks adapters, enterprise LLM adoption with RBAC and audit trails, and lakehouse pipelines with contract-driven quality gates.',
 };
 
 export const PORTFOLIO_LIVE_URL = 'https://kim3310.github.io/doeon-kim-portfolio/';
 export const PORTFOLIO_REPO_URL = 'https://github.com/KIM3310/doeon-kim-portfolio';
+export const PORTFOLIO_LEDGER_URL = 'https://github.com/KIM3310/KIM3310/blob/main/PORTFOLIO_VERIFICATION_AND_RISK_LEDGER.md';
 
 export const FEATURED_CASE_URL = 'fabpilot-live-x.html';
 export const DOSSIER_URL = 'fabpilot-dossier.html';
@@ -77,18 +81,37 @@ export const PROJECTS: Project[] = [
     tech: ['TypeScript', 'AI SDK', 'Vitest', 'Biome', 'Zod', 'OpenTelemetry', 'Prometheus', 'Kubernetes'],
     links: { demo: PRIMARY_PROOF_URL, github: 'https://github.com/KIM3310/stage-pilot', youtube: 'https://youtu.be/6trgTH1vX4M' },
   },
+  // --- Applied systems ---
+  {
+    title: 'AegisOps — Multimodal Incident Analysis',
+    category: 'AI Engineer / Incident AI',
+    role: 'Multimodal incident analysis with replay evals and structured postmortems',
+    achievements: [
+      'Combines logs and screenshots into structured RCA with severity classification.',
+      'Replay evaluation framework: 4 scenarios, 32 rubric checks, automated regression.',
+      'Live demo on Cloudflare Pages with demo mode (no API keys required).',
+      '169 tests covering multimodal analysis, replay evaluation, and postmortem generation.',
+    ],
+    tech: ['TypeScript', 'React 19', 'Vite 6', 'Express', 'Gemini', 'GCP (GCS, BigQuery)'],
+    links: { demo: 'https://aegisops-ai-incident-doctor.pages.dev', github: 'https://github.com/KIM3310/AegisOps', youtube: 'https://www.youtube.com/watch?v=FOcjPcMheIg' },
+  },
   {
     title: 'Tool-Call Fine-Tune Lab',
     category: 'AI Engineer / LLM Fine-Tuning',
-    role: 'QLoRA fine-tuning of Qwen2.5-7B for tool-calling, evaluated against BFCL benchmark',
+    role: 'QLoRA post-training of Qwen2.5-7B for tool-calling with a BFCL-aligned evaluation harness',
     achievements: [
       'Fine-tuned Qwen2.5-7B-Instruct with QLoRA (rank=16, 4-bit NF4) on 29K tool-calling examples.',
-      'Evaluated against Berkeley Function-Calling Leaderboard — community benchmark, not self-built eval.',
+      'Rebuilt the public data pipeline to a documented 29,647-example split and kept the BFCL-aligned harness inspectable in-repo.',
       'Served via vLLM OpenAI-compatible endpoint, plugs directly into stage-pilot middleware.',
-      '108 tests covering data loading, LoRA merge, BFCL evaluation, and inference pipelines.',
+      '108 tests plus repo-local release-status artifacts keep external Kaggle and Hugging Face blockers explicit.',
     ],
-    tech: ['Python', 'PyTorch', 'PEFT/QLoRA', 'BFCL', 'Kaggle T4', 'vLLM', 'HuggingFace', 'W&B'],
-    links: { github: 'https://github.com/KIM3310/tool-call-finetune-lab' },
+    proofNote:
+      'The strongest public proof is the training pipeline, BFCL-aligned harness, and checked-in release-status ledger. Kaggle and Hugging Face publication remain separately tracked because third-party credentials and recoverable model weights are still required.',
+    tech: ['Python', 'PyTorch', 'PEFT/QLoRA', 'BFCL', 'Kaggle T4', 'vLLM', 'Hugging Face', 'W&B'],
+    links: {
+      github: 'https://github.com/KIM3310/tool-call-finetune-lab',
+      proof: 'https://github.com/KIM3310/tool-call-finetune-lab/blob/main/results/public_release_status.md',
+    },
   },
   // --- Data Platform + AI ---
   {
@@ -132,27 +155,13 @@ export const PROJECTS: Project[] = [
     tech: ['Python', 'PySpark', 'Delta Lake', 'Snowflake', 'Databricks', 'Terraform'],
     links: { github: 'https://github.com/KIM3310/lakehouse-contract-lab' },
   },
-  // --- Supporting ---
-  {
-    title: 'AegisOps — Multimodal Incident Analysis',
-    category: 'AI Engineer / SRE',
-    role: 'Multimodal incident analysis with replay evals and structured postmortems',
-    achievements: [
-      'Combines logs and screenshots into structured RCA with severity classification.',
-      'Replay evaluation framework: 4 scenarios, 32 rubric checks, automated regression.',
-      'Live demo on Cloudflare Pages with demo mode (no API keys required).',
-      '169 tests covering multimodal analysis, replay evaluation, and postmortem generation.',
-    ],
-    tech: ['TypeScript', 'React 19', 'Vite 6', 'Express', 'Gemini', 'GCP (GCS, BigQuery)'],
-    links: { demo: 'https://aegisops-ai-incident-doctor.pages.dev', github: 'https://github.com/KIM3310/AegisOps', youtube: 'https://www.youtube.com/watch?v=FOcjPcMheIg' },
-  },
 ];
 
 export const SECONDARY_PROJECTS: SecondaryProject[] = [
   { title: 'Fab-Ops Yield Control Tower', focus: 'Semiconductor ops platform with dual-domain architecture, signed handoff, and release gates (112 tests)', github: 'https://github.com/KIM3310/fab-ops-yield-control-tower' },
   { title: 'secure-xl2hwp-local', focus: 'Air-gapped data pipeline with SpecKit contracts, CoT processing, and signed exports (97 tests)', github: 'https://github.com/KIM3310/secure-xl2hwp-local' },
   { title: 'ogx', focus: 'Multi-agent CLI orchestration with task graphs, MCP tools, and tmux HUD (152 tests)', github: 'https://github.com/KIM3310/ogx' },
-  { title: 'TwinCity UI', focus: 'Digital-twin operational dashboard with Next.js 16, React 19, and TypeScript (140 tests)', github: 'https://github.com/KIM3310/twincity-ui', demo: 'https://twincity-ui.pages.dev' },
+  { title: 'TwinCity UI', focus: 'Digital-twin operational dashboard with Next.js 16, React 19, and TypeScript (140 tests)', github: 'https://github.com/KIM3310/twincity-ui', demo: 'https://twincity-ui-app-811356341663.asia-northeast3.run.app' },
   { title: 'the-savior', focus: 'Node.js automation toolkit with Biome linting and structured task runners (86 tests)', github: 'https://github.com/KIM3310/the-savior' },
   { title: 'Quantum Workbench', focus: 'Multi-backend quantum computing: Qiskit, Amazon Braket, real IBM hardware verification (65 tests)', github: QUANTUM_WORKFLOW_URL },
   { title: 'Aegis-Air (archived)', focus: 'Air-gapped incident review engine — predecessor to AegisOps (79 tests)', github: 'https://github.com/KIM3310/Aegis-Air', demo: 'https://aegis-air.pages.dev' },
@@ -186,6 +195,30 @@ export const PORTFOLIO_TRUTH_LEDGER: RepoTruthEntry[] = [
     reviewUse: 'Use for incident intelligence, replay-eval posture, and delivery controls.',
   },
   {
+    name: 'tool-call-finetune-lab',
+    lane: 'Featured',
+    repoUrl: 'https://github.com/KIM3310/tool-call-finetune-lab',
+    statusBadges: ['public', 'featured'],
+    truth: 'Strongest public proof is the post-training pipeline, BFCL-aligned harness, and repo-local release-status ledger rather than a fully public benchmark artifact.',
+    reviewUse: 'Use as support evidence for LLM post-training, eval harness design, and runtime-quality experiments.',
+  },
+  {
+    name: 'enterprise-llm-adoption-kit',
+    lane: 'Featured',
+    repoUrl: 'https://github.com/KIM3310/enterprise-llm-adoption-kit',
+    statusBadges: ['public', 'featured'],
+    truth: 'Shows enterprise governance controls, eval persistence, and rollout framing more clearly than generic RAG demos.',
+    reviewUse: 'Use for enterprise AI governance, rollout readiness, and platform-architecture discussions.',
+  },
+  {
+    name: 'lakehouse-contract-lab',
+    lane: 'Featured',
+    repoUrl: 'https://github.com/KIM3310/lakehouse-contract-lab',
+    statusBadges: ['public', 'featured'],
+    truth: 'Makes medallion and contract-driven data quality visible in reviewer-readable form.',
+    reviewUse: 'Use for Snowflake, Databricks, and lakehouse architecture conversations.',
+  },
+  {
     name: 'Nexus-Hive',
     lane: 'Featured',
     repoUrl: 'https://github.com/KIM3310/Nexus-Hive',
@@ -207,7 +240,7 @@ export const PORTFOLIO_TRUTH_LEDGER: RepoTruthEntry[] = [
     name: 'TwinCity UI',
     lane: 'Historical',
     repoUrl: 'https://github.com/KIM3310/twincity-ui',
-    homepageUrl: 'https://twincity-ui.pages.dev',
+    homepageUrl: 'https://twincity-ui-app-811356341663.asia-northeast3.run.app',
     statusBadges: ['archived', 'historical'],
     truth: 'Kept as a historical digital-twin surface rather than an active flagship project.',
     reviewUse: 'Use only when asked about UI reliability or archived operational surfaces.',
@@ -260,6 +293,144 @@ export const PORTFOLIO_RUNTIME_META = [
   { label: 'Stack', value: 'React 19 + Vite 6' },
   { label: 'Focus', value: 'AI Reliability / Data Platform / Enterprise Governance' },
   { label: 'Tests', value: '3,500+ tests across 22 repos' },
-  { label: 'Public Proof', value: 'Public repos + npm package + live demos' },
+  { label: 'Public Proof', value: 'Public repos + npm package + live demos; private depth shared selectively' },
+  { label: 'Credential Proof', value: 'Badge summary public; issuer verification shared on request' },
   { label: 'Portfolio URL', value: 'kim3310.github.io/doeon-kim-portfolio' },
+];
+
+export const PORTFOLIO_VERIFICATION_OVERVIEW: VerificationOverviewEntry[] = [
+  {
+    label: 'Verified baseline',
+    value: '2026-03-29',
+    detail: 'Flagship public proof and selective private depth were rerun from local clean bootstraps, with repo-local release ledgers added where public artifacts remain gated.',
+  },
+  {
+    label: 'Repos green',
+    value: '11',
+    detail: 'Six flagship public systems plus five selective private-depth workbenches are locally verified.',
+  },
+  {
+    label: 'Setup risk removed',
+    value: 'Self-healing bootstraps',
+    detail: 'Python-heavy repos rebuild stale virtual environments instead of silently reusing broken ones.',
+  },
+  {
+    label: 'Source of truth',
+    value: 'Cross-repo ledger',
+    detail: 'Public proof, env-gated boundaries, residual risks, and repo-specific release blockers are tracked explicitly instead of being implied away.',
+  },
+];
+
+export const VERIFIED_REPO_SNAPSHOTS: VerificationSnapshotEntry[] = [
+  {
+    repo: 'stage-pilot',
+    lane: 'Flagship',
+    href: 'https://github.com/KIM3310/stage-pilot',
+    command: 'npm run verify',
+    proof: '186 test files / 1,720 tests plus package and DTS build',
+    boundary: 'Provider-backed integrations remain optional and env-gated',
+  },
+  {
+    repo: 'AegisOps',
+    lane: 'Flagship',
+    href: 'https://github.com/KIM3310/AegisOps',
+    command: 'npm run verify',
+    proof: 'tests, replay evals, review-surface smoke, production build',
+    boundary: 'Live cloud connectors depend on credentials and vendor uptime',
+  },
+  {
+    repo: 'Nexus-Hive',
+    lane: 'Flagship',
+    href: 'https://github.com/KIM3310/Nexus-Hive',
+    command: 'make verify',
+    proof: 'clean Python 3.11 bootstrap and warehouse adapter test coverage',
+    boundary: 'Live Snowflake and Databricks access still requires tenant auth',
+  },
+  {
+    repo: 'enterprise-llm-adoption-kit',
+    lane: 'Flagship',
+    href: 'https://github.com/KIM3310/enterprise-llm-adoption-kit',
+    command: 'make verify',
+    proof: 'backend tests, frontend build, smoke path, coverage',
+    boundary: 'Bedrock and warehouse persistence remain credential-gated',
+  },
+  {
+    repo: 'lakehouse-contract-lab',
+    lane: 'Flagship',
+    href: 'https://github.com/KIM3310/lakehouse-contract-lab',
+    command: 'make verify',
+    proof: 'clean Python 3.11 bootstrap, tests, lint, build, smoke',
+    boundary: 'Hosted warehouse export proof depends on external tenants',
+  },
+  {
+    repo: 'tool-call-finetune-lab',
+    lane: 'Flagship',
+    href: 'https://github.com/KIM3310/tool-call-finetune-lab',
+    command: 'make verify + make data',
+    proof: 'pytest plus Ruff, rebuilt 29,647-example split, and repo-local release-status artifacts',
+    boundary: 'Kaggle and Hugging Face publication still depend on valid third-party credentials and recoverable model weights',
+  },
+  {
+    repo: 'memory-test-master-change-gate',
+    lane: 'Selective',
+    href: 'https://github.com/KIM3310/memory-test-master-change-gate',
+    command: 'make verify',
+    proof: 'Ruff, mypy, 26 pytest cases',
+    boundary: 'Foundry sync is still env-gated',
+  },
+  {
+    repo: 'ops-reliability-workbench',
+    lane: 'Selective',
+    href: 'https://github.com/KIM3310/ops-reliability-workbench',
+    command: 'make verify',
+    proof: 'Ruff, mypy, 28 pytest cases',
+    boundary: 'Optional OpenAI assist remains off by default and env-gated',
+  },
+  {
+    repo: 'regulated-case-workbench',
+    lane: 'Selective',
+    href: 'https://github.com/KIM3310/regulated-case-workbench',
+    command: 'make verify',
+    proof: 'backend tests, frontend syntax checks, runtime scorecard validation',
+    boundary: 'Cases stay synthetic and the public live lane is intentionally capped',
+  },
+  {
+    repo: 'retina-scan-ai',
+    lane: 'Selective',
+    href: 'https://github.com/KIM3310/retina-scan-ai',
+    command: 'make verify',
+    proof: '392 pytest cases, validation artifact generation, smoke path',
+    boundary: 'Synthetic engineering validation is not clinical or regulatory evidence',
+  },
+  {
+    repo: 'Upstage-DocuAgent',
+    lane: 'Selective',
+    href: 'https://github.com/KIM3310/Upstage-DocuAgent',
+    command: 'make verify',
+    proof: 'pytest, Ruff, format checks, smoke validation',
+    boundary: 'Provider-backed Upstage, Ollama, and GCP paths require local setup',
+  },
+];
+
+export const RESIDUAL_RISKS: ResidualRiskEntry[] = [
+  {
+    title: 'Cloud tenancy and credentials',
+    detail: 'Live platform proofs remain real, but they still depend on credentials, tenant state, and vendor uptime.',
+  },
+  {
+    title: 'Selective disclosure boundaries',
+    detail: 'High-trust private workbenches intentionally hide tenant labels and operational identifiers, so they should be shared selectively or via public-lite variants.',
+  },
+  {
+    title: 'Synthetic evidence boundaries',
+    detail: 'Medical, regulated, and incident-review demos use reviewer-safe data and must not be presented as customer production evidence.',
+  },
+  {
+    title: 'Credential deep links',
+    detail: 'Badges stay public, while issuer verification URLs and IDs remain in targeted application packets because those deep links can change.',
+  },
+  {
+    title: 'Third-party publish gates',
+    detail: 'Some repos are public-ready locally but still need valid vendor credentials or recoverable artifacts before external publication can be re-established.',
+  },
 ];

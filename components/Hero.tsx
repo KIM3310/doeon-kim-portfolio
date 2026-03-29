@@ -71,7 +71,7 @@ const hiringTracks = [
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative overflow-hidden bg-bg pb-16 pt-28 md:pb-20 md:pt-32 lg:pt-36">
+    <section id="visitor-mode" className="relative overflow-hidden bg-bg pb-16 pt-28 md:pb-20 md:pt-32 lg:pt-36">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] bg-accent-soft/20 rounded-full mix-blend-screen filter blur-[100px] opacity-30 animate-blob"></div>
         <div className="absolute top-[20%] right-[-10%] w-[40vw] h-[40vw] bg-accent-gold/10 rounded-full mix-blend-screen filter blur-[100px] opacity-20 animate-blob animation-delay-2000"></div>
@@ -88,7 +88,7 @@ const Hero: React.FC = () => {
             className="border border-white/12 bg-[#111319]/95 p-8 shadow-[0_32px_120px_rgba(0,0,0,0.35)] backdrop-blur md:p-10"
           >
             <div className="mb-6 flex flex-wrap items-center gap-3 border-b border-white/10 pb-5">
-              <span className="text-accent-gold text-xs font-medium tracking-[0.3em] uppercase">AI Engineer + Solution Architect fit</span>
+              <span className="text-accent-gold text-xs font-medium tracking-[0.3em] uppercase">Applied AI + Solution Architecture fit</span>
               <span className="rounded-full border border-white/10 px-3 py-1 text-[11px] uppercase tracking-[0.22em] text-white/45">Code + service proof</span>
               <span className="rounded-full border border-white/10 px-3 py-1 text-[11px] uppercase tracking-[0.22em] text-white/45">Primary public proof first</span>
             </div>
@@ -116,7 +116,7 @@ const Hero: React.FC = () => {
             <div className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
               <div className="border border-white/10 bg-black/20 p-4">
                 <p className="text-[11px] uppercase tracking-[0.24em] text-white/45">Role fit</p>
-                <p className="mt-2 text-sm text-white">AI Engineer · Solution Architect</p>
+                <p className="mt-2 text-sm text-white">Applied AI Engineer · Solution Architect</p>
               </div>
               <div className="border border-white/10 bg-black/20 p-4">
                 <p className="text-[11px] uppercase tracking-[0.24em] text-white/45">Primary proof</p>
@@ -128,7 +128,7 @@ const Hero: React.FC = () => {
               </div>
               <div className="border border-white/10 bg-black/20 p-4">
                 <p className="text-[11px] uppercase tracking-[0.24em] text-white/45">Review order</p>
-                <p className="mt-2 text-sm text-white">Proof → featured system → truth ledger</p>
+                <p className="mt-2 text-sm text-white">Public proof → featured systems → selective private depth</p>
               </div>
             </div>
 

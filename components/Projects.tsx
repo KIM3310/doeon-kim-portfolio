@@ -25,6 +25,7 @@ const formatActionUrl = (href: string) => {
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
   const actions: ProjectAction[] = [
     project.links?.github ? { href: project.links.github, label: 'GitHub Repo', Icon: Github } : null,
+    project.links?.proof ? { href: project.links.proof, label: 'Proof Ledger', Icon: ExternalLink } : null,
     project.links?.demo ? { href: project.links.demo, label: 'Live Demo', Icon: ExternalLink } : null,
     project.links?.youtube ? { href: project.links.youtube, label: 'Walkthrough', Icon: ExternalLink } : null,
   ].filter((action): action is ProjectAction => action !== null);
@@ -57,6 +58,15 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
           <p className="text-sm text-white/60 font-medium mb-1">Role</p>
           <p className="text-sm font-light text-primary-muted" style={{ overflowWrap: 'anywhere' }}>{project.role}</p>
         </div>
+
+        {project.proofNote ? (
+          <div className="mb-6 border border-white/8 bg-white/[0.03] p-4">
+            <p className="text-[11px] uppercase tracking-[0.22em] text-accent-gold/75">Proof note</p>
+            <p className="mt-2 text-sm font-light leading-relaxed text-primary-muted" style={{ overflowWrap: 'anywhere' }}>
+              {project.proofNote}
+            </p>
+          </div>
+        ) : null}
 
         <ul className="mb-8 grow min-w-0 space-y-3">
           {project.achievements.slice(0, 3).map((achievement, aIdx) => (
@@ -125,8 +135,8 @@ const Projects: React.FC = () => {
     <Section id="projects">
       <div className="flex flex-col md:flex-row justify-between items-end mb-16 border-b border-white/10 pb-8">
         <div>
-          <h2 className="text-3xl md:text-4xl font-serif-heading font-medium text-white mb-2">Featured Systems</h2>
-          <p className="text-primary-muted font-light">A smaller, stronger set of systems organized around one clear reliability thesis.</p>
+          <h2 className="text-3xl md:text-4xl font-serif-heading font-medium text-white mb-2">Featured Public Systems</h2>
+          <p className="text-primary-muted font-light">Lead with public proof first. Private or historical systems stay behind the main story and come out selectively in interviews.</p>
         </div>
       </div>
 
@@ -140,10 +150,10 @@ const Projects: React.FC = () => {
         <div className="mb-10 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
           <div>
             <p className="mb-2 text-xs uppercase tracking-[0.32em] text-accent-gold/80">Secondary Project Index</p>
-            <h3 className="font-serif-heading text-2xl text-white md:text-3xl">Additional active repos</h3>
+            <h3 className="font-serif-heading text-2xl text-white md:text-3xl">Additional public repos</h3>
           </div>
           <p className="max-w-2xl text-sm leading-relaxed text-primary-muted">
-            These are active repos that reinforce the main project story, but are intentionally positioned behind the selected set.
+            These repos reinforce the main story, but are intentionally positioned behind the selected public flagship set so recruiters can read the portfolio in a cleaner order.
           </p>
         </div>
 

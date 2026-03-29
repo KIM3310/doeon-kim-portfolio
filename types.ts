@@ -3,10 +3,12 @@ export interface Project {
   category: string;
   role: string;
   achievements: string[];
+  proofNote?: string;
   tech: string[];
   links?: {
     demo?: string;
     github?: string;
+    proof?: string;
     youtube?: string;
   };
 }
@@ -173,6 +175,26 @@ export interface RepoTruthEntry {
   statusBadges: string[];
   truth: string;
   reviewUse: string;
+}
+
+export interface VerificationOverviewEntry {
+  label: string;
+  value: string;
+  detail: string;
+}
+
+export interface VerificationSnapshotEntry {
+  repo: string;
+  lane: 'Flagship' | 'Selective';
+  href: string;
+  command: string;
+  proof: string;
+  boundary: string;
+}
+
+export interface ResidualRiskEntry {
+  title: string;
+  detail: string;
 }
 
 export interface Experience {
