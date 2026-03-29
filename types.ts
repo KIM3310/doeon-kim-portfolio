@@ -170,7 +170,7 @@ export interface RepoOperatingEntry {
 export interface RepoTruthEntry {
   name: string;
   lane: 'Featured' | 'Support' | 'Historical';
-  repoUrl: string;
+  repoUrl?: string;
   homepageUrl?: string;
   statusBadges: string[];
   truth: string;
@@ -186,7 +186,7 @@ export interface VerificationOverviewEntry {
 export interface VerificationSnapshotEntry {
   repo: string;
   lane: 'Flagship' | 'Selective';
-  href: string;
+  href?: string;
   command: string;
   proof: string;
   boundary: string;

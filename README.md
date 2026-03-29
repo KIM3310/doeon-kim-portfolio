@@ -4,6 +4,17 @@ Personal portfolio site showcasing AI systems, operational software, and data pl
 
 Verified now (2026-03-29): local typecheck, content verification, tests, and production build all run from the repository root.
 
+## 90-Second Review Route
+
+If you are screening for a specific lane, use this order first:
+
+1. **Applied AI / LLM systems:** [`stage-pilot`](https://github.com/KIM3310/stage-pilot) -> [`AegisOps`](https://github.com/KIM3310/AegisOps) -> [`frontier-llm-review-brief`](https://kim3310.github.io/doeon-kim-portfolio/briefs/frontier-llm-review-brief.html)
+2. **Solutions / field engineering:** [`AegisOps`](https://github.com/KIM3310/AegisOps) -> [`enterprise-llm-adoption-kit`](https://github.com/KIM3310/enterprise-llm-adoption-kit) -> [`aws-genai-application-packet`](https://kim3310.github.io/doeon-kim-portfolio/briefs/aws-genai-application-packet.html) or [`palantir-application-packet`](https://kim3310.github.io/doeon-kim-portfolio/briefs/palantir-application-packet.html)
+3. **Data + AI platform:** [`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive) -> [`lakehouse-contract-lab`](https://github.com/KIM3310/lakehouse-contract-lab) -> [`snowflake-review-brief`](https://kim3310.github.io/doeon-kim-portfolio/briefs/snowflake-review-brief.html) or [`databricks-review-brief`](https://kim3310.github.io/doeon-kim-portfolio/briefs/databricks-review-brief.html)
+4. **Network / security operations:** [`nw-service-assurance-workbench`](https://github.com/KIM3310/nw-service-assurance-workbench) -> [`security-threat-response-workbench`](https://github.com/KIM3310/security-threat-response-workbench) -> [`portfolio`](https://kim3310.github.io/doeon-kim-portfolio/)
+
+If you only click one artifact first, `stage-pilot` is the cleanest proof for AI reliability, `AegisOps` is the clearest operator-facing applied system, and `Nexus-Hive` is the fastest data-platform proof.
+
 ## Start Here By Target
 
 - **Big tech / applied AI systems:** [`big-tech-systems-review-brief`](https://kim3310.github.io/doeon-kim-portfolio/briefs/big-tech-systems-review-brief.html)
@@ -34,6 +45,7 @@ Open `http://localhost:5173` in your browser.
 The portfolio is organized around a few focus areas:
 
 - **Runtime and reliability systems:** StagePilot, AegisOps, ops-reliability-workbench
+- **Operational infrastructure systems:** nw-service-assurance-workbench, security-threat-response-workbench
 - **Operational workflow systems:** memory-test-master-change-gate, fab-ops-yield-control-tower, regulated-case-workbench, smallbiz-ops-copilot
 - **Data and analytics systems:** enterprise-llm-adoption-kit, lakehouse-contract-lab, Nexus-Hive
 - **Applied vision systems:** retina-scan-ai, weld-defect-vision
@@ -61,6 +73,8 @@ The public site intentionally leads with authored, reviewable public proof. Priv
 These six repos are the clearest public proof for the current hiring story: applied AI reliability, governed analytics, enterprise AI delivery, and data-platform integration. Most of them include a built-in resource pack, review pack, or release-readiness surface so reviewers can inspect the strongest proof path without private data or API keys.
 
 For `tool-call-finetune-lab`, the strongest public proof is the post-training pipeline, BFCL-aligned harness, Kaggle-ready notebook, and checked-in release-status artifacts. External Kaggle and Hugging Face publication should be treated as separately tracked proof, not silently assumed.
+
+For targeted telecom, NOC, or cloud security loops, the live role-fit surfaces are `nw-service-assurance-workbench` and `security-threat-response-workbench`. They are intentionally separate from the six-flagship AI/data story so recruiters can inspect them only when the role actually benefits from that operator-facing context.
 
 ## Selective private depth
 
@@ -92,7 +106,7 @@ Cross-repo verification and residual-risk ledger: [`KIM3310/PORTFOLIO_VERIFICATI
 | Label | Meaning | Current examples |
 |---|---|---|
 | **live verified** | real cloud/platform smoke or bounded live route verified | `stage-pilot`, `AegisOps`, `enterprise-llm-adoption-kit`, `Nexus-Hive`, `lakehouse-contract-lab`, `memory-test-master-change-gate`, `fab-ops-yield-control-tower`, `retina-scan-ai`, `Upstage-DocuAgent` |
-| **review-only live** | public/runtime surface is live, but claims intentionally stay bounded and reviewer-safe | `regulated-case-workbench`, `signal-risk-lab` |
+| **review-only live** | public/runtime surface is live, but claims intentionally stay bounded and reviewer-safe | `regulated-case-workbench`, `signal-risk-lab`, `nw-service-assurance-workbench`, `security-threat-response-workbench` |
 | **local-first / supporting** | strongest proof is local, staged, or supporting rather than public live | `Aegis-Air`, `ops-reliability-workbench`, `ogx`, `dv-regression-lab`, `twincity-ui`, `the-logistics-prophet` |
 
 ## Local public data policy

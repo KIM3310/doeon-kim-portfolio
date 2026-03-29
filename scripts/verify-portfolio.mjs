@@ -43,8 +43,8 @@ const requiredFiles = [
 ];
 
 const checks = [
-  { file: 'constants.ts', mustInclude: ['StagePilot', 'AegisOps'], mustNotInclude: ['FabPilot Live X', 'SignalForge'] },
-  { file: 'components/Hero.tsx', mustInclude: ['StagePilot', 'Current checked-in 40-case benchmark snapshot', 'Open AegisOps system'], mustNotInclude: ['FabPilot Live X', 'SignalForge'] },
+  { file: 'constants.ts', mustInclude: ['StagePilot', 'AegisOps', 'nw-service-assurance-workbench', 'security-threat-response-workbench'], mustNotInclude: ['FabPilot Live X', 'SignalForge'] },
+  { file: 'components/Hero.tsx', mustInclude: ['StagePilot', 'Current checked-in 40-case benchmark snapshot', 'Open AegisOps system', 'Network + Security Operations'], mustNotInclude: ['FabPilot Live X', 'SignalForge'] },
   { file: 'public/fabpilot-live-x.html', mustInclude: ['Applied Ops Archive', 'Archived high-trust ops proof'], mustNotInclude: ['FabPilot Live X', 'SignalForge'] },
   { file: 'public/fabpilot-dossier.html', mustInclude: ['Applied Ops Archive', 'high-trust-ops-ready'], mustNotInclude: ['FabPilot Live X', 'SignalForge'] },
   { file: 'public/briefs/frontier-llm-review-brief.html', mustInclude: ['Runtime Systems', 'StagePilot', 'AegisOps'], mustNotInclude: ['FabPilot Live X', 'SignalForge'] },
@@ -63,7 +63,7 @@ const checks = [
   { file: 'public/briefs/brokerage-application-packet.html', mustInclude: ['Decision Workflows', 'Nexus-Hive', 'Finance Review Platform'], mustNotInclude: ['FabPilot Live X', 'SignalForge'] },
   { file: 'public/briefs/quant-review-brief.html', mustInclude: ['Research Systems', 'Signal Risk Lab', 'Lakehouse Contract Lab'], mustNotInclude: ['FabPilot Live X', 'SignalForge'] },
   { file: 'public/briefs/quant-application-packet.html', mustInclude: ['Research Systems', 'Signal Risk Lab', 'Lakehouse Contract Lab'], mustNotInclude: ['FabPilot Live X', 'SignalForge'] },
-  { file: 'README.md', mustInclude: ['StagePilot', 'archived ops case study', 'Verified now', 'Repo operating map', 'https://kim3310.github.io/doeon-kim-portfolio/'], mustNotInclude: ['FabPilot Live X', 'SignalForge'] },
+  { file: 'README.md', mustInclude: ['StagePilot', 'archived ops case study', 'Verified now', 'Repo operating map', 'https://kim3310.github.io/doeon-kim-portfolio/', 'nw-service-assurance-workbench', 'security-threat-response-workbench'], mustNotInclude: ['FabPilot Live X', 'SignalForge'] },
   { file: 'server/index.mjs', mustInclude: ['Applied Ops Archive', 'fabtwin-runtime'], mustNotInclude: ['FabPilot Live X'] },
   { file: 'docs/FABPILOT_GEMINI_RUNTIME.md', mustInclude: ['Applied Ops Archive', 'fabtwin-runtime'], mustNotInclude: ['FabPilot Live X'] },
 ];

@@ -113,15 +113,17 @@ const Verification: React.FC = () => {
                     </span>
                     <h4 className="mt-3 text-xl font-serif-heading text-white">{entry.repo}</h4>
                   </div>
-                  <a
-                    href={entry.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white/35 transition-colors hover:text-accent-gold"
-                    aria-label={`Open ${entry.repo} repository`}
-                  >
-                    <ArrowUpRight className="h-5 w-5" />
-                  </a>
+                  {entry.href ? (
+                    <a
+                      href={entry.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white/35 transition-colors hover:text-accent-gold"
+                      aria-label={`Open ${entry.repo} proof surface`}
+                    >
+                      <ArrowUpRight className="h-5 w-5" />
+                    </a>
+                  ) : null}
                 </div>
                 <p className="text-[11px] uppercase tracking-[0.22em] text-accent-gold/75">Verified command</p>
                 <p className="mt-2 font-mono text-xs text-white/70">{entry.command}</p>

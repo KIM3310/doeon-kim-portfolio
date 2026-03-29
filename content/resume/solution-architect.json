@@ -80,8 +80,9 @@
       "location": "Berkeley, CA, United States",
       "date": "Jun 2025 - Sep 2025",
       "bullets": [
-        "Built customer-facing full-stack features and integrated OpenAI-powered chatbot workflows for a US startup product environment.",
-        "Worked asynchronously across US time zones and kept delivery moving across application, AI integration, and stakeholder communication boundaries."
+        "Built customer-facing full-stack features and integrated OpenAI-powered chatbot workflows into an existing US startup review product.",
+        "Improved delivery reliability by tightening server-side configuration, credential handling, request/response error handling, and external API integration flows.",
+        "Worked asynchronously across US time zones, turning stakeholder feedback and log-based issues into stable application and AI integration updates."
       ]
     },
     {
