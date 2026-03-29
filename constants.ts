@@ -246,7 +246,6 @@ export const PORTFOLIO_TRUTH_LEDGER: RepoTruthEntry[] = [
   {
     name: 'regulated-case-workbench',
     lane: 'Support',
-    repoUrl: 'https://github.com/KIM3310/regulated-case-workbench',
     homepageUrl: 'https://regulated-case-workbench.pages.dev',
     statusBadges: ['private', 'support'],
     truth: 'Shown selectively because the workflow is stronger than the public marketing signal.',
@@ -282,7 +281,6 @@ export const PORTFOLIO_TRUTH_LEDGER: RepoTruthEntry[] = [
   {
     name: 'Honeypot',
     lane: 'Historical',
-    repoUrl: 'https://github.com/KIM3310/honeypot',
     homepageUrl: 'https://honeypot-3st.pages.dev',
     statusBadges: ['fork', 'historical'],
     truth: 'Forked repo retained for implementation evidence, not as a primary portfolio claim.',
