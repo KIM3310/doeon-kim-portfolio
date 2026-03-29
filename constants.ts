@@ -29,6 +29,8 @@ export const PORTFOLIO_LEDGER_URL = 'https://github.com/KIM3310/KIM3310/blob/mai
 export const FEATURED_CASE_URL = 'fabpilot-live-x.html';
 export const DOSSIER_URL = 'fabpilot-dossier.html';
 export const PRIMARY_PROOF_URL = 'https://stage-pilot.pages.dev';
+export const NW_SERVICE_ASSURANCE_URL = 'https://nw-service-assurance-workbench.ehdjs1351.workers.dev';
+export const SECURITY_THREAT_RESPONSE_URL = 'https://security-threat-response-workbench.ehdjs1351.workers.dev';
 export const QUANTUM_WORKFLOW_URL = 'https://github.com/KIM3310/quantum-workbench';
 export const RESUME_PDF_URL = 'resume/Doeon_Kim_Resume_LLM_Systems_Engineer.pdf';
 export const SOLUTION_ARCHITECT_RESUME_PDF_URL = 'resume/Doeon_Kim_Resume_Microsoft_Solution_Architect.pdf';
@@ -158,6 +160,20 @@ export const PROJECTS: Project[] = [
 ];
 
 export const SECONDARY_PROJECTS: SecondaryProject[] = [
+  {
+    title: 'NW Service Assurance Workbench',
+    focus: 'Telecom-style network assurance surface with outage triage, E2E service visibility, and AX-ready operator runbooks',
+    github: 'https://github.com/KIM3310/nw-service-assurance-workbench',
+    demo: NW_SERVICE_ASSURANCE_URL,
+    note: 'Targeted live surface for telecom / NOC / infrastructure operations loops',
+  },
+  {
+    title: 'Security Threat Response Workbench',
+    focus: 'Cloud security response workbench for WAF, IDS, DDoS triage, shift handoff, and Python/Bash analyst automation',
+    github: 'https://github.com/KIM3310/security-threat-response-workbench',
+    demo: SECURITY_THREAT_RESPONSE_URL,
+    note: 'Targeted live surface for SOC / cloud security / threat-response loops',
+  },
   { title: 'Fab-Ops Yield Control Tower', focus: 'Semiconductor ops platform with dual-domain architecture, signed handoff, and release gates (112 tests)', github: 'https://github.com/KIM3310/fab-ops-yield-control-tower' },
   { title: 'secure-xl2hwp-local', focus: 'Air-gapped data pipeline with SpecKit contracts, CoT processing, and signed exports (97 tests)', github: 'https://github.com/KIM3310/secure-xl2hwp-local' },
   { title: 'ogx', focus: 'Multi-agent CLI orchestration with task graphs, MCP tools, and tmux HUD (152 tests)', github: 'https://github.com/KIM3310/ogx' },
@@ -237,6 +253,24 @@ export const PORTFOLIO_TRUTH_LEDGER: RepoTruthEntry[] = [
     reviewUse: 'Reference for regulated approvals, case review, and export manifests.',
   },
   {
+    name: 'nw-service-assurance-workbench',
+    lane: 'Support',
+    repoUrl: 'https://github.com/KIM3310/nw-service-assurance-workbench',
+    homepageUrl: NW_SERVICE_ASSURANCE_URL,
+    statusBadges: ['public', 'support', 'review-only-live'],
+    truth: 'Bounded telecom operations surface for outage response, service visibility, and reviewer-safe assurance storytelling.',
+    reviewUse: 'Reference for telecom, NOC, infrastructure assurance, and operator-facing runbook discussions.',
+  },
+  {
+    name: 'security-threat-response-workbench',
+    lane: 'Support',
+    repoUrl: 'https://github.com/KIM3310/security-threat-response-workbench',
+    homepageUrl: SECURITY_THREAT_RESPONSE_URL,
+    statusBadges: ['public', 'support', 'review-only-live'],
+    truth: 'Bounded cloud security response surface for WAF, IDS, DDoS triage, analyst handoff, and deterministic evidence packs.',
+    reviewUse: 'Reference for SOC, cloud threat response, and shift-ready security workflow conversations.',
+  },
+  {
     name: 'TwinCity UI',
     lane: 'Historical',
     repoUrl: 'https://github.com/KIM3310/twincity-ui',
@@ -267,7 +301,18 @@ export const PORTFOLIO_TRUTH_LEDGER: RepoTruthEntry[] = [
 
 export const EXPERIENCE: Experience[] = [
   { company: 'Microsoft AI School 8기', role: 'Trainee', period: '2025.09 - 2026.02', description: ['AI/클라우드/데이터 분석 교육 이수', 'RAG, incident operations, real-time ops 중심의 팀 프로젝트 수행'] },
-  { company: 'ATOM TECH SOLUTIONS LTD', role: 'Full Stack Intern (Remote)', location: '미국 캘리포니아 버클리', period: '2025.06 - 2025.09', description: ['기존 리뷰 플랫폼에 OpenAI API 기반 문의 챗봇 통합', '풀스택 유지보수 및 기능 개선'] },
+  {
+    company: 'ATOM TECH SOLUTIONS LTD',
+    role: 'Full Stack Intern (Remote)',
+    location: '미국 캘리포니아 버클리',
+    period: '2025.06 - 2025.09',
+    description: [
+      '기존 리뷰 플랫폼에서 Node.js / Express 기반 기능 개발과 OpenAI 기반 문의 챗봇 연동 수행',
+      '서버 측 환경설정, 인증 정보, 요청·응답 예외 처리, 외부 API 연동 흐름을 정리해 운영 안정성 보강',
+      '로그 기반 오류 분석과 프론트엔드-백엔드 연동 이슈 수정, 배포 전 품질 점검 대응',
+      '미국 팀과 비동기 협업하며 요구사항 반영, 수정 대응, 기능 전달 흐름 지원',
+    ],
+  },
   { company: '대한민국 국방부', role: 'Strategic Backbone Network & Security Team Lead', period: '2023.11 - 2025.05', description: ['지휘통신망 24/7 운영, 네트워크 인프라/보안 관리', '분대장 팀 운영 및 리더십 경험'] },
 ];
 
@@ -289,10 +334,10 @@ export const CERTIFICATIONS: Certification[] = [
 ];
 
 export const PORTFOLIO_RUNTIME_META = [
-  { label: 'Scope', value: '6 flagship systems + 15 extended projects across 22 repos' },
+  { label: 'Scope', value: '6 flagship systems + 17 extended projects across 24 repos' },
   { label: 'Stack', value: 'React 19 + Vite 6' },
-  { label: 'Focus', value: 'AI Reliability / Data Platform / Enterprise Governance' },
-  { label: 'Tests', value: '3,500+ tests across 22 repos' },
+  { label: 'Focus', value: 'AI Reliability / Data Platform / Enterprise Governance / Operational Infrastructure' },
+  { label: 'Tests', value: '3,500+ tests across 24 repos' },
   { label: 'Public Proof', value: 'Public repos + npm package + live demos; private depth shared selectively' },
   { label: 'Credential Proof', value: 'Badge summary public; issuer verification shared on request' },
   { label: 'Portfolio URL', value: 'kim3310.github.io/doeon-kim-portfolio' },
@@ -301,13 +346,13 @@ export const PORTFOLIO_RUNTIME_META = [
 export const PORTFOLIO_VERIFICATION_OVERVIEW: VerificationOverviewEntry[] = [
   {
     label: 'Verified baseline',
-    value: '2026-03-29',
-    detail: 'Flagship public proof and selective private depth were rerun from local clean bootstraps, with repo-local release ledgers added where public artifacts remain gated.',
+    value: '2026-03-30',
+    detail: 'Flagship public proof, selective private depth, and targeted operator-facing live surfaces were rerun from local clean bootstraps and redeployed where needed.',
   },
   {
     label: 'Repos green',
-    value: '11',
-    detail: 'Six flagship public systems plus five selective private-depth workbenches are locally verified.',
+    value: '13',
+    detail: 'Six flagship public systems, five selective private-depth workbenches, and two targeted live role-fit surfaces are locally verified.',
   },
   {
     label: 'Setup risk removed',
@@ -373,7 +418,6 @@ export const VERIFIED_REPO_SNAPSHOTS: VerificationSnapshotEntry[] = [
   {
     repo: 'memory-test-master-change-gate',
     lane: 'Selective',
-    href: 'https://github.com/KIM3310/memory-test-master-change-gate',
     command: 'make verify',
     proof: 'Ruff, mypy, 26 pytest cases',
     boundary: 'Foundry sync is still env-gated',
@@ -381,7 +425,6 @@ export const VERIFIED_REPO_SNAPSHOTS: VerificationSnapshotEntry[] = [
   {
     repo: 'ops-reliability-workbench',
     lane: 'Selective',
-    href: 'https://github.com/KIM3310/ops-reliability-workbench',
     command: 'make verify',
     proof: 'Ruff, mypy, 28 pytest cases',
     boundary: 'Optional OpenAI assist remains off by default and env-gated',
@@ -389,7 +432,7 @@ export const VERIFIED_REPO_SNAPSHOTS: VerificationSnapshotEntry[] = [
   {
     repo: 'regulated-case-workbench',
     lane: 'Selective',
-    href: 'https://github.com/KIM3310/regulated-case-workbench',
+    href: 'https://regulated-case-workbench.pages.dev',
     command: 'make verify',
     proof: 'backend tests, frontend syntax checks, runtime scorecard validation',
     boundary: 'Cases stay synthetic and the public live lane is intentionally capped',
@@ -397,7 +440,6 @@ export const VERIFIED_REPO_SNAPSHOTS: VerificationSnapshotEntry[] = [
   {
     repo: 'retina-scan-ai',
     lane: 'Selective',
-    href: 'https://github.com/KIM3310/retina-scan-ai',
     command: 'make verify',
     proof: '392 pytest cases, validation artifact generation, smoke path',
     boundary: 'Synthetic engineering validation is not clinical or regulatory evidence',
@@ -405,10 +447,25 @@ export const VERIFIED_REPO_SNAPSHOTS: VerificationSnapshotEntry[] = [
   {
     repo: 'Upstage-DocuAgent',
     lane: 'Selective',
-    href: 'https://github.com/KIM3310/Upstage-DocuAgent',
     command: 'make verify',
     proof: 'pytest, Ruff, format checks, smoke validation',
     boundary: 'Provider-backed Upstage, Ollama, and GCP paths require local setup',
+  },
+  {
+    repo: 'nw-service-assurance-workbench',
+    lane: 'Selective',
+    href: 'https://github.com/KIM3310/nw-service-assurance-workbench',
+    command: 'npm run verify + npm run cf:deploy:dry',
+    proof: 'tests, typecheck, production build, and Cloudflare asset packaging',
+    boundary: 'Traffic, alarms, and operator notes are synthetic and intentionally reviewer-safe',
+  },
+  {
+    repo: 'security-threat-response-workbench',
+    lane: 'Selective',
+    href: 'https://github.com/KIM3310/security-threat-response-workbench',
+    command: 'npm run verify + npm run cf:deploy:dry',
+    proof: 'tests, typecheck, Python/Bash snapshot verification, production build, and Cloudflare asset packaging',
+    boundary: 'WAF, IDS, and DDoS evidence is synthetic and intentionally bounded to reviewer-safe scenarios',
   },
 ];
 

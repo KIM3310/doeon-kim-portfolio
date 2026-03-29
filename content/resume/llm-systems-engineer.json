@@ -78,8 +78,9 @@
       "location": "Berkeley, CA, United States",
       "date": "Jun 2025 - Sep 2025",
       "bullets": [
-        "Shipped customer-facing Node.js, Express, MongoDB, HTML/CSS/JavaScript product features and integrated OpenAI-powered chatbot workflows.",
-        "Collaborated asynchronously across US time zones to keep feature delivery stable across frontend, backend, and AI integration boundaries."
+        "Shipped customer-facing Node.js, Express, MongoDB, HTML/CSS/JavaScript product features and integrated OpenAI-powered chatbot workflows into the existing review platform.",
+        "Improved delivery reliability by tightening server-side configuration, credential handling, request/response error paths, and external API integration flows.",
+        "Diagnosed log-based integration issues and collaborated asynchronously across US time zones to keep frontend, backend, and AI delivery moving."
       ]
     },
     {

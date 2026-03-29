@@ -16,9 +16,10 @@ import {
   PROFILE,
   PRIMARY_PROOF_URL,
   RESUME_PDF_URL,
-  SOLUTION_ARCHITECT_RESUME_PDF_URL,
   STAGEPILOT_BENCHMARK_STEPS,
   DATA_PLATFORM_ARCHITECTURE_PACK_URL,
+  NW_SERVICE_ASSURANCE_URL,
+  SECURITY_THREAT_RESPONSE_URL,
 } from '../constants';
 
 const proofLinks = [
@@ -54,18 +55,46 @@ const proofLinks = [
   },
 ] as const;
 
-const hiringTracks = [
+const reviewPaths = [
   {
-    title: 'AI Engineer track',
-    summary: 'Benchmark lift, tool-calling reliability, incident AI, eval harness thinking.',
-    cta: 'Open AI Engineer resume',
-    href: RESUME_PDF_URL,
+    title: 'Applied AI / LLM Systems',
+    companies: 'OpenAI, Anthropic, frontier deployment, AI engineer loops',
+    summary: 'Lead with runtime reliability, evaluator-facing proof, and operator-visible failure recovery.',
+    startWith: 'Start with StagePilot, then AegisOps, then the frontier review brief.',
+    links: [
+      { label: 'Open StagePilot proof', href: PRIMARY_PROOF_URL },
+      { label: 'Open frontier brief', href: 'briefs/frontier-llm-review-brief.html' },
+    ],
   },
   {
-    title: 'Solution Architect track',
-    summary: 'Approval boundaries, governed delivery, reliable product framing, handoff design.',
-    cta: 'Open Solution Architect resume',
-    href: SOLUTION_ARCHITECT_RESUME_PDF_URL,
+    title: 'Solutions / Field Engineering',
+    companies: 'AWS, Palantir, deployment, customer-facing solution architecture',
+    summary: 'Lead with operator workflows, approval boundaries, and delivery judgment under ambiguity.',
+    startWith: 'Start with AegisOps and Enterprise LLM Adoption Kit, then open a target packet.',
+    links: [
+      { label: 'Open AWS packet', href: 'briefs/aws-genai-application-packet.html' },
+      { label: 'Open Palantir packet', href: 'briefs/palantir-application-packet.html' },
+    ],
+  },
+  {
+    title: 'Data + AI Platform',
+    companies: 'Snowflake, Databricks, analytics engineering, data platform roles',
+    summary: 'Lead with governed SQL, warehouse-aware adapters, and contract-driven pipeline delivery.',
+    startWith: 'Start with Nexus-Hive and Lakehouse Contract Lab, then open the warehouse brief.',
+    links: [
+      { label: 'Open Snowflake brief', href: 'briefs/snowflake-review-brief.html' },
+      { label: 'Open Databricks brief', href: 'briefs/databricks-review-brief.html' },
+    ],
+  },
+  {
+    title: 'Network + Security Operations',
+    companies: 'Telecom, NOC, SOC, cloud security, operations-facing reliability roles',
+    summary: 'Lead with bounded live operator surfaces for outage triage, WAF and IDS response, and shift-ready incident handoff.',
+    startWith: 'Start with the NW service assurance lane, then open the security threat response lane.',
+    links: [
+      { label: 'Open NW assurance lane', href: NW_SERVICE_ASSURANCE_URL },
+      { label: 'Open threat response lane', href: SECURITY_THREAT_RESPONSE_URL },
+    ],
   },
 ] as const;
 
@@ -161,22 +190,34 @@ const Hero: React.FC = () => {
               </div>
 
               <div className="border border-white/10 bg-black/20 p-5">
-                <p className="text-[11px] uppercase tracking-[0.24em] text-accent-gold/70">Hiring tracks</p>
+                <p className="text-[11px] uppercase tracking-[0.24em] text-accent-gold/70">Pick a review path</p>
                 <div className="mt-4 space-y-3">
-                  {hiringTracks.map((track) => (
-                    <a key={track.title} href={track.href} className="block border border-white/10 bg-white/[0.03] p-4 transition-colors hover:border-accent-gold/40">
+                  {reviewPaths.map((track) => (
+                    <article key={track.title} className="border border-white/10 bg-white/[0.03] p-4">
                       <div className="flex items-start justify-between gap-3">
                         <div>
-                          <h3 className="text-base font-medium text-white">{track.title}</h3>
+                          <p className="text-[10px] uppercase tracking-[0.2em] text-white/45">{track.companies}</p>
+                          <h3 className="mt-2 text-base font-medium text-white">{track.title}</h3>
                           <p className="mt-2 text-sm leading-6 text-white/68">{track.summary}</p>
+                          <p className="mt-3 text-xs leading-5 text-white/52">{track.startWith}</p>
                         </div>
                         <BriefcaseBusiness className="h-4 w-4 flex-none text-accent-gold" />
                       </div>
-                      <p className="mt-4 inline-flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-white/65">
-                        {track.cta}
-                        <ArrowRight className="h-3.5 w-3.5" />
-                      </p>
-                    </a>
+                      <div className="mt-4 flex flex-wrap gap-2">
+                        {track.links.map((link) => (
+                          <a
+                            key={link.label}
+                            href={link.href}
+                            target={link.href.startsWith('http') ? '_blank' : undefined}
+                            rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                            className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-black/10 px-3 py-2 text-[11px] uppercase tracking-[0.16em] text-white/72 transition-colors hover:border-accent-gold/40 hover:text-white"
+                          >
+                            {link.label}
+                            <ArrowRight className="h-3.5 w-3.5" />
+                          </a>
+                        ))}
+                      </div>
+                    </article>
                   ))}
                 </div>
               </div>
