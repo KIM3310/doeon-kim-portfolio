@@ -1,88 +1,62 @@
 import React from 'react';
-import { CERTIFICATIONS, PORTFOLIO_RUNTIME_META, PROFILE } from '../constants';
-import Section from './Section';
-import { Award, GraduationCap, Languages, Mail } from 'lucide-react';
+import { CERTIFICATIONS, PROFILE } from '../constants';
+import { Mail, Github, Linkedin } from 'lucide-react';
 
-const Certifications: React.FC = () => {
-  return (
-    <Section id="certifications">
-      <div className="flex flex-col md:flex-row justify-between items-end mb-16 border-b border-white/10 pb-8">
-        <div>
-          <h2 className="text-3xl md:text-4xl font-serif-heading font-medium text-white mb-2">Credentials</h2>
-          <p className="text-primary-muted font-light">Signals that reinforce the project narrative after the public proof surfaces, not instead of them.</p>
-          <p className="text-white/40 text-xs mt-3 uppercase tracking-[0.2em]">Issuer validation links or IDs are shared on request.</p>
-        </div>
-      </div>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+const Certifications: React.FC = () => (
+  <section id="certifications" className="py-20 px-6">
+    <div className="max-w-6xl mx-auto">
+      <h2 className="text-3xl font-bold text-white mb-12">Certifications</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {CERTIFICATIONS.map((cert, idx) => (
-          <div key={idx} className={`p-6 hover:border-accent-gold/30 transition-all flex flex-col justify-between group ${idx < 4 ? 'bg-white/[0.04] border-2 border-accent-gold/25' : 'bg-white/[0.02] border border-white/5'}`}>
-            <div>
-              <Award className={`w-5 h-5 mb-4 group-hover:scale-110 transition-transform ${idx < 4 ? 'text-accent-gold' : 'text-accent-gold/60'}`} />
-              <h4 className="text-white font-medium text-sm mb-2 leading-snug">{cert.name}</h4>
-              {idx < 4 && <span className="inline-block mt-1 text-[10px] uppercase tracking-[0.2em] text-accent-gold/70 border border-accent-gold/20 px-2 py-0.5">Key credential</span>}
-            </div>
-            <p className="text-white/30 text-xs mt-4 uppercase tracking-widest">{cert.issuer}</p>
+          <div key={idx} className="border border-white/10 bg-white/[0.02] rounded-lg p-5 hover:border-white/20 transition-colors">
+            <p className="text-white font-medium text-sm">{cert.name}</p>
+            <p className="text-gray-500 text-xs mt-1">{cert.issuer}</p>
           </div>
         ))}
       </div>
-    </Section>
-  );
-};
+    </div>
+  </section>
+);
 
-const EducationAndLanguages: React.FC = () => {
-  return (
-    <Section id="education" className="bg-bg-soft">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-        <div className="p-8 border border-white/5 bg-[#050505]">
-          <div className="flex items-center gap-4 mb-8">
-            <div className="p-3 bg-white/5 rounded-full"><GraduationCap className="w-6 h-6 text-white" /></div>
-            <h3 className="text-2xl font-serif-heading text-white">Education</h3>
-          </div>
-          <div>
-            <h4 className="text-xl font-medium text-white mb-1">한국방송통신대학교</h4>
-            <p className="text-primary-muted font-light">컴퓨터과학과 (2026.03 입학 · 재학 중)</p>
-          </div>
-        </div>
-
-        <div className="p-8 border border-white/5 bg-[#050505]">
-          <div className="flex items-center gap-4 mb-8">
-            <div className="p-3 bg-white/5 rounded-full"><Languages className="w-6 h-6 text-white" /></div>
-            <h3 className="text-2xl font-serif-heading text-white">Global Communication</h3>
-          </div>
-          <ul className="space-y-6">
-            <li className="space-y-2"><div className="flex justify-between text-sm"><span className="text-white">Korean</span><span className="text-white/40">Native</span></div><div className="w-full h-[1px] bg-white/10"><div className="h-full bg-accent-gold w-full"></div></div></li>
-            <li className="space-y-2"><div className="flex justify-between text-sm"><span className="text-white">English</span><span className="text-white/40">Business / Working</span></div><div className="w-full h-[1px] bg-white/10"><div className="h-full bg-accent-gold w-[85%]"></div></div></li>
-            <li className="space-y-2"><div className="flex justify-between text-sm"><span className="text-white">Japanese</span><span className="text-white/40">Business / Working</span></div><div className="w-full h-[1px] bg-white/10"><div className="h-full bg-accent-gold w-[80%]"></div></div></li>
-          </ul>
-        </div>
+const EducationAndLanguages: React.FC = () => (
+  <section id="education" className="py-20 px-6 bg-white/[0.01]">
+    <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div>
+        <h2 className="text-2xl font-bold text-white mb-6">Education</h2>
+        <h3 className="text-lg text-white">한국방송통신대학교</h3>
+        <p className="text-gray-400 text-sm">컴퓨터과학과 (2026.03 입학 · 재학 중)</p>
       </div>
-    </Section>
-  );
-};
-
-const Footer: React.FC = () => {
-  return (
-    <footer id="community" className="py-20 border-t border-white/5 bg-[#050505]">
-      <div className="container mx-auto px-6 lg:px-12 max-w-7xl text-center">
-        <h2 className="text-3xl font-serif-heading font-medium text-white mb-4">{PROFILE.name}</h2>
-        <p className="text-primary-muted mb-8 font-light max-w-md mx-auto">{PROFILE.title}</p>
-        <div className="flex justify-center items-center gap-3 text-white/60 text-sm mb-12">
-          <Mail className="w-4 h-4" />
-          <a href={`mailto:${PROFILE.email}`} className="hover:text-accent-gold transition-colors border-b border-transparent hover:border-accent-gold">{PROFILE.email}</a>
-        </div>
-        <div className="flex flex-wrap justify-center gap-3 mb-10">
-          {PORTFOLIO_RUNTIME_META.map((item) => (
-            <div key={item.label} className="border border-white/10 bg-white/[0.03] px-4 py-2 text-left">
-              <div className="text-[10px] uppercase tracking-[0.24em] text-white/30">{item.label}</div>
-              <div className="text-sm text-white/80">{item.value}</div>
-            </div>
-          ))}
-        </div>
-        <p className="text-white/20 text-xs tracking-widest uppercase">© {new Date().getFullYear()} Doeon Kim.</p>
+      <div>
+        <h2 className="text-2xl font-bold text-white mb-6">Languages</h2>
+        <ul className="space-y-3">
+          <li className="flex justify-between text-sm"><span className="text-white">Korean</span><span className="text-gray-500">Native</span></li>
+          <li className="flex justify-between text-sm"><span className="text-white">English</span><span className="text-gray-500">Business</span></li>
+          <li className="flex justify-between text-sm"><span className="text-white">Japanese</span><span className="text-gray-500">Business</span></li>
+        </ul>
       </div>
-    </footer>
-  );
-};
+    </div>
+  </section>
+);
+
+const Footer: React.FC = () => (
+  <footer id="contact" className="py-16 border-t border-white/5">
+    <div className="max-w-4xl mx-auto px-6 text-center">
+      <h2 className="text-2xl font-bold text-white mb-2">{PROFILE.name}</h2>
+      <p className="text-gray-400 mb-6">{PROFILE.title}</p>
+      <div className="flex justify-center gap-6 mb-8">
+        <a href={`mailto:${PROFILE.email}`} className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
+          <Mail size={18} /> {PROFILE.email}
+        </a>
+        <a href={PROFILE.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
+          <Github size={18} /> GitHub
+        </a>
+        <a href={PROFILE.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
+          <Linkedin size={18} /> LinkedIn
+        </a>
+      </div>
+      <p className="text-gray-600 text-xs">&copy; {new Date().getFullYear()} {PROFILE.name}</p>
+    </div>
+  </footer>
+);
 
 export { Certifications, EducationAndLanguages, Footer };
