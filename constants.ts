@@ -10,6 +10,7 @@ export const PROFILE: Profile = {
 };
 
 export const PROJECTS: Project[] = [
+  // --- Flagship ---
   {
     title: 'StagePilot',
     description: 'Tool-calling reliability middleware for AI SDK. Published on npm as @ai-sdk-tool/parser. 1,720 tests.',
@@ -35,12 +36,14 @@ export const PROJECTS: Project[] = [
     description: 'Multi-agent NL-to-SQL copilot with policy engine and Snowflake/Databricks adapters. 166 tests.',
     tech: ['Python', 'FastAPI', 'LangGraph', 'Snowflake'],
     github: 'https://github.com/KIM3310/Nexus-Hive',
+    demo: 'https://nexus-hive.pages.dev',
   },
   {
     title: 'Enterprise LLM Adoption Kit',
     description: 'LLM governance toolkit with RBAC, prompt injection detection, PII redaction, and eval harness.',
     tech: ['Python', 'FastAPI', 'ChromaDB', 'AWS Bedrock'],
     github: 'https://github.com/KIM3310/enterprise-llm-adoption-kit',
+    demo: 'https://enterprise-llm-kit.pages.dev',
   },
   {
     title: 'Lakehouse Contract Lab',
@@ -48,6 +51,7 @@ export const PROJECTS: Project[] = [
     tech: ['Python', 'PySpark', 'Delta Lake', 'Snowflake'],
     github: 'https://github.com/KIM3310/lakehouse-contract-lab',
   },
+  // --- Applied AI / Vision ---
   {
     title: 'Retina Scan AI',
     description: 'Retinal screening backend with ResNet18 classification, severity grading, and clinical reports. 392 tests.',
@@ -55,16 +59,37 @@ export const PROJECTS: Project[] = [
     github: 'https://github.com/KIM3310/retina-scan-ai',
   },
   {
+    title: 'Weld Defect Vision',
+    description: 'Weld inspection backend with defect classification and release-readiness checks.',
+    tech: ['Python', 'PyTorch', 'FastAPI'],
+    github: 'https://github.com/KIM3310/weld-defect-vision',
+  },
+  {
+    title: 'Upstage DocuAgent',
+    description: 'Document-to-learning pipeline: upload, extract, Q&A with citations, export to SCORM.',
+    tech: ['Python', 'FastAPI', 'Upstage Solar'],
+    github: 'https://github.com/KIM3310/Upstage-DocuAgent',
+    demo: 'https://upstage-docuagent.pages.dev',
+  },
+  // --- Operations / Manufacturing ---
+  {
+    title: 'Fab-Ops Yield Control Tower',
+    description: 'Semiconductor fab monitoring with yield trend tracking, alarm acknowledge, and shift handoff.',
+    tech: ['Python', 'FastAPI', 'AWS S3', 'DynamoDB'],
+    github: 'https://github.com/KIM3310/fab-ops-yield-control-tower',
+    demo: 'https://fab-ops-yield-control-tower.pages.dev',
+  },
+  {
     title: 'Ops Reliability Workbench',
-    description: 'Operations reliability toolkit with scoring, narrative generation, and signed review bundles.',
+    description: 'Operations reliability toolkit with scoring, narrative generation, and signed review bundles. 28 tests.',
     tech: ['Python', 'Streamlit', 'Pandas', 'Plotly'],
     github: 'https://github.com/KIM3310/ops-reliability-workbench',
   },
   {
-    title: 'Fab-Ops Yield Control Tower',
-    description: 'Semiconductor fab monitoring with scanner qualification and dual-domain analytics.',
-    tech: ['Python', 'FastAPI', 'AWS S3', 'DynamoDB'],
-    github: 'https://github.com/KIM3310/fab-ops-yield-control-tower',
+    title: 'Memory Test Change Gate',
+    description: 'Manufacturing IT change management with approval gates and rollback plans.',
+    tech: ['Python', 'FastAPI', 'Streamlit'],
+    github: 'https://github.com/KIM3310/memory-test-master-change-gate',
   },
   {
     title: 'SmallBiz Ops Copilot',
@@ -74,52 +99,32 @@ export const PROJECTS: Project[] = [
     demo: 'https://smallbiz-ops-copilot.pages.dev',
   },
   {
-    title: 'Memory Test Change Gate',
-    description: 'Manufacturing IT change management with approval gates, rollback plans, and review packs.',
-    tech: ['Python', 'FastAPI', 'Streamlit'],
-    github: 'https://github.com/KIM3310/memory-test-master-change-gate',
+    title: 'Regulated Case Workbench',
+    description: 'Regulated workflow desk with approval gates and signed export proof.',
+    tech: ['Python', 'FastAPI'],
+    github: 'https://github.com/KIM3310/regulated-case-workbench',
+    demo: 'https://regulated-case-workbench.pages.dev',
+  },
+  // --- Networking / Security ---
+  {
+    title: 'NW Service Assurance Workbench',
+    description: 'Telecom network assurance with outage triage, E2E service visibility, and operator runbooks.',
+    tech: ['TypeScript', 'Cloudflare Workers'],
+    github: 'https://github.com/KIM3310/nw-service-assurance-workbench',
   },
   {
-    title: 'Weld Defect Vision',
-    description: 'Weld inspection backend with defect classification, review packs, and release-readiness checks.',
-    tech: ['Python', 'PyTorch', 'FastAPI'],
-    github: 'https://github.com/KIM3310/weld-defect-vision',
+    title: 'Security Threat Response Workbench',
+    description: 'Cloud security response workbench for WAF, IDS, DDoS triage and shift handoff.',
+    tech: ['TypeScript', 'Cloudflare Workers'],
+    github: 'https://github.com/KIM3310/security-threat-response-workbench',
   },
+  // --- Full-stack / Web ---
   {
     title: 'Honeypot',
     description: 'AI-assisted handover document generator with Azure integration and retrieval-backed Q&A.',
     tech: ['TypeScript', 'React', 'Python', 'Azure'],
     github: 'https://github.com/KIM3310/honeypot',
-  },
-  {
-    title: 'Upstage DocuAgent',
-    description: 'Document-to-learning pipeline: upload, extract, Q&A with citations, export to SCORM.',
-    tech: ['Python', 'FastAPI', 'Upstage Solar'],
-    github: 'https://github.com/KIM3310/Upstage-DocuAgent',
-  },
-  {
-    title: 'Regulated Case Workbench',
-    description: 'Regulated workflow desk with approval gates and signed export proof.',
-    tech: ['Python', 'FastAPI'],
-    github: 'https://github.com/KIM3310/regulated-case-workbench',
-  },
-  {
-    title: 'Quantum Workbench',
-    description: 'Quantum circuit experiments with Qiskit, IBM Quantum, and Amazon Braket backends.',
-    tech: ['Python', 'Qiskit', 'Braket'],
-    github: 'https://github.com/KIM3310/quantum-workbench',
-  },
-  {
-    title: 'Secure XL2HWP Local',
-    description: 'Air-gapped Excel-to-Hancom converter with JWT auth, signed exports, and audit logging.',
-    tech: ['Python', 'FastAPI'],
-    github: 'https://github.com/KIM3310/secure-xl2hwp-local',
-  },
-  {
-    title: 'Beaver Study Orchestrator',
-    description: 'Study planner with syllabus extraction, adaptive scheduling, and risk scoring.',
-    tech: ['Python', 'FastAPI'],
-    github: 'https://github.com/KIM3310/beaver-study-orchestrator',
+    demo: 'https://honeypot-3st.pages.dev',
   },
   {
     title: 'Dream Interpretation Pages',
@@ -130,10 +135,53 @@ export const PROJECTS: Project[] = [
   },
   {
     title: 'The Savior',
-    description: 'Mindfulness app on Cloudflare Pages with OpenAI/Ollama backend.',
+    description: 'Buddhist-inspired mindfulness app on Cloudflare Pages with OpenAI/Ollama backend.',
     tech: ['JavaScript', 'Cloudflare Pages'],
     github: 'https://github.com/KIM3310/the-savior',
     demo: 'https://the-savior.pages.dev',
+  },
+  {
+    title: 'TwinCity UI',
+    description: 'Digital-twin operational dashboard with Next.js, WebSocket/SSE fallback, and SLA reporting.',
+    tech: ['TypeScript', 'Next.js', 'React'],
+    github: 'https://github.com/KIM3310/twincity-ui',
+    demo: 'https://twincity-ui.pages.dev',
+  },
+  // --- Data / Research ---
+  {
+    title: 'Signal Risk Lab',
+    description: 'Domain-driven finance platform: quant signal research and brokerage advisory workflows. 43 tests.',
+    tech: ['Python', 'FastAPI', 'Pydantic'],
+    github: 'https://github.com/KIM3310/signal-risk-lab',
+    demo: 'https://signal-risk-lab.pages.dev',
+  },
+  {
+    title: 'Quantum Workbench',
+    description: 'Quantum circuit experiments with Qiskit, IBM Quantum, and Amazon Braket backends. 58 tests.',
+    tech: ['Python', 'Qiskit', 'Braket'],
+    github: 'https://github.com/KIM3310/quantum-workbench',
+  },
+  {
+    title: 'Secure XL2HWP Local',
+    description: 'Air-gapped Excel-to-Hancom converter with JWT auth, signed exports, and audit logging. 97 tests.',
+    tech: ['Python', 'FastAPI'],
+    github: 'https://github.com/KIM3310/secure-xl2hwp-local',
+    demo: 'https://secure-xl2hwp-local.pages.dev',
+  },
+  // --- Mobile / Game ---
+  {
+    title: 'EcoTide',
+    description: 'SwiftUI simulation app with motion telemetry and CLI reviewer handoff.',
+    tech: ['Swift', 'SwiftUI'],
+    github: 'https://github.com/KIM3310/ecotide',
+    demo: 'https://ecotide.pages.dev',
+  },
+  {
+    title: 'SteadyTap',
+    description: 'iOS accessibility coaching app with optional FastAPI backend. 12 tests.',
+    tech: ['Swift', 'SwiftUI', 'Python'],
+    github: 'https://github.com/KIM3310/SteadyTap',
+    demo: 'https://steadytap.pages.dev',
   },
   {
     title: 'KBBQ Idle',
@@ -142,17 +190,39 @@ export const PROJECTS: Project[] = [
     github: 'https://github.com/KIM3310/kbbq-idle-unity',
     demo: 'https://kbbq-idle-unity.pages.dev',
   },
+  // --- Orchestration / CLI ---
   {
-    title: 'EcoTide',
-    description: 'SwiftUI simulation app with motion telemetry and CLI reviewer handoff.',
-    tech: ['Swift', 'SwiftUI'],
-    github: 'https://github.com/KIM3310/ecotide',
+    title: 'OGX',
+    description: 'Multi-agent CLI orchestration with task graphs, MCP tools, and tmux HUD.',
+    tech: ['TypeScript', 'Node.js'],
+    github: 'https://github.com/KIM3310/ogx',
   },
   {
-    title: 'SteadyTap',
-    description: 'iOS accessibility coaching app with optional FastAPI backend.',
-    tech: ['Swift', 'SwiftUI', 'Python'],
-    github: 'https://github.com/KIM3310/SteadyTap',
+    title: 'Beaver Study Orchestrator',
+    description: 'Study planner with syllabus extraction, adaptive scheduling, and risk scoring.',
+    tech: ['Python', 'FastAPI'],
+    github: 'https://github.com/KIM3310/beaver-study-orchestrator',
+  },
+  // --- Archived (historical) ---
+  {
+    title: 'Aegis-Air',
+    description: 'Air-gapped incident review engine — predecessor to AegisOps.',
+    tech: ['Python', 'FastAPI'],
+    github: 'https://github.com/KIM3310/Aegis-Air',
+    demo: 'https://aegis-air.pages.dev',
+  },
+  {
+    title: 'The Logistics Prophet',
+    description: 'ML logistics control tower with SHAP explainability and RDF ontology.',
+    tech: ['Python', 'FastAPI', 'Streamlit'],
+    github: 'https://github.com/KIM3310/the-logistics-prophet',
+    demo: 'https://the-logistics-prophet.pages.dev',
+  },
+  {
+    title: 'DV Regression Lab',
+    description: 'RTL/DV regression orchestration with failure taxonomy and flaky detection.',
+    tech: ['Python', 'FastAPI'],
+    github: 'https://github.com/KIM3310/dv-regression-lab',
   },
 ];
 
