@@ -233,6 +233,7 @@ export const SKILLS: SkillCategory[] = [
   { category: 'Backend', skills: ['Python (FastAPI)', 'TypeScript (Node.js/Express)', 'REST API Design', 'RBAC', 'OpenTelemetry'] },
   { category: 'Frontend', skills: ['React', 'Next.js', 'Tailwind CSS', 'Vite', 'SwiftUI'] },
   { category: 'DevOps', skills: ['CI/CD (GitHub Actions)', 'Docker', 'Kubernetes', 'Datadog', 'Prometheus'] },
+  { category: 'Network / Security', skills: ['네트워크 운영', '보안 인프라 관리', '지휘통신망', '장애 관제', 'VPN/방화벽'] },
 ];
 
 export const EXPERIENCE: Experience[] = [
@@ -261,7 +262,7 @@ export const EXPERIENCE: Experience[] = [
   },
   {
     company: '대한민국 국방부',
-    role: '전략통신망 보안 팀장',
+    role: '전략통신망 보안 분대장',
     period: '2023.11 - 2025.05',
     description: ['지휘통신망 24/7 운영, 네트워크/보안 인프라 관리', '분대장 팀 운영 및 장애 대응'],
   },
