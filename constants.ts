@@ -237,6 +237,12 @@ export const SKILLS: SkillCategory[] = [
 
 export const EXPERIENCE: Experience[] = [
   {
+    company: '한국방송통신대학교',
+    role: '컴퓨터과학과',
+    period: '2026.03 - 재학 중',
+    description: ['컴퓨터과학 전공 학사 과정'],
+  },
+  {
     company: 'Microsoft AI School 8기',
     role: 'Trainee',
     period: '2025.09 - 2026.02',
