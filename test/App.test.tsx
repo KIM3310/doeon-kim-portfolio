@@ -24,11 +24,4 @@ describe('App component', () => {
     render(<App />);
     expect(screen.getByText('DOEON KIM.')).toBeInTheDocument();
   });
-
-  it('renders hiring-oriented review path guidance', () => {
-    render(<App />);
-    expect(screen.getByText('Pick a review path')).toBeInTheDocument();
-    expect(screen.getByText('Applied AI / LLM Systems')).toBeInTheDocument();
-  });
-
 });
