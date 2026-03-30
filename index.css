@@ -38,18 +38,12 @@ button:active:not(:disabled) {
   transform: scale(0.97);
 }
 
-/* ── Animated blob delay helpers ── */
-.animation-delay-2000 {
-  animation-delay: 2s;
-}
-.animation-delay-4000 {
-  animation-delay: 4s;
-}
-
-/* ── Section reveal fade-in ── */
-@keyframes sectionFadeIn {
-  from { opacity: 0; transform: translateY(24px); }
-  to   { opacity: 1; transform: translateY(0); }
+/* ── Line clamp utility ── */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 /* ── Mobile responsive overrides ── */

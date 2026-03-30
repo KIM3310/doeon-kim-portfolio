@@ -19,6 +19,12 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') setIsOpen(false); };
+    if (isOpen) window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [isOpen]);
+
   const handleClick = (href: string) => {
     setIsOpen(false);
     const el = document.querySelector(href);
@@ -43,7 +49,7 @@ const Navbar: React.FC = () => {
         </div>
 
         {/* Mobile toggle */}
-        <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-gray-400 hover:text-white" aria-label="Toggle menu">
+        <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-gray-400 hover:text-white" aria-label="Toggle menu" aria-expanded={isOpen}>
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
