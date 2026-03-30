@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Github, Linkedin } from 'lucide-react';
+import { Mail, Github, Linkedin, FileDown } from 'lucide-react';
 import { PROFILE } from '../constants';
 
 const Hero: React.FC = () => (
@@ -19,6 +19,9 @@ const Hero: React.FC = () => (
         </a>
         <a href={`mailto:${PROFILE.email}`} className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
           <Mail size={20} /> Email
+        </a>
+        <a href="resume/Doeon_Kim_Resume.pdf" download className="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-lg text-white hover:bg-white/20 transition-colors">
+          <FileDown size={20} /> Resume
         </a>
       </div>
     </div>
