@@ -6,7 +6,7 @@ export const PROFILE: Profile = {
   email: 'ehdjs1351@gmail.com',
   github: 'https://github.com/KIM3310',
   linkedin: 'https://www.linkedin.com/in/doeon-kim-4742a2388',
-  intro: 'AI 시스템 설계부터 데이터 파이프라인, 클라우드 배포, 웹 개발, 네트워크·보안 관제와 24/7 운영 경험까지. 31개 프로젝트, 3,700+ 테스트.',
+  intro: 'AI 시스템 설계부터 데이터 파이프라인, 클라우드 배포, 웹 개발, 네트워크·보안 관제와 24/7 운영 경험까지.',
 };
 
 export const PROJECTS: Project[] = [
