@@ -7,7 +7,6 @@ import {
   BarChart3,
   BriefcaseBusiness,
   ExternalLink,
-  FileText,
   PlayCircle,
   ShieldCheck,
 } from 'lucide-react';
@@ -46,12 +45,6 @@ const proofLinks = [
     helper: 'Applied incident system showing the same reliability posture in an operator-facing workflow.',
     href: 'https://aegisops-ai-incident-doctor.pages.dev',
     Icon: ShieldCheck,
-  },
-  {
-    label: 'Open data-platform pack',
-    helper: 'Governed delivery and warehouse-facing routing for solution-architecture loops.',
-    href: DATA_PLATFORM_ARCHITECTURE_PACK_URL,
-    Icon: FileText,
   },
 ] as const;
 

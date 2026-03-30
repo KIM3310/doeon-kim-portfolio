@@ -2,6 +2,21 @@
   "name": "doeon-kim-portfolio",
   "private": true,
   "version": "0.0.0",
+  "description": "Personal portfolio showcasing AI systems, data platforms, and enterprise governance projects",
+  "homepage": "https://kim3310.github.io/doeon-kim-portfolio/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KIM3310/doeon-kim-portfolio.git"
+  },
+  "keywords": [
+    "portfolio",
+    "react",
+    "vite",
+    "typescript",
+    "ai-engineer"
+  ],
+  "license": "MIT",
+  "author": "Doeon Kim",
   "type": "module",
   "scripts": {
     "dev": "vite",

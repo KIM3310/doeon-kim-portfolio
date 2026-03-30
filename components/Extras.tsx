@@ -10,7 +10,7 @@ const Certifications: React.FC = () => {
         <div>
           <h2 className="text-3xl md:text-4xl font-serif-heading font-medium text-white mb-2">Credentials</h2>
           <p className="text-primary-muted font-light">Signals that reinforce the project narrative after the public proof surfaces, not instead of them.</p>
-          <p className="text-white/40 text-xs mt-3 uppercase tracking-[0.2em]">Issuer validation links or IDs are shared in targeted packets or on request.</p>
+          <p className="text-white/40 text-xs mt-3 uppercase tracking-[0.2em]">Issuer validation links or IDs are shared on request.</p>
         </div>
       </div>
 
