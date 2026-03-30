@@ -6,7 +6,7 @@ export const PROFILE: Profile = {
   email: 'ehdjs1351@gmail.com',
   github: 'https://github.com/KIM3310',
   linkedin: 'https://www.linkedin.com/in/doeon-kim-4742a2388',
-  intro: 'AI 시스템 설계부터 데이터 파이프라인, 클라우드 배포, 웹 개발, 네트워크·보안 관제와 24/7 운영 경험까지.',
+  intro: 'AI 시스템 설계부터 데이터 파이프라인, 클라우드 배포, 웹 개발, 네트워크·보안 관제와 24/7 운영 경험.',
 };
 
 export const PROJECTS: Project[] = [
@@ -111,12 +111,14 @@ export const PROJECTS: Project[] = [
     description: 'Telecom network assurance with outage triage, E2E service visibility, and operator runbooks.',
     tech: ['TypeScript', 'Cloudflare Workers'],
     github: 'https://github.com/KIM3310/nw-service-assurance-workbench',
+    demo: 'https://nw-service-assurance-workbench.ehdjs1351.workers.dev',
   },
   {
     title: 'Security Threat Response Workbench',
     description: 'Cloud security response workbench for WAF, IDS, DDoS triage and shift handoff.',
     tech: ['TypeScript', 'Cloudflare Workers'],
     github: 'https://github.com/KIM3310/security-threat-response-workbench',
+    demo: 'https://security-threat-response-workbench.ehdjs1351.workers.dev',
   },
   // --- Full-stack / Web ---
   {
