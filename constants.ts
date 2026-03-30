@@ -2,11 +2,11 @@ import { Project, Experience, SkillCategory, Certification, Profile } from './ty
 
 export const PROFILE: Profile = {
   name: 'Doeon Kim',
-  title: 'Software Engineer',
+  title: 'AI · Cloud · Data · Full-Stack',
   email: 'ehdjs1351@gmail.com',
   github: 'https://github.com/KIM3310',
   linkedin: 'https://www.linkedin.com/in/doeon-kim-4742a2388',
-  intro: 'I build web applications and data systems with React, TypeScript, Python, and FastAPI. Focused on reliability, testing, and clean deployment.',
+  intro: 'AI 시스템, 클라우드 인프라, 데이터 파이프라인, 웹 풀스택을 넘나들며 만듭니다. React/TypeScript 프론트엔드부터 Python/FastAPI 백엔드, Spark/Snowflake 데이터 엔지니어링, LLM 파인튜닝과 배포까지 — 31개 프로젝트, 3,700+ 테스트.',
 };
 
 export const PROJECTS: Project[] = [
