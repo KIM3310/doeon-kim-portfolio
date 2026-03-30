@@ -227,13 +227,13 @@ export const PROJECTS: Project[] = [
 ];
 
 export const SKILLS: SkillCategory[] = [
-  { category: 'AI / LLM', skills: ['Tool-Calling Middleware', 'RAG', 'Eval Frameworks', 'Multi-Agent', 'Fine-Tuning (QLoRA)', 'Prompt Engineering'] },
-  { category: 'Data Engineering', skills: ['Spark', 'Delta Lake', 'Snowflake', 'Databricks', 'NL-to-SQL', 'Data Contracts'] },
-  { category: 'Cloud', skills: ['AWS', 'GCP', 'Azure', 'Terraform', 'Cloudflare Workers', 'Docker'] },
-  { category: 'Backend', skills: ['Python (FastAPI)', 'TypeScript (Node.js/Express)', 'REST API Design', 'RBAC', 'OpenTelemetry'] },
-  { category: 'Frontend', skills: ['React', 'Next.js', 'Tailwind CSS', 'Vite', 'SwiftUI'] },
-  { category: 'DevOps', skills: ['CI/CD (GitHub Actions)', 'Docker', 'Kubernetes', 'Datadog', 'Prometheus'] },
-  { category: 'Network / Security', skills: ['네트워크 운영', '보안 인프라 관리', '지휘통신망', '장애 관제', 'VPN/방화벽'] },
+  { category: 'AI / ML / LLM', skills: ['Machine Learning', 'Deep Learning', 'Computer Vision (OpenCV, ResNet)', 'LLM Fine-Tuning (QLoRA, PEFT)', 'RAG', 'Tool-Calling Middleware', 'Multi-Agent Orchestration', 'Prompt Engineering'] },
+  { category: 'Data Engineering', skills: ['Spark', 'Delta Lake', 'Snowflake', 'Databricks', 'NL-to-SQL', 'Data Contracts', 'ETL/ELT Pipelines', 'Data Lake Architecture'] },
+  { category: 'Cloud & Infra', skills: ['AWS (S3, Bedrock, EKS)', 'GCP (Cloud Run, BigQuery)', 'Azure (OpenAI, AI Search)', 'Terraform', 'Cloudflare Workers/Pages', 'Docker', 'Kubernetes'] },
+  { category: 'Backend', skills: ['Python (FastAPI)', 'TypeScript (Node.js/Express)', 'Java (Spring Boot 학습중)', 'REST API Design', 'RBAC', 'OpenTelemetry', 'PostgreSQL', 'Oracle'] },
+  { category: 'Frontend', skills: ['React', 'Next.js', 'Tailwind CSS', 'Vite', 'TypeScript', 'SwiftUI'] },
+  { category: 'DevOps / SRE', skills: ['CI/CD (GitHub Actions)', 'Docker', 'Kubernetes', 'Datadog', 'Prometheus', 'Grafana', 'Git', 'Linux'] },
+  { category: 'Network / Security', skills: ['네트워크 운영/관제', '보안 인프라 관리', 'VPN/방화벽', '장애 대응/복구', 'ISMS', '24/7 모니터링'] },
 ];
 
 export const EXPERIENCE: Experience[] = [
