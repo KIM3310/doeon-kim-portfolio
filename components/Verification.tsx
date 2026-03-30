@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUpRight, ExternalLink, ShieldCheck, TriangleAlert } from 'lucide-react';
+import { ExternalLink, ShieldCheck, TriangleAlert } from 'lucide-react';
 import Section from './Section';
 import {
   PORTFOLIO_LEDGER_URL,
@@ -7,39 +7,6 @@ import {
   RESIDUAL_RISKS,
   VERIFIED_REPO_SNAPSHOTS,
 } from '../constants';
-
-const TARGET_PACKETS = [
-  {
-    title: 'Palantir Korea packet',
-    href: 'briefs/palantir-application-packet.html',
-    summary: 'Field-engineering packet for ambiguous workflows, operator surfaces, and deployment judgment.',
-  },
-  {
-    title: 'Databricks Korea packet',
-    href: 'briefs/databricks-korea-application-packet.html',
-    summary: 'Lakehouse and GenAI SA packet focused on Delta, Unity Catalog, MLflow, and customer architecture.',
-  },
-  {
-    title: 'Snowflake Korea packet',
-    href: 'briefs/snowflake-korea-application-packet.html',
-    summary: 'Solutions Engineer packet centered on governed analytics, SQL fluency, and warehouse-aware AI delivery.',
-  },
-  {
-    title: 'OpenAI Seoul packet',
-    href: 'briefs/openai-seoul-application-packet.html',
-    summary: 'Technical Success packet for Solutions Architect and AI Deployment Engineer conversations.',
-  },
-  {
-    title: 'Anthropic Seoul packet',
-    href: 'briefs/anthropic-seoul-application-packet.html',
-    summary: 'Applied AI solutions packet focused on governance, trust, and deployment quality.',
-  },
-  {
-    title: 'AWS GenAI packet',
-    href: 'briefs/aws-genai-application-packet.html',
-    summary: 'AI/ML Specialist SA packet centered on runtime reliability and enterprise rollout.',
-  },
-] as const;
 
 const Verification: React.FC = () => {
   return (
@@ -73,31 +40,7 @@ const Verification: React.FC = () => {
         ))}
       </div>
 
-      <div className="mt-12">
-        <div className="mb-6 flex items-center gap-3">
-          <ExternalLink className="h-5 w-5 text-accent-gold" />
-          <h3 className="text-2xl font-serif-heading text-white">Direct application packets</h3>
-        </div>
-        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-          {TARGET_PACKETS.map((packet) => (
-            <a
-              key={packet.title}
-              href={packet.href}
-              className="group border border-white/8 bg-[#090a0d] p-5 transition-colors hover:border-accent-gold/30"
-            >
-              <div className="flex items-start justify-between gap-4">
-                <div>
-                  <h4 className="text-lg font-serif-heading text-white">{packet.title}</h4>
-                  <p className="mt-3 text-sm leading-6 text-primary-muted">{packet.summary}</p>
-                </div>
-                <ArrowUpRight className="h-5 w-5 flex-none text-white/35 transition-colors group-hover:text-accent-gold" />
-              </div>
-            </a>
-          ))}
-        </div>
-      </div>
-
-      <div className="mt-16 grid gap-8 xl:grid-cols-[1.35fr_0.65fr]">
+      <div className="mt-12 grid gap-8 xl:grid-cols-[1.35fr_0.65fr]">
         <div>
           <div className="mb-6 flex items-center gap-3">
             <ShieldCheck className="h-5 w-5 text-accent-gold" />
