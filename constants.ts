@@ -2,53 +2,59 @@ import { Project, Experience, SkillCategory, Certification, Profile } from './ty
 
 export const PROFILE: Profile = {
   name: 'Doeon Kim',
-  title: 'AI & Data Engineer',
+  title: 'AI Solutions Architect & Data Platform Engineer',
   email: 'ehdjs1351@gmail.com',
   github: 'https://github.com/KIM3310',
   linkedin: 'https://www.linkedin.com/in/doeon-kim-4742a2388',
-  intro: 'AI 시스템 설계부터 데이터 파이프라인, 클라우드 배포, 웹 개발, 네트워크·보안 관제와 24/7 운영 경험.',
+  intro: 'AI/data platform engineering with Azure, Databricks, Snowflake, Palantir Foundry. 31+ public projects. Microsoft AI School graduate. Trilingual: KR / JP / EN.',
 };
 
 export const PROJECTS: Project[] = [
-  // --- Flagship ---
+  // --- Flagship (Impact order) ---
+  {
+    title: 'MoveSignal AI',
+    description: 'Tri-platform budget allocation decision engine (Snowflake Korea Hackathon 2026). Snowflake ML FORECAST + Cortex AI + Databricks Delta/MLflow + Palantir Foundry Ontology. ~$80/mo.',
+    tech: ['Snowflake', 'Databricks', 'Palantir Foundry', 'Streamlit', 'MLflow'],
+    github: 'https://github.com/KIM3310/movesignal-ai',
+  },
   {
     title: 'StagePilot',
-    description: 'Tool-calling reliability middleware for AI SDK. Published on npm as @ai-sdk-tool/parser. 1,720 tests.',
+    description: 'Tool-calling reliability middleware — 25% to 90% benchmark lift. Published on npm (@ai-sdk-tool/parser). 1,720 tests.',
     tech: ['TypeScript', 'AI SDK', 'Vitest', 'OpenTelemetry'],
     github: 'https://github.com/KIM3310/stage-pilot',
     demo: 'https://stage-pilot.pages.dev',
   },
   {
+    title: 'Tool-Call Fine-Tune Lab',
+    description: 'QLoRA fine-tuning Qwen2.5-7B for tool-calling. Iterated through ~25 training failures to stable convergence. BFCL benchmark. 109 tests.',
+    tech: ['Python', 'PyTorch', 'PEFT', 'vLLM', 'BFCL'],
+    github: 'https://github.com/KIM3310/tool-call-finetune-lab',
+  },
+  {
+    title: 'Enterprise LLM Adoption Kit',
+    description: 'LLM governance: RBAC, evals, PII redaction, prompt injection detection, audit logging. Azure OpenAI + Databricks MLflow + Snowflake. K8s-ready.',
+    tech: ['Python', 'FastAPI', 'Azure OpenAI', 'Databricks', 'Snowflake'],
+    github: 'https://github.com/KIM3310/enterprise-llm-adoption-kit',
+    demo: 'https://enterprise-llm-kit.pages.dev',
+  },
+  {
+    title: 'Nexus-Hive',
+    description: 'Multi-agent NL-to-SQL copilot with deny/review/allow policy engine. Snowflake + Databricks multi-warehouse. 166 tests.',
+    tech: ['Python', 'FastAPI', 'LangGraph', 'Snowflake', 'Databricks'],
+    github: 'https://github.com/KIM3310/Nexus-Hive',
+    demo: 'https://nexus-hive.pages.dev',
+  },
+  {
     title: 'AegisOps',
-    description: 'Multimodal incident analysis — logs + screenshots into structured RCA with replay evals. 169 tests.',
+    description: 'Multimodal incident analysis — logs + screenshots into structured RCA with replay evals. Live demo. 169 tests.',
     tech: ['TypeScript', 'React', 'Express', 'Gemini'],
     github: 'https://github.com/KIM3310/AegisOps',
     demo: 'https://aegisops-ai-incident-doctor.pages.dev',
   },
   {
-    title: 'Tool-Call Fine-Tune Lab',
-    description: 'QLoRA fine-tuning of Qwen2.5-7B for tool-calling, evaluated on BFCL benchmark. 109 tests.',
-    tech: ['Python', 'PyTorch', 'PEFT', 'vLLM'],
-    github: 'https://github.com/KIM3310/tool-call-finetune-lab',
-  },
-  {
-    title: 'Nexus-Hive',
-    description: 'Multi-agent NL-to-SQL copilot with policy engine and Snowflake/Databricks adapters. 166 tests.',
-    tech: ['Python', 'FastAPI', 'LangGraph', 'Snowflake'],
-    github: 'https://github.com/KIM3310/Nexus-Hive',
-    demo: 'https://nexus-hive.pages.dev',
-  },
-  {
-    title: 'Enterprise LLM Adoption Kit',
-    description: 'LLM governance toolkit with RBAC, prompt injection detection, PII redaction, and eval harness.',
-    tech: ['Python', 'FastAPI', 'ChromaDB', 'AWS Bedrock'],
-    github: 'https://github.com/KIM3310/enterprise-llm-adoption-kit',
-    demo: 'https://enterprise-llm-kit.pages.dev',
-  },
-  {
     title: 'Lakehouse Contract Lab',
-    description: 'Spark + Delta Lake medallion pipeline with data contracts and quality gates.',
-    tech: ['Python', 'PySpark', 'Delta Lake', 'Snowflake'],
+    description: 'Spark + Delta Lake medallion pipeline with data contracts, quality gates, and Databricks Unity Catalog + Snowflake export.',
+    tech: ['Python', 'PySpark', 'Delta Lake', 'Databricks', 'Snowflake'],
     github: 'https://github.com/KIM3310/lakehouse-contract-lab',
   },
   // --- Applied AI / Vision ---
@@ -230,7 +236,7 @@ export const PROJECTS: Project[] = [
 
 export const SKILLS: SkillCategory[] = [
   { category: 'AI / ML / LLM', skills: ['Machine Learning', 'Deep Learning', 'Computer Vision (OpenCV, ResNet)', 'LLM Fine-Tuning (QLoRA, PEFT)', 'RAG', 'Tool-Calling Middleware', 'Multi-Agent Orchestration', 'Prompt Engineering'] },
-  { category: 'Data Engineering', skills: ['Spark', 'Delta Lake', 'Snowflake', 'Databricks', 'NL-to-SQL', 'Data Contracts', 'ETL/ELT Pipelines', 'Data Lake Architecture'] },
+  { category: 'Data Engineering', skills: ['Spark', 'Delta Lake', 'Snowflake (ML FORECAST, Cortex AI)', 'Databricks (Unity Catalog, MLflow)', 'Palantir Foundry (Ontology, Contour)', 'NL-to-SQL', 'Data Contracts', 'ETL/ELT Pipelines'] },
   { category: 'Cloud & Infra', skills: ['AWS (S3, Bedrock, EKS)', 'GCP (Cloud Run, BigQuery)', 'Azure (OpenAI, AI Search)', 'Terraform', 'Cloudflare Workers/Pages', 'Docker', 'Kubernetes'] },
   { category: 'Backend', skills: ['Python (FastAPI)', 'TypeScript (Node.js/Express)', 'Java (Spring Boot 학습중)', 'REST API Design', 'RBAC', 'OpenTelemetry', 'PostgreSQL', 'Oracle'] },
   { category: 'Frontend', skills: ['React', 'Next.js', 'Tailwind CSS', 'Vite', 'TypeScript', 'SwiftUI'] },
@@ -249,7 +255,7 @@ export const EXPERIENCE: Experience[] = [
     company: 'Microsoft AI School 8기',
     role: 'Trainee',
     period: '2025.09 - 2026.02',
-    description: ['AI/클라우드/데이터 분석 교육 이수', 'RAG, 인시던트 운영, 실시간 운영 중심 팀 프로젝트 수행'],
+    description: ['Azure AI, Copilot, enterprise AI deployment 교육 이수', 'RAG, 인시던트 운영, 실시간 운영 중심 팀 프로젝트 수행'],
   },
   {
     company: 'ATOM TECH SOLUTIONS',
@@ -264,9 +270,9 @@ export const EXPERIENCE: Experience[] = [
   },
   {
     company: '대한민국 국방부',
-    role: '전략통신망 보안 분대장',
+    role: '국가전략통신망 분대장',
     period: '2023.11 - 2025.05',
-    description: ['지휘통신망 24/7 운영, 네트워크/보안 인프라 관리', '분대장 팀 운영 및 장애 대응'],
+    description: ['국가전략통신망 24/7 운영, 네트워크/보안 인프라 관리', '분대장 팀 리더십 및 미션크리티컬 장애 대응'],
   },
 ];
 
