@@ -2,7 +2,7 @@
 
 Personal portfolio site showcasing AI systems, operational software, and data platform projects. Built with React + TypeScript, deployed on GitHub Pages.
 
-Verified now (2026-03-29): local typecheck, content verification, tests, and production build all run from the repository root.
+Verified now (2026-04-07): local typecheck, content verification, tests, and production build were rerun from the repository root, and the current public deployments plus third-party assets were rechecked from the live URLs.
 
 ## 90-Second Review Route
 
@@ -89,6 +89,7 @@ These systems are part of the deeper role-fit story and are shared selectively i
 Credential note: the public site keeps certification names and issuers visible, while issuer validation links or IDs are shared in application packets or on request.
 
 Cross-repo verification and residual-risk ledger: [`KIM3310/PORTFOLIO_VERIFICATION_AND_RISK_LEDGER.md`](https://github.com/KIM3310/KIM3310/blob/main/PORTFOLIO_VERIFICATION_AND_RISK_LEDGER.md)
+Deployment and external resource audit: [`KIM3310/DEPLOYMENT_EXTERNAL_RESOURCE_AUDIT_2026-04-07.md`](https://github.com/KIM3310/KIM3310/blob/main/DEPLOYMENT_EXTERNAL_RESOURCE_AUDIT_2026-04-07.md)
 
 ## Current live integration highlights
 
