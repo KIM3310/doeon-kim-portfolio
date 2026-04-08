@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frontier LLM Review Brief | Doeon Kim</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f8fafc; color: #1e293b; line-height: 1.6; }
+  .container { max-width: 720px; margin: 0 auto; padding: 48px 24px; }
+  .badge { display: inline-block; background: #6366f1; color: #fff; font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 4px; margin-bottom: 16px; letter-spacing: 0.5px; }
+  h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+  .subtitle { color: #64748b; font-size: 15px; margin-bottom: 32px; }
+  .section { background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 24px; margin-bottom: 20px; }
+  .section h2 { font-size: 16px; font-weight: 600; margin-bottom: 12px; color: #0f172a; }
+  .section p, .section li { font-size: 14px; color: #475569; }
+  .section ul { padding-left: 20px; }
+  .section li { margin-bottom: 6px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
+  th, td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #e2e8f0; }
+  th { font-weight: 600; color: #0f172a; background: #f8fafc; }
+  td { color: #475569; }
+  .highlight { background: #eef2ff; border-left: 3px solid #6366f1; padding: 12px 16px; margin: 12px 0; border-radius: 0 6px 6px 0; }
+  .highlight p { font-size: 14px; color: #4338ca; }
+  .cta { text-align: center; margin-top: 32px; }
+  .cta a { display: inline-block; background: #6366f1; color: #fff; text-decoration: none; padding: 10px 24px; border-radius: 6px; font-weight: 600; font-size: 14px; margin: 0 8px; }
+  .cta a:hover { background: #4f46e5; }
+  .footer { text-align: center; margin-top: 40px; font-size: 12px; color: #94a3b8; }
+  .footer a { color: #64748b; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="container">
+  <span class="badge">REVIEW BRIEF</span>
+  <h1>Frontier LLM Engineering Proficiency</h1>
+  <p class="subtitle">Doeon Kim &mdash; Demonstrated capabilities across LLM development, fine-tuning, and production deployment</p>
+
+  <div class="section">
+    <h2>Tool-Calling Reliability</h2>
+    <p>Built and published <strong>stage-pilot</strong>, a tool-calling reliability runtime for AI SDK applications.</p>
+    <table>
+      <tr><th>Component</th><th>Detail</th></tr>
+      <tr><td>npm Package</td><td>@ai-sdk-tool/parser &mdash; published and maintained</td></tr>
+      <tr><td>Test Coverage</td><td>1,720 tests across parser, runtime, and integration suites</td></tr>
+      <tr><td>Architecture</td><td>Streaming-first design with structured output validation</td></tr>
+      <tr><td>Compatibility</td><td>Works with OpenAI, Anthropic, Google, and open-source models</td></tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>Fine-Tuning &amp; Benchmarking</h2>
+    <ul>
+      <li><strong>tool-call-finetune-lab</strong> &mdash; QLoRA fine-tuning of Qwen2.5-7B for tool-calling tasks, evaluated on the BFCL benchmark.</li>
+      <li>End-to-end pipeline: data preparation, LoRA adapter training, merged model export, and quantized inference.</li>
+      <li>Systematic comparison of base vs. fine-tuned performance on structured function-calling scenarios.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Multi-Agent Systems</h2>
+    <ul>
+      <li><strong>Nexus-Hive</strong> &mdash; LangGraph-based multi-agent NL-to-SQL copilot with governed analytics across Snowflake and Databricks.</li>
+      <li><strong>AegisOps</strong> &mdash; Multimodal incident analysis platform using TypeScript, React, and Gemini with live demo deployment.</li>
+      <li><strong>enterprise-llm-adoption-kit</strong> &mdash; Production LLM governance with RBAC, evals, PII redaction, and FastAPI backend.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>LLM Skills Matrix</h2>
+    <table>
+      <tr><th>Category</th><th>Skills</th></tr>
+      <tr><td>Model Training</td><td>QLoRA, PEFT, Hugging Face Transformers, PyTorch</td></tr>
+      <tr><td>Agent Frameworks</td><td>LangGraph, LangChain, AI SDK, custom orchestration</td></tr>
+      <tr><td>Evaluation</td><td>BFCL benchmark, tool-call accuracy, structured output validation</td></tr>
+      <tr><td>Production</td><td>Streaming parsers, reliability runtimes, governance, PII redaction</td></tr>
+      <tr><td>Multimodal</td><td>Vision + text incident analysis, Gemini integration</td></tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>Key Differentiator</h2>
+    <div class="highlight">
+      <p>Full-stack LLM expertise from fine-tuning foundation models to publishing production-grade npm packages, with 1,720 tests proving reliability at scale.</p>
+    </div>
+  </div>
+
+  <div class="cta">
+    <a href="https://github.com/KIM3310/stage-pilot">stage-pilot</a>
+    <a href="https://github.com/KIM3310/tool-call-finetune-lab">Fine-Tune Lab</a>
+  </div>
+
+  <div class="footer">
+    <p><a href="https://kim3310.github.io/doeon-kim-portfolio/">Portfolio</a> &middot; <a href="https://linkedin.com/in/doeon-kim-4742a2388">LinkedIn</a> &middot; ehdjs1351@gmail.com</p>
+  </div>
+</div>
+</body>
+</html>
