@@ -10,6 +10,12 @@ Personal portfolio site showcasing AI systems, operational software, and data pl
 
 Verified now (2026-04-07): local typecheck, content verification, tests, and production build were rerun from the repository root, and the current public deployments plus third-party assets were rechecked from the live URLs.
 
+## Career / Languages / Certifications
+
+- **Career:** 국군지휘통신사령부 / 제1정보통신단 (전략 지휘통신망 네트워크·보안 운영 / 팀 리드, `2023.11 ~ 2025.05`), ATOM TECH SOLUTIONS LTD (Backend / Full Stack Engineer Intern, `2025.06 ~ 2025.09`), Microsoft AI School 8기 (Trainee, `2025.09 ~ 2026.02`)
+- **Languages:** 한국어 Native, 영어 Business / Working, 일본어 Business / Working
+- **Certifications:** Microsoft AI-900, Snowflake SnowPro Associate, Databricks Platform Architect (AWS / GCP), Databricks Fundamentals, Palantir Foundry Data Engineer Associate, Palantir Foundry Foundations, Datadog Observability, IBM AI / Cloud / Cyber Fundamentals, SAP Cloud Platform Integration
+
 ## 90-Second Review Route
 
 If you are screening for a specific lane, use this order first:
