@@ -82,6 +82,11 @@ For `tool-call-finetune-lab`, the strongest public proof is the post-training pi
 
 For targeted telecom, NOC, or cloud security loops, the live role-fit surfaces are `nw-service-assurance-workbench` and `security-threat-response-workbench`. They are intentionally separate from the six-flagship AI/data story so recruiters can inspect them only when the role actually benefits from that operator-facing context.
 
+For the cloud security monitoring portfolio atlas itself, the current dual deployment is:
+
+- Desktop: `https://cloud-security-monitoring.pages.dev/`
+- Mobile: `https://cloud-security-monitoring-mobile.pages.dev/`
+
 ## Selective private depth
 
 - `memory-test-master-change-gate`
