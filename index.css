@@ -46,6 +46,13 @@ button:active:not(:disabled) {
   overflow: hidden;
 }
 
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 /* ── Mobile responsive overrides ── */
 @media (max-width: 640px) {
   .container {
@@ -53,7 +60,7 @@ button:active:not(:disabled) {
     padding-right: 1rem !important;
   }
 
-  section {
+  section:not(#about):not(#projects) {
     padding-top: 3rem;
     padding-bottom: 3rem;
   }

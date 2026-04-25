@@ -6,8 +6,15 @@ export const PROFILE: Profile = {
   email: 'ehdjs1351@gmail.com',
   github: 'https://github.com/KIM3310',
   linkedin: 'https://www.linkedin.com/in/doeon-kim-4742a2388',
-  intro: 'AI/data platform engineering with Azure, Databricks, Snowflake, Palantir Foundry. 31+ public projects. Microsoft AI School graduate. Trilingual: KR / JP / EN.',
+  intro: 'AI/data platform engineering with Azure, Databricks, Snowflake, and Palantir Foundry. 40 public repositories, 43 local verification jobs green, and Microsoft AI School graduate. Trilingual: KR / JP / EN.',
 };
+
+export const PORTFOLIO_STATS = [
+  { label: 'Public repos', value: '40' },
+  { label: 'Verification jobs', value: '43' },
+  { label: 'Failed checks', value: '0' },
+  { label: 'Runtime coverage', value: 'Node / Python / Swift / Go' },
+] as const;
 
 export const PROJECTS: Project[] = [
   // --- Flagship (Impact order) ---
@@ -19,7 +26,7 @@ export const PROJECTS: Project[] = [
   },
   {
     title: 'StagePilot',
-    description: 'Tool-calling reliability middleware — 25% to 90% benchmark lift. Published on npm (@ai-sdk-tool/parser). 1,720 tests.',
+    description: 'Tool-calling reliability middleware — 25% to 90% benchmark lift. Published on npm (@ai-sdk-tool/parser). 1,724 tests.',
     tech: ['TypeScript', 'AI SDK', 'Vitest', 'OpenTelemetry'],
     github: 'https://github.com/KIM3310/stage-pilot',
     demo: 'https://stage-pilot.pages.dev',
@@ -60,7 +67,7 @@ export const PROJECTS: Project[] = [
   // --- Applied AI / Vision ---
   {
     title: 'Retina Scan AI',
-    description: 'Retinal screening backend with ResNet18 classification, severity grading, and clinical reports. 392 tests.',
+    description: 'Retinal screening backend with ResNet18 classification, severity grading, clinical reports, and 24 verified backend tests.',
     tech: ['Python', 'PyTorch', 'FastAPI', 'OpenCV'],
     github: 'https://github.com/KIM3310/retina-scan-ai',
   },
@@ -186,7 +193,7 @@ export const PROJECTS: Project[] = [
   },
   {
     title: 'SteadyTap',
-    description: 'iOS accessibility coaching app with optional FastAPI backend. 12 tests.',
+    description: 'iOS accessibility coaching app with Swift package and optional FastAPI backend, both verified locally.',
     tech: ['Swift', 'SwiftUI', 'Python'],
     github: 'https://github.com/KIM3310/SteadyTap',
     demo: 'https://steadytap.pages.dev',

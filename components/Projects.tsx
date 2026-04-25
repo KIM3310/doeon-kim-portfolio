@@ -20,7 +20,7 @@ const Projects: React.FC = () => {
   const filtered = filter ? PROJECTS.filter(p => p.tech.includes(filter)) : PROJECTS;
 
   return (
-    <section id="projects" className="py-16 px-6">
+    <section id="projects" className="pt-10 pb-16 px-6 md:pt-16">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-white mb-6">Projects</h2>
 
@@ -56,7 +56,7 @@ const Projects: React.FC = () => {
           {filtered.map((project, idx) => (
             <article key={idx} className="border border-white/10 bg-white/[0.02] rounded-lg p-5 hover:border-white/20 transition-colors flex flex-col min-h-[220px]">
               <h3 className="text-base font-semibold text-white mb-2">{project.title}</h3>
-              <p className="text-sm text-gray-400 mb-3 leading-relaxed line-clamp-2 flex-grow">{project.description}</p>
+              <p className="text-sm text-gray-400 mb-3 leading-relaxed line-clamp-3 flex-grow">{project.description}</p>
               <div className="flex flex-wrap gap-1.5 mb-3">
                 {project.tech.map((t, i) => (
                   <span
