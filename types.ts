@@ -6,22 +6,9 @@ export interface Project {
   demo?: string;
 }
 
-export interface Experience {
-  company: string;
-  role: string;
-  period: string;
-  description: string[];
-  location?: string;
-}
-
 export interface SkillCategory {
   category: string;
   skills: string[];
-}
-
-export interface Certification {
-  issuer: string;
-  name: string;
 }
 
 export interface Profile {

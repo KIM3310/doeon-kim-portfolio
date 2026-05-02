@@ -15,7 +15,7 @@ We aim to acknowledge valid reports promptly and coordinate a fix before public 
 
 ## Supported Scope
 
-Security support applies to the default branch and the latest released or documented deployment path for doeon-kim-portfolio. Experimental examples, local-only scripts, and archived demos are best-effort unless the README states otherwise.
+Security support applies to the default branch and the latest released or documented systems-gallery deployment path. Experimental examples and local-only scripts are best-effort unless the README states otherwise.
 
 ## Handling Secrets
 

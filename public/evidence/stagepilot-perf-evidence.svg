@@ -2,7 +2,7 @@
   <rect width="1200" height="760" rx="24" fill="#07090D"/>
   <rect x="40" y="32" width="1120" height="104" rx="20" fill="#111721" stroke="#303D52"/>
   <text x="68" y="78" fill="#F8FAFC" font-family="Helvetica, Arial, sans-serif" font-size="34" font-weight="700">StagePilot Perf Evidence Pack</text>
-  <text x="68" y="110" fill="#AFBDD1" font-family="Helvetica, Arial, sans-serif" font-size="18">Checked-in local k6 rehearsal that keeps runtime pressure, benchmark proof, and release guardrails in one reviewer path.</text>
+  <text x="68" y="110" fill="#AFBDD1" font-family="Helvetica, Arial, sans-serif" font-size="18">Checked-in local k6 rehearsal that keeps runtime pressure, benchmark proof, and release guardrails in one operator path.</text>
 
   <rect x="56" y="170" width="320" height="214" rx="20" fill="#101722" stroke="#314259"/>
   <text x="82" y="214" fill="#F8FAFC" font-family="Helvetica, Arial, sans-serif" font-size="24" font-weight="700">Observed Run</text>

@@ -20,15 +20,19 @@ const Projects: React.FC = () => {
   const filtered = filter ? PROJECTS.filter(p => p.tech.includes(filter)) : PROJECTS;
 
   return (
-    <section id="projects" className="pt-10 pb-16 px-6 md:pt-16">
+    <section id="projects" className="section-shell">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-white mb-6">Projects</h2>
+        <div className="section-heading">
+          <p className="eyebrow">Systems</p>
+          <h2>Built surfaces, not loose demos</h2>
+          <p>Each card links to a runnable or inspectable system with an explicit boundary: runtime reliability, governance, operations, data contracts, or applied ML.</p>
+        </div>
 
         {/* Filter bar */}
         <div className="flex flex-wrap items-center gap-2 mb-8 overflow-x-auto">
           <button
             onClick={() => setFilter(null)}
-            className={`text-xs px-3 py-1.5 rounded-full border whitespace-nowrap transition-colors ${!filter ? 'bg-white text-black border-white' : 'border-white/20 text-gray-400 hover:border-white/40'}`}
+            className={`filter-button ${!filter ? 'is-active' : ''}`}
           >
             All ({PROJECTS.length})
           </button>
@@ -36,7 +40,7 @@ const Projects: React.FC = () => {
             <button
               key={tag}
               onClick={() => setFilter(filter === tag ? null : tag)}
-              className={`text-xs px-3 py-1.5 rounded-full border whitespace-nowrap transition-colors ${filter === tag ? 'bg-white text-black border-white' : 'border-white/20 text-gray-400 hover:border-white/40'}`}
+              className={`filter-button ${filter === tag ? 'is-active' : ''}`}
             >
               {tag} ({count})
             </button>
@@ -44,7 +48,7 @@ const Projects: React.FC = () => {
           {allTags.length > TOP_TAGS && (
             <button
               onClick={() => setShowAllTags(!showAllTags)}
-              className="text-xs px-3 py-1.5 text-gray-500 hover:text-white transition-colors flex items-center gap-1"
+              className="filter-more"
             >
               {showAllTags ? <><ChevronUp size={14} /> Less</> : <><ChevronDown size={14} /> +{allTags.length - TOP_TAGS} more</>}
             </button>
@@ -54,26 +58,30 @@ const Projects: React.FC = () => {
         {/* Project grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {filtered.map((project, idx) => (
-            <article key={idx} className="border border-white/10 bg-white/[0.02] rounded-lg p-5 hover:border-white/20 transition-colors flex flex-col min-h-[220px]">
-              <h3 className="text-base font-semibold text-white mb-2">{project.title}</h3>
-              <p className="text-sm text-gray-400 mb-3 leading-relaxed line-clamp-3 flex-grow">{project.description}</p>
-              <div className="flex flex-wrap gap-1.5 mb-3">
+            <article key={idx} className="project-card">
+              <div className="project-card-top">
+                <span>{String(idx + 1).padStart(2, '0')}</span>
+                <div />
+              </div>
+              <h3>{project.title}</h3>
+              <p className="project-copy">{project.description}</p>
+              <div className="tag-list">
                 {project.tech.map((t, i) => (
                   <span
                     key={i}
                     onClick={() => setFilter(filter === t ? null : t)}
-                    className={`text-xs px-2 py-0.5 rounded cursor-pointer transition-colors ${filter === t ? 'bg-white/20 text-white' : 'bg-white/5 text-gray-500 hover:bg-white/10'}`}
+                    className={`tag-chip ${filter === t ? 'is-active' : ''}`}
                   >
                     {t}
                   </span>
                 ))}
               </div>
-              <div className="flex gap-3 mt-auto pt-2 border-t border-white/5">
-                <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-sm text-gray-400 hover:text-white transition-colors">
+              <div className="project-actions">
+                <a href={project.github} target="_blank" rel="noopener noreferrer">
                   <Github size={14} /> Code
                 </a>
                 {project.demo && (
-                  <a href={project.demo} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-sm text-gray-400 hover:text-white transition-colors">
+                  <a href={project.demo} target="_blank" rel="noopener noreferrer">
                     <ExternalLink size={14} /> Demo
                   </a>
                 )}

@@ -22,6 +22,6 @@ describe('App component', () => {
 
   it('renders the navbar brand name', () => {
     render(<App />);
-    expect(screen.getByText('DOEON KIM.')).toBeInTheDocument();
+    expect(screen.getAllByText('KIM3310').length).toBeGreaterThan(0);
   });
 });

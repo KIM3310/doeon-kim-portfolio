@@ -11,14 +11,12 @@ const requiredFiles = [
   'components/Hero.tsx',
   'components/Projects.tsx',
   'components/Skills.tsx',
-  'components/Experience.tsx',
-  'components/Extras.tsx',
   'components/Navbar.tsx',
 ];
 
 const checks = [
-  { file: 'constants.ts', mustInclude: ['PROFILE', 'PROJECTS', 'SKILLS', 'EXPERIENCE', 'CERTIFICATIONS'] },
-  { file: 'App.tsx', mustInclude: ['Hero', 'Projects', 'Skills', 'Experience'] },
+  { file: 'constants.ts', mustInclude: ['PROFILE', 'PROJECTS', 'SKILLS'] },
+  { file: 'App.tsx', mustInclude: ['Hero', 'Projects', 'Skills'] },
 ];
 
 const failures = [];
@@ -35,9 +33,9 @@ for (const check of checks) {
 }
 
 if (failures.length) {
-  console.error('PORTFOLIO VERIFY FAILED');
+  console.error('GALLERY VERIFY FAILED');
   for (const f of failures) console.error(`- ${f}`);
   process.exit(1);
 }
 
-console.log('PORTFOLIO VERIFY OK');
+console.log('GALLERY VERIFY OK');

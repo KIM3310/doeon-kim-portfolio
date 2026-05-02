@@ -1,4 +1,4 @@
-# Contributing to doeon-kim-portfolio
+# Contributing to KIM3310 Systems Gallery
 
 Thanks for helping improve this project. Keep changes small, documented, and easy to review.
 

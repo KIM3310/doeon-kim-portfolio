@@ -2,10 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
 const navItems = [
-  { name: 'About', href: '#about' },
-  { name: 'Projects', href: '#projects' },
-  { name: 'Skills', href: '#skills' },
-  { name: 'Experience', href: '#experience' },
+  { name: 'Overview', href: '#about' },
+  { name: 'Systems', href: '#projects' },
+  { name: 'Capabilities', href: '#skills' },
   { name: 'Contact', href: '#contact' },
 ];
 
@@ -35,30 +34,30 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all ${scrolled ? 'bg-[#050505]/90 backdrop-blur-md border-b border-white/5' : 'bg-transparent'}`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all ${scrolled ? 'bg-[#071015]/86 backdrop-blur-xl border-b border-white/10' : 'bg-transparent'}`}>
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <span className="text-white font-bold tracking-wide">DOEON KIM.</span>
+        <span className="text-white font-bold tracking-wide">KIM3310</span>
 
         {/* Desktop */}
         <div className="hidden md:flex gap-6">
           {navItems.map(item => (
-            <button key={item.name} onClick={() => handleClick(item.href)} className="text-sm text-gray-400 hover:text-white transition-colors">
+            <button key={item.name} onClick={() => handleClick(item.href)} className="nav-link">
               {item.name}
             </button>
           ))}
         </div>
 
         {/* Mobile toggle */}
-        <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-gray-400 hover:text-white" aria-label="Toggle menu" aria-expanded={isOpen}>
+        <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-slate-400 hover:text-white" aria-label="Toggle menu" aria-expanded={isOpen}>
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="md:hidden bg-[#050505]/95 backdrop-blur-md border-t border-white/5 px-6 py-4">
+        <div className="md:hidden bg-[#071015]/96 backdrop-blur-xl border-t border-white/10 px-6 py-4">
           {navItems.map(item => (
-            <button key={item.name} onClick={() => handleClick(item.href)} className="block w-full text-left py-3 text-gray-400 hover:text-white transition-colors">
+            <button key={item.name} onClick={() => handleClick(item.href)} className="block w-full text-left py-3 text-slate-400 hover:text-white transition-colors">
               {item.name}
             </button>
           ))}

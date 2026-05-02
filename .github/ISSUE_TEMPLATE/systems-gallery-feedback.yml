@@ -1,8 +1,8 @@
-name: Portfolio feedback
-description: Report a broken link, UX issue, or improvement idea for the portfolio.
-title: "[Portfolio] "
+name: Systems gallery feedback
+description: Report a broken link, UX issue, or improvement idea for the systems gallery.
+title: "[Gallery] "
 labels:
-  - portfolio
+  - design
   - feedback
 body:
   - type: dropdown
@@ -25,7 +25,6 @@ body:
         - Hero
         - Projects
         - Community
-        - Resume/Experience
         - General
     validations:
       required: true
@@ -41,8 +40,8 @@ body:
     id: impact
     attributes:
       label: Why it matters
-      description: Explain the user or recruiting impact.
-      placeholder: This blocks reviewers from opening the live demo directly.
+      description: Explain the user or operator impact.
+      placeholder: This blocks the intended inspection path for the linked system.
   - type: textarea
     id: supporting_notes
     attributes:
