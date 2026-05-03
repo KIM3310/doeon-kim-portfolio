@@ -23,5 +23,5 @@
   <text x="84" y="522" fill="#DCE6E1" font-family="Helvetica, Arial, sans-serif" font-size="19">Certified metrics, approval rules, and query-tag transport survive across warehouse targets.</text>
   <text x="84" y="554" fill="#DCE6E1" font-family="Helvetica, Arial, sans-serif" font-size="19">Platform fit is presented as an explicit contract preview, not fake live connectivity.</text>
   <text x="84" y="586" fill="#DCE6E1" font-family="Helvetica, Arial, sans-serif" font-size="19">Field / solution-architecture conversations can start from governed delivery posture instead of just NL2SQL output.</text>
-  <text x="84" y="626" fill="#92E0C7" font-family="Helvetica, Arial, sans-serif" font-size="18">Reviewer path: `/api/runtime/lakehouse-readiness-pack` -> `/api/runtime/semantic-governance-pack` -> `/api/schema/query-tag`</text>
+  <text x="84" y="626" fill="#92E0C7" font-family="Helvetica, Arial, sans-serif" font-size="18">Operator path: `/api/runtime/lakehouse-readiness-pack` -> `/api/runtime/semantic-governance-pack` -> `/api/schema/query-tag`</text>
 </svg>
