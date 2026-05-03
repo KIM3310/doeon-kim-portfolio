@@ -60,5 +60,5 @@ The site is deployed at `https://kim3310.github.io/doeon-kim-portfolio/` via Git
 This repository includes a neutral cloud and AI engineering blueprint that maps the current proof surface to runtime boundaries, data contracts, model-risk controls, deployment posture, and validation hooks.
 
 - [Cloud + AI architecture blueprint](docs/cloud-ai-architecture.md)
-- [Machine-readable architecture manifest](architecture/blueprint.json)
+- [Machine-readable architecture manifest](docs/architecture/blueprint.json)
 - Validation command: `python3 scripts/validate_architecture_blueprint.py`
