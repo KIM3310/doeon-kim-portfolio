@@ -1,21 +1,100 @@
-import { Project, SkillCategory, Profile } from './types';
+import { Project, SkillCategory, Profile, WorkExperience, EducationItem, Certification } from './types';
 
 export const PROFILE: Profile = {
   name: 'KIM3310 Systems Gallery',
-  title: 'AI runtime, secure automation, operations, and applied ML systems',
+  title: 'Data center security operations, military communications, IT infrastructure, secure automation, and AI/data systems',
   email: 'ehdjs1351@gmail.com',
   github: 'https://github.com/KIM3310',
   linkedin: 'https://www.linkedin.com/in/doeon-kim-4742a2388',
   intro:
-    'A neutral gallery of runnable systems. The focus is architecture, verification, operational boundaries, and UI surfaces that can be inspected without private data.',
+    'A neutral gallery of runnable systems anchored in 24/7 military MW communications, CCTV/VMS/NVR operation, access-control and intrusion-alert monitoring, current infrastructure operations, and reviewable software evidence. The focus is architecture, verification, security boundaries, digital workspace operations, and UI surfaces that can be inspected without private data.',
 };
 
 export const PORTFOLIO_STATS = [
+  { label: 'Public repos', value: '43' },
   { label: 'Displayed systems', value: '16' },
-  { label: 'Archived lanes', value: '13' },
-  { label: 'Latest checks', value: 'Green' },
-  { label: 'Runtime mix', value: 'TypeScript / Python / Swift / Go' },
+  { label: 'Consolidated lanes', value: '13' },
+  { label: 'Latest checks', value: '43/43 green' },
 ] as const;
+
+export const CURRENT_ROLE: WorkExperience = {
+  company: 'InterX',
+  title: 'IT Infrastructure Operations Manager',
+  period: 'Apr 2026 - Present',
+  location: 'Seoul, South Korea',
+  summary:
+    'Operates and supports data-center, IDC, security, network, collaboration, and service-desk workflows for an internal business environment.',
+  focus: [
+    'Data center and IDC infrastructure operations',
+    'Security and network operations: UTM, IPsec VPN, DRM, DLP, NAC, firewall monitoring',
+    'Jira, Confluence, Google Workspace, and company-wide system administration',
+    'IT asset, license, backup, access-right, onboarding, and helpdesk controls',
+  ],
+  outcomes: [
+    'Maintains digital workspace permissions, workflows, and new-hire IT onboarding setup',
+    'Improves recurring operations through Jira automation rules, process reports, and vendor coordination',
+    'Researches and test-beds new IT/SaaS solutions for security posture and operational efficiency',
+  ],
+};
+
+export const MILITARY_ROLE: WorkExperience = {
+  company: 'ROK Defense Communication Command / 1st Information Communications Group',
+  title: 'MW Communications Soldier / Squad Leader',
+  period: 'Nov 2023 - May 2025',
+  location: 'Seongnam, South Korea',
+  summary:
+    'MW communications soldier and 6-person squad leader in 24/7 strategic command communications operations, covering network, security, server, CCTV/VMS/NVR, access-control, intrusion-alert, and emergency-response workflows.',
+  focus: [
+    '24/7 national strategic command communications operations as an MW communications soldier',
+    '6-person squad leadership with roughly 8-9 incidents or issue cases per month across response, mitigation, recovery, reporting, and follow-up',
+    'Access-log review, visitor access approval-record management, access-permission registration/removal, and unauthorized-access alert monitoring',
+    'Perimeter intrusion alerts, server-room and communications-room unauthorized-access alerts, and night abnormal-movement detection',
+    'CCTV/VMS/NVR operation and management, camera view adjustment, recording/status checks, abnormal-situation reporting, initial action, and CCTV fault response',
+    'Network, security, server, and communications-room monitoring with server-room fire response, 24-hour standby, and shift handoff',
+  ],
+  outcomes: [
+    'Built operator habits around access control, issue confirmation, initial action, escalation, documentation, recovery, and emergency response',
+    'Provides direct evidence for CCTV/VMS/NVR, access control, intrusion monitoring, network, security, server, and communications-room operations',
+    'Anchors network/security projects such as NW Service Assurance and Security Threat Response Workbench',
+  ],
+};
+
+export const EDUCATION: EducationItem[] = [
+  {
+    institution: "Bachelor's Degree Examination for Self-Education (BDES)",
+    program: 'Computer Science',
+    period: 'Expected Nov 2027',
+    note: 'Bachelor degree track',
+  },
+  {
+    institution: 'Korea National Open University',
+    program: 'Computer Science coursework',
+    period: 'Mar 2026 - Present',
+    note: 'Current coursework',
+  },
+  {
+    institution: 'Microsoft AI School 8th Cohort',
+    program: 'Azure AI, Copilot, RAG, and enterprise AI deployment training',
+    period: 'Sep 2025 - Feb 2026',
+    note: 'Completed practitioner-reviewed AI systems training',
+  },
+];
+
+export const CERTIFICATIONS: Certification[] = [
+  { issuer: 'Microsoft', name: 'AI-900' },
+  { issuer: 'Snowflake', name: 'SnowPro Associate' },
+  { issuer: 'Databricks', name: 'Platform Architect (AWS + GCP)' },
+  { issuer: 'Databricks', name: 'Fundamentals' },
+  { issuer: 'Palantir', name: 'Foundry Data Engineer Associate' },
+  { issuer: 'Palantir', name: 'Foundry Foundations' },
+  { issuer: 'Datadog', name: 'Observability Certification' },
+  { issuer: 'IBM', name: 'AI Fundamentals' },
+  { issuer: 'IBM', name: 'Cloud Computing Fundamentals' },
+  { issuer: 'IBM', name: 'Cyber Security Fundamentals' },
+  { issuer: 'SAP', name: 'Cloud Platform Integration' },
+];
+
+export const LANGUAGES = ['Korean native', 'English business/working', 'Japanese business/working'] as const;
 
 export const PROJECTS: Project[] = [
   {
@@ -84,8 +163,8 @@ export const PROJECTS: Project[] = [
     title: 'regulated-case-workbench',
     description:
       'Case workflow desk with redaction preview, approval gates, policy checks, signed export proof, and cross-case audit feeds.',
-    tech: ['FastAPI', 'Approval gates', 'Redaction', 'Auditability'],
-    github: 'https://github.com/KIM3310/regulated-case-workbench',
+    tech: ['FastAPI', 'Approval gates', 'Redaction', 'Private case study'],
+    access: 'private',
     demo: 'https://regulated-case-workbench.pages.dev',
   },
   {
@@ -129,8 +208,8 @@ export const PROJECTS: Project[] = [
     title: 'smallbiz-ops-copilot',
     description:
       'Operations inbox for small teams with queue triage, draft approval, KPI cards, and bounded runtime controls.',
-    tech: ['Workers', 'Operations inbox', 'Approval flow', 'KPI dashboard'],
-    github: 'https://github.com/KIM3310/smallbiz-ops-copilot',
+    tech: ['Workers', 'Operations inbox', 'Approval flow', 'Private case study'],
+    access: 'private',
     demo: 'https://smallbiz-ops-copilot.pages.dev',
   },
   {
@@ -144,6 +223,14 @@ export const PROJECTS: Project[] = [
 ];
 
 export const SKILLS: SkillCategory[] = [
+  {
+    category: 'Military Communications Network Operations',
+    skills: ['MW communications', '6-person squad leadership', '24/7 strategic communications operations', '8-9 incidents/month', 'access/intrusion alert monitoring', 'CCTV/VMS/NVR operation'],
+  },
+  {
+    category: 'Infrastructure Operations',
+    skills: ['data center operations', 'IDC infrastructure operations', 'UTM/IPsec VPN', 'DRM/DLP/NAC', 'Google Workspace', 'Jira automation'],
+  },
   {
     category: 'Runtime and Evaluation',
     skills: ['tool-call parsing', 'bounded retries', 'trace contracts', 'fixture-based evals', 'report artifacts'],

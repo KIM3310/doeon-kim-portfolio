@@ -24,4 +24,20 @@ describe('App component', () => {
     render(<App />);
     expect(screen.getAllByText('KIM3310').length).toBeGreaterThan(0);
   });
+
+  it('renders the current InterX role section', () => {
+    render(<App />);
+    expect(screen.getByText('InterX')).toBeInTheDocument();
+    expect(screen.getByText('IT Infrastructure Operations Manager')).toBeInTheDocument();
+    expect(screen.getAllByText(/Google Workspace/).length).toBeGreaterThan(0);
+  });
+
+  it('renders military experience, education, and certifications', () => {
+    render(<App />);
+    expect(screen.getByText(/ROK Defense Communication Command/)).toBeInTheDocument();
+    expect(screen.getByText('MW Communications Soldier / Squad Leader')).toBeInTheDocument();
+    expect(screen.getByText("Bachelor's Degree Examination for Self-Education (BDES)")).toBeInTheDocument();
+    expect(screen.getByText('Korea National Open University')).toBeInTheDocument();
+    expect(screen.getByText(/Snowflake - SnowPro Associate/)).toBeInTheDocument();
+  });
 });

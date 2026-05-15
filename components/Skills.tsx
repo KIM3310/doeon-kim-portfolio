@@ -3,7 +3,7 @@ import { SKILLS } from '../constants';
 
 const Skills: React.FC = () => (
   <section id="skills" className="section-shell capability-section">
-    <div className="max-w-6xl mx-auto">
+    <div className="section-inner">
       <div className="section-heading">
         <p className="eyebrow">Capabilities</p>
         <h2>Reusable engineering patterns</h2>

@@ -2,13 +2,36 @@ export interface Project {
   title: string;
   description: string;
   tech: string[];
-  github: string;
+  github?: string;
   demo?: string;
+  access?: 'public' | 'private';
 }
 
 export interface SkillCategory {
   category: string;
   skills: string[];
+}
+
+export interface WorkExperience {
+  company: string;
+  title: string;
+  period: string;
+  location: string;
+  summary: string;
+  focus: string[];
+  outcomes: string[];
+}
+
+export interface EducationItem {
+  institution: string;
+  program: string;
+  period: string;
+  note: string;
+}
+
+export interface Certification {
+  issuer: string;
+  name: string;
 }
 
 export interface Profile {

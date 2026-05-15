@@ -8,6 +8,7 @@ const requiredFiles = [
   'constants.ts',
   'types.ts',
   'App.tsx',
+  'components/Experience.tsx',
   'components/Hero.tsx',
   'components/Projects.tsx',
   'components/Skills.tsx',
@@ -15,8 +16,8 @@ const requiredFiles = [
 ];
 
 const checks = [
-  { file: 'constants.ts', mustInclude: ['PROFILE', 'PROJECTS', 'SKILLS'] },
-  { file: 'App.tsx', mustInclude: ['Hero', 'Projects', 'Skills'] },
+  { file: 'constants.ts', mustInclude: ['PROFILE', 'PROJECTS', 'SKILLS', 'CURRENT_ROLE', 'MILITARY_ROLE', 'CERTIFICATIONS', 'BDES', 'Korea National Open University', 'InterX'] },
+  { file: 'App.tsx', mustInclude: ['Hero', 'Experience', 'Projects', 'Skills'] },
 ];
 
 const failures = [];

@@ -1,20 +1,22 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
 import { PROFILE } from './constants';
 import { Github, Linkedin, Mail } from 'lucide-react';
 
 const App: React.FC = () => (
-  <div className="app-shell antialiased min-h-screen text-slate-100">
-    <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-white focus:px-4 focus:py-2 focus:text-black">
+  <div className="app-shell">
+    <a href="#main-content" className="skip-link">
       Skip to main content
     </a>
     <div className="site-visual-grid" aria-hidden="true" />
     <Navbar />
     <main id="main-content">
       <Hero />
+      <Experience />
       <Projects />
       <Skills />
     </main>

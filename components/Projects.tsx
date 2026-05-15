@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { PROJECTS } from '../constants';
-import { Github, ExternalLink, ChevronDown, ChevronUp } from 'lucide-react';
+import { Github, ExternalLink, ChevronDown, ChevronUp, LockKeyhole } from 'lucide-react';
 
 const TOP_TAGS = 8;
 
@@ -21,7 +21,7 @@ const Projects: React.FC = () => {
 
   return (
     <section id="projects" className="section-shell">
-      <div className="max-w-6xl mx-auto">
+      <div className="section-inner">
         <div className="section-heading">
           <p className="eyebrow">Systems</p>
           <h2>Built surfaces, not loose demos</h2>
@@ -29,7 +29,7 @@ const Projects: React.FC = () => {
         </div>
 
         {/* Filter bar */}
-        <div className="flex flex-wrap items-center gap-2 mb-8 overflow-x-auto">
+        <div className="filter-bar">
           <button
             onClick={() => setFilter(null)}
             className={`filter-button ${!filter ? 'is-active' : ''}`}
@@ -56,13 +56,16 @@ const Projects: React.FC = () => {
         </div>
 
         {/* Project grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="project-grid">
           {filtered.map((project, idx) => (
             <article key={idx} className="project-card">
               <div className="project-card-top">
                 <span>{String(idx + 1).padStart(2, '0')}</span>
-                <div />
+                <div className="project-mark" />
               </div>
+              {project.access === 'private' && (
+                <span className="private-badge"><LockKeyhole size={13} /> Private case study</span>
+              )}
               <h3>{project.title}</h3>
               <p className="project-copy">{project.description}</p>
               <div className="tag-list">
@@ -77,9 +80,11 @@ const Projects: React.FC = () => {
                 ))}
               </div>
               <div className="project-actions">
-                <a href={project.github} target="_blank" rel="noopener noreferrer">
-                  <Github size={14} /> Code
-                </a>
+                {project.github && (
+                  <a href={project.github} target="_blank" rel="noopener noreferrer">
+                    <Github size={14} /> Code
+                  </a>
+                )}
                 {project.demo && (
                   <a href={project.demo} target="_blank" rel="noopener noreferrer">
                     <ExternalLink size={14} /> Demo
@@ -90,7 +95,7 @@ const Projects: React.FC = () => {
           ))}
         </div>
         {filtered.length === 0 && (
-          <p className="text-center text-gray-500 py-12">No projects match this filter.</p>
+          <p className="empty-state">No projects match this filter.</p>
         )}
       </div>
     </section>

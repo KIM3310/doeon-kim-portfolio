@@ -6,19 +6,25 @@
 
 # KIM3310 Systems Gallery
 
-Neutral technical systems gallery for AI runtimes, secure automation, operations workbenches, data contracts, and applied ML workflows. Built with React + TypeScript and deployed on GitHub Pages.
+Neutral technical systems gallery for data-center security operations, military MW communications, IT infrastructure operations, secure automation, AI runtimes, operations workbenches, data contracts, and applied ML workflows. Built with React + TypeScript and deployed on GitHub Pages.
 
-The page is product-focused: project cards, capability lanes, verification posture, and repository links. It avoids person-first packets, private data, credential requirements, and external tenant assumptions.
+The page is product-focused: military 24/7 communications and security monitoring, CCTV/VMS/NVR operation, access-control and intrusion-alert handling, current role context, education, certifications, project cards, capability lanes, verification posture, and repository links. It avoids private data, credential requirements, and external tenant assumptions. Private case studies are labeled without exposing repository links that public visitors cannot open.
 
 ## What Changed
 
 - Rebuilt the first screen as a compact systems gallery.
+- Foregrounded ROK Defense Communication Command MW communications squad leader experience.
+- Added current InterX IT Infrastructure Operations Manager experience beginning April 2026.
+- Restored education, Microsoft AI School training, language, and certification details.
 - Removed legacy packets, generated documents, and archived runtime bridge files.
 - Consolidated the page around active repositories and reusable engineering patterns.
+- Cleaned public/private repository link handling and clarified consolidated-lane metrics.
 - Kept static evidence assets for visual context without requiring live credentials.
 
 ## Project Lanes
 
+- Current IT infrastructure operations
+- Military MW communications, CCTV/VMS/NVR, access-control, intrusion-alert, and 24/7 incident operations
 - Runtime reliability
 - Governance and secure automation
 - Operations workbenches
