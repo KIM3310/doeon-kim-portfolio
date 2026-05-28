@@ -22,6 +22,13 @@ A compact public gallery that makes each system read like a product, not a scatt
 | Safety boundary | The site avoids client secrets and only displays public-safe project summaries and generated visual assets. |
 | Fast proof | `npm run verify` checks type safety, content guarantees, tests, and production build before deployment. |
 
+## Reviewer Fast Path
+
+- **First minute:** Open the live gallery, scan flagship lanes, then jump to the repository coverage ledger.
+- **Local demo:** Run `npm install && npm run dev`, then open `http://localhost:5173`.
+- **Verification:** Run `npm run verify`; it covers type safety, tests, content guarantees, and production build.
+- **Commercial read:** Use the gallery as the portfolio router for GenAI operations, incident ops, runtime reliability, and governed analytics.
+
 ## What Changed
 
 - Rebuilt the UI as a light, minimalist product gallery with tighter spacing, quieter contrast, and responsive proof-first layouts.
