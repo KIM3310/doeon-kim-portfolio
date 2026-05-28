@@ -2,7 +2,7 @@ import { Project, SkillCategory, Profile, WorkExperience, EducationItem, Certifi
 
 export const PROFILE: Profile = {
   name: 'KIM3310 Systems Gallery',
-  title: 'Data center security operations, military communications, IT infrastructure, secure automation, and AI/data systems',
+  title: 'Enterprise GenAI, data center security operations, military communications, IT infrastructure, secure automation, and AI/data systems',
   email: 'ehdjs1351@gmail.com',
   github: 'https://github.com/KIM3310',
   linkedin: 'https://www.linkedin.com/in/doeon-kim-4742a2388',
@@ -11,10 +11,10 @@ export const PROFILE: Profile = {
 };
 
 export const PORTFOLIO_STATS = [
-  { label: 'Public repos', value: '43' },
-  { label: 'Displayed systems', value: '16' },
-  { label: 'Consolidated lanes', value: '13' },
-  { label: 'Latest checks', value: '43/43 green' },
+  { label: 'Public repos', value: '44' },
+  { label: 'Displayed systems', value: '17' },
+  { label: 'Flagship lanes', value: '8' },
+  { label: 'Latest verification', value: 'profile + gallery' },
 ] as const;
 
 export const CURRENT_ROLE: WorkExperience = {
@@ -97,6 +97,14 @@ export const CERTIFICATIONS: Certification[] = [
 export const LANGUAGES = ['Korean native', 'English business/working', 'Japanese business/working'] as const;
 
 export const PROJECTS: Project[] = [
+  {
+    title: 'aix-pilot',
+    description:
+      'Enterprise GenAI pilot console that connects RAG, Agent drafts, DLP masking, evaluation gates, KPI reporting, and a free runtime path.',
+    tech: ['Enterprise GenAI', 'RAG', 'Agent workflow', 'DLP', 'KPI'],
+    github: 'https://github.com/KIM3310/aix-pilot',
+    demo: 'https://aix-pilot.pages.dev',
+  },
   {
     title: 'stage-pilot',
     description:
@@ -233,11 +241,11 @@ export const SKILLS: SkillCategory[] = [
   },
   {
     category: 'Runtime and Evaluation',
-    skills: ['tool-call parsing', 'bounded retries', 'trace contracts', 'fixture-based evals', 'report artifacts'],
+    skills: ['tool-call parsing', 'bounded retries', 'trace contracts', 'fixture-based evals', 'report artifacts', 'RAG evaluation'],
   },
   {
     category: 'Governance and Automation',
-    skills: ['policy gates', 'redaction', 'RBAC', 'signed exports', 'audit logs'],
+    skills: ['policy gates', 'redaction', 'RBAC', 'signed exports', 'audit logs', 'DLP masking'],
   },
   {
     category: 'Operations Surfaces',

@@ -6,7 +6,7 @@
 
 # KIM3310 Systems Gallery
 
-Neutral technical systems gallery for data-center security operations, military MW communications, IT infrastructure operations, secure automation, AI runtimes, operations workbenches, data contracts, and applied ML workflows. Built with React + TypeScript and deployed on GitHub Pages.
+Neutral technical systems gallery for enterprise GenAI, data-center security operations, military MW communications, IT infrastructure operations, secure automation, AI runtimes, operations workbenches, data contracts, and applied ML workflows. Built with React + TypeScript and deployed on GitHub Pages.
 
 The page is product-focused: military 24/7 communications and security monitoring, CCTV/VMS/NVR operation, access-control and intrusion-alert handling, current role context, education, certifications, project cards, capability lanes, verification posture, and repository links. It avoids private data, credential requirements, and external tenant assumptions. Private case studies are labeled without exposing repository links that public visitors cannot open.
 
@@ -18,6 +18,7 @@ The page is product-focused: military 24/7 communications and security monitorin
 - Restored education, Microsoft AI School training, language, and certification details.
 - Removed legacy packets, generated documents, and archived runtime bridge files.
 - Consolidated the page around active repositories and reusable engineering patterns.
+- Promoted AIX Pilot as the current flagship enterprise GenAI product surface.
 - Cleaned public/private repository link handling and clarified consolidated-lane metrics.
 - Kept static evidence assets for visual context without requiring live credentials.
 
@@ -26,6 +27,7 @@ The page is product-focused: military 24/7 communications and security monitorin
 - Current IT infrastructure operations
 - Military MW communications, CCTV/VMS/NVR, access-control, intrusion-alert, and 24/7 incident operations
 - Runtime reliability
+- Enterprise GenAI pilot operations
 - Governance and secure automation
 - Operations workbenches
 - Data contracts and governed analytics

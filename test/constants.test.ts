@@ -21,10 +21,10 @@ describe('PROFILE', () => {
 describe('PORTFOLIO_STATS', () => {
   it('surfaces the latest audit metrics', () => {
     expect(PORTFOLIO_STATS).toEqual([
-      { label: 'Public repos', value: '43' },
-      { label: 'Displayed systems', value: '16' },
-      { label: 'Consolidated lanes', value: '13' },
-      { label: 'Latest checks', value: '43/43 green' },
+      { label: 'Public repos', value: '44' },
+      { label: 'Displayed systems', value: '17' },
+      { label: 'Flagship lanes', value: '8' },
+      { label: 'Latest verification', value: 'profile + gallery' },
     ]);
   });
 });
@@ -84,6 +84,8 @@ describe('PROJECTS', () => {
 
   it('uses unique titles and includes flagship lanes', () => {
     expect(new Set(PROJECTS.map(p => p.title)).size).toBe(PROJECTS.length);
+    expect(PROJECTS.at(0)?.title).toBe('aix-pilot');
+    expect(PROJECTS.find(p => p.title === 'aix-pilot')?.description).toContain('Enterprise GenAI pilot console');
     expect(PROJECTS.find(p => p.title === 'stage-pilot')?.description).toContain('Tool-call reliability runtime');
     expect(PROJECTS.find(p => p.title === 'retina-scan-ai')?.description).toContain('Medical-image research workflow');
     expect(PROJECTS.find(p => p.title === 'SteadyTap')?.description).toContain('Accessibility coaching app');
