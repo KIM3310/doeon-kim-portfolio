@@ -73,7 +73,7 @@ const Projects: React.FC = () => {
               )}
               <h3>{project.title}</h3>
               <p className="project-copy">{project.description}</p>
-              <div className="project-business" aria-label={`${project.title} business and hiring fit`}>
+              <div className="project-business" aria-label={`${project.title} business and review fit`}>
                 <div className="project-business-item">
                   <Target size={15} aria-hidden="true" />
                   <span>Market</span>
