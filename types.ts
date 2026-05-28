@@ -4,6 +4,7 @@ export interface Project {
   tech: string[];
   github?: string;
   demo?: string;
+  evidence?: string;
   access?: 'public' | 'private';
 }
 

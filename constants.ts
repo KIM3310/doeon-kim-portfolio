@@ -104,6 +104,7 @@ export const PROJECTS: Project[] = [
     tech: ['Enterprise GenAI', 'RAG', 'Agent workflow', 'DLP', 'KPI'],
     github: 'https://github.com/KIM3310/aix-pilot',
     demo: 'https://aix-pilot.pages.dev',
+    evidence: 'evidence/aix-pilot-console.png',
   },
   {
     title: 'stage-pilot',
@@ -112,6 +113,7 @@ export const PROJECTS: Project[] = [
     tech: ['Runtime reliability', 'TypeScript', 'Benchmarks', 'Parser recovery'],
     github: 'https://github.com/KIM3310/stage-pilot',
     demo: 'https://stage-pilot.pages.dev',
+    evidence: 'evidence/stagepilot-perf-evidence.svg',
   },
   {
     title: 'agent-runtime-go',
@@ -134,6 +136,7 @@ export const PROJECTS: Project[] = [
     tech: ['React', 'Incident ops', 'Replay evals', 'Handoff'],
     github: 'https://github.com/KIM3310/AegisOps',
     demo: 'https://aegisops-ai-incident-doctor.pages.dev',
+    evidence: 'evidence/aegisops-system-design.svg',
   },
   {
     title: 'security-threat-response-workbench',
@@ -158,6 +161,7 @@ export const PROJECTS: Project[] = [
     tech: ['Governance', 'FastAPI', 'RBAC', 'Audit logs'],
     github: 'https://github.com/KIM3310/enterprise-llm-adoption-kit',
     demo: 'https://enterprise-llm-kit.pages.dev',
+    evidence: 'evidence/enterprise-workshop-readout.svg',
   },
   {
     title: 'secure-xl2hwp-local',
@@ -189,6 +193,7 @@ export const PROJECTS: Project[] = [
     tech: ['FastAPI', 'Governed analytics', 'Policy checks', 'Charts'],
     github: 'https://github.com/KIM3310/Nexus-Hive',
     demo: 'https://nexus-hive.pages.dev',
+    evidence: 'evidence/nexus-semantic-governance.svg',
   },
   {
     title: 'fab-ops-yield-control-tower',

@@ -1,6 +1,8 @@
 import React from 'react';
-import { ArrowRight, Github, Linkedin, Mail, ShieldCheck, Workflow } from 'lucide-react';
+import { ArrowRight, Github, Linkedin, Mail, ShieldCheck, Sparkles } from 'lucide-react';
 import { PORTFOLIO_STATS, PROFILE } from '../constants';
+
+const featuredScreenshot = `${import.meta.env.BASE_URL}evidence/aix-pilot-console.png`;
 
 const Hero: React.FC = () => (
   <section id="about" className="hero-section">
@@ -23,13 +25,19 @@ const Hero: React.FC = () => (
           <Mail size={18} /> Email
         </a>
       </div>
+      <div className="hero-showcase hero-mobile-showcase">
+        <img src={featuredScreenshot} alt="AIX Pilot deployed product console screenshot" />
+      </div>
     </div>
-    <aside className="hero-panel" aria-label="Repository health summary">
+    <aside className="hero-panel" aria-label="Featured system and repository health summary">
+      <div className="hero-showcase">
+        <img src={featuredScreenshot} alt="AIX Pilot deployed product console screenshot" />
+      </div>
       <div className="hero-panel-header">
-        <ShieldCheck aria-hidden="true" />
+        <Sparkles aria-hidden="true" />
         <div>
-          <p className="eyebrow">Current Shape</p>
-          <h2>Active work stays inspectable. Legacy lanes stay archived.</h2>
+          <p className="eyebrow">Featured System</p>
+          <h2>AIX Pilot leads the gallery as a deployed Enterprise GenAI console.</h2>
         </div>
       </div>
       <dl className="stat-grid">
@@ -41,8 +49,8 @@ const Hero: React.FC = () => (
         ))}
       </dl>
       <div className="system-strip">
-        <Workflow aria-hidden="true" />
-        <span>runtime to governance to operations to data contracts to applied ML</span>
+        <ShieldCheck aria-hidden="true" />
+        <span>deployed systems, reviewable tests, quiet operating boundaries</span>
       </div>
     </aside>
   </section>

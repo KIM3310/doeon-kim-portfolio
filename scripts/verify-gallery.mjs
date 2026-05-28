@@ -16,7 +16,7 @@ const requiredFiles = [
 ];
 
 const checks = [
-  { file: 'constants.ts', mustInclude: ['PROFILE', 'PROJECTS', 'SKILLS', 'CURRENT_ROLE', 'MILITARY_ROLE', 'CERTIFICATIONS', 'BDES', 'Korea National Open University', 'InterX'] },
+  { file: 'constants.ts', mustInclude: ['PROFILE', 'PROJECTS', 'SKILLS', 'CURRENT_ROLE', 'MILITARY_ROLE', 'CERTIFICATIONS', 'BDES', 'Korea National Open University', 'InterX', 'aix-pilot-console.png'] },
   { file: 'App.tsx', mustInclude: ['Hero', 'Experience', 'Projects', 'Skills'] },
 ];
 

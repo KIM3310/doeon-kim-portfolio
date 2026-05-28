@@ -12,6 +12,7 @@ The page is product-focused: military 24/7 communications and security monitorin
 
 ## What Changed
 
+- Rebuilt the UI as a light, minimalist product gallery with tighter spacing, quieter contrast, and responsive proof-first layouts.
 - Rebuilt the first screen as a compact systems gallery.
 - Foregrounded ROK Defense Communication Command MW communications squad leader experience.
 - Added current InterX IT Infrastructure Operations Manager experience beginning April 2026.
@@ -19,6 +20,7 @@ The page is product-focused: military 24/7 communications and security monitorin
 - Removed legacy packets, generated documents, and archived runtime bridge files.
 - Consolidated the page around active repositories and reusable engineering patterns.
 - Promoted AIX Pilot as the current flagship enterprise GenAI product surface.
+- Added real AIX Pilot console imagery and static evidence thumbnails to make the gallery immediately reviewable.
 - Cleaned public/private repository link handling and clarified consolidated-lane metrics.
 - Kept static evidence assets for visual context without requiring live credentials.
 
