@@ -29,6 +29,10 @@ A compact public gallery that makes each system read like a product, not a scatt
 - **Verification:** Run `npm run verify`; it covers type safety, tests, content guarantees, and production build.
 - **Commercial read:** Use the gallery as the portfolio router for GenAI operations, incident ops, runtime reliability, and governed analytics.
 
+## Commercialization Playbook
+
+- [Monetization and GTM playbook](docs/monetization-playbook.md) maps the repository to buyer segments, offer ladder, pricing hypotheses, proof gates, and risk boundaries.
+
 ## What Changed
 
 - Rebuilt the UI as a light, minimalist product gallery with tighter spacing, quieter contrast, and responsive proof-first layouts.
