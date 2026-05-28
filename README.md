@@ -14,6 +14,7 @@ The page is product-focused: military 24/7 communications and security monitorin
 
 - Rebuilt the UI as a light, minimalist product gallery with tighter spacing, quieter contrast, and responsive proof-first layouts.
 - Rebuilt the first screen as a compact systems gallery.
+- Added market, review-signal, and revenue-path fields to every displayed project so the gallery reads as a product portfolio, not a loose demo list.
 - Foregrounded ROK Defense Communication Command MW communications squad leader experience.
 - Added current InterX IT Infrastructure Operations Manager experience beginning April 2026.
 - Restored education, Microsoft AI School training, language, and certification details.

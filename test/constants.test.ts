@@ -71,6 +71,9 @@ describe('PROJECTS', () => {
       expect(p.title).toBeTruthy();
       expect(p.description).toBeTruthy();
       expect(p.tech.length).toBeGreaterThan(0);
+      expect(p.market).toBeTruthy();
+      expect(p.reviewSignal).toBeTruthy();
+      expect(p.commercialPath).toBeTruthy();
       if (p.github) expect(p.github).toMatch(/github\.com/);
     }
   });
@@ -87,6 +90,7 @@ describe('PROJECTS', () => {
     expect(PROJECTS.at(0)?.title).toBe('aix-pilot');
     expect(PROJECTS.find(p => p.title === 'aix-pilot')?.description).toContain('Enterprise GenAI pilot console');
     expect(PROJECTS.find(p => p.title === 'aix-pilot')?.evidence).toContain('aix-pilot-console');
+    expect(PROJECTS.find(p => p.title === 'aix-pilot')?.commercialPath).toContain('subscription');
     expect(PROJECTS.find(p => p.title === 'stage-pilot')?.description).toContain('Tool-call reliability runtime');
     expect(PROJECTS.find(p => p.title === 'retina-scan-ai')?.description).toContain('Medical-image research workflow');
     expect(PROJECTS.find(p => p.title === 'SteadyTap')?.description).toContain('Accessibility coaching app');

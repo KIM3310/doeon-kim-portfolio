@@ -105,6 +105,9 @@ export const PROJECTS: Project[] = [
     github: 'https://github.com/KIM3310/aix-pilot',
     demo: 'https://aix-pilot.pages.dev',
     evidence: 'evidence/aix-pilot-console.png',
+    market: 'Mid-market support teams and internal knowledge operations',
+    reviewSignal: 'Enterprise GenAI product architecture, RAG evaluation, and security gates',
+    commercialPath: 'Pilot-to-subscription GenAI operations console',
   },
   {
     title: 'stage-pilot',
@@ -114,6 +117,9 @@ export const PROJECTS: Project[] = [
     github: 'https://github.com/KIM3310/stage-pilot',
     demo: 'https://stage-pilot.pages.dev',
     evidence: 'evidence/stagepilot-perf-evidence.svg',
+    market: 'AI platform teams shipping tool-calling agents',
+    reviewSignal: 'Runtime reliability, parser recovery, benchmark discipline',
+    commercialPath: 'Developer package, support plan, and reliability audit',
   },
   {
     title: 'agent-runtime-go',
@@ -121,6 +127,9 @@ export const PROJECTS: Project[] = [
       'Minimal Go orchestration runtime for deterministic tool execution, retries, adapter boundaries, and traceable control flow.',
     tech: ['Go', 'Agent runtime', 'Retries', 'Adapters'],
     github: 'https://github.com/KIM3310/agent-runtime-go',
+    market: 'Backend teams needing controlled agent execution',
+    reviewSignal: 'Go systems design, deterministic orchestration, provider boundaries',
+    commercialPath: 'Embedded runtime plus integration consulting',
   },
   {
     title: 'ai-agent-production-lab',
@@ -128,6 +137,9 @@ export const PROJECTS: Project[] = [
       'Credential-free agent lab with deterministic planner fixtures, trace events, cost accounting, evaluation assertions, and HTML reports.',
     tech: ['Python', 'Agent evals', 'Tracing', 'Reports'],
     github: 'https://github.com/KIM3310/ai-agent-production-lab',
+    market: 'Teams moving agents from demo to production',
+    reviewSignal: 'Tracing, cost accounting, eval assertions, report automation',
+    commercialPath: 'Agent readiness assessment and CI test pack',
   },
   {
     title: 'AegisOps',
@@ -137,6 +149,9 @@ export const PROJECTS: Project[] = [
     github: 'https://github.com/KIM3310/AegisOps',
     demo: 'https://aegisops-ai-incident-doctor.pages.dev',
     evidence: 'evidence/aegisops-system-design.svg',
+    market: 'Security and operations teams managing incident handoff',
+    reviewSignal: 'Operator UX, replay evals, multimodal incident workflow',
+    commercialPath: 'Incident review cockpit for SOC or IT operations',
   },
   {
     title: 'security-threat-response-workbench',
@@ -145,6 +160,9 @@ export const PROJECTS: Project[] = [
     tech: ['React', 'Security ops', 'Runbooks', 'Indicators'],
     github: 'https://github.com/KIM3310/security-threat-response-workbench',
     demo: 'https://security-threat-response-workbench.ehdjs1351.workers.dev',
+    market: 'Cloud security teams and managed service providers',
+    reviewSignal: 'Threat triage, runbook design, analyst handoff',
+    commercialPath: 'Packaged response desk and tabletop exercise kit',
   },
   {
     title: 'nw-service-assurance-workbench',
@@ -153,6 +171,9 @@ export const PROJECTS: Project[] = [
     tech: ['React', 'Network ops', 'Service paths', 'SLA signals'],
     github: 'https://github.com/KIM3310/nw-service-assurance-workbench',
     demo: 'https://nw-service-assurance-workbench.ehdjs1351.workers.dev',
+    market: 'Telecom, IDC, and enterprise network operations teams',
+    reviewSignal: 'Service assurance, outage triage, SLA visibility',
+    commercialPath: 'Network operations dashboard starter kit',
   },
   {
     title: 'enterprise-llm-adoption-kit',
@@ -162,6 +183,9 @@ export const PROJECTS: Project[] = [
     github: 'https://github.com/KIM3310/enterprise-llm-adoption-kit',
     demo: 'https://enterprise-llm-kit.pages.dev',
     evidence: 'evidence/enterprise-workshop-readout.svg',
+    market: 'Enterprises adopting LLMs under governance pressure',
+    reviewSignal: 'RBAC, audit logging, evals, redaction, rollout controls',
+    commercialPath: 'Paid adoption workshop and implementation kit',
   },
   {
     title: 'secure-xl2hwp-local',
@@ -170,12 +194,18 @@ export const PROJECTS: Project[] = [
     tech: ['Python', 'Document automation', 'JWT', 'Signed evidence'],
     github: 'https://github.com/KIM3310/secure-xl2hwp-local',
     demo: 'https://secure-xl2hwp-local.pages.dev',
+    market: 'Korean back-office teams with local document workflows',
+    reviewSignal: 'Local-first security, signed exports, auditability',
+    commercialPath: 'Per-seat offline conversion automation license',
   },
   {
     title: 'regulated-case-workbench',
     description:
       'Case workflow desk with redaction preview, approval gates, policy checks, signed export proof, and cross-case audit feeds.',
     tech: ['FastAPI', 'Approval gates', 'Redaction', 'Private case study'],
+    market: 'Compliance-heavy legal, finance, and review teams',
+    reviewSignal: 'Approval gates, redaction, audit workflow design',
+    commercialPath: 'Private case-management workflow template',
     access: 'private',
     demo: 'https://regulated-case-workbench.pages.dev',
   },
@@ -185,6 +215,9 @@ export const PROJECTS: Project[] = [
       'Contract-first medallion pipeline with quality gates, rejected-row queues, KPI artifacts, and optional export boundaries.',
     tech: ['Python', 'Spark', 'Data contracts', 'Quality gates'],
     github: 'https://github.com/KIM3310/lakehouse-contract-lab',
+    market: 'Data teams modernizing batch quality and contracts',
+    reviewSignal: 'Spark, data contracts, quality gates, warehouse export boundaries',
+    commercialPath: 'Data contract starter pack and migration advisory',
   },
   {
     title: 'Nexus-Hive',
@@ -194,6 +227,9 @@ export const PROJECTS: Project[] = [
     github: 'https://github.com/KIM3310/Nexus-Hive',
     demo: 'https://nexus-hive.pages.dev',
     evidence: 'evidence/nexus-semantic-governance.svg',
+    market: 'Analytics teams needing governed self-service SQL',
+    reviewSignal: 'NL-to-query boundaries, policy checks, audit trails',
+    commercialPath: 'Governed BI copilot for internal analytics',
   },
   {
     title: 'fab-ops-yield-control-tower',
@@ -202,6 +238,9 @@ export const PROJECTS: Project[] = [
     tech: ['Python', 'Manufacturing ops', 'Qualification', 'Handoff'],
     github: 'https://github.com/KIM3310/fab-ops-yield-control-tower',
     demo: 'https://fab-ops-yield-control-tower.pages.dev',
+    market: 'Manufacturing operations and semiconductor support teams',
+    reviewSignal: 'Yield monitoring, shift handoff, qualification analytics',
+    commercialPath: 'Factory operations control tower prototype',
   },
   {
     title: 'weld-defect-vision',
@@ -209,6 +248,9 @@ export const PROJECTS: Project[] = [
       'Industrial vision workflow with defect detection, severity reporting, model-serving notes, and release-readiness checks.',
     tech: ['Vision', 'Model serving', 'Inspection', 'Reports'],
     github: 'https://github.com/KIM3310/weld-defect-vision',
+    market: 'Industrial inspection and quality teams',
+    reviewSignal: 'Vision governance, model serving, validation notes',
+    commercialPath: 'Inspection AI proof-of-concept package',
   },
   {
     title: 'retina-scan-ai',
@@ -216,12 +258,18 @@ export const PROJECTS: Project[] = [
       'Medical-image research workflow with classification, explainability artifacts, risk notes, and validation templates.',
     tech: ['Medical imaging', 'Explainability', 'Validation', 'Risk notes'],
     github: 'https://github.com/KIM3310/retina-scan-ai',
+    market: 'Health AI research and validation teams',
+    reviewSignal: 'Risk notes, explainability, model cards, compliance caution',
+    commercialPath: 'Research validation template, not clinical sales',
   },
   {
     title: 'smallbiz-ops-copilot',
     description:
       'Operations inbox for small teams with queue triage, draft approval, KPI cards, and bounded runtime controls.',
     tech: ['Workers', 'Operations inbox', 'Approval flow', 'Private case study'],
+    market: 'Small support teams with repetitive inbox operations',
+    reviewSignal: 'Cloudflare Workers, queue UX, approval boundaries',
+    commercialPath: 'Low-cost SaaS ops inbox for small businesses',
     access: 'private',
     demo: 'https://smallbiz-ops-copilot.pages.dev',
   },
@@ -232,6 +280,9 @@ export const PROJECTS: Project[] = [
     tech: ['SwiftUI', 'Accessibility', 'FastAPI', 'Coach plans'],
     github: 'https://github.com/KIM3310/SteadyTap',
     demo: 'https://steadytap.pages.dev',
+    market: 'Accessibility and habit coaching users',
+    reviewSignal: 'SwiftUI, inclusive UX, optional backend sync',
+    commercialPath: 'Freemium coaching app with team plans',
   },
 ];
 

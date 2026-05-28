@@ -8,6 +8,9 @@ describe('TypeScript type contracts', () => {
       description: 'A test project',
       tech: ['TypeScript'],
       github: 'https://github.com/test',
+      market: 'Technical teams',
+      reviewSignal: 'System design and verification',
+      commercialPath: 'Packaged starter kit',
     };
     expect(project.title).toBe('Test');
     expect(project.demo).toBeUndefined();
@@ -20,6 +23,9 @@ describe('TypeScript type contracts', () => {
       tech: ['TypeScript'],
       github: 'https://github.com/test',
       demo: 'https://example.com',
+      market: 'Technical teams',
+      reviewSignal: 'System design and verification',
+      commercialPath: 'Packaged starter kit',
     };
     expect(project.demo).toBe('https://example.com');
   });

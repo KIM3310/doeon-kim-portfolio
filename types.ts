@@ -5,6 +5,9 @@ export interface Project {
   github?: string;
   demo?: string;
   evidence?: string;
+  market: string;
+  reviewSignal: string;
+  commercialPath: string;
   access?: 'public' | 'private';
 }
 

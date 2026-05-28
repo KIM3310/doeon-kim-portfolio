@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { PROJECTS } from '../constants';
-import { Github, ExternalLink, ChevronDown, ChevronUp, LockKeyhole } from 'lucide-react';
+import { BadgeDollarSign, BriefcaseBusiness, ChevronDown, ChevronUp, ExternalLink, Github, LockKeyhole, Target } from 'lucide-react';
 
 const TOP_TAGS = 8;
 
@@ -24,8 +24,8 @@ const Projects: React.FC = () => {
       <div className="section-inner">
         <div className="section-heading">
           <p className="eyebrow">Systems</p>
-          <h2>Built surfaces, not loose demos</h2>
-          <p>Each card links to a runnable or inspectable system with an explicit boundary: runtime reliability, governance, operations, data contracts, or applied ML.</p>
+          <h2>Built surfaces, with a market thesis</h2>
+          <p>Each card links to a runnable or inspectable system, then states the likely buyer, review signal, and revenue path behind the build.</p>
         </div>
 
         {/* Filter bar */}
@@ -73,6 +73,23 @@ const Projects: React.FC = () => {
               )}
               <h3>{project.title}</h3>
               <p className="project-copy">{project.description}</p>
+              <div className="project-business" aria-label={`${project.title} business and hiring fit`}>
+                <div className="project-business-item">
+                  <Target size={15} aria-hidden="true" />
+                  <span>Market</span>
+                  <strong>{project.market}</strong>
+                </div>
+                <div className="project-business-item">
+                  <BriefcaseBusiness size={15} aria-hidden="true" />
+                  <span>Review signal</span>
+                  <strong>{project.reviewSignal}</strong>
+                </div>
+                <div className="project-business-item">
+                  <BadgeDollarSign size={15} aria-hidden="true" />
+                  <span>Revenue path</span>
+                  <strong>{project.commercialPath}</strong>
+                </div>
+              </div>
               <div className="tag-list">
                 {project.tech.map((t, i) => (
                   <span

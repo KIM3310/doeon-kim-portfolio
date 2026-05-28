@@ -699,6 +699,44 @@ textarea:focus-visible,
   line-height: 1.64;
 }
 
+.project-business {
+  display: grid;
+  gap: 10px;
+  margin: 0 0 16px;
+  padding: 14px 0 0;
+  border-top: 1px solid var(--line);
+}
+
+.project-business-item {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 18px minmax(0, 1fr);
+  gap: 2px 8px;
+  align-items: start;
+}
+
+.project-business-item svg {
+  grid-row: 1 / span 2;
+  margin-top: 2px;
+  color: var(--green);
+}
+
+.project-business-item span {
+  color: var(--muted-2);
+  font-size: 0.69rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.project-business-item strong {
+  min-width: 0;
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+  line-height: 1.42;
+  font-weight: 650;
+  overflow-wrap: anywhere;
+}
+
 .tag-chip {
   cursor: pointer;
 }
