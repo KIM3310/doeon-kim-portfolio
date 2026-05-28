@@ -1,5 +1,5 @@
-import React, { useState, useMemo } from 'react';
-import { PROJECTS } from '../constants';
+import React, { useEffect, useState, useMemo } from 'react';
+import { PROJECTS, REPOSITORY_COVERAGE } from '../constants';
 import { BadgeDollarSign, BriefcaseBusiness, ChevronDown, ChevronUp, ExternalLink, Github, LockKeyhole, Target } from 'lucide-react';
 
 const TOP_TAGS = 8;
@@ -7,6 +7,14 @@ const TOP_TAGS = 8;
 const Projects: React.FC = () => {
   const [filter, setFilter] = useState<string | null>(null);
   const [showAllTags, setShowAllTags] = useState(false);
+
+  useEffect(() => {
+    if (window.location.hash !== '#coverage') return;
+
+    requestAnimationFrame(() => {
+      document.getElementById('coverage')?.scrollIntoView();
+    });
+  }, []);
 
   const allTags = useMemo(() => {
     const counts = new Map<string, number>();
@@ -119,6 +127,29 @@ const Projects: React.FC = () => {
         {filtered.length === 0 && (
           <p className="empty-state">No projects match this filter.</p>
         )}
+
+        <div id="coverage" className="coverage-ledger" aria-label="Active repository coverage ledger">
+          <div className="coverage-intro">
+            <span>Coverage ledger</span>
+            <h3>38 active repositories, one commercial story</h3>
+            <p>The visual cards stay selective; this ledger confirms every active work has a first-screen product surface, buyer, revenue route, proof signal, and safety boundary.</p>
+          </div>
+          <div className="coverage-list">
+            {REPOSITORY_COVERAGE.map(lane => (
+              <div className="coverage-row" key={lane.lane}>
+                <div className="coverage-lane">
+                  <p>{lane.lane}</p>
+                  <strong>{lane.role}</strong>
+                </div>
+                <div className="coverage-repos">
+                  {lane.repositories.map(repo => (
+                    <span key={repo}>{repo}</span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

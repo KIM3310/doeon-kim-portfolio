@@ -1,4 +1,4 @@
-import { Project, SkillCategory, Profile, WorkExperience, EducationItem, Certification } from './types';
+import { Project, SkillCategory, Profile, WorkExperience, EducationItem, Certification, RepositoryCoverageLane } from './types';
 
 export const PROFILE: Profile = {
   name: 'KIM3310 Systems Gallery',
@@ -12,9 +12,9 @@ export const PROFILE: Profile = {
 
 export const PORTFOLIO_STATS = [
   { label: 'Public repos', value: '44' },
-  { label: 'Displayed systems', value: '17' },
+  { label: 'Active works', value: '38' },
+  { label: 'Product surfaces', value: '38/38' },
   { label: 'Flagship lanes', value: '8' },
-  { label: 'Latest verification', value: 'profile + gallery' },
 ] as const;
 
 export const CURRENT_ROLE: WorkExperience = {
@@ -283,6 +283,44 @@ export const PROJECTS: Project[] = [
     market: 'Accessibility and habit coaching users',
     reviewSignal: 'SwiftUI, inclusive UX, optional backend sync',
     commercialPath: 'Freemium coaching app with team plans',
+  },
+];
+
+export const REPOSITORY_COVERAGE: RepositoryCoverageLane[] = [
+  {
+    lane: 'Front door and flagship products',
+    role: 'Turns the account into one coherent product and engineering story.',
+    repositories: ['KIM3310', 'doeon-kim-portfolio', 'aix-pilot', 'enterprise-llm-adoption-kit'],
+  },
+  {
+    lane: 'Agent and runtime reliability',
+    role: 'Shows deterministic execution, eval discipline, safety checks, and package/runtime judgment.',
+    repositories: ['stage-pilot', 'agent-runtime-go', 'agent-orchestration-benchmark', 'ai-agent-production-lab', 'ai-security-redteam-lab', 'tool-call-finetune-lab', 'multi-cli-pilot', 'qwen-pilot'],
+  },
+  {
+    lane: 'Security, incident, and network operations',
+    role: 'Shows operator-grade incident response, service visibility, handoff, and signed evidence.',
+    repositories: ['AegisOps', 'security-threat-response-workbench', 'nw-service-assurance-workbench', 'ops-reliability-workbench'],
+  },
+  {
+    lane: 'Enterprise deployment and document automation',
+    role: 'Converts private knowledge, documents, and support queues into controlled paid workflows.',
+    repositories: ['llm-onprem-deployment-kit', 'secure-xl2hwp-local', 'honeypot', 'Upstage-DocuAgent', 'smallbiz-ops-copilot'],
+  },
+  {
+    lane: 'Governed analytics and data quality',
+    role: 'Shows policy-checked analytics, forecast/action loops, data contracts, and auditable research.',
+    repositories: ['Nexus-Hive', 'lakehouse-contract-lab', 'districtpilot-ai', 'crypto-signal-ai'],
+  },
+  {
+    lane: 'Manufacturing, inspection, and regulated review',
+    role: 'Shows high-trust operations, model validation, approval gates, and safety-aware boundaries.',
+    repositories: ['fab-ops-yield-control-tower', 'memory-test-master-change-gate', 'weld-defect-vision', 'regulated-case-workbench', 'retina-scan-ai'],
+  },
+  {
+    lane: 'Consumer, mobile, game, and research tools',
+    role: 'Shows product taste, native/mobile craft, distribution experiments, and controlled research tools.',
+    repositories: ['the-savior', 'dream-interpretation-pages', 'SteadyTap', 'ecotide', 'kbbq-idle-unity', 'quantum-workbench', 'twincity-ui', 'beaver-study-orchestrator'],
   },
 ];
 

@@ -11,6 +11,12 @@ export interface Project {
   access?: 'public' | 'private';
 }
 
+export interface RepositoryCoverageLane {
+  lane: string;
+  role: string;
+  repositories: string[];
+}
+
 export interface SkillCategory {
   category: string;
   skills: string[];

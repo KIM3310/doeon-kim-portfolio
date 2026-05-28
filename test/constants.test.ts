@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { CERTIFICATIONS, CURRENT_ROLE, EDUCATION, MILITARY_ROLE, PROFILE, PROJECTS, SKILLS, PORTFOLIO_STATS } from '../constants';
+import { CERTIFICATIONS, CURRENT_ROLE, EDUCATION, MILITARY_ROLE, PROFILE, PROJECTS, SKILLS, PORTFOLIO_STATS, REPOSITORY_COVERAGE } from '../constants';
 
 describe('PROFILE', () => {
   it('contains required fields', () => {
@@ -22,9 +22,9 @@ describe('PORTFOLIO_STATS', () => {
   it('surfaces the latest audit metrics', () => {
     expect(PORTFOLIO_STATS).toEqual([
       { label: 'Public repos', value: '44' },
-      { label: 'Displayed systems', value: '17' },
+      { label: 'Active works', value: '38' },
+      { label: 'Product surfaces', value: '38/38' },
       { label: 'Flagship lanes', value: '8' },
-      { label: 'Latest verification', value: 'profile + gallery' },
     ]);
   });
 });
@@ -94,6 +94,25 @@ describe('PROJECTS', () => {
     expect(PROJECTS.find(p => p.title === 'stage-pilot')?.description).toContain('Tool-call reliability runtime');
     expect(PROJECTS.find(p => p.title === 'retina-scan-ai')?.description).toContain('Medical-image research workflow');
     expect(PROJECTS.find(p => p.title === 'SteadyTap')?.description).toContain('Accessibility coaching app');
+  });
+});
+
+describe('REPOSITORY_COVERAGE', () => {
+  it('maps every active repository into a visible commercial lane', () => {
+    const covered = REPOSITORY_COVERAGE.flatMap(lane => lane.repositories);
+
+    expect(covered).toHaveLength(38);
+    expect(new Set(covered).size).toBe(38);
+    expect(covered).toContain('aix-pilot');
+    expect(covered).toContain('memory-test-master-change-gate');
+    expect(covered).toContain('smallbiz-ops-copilot');
+    expect(covered).toContain('kbbq-idle-unity');
+
+    for (const lane of REPOSITORY_COVERAGE) {
+      expect(lane.lane).toBeTruthy();
+      expect(lane.role).toBeTruthy();
+      expect(lane.repositories.length).toBeGreaterThan(0);
+    }
   });
 });
 

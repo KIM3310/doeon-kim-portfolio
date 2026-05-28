@@ -766,6 +766,95 @@ textarea:focus-visible,
   text-align: center;
 }
 
+.coverage-ledger {
+  scroll-margin-top: 82px;
+  margin-top: 34px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+
+.coverage-intro {
+  max-width: 720px;
+  margin-bottom: 18px;
+}
+
+.coverage-intro span {
+  color: var(--blue);
+  font-size: 0.76rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.coverage-intro h3 {
+  margin-top: 8px;
+  color: var(--ink);
+  font-size: clamp(1.25rem, 2vw, 1.8rem);
+}
+
+.coverage-intro p {
+  margin-top: 10px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.coverage-list {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.coverage-row {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.78fr) minmax(0, 1.45fr);
+  gap: 20px;
+  padding: 15px 16px;
+  border-top: 1px solid var(--line);
+}
+
+.coverage-row:first-child {
+  border-top: 0;
+}
+
+.coverage-lane {
+  min-width: 0;
+}
+
+.coverage-lane p {
+  color: var(--ink);
+  font-size: 0.93rem;
+  font-weight: 800;
+}
+
+.coverage-lane strong {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 0.84rem;
+  line-height: 1.45;
+  font-weight: 520;
+}
+
+.coverage-repos {
+  min-width: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-content: start;
+}
+
+.coverage-repos span {
+  max-width: 100%;
+  padding: 6px 9px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink-soft);
+  background: var(--surface);
+  font-size: 0.78rem;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
 .capability-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -823,6 +912,7 @@ textarea:focus-visible,
   .current-role-panel,
   .credentials-grid,
   .outcome-row,
+  .coverage-row,
   .project-grid,
   .capability-grid {
     grid-template-columns: 1fr;
@@ -903,9 +993,19 @@ textarea:focus-visible,
   .experience-detail,
   .outcome-item,
   .credential-card,
+  .coverage-row,
   .project-card,
   .capability-card {
     padding: 14px;
+  }
+
+  .coverage-repos {
+    gap: 6px;
+  }
+
+  .coverage-repos span {
+    padding: 5px 8px;
+    font-size: 0.74rem;
   }
 
   .stat-grid,

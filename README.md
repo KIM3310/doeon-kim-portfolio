@@ -10,6 +10,18 @@ Neutral technical systems gallery for enterprise GenAI, data-center security ope
 
 The page is product-focused: military 24/7 communications and security monitoring, CCTV/VMS/NVR operation, access-control and intrusion-alert handling, current role context, education, certifications, project cards, capability lanes, verification posture, and repository links. It avoids private data, credential requirements, and external tenant assumptions. Private case studies are labeled without exposing repository links that public visitors cannot open.
 
+## Product and Review Surface
+
+A compact public gallery that makes each system read like a product, not a scattered project list.
+
+| Lens | Definition |
+|---|---|
+| Buyer or user | Technical reviewers, AI platform teams, operations leaders, and partners evaluating product judgment. |
+| Commercial route | Route visitors into paid pilot conversations for GenAI operations, reliability audits, security operations, and governed analytics. |
+| Review signal | Each card exposes market, review signal, revenue path, live evidence, and verification-friendly repository links. |
+| Safety boundary | The site avoids client secrets and only displays public-safe project summaries and generated visual assets. |
+| Fast proof | `npm run verify` checks type safety, content guarantees, tests, and production build before deployment. |
+
 ## What Changed
 
 - Rebuilt the UI as a light, minimalist product gallery with tighter spacing, quieter contrast, and responsive proof-first layouts.
