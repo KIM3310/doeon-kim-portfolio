@@ -5,13 +5,13 @@ This file is a commercial planning artifact, not a guarantee of revenue. Use it 
 ## Commercial Lane
 
 - **Lane:** Portfolio-to-lead router
-- **Primary buyer:** Recruiters, founders, enterprise AI leaders, and technical buyers.
+- **Primary buyer:** Founders, enterprise AI leaders, technical buyers, and talent partners.
 - **Revenue wedge:** A productized gallery that routes viewers into flagship demos and commercial proof lanes.
 
 ## Offer Ladder
 
 1. **Consulting lead-gen site** - pricing hypothesis: Not sold directly
-2. **Recruiting proof surface** - pricing hypothesis: $3k-$15k advisory entry project
+2. **Talent-facing proof surface** - pricing hypothesis: $3k-$15k advisory entry project
 3. **Partnership demo router** - pricing hypothesis: $8k-$30k pilot from flagship lane
 
 ## Acquisition Channels
@@ -41,7 +41,7 @@ This file is a commercial planning artifact, not a guarantee of revenue. Use it 
 ## Metrics That Matter
 
 - Demo clicks
-- Recruiter conversion
+- Talent partner conversion
 - Pilot inquiries
 
 ## Positioning Note
