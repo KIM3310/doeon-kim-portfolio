@@ -71,11 +71,17 @@ const Projects: React.FC = () => {
                 <span>{String(idx + 1).padStart(2, '0')}</span>
                 <div className="project-mark" />
               </div>
-              {project.evidence && (
-                <div className="project-evidence">
+              <div className={`project-evidence ${project.evidence ? '' : 'project-evidence-placeholder'}`}>
+                {project.evidence ? (
                   <img src={`${import.meta.env.BASE_URL}${project.evidence}`} alt={`${project.title} visual evidence`} loading="lazy" />
-                </div>
-              )}
+                ) : (
+                  <div aria-hidden="true">
+                    <span />
+                    <span />
+                    <span />
+                  </div>
+                )}
+              </div>
               {project.access === 'private' && (
                 <span className="private-badge"><LockKeyhole size={13} /> Private case study</span>
               )}

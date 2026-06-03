@@ -435,6 +435,7 @@ textarea:focus-visible,
 
 .section-shell {
   padding: 70px 0;
+  scroll-margin-top: 82px;
 }
 
 .section-heading {
@@ -626,6 +627,7 @@ textarea:focus-visible,
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
+  align-items: start;
 }
 
 .project-card {
@@ -670,6 +672,34 @@ textarea:focus-visible,
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--surface-soft);
+}
+
+.project-evidence-placeholder {
+  display: grid;
+  place-items: center;
+  background:
+    linear-gradient(135deg, rgba(0, 113, 227, 0.08), rgba(18, 128, 92, 0.08)),
+    var(--surface-soft);
+}
+
+.project-evidence-placeholder div {
+  width: 72%;
+  display: grid;
+  gap: 10px;
+}
+
+.project-evidence-placeholder span {
+  height: 12px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(0, 113, 227, 0.38), rgba(18, 128, 92, 0.22));
+}
+
+.project-evidence-placeholder span:nth-child(2) {
+  width: 82%;
+}
+
+.project-evidence-placeholder span:nth-child(3) {
+  width: 58%;
 }
 
 .project-evidence img {
@@ -749,6 +779,7 @@ textarea:focus-visible,
 }
 
 .project-actions {
+  justify-content: flex-start;
   margin-top: 18px;
   padding-top: 14px;
   border-top: 1px solid var(--line);
@@ -932,6 +963,12 @@ textarea:focus-visible,
     display: none;
   }
 
+  .site-nav,
+  .site-nav.is-scrolled {
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+  }
+
   .nav-toggle {
     display: inline-flex;
   }
@@ -1027,6 +1064,20 @@ textarea:focus-visible,
 
   .hero-actions .primary-action {
     grid-column: 1 / -1;
+  }
+
+  .project-evidence {
+    margin-bottom: 18px;
+  }
+
+  .project-copy {
+    flex: 0 0 auto;
+    margin-bottom: 20px;
+  }
+
+  .project-actions a {
+    min-width: 0;
+    flex: 1 1 130px;
   }
 }
 

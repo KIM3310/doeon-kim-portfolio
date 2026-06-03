@@ -2,7 +2,7 @@ import React from 'react';
 import { ArrowRight, Github, Linkedin, Mail, ShieldCheck, Sparkles } from 'lucide-react';
 import { PORTFOLIO_STATS, PROFILE } from '../constants';
 
-const featuredScreenshot = `${import.meta.env.BASE_URL}evidence/aix-pilot-console.png`;
+const featuredScreenshot = `${import.meta.env.BASE_URL}evidence/live/aix-pilot.png`;
 
 const Hero: React.FC = () => (
   <section id="about" className="hero-section">
