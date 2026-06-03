@@ -351,6 +351,12 @@ textarea:focus-visible,
   padding: 10px;
 }
 
+.hero-showcase picture {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
 .hero-showcase img {
   width: 100%;
   height: 100%;
@@ -660,6 +666,13 @@ textarea:focus-visible,
   border: 1px solid var(--line);
   border-radius: 7px;
   background: var(--surface-soft);
+}
+
+.live-proof-media picture,
+.project-evidence picture {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .live-proof-media img {

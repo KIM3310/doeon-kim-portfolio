@@ -3,6 +3,8 @@ import { LIVE_SERVICE_SCREENS, PROJECTS, REPOSITORY_COVERAGE } from '../constant
 import { BadgeDollarSign, BriefcaseBusiness, ChevronDown, ChevronUp, ExternalLink, Github, LockKeyhole, Target } from 'lucide-react';
 
 const TOP_TAGS = 8;
+const livePreviewFor = (asset: string) => asset.replace('evidence/live/', 'evidence/live/preview/').replace(/\.png$/, '.webp');
+const liveProofPreviewFor = (asset: string) => asset.replace('evidence/live/', 'evidence/live/preview-sm/').replace(/\.png$/, '.webp');
 
 const Projects: React.FC = () => {
   const [filter, setFilter] = useState<string | null>(null);
@@ -49,10 +51,12 @@ const Projects: React.FC = () => {
                 href={screen.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={`Open ${screen.title} live service`}
               >
                 <span className="live-proof-media">
-                  <img src={`${import.meta.env.BASE_URL}${screen.asset}`} alt={`${screen.title} live service screen`} loading="eager" />
+                  <picture>
+                    <source srcSet={`${import.meta.env.BASE_URL}${liveProofPreviewFor(screen.asset)}`} type="image/webp" />
+                    <img src={`${import.meta.env.BASE_URL}${screen.asset}`} alt="" loading="eager" />
+                  </picture>
                 </span>
                 <span className="live-proof-meta">
                   <strong>{screen.title}</strong>
@@ -98,7 +102,10 @@ const Projects: React.FC = () => {
               </div>
               <div className={`project-evidence ${project.evidence ? '' : 'project-evidence-placeholder'}`}>
                 {project.evidence ? (
-                  <img src={`${import.meta.env.BASE_URL}${project.evidence}`} alt={`${project.title} visual evidence`} loading="lazy" />
+                  <picture>
+                    <source srcSet={`${import.meta.env.BASE_URL}${livePreviewFor(project.evidence)}`} type="image/webp" />
+                    <img src={`${import.meta.env.BASE_URL}${project.evidence}`} alt={`${project.title} visual evidence`} loading="lazy" />
+                  </picture>
                 ) : (
                   <div aria-hidden="true">
                     <span />
