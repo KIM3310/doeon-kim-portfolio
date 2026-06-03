@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { CERTIFICATIONS, CURRENT_ROLE, EDUCATION, MILITARY_ROLE, PROFILE, PROJECTS, SKILLS, PORTFOLIO_STATS, REPOSITORY_COVERAGE } from '../constants';
+import { CERTIFICATIONS, CURRENT_ROLE, EDUCATION, LIVE_SERVICE_SCREENS, MILITARY_ROLE, PROFILE, PROJECTS, SKILLS, PORTFOLIO_STATS, REPOSITORY_COVERAGE } from '../constants';
 
 describe('PROFILE', () => {
   it('contains required fields', () => {
@@ -95,6 +95,17 @@ describe('PROJECTS', () => {
     expect(PROJECTS.find(p => p.title === 'AegisOps')?.evidence).toContain('live/aegisops');
     expect(PROJECTS.find(p => p.title === 'retina-scan-ai')?.description).toContain('Medical-image research workflow');
     expect(PROJECTS.find(p => p.title === 'SteadyTap')?.description).toContain('Accessibility coaching app');
+  });
+});
+
+describe('LIVE_SERVICE_SCREENS', () => {
+  it('tracks the refreshed live proof wall', () => {
+    expect(LIVE_SERVICE_SCREENS).toHaveLength(18);
+    expect(LIVE_SERVICE_SCREENS.at(0)?.title).toBe('aix-pilot');
+    expect(LIVE_SERVICE_SCREENS.map(screen => screen.asset)).toContain('evidence/live/upstage-docuagent.png');
+    expect(LIVE_SERVICE_SCREENS.map(screen => screen.asset)).toContain('evidence/live/twincity-ui.png');
+    expect(LIVE_SERVICE_SCREENS.every(screen => screen.url.startsWith('https://'))).toBe(true);
+    expect(new Set(LIVE_SERVICE_SCREENS.map(screen => screen.asset)).size).toBe(LIVE_SERVICE_SCREENS.length);
   });
 });
 

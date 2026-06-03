@@ -17,6 +17,13 @@ export interface RepositoryCoverageLane {
   repositories: string[];
 }
 
+export interface LiveServiceScreen {
+  title: string;
+  url: string;
+  asset: string;
+  scope: 'Active public' | 'Private case' | 'Archived proof';
+}
+
 export interface SkillCategory {
   category: string;
   skills: string[];

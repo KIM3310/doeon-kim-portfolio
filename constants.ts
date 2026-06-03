@@ -1,4 +1,4 @@
-import { Project, SkillCategory, Profile, WorkExperience, EducationItem, Certification, RepositoryCoverageLane } from './types';
+import { Project, SkillCategory, Profile, WorkExperience, EducationItem, Certification, RepositoryCoverageLane, LiveServiceScreen } from './types';
 
 export const PROFILE: Profile = {
   name: 'KIM3310 Systems Gallery',
@@ -95,6 +95,117 @@ export const CERTIFICATIONS: Certification[] = [
 ];
 
 export const LANGUAGES = ['Korean native', 'English business/working', 'Japanese business/working'] as const;
+
+export const LIVE_SERVICE_SCREENS: LiveServiceScreen[] = [
+  {
+    title: 'aix-pilot',
+    url: 'https://aix-pilot.pages.dev',
+    asset: 'evidence/live/aix-pilot.png',
+    scope: 'Active public',
+  },
+  {
+    title: 'stage-pilot',
+    url: 'https://stage-pilot.pages.dev',
+    asset: 'evidence/live/stage-pilot.png',
+    scope: 'Active public',
+  },
+  {
+    title: 'AegisOps',
+    url: 'https://aegisops-ai-incident-doctor.pages.dev',
+    asset: 'evidence/live/aegisops.png',
+    scope: 'Active public',
+  },
+  {
+    title: 'security-threat-response-workbench',
+    url: 'https://security-threat-response-workbench.ehdjs1351.workers.dev',
+    asset: 'evidence/live/security-threat-response-workbench.png',
+    scope: 'Active public',
+  },
+  {
+    title: 'nw-service-assurance-workbench',
+    url: 'https://nw-service-assurance-workbench.ehdjs1351.workers.dev',
+    asset: 'evidence/live/nw-service-assurance-workbench.png',
+    scope: 'Active public',
+  },
+  {
+    title: 'enterprise-llm-adoption-kit',
+    url: 'https://enterprise-llm-kit.pages.dev',
+    asset: 'evidence/live/enterprise-llm-adoption-kit.png',
+    scope: 'Active public',
+  },
+  {
+    title: 'secure-xl2hwp-local',
+    url: 'https://secure-xl2hwp-local.pages.dev',
+    asset: 'evidence/live/secure-xl2hwp-local.png',
+    scope: 'Active public',
+  },
+  {
+    title: 'regulated-case-workbench',
+    url: 'https://regulated-case-workbench.pages.dev',
+    asset: 'evidence/live/regulated-case-workbench.png',
+    scope: 'Private case',
+  },
+  {
+    title: 'Nexus-Hive',
+    url: 'https://nexus-hive.pages.dev',
+    asset: 'evidence/live/nexus-hive.png',
+    scope: 'Active public',
+  },
+  {
+    title: 'fab-ops-yield-control-tower',
+    url: 'https://fab-ops-yield-control-tower.pages.dev',
+    asset: 'evidence/live/fab-ops-yield-control-tower.png',
+    scope: 'Active public',
+  },
+  {
+    title: 'smallbiz-ops-copilot',
+    url: 'https://smallbiz-ops-copilot.pages.dev',
+    asset: 'evidence/live/smallbiz-ops-copilot.png',
+    scope: 'Private case',
+  },
+  {
+    title: 'SteadyTap',
+    url: 'https://steadytap.pages.dev',
+    asset: 'evidence/live/steadytap.png',
+    scope: 'Active public',
+  },
+  {
+    title: 'Upstage-DocuAgent',
+    url: 'https://upstage-docuagent.pages.dev',
+    asset: 'evidence/live/upstage-docuagent.png',
+    scope: 'Private case',
+  },
+  {
+    title: 'kbbq-idle-unity',
+    url: 'https://kbbq-idle-unity.pages.dev',
+    asset: 'evidence/live/kbbq-idle-unity.png',
+    scope: 'Active public',
+  },
+  {
+    title: 'twincity-ui',
+    url: 'https://twincity-ui.pages.dev',
+    asset: 'evidence/live/twincity-ui.png',
+    scope: 'Active public',
+  },
+  {
+    title: 'the-logistics-prophet',
+    url: 'https://the-logistics-prophet.pages.dev',
+    asset: 'evidence/live/the-logistics-prophet.png',
+    scope: 'Archived proof',
+  },
+  {
+    title: 'signal-risk-lab',
+    url: 'https://signal-risk-lab.pages.dev',
+    asset: 'evidence/live/signal-risk-lab.png',
+    scope: 'Archived proof',
+  },
+  {
+    title: 'Aegis-Air',
+    url: 'https://aegis-air.pages.dev',
+    asset: 'evidence/live/aegis-air.png',
+    scope: 'Archived proof',
+  },
+];
 
 export const PROJECTS: Project[] = [
   {

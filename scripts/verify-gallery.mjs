@@ -16,7 +16,7 @@ const requiredFiles = [
 ];
 
 const checks = [
-  { file: 'constants.ts', mustInclude: ['PROFILE', 'PROJECTS', 'REPOSITORY_COVERAGE', 'SKILLS', 'CURRENT_ROLE', 'MILITARY_ROLE', 'CERTIFICATIONS', 'BDES', 'Korea National Open University', 'InterX', 'evidence/live/aix-pilot.png', 'commercialPath', 'reviewSignal', 'Product surfaces'] },
+  { file: 'constants.ts', mustInclude: ['PROFILE', 'PROJECTS', 'LIVE_SERVICE_SCREENS', 'REPOSITORY_COVERAGE', 'SKILLS', 'CURRENT_ROLE', 'MILITARY_ROLE', 'CERTIFICATIONS', 'BDES', 'Korea National Open University', 'InterX', 'evidence/live/aix-pilot.png', 'evidence/live/twincity-ui.png', 'commercialPath', 'reviewSignal', 'Product surfaces'] },
   { file: 'App.tsx', mustInclude: ['Hero', 'Experience', 'Projects', 'Skills'] },
 ];
 

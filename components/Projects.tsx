@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useMemo } from 'react';
-import { PROJECTS, REPOSITORY_COVERAGE } from '../constants';
+import { LIVE_SERVICE_SCREENS, PROJECTS, REPOSITORY_COVERAGE } from '../constants';
 import { BadgeDollarSign, BriefcaseBusiness, ChevronDown, ChevronUp, ExternalLink, Github, LockKeyhole, Target } from 'lucide-react';
 
 const TOP_TAGS = 8;
@@ -36,7 +36,33 @@ const Projects: React.FC = () => {
           <p>Each card links to a runnable or inspectable system, then states the likely buyer, review signal, and revenue path behind the build.</p>
         </div>
 
-        {/* Filter bar */}
+        <div className="live-proof-wall" aria-label="Latest deployed service screenshots">
+          <div className="live-proof-head">
+            <span>Latest live proof</span>
+            <strong>{LIVE_SERVICE_SCREENS.length} deployed screens refreshed Jun 3, 2026 KST</strong>
+          </div>
+          <div className="live-proof-grid">
+            {LIVE_SERVICE_SCREENS.map((screen, idx) => (
+              <a
+                key={screen.title}
+                className={`live-proof-item ${idx === 0 ? 'is-featured' : ''}`}
+                href={screen.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Open ${screen.title} live service`}
+              >
+                <span className="live-proof-media">
+                  <img src={`${import.meta.env.BASE_URL}${screen.asset}`} alt={`${screen.title} live service screen`} loading={idx < 4 ? 'eager' : 'lazy'} />
+                </span>
+                <span className="live-proof-meta">
+                  <strong>{screen.title}</strong>
+                  <em>{screen.scope}</em>
+                </span>
+              </a>
+            ))}
+          </div>
+        </div>
+
         <div className="filter-bar">
           <button
             onClick={() => setFilter(null)}
@@ -63,7 +89,6 @@ const Projects: React.FC = () => {
           )}
         </div>
 
-        {/* Project grid */}
         <div className="project-grid">
           {filtered.map((project, idx) => (
             <article key={idx} className="project-card">
