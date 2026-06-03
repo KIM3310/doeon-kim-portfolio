@@ -42,11 +42,11 @@ Healthy public surfaces are stored under `public/evidence/live/`.
 | signal-risk-lab | `public/evidence/live/signal-risk-lab.png` |
 | Aegis-Air | `public/evidence/live/aegis-air.png` |
 
-## Public URL Follow-Up
+## Cleared Public Homepage URLs
 
-These configured URLs did not produce a healthy service surface during the capture pass and were not linked from portfolio cards:
+These configured URLs did not produce a healthy service surface during repeated capture and health-check passes, were not linked from portfolio cards, and were cleared from the corresponding GitHub repository homepage metadata:
 
-- `honeypot` - configured URL returned 404.
-- `memory-test-master-change-gate` - configured URL returned 503.
-- `ops-reliability-workbench` - configured URL returned 503.
-- `the-savior` - configured URL returned 404.
+- `honeypot` - previous URL returned 404.
+- `memory-test-master-change-gate` - previous URL returned 503.
+- `ops-reliability-workbench` - previous URL returned 503.
+- `the-savior` - previous URL returned 404.

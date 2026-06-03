@@ -19,10 +19,12 @@ Audited the 35 unarchived/editable repositories cloned into the local upgrade wo
 | Portfolio build | pass |
 | Portfolio tests | 22 passing tests |
 | Live screenshot pass | 18 healthy public screenshots kept |
+| Shared repository validators | 35 of 35 editable repositories passing |
+| Broken homepage metadata | cleaned from 4 repositories |
 
 ## Repository Surface Validators
 
-The shared `validate_repository_surface.py` and `validate_architecture_blueprint.py` checks passed wherever those scripts exist.
+The shared `validate_repository_surface.py` and `validate_architecture_blueprint.py` checks passed across all 35 editable repositories.
 
 | Repository | Repository surface | Architecture blueprint |
 | --- | --- | --- |
@@ -35,7 +37,7 @@ The shared `validate_repository_surface.py` and `validate_architecture_blueprint
 | agent-runtime-go | pass | pass |
 | ai-agent-production-lab | pass | pass |
 | ai-security-redteam-lab | pass | pass |
-| aix-pilot | skip - validator not present | skip - validator not present |
+| aix-pilot | pass | pass |
 | beaver-study-orchestrator | pass | pass |
 | districtpilot-ai | pass | pass |
 | doeon-kim-portfolio | pass | pass |
@@ -64,6 +66,8 @@ The shared `validate_repository_surface.py` and `validate_architecture_blueprint
 
 ## Follow-Up Queue
 
-- Add repository-surface and architecture validators to `aix-pilot` if it remains a flagship repo.
-- Repair or replace unhealthy public URLs for `honeypot`, `memory-test-master-change-gate`, `ops-reliability-workbench`, and `the-savior`.
 - Keep generated dependency mega-bumps closed until dependency-review failures are resolved and migrations are split.
+
+## Homepage Cleanup
+
+The unhealthy GitHub homepage URLs for `honeypot`, `memory-test-master-change-gate`, `ops-reliability-workbench`, and `the-savior` were cleared after repeat health checks returned 404 or 503 responses. They should only be re-added after a healthy deployment URL is available.
