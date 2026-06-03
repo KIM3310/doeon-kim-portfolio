@@ -21,6 +21,7 @@ Audited the 35 unarchived/editable repositories cloned into the local upgrade wo
 | Live screenshot pass | 18 healthy public screenshots kept |
 | Shared repository validators | 35 of 35 editable repositories passing |
 | Repo-by-repo project checks | 35 of 35 editable repositories passing |
+| Product operating models | 35 of 35 editable repositories linked from README |
 | Broken homepage metadata | cleaned from 4 repositories |
 
 ## Repository Surface Validators
@@ -113,6 +114,10 @@ The final pass ran each repository's strongest available local check after norma
 - `ai-agent-production-lab`: added the missing `pytest` dev extra so the test suite can bootstrap cleanly.
 - `ai-security-redteam-lab`: added the missing `pytest` dev extra so the test suite can bootstrap cleanly.
 - `security-threat-response-workbench`: added Vite type declarations so CSS side-effect imports typecheck.
+
+## Enterprise Revenue Readiness Pass
+
+Every editable repository now has `docs/product-operating-model.md` linked from its README. Each model names the target buyer, paid wedge, review signal, delivery shape, trust boundary, local verification command, debug checklist, and smallest commercial next step.
 
 ## Follow-Up Queue
 
