@@ -131,8 +131,8 @@ const Projects: React.FC = () => {
         <div id="coverage" className="coverage-ledger" aria-label="Active repository coverage ledger">
           <div className="coverage-intro">
             <span>Coverage ledger</span>
-            <h3>38 active repositories, one commercial story</h3>
-            <p>The visual cards stay selective; this ledger confirms every active work has a first-screen product surface, buyer, revenue route, proof signal, and safety boundary.</p>
+            <h3>35 editable repositories, one commercial story</h3>
+            <p>The visual cards stay selective; this ledger tracks the current editable repo set, live proof surfaces, buyer route, review signal, and safety boundary.</p>
           </div>
           <div className="coverage-list">
             {REPOSITORY_COVERAGE.map(lane => (

@@ -12,9 +12,9 @@ export const PROFILE: Profile = {
 
 export const PORTFOLIO_STATS = [
   { label: 'Public repos', value: '44' },
-  { label: 'Active works', value: '38' },
-  { label: 'Product surfaces', value: '38/38' },
-  { label: 'Flagship lanes', value: '8' },
+  { label: 'Editable repos', value: '35' },
+  { label: 'Product surfaces', value: '18 live' },
+  { label: 'Open PRs', value: '0' },
 ] as const;
 
 export const CURRENT_ROLE: WorkExperience = {
@@ -104,7 +104,7 @@ export const PROJECTS: Project[] = [
     tech: ['Enterprise GenAI', 'RAG', 'Agent workflow', 'DLP', 'KPI'],
     github: 'https://github.com/KIM3310/aix-pilot',
     demo: 'https://aix-pilot.pages.dev',
-    evidence: 'evidence/aix-pilot-console.png',
+    evidence: 'evidence/live/aix-pilot.png',
     market: 'Mid-market support teams and internal knowledge operations',
     reviewSignal: 'Enterprise GenAI product architecture, RAG evaluation, and security gates',
     commercialPath: 'Pilot-to-subscription GenAI operations console',
@@ -116,7 +116,7 @@ export const PROJECTS: Project[] = [
     tech: ['Runtime reliability', 'TypeScript', 'Benchmarks', 'Parser recovery'],
     github: 'https://github.com/KIM3310/stage-pilot',
     demo: 'https://stage-pilot.pages.dev',
-    evidence: 'evidence/stagepilot-perf-evidence.svg',
+    evidence: 'evidence/live/stage-pilot.png',
     market: 'AI platform teams shipping tool-calling agents',
     reviewSignal: 'Runtime reliability, parser recovery, benchmark discipline',
     commercialPath: 'Developer package, support plan, and reliability audit',
@@ -148,7 +148,7 @@ export const PROJECTS: Project[] = [
     tech: ['React', 'Incident ops', 'Replay evals', 'Handoff'],
     github: 'https://github.com/KIM3310/AegisOps',
     demo: 'https://aegisops-ai-incident-doctor.pages.dev',
-    evidence: 'evidence/aegisops-system-design.svg',
+    evidence: 'evidence/live/aegisops.png',
     market: 'Security and operations teams managing incident handoff',
     reviewSignal: 'Operator UX, replay evals, multimodal incident workflow',
     commercialPath: 'Incident review cockpit for SOC or IT operations',
@@ -160,6 +160,7 @@ export const PROJECTS: Project[] = [
     tech: ['React', 'Security ops', 'Runbooks', 'Indicators'],
     github: 'https://github.com/KIM3310/security-threat-response-workbench',
     demo: 'https://security-threat-response-workbench.ehdjs1351.workers.dev',
+    evidence: 'evidence/live/security-threat-response-workbench.png',
     market: 'Cloud security teams and managed service providers',
     reviewSignal: 'Threat triage, runbook design, analyst handoff',
     commercialPath: 'Packaged response desk and tabletop exercise kit',
@@ -171,6 +172,7 @@ export const PROJECTS: Project[] = [
     tech: ['React', 'Network ops', 'Service paths', 'SLA signals'],
     github: 'https://github.com/KIM3310/nw-service-assurance-workbench',
     demo: 'https://nw-service-assurance-workbench.ehdjs1351.workers.dev',
+    evidence: 'evidence/live/nw-service-assurance-workbench.png',
     market: 'Telecom, IDC, and enterprise network operations teams',
     reviewSignal: 'Service assurance, outage triage, SLA visibility',
     commercialPath: 'Network operations dashboard starter kit',
@@ -182,7 +184,7 @@ export const PROJECTS: Project[] = [
     tech: ['Governance', 'FastAPI', 'RBAC', 'Audit logs'],
     github: 'https://github.com/KIM3310/enterprise-llm-adoption-kit',
     demo: 'https://enterprise-llm-kit.pages.dev',
-    evidence: 'evidence/enterprise-workshop-readout.svg',
+    evidence: 'evidence/live/enterprise-llm-adoption-kit.png',
     market: 'Enterprises adopting LLMs under governance pressure',
     reviewSignal: 'RBAC, audit logging, evals, redaction, rollout controls',
     commercialPath: 'Paid adoption workshop and implementation kit',
@@ -194,6 +196,7 @@ export const PROJECTS: Project[] = [
     tech: ['Python', 'Document automation', 'JWT', 'Signed evidence'],
     github: 'https://github.com/KIM3310/secure-xl2hwp-local',
     demo: 'https://secure-xl2hwp-local.pages.dev',
+    evidence: 'evidence/live/secure-xl2hwp-local.png',
     market: 'Korean back-office teams with local document workflows',
     reviewSignal: 'Local-first security, signed exports, auditability',
     commercialPath: 'Per-seat offline conversion automation license',
@@ -208,6 +211,7 @@ export const PROJECTS: Project[] = [
     commercialPath: 'Private case-management workflow template',
     access: 'private',
     demo: 'https://regulated-case-workbench.pages.dev',
+    evidence: 'evidence/live/regulated-case-workbench.png',
   },
   {
     title: 'lakehouse-contract-lab',
@@ -226,7 +230,7 @@ export const PROJECTS: Project[] = [
     tech: ['FastAPI', 'Governed analytics', 'Policy checks', 'Charts'],
     github: 'https://github.com/KIM3310/Nexus-Hive',
     demo: 'https://nexus-hive.pages.dev',
-    evidence: 'evidence/nexus-semantic-governance.svg',
+    evidence: 'evidence/live/nexus-hive.png',
     market: 'Analytics teams needing governed self-service SQL',
     reviewSignal: 'NL-to-query boundaries, policy checks, audit trails',
     commercialPath: 'Governed BI copilot for internal analytics',
@@ -238,6 +242,7 @@ export const PROJECTS: Project[] = [
     tech: ['Python', 'Manufacturing ops', 'Qualification', 'Handoff'],
     github: 'https://github.com/KIM3310/fab-ops-yield-control-tower',
     demo: 'https://fab-ops-yield-control-tower.pages.dev',
+    evidence: 'evidence/live/fab-ops-yield-control-tower.png',
     market: 'Manufacturing operations and semiconductor support teams',
     reviewSignal: 'Yield monitoring, shift handoff, qualification analytics',
     commercialPath: 'Factory operations control tower prototype',
@@ -272,6 +277,7 @@ export const PROJECTS: Project[] = [
     commercialPath: 'Low-cost SaaS ops inbox for small businesses',
     access: 'private',
     demo: 'https://smallbiz-ops-copilot.pages.dev',
+    evidence: 'evidence/live/smallbiz-ops-copilot.png',
   },
   {
     title: 'SteadyTap',
@@ -280,6 +286,7 @@ export const PROJECTS: Project[] = [
     tech: ['SwiftUI', 'Accessibility', 'FastAPI', 'Coach plans'],
     github: 'https://github.com/KIM3310/SteadyTap',
     demo: 'https://steadytap.pages.dev',
+    evidence: 'evidence/live/steadytap.png',
     market: 'Accessibility and habit coaching users',
     reviewSignal: 'SwiftUI, inclusive UX, optional backend sync',
     commercialPath: 'Freemium coaching app with team plans',
@@ -295,7 +302,7 @@ export const REPOSITORY_COVERAGE: RepositoryCoverageLane[] = [
   {
     lane: 'Agent and runtime reliability',
     role: 'Shows deterministic execution, eval discipline, safety checks, and package/runtime judgment.',
-    repositories: ['stage-pilot', 'agent-runtime-go', 'agent-orchestration-benchmark', 'ai-agent-production-lab', 'ai-security-redteam-lab', 'tool-call-finetune-lab', 'multi-cli-pilot', 'qwen-pilot'],
+    repositories: ['stage-pilot', 'agent-runtime-go', 'agent-orchestration-benchmark', 'ai-agent-production-lab', 'ai-security-redteam-lab', 'tool-call-finetune-lab', 'multi-cli-pilot'],
   },
   {
     lane: 'Security, incident, and network operations',
@@ -310,7 +317,7 @@ export const REPOSITORY_COVERAGE: RepositoryCoverageLane[] = [
   {
     lane: 'Governed analytics and data quality',
     role: 'Shows policy-checked analytics, forecast/action loops, data contracts, and auditable research.',
-    repositories: ['Nexus-Hive', 'lakehouse-contract-lab', 'districtpilot-ai', 'crypto-signal-ai'],
+    repositories: ['Nexus-Hive', 'lakehouse-contract-lab', 'districtpilot-ai'],
   },
   {
     lane: 'Manufacturing, inspection, and regulated review',
@@ -320,7 +327,7 @@ export const REPOSITORY_COVERAGE: RepositoryCoverageLane[] = [
   {
     lane: 'Consumer, mobile, game, and research tools',
     role: 'Shows product taste, native/mobile craft, distribution experiments, and controlled research tools.',
-    repositories: ['the-savior', 'dream-interpretation-pages', 'SteadyTap', 'ecotide', 'kbbq-idle-unity', 'quantum-workbench', 'twincity-ui', 'beaver-study-orchestrator'],
+    repositories: ['the-savior', 'dream-interpretation-pages', 'SteadyTap', 'kbbq-idle-unity', 'quantum-workbench', 'twincity-ui', 'beaver-study-orchestrator'],
   },
 ];
 

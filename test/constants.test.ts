@@ -22,9 +22,9 @@ describe('PORTFOLIO_STATS', () => {
   it('surfaces the latest audit metrics', () => {
     expect(PORTFOLIO_STATS).toEqual([
       { label: 'Public repos', value: '44' },
-      { label: 'Active works', value: '38' },
-      { label: 'Product surfaces', value: '38/38' },
-      { label: 'Flagship lanes', value: '8' },
+      { label: 'Editable repos', value: '35' },
+      { label: 'Product surfaces', value: '18 live' },
+      { label: 'Open PRs', value: '0' },
     ]);
   });
 });
@@ -89,9 +89,10 @@ describe('PROJECTS', () => {
     expect(new Set(PROJECTS.map(p => p.title)).size).toBe(PROJECTS.length);
     expect(PROJECTS.at(0)?.title).toBe('aix-pilot');
     expect(PROJECTS.find(p => p.title === 'aix-pilot')?.description).toContain('Enterprise GenAI pilot console');
-    expect(PROJECTS.find(p => p.title === 'aix-pilot')?.evidence).toContain('aix-pilot-console');
+    expect(PROJECTS.find(p => p.title === 'aix-pilot')?.evidence).toContain('live/aix-pilot');
     expect(PROJECTS.find(p => p.title === 'aix-pilot')?.commercialPath).toContain('subscription');
     expect(PROJECTS.find(p => p.title === 'stage-pilot')?.description).toContain('Tool-call reliability runtime');
+    expect(PROJECTS.find(p => p.title === 'AegisOps')?.evidence).toContain('live/aegisops');
     expect(PROJECTS.find(p => p.title === 'retina-scan-ai')?.description).toContain('Medical-image research workflow');
     expect(PROJECTS.find(p => p.title === 'SteadyTap')?.description).toContain('Accessibility coaching app');
   });
@@ -101,12 +102,14 @@ describe('REPOSITORY_COVERAGE', () => {
   it('maps every active repository into a visible commercial lane', () => {
     const covered = REPOSITORY_COVERAGE.flatMap(lane => lane.repositories);
 
-    expect(covered).toHaveLength(38);
-    expect(new Set(covered).size).toBe(38);
+    expect(covered).toHaveLength(35);
+    expect(new Set(covered).size).toBe(35);
     expect(covered).toContain('aix-pilot');
     expect(covered).toContain('memory-test-master-change-gate');
     expect(covered).toContain('smallbiz-ops-copilot');
     expect(covered).toContain('kbbq-idle-unity');
+    expect(covered).not.toContain('qwen-pilot');
+    expect(covered).not.toContain('crypto-signal-ai');
 
     for (const lane of REPOSITORY_COVERAGE) {
       expect(lane.lane).toBeTruthy();

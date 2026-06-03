@@ -27,6 +27,8 @@ A compact public gallery that makes each system read like a product, not a scatt
 - **First minute:** Open the live gallery, scan flagship lanes, then jump to the repository coverage ledger.
 - **Local demo:** Run `npm install && npm run dev`, then open `http://localhost:5173`.
 - **Verification:** Run `npm run verify`; it covers type safety, tests, content guarantees, and production build.
+- **Live proof:** Current service screenshots are tracked in [docs/live-service-screenshots.md](docs/live-service-screenshots.md).
+- **Repo audit:** The 35 editable-repo validation pass is recorded in [docs/repository-upgrade-audit.md](docs/repository-upgrade-audit.md).
 - **Commercial read:** Use the gallery as the portfolio router for GenAI operations, incident ops, runtime reliability, and governed analytics.
 
 ## Commercialization Playbook
@@ -53,7 +55,7 @@ A compact public gallery that makes each system read like a product, not a scatt
 - Removed legacy packets, generated documents, and archived runtime bridge files.
 - Consolidated the page around active repositories and reusable engineering patterns.
 - Promoted AIX Pilot as the current flagship enterprise GenAI product surface.
-- Added real AIX Pilot console imagery and static evidence thumbnails to make the gallery immediately reviewable.
+- Added live service screenshots for the current public proof surfaces and refreshed repository coverage to the audited 35 editable repos.
 - Cleaned public/private repository link handling and clarified consolidated-lane metrics.
 - Kept static evidence assets for visual context without requiring live credentials.
 
