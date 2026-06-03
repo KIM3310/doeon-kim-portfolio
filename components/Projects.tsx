@@ -52,7 +52,7 @@ const Projects: React.FC = () => {
                 aria-label={`Open ${screen.title} live service`}
               >
                 <span className="live-proof-media">
-                  <img src={`${import.meta.env.BASE_URL}${screen.asset}`} alt={`${screen.title} live service screen`} loading={idx < 4 ? 'eager' : 'lazy'} />
+                  <img src={`${import.meta.env.BASE_URL}${screen.asset}`} alt={`${screen.title} live service screen`} loading="eager" />
                 </span>
                 <span className="live-proof-meta">
                   <strong>{screen.title}</strong>
