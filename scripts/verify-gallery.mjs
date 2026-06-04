@@ -1,7 +1,12 @@
-import { readFileSync, existsSync, readdirSync } from 'node:fs';
+import { readFileSync, existsSync, readdirSync, statSync } from 'node:fs';
 import { resolve } from 'node:path';
 
 const root = process.cwd();
+const EXPECTED_LIVE_SCREEN_COUNT = 18;
+const MAX_PREVIEW_BYTES = 550_000;
+const MAX_SMALL_PREVIEW_BYTES = 250_000;
+const MAX_SINGLE_PREVIEW_BYTES = 90_000;
+const MAX_SINGLE_SMALL_PREVIEW_BYTES = 40_000;
 
 const requiredFiles = [
   'index.html',
@@ -38,18 +43,44 @@ for (const check of checks) {
 const liveDir = resolve(root, 'public/evidence/live');
 const previewDir = resolve(liveDir, 'preview');
 const previewSmallDir = resolve(liveDir, 'preview-sm');
+const livePngFiles = existsSync(liveDir) ? readdirSync(liveDir).filter(name => name.endsWith('.png')) : [];
+
+if (livePngFiles.length !== EXPECTED_LIVE_SCREEN_COUNT) {
+  failures.push(`Expected ${EXPECTED_LIVE_SCREEN_COUNT} live PNG evidence files, found ${livePngFiles.length}`);
+}
+
 if (!existsSync(previewDir)) {
   failures.push('Missing: public/evidence/live/preview');
 }
 if (!existsSync(previewSmallDir)) {
   failures.push('Missing: public/evidence/live/preview-sm');
 } else {
-  for (const file of readdirSync(liveDir).filter(name => name.endsWith('.png'))) {
+  let previewBytes = 0;
+  let previewSmallBytes = 0;
+  for (const file of livePngFiles) {
     const preview = resolve(previewDir, file.replace(/\.png$/, '.webp'));
     const previewSmall = resolve(previewSmallDir, file.replace(/\.png$/, '.webp'));
-    if (!existsSync(preview)) failures.push(`Missing live preview: ${preview}`);
-    if (!existsSync(previewSmall)) failures.push(`Missing small live preview: ${previewSmall}`);
+    if (!existsSync(preview)) {
+      failures.push(`Missing live preview: ${preview}`);
+    } else {
+      const size = statSync(preview).size;
+      previewBytes += size;
+      if (size > MAX_SINGLE_PREVIEW_BYTES) failures.push(`Live preview too large: ${preview} (${size} bytes)`);
+    }
+    if (!existsSync(previewSmall)) {
+      failures.push(`Missing small live preview: ${previewSmall}`);
+    } else {
+      const size = statSync(previewSmall).size;
+      previewSmallBytes += size;
+      if (size > MAX_SINGLE_SMALL_PREVIEW_BYTES) failures.push(`Small live preview too large: ${previewSmall} (${size} bytes)`);
+    }
   }
+  const previewFiles = existsSync(previewDir) ? readdirSync(previewDir).filter(name => name.endsWith('.webp')) : [];
+  const previewSmallFiles = readdirSync(previewSmallDir).filter(name => name.endsWith('.webp'));
+  if (previewFiles.length !== EXPECTED_LIVE_SCREEN_COUNT) failures.push(`Expected ${EXPECTED_LIVE_SCREEN_COUNT} preview WebP files, found ${previewFiles.length}`);
+  if (previewSmallFiles.length !== EXPECTED_LIVE_SCREEN_COUNT) failures.push(`Expected ${EXPECTED_LIVE_SCREEN_COUNT} small preview WebP files, found ${previewSmallFiles.length}`);
+  if (previewBytes > MAX_PREVIEW_BYTES) failures.push(`Live preview budget exceeded: ${previewBytes} bytes`);
+  if (previewSmallBytes > MAX_SMALL_PREVIEW_BYTES) failures.push(`Small live preview budget exceeded: ${previewSmallBytes} bytes`);
 }
 
 if (failures.length) {

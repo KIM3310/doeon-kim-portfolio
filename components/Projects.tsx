@@ -3,6 +3,8 @@ import { LIVE_SERVICE_SCREENS, PROJECTS, REPOSITORY_COVERAGE } from '../constant
 import { BadgeDollarSign, BriefcaseBusiness, ChevronDown, ChevronUp, ExternalLink, Github, LockKeyhole, Target } from 'lucide-react';
 
 const TOP_TAGS = 8;
+const LIVE_IMAGE_WIDTH = 1440;
+const LIVE_IMAGE_HEIGHT = 1000;
 const livePreviewFor = (asset: string) => asset.replace('evidence/live/', 'evidence/live/preview/').replace(/\.png$/, '.webp');
 const liveProofPreviewFor = (asset: string) => asset.replace('evidence/live/', 'evidence/live/preview-sm/').replace(/\.png$/, '.webp');
 
@@ -54,8 +56,19 @@ const Projects: React.FC = () => {
               >
                 <span className="live-proof-media">
                   <picture>
-                    <source srcSet={`${import.meta.env.BASE_URL}${liveProofPreviewFor(screen.asset)}`} type="image/webp" />
-                    <img src={`${import.meta.env.BASE_URL}${screen.asset}`} alt="" loading="eager" />
+                    <source
+                      srcSet={`${import.meta.env.BASE_URL}${liveProofPreviewFor(screen.asset)} 420w, ${import.meta.env.BASE_URL}${livePreviewFor(screen.asset)} 720w`}
+                      sizes="(max-width: 640px) 78vw, (max-width: 1080px) 25vw, 14vw"
+                      type="image/webp"
+                    />
+                    <img
+                      src={`${import.meta.env.BASE_URL}${screen.asset}`}
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                      width={LIVE_IMAGE_WIDTH}
+                      height={LIVE_IMAGE_HEIGHT}
+                    />
                   </picture>
                 </span>
                 <span className="live-proof-meta">
@@ -103,8 +116,19 @@ const Projects: React.FC = () => {
               <div className={`project-evidence ${project.evidence ? '' : 'project-evidence-placeholder'}`}>
                 {project.evidence ? (
                   <picture>
-                    <source srcSet={`${import.meta.env.BASE_URL}${livePreviewFor(project.evidence)}`} type="image/webp" />
-                    <img src={`${import.meta.env.BASE_URL}${project.evidence}`} alt={`${project.title} visual evidence`} loading="lazy" />
+                    <source
+                      srcSet={`${import.meta.env.BASE_URL}${liveProofPreviewFor(project.evidence)} 420w, ${import.meta.env.BASE_URL}${livePreviewFor(project.evidence)} 720w`}
+                      sizes="(max-width: 900px) calc(100vw - 50px), (max-width: 1080px) 45vw, 31vw"
+                      type="image/webp"
+                    />
+                    <img
+                      src={`${import.meta.env.BASE_URL}${project.evidence}`}
+                      alt={`${project.title} visual evidence`}
+                      loading="lazy"
+                      decoding="async"
+                      width={LIVE_IMAGE_WIDTH}
+                      height={LIVE_IMAGE_HEIGHT}
+                    />
                   </picture>
                 ) : (
                   <div aria-hidden="true">

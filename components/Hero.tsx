@@ -4,6 +4,7 @@ import { PORTFOLIO_STATS, PROFILE } from '../constants';
 
 const featuredScreenshot = `${import.meta.env.BASE_URL}evidence/live/aix-pilot.png`;
 const featuredScreenshotPreview = `${import.meta.env.BASE_URL}evidence/live/preview/aix-pilot.webp`;
+const featuredScreenshotPreviewSmall = `${import.meta.env.BASE_URL}evidence/live/preview-sm/aix-pilot.webp`;
 
 const Hero: React.FC = () => (
   <section id="about" className="hero-section">
@@ -28,16 +29,38 @@ const Hero: React.FC = () => (
       </div>
       <div className="hero-showcase hero-mobile-showcase">
         <picture>
-          <source srcSet={featuredScreenshotPreview} type="image/webp" />
-          <img src={featuredScreenshot} alt="AIX Pilot deployed product console screenshot" fetchPriority="high" />
+          <source
+            srcSet={`${featuredScreenshotPreviewSmall} 420w, ${featuredScreenshotPreview} 720w`}
+            sizes="(max-width: 640px) calc(100vw - 44px), 42vw"
+            type="image/webp"
+          />
+          <img
+            src={featuredScreenshot}
+            alt="AIX Pilot deployed product console screenshot"
+            fetchPriority="high"
+            decoding="async"
+            width={1440}
+            height={1000}
+          />
         </picture>
       </div>
     </div>
     <aside className="hero-panel" aria-label="Featured system and repository health summary">
       <div className="hero-showcase">
         <picture>
-          <source srcSet={featuredScreenshotPreview} type="image/webp" />
-          <img src={featuredScreenshot} alt="AIX Pilot deployed product console screenshot" fetchPriority="high" />
+          <source
+            srcSet={`${featuredScreenshotPreviewSmall} 420w, ${featuredScreenshotPreview} 720w`}
+            sizes="(max-width: 640px) calc(100vw - 44px), 42vw"
+            type="image/webp"
+          />
+          <img
+            src={featuredScreenshot}
+            alt="AIX Pilot deployed product console screenshot"
+            fetchPriority="high"
+            decoding="async"
+            width={1440}
+            height={1000}
+          />
         </picture>
       </div>
       <div className="hero-panel-header">
