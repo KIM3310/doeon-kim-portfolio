@@ -40,4 +40,13 @@ describe('App component', () => {
     expect(screen.getByText('Korea National Open University')).toBeInTheDocument();
     expect(screen.getByText(/Snowflake - SnowPro Associate/)).toBeInTheDocument();
   });
+
+  it('renders progressive disclosure controls for dense review details', () => {
+    render(<App />);
+    expect(screen.getByText('Operational scope')).toBeInTheDocument();
+    expect(screen.getByText('Infrastructure scope')).toBeInTheDocument();
+    expect(screen.getByText('Military outcomes')).toBeInTheDocument();
+    expect(screen.getAllByText('Business fit').length).toBeGreaterThan(0);
+    expect(screen.getByText('Education and Training')).toBeInTheDocument();
+  });
 });

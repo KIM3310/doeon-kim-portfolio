@@ -13,6 +13,11 @@ const Hero: React.FC = () => (
       <h1>{PROFILE.name}</h1>
       <p className="hero-subtitle">{PROFILE.title}</p>
       <p className="hero-summary">{PROFILE.intro}</p>
+      <div className="hero-proof-strip" aria-label="Portfolio verification summary">
+        <span>0 open PRs</span>
+        <span>35 editable repos</span>
+        <span>18 live screens</span>
+      </div>
       <div className="hero-actions">
         <a href="#projects" className="primary-action">
           Browse systems <ArrowRight size={18} />
@@ -70,6 +75,7 @@ const Hero: React.FC = () => (
           <h2>AIX Pilot leads the gallery as a deployed Enterprise GenAI console.</h2>
         </div>
       </div>
+      <p className="hero-panel-note">A quieter public surface for live systems, repository health, and review-safe operating boundaries.</p>
       <dl className="stat-grid">
         {PORTFOLIO_STATS.map(stat => (
           <div key={stat.label}>

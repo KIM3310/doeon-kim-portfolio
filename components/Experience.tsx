@@ -1,5 +1,5 @@
 import React from 'react';
-import { Award, BookOpen, Building2, Cloud, KeyRound, Languages, LifeBuoy, Network, ShieldCheck, Workflow } from 'lucide-react';
+import { Award, BookOpen, Building2, ChevronDown, Cloud, KeyRound, Languages, LifeBuoy, Network, ShieldCheck, Workflow, type LucideIcon } from 'lucide-react';
 import { CERTIFICATIONS, CURRENT_ROLE, EDUCATION, LANGUAGES as LANGUAGE_ITEMS, MILITARY_ROLE } from '../constants';
 import { WorkExperience } from '../types';
 
@@ -24,6 +24,60 @@ const RoleCard: React.FC<{ role: WorkExperience; label: string }> = ({ role, lab
   </article>
 );
 
+const DetailDisclosure: React.FC<{
+  title: string;
+  caption: string;
+  items: string[];
+  icons: LucideIcon[];
+  fallback: LucideIcon;
+}> = ({ title, caption, items, icons, fallback: FallbackIcon }) => (
+  <details className="glass-disclosure experience-disclosure">
+    <summary>
+      <span className="summary-copy">
+        <strong>{title}</strong>
+        <em>{caption}</em>
+      </span>
+      <ChevronDown size={17} className="disclosure-icon" aria-hidden="true" />
+    </summary>
+    <div className="experience-detail-grid experience-reveal-grid">
+      {items.map((item, index) => {
+        const Icon = icons[index] ?? FallbackIcon;
+        return (
+          <article key={item} className="experience-detail">
+            <Icon aria-hidden="true" />
+            <p>{item}</p>
+          </article>
+        );
+      })}
+    </div>
+  </details>
+);
+
+const OutcomeDisclosure: React.FC<{
+  title: string;
+  caption: string;
+  items: string[];
+  icon: LucideIcon;
+}> = ({ title, caption, items, icon: Icon }) => (
+  <details className="glass-disclosure outcome-disclosure">
+    <summary>
+      <span className="summary-copy">
+        <strong>{title}</strong>
+        <em>{caption}</em>
+      </span>
+      <ChevronDown size={17} className="disclosure-icon" aria-hidden="true" />
+    </summary>
+    <div className="outcome-row outcome-reveal-row">
+      {items.map(item => (
+        <article key={item} className="outcome-item">
+          <Icon aria-hidden="true" />
+          <p>{item}</p>
+        </article>
+      ))}
+    </div>
+  </details>
+);
+
 const Experience: React.FC = () => (
   <section id="experience" className="section-shell experience-section">
     <div className="section-inner">
@@ -40,58 +94,51 @@ const Experience: React.FC = () => (
 
       <div className="experience-layout">
         <RoleCard role={MILITARY_ROLE} label="Military communications operations" />
-
-        <div className="experience-detail-grid">
-          {MILITARY_ROLE.focus.map((item, index) => {
-            const Icon = militaryIcons[index] ?? ShieldCheck;
-            return (
-              <article key={item} className="experience-detail">
-                <Icon aria-hidden="true" />
-                <p>{item}</p>
-              </article>
-            );
-          })}
-        </div>
+        <DetailDisclosure
+          title="Operational scope"
+          caption={`${MILITARY_ROLE.focus.length} repeatable controls`}
+          items={MILITARY_ROLE.focus}
+          icons={militaryIcons}
+          fallback={ShieldCheck}
+        />
       </div>
 
-      <div className="outcome-row">
-        {MILITARY_ROLE.outcomes.map(item => (
-          <article key={item} className="outcome-item">
-            <ShieldCheck aria-hidden="true" />
-            <p>{item}</p>
-          </article>
-        ))}
-      </div>
+      <OutcomeDisclosure
+        title="Military outcomes"
+        caption={`${MILITARY_ROLE.outcomes.length} proof points`}
+        items={MILITARY_ROLE.outcomes}
+        icon={ShieldCheck}
+      />
 
       <div className="current-role-panel">
         <RoleCard role={CURRENT_ROLE} label="Current infrastructure operations" />
-        <div className="experience-detail-grid">
-          {CURRENT_ROLE.focus.map((item, index) => {
-            const Icon = currentIcons[index] ?? ShieldCheck;
-            return (
-              <article key={item} className="experience-detail">
-                <Icon aria-hidden="true" />
-                <p>{item}</p>
-              </article>
-            );
-          })}
-        </div>
+        <DetailDisclosure
+          title="Infrastructure scope"
+          caption={`${CURRENT_ROLE.focus.length} active operating lanes`}
+          items={CURRENT_ROLE.focus}
+          icons={currentIcons}
+          fallback={ShieldCheck}
+        />
       </div>
 
-      <div className="outcome-row">
-        {CURRENT_ROLE.outcomes.map(item => (
-          <article key={item} className="outcome-item">
-            <Workflow aria-hidden="true" />
-            <p>{item}</p>
-          </article>
-        ))}
-      </div>
+      <OutcomeDisclosure
+        title="Infrastructure outcomes"
+        caption={`${CURRENT_ROLE.outcomes.length} operating results`}
+        items={CURRENT_ROLE.outcomes}
+        icon={Workflow}
+      />
 
       <div className="credentials-grid" aria-label="education certifications and languages">
-        <article className="credential-card">
-          <BookOpen aria-hidden="true" />
-          <div>
-            <h3>Education and Training</h3>
+        <details className="credential-card credential-disclosure">
+          <summary>
+            <BookOpen aria-hidden="true" />
+            <span className="summary-copy">
+              <strong>Education and Training</strong>
+              <em>{EDUCATION.length} records</em>
+            </span>
+            <ChevronDown size={17} className="disclosure-icon" aria-hidden="true" />
+          </summary>
+          <div className="credential-body">
             {EDUCATION.map(item => (
               <p key={`${item.institution}-${item.period}`}>
                 <strong>{item.institution}</strong>
@@ -99,31 +146,43 @@ const Experience: React.FC = () => (
               </p>
             ))}
           </div>
-        </article>
+        </details>
 
-        <article className="credential-card">
-          <Award aria-hidden="true" />
-          <div>
-            <h3>Certifications</h3>
+        <details className="credential-card credential-disclosure">
+          <summary>
+            <Award aria-hidden="true" />
+            <span className="summary-copy">
+              <strong>Certifications</strong>
+              <em>{CERTIFICATIONS.length} active credentials</em>
+            </span>
+            <ChevronDown size={17} className="disclosure-icon" aria-hidden="true" />
+          </summary>
+          <div className="credential-body">
             <div className="credential-tags">
               {CERTIFICATIONS.map(item => (
                 <span key={`${item.issuer}-${item.name}`}>{item.issuer} - {item.name}</span>
               ))}
             </div>
           </div>
-        </article>
+        </details>
 
-        <article className="credential-card language-card">
-          <Languages aria-hidden="true" />
-          <div>
-            <h3>Languages</h3>
+        <details className="credential-card credential-disclosure language-card">
+          <summary>
+            <Languages aria-hidden="true" />
+            <span className="summary-copy">
+              <strong>Languages</strong>
+              <em>{LANGUAGE_ITEMS.length} language records</em>
+            </span>
+            <ChevronDown size={17} className="disclosure-icon" aria-hidden="true" />
+          </summary>
+          <div className="credential-body">
             <div className="credential-tags">
               {LANGUAGE_ITEMS.map(item => (
                 <span key={item}>{item}</span>
               ))}
             </div>
           </div>
-        </article>
+        </details>
       </div>
     </div>
   </section>

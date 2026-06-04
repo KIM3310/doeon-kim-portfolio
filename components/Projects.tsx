@@ -43,7 +43,7 @@ const Projects: React.FC = () => {
         <div className="live-proof-wall" aria-label="Latest deployed service screenshots">
           <div className="live-proof-head">
             <span>Latest live proof</span>
-            <strong>{LIVE_SERVICE_SCREENS.length} deployed screens refreshed Jun 3, 2026 KST</strong>
+            <strong>{LIVE_SERVICE_SCREENS.length} deployed screens validated Jun 4, 2026 KST</strong>
           </div>
           <div className="live-proof-grid">
             {LIVE_SERVICE_SCREENS.map((screen, idx) => (
@@ -82,24 +82,30 @@ const Projects: React.FC = () => {
 
         <div className="filter-bar">
           <button
+            type="button"
             onClick={() => setFilter(null)}
             className={`filter-button ${!filter ? 'is-active' : ''}`}
+            aria-pressed={!filter}
           >
             All ({PROJECTS.length})
           </button>
           {visibleTags.map(({ tag, count }) => (
             <button
               key={tag}
+              type="button"
               onClick={() => setFilter(filter === tag ? null : tag)}
               className={`filter-button ${filter === tag ? 'is-active' : ''}`}
+              aria-pressed={filter === tag}
             >
               {tag} ({count})
             </button>
           ))}
           {allTags.length > TOP_TAGS && (
             <button
+              type="button"
               onClick={() => setShowAllTags(!showAllTags)}
               className="filter-more"
+              aria-expanded={showAllTags}
             >
               {showAllTags ? <><ChevronUp size={14} /> Less</> : <><ChevronDown size={14} /> +{allTags.length - TOP_TAGS} more</>}
             </button>
@@ -143,32 +149,43 @@ const Projects: React.FC = () => {
               )}
               <h3>{project.title}</h3>
               <p className="project-copy">{project.description}</p>
-              <div className="project-business" aria-label={`${project.title} business and review fit`}>
-                <div className="project-business-item">
-                  <Target size={15} aria-hidden="true" />
-                  <span>Market</span>
-                  <strong>{project.market}</strong>
+              <details className="project-business-disclosure">
+                <summary aria-label={`Show ${project.title} business and review fit`}>
+                  <span>
+                    <strong>Business fit</strong>
+                    <em>market, review signal, revenue path</em>
+                  </span>
+                  <ChevronDown size={16} className="disclosure-icon" aria-hidden="true" />
+                </summary>
+                <div className="project-business" aria-label={`${project.title} business and review fit`}>
+                  <div className="project-business-item">
+                    <Target size={15} aria-hidden="true" />
+                    <span>Market</span>
+                    <strong>{project.market}</strong>
+                  </div>
+                  <div className="project-business-item">
+                    <BriefcaseBusiness size={15} aria-hidden="true" />
+                    <span>Review signal</span>
+                    <strong>{project.reviewSignal}</strong>
+                  </div>
+                  <div className="project-business-item">
+                    <BadgeDollarSign size={15} aria-hidden="true" />
+                    <span>Revenue path</span>
+                    <strong>{project.commercialPath}</strong>
+                  </div>
                 </div>
-                <div className="project-business-item">
-                  <BriefcaseBusiness size={15} aria-hidden="true" />
-                  <span>Review signal</span>
-                  <strong>{project.reviewSignal}</strong>
-                </div>
-                <div className="project-business-item">
-                  <BadgeDollarSign size={15} aria-hidden="true" />
-                  <span>Revenue path</span>
-                  <strong>{project.commercialPath}</strong>
-                </div>
-              </div>
+              </details>
               <div className="tag-list">
                 {project.tech.map((t, i) => (
-                  <span
+                  <button
+                    type="button"
                     key={i}
                     onClick={() => setFilter(filter === t ? null : t)}
                     className={`tag-chip ${filter === t ? 'is-active' : ''}`}
+                    aria-pressed={filter === t}
                   >
                     {t}
-                  </span>
+                  </button>
                 ))}
               </div>
               <div className="project-actions">

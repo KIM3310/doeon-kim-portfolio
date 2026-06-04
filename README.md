@@ -58,6 +58,8 @@ A compact public gallery that makes each system read like a product, not a scatt
 - Added live service screenshots for the current public proof surfaces and refreshed repository coverage to the audited 35 editable repos.
 - Cleaned public/private repository link handling and clarified consolidated-lane metrics.
 - Kept static evidence assets for visual context without requiring live credentials.
+- Added a liquid-glass progressive disclosure pass so dense project, experience, outcome, and credential details stay reviewable without overwhelming the first scan.
+- Tightened filter chips, disclosure controls, and responsive glass surfaces for cleaner keyboard and mobile behavior.
 
 ## Project Lanes
 

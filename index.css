@@ -3,6 +3,7 @@
   --canvas: #f5f5f7;
   --surface: #ffffff;
   --surface-soft: #fbfbfd;
+  --glass: rgba(255, 255, 255, 0.58);
   --ink: #1d1d1f;
   --ink-soft: #3a3a3c;
   --muted: #6e6e73;
@@ -12,9 +13,9 @@
   --blue: #0071e3;
   --green: #12805c;
   --amber: #a86d00;
-  --coral: #bf4b3a;
-  --shadow: 0 18px 44px rgba(0, 0, 0, 0.08);
-  --soft-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  --shadow: 0 24px 58px rgba(29, 29, 31, 0.11);
+  --soft-shadow: 0 12px 34px rgba(29, 29, 31, 0.07);
+  --inner-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.86);
 }
 
 *,
@@ -34,7 +35,9 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   background:
-    linear-gradient(180deg, #ffffff 0%, var(--canvas) 38%, #f0f0f3 100%);
+    linear-gradient(115deg, rgba(0, 113, 227, 0.08) 0%, rgba(255, 255, 255, 0) 28%),
+    linear-gradient(245deg, rgba(18, 128, 92, 0.07) 0%, rgba(255, 255, 255, 0) 26%),
+    linear-gradient(180deg, #ffffff 0%, var(--canvas) 43%, #ececf0 100%);
   color: var(--ink);
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Manrope", "Segoe UI", sans-serif;
   text-rendering: optimizeLegibility;
@@ -64,6 +67,7 @@ textarea:focus-visible,
 
 .app-shell {
   position: relative;
+  isolation: isolate;
   width: 100%;
   max-width: 100%;
   min-height: 100vh;
@@ -74,7 +78,16 @@ textarea:focus-visible,
 }
 
 .site-visual-grid {
-  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  display: block;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(29, 29, 31, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(29, 29, 31, 0.035) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5), transparent 64%);
 }
 
 .skip-link {
@@ -100,13 +113,15 @@ textarea:focus-visible,
   position: fixed;
   inset: 0 0 auto;
   z-index: 50;
-  background: rgba(255, 255, 255, 0.72);
-  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.64);
+  -webkit-backdrop-filter: blur(24px) saturate(1.25);
+  backdrop-filter: blur(24px) saturate(1.25);
   border-bottom: 1px solid rgba(228, 228, 231, 0.72);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.78);
 }
 
 .site-nav.is-scrolled {
-  background: rgba(255, 255, 255, 0.88);
+  background: rgba(255, 255, 255, 0.82);
 }
 
 .nav-inner {
@@ -130,7 +145,9 @@ textarea:focus-visible,
   padding: 4px;
   border: 1px solid rgba(228, 228, 231, 0.8);
   border-radius: 8px;
-  background: rgba(245, 245, 247, 0.72);
+  background: rgba(245, 245, 247, 0.5);
+  -webkit-backdrop-filter: blur(18px) saturate(1.2);
+  backdrop-filter: blur(18px) saturate(1.2);
 }
 
 .nav-link,
@@ -194,12 +211,12 @@ textarea:focus-visible,
 }
 
 .hero-section {
-  min-height: 92vh;
+  min-height: 84vh;
   display: grid;
   grid-template-columns: minmax(0, 0.95fr) minmax(360px, 1.05fr);
   gap: clamp(24px, 4vw, 58px);
   align-items: center;
-  padding: 98px 0 58px;
+  padding: 90px 0 38px;
 }
 
 .hero-copy {
@@ -232,10 +249,10 @@ textarea:focus-visible,
 }
 
 .hero-copy h1 {
-  max-width: 10ch;
+  max-width: 11ch;
   margin-top: 18px;
-  font-size: clamp(3.8rem, 9vw, 7.8rem);
-  line-height: 0.92;
+  font-size: clamp(3.45rem, 7.8vw, 6.7rem);
+  line-height: 0.94;
   font-weight: 800;
 }
 
@@ -266,6 +283,36 @@ textarea:focus-visible,
   margin: 18px 0 0;
   line-height: 1.78;
   overflow-wrap: anywhere;
+}
+
+.hero-proof-strip {
+  width: fit-content;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+  padding: 7px;
+  border: 1px solid rgba(228, 228, 231, 0.78);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.52);
+  -webkit-backdrop-filter: blur(18px) saturate(1.2);
+  backdrop-filter: blur(18px) saturate(1.2);
+  box-shadow: var(--inner-highlight);
+}
+
+.hero-proof-strip span {
+  min-height: 28px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 10px;
+  border: 1px solid rgba(228, 228, 231, 0.72);
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.56);
+  color: var(--ink-soft);
+  font-size: 0.78rem;
+  font-weight: 760;
+  white-space: nowrap;
 }
 
 .hero-actions,
@@ -304,9 +351,11 @@ textarea:focus-visible,
 .secondary-action,
 .project-actions a,
 .footer-links a {
-  border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(228, 228, 231, 0.82);
+  background: rgba(255, 255, 255, 0.62);
   color: var(--ink-soft);
+  -webkit-backdrop-filter: blur(16px) saturate(1.15);
+  backdrop-filter: blur(16px) saturate(1.15);
 }
 
 .primary-action:hover,
@@ -335,14 +384,17 @@ textarea:focus-visible,
 .experience-primary,
 .experience-detail,
 .outcome-item,
+.glass-disclosure,
 .credential-card,
 .project-card,
 .capability-card,
 .footer-shell {
-  border: 1px solid rgba(228, 228, 231, 0.86);
+  border: 1px solid rgba(228, 228, 231, 0.82);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.82);
-  box-shadow: var(--soft-shadow);
+  background: var(--glass);
+  -webkit-backdrop-filter: blur(22px) saturate(1.22);
+  backdrop-filter: blur(22px) saturate(1.22);
+  box-shadow: var(--soft-shadow), var(--inner-highlight);
 }
 
 .hero-showcase {
@@ -394,6 +446,13 @@ textarea:focus-visible,
   line-height: 1.16;
 }
 
+.hero-panel-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.6;
+}
+
 .stat-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -404,9 +463,10 @@ textarea:focus-visible,
 .stat-grid div {
   min-height: 86px;
   padding: 14px;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(228, 228, 231, 0.78);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.72);
+  background: rgba(255, 255, 255, 0.52);
+  box-shadow: var(--inner-highlight);
 }
 
 .stat-grid dt {
@@ -430,8 +490,9 @@ textarea:focus-visible,
   padding: 0 14px;
   border: 1px solid rgba(0, 113, 227, 0.16);
   border-radius: 8px;
-  background: rgba(0, 113, 227, 0.05);
+  background: rgba(255, 255, 255, 0.48);
   font-size: 0.92rem;
+  box-shadow: var(--inner-highlight);
 }
 
 .system-strip span {
@@ -471,6 +532,73 @@ textarea:focus-visible,
   display: grid;
   grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
   gap: 16px;
+}
+
+.glass-disclosure {
+  min-width: 0;
+}
+
+.glass-disclosure summary,
+.project-business-disclosure summary,
+.credential-disclosure summary {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.glass-disclosure summary::-webkit-details-marker,
+.project-business-disclosure summary::-webkit-details-marker,
+.credential-disclosure summary::-webkit-details-marker {
+  display: none;
+}
+
+.summary-copy {
+  min-width: 0;
+  display: grid;
+  gap: 5px;
+}
+
+.summary-copy strong {
+  min-width: 0;
+  color: var(--ink);
+  font-size: 0.96rem;
+  font-weight: 820;
+  overflow-wrap: anywhere;
+}
+
+.summary-copy em {
+  min-width: 0;
+  color: var(--muted-2);
+  font-size: 0.76rem;
+  font-style: normal;
+  font-weight: 720;
+  overflow-wrap: anywhere;
+}
+
+.disclosure-icon {
+  flex: 0 0 auto;
+  color: var(--blue);
+  transition: transform 160ms ease;
+}
+
+.glass-disclosure[open] .disclosure-icon,
+.project-business-disclosure[open] .disclosure-icon,
+.credential-disclosure[open] .disclosure-icon {
+  transform: rotate(180deg);
+}
+
+.experience-disclosure,
+.outcome-disclosure {
+  padding: 18px;
+}
+
+.experience-disclosure summary,
+.outcome-disclosure summary {
+  min-height: 46px;
 }
 
 .experience-primary,
@@ -542,11 +670,21 @@ textarea:focus-visible,
   gap: 12px;
 }
 
+.experience-reveal-grid,
+.outcome-reveal-row,
+.credential-body {
+  padding-top: 14px;
+}
+
 .outcome-row {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
   margin-top: 12px;
+}
+
+.outcome-reveal-row {
+  margin-top: 0;
 }
 
 .current-role-panel,
@@ -561,8 +699,23 @@ textarea:focus-visible,
 }
 
 .credential-card {
-  display: flex;
-  gap: 14px;
+  min-width: 0;
+}
+
+.credential-disclosure {
+  padding: 18px;
+}
+
+.credential-disclosure summary {
+  align-items: flex-start;
+}
+
+.credential-disclosure summary > svg {
+  margin-top: 1px;
+}
+
+.credential-body {
+  padding-left: 34px;
 }
 
 .credential-card h3 {
@@ -640,11 +793,14 @@ textarea:focus-visible,
   gap: 8px;
   align-content: start;
   padding: 8px;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(228, 228, 231, 0.78);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.72);
+  background: rgba(255, 255, 255, 0.54);
   color: inherit;
   text-decoration: none;
+  -webkit-backdrop-filter: blur(18px) saturate(1.16);
+  backdrop-filter: blur(18px) saturate(1.16);
+  box-shadow: var(--inner-highlight);
   transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
 }
 
@@ -715,13 +871,16 @@ textarea:focus-visible,
 .filter-button,
 .filter-more {
   min-height: 34px;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(228, 228, 231, 0.82);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.72);
+  background: rgba(255, 255, 255, 0.58);
   color: var(--muted);
   padding: 0 12px;
   font-size: 0.78rem;
   white-space: nowrap;
+  cursor: pointer;
+  -webkit-backdrop-filter: blur(14px) saturate(1.12);
+  backdrop-filter: blur(14px) saturate(1.12);
   transition: border-color 160ms ease, color 160ms ease, background 160ms ease;
 }
 
@@ -844,18 +1003,49 @@ textarea:focus-visible,
 
 .project-copy {
   flex: 0 0 auto;
-  min-height: 7.4em;
-  margin: 12px 0 18px;
+  min-height: 6.4em;
+  margin: 12px 0 14px;
   line-height: 1.64;
+}
+
+.project-business-disclosure {
+  margin: 0 0 14px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(228, 228, 231, 0.82);
+}
+
+.project-business-disclosure summary {
+  min-height: 42px;
+  padding: 0 2px;
+}
+
+.project-business-disclosure summary > span {
+  min-width: 0;
+  display: grid;
+  gap: 4px;
+}
+
+.project-business-disclosure summary strong {
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 820;
+}
+
+.project-business-disclosure summary em {
+  color: var(--muted-2);
+  font-size: 0.72rem;
+  font-style: normal;
+  font-weight: 720;
+  overflow-wrap: anywhere;
 }
 
 .project-business {
   display: grid;
   gap: 10px;
-  min-height: 158px;
-  margin: 0 0 16px;
-  padding: 14px 0 0;
-  border-top: 1px solid var(--line);
+  min-height: 0;
+  margin: 0;
+  padding: 10px 0 2px;
+  border-top: 0;
 }
 
 .project-business-item {
@@ -889,6 +1079,7 @@ textarea:focus-visible,
 }
 
 .tag-chip {
+  border: 1px solid var(--line);
   cursor: pointer;
 }
 
@@ -956,9 +1147,12 @@ textarea:focus-visible,
 
 .coverage-list {
   overflow: hidden;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(228, 228, 231, 0.82);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.72);
+  background: rgba(255, 255, 255, 0.56);
+  -webkit-backdrop-filter: blur(18px) saturate(1.14);
+  backdrop-filter: blur(18px) saturate(1.14);
+  box-shadow: var(--inner-highlight);
 }
 
 .coverage-row {
@@ -1050,6 +1244,30 @@ textarea:focus-visible,
 
 ::selection {
   background: rgba(0, 113, 227, 0.18);
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .site-nav,
+  .nav-desktop,
+  .hero-proof-strip,
+  .secondary-action,
+  .project-actions a,
+  .footer-links a,
+  .hero-showcase,
+  .experience-primary,
+  .experience-detail,
+  .glass-disclosure,
+  .outcome-item,
+  .credential-card,
+  .project-card,
+  .capability-card,
+  .footer-shell,
+  .live-proof-item,
+  .filter-button,
+  .filter-more,
+  .coverage-list {
+    background: rgba(255, 255, 255, 0.9);
+  }
 }
 
 @media (max-width: 1080px) {
@@ -1162,6 +1380,7 @@ textarea:focus-visible,
   .hero-showcase,
   .experience-primary,
   .experience-detail,
+  .glass-disclosure,
   .outcome-item,
   .credential-card,
   .coverage-row,
@@ -1213,6 +1432,15 @@ textarea:focus-visible,
     gap: 8px;
   }
 
+  .hero-proof-strip {
+    width: 100%;
+  }
+
+  .hero-proof-strip span {
+    flex: 1 1 130px;
+    justify-content: center;
+  }
+
   .hero-actions a {
     min-width: 0;
     width: 100%;
@@ -1237,6 +1465,10 @@ textarea:focus-visible,
   .project-business,
   .tag-list {
     min-height: 0;
+  }
+
+  .credential-body {
+    padding-left: 0;
   }
 
   .project-actions a {

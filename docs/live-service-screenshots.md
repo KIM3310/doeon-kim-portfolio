@@ -9,6 +9,8 @@ Captured current public service screenshots with Playwright/Chromium and kept on
 Latest refresh: 2026-06-03 14:47 KST. All 18 listed service screens were recaptured at 1440x1000 from their deployed URLs.
 Display previews are stored as optimized WebP files under `public/evidence/live/preview/`, with smaller proof-strip previews under `public/evidence/live/preview-sm/`; the PNG files remain the review-grade originals.
 
+UI validation: 2026-06-04 KST. The portfolio now presents these screens inside the liquid-glass proof wall while keeping dense project and commercial details behind progressive disclosure controls.
+
 ## Current GitHub Surface
 
 | Metric | Value |
