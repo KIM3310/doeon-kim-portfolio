@@ -17,7 +17,7 @@ Audited the 35 unarchived/editable repositories cloned into the local upgrade wo
 | Archived repositories | 15 |
 | Portfolio verify | pass |
 | Portfolio build | pass |
-| Portfolio tests | 24 passing tests |
+| Portfolio tests | 25 passing tests |
 | Live screenshot pass | 18 healthy public screenshots kept |
 | Shared repository validators | 35 of 35 editable repositories passing |
 | Repo-by-repo project checks | 35 of 35 editable repositories passing |
@@ -115,6 +115,7 @@ The final pass ran each repository's strongest available local check after norma
 - `ai-security-redteam-lab`: added the missing `pytest` dev extra so the test suite can bootstrap cleanly.
 - `security-threat-response-workbench`: added Vite type declarations so CSS side-effect imports typecheck.
 - `doeon-kim-portfolio`: added liquid-glass progressive disclosure for project business fit, experience scope, outcomes, credentials, and filter-chip semantics.
+- `doeon-kim-portfolio`: added active-section navigation state and regression coverage for the initial active overview item.
 
 ## Enterprise Revenue Readiness Pass
 

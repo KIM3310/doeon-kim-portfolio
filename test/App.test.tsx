@@ -25,6 +25,11 @@ describe('App component', () => {
     expect(screen.getAllByText('KIM3310').length).toBeGreaterThan(0);
   });
 
+  it('marks the overview navigation item as the initial active section', () => {
+    render(<App />);
+    expect(screen.getByRole('button', { name: 'Overview' })).toHaveAttribute('aria-current', 'page');
+  });
+
   it('renders the current InterX role section', () => {
     render(<App />);
     expect(screen.getByText('InterX')).toBeInTheDocument();
