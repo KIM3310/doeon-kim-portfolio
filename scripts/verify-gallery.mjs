@@ -113,6 +113,8 @@ if (!existsSync(reelTranscript)) {
   const transcript = readFileSync(reelTranscript, 'utf8');
   if (!transcript.includes('Welcome to the KIM3310 Systems Gallery')) failures.push('Evidence reel transcript is missing the opening narration');
   if (!transcript.includes('thirty-five editable repositories')) failures.push('Evidence reel transcript is missing the repository posture line');
+  if (!transcript.endsWith('\n')) failures.push('Evidence reel transcript must end with a newline');
+  if (transcript.split('\n').filter(Boolean).length < 7) failures.push('Evidence reel transcript should keep each narration sentence on its own line');
 }
 
 if (failures.length) {

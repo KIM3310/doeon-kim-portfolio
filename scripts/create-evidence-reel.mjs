@@ -12,7 +12,7 @@ const videoPath = join(outputDir, 'kim3310-systems-gallery-reel.mp4');
 const posterPath = join(outputDir, 'kim3310-systems-gallery-reel-poster.png');
 const transcriptPath = join(outputDir, 'transcript.txt');
 
-const narration = [
+const narrationLines = [
   'Welcome to the KIM3310 Systems Gallery.',
   'This portfolio is built around reviewable AI systems, not static case studies.',
   'AIX Pilot leads with a deployed enterprise GenAI console for retrieval, agent workflows, data-loss prevention, evaluations, and KPI reporting.',
@@ -20,7 +20,8 @@ const narration = [
   'AegisOps turns incident logs and monitoring screenshots into structured reports, replay evaluations, and operator handoff artifacts.',
   'The Enterprise LLM Adoption Kit demonstrates governance with role-based access, prompt-injection checks, PII redaction, audit logging, and evaluation gates.',
   'The gallery closes with a clean coverage ledger: thirty-five editable repositories, zero open pull requests, and current CI evidence for every active lane.',
-].join(' ');
+];
+const narration = narrationLines.join(' ');
 
 const slides = [
   {
@@ -382,7 +383,7 @@ function cleanupTempAudio() {
 
 async function main() {
   mkdirSync(outputDir, { recursive: true });
-  writeFileSync(transcriptPath, narration, 'utf8');
+  writeFileSync(transcriptPath, `${narrationLines.join('\n')}\n`, 'utf8');
 
   try {
     await run('/usr/bin/say', ['-v', 'Samantha', '-r', '166', '-o', voiceAiff, narration]);
