@@ -22,6 +22,13 @@ A compact public gallery that makes each system read like a product, not a scatt
 | Safety boundary | The site avoids client secrets and only displays public-safe project summaries and generated visual assets. |
 | Fast proof | `npm run verify` checks type safety, content guarantees, tests, and production build before deployment. |
 
+## Three-Minute Proof
+
+1. Open the live gallery and scan the first flagship lane.
+2. Expand one project card and confirm it exposes market, review signal, revenue path, and verification evidence.
+3. Open [docs/live-service-screenshots.md](docs/live-service-screenshots.md) and [docs/repository-upgrade-audit.md](docs/repository-upgrade-audit.md).
+4. Run `npm run verify` before treating the gallery as current.
+
 ## Reviewer Fast Path
 
 - **First minute:** Open the live gallery, scan flagship lanes, then jump to the repository coverage ledger.
