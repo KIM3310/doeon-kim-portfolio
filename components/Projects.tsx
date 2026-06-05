@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useMemo } from 'react';
-import { LIVE_SERVICE_SCREENS, PROJECTS, REPOSITORY_COVERAGE } from '../constants';
-import { BadgeDollarSign, BriefcaseBusiness, ChevronDown, ChevronUp, ExternalLink, Github, LockKeyhole, Target } from 'lucide-react';
+import { LIVE_SERVICE_SCREENS, PORTFOLIO_REEL, PROJECTS, REPOSITORY_COVERAGE } from '../constants';
+import { BadgeDollarSign, BriefcaseBusiness, ChevronDown, ChevronUp, ExternalLink, FileText, Film, Github, LockKeyhole, Target, Volume2 } from 'lucide-react';
 
 const TOP_TAGS = 8;
 const LIVE_IMAGE_WIDTH = 1440;
@@ -38,6 +38,38 @@ const Projects: React.FC = () => {
           <p className="eyebrow">Systems</p>
           <h2>Built surfaces, with a market thesis</h2>
           <p>Each card links to a runnable or inspectable system, then states the likely buyer, review signal, and revenue path behind the build.</p>
+        </div>
+
+        <div className="evidence-reel" aria-label="Narrated systems gallery evidence reel">
+          <div className="evidence-reel-copy">
+            <span className="evidence-reel-eyebrow"><Film size={15} aria-hidden="true" /> Evidence reel</span>
+            <h3>{PORTFOLIO_REEL.title}</h3>
+            <p>{PORTFOLIO_REEL.summary}</p>
+            <div className="evidence-reel-meta" aria-label="Evidence reel metadata">
+              <span><Volume2 size={14} aria-hidden="true" /> English TTS</span>
+              <span>{PORTFOLIO_REEL.durationLabel}</span>
+              <span>{PORTFOLIO_REEL.generatedAt}</span>
+            </div>
+            <a
+              className="evidence-reel-link"
+              href={`${import.meta.env.BASE_URL}${PORTFOLIO_REEL.transcript}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FileText size={14} aria-hidden="true" /> Transcript
+            </a>
+          </div>
+          <div className="evidence-reel-media">
+            <video
+              controls
+              playsInline
+              preload="metadata"
+              poster={`${import.meta.env.BASE_URL}${PORTFOLIO_REEL.poster}`}
+              aria-label={PORTFOLIO_REEL.title}
+            >
+              <source src={`${import.meta.env.BASE_URL}${PORTFOLIO_REEL.video}`} type="video/mp4" />
+            </video>
+          </div>
         </div>
 
         <div className="live-proof-wall" aria-label="Latest deployed service screenshots">

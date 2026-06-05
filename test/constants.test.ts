@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { CERTIFICATIONS, CURRENT_ROLE, EDUCATION, LIVE_SERVICE_SCREENS, MILITARY_ROLE, PROFILE, PROJECTS, SKILLS, PORTFOLIO_STATS, REPOSITORY_COVERAGE } from '../constants';
+import { CERTIFICATIONS, CURRENT_ROLE, EDUCATION, LIVE_SERVICE_SCREENS, MILITARY_ROLE, PROFILE, PROJECTS, SKILLS, PORTFOLIO_REEL, PORTFOLIO_STATS, REPOSITORY_COVERAGE } from '../constants';
 
 describe('PROFILE', () => {
   it('contains required fields', () => {
@@ -106,6 +106,17 @@ describe('LIVE_SERVICE_SCREENS', () => {
     expect(LIVE_SERVICE_SCREENS.map(screen => screen.asset)).toContain('evidence/live/twincity-ui.png');
     expect(LIVE_SERVICE_SCREENS.every(screen => screen.url.startsWith('https://'))).toBe(true);
     expect(new Set(LIVE_SERVICE_SCREENS.map(screen => screen.asset)).size).toBe(LIVE_SERVICE_SCREENS.length);
+  });
+});
+
+describe('PORTFOLIO_REEL', () => {
+  it('tracks the narrated evidence reel assets', () => {
+    expect(PORTFOLIO_REEL.title).toBe('Narrated Systems Gallery Reel');
+    expect(PORTFOLIO_REEL.summary).toContain('English TTS');
+    expect(PORTFOLIO_REEL.video).toBe('evidence/portfolio-reel/kim3310-systems-gallery-reel.mp4');
+    expect(PORTFOLIO_REEL.poster).toContain('kim3310-systems-gallery-reel-poster.png');
+    expect(PORTFOLIO_REEL.transcript).toContain('transcript.txt');
+    expect(PORTFOLIO_REEL.generatedAt).toBe('2026-06-06 KST');
   });
 });
 

@@ -63,6 +63,7 @@ A compact public gallery that makes each system read like a product, not a scatt
 - Consolidated the page around active repositories and reusable engineering patterns.
 - Promoted AIX Pilot as the current flagship enterprise GenAI product surface.
 - Added live service screenshots for the current public proof surfaces and refreshed repository coverage to the audited 35 editable repos.
+- Added a narrated English TTS evidence reel generated from the current live service screenshots and repository posture.
 - Cleaned public/private repository link handling and clarified consolidated-lane metrics.
 - Kept static evidence assets for visual context without requiring live credentials.
 - Added a liquid-glass progressive disclosure pass so dense project, experience, outcome, and credential details stay reviewable without overwhelming the first scan.
@@ -96,7 +97,9 @@ Open `http://localhost:5173` in your browser.
 
 - `App.tsx`, `components/`, `constants.ts`, and `index.css` define the page.
 - `public/evidence/` keeps static visual evidence assets.
+- `public/evidence/portfolio-reel/` keeps the narrated evidence reel, poster frame, and transcript.
 - `scripts/verify-gallery.mjs` checks that the page contract remains intact.
+- `npm run evidence:reel` regenerates the narrated MP4 evidence reel on macOS with `say`, `afconvert`, and headless Chrome.
 
 ## Build
 

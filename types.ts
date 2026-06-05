@@ -24,6 +24,16 @@ export interface LiveServiceScreen {
   scope: 'Active public' | 'Private case' | 'Archived proof';
 }
 
+export interface PortfolioReel {
+  title: string;
+  summary: string;
+  video: string;
+  poster: string;
+  transcript: string;
+  durationLabel: string;
+  generatedAt: string;
+}
+
 export interface SkillCategory {
   category: string;
   skills: string[];

@@ -54,4 +54,11 @@ describe('App component', () => {
     expect(screen.getAllByText('Business fit').length).toBeGreaterThan(0);
     expect(screen.getByText('Education and Training')).toBeInTheDocument();
   });
+
+  it('renders the narrated evidence reel entry point', () => {
+    render(<App />);
+    expect(screen.getByText('Narrated Systems Gallery Reel')).toBeInTheDocument();
+    expect(screen.getByText('English TTS')).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /Transcript/ })).toBeInTheDocument();
+  });
 });

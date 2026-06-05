@@ -1,4 +1,4 @@
-import { Project, SkillCategory, Profile, WorkExperience, EducationItem, Certification, RepositoryCoverageLane, LiveServiceScreen } from './types';
+import { Project, SkillCategory, Profile, WorkExperience, EducationItem, Certification, RepositoryCoverageLane, LiveServiceScreen, PortfolioReel } from './types';
 
 export const PROFILE: Profile = {
   name: 'KIM3310 Systems Gallery',
@@ -206,6 +206,17 @@ export const LIVE_SERVICE_SCREENS: LiveServiceScreen[] = [
     scope: 'Archived proof',
   },
 ];
+
+export const PORTFOLIO_REEL: PortfolioReel = {
+  title: 'Narrated Systems Gallery Reel',
+  summary:
+    'English TTS evidence reel generated from the current live service screenshots and the audited repository posture.',
+  video: 'evidence/portfolio-reel/kim3310-systems-gallery-reel.mp4',
+  poster: 'evidence/portfolio-reel/kim3310-systems-gallery-reel-poster.png',
+  transcript: 'evidence/portfolio-reel/transcript.txt',
+  durationLabel: '43 sec',
+  generatedAt: '2026-06-06 KST',
+};
 
 export const PROJECTS: Project[] = [
   {

@@ -7,6 +7,9 @@ const MAX_PREVIEW_BYTES = 550_000;
 const MAX_SMALL_PREVIEW_BYTES = 250_000;
 const MAX_SINGLE_PREVIEW_BYTES = 90_000;
 const MAX_SINGLE_SMALL_PREVIEW_BYTES = 40_000;
+const MIN_REEL_VIDEO_BYTES = 1_000_000;
+const MAX_REEL_VIDEO_BYTES = 12_000_000;
+const MAX_REEL_POSTER_BYTES = 800_000;
 
 const requiredFiles = [
   'index.html',
@@ -18,11 +21,12 @@ const requiredFiles = [
   'components/Projects.tsx',
   'components/Skills.tsx',
   'components/Navbar.tsx',
+  'scripts/create-evidence-reel.mjs',
 ];
 
 const checks = [
-  { file: 'constants.ts', mustInclude: ['PROFILE', 'PROJECTS', 'LIVE_SERVICE_SCREENS', 'REPOSITORY_COVERAGE', 'SKILLS', 'CURRENT_ROLE', 'MILITARY_ROLE', 'CERTIFICATIONS', 'BDES', 'Korea National Open University', 'InterX', 'evidence/live/aix-pilot.png', 'evidence/live/twincity-ui.png', 'commercialPath', 'reviewSignal', 'Product surfaces'] },
-  { file: 'components/Projects.tsx', mustInclude: ['evidence/live/preview/', 'evidence/live/preview-sm/', 'type="image/webp"', 'livePreviewFor', 'liveProofPreviewFor'] },
+  { file: 'constants.ts', mustInclude: ['PROFILE', 'PROJECTS', 'LIVE_SERVICE_SCREENS', 'PORTFOLIO_REEL', 'REPOSITORY_COVERAGE', 'SKILLS', 'CURRENT_ROLE', 'MILITARY_ROLE', 'CERTIFICATIONS', 'BDES', 'Korea National Open University', 'InterX', 'evidence/live/aix-pilot.png', 'evidence/live/twincity-ui.png', 'evidence/portfolio-reel/kim3310-systems-gallery-reel.mp4', 'commercialPath', 'reviewSignal', 'Product surfaces'] },
+  { file: 'components/Projects.tsx', mustInclude: ['PORTFOLIO_REEL', '<video', 'type="video/mp4"', 'evidence/live/preview/', 'evidence/live/preview-sm/', 'type="image/webp"', 'livePreviewFor', 'liveProofPreviewFor'] },
   { file: 'components/Hero.tsx', mustInclude: ['evidence/live/preview/aix-pilot.webp', 'type="image/webp"'] },
   { file: 'App.tsx', mustInclude: ['Hero', 'Experience', 'Projects', 'Skills'] },
 ];
@@ -81,6 +85,34 @@ if (!existsSync(previewSmallDir)) {
   if (previewSmallFiles.length !== EXPECTED_LIVE_SCREEN_COUNT) failures.push(`Expected ${EXPECTED_LIVE_SCREEN_COUNT} small preview WebP files, found ${previewSmallFiles.length}`);
   if (previewBytes > MAX_PREVIEW_BYTES) failures.push(`Live preview budget exceeded: ${previewBytes} bytes`);
   if (previewSmallBytes > MAX_SMALL_PREVIEW_BYTES) failures.push(`Small live preview budget exceeded: ${previewSmallBytes} bytes`);
+}
+
+const reelDir = resolve(root, 'public/evidence/portfolio-reel');
+const reelVideo = resolve(reelDir, 'kim3310-systems-gallery-reel.mp4');
+const reelPoster = resolve(reelDir, 'kim3310-systems-gallery-reel-poster.png');
+const reelTranscript = resolve(reelDir, 'transcript.txt');
+
+if (!existsSync(reelVideo)) {
+  failures.push('Missing evidence reel video');
+} else {
+  const size = statSync(reelVideo).size;
+  if (size < MIN_REEL_VIDEO_BYTES) failures.push(`Evidence reel video is too small: ${size} bytes`);
+  if (size > MAX_REEL_VIDEO_BYTES) failures.push(`Evidence reel video budget exceeded: ${size} bytes`);
+}
+
+if (!existsSync(reelPoster)) {
+  failures.push('Missing evidence reel poster');
+} else {
+  const size = statSync(reelPoster).size;
+  if (size > MAX_REEL_POSTER_BYTES) failures.push(`Evidence reel poster budget exceeded: ${size} bytes`);
+}
+
+if (!existsSync(reelTranscript)) {
+  failures.push('Missing evidence reel transcript');
+} else {
+  const transcript = readFileSync(reelTranscript, 'utf8');
+  if (!transcript.includes('Welcome to the KIM3310 Systems Gallery')) failures.push('Evidence reel transcript is missing the opening narration');
+  if (!transcript.includes('thirty-five editable repositories')) failures.push('Evidence reel transcript is missing the repository posture line');
 }
 
 if (failures.length) {
