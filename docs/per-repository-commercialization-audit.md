@@ -200,11 +200,11 @@ Best buyer: not a commercial buyer yet unless a medical partner, research instit
 
 ### `KIM3310`
 
-Best buyer: no direct buyer; this is the GitHub identity and credibility router. Commercial value comes from sending recruiters, buyers, and collaborators into the strongest paid lanes. It should pin the enterprise AI, ops/security, and data/manufacturing assets first. The blocker is dilution; fix with tighter pinned repo order, one commercial CTA, and a concise profile line matching the portfolio.
+Best buyer: no direct buyer; this is the GitHub identity and credibility router. Commercial value comes from sending technical evaluators, buyers, and collaborators into the strongest paid lanes. It should pin the enterprise AI, ops/security, and data/manufacturing assets first. The blocker is dilution; fix with tighter pinned repo order, one commercial CTA, and a concise profile line matching the portfolio.
 
 ### `doeon-kim-portfolio`
 
-Best buyer: buyers, recruiters, investors, partners, and design partners evaluating the body of work. This repo is the conversion surface, so its revenue is enabled revenue rather than direct SaaS revenue. It should move viewers from proof to action with lane-specific CTAs, contact flow, and analytics. The blocker is conversion opacity; fix with privacy-safe event tracking, a calendar or contact route, and short walkthrough evidence for the top lanes.
+Best buyer: buyers, technical evaluators, investors, partners, and design partners evaluating the body of work. This repo is the conversion surface, so its revenue is enabled revenue rather than direct SaaS revenue. It should move viewers from proof to action with lane-specific CTAs, contact flow, and analytics. The blocker is conversion opacity; fix with privacy-safe event tracking, a calendar or contact route, and short walkthrough evidence for the top lanes.
 
 ### `SteadyTap`
 
