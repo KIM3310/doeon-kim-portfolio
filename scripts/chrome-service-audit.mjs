@@ -253,6 +253,7 @@ function scorePass(pass) {
   const issues = [];
   if (flags.likely404) issues.push('likely 404/not-found surface');
   if (flags.veryThin) issues.push('thin content');
+  if (!flags.hasMain) issues.push('missing main landmark');
   if (!flags.hasH1) issues.push('missing h1');
   if (!flags.hasCTA) issues.push('weak or missing CTA');
   if ((metrics.overflow ?? []).length) issues.push(`${metrics.overflow.length} overflow candidates`);
