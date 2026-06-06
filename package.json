@@ -25,6 +25,7 @@
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
+    "audit:chrome": "node scripts/chrome-service-audit.mjs",
     "evidence:capture": "node scripts/capture-portfolio-evidence.mjs",
     "evidence:reel": "node scripts/create-evidence-reel.mjs",
     "verify": "npm run typecheck && npm test && npm run verify:content && npm run build",

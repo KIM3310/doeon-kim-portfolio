@@ -34,6 +34,7 @@ A compact public gallery that makes each system read like a product, not a scatt
 - **First minute:** Open the live gallery, scan flagship lanes, then jump to the repository coverage ledger.
 - **Local demo:** Run `npm install && npm run dev`, then open `http://localhost:5173`.
 - **Verification:** Run `npm run verify`; it covers type safety, tests, content guarantees, and production build.
+- **Chrome audit:** Run `npm run audit:chrome` to open every portfolio demo in Google Chrome and record desktop/mobile layout signals.
 - **Live proof:** Current service screenshots are tracked in [docs/live-service-screenshots.md](docs/live-service-screenshots.md).
 - **Repo audit:** The 35 editable-repo validation pass is recorded in [docs/repository-upgrade-audit.md](docs/repository-upgrade-audit.md).
 - **Demo catalog:** Supporting repos without service URLs now have GitHub Pages demos listed in [docs/public-demo-catalog.md](docs/public-demo-catalog.md).
@@ -109,6 +110,7 @@ Open `http://localhost:5173` in your browser.
 - `public/evidence/` keeps static visual evidence assets.
 - `public/evidence/portfolio-reel/` keeps the narrated evidence reel, poster frame, and transcript.
 - `scripts/verify-gallery.mjs` checks that the page contract remains intact.
+- `scripts/chrome-service-audit.mjs` drives Google Chrome through DevTools for portfolio demo QA.
 - `npm run evidence:reel` regenerates the narrated MP4 evidence reel on macOS with `say`, `afconvert`, and headless Chrome.
 
 ## Build
