@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { CERTIFICATIONS, EDUCATION, INTERX_ROLE, LIVE_SERVICE_SCREENS, MILITARY_ROLE, PROFILE, PROJECTS, SKILLS, PORTFOLIO_REEL, PORTFOLIO_STATS, REPOSITORY_COVERAGE } from '../constants';
+import { CERTIFICATIONS, EDUCATION, INTERX_ROLE, LIVE_SERVICE_SCREENS, MILITARY_ROLE, PROFILE, PROJECTS, REPOSITORY_DEMO_URLS, SKILLS, PORTFOLIO_REEL, PORTFOLIO_STATS, REPOSITORY_COVERAGE } from '../constants';
 
 describe('PROFILE', () => {
   it('contains required fields', () => {
@@ -23,9 +23,22 @@ describe('PORTFOLIO_STATS', () => {
     expect(PORTFOLIO_STATS).toEqual([
       { label: 'Public repos', value: '44' },
       { label: 'Editable repos', value: '35' },
-      { label: 'Product surfaces', value: '18 live' },
+      { label: 'Product demos', value: '36 live' },
       { label: 'Open PRs', value: '0' },
     ]);
+  });
+});
+
+describe('REPOSITORY_DEMO_URLS', () => {
+  it('routes every editable coverage repository to a public demo', () => {
+    const coverageRepos = REPOSITORY_COVERAGE.flatMap(lane => lane.repositories);
+
+    expect(new Set(coverageRepos).size).toBe(35);
+    for (const repo of coverageRepos) {
+      expect(REPOSITORY_DEMO_URLS[repo], repo).toMatch(/^https:\/\//);
+    }
+    expect(REPOSITORY_DEMO_URLS['agent-runtime-go']).toBe('https://kim3310.github.io/agent-runtime-go/');
+    expect(REPOSITORY_DEMO_URLS['weld-defect-vision']).toBe('https://kim3310.github.io/weld-defect-vision/');
   });
 });
 
@@ -96,12 +109,14 @@ describe('PROJECTS', () => {
     expect(PROJECTS.find(p => p.title === 'aix-pilot')?.commercialPath).toContain('subscription');
     expect(PROJECTS.find(p => p.title === 'stage-pilot')?.description).toContain('Tool-call reliability runtime');
     expect(PROJECTS.find(p => p.title === 'agent-runtime-go')?.evidence).toContain('agent-runtime-trace');
+    expect(PROJECTS.find(p => p.title === 'agent-runtime-go')?.demo).toContain('github.io/agent-runtime-go');
     expect(PROJECTS.find(p => p.title === 'ai-agent-production-lab')?.evidence).toContain('ai-agent-production-report');
     expect(PROJECTS.find(p => p.title === 'lakehouse-contract-lab')?.evidence).toContain('lakehouse-contract-board');
     expect(PROJECTS.find(p => p.title === 'AegisOps')?.evidence).toContain('live/aegisops');
     expect(PROJECTS.find(p => p.title === 'weld-defect-vision')?.evidence).toContain('weld-defect-vision-board');
     expect(PROJECTS.find(p => p.title === 'retina-scan-ai')?.description).toContain('Medical-image research workflow');
     expect(PROJECTS.find(p => p.title === 'retina-scan-ai')?.evidence).toContain('retina-scan-ai-research');
+    expect(PROJECTS.find(p => p.title === 'retina-scan-ai')?.demo).toContain('github.io/retina-scan-ai');
     expect(PROJECTS.find(p => p.title === 'SteadyTap')?.description).toContain('Accessibility coaching app');
   });
 });

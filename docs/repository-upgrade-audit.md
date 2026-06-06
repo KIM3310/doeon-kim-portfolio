@@ -23,6 +23,8 @@ Audited the 35 unarchived/editable repositories cloned into the local upgrade wo
 | Repo-by-repo project checks | 35 of 35 editable repositories passing |
 | Product operating models | 35 of 35 editable repositories linked from README |
 | Broken homepage metadata | cleaned from 4 repositories |
+| Coverage demo routes | 35 of 35 editable coverage repositories linked |
+| New GitHub Pages demos | 18 supporting repositories deployed |
 
 ## Repository Surface Validators
 
@@ -120,6 +122,12 @@ The final pass ran each repository's strongest available local check after norma
 ## Enterprise Revenue Readiness Pass
 
 Every editable repository now has `docs/product-operating-model.md` linked from its README. Each model names the target buyer, paid wedge, review signal, delivery shape, trust boundary, local verification command, debug checklist, and smallest commercial next step.
+
+## Public Demo Expansion
+
+Eighteen supporting repositories that previously had no public demo surface now deploy a credential-free GitHub Pages demo from `site/` via `.github/workflows/github-pages-demo.yml`. Each repository README and product operating model links its demo, and the portfolio coverage ledger routes every editable repository to a public demo URL.
+
+The deployed supporting-demo catalog is tracked in [public-demo-catalog.md](public-demo-catalog.md).
 
 ## Follow-Up Queue
 

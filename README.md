@@ -18,7 +18,7 @@ A compact public gallery that makes each system read like a product, not a scatt
 |---|---|
 | Buyer or user | Technical reviewers, AI platform teams, operations leaders, and partners evaluating product judgment. |
 | Commercial route | Route visitors into paid pilot conversations for GenAI operations, reliability audits, security operations, and governed analytics. |
-| Review signal | Each card exposes market, review signal, revenue path, live evidence, and verification-friendly repository links. |
+| Review signal | Each card exposes market, review signal, revenue path, live evidence, demos, and verification-friendly repository links. |
 | Safety boundary | The site avoids client secrets and only displays public-safe project summaries and generated visual assets. |
 | Fast proof | `npm run verify` checks type safety, content guarantees, tests, and production build before deployment. |
 
@@ -36,6 +36,7 @@ A compact public gallery that makes each system read like a product, not a scatt
 - **Verification:** Run `npm run verify`; it covers type safety, tests, content guarantees, and production build.
 - **Live proof:** Current service screenshots are tracked in [docs/live-service-screenshots.md](docs/live-service-screenshots.md).
 - **Repo audit:** The 35 editable-repo validation pass is recorded in [docs/repository-upgrade-audit.md](docs/repository-upgrade-audit.md).
+- **Demo catalog:** Supporting repos without service URLs now have GitHub Pages demos listed in [docs/public-demo-catalog.md](docs/public-demo-catalog.md).
 - **Commercial read:** Use the gallery as the portfolio router for GenAI operations, incident ops, runtime reliability, and governed analytics.
 
 ## Commercialization Playbook
@@ -69,6 +70,7 @@ A compact public gallery that makes each system read like a product, not a scatt
 - Added a liquid-glass progressive disclosure pass so dense project, experience, outcome, and credential details stay reviewable without overwhelming the first scan.
 - Tightened filter chips, disclosure controls, and responsive glass surfaces for cleaner keyboard and mobile behavior.
 - Added active-section navigation polish so the gallery keeps orientation while visitors move through project evidence and the repository ledger.
+- Added GitHub Pages demo surfaces for 18 previously demo-less supporting repositories and turned the coverage ledger into clickable demo routes.
 
 ## Project Lanes
 

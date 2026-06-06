@@ -70,4 +70,10 @@ describe('App component', () => {
     expect(screen.getByAltText('agent-runtime-go visual evidence')).toBeInTheDocument();
     expect(screen.getByAltText('retina-scan-ai visual evidence')).toBeInTheDocument();
   });
+
+  it('links coverage repositories to public demos', () => {
+    render(<App />);
+    expect(screen.getByRole('link', { name: /agent-runtime-go/ })).toHaveAttribute('href', 'https://kim3310.github.io/agent-runtime-go/');
+    expect(screen.getByRole('link', { name: /weld-defect-vision/ })).toHaveAttribute('href', 'https://kim3310.github.io/weld-defect-vision/');
+  });
 });

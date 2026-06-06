@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useMemo } from 'react';
-import { PORTFOLIO_REEL, PROJECTS, REPOSITORY_COVERAGE } from '../constants';
+import { PORTFOLIO_REEL, PROJECTS, REPOSITORY_COVERAGE, REPOSITORY_DEMO_URLS } from '../constants';
 import { BadgeDollarSign, BriefcaseBusiness, ChevronDown, ChevronUp, ExternalLink, FileText, Film, Github, LockKeyhole, Target, Volume2 } from 'lucide-react';
 
 const TOP_TAGS = 8;
@@ -240,9 +240,17 @@ const Projects: React.FC = () => {
                   <strong>{lane.role}</strong>
                 </div>
                 <div className="coverage-repos">
-                  {lane.repositories.map(repo => (
-                    <span key={repo}>{repo}</span>
-                  ))}
+                  {lane.repositories.map(repo => {
+                    const demoUrl = REPOSITORY_DEMO_URLS[repo];
+                    return demoUrl ? (
+                      <a key={repo} href={demoUrl} target="_blank" rel="noopener noreferrer">
+                        {repo}
+                        <ExternalLink size={12} aria-hidden="true" />
+                      </a>
+                    ) : (
+                      <span key={repo}>{repo}</span>
+                    );
+                  })}
                 </div>
               </div>
             ))}

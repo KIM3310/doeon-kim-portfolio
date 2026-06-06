@@ -22,6 +22,7 @@ Evidence reel refresh: 2026-06-06 KST. A narrated English TTS MP4 was generated 
 | Archived repositories | 15 |
 | Public repositories | 44 |
 | Private repositories | 6 |
+| Clickable public demos | 36 |
 | Open pull requests | 0 |
 
 ## Screenshot Assets
