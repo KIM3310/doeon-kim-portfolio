@@ -31,6 +31,18 @@ export interface CommercialOffer {
   ctaSubject: string;
 }
 
+export interface RevenueChannel {
+  id: string;
+  title: string;
+  mode: string;
+  buyer: string;
+  route: string;
+  activation: string;
+  marginModel: string;
+  proofRepos: string[];
+  nextStep: string;
+}
+
 export interface LiveServiceScreen {
   title: string;
   url: string;

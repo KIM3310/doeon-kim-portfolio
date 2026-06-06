@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import CommercialOffers from './components/CommercialOffers';
+import RevenueArchitecture from './components/RevenueArchitecture';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
@@ -18,6 +19,7 @@ const App: React.FC = () => (
     <main id="main-content">
       <Hero />
       <CommercialOffers />
+      <RevenueArchitecture />
       <Experience />
       <Projects />
       <Skills />

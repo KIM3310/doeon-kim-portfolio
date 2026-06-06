@@ -6,13 +6,22 @@ This file is a commercial planning artifact, but it does not publish public fina
 
 - **Lane:** Portfolio and offer router
 - **Primary buyer:** Technical evaluators, buyers, partners, and design partners
-- **First motion:** Route visitors into architecture-backed pilot conversations without public public financial assumptions
+- **First motion:** Route visitors into architecture-backed pilot conversations without public financial assumptions
 
 ## Offer Ladder
 
 1. **Public proof review** - use the live demo, README, screenshots, and tests to establish technical credibility.
 2. **Scoped diagnostic** - review the buyer workflow, data boundary, integration needs, and acceptance criteria.
 3. **Implementation or operating support** - connect only the resources approved in [service architecture](service-architecture.md).
+
+## Revenue Channel
+
+- **Channel:** Proof-led portfolio and lead routing
+- **First commercial action:** Portfolio service menu that routes B2B, B2C, media, and recruiting visitors to the right proof surface.
+- **Conversion path:** Search, GitHub, LinkedIn, YouTube proof clips, recruiters, founders, and technical buyer referrals.
+- **Activation path:** Keep demos, screenshots, service packages, and contact paths aligned before adding CRM, calendar, or payment links.
+- **Retention path:** Ongoing case-study publishing, service proof refreshes, and follow-up sequences.
+- **Public boundary:** Do not publish projections, price promises, or buyer-specific contract assumptions in this repository.
 
 ## Acquisition Channels
 

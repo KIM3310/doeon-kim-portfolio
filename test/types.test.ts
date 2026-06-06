@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import type { CommercialOffer, Project, Profile, SkillCategory } from '../types';
+import type { CommercialOffer, Project, Profile, RevenueChannel, SkillCategory } from '../types';
 
 describe('TypeScript type contracts', () => {
   it('Project type enforces required fields', () => {
@@ -45,6 +45,21 @@ describe('TypeScript type contracts', () => {
       ctaSubject: 'Test offer',
     };
     expect(offer.proofRepos).toContain('demo-repo');
+  });
+
+  it('RevenueChannel type enforces route, activation, and proof fields', () => {
+    const channel: RevenueChannel = {
+      id: 'test-channel',
+      title: 'Test channel',
+      mode: 'Scoped paid work',
+      buyer: 'Technical buyers',
+      route: 'Portfolio proof',
+      activation: 'Run a diagnostic',
+      marginModel: 'Reuse templates before adding infrastructure',
+      proofRepos: ['demo-repo'],
+      nextStep: 'Connect an intake form',
+    };
+    expect(channel.proofRepos).toContain('demo-repo');
   });
 
   it('Profile type enforces all fields', () => {

@@ -1,12 +1,12 @@
 # Service Architecture - doeon-kim-portfolio
 
-This document defines the deployment and resource plan for turning this repository into a buyer-reviewable service. It intentionally avoids public public financial assumptions, public financial guesses, or contract assumptions.
+This document defines the deployment and resource plan for turning this repository into a buyer-reviewable service. It intentionally avoids public financial assumptions, public financial guesses, or contract assumptions.
 
 ## Commercial Role
 
 - **Lane:** Portfolio and offer router
 - **Primary buyer:** Technical evaluators, buyers, partners, and design partners
-- **First motion:** Route visitors into architecture-backed pilot conversations without public public financial assumptions
+- **First motion:** Route visitors into architecture-backed pilot conversations without public financial assumptions
 
 ## Recommended Architecture
 
@@ -45,6 +45,15 @@ Visitor or operator
 - calendar URL
 - payment link URL after setup
 - analytics token
+
+## Revenue Channel Architecture
+
+- **Primary channel:** Proof-led portfolio and lead routing
+- **Monetization route:** Portfolio service menu that routes B2B, B2C, media, and recruiting visitors to the right proof surface.
+- **Acquisition motion:** Search, GitHub, LinkedIn, YouTube proof clips, recruiters, founders, and technical buyer referrals.
+- **Activation path:** Keep demos, screenshots, service packages, and contact paths aligned before adding CRM, calendar, or payment links.
+- **Margin control:** Keep the public surface static and fast; add CRM, calendar, payment, and analytics only when inbound volume justifies it.
+- **Public boundary:** Keep revenue, pricing, and contract assumptions in private planning; this repository publishes service structure, resource needs, and technical proof only.
 
 ## Cost and Risk Controls
 

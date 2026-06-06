@@ -261,6 +261,7 @@ textarea:focus-visible,
 .hero-copy h1,
 .hero-panel h2,
 .section-heading h2,
+.revenue-card h3,
 .project-card h3,
 .capability-card h3,
 .footer-shell h2,
@@ -409,6 +410,7 @@ textarea:focus-visible,
 .credential-card,
 .offer-card,
 .offer-close,
+.revenue-card,
 .project-card,
 .capability-card,
 .footer-shell {
@@ -759,6 +761,141 @@ textarea:focus-visible,
 
 .offer-close p {
   margin: 0;
+}
+
+.revenue-architecture-section {
+  padding-top: 40px;
+}
+
+.revenue-heading {
+  max-width: 860px;
+}
+
+.revenue-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.revenue-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 18px;
+}
+
+.revenue-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.revenue-card-top span {
+  color: var(--muted-2);
+  font-size: 0.76rem;
+  font-weight: 840;
+}
+
+.revenue-card-top svg {
+  color: var(--blue);
+}
+
+.revenue-card h3 {
+  color: var(--ink);
+  font-size: clamp(1.08rem, 1.45vw, 1.45rem);
+  line-height: 1.18;
+  overflow-wrap: anywhere;
+}
+
+.revenue-mode {
+  min-height: 4.2em;
+  margin: 12px 0 14px;
+  color: var(--ink-soft);
+  line-height: 1.55;
+}
+
+.revenue-detail-list {
+  display: grid;
+  gap: 0;
+  margin: 0;
+}
+
+.revenue-detail-list div {
+  min-width: 0;
+  padding: 11px 0;
+  border-top: 1px solid rgba(228, 228, 231, 0.82);
+}
+
+.revenue-detail-list dt,
+.revenue-proof-row > span {
+  color: var(--muted-2);
+  font-size: 0.69rem;
+  font-weight: 840;
+  text-transform: uppercase;
+}
+
+.revenue-detail-list dd {
+  min-width: 0;
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 0.84rem;
+  line-height: 1.48;
+  overflow-wrap: anywhere;
+}
+
+.revenue-proof-row {
+  margin-top: 4px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(228, 228, 231, 0.82);
+}
+
+.revenue-repo-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 10px;
+}
+
+.revenue-repo-list a,
+.revenue-repo-list span {
+  max-width: 100%;
+  min-height: 27px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0 8px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.62);
+  color: var(--ink-soft);
+  font-size: 0.72rem;
+  font-weight: 740;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.revenue-repo-list a:hover {
+  border-color: rgba(0, 113, 227, 0.28);
+  background: rgba(0, 113, 227, 0.08);
+  color: var(--blue);
+}
+
+.revenue-next-step {
+  display: grid;
+  grid-template-columns: 18px minmax(0, 1fr);
+  gap: 8px;
+  align-items: start;
+  margin: auto 0 0;
+  padding-top: 16px;
+  color: var(--green);
+  font-size: 0.84rem;
+  line-height: 1.45;
+  font-weight: 720;
+}
+
+.revenue-next-step svg {
+  margin-top: 1px;
 }
 
 .experience-section {
@@ -1513,6 +1650,7 @@ textarea:focus-visible,
   .credential-card,
   .offer-card,
   .offer-close,
+  .revenue-card,
   .project-card,
   .capability-card,
   .footer-shell,
@@ -1528,6 +1666,7 @@ textarea:focus-visible,
 
 @media (max-width: 1080px) {
   .offer-grid,
+  .revenue-grid,
   .project-grid,
   .capability-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1546,6 +1685,7 @@ textarea:focus-visible,
   .outcome-row,
   .evidence-reel,
   .offer-grid,
+  .revenue-grid,
   .offer-detail-row,
   .coverage-row,
   .project-grid,
@@ -1564,6 +1704,10 @@ textarea:focus-visible,
   }
 
   .offer-buyer {
+    min-height: 0;
+  }
+
+  .revenue-mode {
     min-height: 0;
   }
 
@@ -1647,6 +1791,7 @@ textarea:focus-visible,
   .credential-card,
   .offer-card,
   .offer-close,
+  .revenue-card,
   .coverage-row,
   .project-card,
   .capability-card {

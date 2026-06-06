@@ -39,6 +39,16 @@ describe('App component', () => {
     expect(screen.getAllByRole('link', { name: /Discuss pilot/ })).toHaveLength(4);
   });
 
+  it('renders the revenue architecture channels without public financial estimates', () => {
+    render(<App />);
+    expect(screen.getByRole('button', { name: 'Revenue' })).toBeInTheDocument();
+    expect(screen.getByText('Proof surfaces grouped into realistic revenue channels')).toBeInTheDocument();
+    expect(screen.getByText('B2B diagnostics and pilots')).toBeInTheDocument();
+    expect(screen.getByText('B2C content, ads, and affiliate surfaces')).toBeInTheDocument();
+    expect(screen.getByText('YouTube and proof-led distribution')).toBeInTheDocument();
+    expect(document.body.textContent).not.toMatch(/(?:\$[0-9]|expected\s+(?:revenue|profit)|net\s+profit)/i);
+  });
+
   it('marks the overview navigation item as the initial active section', () => {
     render(<App />);
     expect(screen.getByRole('button', { name: 'Overview' })).toHaveAttribute('aria-current', 'page');

@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { CERTIFICATIONS, COMMERCIAL_OFFERS, EDUCATION, INTERX_ROLE, LIVE_SERVICE_SCREENS, MILITARY_ROLE, PROFILE, PROJECTS, REPOSITORY_DEMO_URLS, SKILLS, PORTFOLIO_REEL, PORTFOLIO_STATS, REPOSITORY_COVERAGE } from '../constants';
+import { CERTIFICATIONS, COMMERCIAL_OFFERS, EDUCATION, INTERX_ROLE, LIVE_SERVICE_SCREENS, MILITARY_ROLE, PROFILE, PROJECTS, REPOSITORY_DEMO_URLS, REVENUE_CHANNELS, SKILLS, PORTFOLIO_REEL, PORTFOLIO_STATS, REPOSITORY_COVERAGE } from '../constants';
 
 describe('PROFILE', () => {
   it('contains required fields', () => {
@@ -60,6 +60,40 @@ describe('COMMERCIAL_OFFERS', () => {
       expect(offer.deliverables.length).toBeGreaterThanOrEqual(4);
       expect(offer.proofRepos.length).toBeGreaterThanOrEqual(3);
       for (const repo of offer.proofRepos) {
+        expect(REPOSITORY_DEMO_URLS[repo], repo).toMatch(/^https:\/\//);
+      }
+    }
+  });
+});
+
+describe('REVENUE_CHANNELS', () => {
+  it('maps the portfolio into public-safe monetization channels', () => {
+    expect(REVENUE_CHANNELS).toHaveLength(6);
+    expect(REVENUE_CHANNELS.map(channel => channel.title)).toEqual([
+      'B2B diagnostics and pilots',
+      'B2B managed support retainers',
+      'B2B workflow and data automation',
+      'B2C content, ads, and affiliate surfaces',
+      'B2C app and game distribution',
+      'YouTube and proof-led distribution',
+    ]);
+
+    const channelText = REVENUE_CHANNELS
+      .map(channel => Object.values(channel).flat().join(' '))
+      .join(' ');
+    expect(channelText).toContain('AdSense');
+    expect(channelText).toContain('YouTube');
+    expect(channelText).not.toMatch(/(?:\$[0-9]|expected\s+(?:revenue|profit)|net\s+profit)/i);
+
+    for (const channel of REVENUE_CHANNELS) {
+      expect(channel.mode).toBeTruthy();
+      expect(channel.buyer).toBeTruthy();
+      expect(channel.route).toBeTruthy();
+      expect(channel.activation).toBeTruthy();
+      expect(channel.marginModel).toBeTruthy();
+      expect(channel.nextStep).toBeTruthy();
+      expect(channel.proofRepos.length).toBeGreaterThanOrEqual(2);
+      for (const repo of channel.proofRepos) {
         expect(REPOSITORY_DEMO_URLS[repo], repo).toMatch(/^https:\/\//);
       }
     }

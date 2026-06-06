@@ -1,4 +1,4 @@
-import { Project, SkillCategory, Profile, WorkExperience, EducationItem, Certification, RepositoryCoverageLane, CommercialOffer, LiveServiceScreen, PortfolioReel } from './types';
+import { Project, SkillCategory, Profile, WorkExperience, EducationItem, Certification, RepositoryCoverageLane, CommercialOffer, RevenueChannel, LiveServiceScreen, PortfolioReel } from './types';
 
 export const PROFILE: Profile = {
   name: 'KIM3310 Systems Gallery',
@@ -69,6 +69,75 @@ export const COMMERCIAL_OFFERS: CommercialOffer[] = [
     deliverables: ['Workflow map', 'Data and template boundary review', 'Signed evidence export', 'Pilot success scorecard'],
     proofRepos: ['Nexus-Hive', 'lakehouse-contract-lab', 'fab-ops-yield-control-tower', 'secure-xl2hwp-local', 'regulated-case-workbench'],
     ctaSubject: 'Governed data and document automation pilot',
+  },
+];
+
+export const REVENUE_CHANNELS: RevenueChannel[] = [
+  {
+    id: 'b2b-diagnostics-pilots',
+    title: 'B2B diagnostics and pilots',
+    mode: 'Paid discovery, scoped pilot, then implementation support.',
+    buyer: 'AI, security, platform, operations, and data leaders with an urgent workflow boundary.',
+    route: 'Portfolio proof, GitHub evidence, direct outreach, and buyer-specific diagnostic calls.',
+    activation: 'Start with a short assessment, confirm data and security limits, then ship one measurable workflow.',
+    marginModel: 'Keep scope fixed, reuse templates and evidence packs, and add cloud resources only after a real workflow needs them.',
+    proofRepos: ['aix-pilot', 'enterprise-llm-adoption-kit', 'stage-pilot', 'agent-runtime-go'],
+    nextStep: 'Add calendar routing and a private intake form when the account owner is ready.',
+  },
+  {
+    id: 'b2b-managed-support',
+    title: 'B2B managed support retainers',
+    mode: 'Recurring operating support for reliability, incident review, evals, and handoff routines.',
+    buyer: 'SOC, NOC, MSP, IDC, platform, and internal automation teams that need repeatable review loops.',
+    route: 'Follow-on support after a pilot, monthly reliability reviews, and incident-readiness workshops.',
+    activation: 'Define review cadence, reporting template, escalation boundary, and tool ownership before production traffic.',
+    marginModel: 'Standardize runbooks, dashboards, and report exports so support time stays bounded.',
+    proofRepos: ['AegisOps', 'security-threat-response-workbench', 'nw-service-assurance-workbench', 'ops-reliability-workbench'],
+    nextStep: 'Package the strongest cockpit as a managed review subscription after one design partner validates it.',
+  },
+  {
+    id: 'b2b-workflow-automation',
+    title: 'B2B workflow and data automation',
+    mode: 'Productized implementation for document, analytics, manufacturing, and regulated workflow teams.',
+    buyer: 'Back-office, analytics, manufacturing, and regulated case teams with audit-heavy manual work.',
+    route: 'Workflow audit, proof demo, template boundary review, then controlled implementation.',
+    activation: 'Connect one approved data source, one export path, and one human approval step before broad rollout.',
+    marginModel: 'Favor reusable workflow templates, signed exports, and minimal custom integration until demand is proven.',
+    proofRepos: ['Nexus-Hive', 'secure-xl2hwp-local', 'lakehouse-contract-lab', 'fab-ops-yield-control-tower'],
+    nextStep: 'Turn the most repeatable workflow into a fixed-scope package with a clear support boundary.',
+  },
+  {
+    id: 'b2c-content-affiliate',
+    title: 'B2C content, ads, and affiliate surfaces',
+    mode: 'Consumer-facing pages that can support ads, affiliate links, donations, or premium content.',
+    buyer: 'Search-driven visitors who want lightweight interpretation, reflection, or guided content.',
+    route: 'SEO pages, safe content boundaries, email capture, and optional AdSense or affiliate integrations.',
+    activation: 'Improve content quality, add policy-safe disclaimers, measure search intent, then add monetization only where it fits.',
+    marginModel: 'Keep hosting static, avoid paid infrastructure until traffic justifies it, and separate wellness content from claims.',
+    proofRepos: ['dream-interpretation-pages', 'the-savior'],
+    nextStep: 'Add analytics, content governance, and ad-policy review before enabling public ads.',
+  },
+  {
+    id: 'b2c-app-game-distribution',
+    title: 'B2C app and game distribution',
+    mode: 'Subscriptions, in-app purchases, app-store distribution, ads, or publisher-led launch paths.',
+    buyer: 'Mobile users, accessibility-focused users, casual game players, and community testers.',
+    route: 'Playable demos, TestFlight or app-store listing, creator clips, and lightweight community feedback loops.',
+    activation: 'Stabilize onboarding, retention loops, accessibility polish, and crash reporting before paid distribution.',
+    marginModel: 'Use small static or serverless surfaces first; add paid backends only for accounts, payments, or multiplayer state.',
+    proofRepos: ['SteadyTap', 'kbbq-idle-unity', 'beaver-study-orchestrator', 'quantum-workbench'],
+    nextStep: 'Choose one app for store readiness and one game for a playable public launch loop.',
+  },
+  {
+    id: 'youtube-proof-distribution',
+    title: 'YouTube and proof-led distribution',
+    mode: 'Video proof, demo walkthroughs, Shorts, and portfolio posts used as trust and acquisition channels.',
+    buyer: 'Recruiters, founders, technical buyers, creators, and teams that need to see the system work before a call.',
+    route: 'Narrated service reels, live demo clips, case-study posts, GitHub links, and portfolio entry points.',
+    activation: 'Record short proof clips after every major service update and route viewers back to the strongest demo.',
+    marginModel: 'Treat media as low-cost acquisition first; keep production repeatable and reuse existing screenshots and demos.',
+    proofRepos: ['KIM3310', 'doeon-kim-portfolio', 'aix-pilot', 'stage-pilot'],
+    nextStep: 'Publish a short proof playlist once the custom domain and calendar flow are connected.',
   },
 ];
 
