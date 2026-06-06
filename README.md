@@ -52,6 +52,7 @@ A compact public gallery that makes each system read like a product, not a scatt
 - [Conversion UX model](docs/conversion-ux-model.md) maps the buyer path, behavioral design, UI/UX direction, pricing frame, and ethical conversion guardrails.
 - [Commercial offer](docs/commercial-offer.md) packages the repository into a buyer-ready offer ladder, proof gate, outreach angle, and close path.
 - [Final readiness scorecard](docs/final-readiness-scorecard.md) records the 100/100 verification standard and current pass result.
+- [Per-repository commercialization audit](docs/per-repository-commercialization-audit.md) maps each editable repo to a service direction, revenue hypothesis, fatal blocker, and highest-value fixes.
 
 ## What Changed
 
@@ -73,6 +74,7 @@ A compact public gallery that makes each system read like a product, not a scatt
 - Added active-section navigation polish so the gallery keeps orientation while visitors move through project evidence and the repository ledger.
 - Added GitHub Pages demo surfaces for 18 previously demo-less supporting repositories and turned the coverage ledger into clickable demo routes.
 - Added a final 100/100 readiness scorecard based on clean worktrees, live demos, homepage metadata, portfolio verification, and deployed UX checks.
+- Added a per-repository commercialization audit covering service direction, expected revenue ranges, critical blockers, and priority fixes for all 35 editable coverage repositories.
 
 ## Project Lanes
 

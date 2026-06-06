@@ -23,6 +23,7 @@ const requiredFiles = [
   'components/Navbar.tsx',
   'scripts/create-evidence-reel.mjs',
   'docs/final-readiness-scorecard.md',
+  'docs/per-repository-commercialization-audit.md',
 ];
 
 const checks = [
@@ -30,6 +31,7 @@ const checks = [
   { file: 'components/Projects.tsx', mustInclude: ['PORTFOLIO_REEL', 'REPOSITORY_DEMO_URLS', '<video', 'type="video/mp4"', 'isLivePngEvidence', 'evidence/live/preview/', 'evidence/live/preview-sm/', 'type="image/webp"', 'livePreviewFor', 'liveProofPreviewFor'] },
   { file: 'components/Hero.tsx', mustInclude: ['36 live demos', 'evidence/live/preview/aix-pilot.webp', 'type="image/webp"'] },
   { file: 'docs/final-readiness-scorecard.md', mustInclude: ['Total: 100 / 100', '37 public URLs', '35 editable coverage repositories'] },
+  { file: 'docs/per-repository-commercialization-audit.md', mustInclude: ['Repository-by-Repository Audit', 'aix-pilot', 'weld-defect-vision', '12-month revenue hypothesis', 'Fatal blocker'] },
   { file: 'App.tsx', mustInclude: ['Hero', 'Experience', 'Projects', 'Skills'] },
 ];
 
