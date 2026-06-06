@@ -131,6 +131,7 @@ const metricsExpression = `(() => {
   const textOf = el => (el.textContent || el.getAttribute('aria-label') || el.getAttribute('title') || '').replace(/\\s+/g, ' ').trim();
   const all = [...document.querySelectorAll('body *')].filter(visible);
   const leafish = el => el.children.length <= 4 && !['HTML', 'BODY', 'SCRIPT', 'STYLE'].includes(el.tagName);
+  const bodyText = all.filter(leafish).map(textOf).filter(Boolean).join(' ').replace(/\\s+/g, ' ').trim();
   const overflow = all.filter(leafish).filter(el => {
     const rect = el.getBoundingClientRect();
     return rect.left < -2 || rect.right > window.innerWidth + 2;
@@ -148,7 +149,6 @@ const metricsExpression = `(() => {
     const rect = el.getBoundingClientRect();
     return rect.width > 0 && rect.height > 0 && (rect.width < 32 || rect.height < 28);
   }).slice(0, 10).map(el => ({ tag: el.tagName, text: textOf(el).slice(0, 80), width: Math.round(el.getBoundingClientRect().width), height: Math.round(el.getBoundingClientRect().height) }));
-  const bodyText = (document.body?.textContent || '').replace(/\\s+/g, ' ').trim();
   const h1 = [...document.querySelectorAll('h1')].map(textOf).filter(Boolean).slice(0, 3);
   return {
     location: location.href,
