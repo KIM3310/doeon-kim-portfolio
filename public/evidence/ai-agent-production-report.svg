@@ -1,0 +1,32 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="720" fill="#F5F5F7"/>
+  <rect x="54" y="44" width="1172" height="632" rx="24" fill="#FFFFFF" stroke="#DADAE0"/>
+  <text x="92" y="106" fill="#0071E3" font-family="Helvetica, Arial, sans-serif" font-size="24" font-weight="800">AI AGENT PRODUCTION LAB</text>
+  <text x="92" y="152" fill="#1D1D1F" font-family="Helvetica, Arial, sans-serif" font-size="44" font-weight="800">Credential-free readiness report</text>
+  <text x="92" y="190" fill="#6E6E73" font-family="Helvetica, Arial, sans-serif" font-size="20">Planner fixtures, trace events, cost accounting, assertions, and static HTML evidence.</text>
+
+  <rect x="92" y="246" width="340" height="310" rx="18" fill="#FBFBFD" stroke="#D8D8DE"/>
+  <text x="124" y="292" fill="#1D1D1F" font-family="Helvetica, Arial, sans-serif" font-size="26" font-weight="800">Evaluation Gates</text>
+  <rect x="124" y="326" width="252" height="22" rx="11" fill="#0071E3"/>
+  <rect x="124" y="372" width="218" height="22" rx="11" fill="#12805C"/>
+  <rect x="124" y="418" width="284" height="22" rx="11" fill="#A86D00"/>
+  <text x="124" y="482" fill="#3A3A3C" font-family="Helvetica, Arial, sans-serif" font-size="20">planner fixture pass</text>
+  <text x="124" y="516" fill="#3A3A3C" font-family="Helvetica, Arial, sans-serif" font-size="20">trace contract pass</text>
+
+  <rect x="470" y="246" width="340" height="310" rx="18" fill="#F8FFFC" stroke="#BFE8D9"/>
+  <text x="502" y="292" fill="#1D1D1F" font-family="Helvetica, Arial, sans-serif" font-size="26" font-weight="800">Cost + Trace</text>
+  <text x="502" y="344" fill="#12805C" font-family="Helvetica, Arial, sans-serif" font-size="54" font-weight="800">$0.00</text>
+  <text x="502" y="384" fill="#3A3A3C" font-family="Helvetica, Arial, sans-serif" font-size="20">offline deterministic run</text>
+  <text x="502" y="438" fill="#3A3A3C" font-family="Helvetica, Arial, sans-serif" font-size="20">events: plan, tool, assert</text>
+  <text x="502" y="472" fill="#3A3A3C" font-family="Helvetica, Arial, sans-serif" font-size="20">report: HTML artifact</text>
+  <text x="502" y="506" fill="#3A3A3C" font-family="Helvetica, Arial, sans-serif" font-size="20">secrets: none required</text>
+
+  <rect x="848" y="246" width="286" height="310" rx="18" fill="#F8FBFF" stroke="#C7DDF7"/>
+  <text x="880" y="292" fill="#1D1D1F" font-family="Helvetica, Arial, sans-serif" font-size="26" font-weight="800">Release View</text>
+  <text x="880" y="344" fill="#3A3A3C" font-family="Helvetica, Arial, sans-serif" font-size="20">1. Scenario</text>
+  <text x="880" y="384" fill="#3A3A3C" font-family="Helvetica, Arial, sans-serif" font-size="20">2. Trace</text>
+  <text x="880" y="424" fill="#3A3A3C" font-family="Helvetica, Arial, sans-serif" font-size="20">3. Assertions</text>
+  <text x="880" y="464" fill="#3A3A3C" font-family="Helvetica, Arial, sans-serif" font-size="20">4. Report</text>
+  <rect x="880" y="498" width="180" height="28" rx="14" fill="#0071E3"/>
+  <text x="908" y="518" fill="#FFFFFF" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="700">READY TO REVIEW</text>
+</svg>

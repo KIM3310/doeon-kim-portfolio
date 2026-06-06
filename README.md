@@ -68,7 +68,7 @@ A compact public gallery that makes each system read like a product, not a scatt
 - Kept static evidence assets for visual context without requiring live credentials.
 - Added a liquid-glass progressive disclosure pass so dense project, experience, outcome, and credential details stay reviewable without overwhelming the first scan.
 - Tightened filter chips, disclosure controls, and responsive glass surfaces for cleaner keyboard and mobile behavior.
-- Added active-section navigation polish so the gallery keeps orientation while visitors move through the proof wall and project ledger.
+- Added active-section navigation polish so the gallery keeps orientation while visitors move through project evidence and the repository ledger.
 
 ## Project Lanes
 

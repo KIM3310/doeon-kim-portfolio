@@ -1,0 +1,37 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="720" fill="#F5F5F7"/>
+  <rect x="56" y="48" width="1168" height="624" rx="24" fill="white" stroke="#D8D8DE"/>
+  <text x="92" y="112" fill="#0071E3" font-family="Helvetica, Arial, sans-serif" font-size="24" font-weight="800">AGENT RUNTIME GO</text>
+  <text x="92" y="158" fill="#1D1D1F" font-family="Helvetica, Arial, sans-serif" font-size="46" font-weight="800">Deterministic tool execution trace</text>
+  <text x="92" y="196" fill="#5F6368" font-family="Helvetica, Arial, sans-serif" font-size="20">Provider adapters, retries, tool contracts, and audit-friendly state transitions.</text>
+
+  <rect x="94" y="252" width="258" height="236" rx="18" fill="#F8FBFF" stroke="#C7DDF7"/>
+  <rect x="386" y="252" width="258" height="236" rx="18" fill="#F8FFFC" stroke="#BFE8D9"/>
+  <rect x="678" y="252" width="258" height="236" rx="18" fill="#FFFCF4" stroke="#E7D09B"/>
+  <rect x="970" y="252" width="160" height="236" rx="18" fill="#FBFBFD" stroke="#D8D8DE"/>
+
+  <text x="124" y="306" fill="#1D1D1F" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="800">Plan</text>
+  <text x="416" y="306" fill="#1D1D1F" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="800">Execute</text>
+  <text x="708" y="306" fill="#1D1D1F" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="800">Recover</text>
+  <text x="1000" y="306" fill="#1D1D1F" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="800">Audit</text>
+
+  <text x="124" y="352" fill="#3A3A3C" font-family="Helvetica, Arial, sans-serif" font-size="20">Input normalized</text>
+  <text x="124" y="386" fill="#3A3A3C" font-family="Helvetica, Arial, sans-serif" font-size="20">Tool schema selected</text>
+  <text x="124" y="420" fill="#3A3A3C" font-family="Helvetica, Arial, sans-serif" font-size="20">Budget attached</text>
+  <text x="416" y="352" fill="#3A3A3C" font-family="Helvetica, Arial, sans-serif" font-size="20">Adapter boundary</text>
+  <text x="416" y="386" fill="#3A3A3C" font-family="Helvetica, Arial, sans-serif" font-size="20">Timeout envelope</text>
+  <text x="416" y="420" fill="#3A3A3C" font-family="Helvetica, Arial, sans-serif" font-size="20">Typed result</text>
+  <text x="708" y="352" fill="#3A3A3C" font-family="Helvetica, Arial, sans-serif" font-size="20">Bounded retry</text>
+  <text x="708" y="386" fill="#3A3A3C" font-family="Helvetica, Arial, sans-serif" font-size="20">Failure reason</text>
+  <text x="708" y="420" fill="#3A3A3C" font-family="Helvetica, Arial, sans-serif" font-size="20">No silent success</text>
+  <text x="1000" y="352" fill="#3A3A3C" font-family="Helvetica, Arial, sans-serif" font-size="20">Trace ID</text>
+  <text x="1000" y="386" fill="#3A3A3C" font-family="Helvetica, Arial, sans-serif" font-size="20">Step log</text>
+  <text x="1000" y="420" fill="#3A3A3C" font-family="Helvetica, Arial, sans-serif" font-size="20">Replayable</text>
+
+  <path d="M352 370H386" stroke="#0071E3" stroke-width="5" stroke-linecap="round"/>
+  <path d="M644 370H678" stroke="#12805C" stroke-width="5" stroke-linecap="round"/>
+  <path d="M936 370H970" stroke="#A86D00" stroke-width="5" stroke-linecap="round"/>
+
+  <rect x="92" y="552" width="1038" height="58" rx="14" fill="#1D1D1F"/>
+  <text x="124" y="588" fill="#F5F5F7" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="700">Proof posture: deterministic orchestration, explicit boundaries, and operator-readable traces.</text>
+</svg>

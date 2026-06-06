@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useMemo } from 'react';
-import { LIVE_SERVICE_SCREENS, PORTFOLIO_REEL, PROJECTS, REPOSITORY_COVERAGE } from '../constants';
+import { PORTFOLIO_REEL, PROJECTS, REPOSITORY_COVERAGE } from '../constants';
 import { BadgeDollarSign, BriefcaseBusiness, ChevronDown, ChevronUp, ExternalLink, FileText, Film, Github, LockKeyhole, Target, Volume2 } from 'lucide-react';
 
 const TOP_TAGS = 8;
@@ -7,6 +7,12 @@ const LIVE_IMAGE_WIDTH = 1440;
 const LIVE_IMAGE_HEIGHT = 1000;
 const livePreviewFor = (asset: string) => asset.replace('evidence/live/', 'evidence/live/preview/').replace(/\.png$/, '.webp');
 const liveProofPreviewFor = (asset: string) => asset.replace('evidence/live/', 'evidence/live/preview-sm/').replace(/\.png$/, '.webp');
+const isLivePngEvidence = (asset: string) => asset.startsWith('evidence/live/') && asset.endsWith('.png');
+const projectEvidenceClassName = (evidence?: string) => [
+  'project-evidence',
+  !evidence ? 'project-evidence-placeholder' : '',
+  evidence && !isLivePngEvidence(evidence) ? 'is-diagram' : '',
+].filter(Boolean).join(' ');
 
 const Projects: React.FC = () => {
   const [filter, setFilter] = useState<string | null>(null);
@@ -30,6 +36,49 @@ const Projects: React.FC = () => {
 
   const visibleTags = showAllTags ? allTags : allTags.slice(0, TOP_TAGS);
   const filtered = filter ? PROJECTS.filter(p => p.tech.includes(filter)) : PROJECTS;
+
+  const renderProjectEvidence = (project: (typeof PROJECTS)[number]) => {
+    if (!project.evidence) {
+      return (
+        <div aria-hidden="true">
+          <span />
+          <span />
+          <span />
+        </div>
+      );
+    }
+
+    if (isLivePngEvidence(project.evidence)) {
+      return (
+        <picture>
+          <source
+            srcSet={`${import.meta.env.BASE_URL}${liveProofPreviewFor(project.evidence)} 420w, ${import.meta.env.BASE_URL}${livePreviewFor(project.evidence)} 720w`}
+            sizes="(max-width: 900px) calc(100vw - 50px), (max-width: 1080px) 45vw, 31vw"
+            type="image/webp"
+          />
+          <img
+            src={`${import.meta.env.BASE_URL}${project.evidence}`}
+            alt={`${project.title} visual evidence`}
+            loading="lazy"
+            decoding="async"
+            width={LIVE_IMAGE_WIDTH}
+            height={LIVE_IMAGE_HEIGHT}
+          />
+        </picture>
+      );
+    }
+
+    return (
+      <img
+        src={`${import.meta.env.BASE_URL}${project.evidence}`}
+        alt={`${project.title} visual evidence`}
+        loading="lazy"
+        decoding="async"
+        width={1280}
+        height={720}
+      />
+    );
+  };
 
   return (
     <section id="projects" className="section-shell">
@@ -72,46 +121,6 @@ const Projects: React.FC = () => {
           </div>
         </div>
 
-        <div className="live-proof-wall" aria-label="Latest deployed service screenshots">
-          <div className="live-proof-head">
-            <span>Latest live proof</span>
-            <strong>{LIVE_SERVICE_SCREENS.length} deployed screens validated Jun 4, 2026 KST</strong>
-          </div>
-          <div className="live-proof-grid">
-            {LIVE_SERVICE_SCREENS.map((screen, idx) => (
-              <a
-                key={screen.title}
-                className={`live-proof-item ${idx === 0 ? 'is-featured' : ''}`}
-                href={screen.url}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="live-proof-media">
-                  <picture>
-                    <source
-                      srcSet={`${import.meta.env.BASE_URL}${liveProofPreviewFor(screen.asset)} 420w, ${import.meta.env.BASE_URL}${livePreviewFor(screen.asset)} 720w`}
-                      sizes="(max-width: 640px) 78vw, (max-width: 1080px) 25vw, 14vw"
-                      type="image/webp"
-                    />
-                    <img
-                      src={`${import.meta.env.BASE_URL}${screen.asset}`}
-                      alt=""
-                      loading="lazy"
-                      decoding="async"
-                      width={LIVE_IMAGE_WIDTH}
-                      height={LIVE_IMAGE_HEIGHT}
-                    />
-                  </picture>
-                </span>
-                <span className="live-proof-meta">
-                  <strong>{screen.title}</strong>
-                  <em>{screen.scope}</em>
-                </span>
-              </a>
-            ))}
-          </div>
-        </div>
-
         <div className="filter-bar">
           <button
             type="button"
@@ -151,30 +160,8 @@ const Projects: React.FC = () => {
                 <span>{String(idx + 1).padStart(2, '0')}</span>
                 <div className="project-mark" />
               </div>
-              <div className={`project-evidence ${project.evidence ? '' : 'project-evidence-placeholder'}`}>
-                {project.evidence ? (
-                  <picture>
-                    <source
-                      srcSet={`${import.meta.env.BASE_URL}${liveProofPreviewFor(project.evidence)} 420w, ${import.meta.env.BASE_URL}${livePreviewFor(project.evidence)} 720w`}
-                      sizes="(max-width: 900px) calc(100vw - 50px), (max-width: 1080px) 45vw, 31vw"
-                      type="image/webp"
-                    />
-                    <img
-                      src={`${import.meta.env.BASE_URL}${project.evidence}`}
-                      alt={`${project.title} visual evidence`}
-                      loading="lazy"
-                      decoding="async"
-                      width={LIVE_IMAGE_WIDTH}
-                      height={LIVE_IMAGE_HEIGHT}
-                    />
-                  </picture>
-                ) : (
-                  <div aria-hidden="true">
-                    <span />
-                    <span />
-                    <span />
-                  </div>
-                )}
+              <div className={projectEvidenceClassName(project.evidence)}>
+                {renderProjectEvidence(project)}
               </div>
               {project.access === 'private' && (
                 <span className="private-badge"><LockKeyhole size={13} /> Private case study</span>
@@ -243,7 +230,7 @@ const Projects: React.FC = () => {
           <div className="coverage-intro">
             <span>Coverage ledger</span>
             <h3>35 editable repositories, one commercial story</h3>
-            <p>The visual cards stay selective; this ledger tracks the current editable repo set, live proof surfaces, buyer route, review signal, and safety boundary.</p>
+            <p>The visual cards carry the proof surface; this ledger tracks the current editable repo set, buyer route, review signal, and safety boundary.</p>
           </div>
           <div className="coverage-list">
             {REPOSITORY_COVERAGE.map(lane => (

@@ -9,9 +9,9 @@ Captured current public service screenshots with Playwright/Chromium and kept on
 Latest refresh: 2026-06-03 14:47 KST. All 18 listed service screens were recaptured at 1440x1000 from their deployed URLs.
 Display previews are stored as optimized WebP files under `public/evidence/live/preview/`, with smaller proof-strip previews under `public/evidence/live/preview-sm/`; the PNG files remain the review-grade originals.
 
-UI validation: 2026-06-04 KST. The portfolio now presents these screens inside the liquid-glass proof wall while keeping dense project and commercial details behind progressive disclosure controls.
+UI validation: 2026-06-06 KST. The portfolio now presents visual proof inside project cards and the narrated evidence reel while keeping dense commercial details behind progressive disclosure controls.
 
-Evidence reel refresh: 2026-06-06 KST. A narrated English TTS MP4 was generated from representative live service screenshots and the current 35-repository audit posture. The site embeds `public/evidence/portfolio-reel/kim3310-systems-gallery-reel.mp4`, poster frame, and transcript above the live proof wall.
+Evidence reel refresh: 2026-06-06 KST. A narrated English TTS MP4 was generated from representative live service screenshots and the current 35-repository audit posture. The site embeds `public/evidence/portfolio-reel/kim3310-systems-gallery-reel.mp4`, poster frame, and transcript above the project card grid.
 
 ## Current GitHub Surface
 

@@ -1,0 +1,26 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="720" fill="#F6F8FB"/>
+  <rect x="56" y="48" width="1168" height="624" rx="24" fill="#FFFFFF" stroke="#D8DDE8"/>
+  <text x="92" y="112" fill="#0071E3" font-family="Helvetica, Arial, sans-serif" font-size="24" font-weight="800">RETINA SCAN AI</text>
+  <text x="92" y="158" fill="#1D1D1F" font-family="Helvetica, Arial, sans-serif" font-size="44" font-weight="800">Research validation surface</text>
+  <text x="92" y="196" fill="#6E6E73" font-family="Helvetica, Arial, sans-serif" font-size="20">Classification workflow with explainability, risk notes, model cards, and non-clinical boundaries.</text>
+
+  <circle cx="292" cy="390" r="142" fill="#101827"/>
+  <circle cx="292" cy="390" r="104" fill="#7C3AED" fill-opacity="0.3" stroke="#A78BFA" stroke-width="10"/>
+  <circle cx="292" cy="390" r="54" fill="#F97316" fill-opacity="0.34" stroke="#FDBA74" stroke-width="8"/>
+  <path d="M180 390C224 340 360 338 404 390C360 444 226 442 180 390Z" stroke="#F8FAFC" stroke-width="6" fill="none"/>
+
+  <rect x="506" y="252" width="286" height="276" rx="18" fill="#FBFBFD" stroke="#D8DDE8"/>
+  <text x="538" y="302" fill="#1D1D1F" font-family="Helvetica, Arial, sans-serif" font-size="26" font-weight="800">Model Card</text>
+  <text x="538" y="356" fill="#3A3A3C" font-family="Helvetica, Arial, sans-serif" font-size="20">dataset caveats</text>
+  <text x="538" y="394" fill="#3A3A3C" font-family="Helvetica, Arial, sans-serif" font-size="20">validation split</text>
+  <text x="538" y="432" fill="#3A3A3C" font-family="Helvetica, Arial, sans-serif" font-size="20">explainability artifact</text>
+  <text x="538" y="470" fill="#A86D00" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="800">not clinical advice</text>
+
+  <rect x="836" y="252" width="298" height="276" rx="18" fill="#F8FFFC" stroke="#BFE8D9"/>
+  <text x="868" y="302" fill="#1D1D1F" font-family="Helvetica, Arial, sans-serif" font-size="26" font-weight="800">Review Flow</text>
+  <text x="868" y="356" fill="#3A3A3C" font-family="Helvetica, Arial, sans-serif" font-size="20">1. ingest image</text>
+  <text x="868" y="394" fill="#3A3A3C" font-family="Helvetica, Arial, sans-serif" font-size="20">2. classify research label</text>
+  <text x="868" y="432" fill="#3A3A3C" font-family="Helvetica, Arial, sans-serif" font-size="20">3. attach risk note</text>
+  <text x="868" y="470" fill="#12805C" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="800">4. reviewer signoff</text>
+</svg>

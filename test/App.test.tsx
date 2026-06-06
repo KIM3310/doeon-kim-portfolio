@@ -61,4 +61,11 @@ describe('App component', () => {
     expect(screen.getByText('English TTS')).toBeInTheDocument();
     expect(screen.getByRole('link', { name: /Transcript/ })).toBeInTheDocument();
   });
+
+  it('keeps project evidence cards as the primary visual proof surface', () => {
+    render(<App />);
+    expect(screen.queryByText('Latest live proof')).not.toBeInTheDocument();
+    expect(screen.getByAltText('agent-runtime-go visual evidence')).toBeInTheDocument();
+    expect(screen.getByAltText('retina-scan-ai visual evidence')).toBeInTheDocument();
+  });
 });

@@ -71,6 +71,7 @@ describe('PROJECTS', () => {
       expect(p.title).toBeTruthy();
       expect(p.description).toBeTruthy();
       expect(p.tech.length).toBeGreaterThan(0);
+      expect(p.evidence).toBeTruthy();
       expect(p.market).toBeTruthy();
       expect(p.reviewSignal).toBeTruthy();
       expect(p.commercialPath).toBeTruthy();
@@ -92,14 +93,19 @@ describe('PROJECTS', () => {
     expect(PROJECTS.find(p => p.title === 'aix-pilot')?.evidence).toContain('live/aix-pilot');
     expect(PROJECTS.find(p => p.title === 'aix-pilot')?.commercialPath).toContain('subscription');
     expect(PROJECTS.find(p => p.title === 'stage-pilot')?.description).toContain('Tool-call reliability runtime');
+    expect(PROJECTS.find(p => p.title === 'agent-runtime-go')?.evidence).toContain('agent-runtime-trace');
+    expect(PROJECTS.find(p => p.title === 'ai-agent-production-lab')?.evidence).toContain('ai-agent-production-report');
+    expect(PROJECTS.find(p => p.title === 'lakehouse-contract-lab')?.evidence).toContain('lakehouse-contract-board');
     expect(PROJECTS.find(p => p.title === 'AegisOps')?.evidence).toContain('live/aegisops');
+    expect(PROJECTS.find(p => p.title === 'weld-defect-vision')?.evidence).toContain('weld-defect-vision-board');
     expect(PROJECTS.find(p => p.title === 'retina-scan-ai')?.description).toContain('Medical-image research workflow');
+    expect(PROJECTS.find(p => p.title === 'retina-scan-ai')?.evidence).toContain('retina-scan-ai-research');
     expect(PROJECTS.find(p => p.title === 'SteadyTap')?.description).toContain('Accessibility coaching app');
   });
 });
 
 describe('LIVE_SERVICE_SCREENS', () => {
-  it('tracks the refreshed live proof wall', () => {
+  it('tracks the refreshed live screenshot assets', () => {
     expect(LIVE_SERVICE_SCREENS).toHaveLength(18);
     expect(LIVE_SERVICE_SCREENS.at(0)?.title).toBe('aix-pilot');
     expect(LIVE_SERVICE_SCREENS.map(screen => screen.asset)).toContain('evidence/live/upstage-docuagent.png');

@@ -26,7 +26,7 @@ const requiredFiles = [
 
 const checks = [
   { file: 'constants.ts', mustInclude: ['PROFILE', 'PROJECTS', 'LIVE_SERVICE_SCREENS', 'PORTFOLIO_REEL', 'REPOSITORY_COVERAGE', 'SKILLS', 'CURRENT_ROLE', 'MILITARY_ROLE', 'CERTIFICATIONS', 'BDES', 'Korea National Open University', 'InterX', 'evidence/live/aix-pilot.png', 'evidence/live/twincity-ui.png', 'evidence/portfolio-reel/kim3310-systems-gallery-reel.mp4', 'commercialPath', 'reviewSignal', 'Product surfaces'] },
-  { file: 'components/Projects.tsx', mustInclude: ['PORTFOLIO_REEL', '<video', 'type="video/mp4"', 'evidence/live/preview/', 'evidence/live/preview-sm/', 'type="image/webp"', 'livePreviewFor', 'liveProofPreviewFor'] },
+  { file: 'components/Projects.tsx', mustInclude: ['PORTFOLIO_REEL', '<video', 'type="video/mp4"', 'isLivePngEvidence', 'evidence/live/preview/', 'evidence/live/preview-sm/', 'type="image/webp"', 'livePreviewFor', 'liveProofPreviewFor'] },
   { file: 'components/Hero.tsx', mustInclude: ['evidence/live/preview/aix-pilot.webp', 'type="image/webp"'] },
   { file: 'App.tsx', mustInclude: ['Hero', 'Experience', 'Projects', 'Skills'] },
 ];
@@ -85,6 +85,19 @@ if (!existsSync(previewSmallDir)) {
   if (previewSmallFiles.length !== EXPECTED_LIVE_SCREEN_COUNT) failures.push(`Expected ${EXPECTED_LIVE_SCREEN_COUNT} small preview WebP files, found ${previewSmallFiles.length}`);
   if (previewBytes > MAX_PREVIEW_BYTES) failures.push(`Live preview budget exceeded: ${previewBytes} bytes`);
   if (previewSmallBytes > MAX_SMALL_PREVIEW_BYTES) failures.push(`Small live preview budget exceeded: ${previewSmallBytes} bytes`);
+}
+
+const constantsText = readFileSync(resolve(root, 'constants.ts'), 'utf8');
+const projectsText = constantsText.split('export const PROJECTS: Project[] = [')[1]?.split('export const REPOSITORY_COVERAGE')[0] ?? '';
+const projectTitles = [...projectsText.matchAll(/title: '([^']+)'/g)].map(match => match[1]);
+const projectEvidencePaths = [...projectsText.matchAll(/evidence: '([^']+)'/g)].map(match => match[1]);
+
+if (projectEvidencePaths.length !== projectTitles.length) {
+  failures.push(`Every project must have visual evidence: ${projectEvidencePaths.length}/${projectTitles.length}`);
+}
+for (const evidence of projectEvidencePaths) {
+  const full = resolve(root, 'public', evidence);
+  if (!existsSync(full)) failures.push(`Missing project evidence asset: ${evidence}`);
 }
 
 const reelDir = resolve(root, 'public/evidence/portfolio-reel');
