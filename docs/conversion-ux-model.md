@@ -50,7 +50,7 @@ This note specializes the repository for service launch. It combines product str
 ## Conversion Path
 
 - Risk-reversing entry: Consulting lead-gen site (Not sold directly) with one acceptance metric.
-- Pilot: Talent-facing proof surface ($3k-$15k advisory entry project) using buyer-approved data and named operators.
+- Pilot: Talent-facing proof surface (scope after buyer intake) using buyer-approved data and named operators.
 - Recurring layer: Partnership demo router (buyer-approved implementation diagnostic from flagship lane) for monitoring, governance, support, or managed review.
 
 ## Scope Frame

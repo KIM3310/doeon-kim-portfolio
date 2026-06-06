@@ -225,7 +225,7 @@ describe('PORTFOLIO_REEL', () => {
     expect(PORTFOLIO_REEL.video).toBe('evidence/portfolio-reel/kim3310-systems-gallery-reel.mp4');
     expect(PORTFOLIO_REEL.poster).toContain('kim3310-systems-gallery-reel-poster.png');
     expect(PORTFOLIO_REEL.transcript).toContain('transcript.txt');
-    expect(PORTFOLIO_REEL.generatedAt).toBe('2026-06-06 KST');
+    expect(PORTFOLIO_REEL.generatedAt).toBe('2026-06-07 KST');
   });
 });
 

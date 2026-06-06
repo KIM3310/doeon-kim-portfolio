@@ -21,7 +21,7 @@ This is the buyer-ready version of the repository. It turns the technical proof 
 | Offer | Scope assumption | Buyer-facing scope |
 |---|---|---|
 | Consulting lead-gen site | Not sold directly | Add 3 flagship walkthrough videos |
-| Talent-facing proof surface | $3k-$15k advisory entry project | Create consulting CTA |
+| Talent-facing proof surface | Scope after buyer intake | Create consulting CTA |
 | Partnership demo router | buyer-approved implementation diagnostic from flagship lane | Track inbound by lane |
 
 ## Close Path

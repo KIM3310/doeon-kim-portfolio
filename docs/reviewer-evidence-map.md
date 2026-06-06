@@ -54,7 +54,7 @@ Use this page as the short path through the repository. It keeps the review grou
 | Possible offer | Working scope assumption |
 |---|---|
 | Consulting lead-gen site | Not sold directly |
-| Talent-facing proof surface | $3k-$15k advisory entry project |
+| Talent-facing proof surface | Scope after buyer intake |
 | Partnership demo router | buyer-approved implementation diagnostic from flagship lane |
 
 ## Boundaries

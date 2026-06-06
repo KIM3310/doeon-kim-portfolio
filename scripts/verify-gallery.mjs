@@ -25,6 +25,7 @@ const requiredFiles = [
   'components/Skills.tsx',
   'components/Navbar.tsx',
   'scripts/create-evidence-reel.mjs',
+  'scripts/capture-portfolio-evidence.mjs',
   'docs/final-readiness-scorecard.md',
   'docs/per-repository-commercialization-audit.md',
   'docs/repository-service-architectures.md',
@@ -33,7 +34,8 @@ const requiredFiles = [
 ];
 
 const checks = [
-  { file: 'constants.ts', mustInclude: ['PROFILE', 'PROJECTS', 'COMMERCIAL_OFFERS', 'REVENUE_CHANNELS', 'SERVICE_PACKAGES', 'LIVE_SERVICE_SCREENS', 'PORTFOLIO_REEL', 'REPOSITORY_COVERAGE', 'REPOSITORY_DEMO_URLS', 'SKILLS', 'INTERX_ROLE', 'MILITARY_ROLE', 'CERTIFICATIONS', 'BDES', 'Korea National Open University', 'InterX', 'Apr 2026 - May 2026', 'https://kim3310.github.io/agent-runtime-go/', 'https://kim3310.github.io/weld-defect-vision/', 'evidence/live/aix-pilot.png', 'evidence/live/twincity-ui.png', 'evidence/portfolio-reel/kim3310-systems-gallery-reel.mp4', 'commercialPath', 'reviewSignal', 'Product demos', 'Enterprise AI adoption sprint', 'Agent runtime reliability audit', 'B2B diagnostics and pilots', 'B2C app and game distribution', 'YouTube and proof-led distribution', 'Governed GenAI adoption sprint', 'Playable launch readiness', 'Non-diagnostic validation study', 'entryStep', 'pilotStep', 'supportModel'] },
+  { file: 'constants.ts', mustInclude: ['PROFILE', 'PROJECTS', 'COMMERCIAL_OFFERS', 'REVENUE_CHANNELS', 'SERVICE_PACKAGES', 'LIVE_SERVICE_SCREENS', 'PORTFOLIO_REEL', 'REPOSITORY_COVERAGE', 'REPOSITORY_DEMO_URLS', 'SKILLS', 'INTERX_ROLE', 'MILITARY_ROLE', 'CERTIFICATIONS', 'BDES', 'Korea National Open University', 'InterX', 'Apr 2026 - May 2026', 'https://kim3310.github.io/agent-runtime-go/', 'https://kim3310.github.io/weld-defect-vision/', 'evidence/live/aix-pilot.png', 'evidence/live/twincity-ui.png', 'evidence/portfolio-reel/kim3310-systems-gallery-reel.mp4', 'commercialPath', 'reviewSignal', 'Product demos', 'Enterprise AI adoption sprint', 'Agent runtime reliability audit', 'B2B diagnostics and pilots', 'B2C app and game distribution', 'YouTube and proof-led distribution', 'Governed GenAI adoption sprint', 'Playable launch readiness', 'Non-diagnostic validation study', 'entryStep', 'pilotStep', 'supportModel', '2026-06-07 KST'] },
+  { file: 'scripts/capture-portfolio-evidence.mjs', mustInclude: ['service-package-matrix.png', '#service-packages', 'Expected 35 package rows before capture'] },
   { file: 'components/CommercialOffers.tsx', mustInclude: ['COMMERCIAL_OFFERS', 'Discuss pilot', 'Proof repos', 'Service Launch Menu', 'contactHrefFor', 'launch stages'] },
   { file: 'components/RevenueArchitecture.tsx', mustInclude: ['REVENUE_CHANNELS', 'REPOSITORY_DEMO_URLS', 'Revenue Architecture', 'Margin control', 'Proof repos', 'Private financial assumptions'] },
   { file: 'components/ServicePackages.tsx', mustInclude: ['SERVICE_PACKAGES', 'Service Package Matrix', 'Package doc', 'Margin control', 'service-package.md'] },

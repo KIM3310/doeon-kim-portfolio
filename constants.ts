@@ -729,8 +729,8 @@ export const PORTFOLIO_REEL: PortfolioReel = {
   video: 'evidence/portfolio-reel/kim3310-systems-gallery-reel.mp4',
   poster: 'evidence/portfolio-reel/kim3310-systems-gallery-reel-poster.png',
   transcript: 'evidence/portfolio-reel/transcript.txt',
-  durationLabel: '43 sec',
-  generatedAt: '2026-06-06 KST',
+  durationLabel: '50 sec',
+  generatedAt: '2026-06-07 KST',
 };
 
 export const PROJECTS: Project[] = [

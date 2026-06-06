@@ -5,8 +5,9 @@ import { REPOSITORY_DEMO_URLS, SERVICE_PACKAGES } from '../constants';
 const packageDocHref = (repo: string) => `https://github.com/KIM3310/${repo}/blob/main/docs/service-package.md`;
 
 const packagesByLane = SERVICE_PACKAGES.reduce<Record<string, typeof SERVICE_PACKAGES>>((groups, servicePackage) => {
-  groups[servicePackage.lane] = groups[servicePackage.lane] || [];
-  groups[servicePackage.lane].push(servicePackage);
+  const lanePackages = groups[servicePackage.lane] ?? [];
+  lanePackages.push(servicePackage);
+  groups[servicePackage.lane] = lanePackages;
   return groups;
 }, {});
 

@@ -11,7 +11,7 @@ Display previews are stored as optimized WebP files under `public/evidence/live/
 
 UI validation: 2026-06-06 KST. The portfolio now presents visual proof inside project cards and the narrated evidence reel while keeping dense commercial details behind progressive disclosure controls.
 
-Evidence reel refresh: 2026-06-06 KST. A narrated English TTS MP4 was generated from representative live service screenshots and the current 35-repository audit posture. The site embeds `public/evidence/portfolio-reel/kim3310-systems-gallery-reel.mp4`, poster frame, and transcript above the project card grid.
+Evidence reel refresh: 2026-06-07 KST. A narrated English TTS MP4 was generated from representative live service screenshots, the service package matrix capture, and the current 35-repository audit posture. The site embeds `public/evidence/portfolio-reel/kim3310-systems-gallery-reel.mp4`, poster frame, and transcript above the project card grid.
 
 ## Current GitHub Surface
 
