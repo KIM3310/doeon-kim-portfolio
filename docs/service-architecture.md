@@ -49,8 +49,8 @@ Visitor or operator
 ## Revenue Channel Architecture
 
 - **Primary channel:** Proof-led portfolio and lead routing
-- **Monetization route:** Portfolio service menu that routes B2B, B2C, media, and recruiting visitors to the right proof surface.
-- **Acquisition motion:** Search, GitHub, LinkedIn, YouTube proof clips, recruiters, founders, and technical buyer referrals.
+- **Monetization route:** Portfolio service menu that routes B2B, B2C, media, talent, and technical-review visitors to the right proof surface.
+- **Acquisition motion:** Search, GitHub, LinkedIn, YouTube proof clips, technical reviewers, founders, and technical buyer referrals.
 - **Activation path:** Keep demos, screenshots, service packages, and contact paths aligned before adding CRM, calendar, or payment links.
 - **Margin control:** Keep the public surface static and fast; add CRM, calendar, payment, and analytics only when inbound volume justifies it.
 - **Public boundary:** Keep revenue, pricing, and contract assumptions in private planning; this repository publishes service structure, resource needs, and technical proof only.

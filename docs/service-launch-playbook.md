@@ -17,8 +17,8 @@ This file is a commercial planning artifact, but it does not publish public fina
 ## Revenue Channel
 
 - **Channel:** Proof-led portfolio and lead routing
-- **First commercial action:** Portfolio service menu that routes B2B, B2C, media, and recruiting visitors to the right proof surface.
-- **Conversion path:** Search, GitHub, LinkedIn, YouTube proof clips, recruiters, founders, and technical buyer referrals.
+- **First commercial action:** Portfolio service menu that routes B2B, B2C, media, talent, and technical-review visitors to the right proof surface.
+- **Conversion path:** Search, GitHub, LinkedIn, YouTube proof clips, technical reviewers, founders, and technical buyer referrals.
 - **Activation path:** Keep demos, screenshots, service packages, and contact paths aligned before adding CRM, calendar, or payment links.
 - **Retention path:** Ongoing case-study publishing, service proof refreshes, and follow-up sequences.
 - **Public boundary:** Do not publish projections, price promises, or buyer-specific contract assumptions in this repository.

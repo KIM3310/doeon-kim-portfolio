@@ -132,7 +132,7 @@ export const REVENUE_CHANNELS: RevenueChannel[] = [
     id: 'youtube-proof-distribution',
     title: 'YouTube and proof-led distribution',
     mode: 'Video proof, demo walkthroughs, Shorts, and portfolio posts used as trust and acquisition channels.',
-    buyer: 'Recruiters, founders, technical buyers, creators, and teams that need to see the system work before a call.',
+    buyer: 'Talent partners, founders, technical buyers, creators, and teams that need to see the system work before a call.',
     route: 'Narrated service reels, live demo clips, case-study posts, GitHub links, and portfolio entry points.',
     activation: 'Record short proof clips after every major service update and route viewers back to the strongest demo.',
     marginModel: 'Treat media as low-cost acquisition first; keep production repeatable and reuse existing screenshots and demos.',
