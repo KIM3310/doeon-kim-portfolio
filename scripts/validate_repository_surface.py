@@ -129,6 +129,7 @@ SKIP_PARTS = {
     "coverage",
     "dist",
     "node_modules",
+    "tmp",
 }
 
 
