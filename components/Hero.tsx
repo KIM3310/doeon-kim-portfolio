@@ -16,7 +16,7 @@ const Hero: React.FC = () => (
       <div className="hero-proof-strip" aria-label="Portfolio verification summary">
         <span>0 open PRs</span>
         <span>35 editable repos</span>
-        <span>18 live screens</span>
+        <span>36 live demos</span>
       </div>
       <div className="hero-actions">
         <a href="#projects" className="primary-action">

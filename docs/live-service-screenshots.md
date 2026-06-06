@@ -50,11 +50,11 @@ Healthy public surfaces are stored under `public/evidence/live/`.
 | signal-risk-lab | `https://signal-risk-lab.pages.dev` | `public/evidence/live/signal-risk-lab.png` |
 | Aegis-Air | `https://aegis-air.pages.dev` | `public/evidence/live/aegis-air.png` |
 
-## Cleared Public Homepage URLs
+## Recovered Supporting Demo Homepages
 
-These configured URLs did not produce a healthy service surface during repeated capture and health-check passes, were not linked from portfolio cards, and were cleared from the corresponding GitHub repository homepage metadata:
+These repositories previously had unhealthy or missing homepage URLs. They now point to healthy GitHub Pages demos and are linked from the portfolio coverage ledger:
 
-- `honeypot` - previous URL returned 404.
-- `memory-test-master-change-gate` - previous URL returned 503.
-- `ops-reliability-workbench` - previous URL returned 503.
-- `the-savior` - previous URL returned 404.
+- `honeypot` - `https://kim3310.github.io/honeypot/`
+- `memory-test-master-change-gate` - `https://kim3310.github.io/memory-test-master-change-gate/`
+- `ops-reliability-workbench` - `https://kim3310.github.io/ops-reliability-workbench/`
+- `the-savior` - `https://kim3310.github.io/the-savior/`

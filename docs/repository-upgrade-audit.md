@@ -1,6 +1,6 @@
 # Repository Upgrade Audit
 
-Date: 2026-06-04 KST
+Date: 2026-06-06 KST
 Account: KIM3310
 
 ## Scope
@@ -17,12 +17,12 @@ Audited the 35 unarchived/editable repositories cloned into the local upgrade wo
 | Archived repositories | 15 |
 | Portfolio verify | pass |
 | Portfolio build | pass |
-| Portfolio tests | 25 passing tests |
+| Portfolio tests | 30 passing tests |
 | Live screenshot pass | 18 healthy public screenshots kept |
 | Shared repository validators | 35 of 35 editable repositories passing |
 | Repo-by-repo project checks | 35 of 35 editable repositories passing |
 | Product operating models | 35 of 35 editable repositories linked from README |
-| Broken homepage metadata | cleaned from 4 repositories |
+| Repository homepage metadata | 35 editable coverage demos aligned |
 | Coverage demo routes | 35 of 35 editable coverage repositories linked |
 | New GitHub Pages demos | 18 supporting repositories deployed |
 
@@ -127,7 +127,7 @@ Every editable repository now has `docs/product-operating-model.md` linked from 
 
 Eighteen supporting repositories that previously had no public demo surface now deploy a credential-free GitHub Pages demo from `site/` via `.github/workflows/github-pages-demo.yml`. Each repository README and product operating model links its demo, and the portfolio coverage ledger routes every editable repository to a public demo URL.
 
-The deployed supporting-demo catalog is tracked in [public-demo-catalog.md](public-demo-catalog.md).
+The deployed supporting-demo catalog is tracked in [public-demo-catalog.md](public-demo-catalog.md). GitHub repository homepage metadata is aligned to the public demo URL for every editable coverage repository.
 
 ## Follow-Up Queue
 
@@ -135,4 +135,4 @@ The deployed supporting-demo catalog is tracked in [public-demo-catalog.md](publ
 
 ## Homepage Cleanup
 
-The unhealthy GitHub homepage URLs for `honeypot`, `memory-test-master-change-gate`, `ops-reliability-workbench`, and `the-savior` were cleared after repeat health checks returned 404 or 503 responses. They should only be re-added after a healthy deployment URL is available.
+Previously unhealthy homepage URLs for `honeypot`, `memory-test-master-change-gate`, `ops-reliability-workbench`, and `the-savior` have been replaced with healthy GitHub Pages demo URLs after successful deployment and browser verification.

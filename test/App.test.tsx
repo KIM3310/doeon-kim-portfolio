@@ -25,6 +25,11 @@ describe('App component', () => {
     expect(screen.getAllByText('KIM3310').length).toBeGreaterThan(0);
   });
 
+  it('renders the current demo coverage proof strip', () => {
+    render(<App />);
+    expect(screen.getByText('36 live demos')).toBeInTheDocument();
+  });
+
   it('marks the overview navigation item as the initial active section', () => {
     render(<App />);
     expect(screen.getByRole('button', { name: 'Overview' })).toHaveAttribute('aria-current', 'page');
