@@ -12,17 +12,17 @@ This is the buyer-ready version of the repository. It turns the technical proof 
 | Buyer | Founders, enterprise AI leaders, technical buyers, and talent partners. |
 | Pain wedge | A productized gallery that routes viewers into flagship demos and commercial proof lanes. |
 | Front-door offer | Consulting lead-gen site |
-| Entry price assumption | Not sold directly |
+| Entry scope | Not sold directly |
 | Proof before pitch | npm run verify passes |
 | Next buyer action | Review one proof artifact, then choose diagnostic, workshop, pilot, support, or revival path. |
 
 ## Packaged Offer Ladder
 
-| Offer | Price assumption | Buyer-facing scope |
+| Offer | Scope assumption | Buyer-facing scope |
 |---|---|---|
 | Consulting lead-gen site | Not sold directly | Add 3 flagship walkthrough videos |
 | Talent-facing proof surface | $3k-$15k advisory entry project | Create consulting CTA |
-| Partnership demo router | $8k-$30k pilot from flagship lane | Track inbound by lane |
+| Partnership demo router | buyer-approved implementation diagnostic from flagship lane | Track inbound by lane |
 
 ## Close Path
 
@@ -35,7 +35,7 @@ This is the buyer-ready version of the repository. It turns the technical proof 
 - Cognitive fluency: one buyer, one painful workflow, one proof artifact, one next step.
 - Attention design: keep the primary CTA visible and remove side quests before the proof moment.
 - Risk reversal: make the first paid step small, time-boxed, and tied to acceptance criteria.
-- Proof before persuasion: show tests, demo output, scorecards, exports, or review packs before pricing.
+- Proof before persuasion: show tests, demo output, scorecards, exports, or review packs before scope discussion.
 - Autonomy: make opt-in, data boundaries, cancellation, and unsupported claims visible.
 - Commitment: end the buyer conversation with a written pilot checklist the buyer can share internally.
 
@@ -61,9 +61,9 @@ This is the buyer-ready version of the repository. It turns the technical proof 
 
 ## Guardrails
 
-- Do not invent customers, revenue, endorsements, logos, or certifications.
+- Do not invent customers, financial outcomes, endorsements, logos, or certifications.
 - Do not claim production readiness without scoped validation, data access, monitoring, and support ownership.
-- Do not use pressure tactics, fake scarcity, hidden continuity, or confusing pricing.
+- Do not use pressure tactics, fake scarcity, hidden continuity, or confusing scope.
 - Avoid exposing private repos
 - Keep claims evidence-backed
 - Do not overstate customer traction

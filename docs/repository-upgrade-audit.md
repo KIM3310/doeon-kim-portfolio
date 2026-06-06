@@ -119,9 +119,9 @@ The final pass ran each repository's strongest available local check after norma
 - `doeon-kim-portfolio`: added liquid-glass progressive disclosure for project business fit, experience scope, outcomes, credentials, and filter-chip semantics.
 - `doeon-kim-portfolio`: added active-section navigation state and regression coverage for the initial active overview item.
 
-## Enterprise Revenue Readiness Pass
+## Enterprise Service Readiness Pass
 
-Every editable repository now has `docs/product-operating-model.md` linked from its README. Each model names the target buyer, paid wedge, review signal, delivery shape, trust boundary, local verification command, debug checklist, and smallest commercial next step.
+Every editable repository now has `docs/product-operating-model.md` linked from its README. Each model names the target buyer, service wedge, review signal, delivery shape, trust boundary, local verification command, debug checklist, and smallest service next step.
 
 ## Public Demo Expansion
 

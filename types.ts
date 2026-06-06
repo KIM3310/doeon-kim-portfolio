@@ -21,9 +21,9 @@ export interface CommercialOffer {
   id: string;
   title: string;
   buyer: string;
-  entryPrice: string;
-  pilotPrice: string;
-  recurring: string;
+  entryStep: string;
+  pilotStep: string;
+  supportModel: string;
   timeline: string;
   outcome: string;
   deliverables: string[];

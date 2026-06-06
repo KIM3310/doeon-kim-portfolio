@@ -604,13 +604,13 @@ textarea:focus-visible,
   margin: 12px 0 16px;
 }
 
-.offer-price-grid {
+.offer-stage-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 8px;
 }
 
-.offer-price-grid div {
+.offer-stage-grid div {
   min-width: 0;
   min-height: 88px;
   padding: 12px;
@@ -620,7 +620,7 @@ textarea:focus-visible,
   box-shadow: var(--inner-highlight);
 }
 
-.offer-price-grid span,
+.offer-stage-grid span,
 .offer-detail-label,
 .offer-close span {
   display: block;
@@ -630,7 +630,7 @@ textarea:focus-visible,
   text-transform: uppercase;
 }
 
-.offer-price-grid strong {
+.offer-stage-grid strong {
   display: block;
   margin-top: 8px;
   color: var(--ink);
@@ -1673,11 +1673,11 @@ textarea:focus-visible,
 
   .stat-grid,
   .experience-detail-grid,
-  .offer-price-grid {
+  .offer-stage-grid {
     grid-template-columns: 1fr;
   }
 
-  .offer-price-grid div {
+  .offer-stage-grid div {
     min-height: auto;
   }
 

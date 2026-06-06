@@ -30,10 +30,10 @@ describe('App component', () => {
     expect(screen.getByText('36 live demos')).toBeInTheDocument();
   });
 
-  it('renders the paid offer menu before the system gallery', () => {
+  it('renders the service launch menu before the system gallery', () => {
     render(<App />);
     expect(screen.getByRole('button', { name: 'Offers' })).toBeInTheDocument();
-    expect(screen.getByText('Four packages buyers can evaluate now')).toBeInTheDocument();
+    expect(screen.getByText('Four packages buyers can evaluate without public financial assumptions')).toBeInTheDocument();
     expect(screen.getByText('Enterprise AI adoption sprint')).toBeInTheDocument();
     expect(screen.getByText('Agent runtime reliability audit')).toBeInTheDocument();
     expect(screen.getAllByRole('link', { name: /Discuss pilot/ })).toHaveLength(4);

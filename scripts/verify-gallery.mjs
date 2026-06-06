@@ -25,17 +25,20 @@ const requiredFiles = [
   'scripts/create-evidence-reel.mjs',
   'docs/final-readiness-scorecard.md',
   'docs/per-repository-commercialization-audit.md',
-  'docs/revenue-launch-plan.md',
+  'docs/repository-service-architectures.md',
+  'docs/service-architecture.md',
+  'docs/service-launch-plan.md',
 ];
 
 const checks = [
-  { file: 'constants.ts', mustInclude: ['PROFILE', 'PROJECTS', 'COMMERCIAL_OFFERS', 'LIVE_SERVICE_SCREENS', 'PORTFOLIO_REEL', 'REPOSITORY_COVERAGE', 'REPOSITORY_DEMO_URLS', 'SKILLS', 'INTERX_ROLE', 'MILITARY_ROLE', 'CERTIFICATIONS', 'BDES', 'Korea National Open University', 'InterX', 'Apr 2026 - May 2026', 'https://kim3310.github.io/agent-runtime-go/', 'https://kim3310.github.io/weld-defect-vision/', 'evidence/live/aix-pilot.png', 'evidence/live/twincity-ui.png', 'evidence/portfolio-reel/kim3310-systems-gallery-reel.mp4', 'commercialPath', 'reviewSignal', 'Product demos', 'Enterprise AI adoption sprint', 'Agent runtime reliability audit'] },
-  { file: 'components/CommercialOffers.tsx', mustInclude: ['COMMERCIAL_OFFERS', 'Discuss pilot', 'Proof repos', 'Paid Offer Menu', 'contactHrefFor'] },
+  { file: 'constants.ts', mustInclude: ['PROFILE', 'PROJECTS', 'COMMERCIAL_OFFERS', 'LIVE_SERVICE_SCREENS', 'PORTFOLIO_REEL', 'REPOSITORY_COVERAGE', 'REPOSITORY_DEMO_URLS', 'SKILLS', 'INTERX_ROLE', 'MILITARY_ROLE', 'CERTIFICATIONS', 'BDES', 'Korea National Open University', 'InterX', 'Apr 2026 - May 2026', 'https://kim3310.github.io/agent-runtime-go/', 'https://kim3310.github.io/weld-defect-vision/', 'evidence/live/aix-pilot.png', 'evidence/live/twincity-ui.png', 'evidence/portfolio-reel/kim3310-systems-gallery-reel.mp4', 'commercialPath', 'reviewSignal', 'Product demos', 'Enterprise AI adoption sprint', 'Agent runtime reliability audit', 'entryStep', 'pilotStep', 'supportModel'] },
+  { file: 'components/CommercialOffers.tsx', mustInclude: ['COMMERCIAL_OFFERS', 'Discuss pilot', 'Proof repos', 'Service Launch Menu', 'contactHrefFor', 'launch stages'] },
   { file: 'components/Projects.tsx', mustInclude: ['PORTFOLIO_REEL', 'REPOSITORY_DEMO_URLS', '<video', 'type="video/mp4"', 'isLivePngEvidence', 'evidence/live/preview/', 'evidence/live/preview-sm/', 'type="image/webp"', 'livePreviewFor', 'liveProofPreviewFor'] },
   { file: 'components/Hero.tsx', mustInclude: ['36 live demos', 'evidence/live/preview/aix-pilot.webp', 'type="image/webp"'] },
   { file: 'docs/final-readiness-scorecard.md', mustInclude: ['Total: 100 / 100', '37 public URLs', '35 editable coverage repositories'] },
-  { file: 'docs/per-repository-commercialization-audit.md', mustInclude: ['Repository-by-Repository Audit', 'aix-pilot', 'weld-defect-vision', '12-month revenue hypothesis', 'Fatal blocker'] },
-  { file: 'docs/revenue-launch-plan.md', mustInclude: ['Revenue Launch Plan', 'Buy Only These First', '14-Day Revenue Push', 'Stripe', 'Calendly', 'Cloudflare'] },
+  { file: 'docs/per-repository-commercialization-audit.md', mustInclude: ['Repository-by-Repository Audit', 'aix-pilot', 'weld-defect-vision', 'Architecture priority', 'Fatal blocker'] },
+  { file: 'docs/repository-service-architectures.md', mustInclude: ['Repository Service Architectures', 'Shared Resource Stack', 'aix-pilot', 'weld-defect-vision', 'Account Information Needed'] },
+  { file: 'docs/service-launch-plan.md', mustInclude: ['Service Launch Plan', 'Buy or Configure First', '14-Day Launch Push', 'Stripe', 'Calendly', 'Cloudflare'] },
   { file: 'App.tsx', mustInclude: ['Hero', 'CommercialOffers', 'Experience', 'Projects', 'Skills'] },
 ];
 

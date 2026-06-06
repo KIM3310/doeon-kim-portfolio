@@ -53,9 +53,10 @@ describe('COMMERCIAL_OFFERS', () => {
     ]);
 
     for (const offer of COMMERCIAL_OFFERS) {
-      expect(offer.entryPrice).toMatch(/\$/);
-      expect(offer.pilotPrice).toMatch(/\$/);
-      expect(offer.recurring).toContain('/mo');
+      expect(offer.entryStep).toBeTruthy();
+      expect(offer.pilotStep).toBeTruthy();
+      expect(offer.supportModel).toBeTruthy();
+      expect(`${offer.entryStep} ${offer.pilotStep} ${offer.supportModel}`).not.toMatch(/\$/);
       expect(offer.deliverables.length).toBeGreaterThanOrEqual(4);
       expect(offer.proofRepos.length).toBeGreaterThanOrEqual(3);
       for (const repo of offer.proofRepos) {

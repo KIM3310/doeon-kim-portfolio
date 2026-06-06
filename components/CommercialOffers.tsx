@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, BadgeDollarSign, CheckCircle2, ExternalLink, Mail, Timer } from 'lucide-react';
+import { ArrowRight, CheckCircle2, ExternalLink, Layers3, Mail, Timer } from 'lucide-react';
 import { COMMERCIAL_OFFERS, PROFILE, REPOSITORY_DEMO_URLS } from '../constants';
 
 const contactHrefFor = (subject: string) => {
@@ -20,11 +20,11 @@ const CommercialOffers: React.FC = () => (
   <section id="offers" className="section-shell commercial-section">
     <div className="section-inner">
       <div className="section-heading commercial-heading">
-        <p className="eyebrow">Paid Offer Menu</p>
-        <h2>Four packages buyers can evaluate now</h2>
+        <p className="eyebrow">Service Launch Menu</p>
+        <h2>Four packages buyers can evaluate without public financial assumptions</h2>
         <p>
-          The portfolio is strongest as scoped B2B diagnostics, pilots, and recurring support around enterprise AI, runtime reliability,
-          operations handoff, and governed data or document workflows.
+          The portfolio is strongest as scoped diagnostics, pilots, and operating support around enterprise AI, runtime reliability,
+          operations handoff, and governed data or document workflows. Financial assumptions stay private until a real buyer scope exists.
         </p>
       </div>
 
@@ -33,23 +33,23 @@ const CommercialOffers: React.FC = () => (
           <article key={offer.id} className="offer-card">
             <div className="offer-card-header">
               <span className="offer-index">{String(COMMERCIAL_OFFERS.indexOf(offer) + 1).padStart(2, '0')}</span>
-              <BadgeDollarSign size={20} aria-hidden="true" />
+              <Layers3 size={20} aria-hidden="true" />
             </div>
             <h3>{offer.title}</h3>
             <p className="offer-buyer">{offer.buyer}</p>
 
-            <div className="offer-price-grid" aria-label={`${offer.title} pricing hypothesis`}>
+            <div className="offer-stage-grid" aria-label={`${offer.title} launch stages`}>
               <div>
-                <span>Entry</span>
-                <strong>{offer.entryPrice}</strong>
+                <span>First step</span>
+                <strong>{offer.entryStep}</strong>
               </div>
               <div>
                 <span>Pilot</span>
-                <strong>{offer.pilotPrice}</strong>
+                <strong>{offer.pilotStep}</strong>
               </div>
               <div>
                 <span>Support</span>
-                <strong>{offer.recurring}</strong>
+                <strong>{offer.supportModel}</strong>
               </div>
             </div>
 

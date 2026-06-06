@@ -17,15 +17,15 @@ A compact public gallery that makes each system read like a product, not a scatt
 | Lens | Definition |
 |---|---|
 | Buyer or user | Technical reviewers, AI platform teams, operations leaders, and partners evaluating product judgment. |
-| Commercial route | Route visitors into paid pilot conversations for GenAI operations, reliability audits, security operations, and governed analytics. |
-| Review signal | Each card exposes market, review signal, revenue path, live evidence, demos, and verification-friendly repository links. |
+| Commercial route | Route visitors into scoped service conversations for GenAI operations, reliability audits, security operations, and governed analytics. |
+| Review signal | Each card exposes market, review signal, service path, live evidence, demos, and verification-friendly repository links. |
 | Safety boundary | The site avoids client secrets and only displays public-safe project summaries and generated visual assets. |
 | Fast proof | `npm run verify` checks type safety, content guarantees, tests, and production build before deployment. |
 
 ## Three-Minute Proof
 
 1. Open the live gallery and scan the first flagship lane.
-2. Expand one project card and confirm it exposes market, review signal, revenue path, and verification evidence.
+2. Expand one project card and confirm it exposes market, review signal, service path, and verification evidence.
 3. Open [docs/live-service-screenshots.md](docs/live-service-screenshots.md) and [docs/repository-upgrade-audit.md](docs/repository-upgrade-audit.md).
 4. Run `npm run verify` before treating the gallery as current.
 
@@ -37,29 +37,31 @@ A compact public gallery that makes each system read like a product, not a scatt
 - **Live proof:** Current service screenshots are tracked in [docs/live-service-screenshots.md](docs/live-service-screenshots.md).
 - **Repo audit:** The 35 editable-repo validation pass is recorded in [docs/repository-upgrade-audit.md](docs/repository-upgrade-audit.md).
 - **Demo catalog:** Supporting repos without service URLs now have GitHub Pages demos listed in [docs/public-demo-catalog.md](docs/public-demo-catalog.md).
-- **Commercial read:** Use the gallery as the portfolio router for GenAI operations, incident ops, runtime reliability, and governed analytics.
+- **Service read:** Use the gallery as the portfolio router for GenAI operations, incident ops, runtime reliability, and governed analytics.
 
-## Commercialization Playbook
+## Service Architecture
 
-- [Monetization and GTM playbook](docs/monetization-playbook.md) maps the repository to buyer segments, offer ladder, pricing hypotheses, proof gates, and risk boundaries.
+- [Service architecture](docs/service-architecture.md) defines the cloud resources, account information, cost controls, and production guardrails needed to turn this repo into a scoped service without publishing public financial assumptions.
+- [Repository service architectures](docs/repository-service-architectures.md) maps all 35 editable repos to resource needs, launch sequencing, and account information.
+- [Service launch plan](docs/service-launch-plan.md) defines the account setup and 14-day launch path without public financial or value readiness assumptions.
+- [Service launch playbook](docs/service-launch-playbook.md) maps the repository to buyer segments, offer ladder, proof gates, and risk boundaries without public financial projections.
 
 ## Review Notes
 
 - [Review guide](docs/reviewer-evidence-map.md) summarizes the project angle, first files to inspect, verification commands, and known boundaries.
 - [Quality notes](docs/quality-gate.md) lists the local checks, CI surface, and release expectations for this repository.
-- [Revenue growth model](docs/revenue-growth-model.md) maps the project to an ethical revenue path, activation loop, pricing logic, and growth experiments.
+- [Growth model](docs/service-growth-model.md) maps the project to an ethical activation loop, service validation path, and growth experiments.
 - [Enterprise readiness notes](docs/enterprise-readiness.md) outlines security, data, operations, integration, and handoff expectations.
-- [Conversion UX model](docs/conversion-ux-model.md) maps the buyer path, behavioral design, UI/UX direction, pricing frame, and ethical conversion guardrails.
+- [Conversion UX model](docs/conversion-ux-model.md) maps the buyer path, behavioral design, UI/UX direction, and ethical conversion guardrails.
 - [Commercial offer](docs/commercial-offer.md) packages the repository into a buyer-ready offer ladder, proof gate, outreach angle, and close path.
 - [Final readiness scorecard](docs/final-readiness-scorecard.md) records the 100/100 verification standard and current pass result.
-- [Per-repository commercialization audit](docs/per-repository-commercialization-audit.md) maps each editable repo to a service direction, revenue hypothesis, fatal blocker, and highest-value fixes.
-- [Revenue launch plan](docs/revenue-launch-plan.md) turns the strongest repo lanes into four paid B2B packages, resource-buy rules, and a 14-day launch path.
+- [Per-repository commercialization audit](docs/per-repository-commercialization-audit.md) maps each editable repo to a service direction, architecture priority, fatal blocker, and highest-value fixes.
 
 ## What Changed
 
 - Rebuilt the UI as a light, minimalist product gallery with tighter spacing, quieter contrast, and responsive proof-first layouts.
 - Rebuilt the first screen as a compact systems gallery.
-- Added market, review-signal, and revenue-path fields to every displayed project so the gallery reads as a product portfolio, not a loose demo list.
+- Added market, review-signal, and service-path fields to every displayed project so the gallery reads as a product portfolio, not a loose demo list.
 - Foregrounded ROK Defense Communication Command MW communications squad leader experience.
 - Added InterX IT Infrastructure Operations Manager experience for Apr-May 2026.
 - Restored education, Microsoft AI School training, language, and certification details.
@@ -75,8 +77,8 @@ A compact public gallery that makes each system read like a product, not a scatt
 - Added active-section navigation polish so the gallery keeps orientation while visitors move through project evidence and the repository ledger.
 - Added GitHub Pages demo surfaces for 18 previously demo-less supporting repositories and turned the coverage ledger into clickable demo routes.
 - Added a final 100/100 readiness scorecard based on clean worktrees, live demos, homepage metadata, portfolio verification, and deployed UX checks.
-- Added a per-repository commercialization audit covering service direction, expected revenue ranges, critical blockers, and priority fixes for all 35 editable coverage repositories.
-- Added a paid-offer menu and revenue launch plan so visitors can evaluate four scoped packages before browsing the full repository gallery.
+- Added a per-repository commercialization audit covering service direction, architecture priority, critical blockers, and priority fixes for all 35 editable coverage repositories.
+- Added a service launch menu and architecture plan so visitors can evaluate four scoped packages before browsing the full repository gallery.
 
 ## Project Lanes
 
@@ -131,4 +133,8 @@ This repository includes a neutral cloud and AI engineering blueprint that maps 
 
 ## Enterprise Productization
 
-- [Product operating model](docs/product-operating-model.md) defines the buyer, paid wedge, trust boundary, operating checks, and revenue path for this repository.
+- [Product operating model](docs/product-operating-model.md) defines the buyer, paid wedge, trust boundary, operating checks, and service path for this repository.
+
+## Service Architecture
+
+- [Service architecture](docs/service-architecture.md) defines the cloud resources, account information, cost controls, and production guardrails needed to turn this repo into a scoped service without publishing public financial assumptions.

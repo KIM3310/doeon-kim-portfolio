@@ -30,14 +30,14 @@ describe('TypeScript type contracts', () => {
     expect(project.demo).toBe('https://example.com');
   });
 
-  it('CommercialOffer type enforces pricing and proof fields', () => {
+  it('CommercialOffer type enforces scope and proof fields', () => {
     const offer: CommercialOffer = {
       id: 'test-offer',
       title: 'Test offer',
       buyer: 'Technical buyers',
-      entryPrice: '$5k diagnostic',
-      pilotPrice: '$25k pilot',
-      recurring: '$2k/mo support',
+      entryStep: 'Diagnostic',
+      pilotStep: 'Pilot',
+      supportModel: 'Support',
       timeline: '2 weeks',
       outcome: 'A scoped workflow improvement',
       deliverables: ['Review pack'],

@@ -2,7 +2,7 @@
 
 Updated: 2026-05-30
 
-This note specializes the repository for revenue. It combines product strategy, UX design, behavioral economics, and neuroscience-informed attention and working-memory design in a practical way: reduce confusion, build trust, help the right user act, and avoid manipulative conversion patterns.
+This note specializes the repository for service launch. It combines product strategy, UX design, behavioral economics, and neuroscience-informed attention and working-memory design in a practical way: reduce confusion, build trust, help the right user act, and avoid manipulative conversion patterns.
 
 ## Commercial Focus
 
@@ -12,7 +12,7 @@ This note specializes the repository for revenue. It combines product strategy, 
 | Lane | Portfolio-to-lead router |
 | Primary buyer or user | Founders, enterprise AI leaders, technical buyers, and talent partners. |
 | Value wedge | A productized gallery that routes viewers into flagship demos and commercial proof lanes. |
-| Revenue model | Lead routing and credibility surface |
+| Service model | Lead routing and credibility surface |
 | Operating note | Turn visitors into focused conversations around one enterprise AI, ops, security, or data lane. |
 | Best channel | Profile README, portfolio site, pinned repositories, direct outreach, and presentation decks. |
 
@@ -51,11 +51,11 @@ This note specializes the repository for revenue. It combines product strategy, 
 
 - Risk-reversing entry: Consulting lead-gen site (Not sold directly) with one acceptance metric.
 - Pilot: Talent-facing proof surface ($3k-$15k advisory entry project) using buyer-approved data and named operators.
-- Recurring layer: Partnership demo router ($8k-$30k pilot from flagship lane) for monitoring, governance, support, or managed review.
+- Recurring layer: Partnership demo router (buyer-approved implementation diagnostic from flagship lane) for monitoring, governance, support, or managed review.
 
-## Pricing Frame
+## Scope Frame
 
-- Anchor price to the buyer's existing cost: hours lost, incidents, review delay, audit exposure, or manual handoff.
+- Anchor scope to the buyer's existing cost: hours lost, incidents, review delay, audit exposure, or manual handoff.
 - Use the first offer as risk reversal, not as a race to the bottom.
 - Put Demo clicks on the pilot scorecard.
 
@@ -67,8 +67,8 @@ This note specializes the repository for revenue. It combines product strategy, 
 
 ## Ethical Guardrails
 
-- No fake users, fake logos, fake revenue, fake benchmarks, or unverifiable endorsements.
-- No urgency timers, hidden opt-outs, forced continuity, or confusing pricing.
+- No fake users, fake logos, fake financial outcomes, fake benchmarks, or unverifiable endorsements.
+- No urgency timers, hidden opt-outs, forced continuity, or confusing scope.
 - Conversion prompts should come after value or evidence, not before.
 - Data collection should be minimal, visible, and tied to product value.
 - Avoid exposing private repos
