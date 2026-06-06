@@ -22,12 +22,14 @@ const requiredFiles = [
   'components/Skills.tsx',
   'components/Navbar.tsx',
   'scripts/create-evidence-reel.mjs',
+  'docs/final-readiness-scorecard.md',
 ];
 
 const checks = [
   { file: 'constants.ts', mustInclude: ['PROFILE', 'PROJECTS', 'LIVE_SERVICE_SCREENS', 'PORTFOLIO_REEL', 'REPOSITORY_COVERAGE', 'REPOSITORY_DEMO_URLS', 'SKILLS', 'INTERX_ROLE', 'MILITARY_ROLE', 'CERTIFICATIONS', 'BDES', 'Korea National Open University', 'InterX', 'Apr 2026 - May 2026', 'https://kim3310.github.io/agent-runtime-go/', 'https://kim3310.github.io/weld-defect-vision/', 'evidence/live/aix-pilot.png', 'evidence/live/twincity-ui.png', 'evidence/portfolio-reel/kim3310-systems-gallery-reel.mp4', 'commercialPath', 'reviewSignal', 'Product demos'] },
   { file: 'components/Projects.tsx', mustInclude: ['PORTFOLIO_REEL', 'REPOSITORY_DEMO_URLS', '<video', 'type="video/mp4"', 'isLivePngEvidence', 'evidence/live/preview/', 'evidence/live/preview-sm/', 'type="image/webp"', 'livePreviewFor', 'liveProofPreviewFor'] },
   { file: 'components/Hero.tsx', mustInclude: ['36 live demos', 'evidence/live/preview/aix-pilot.webp', 'type="image/webp"'] },
+  { file: 'docs/final-readiness-scorecard.md', mustInclude: ['Total: 100 / 100', '37 public URLs', '35 editable coverage repositories'] },
   { file: 'App.tsx', mustInclude: ['Hero', 'Experience', 'Projects', 'Skills'] },
 ];
 

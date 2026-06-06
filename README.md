@@ -51,6 +51,7 @@ A compact public gallery that makes each system read like a product, not a scatt
 - [Enterprise readiness notes](docs/enterprise-readiness.md) outlines security, data, operations, integration, and handoff expectations.
 - [Conversion UX model](docs/conversion-ux-model.md) maps the buyer path, behavioral design, UI/UX direction, pricing frame, and ethical conversion guardrails.
 - [Commercial offer](docs/commercial-offer.md) packages the repository into a buyer-ready offer ladder, proof gate, outreach angle, and close path.
+- [Final readiness scorecard](docs/final-readiness-scorecard.md) records the 100/100 verification standard and current pass result.
 
 ## What Changed
 
@@ -71,6 +72,7 @@ A compact public gallery that makes each system read like a product, not a scatt
 - Tightened filter chips, disclosure controls, and responsive glass surfaces for cleaner keyboard and mobile behavior.
 - Added active-section navigation polish so the gallery keeps orientation while visitors move through project evidence and the repository ledger.
 - Added GitHub Pages demo surfaces for 18 previously demo-less supporting repositories and turned the coverage ledger into clickable demo routes.
+- Added a final 100/100 readiness scorecard based on clean worktrees, live demos, homepage metadata, portfolio verification, and deployed UX checks.
 
 ## Project Lanes
 
