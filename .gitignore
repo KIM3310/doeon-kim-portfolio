@@ -32,3 +32,4 @@ qa/
 .codex_runs/
 .omc/
 .venv-resume/
+.wrangler/

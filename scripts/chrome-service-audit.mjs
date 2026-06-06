@@ -126,7 +126,7 @@ const metricsExpression = `(() => {
     if (el.classList?.contains('sr-only') || el.closest('[aria-hidden="true"]')) return false;
     const style = getComputedStyle(el);
     const rect = el.getBoundingClientRect();
-    return style.display !== 'none' && style.visibility !== 'hidden' && rect.width > 0 && rect.height > 0;
+    return style.display !== 'none' && style.visibility !== 'hidden' && Number(style.opacity || 1) > 0.01 && rect.width > 0 && rect.height > 0;
   };
   const textOf = el => (el.textContent || el.getAttribute('aria-label') || el.getAttribute('title') || '').replace(/\\s+/g, ' ').trim();
   const all = [...document.querySelectorAll('body *')].filter(visible);
@@ -168,7 +168,7 @@ const metricsExpression = `(() => {
       veryThin: bodyText.length < 300,
       hasMain: !!document.querySelector('main, [role="main"]'),
       hasH1: h1.length > 0,
-      hasCTA: [...document.querySelectorAll('button, a')].some(el => /demo|start|run|open|try|review|export|generate|analyze|launch|view|learn/i.test(textOf(el))),
+      hasCTA: [...document.querySelectorAll('button, a')].some(el => /demo|start|run|open|try|review|export|generate|analyze|launch|view|learn|시작|열기|보기|검토|해몽|분석|생성|실행|확인|저장|내보내기|복사/i.test(textOf(el))),
     },
     visibleButtons: [...document.querySelectorAll('button')].filter(visible).map(textOf).filter(Boolean).slice(0, 12),
     visibleLinks: [...document.querySelectorAll('a')].filter(visible).map(a => ({ text: textOf(a).slice(0, 60), href: a.getAttribute('href') })).slice(0, 12),
@@ -187,7 +187,7 @@ const interactionExpression = `(async () => {
     if (el.classList?.contains('sr-only') || el.closest('[aria-hidden="true"]')) return false;
     const style = getComputedStyle(el);
     const rect = el.getBoundingClientRect();
-    return style.display !== 'none' && style.visibility !== 'hidden' && rect.width > 0 && rect.height > 0;
+    return style.display !== 'none' && style.visibility !== 'hidden' && Number(style.opacity || 1) > 0.01 && rect.width > 0 && rect.height > 0;
   };
   const textOf = el => (el.textContent || el.getAttribute('aria-label') || el.getAttribute('title') || '').replace(/\\s+/g, ' ').trim();
   const forbidden = ${forbiddenButton.toString()};
