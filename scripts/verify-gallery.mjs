@@ -25,7 +25,7 @@ const requiredFiles = [
 ];
 
 const checks = [
-  { file: 'constants.ts', mustInclude: ['PROFILE', 'PROJECTS', 'LIVE_SERVICE_SCREENS', 'PORTFOLIO_REEL', 'REPOSITORY_COVERAGE', 'SKILLS', 'CURRENT_ROLE', 'MILITARY_ROLE', 'CERTIFICATIONS', 'BDES', 'Korea National Open University', 'InterX', 'evidence/live/aix-pilot.png', 'evidence/live/twincity-ui.png', 'evidence/portfolio-reel/kim3310-systems-gallery-reel.mp4', 'commercialPath', 'reviewSignal', 'Product surfaces'] },
+  { file: 'constants.ts', mustInclude: ['PROFILE', 'PROJECTS', 'LIVE_SERVICE_SCREENS', 'PORTFOLIO_REEL', 'REPOSITORY_COVERAGE', 'SKILLS', 'INTERX_ROLE', 'MILITARY_ROLE', 'CERTIFICATIONS', 'BDES', 'Korea National Open University', 'InterX', 'Apr 2026 - May 2026', 'evidence/live/aix-pilot.png', 'evidence/live/twincity-ui.png', 'evidence/portfolio-reel/kim3310-systems-gallery-reel.mp4', 'commercialPath', 'reviewSignal', 'Product surfaces'] },
   { file: 'components/Projects.tsx', mustInclude: ['PORTFOLIO_REEL', '<video', 'type="video/mp4"', 'isLivePngEvidence', 'evidence/live/preview/', 'evidence/live/preview-sm/', 'type="image/webp"', 'livePreviewFor', 'liveProofPreviewFor'] },
   { file: 'components/Hero.tsx', mustInclude: ['evidence/live/preview/aix-pilot.webp', 'type="image/webp"'] },
   { file: 'App.tsx', mustInclude: ['Hero', 'Experience', 'Projects', 'Skills'] },

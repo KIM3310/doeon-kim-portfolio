@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { CERTIFICATIONS, CURRENT_ROLE, EDUCATION, LIVE_SERVICE_SCREENS, MILITARY_ROLE, PROFILE, PROJECTS, SKILLS, PORTFOLIO_REEL, PORTFOLIO_STATS, REPOSITORY_COVERAGE } from '../constants';
+import { CERTIFICATIONS, EDUCATION, INTERX_ROLE, LIVE_SERVICE_SCREENS, MILITARY_ROLE, PROFILE, PROJECTS, SKILLS, PORTFOLIO_REEL, PORTFOLIO_STATS, REPOSITORY_COVERAGE } from '../constants';
 
 describe('PROFILE', () => {
   it('contains required fields', () => {
@@ -29,14 +29,16 @@ describe('PORTFOLIO_STATS', () => {
   });
 });
 
-describe('CURRENT_ROLE', () => {
+describe('INTERX_ROLE', () => {
   it('captures the InterX infrastructure operations role', () => {
-    expect(CURRENT_ROLE.company).toBe('InterX');
-    expect(CURRENT_ROLE.title).toContain('IT Infrastructure');
-    expect(CURRENT_ROLE.period).toContain('Apr 2026');
-    expect(CURRENT_ROLE.focus.join(' ')).not.toContain('AWS account');
-    expect(CURRENT_ROLE.focus.join(' ')).toContain('IPsec VPN');
-    expect(CURRENT_ROLE.focus.join(' ')).toContain('Google Workspace');
+    expect(INTERX_ROLE.company).toBe('InterX');
+    expect(INTERX_ROLE.title).toContain('IT Infrastructure');
+    expect(INTERX_ROLE.period).toBe('Apr 2026 - May 2026');
+    expect(INTERX_ROLE.period).not.toContain('Present');
+    expect(INTERX_ROLE.summary).toContain('Operated and supported');
+    expect(INTERX_ROLE.focus.join(' ')).not.toContain('AWS account');
+    expect(INTERX_ROLE.focus.join(' ')).toContain('IPsec VPN');
+    expect(INTERX_ROLE.focus.join(' ')).toContain('Google Workspace');
   });
 });
 

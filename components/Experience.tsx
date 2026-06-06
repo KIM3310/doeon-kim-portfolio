@@ -1,10 +1,10 @@
 import React from 'react';
 import { Award, BookOpen, Building2, ChevronDown, Cloud, KeyRound, Languages, LifeBuoy, Network, ShieldCheck, Workflow, type LucideIcon } from 'lucide-react';
-import { CERTIFICATIONS, CURRENT_ROLE, EDUCATION, LANGUAGES as LANGUAGE_ITEMS, MILITARY_ROLE } from '../constants';
+import { CERTIFICATIONS, INTERX_ROLE, EDUCATION, LANGUAGES as LANGUAGE_ITEMS, MILITARY_ROLE } from '../constants';
 import { WorkExperience } from '../types';
 
 const militaryIcons = [Network, ShieldCheck, KeyRound, Workflow];
-const currentIcons = [Cloud, ShieldCheck, Workflow, LifeBuoy];
+const infrastructureIcons = [Cloud, ShieldCheck, Workflow, LifeBuoy];
 
 const RoleCard: React.FC<{ role: WorkExperience; label: string }> = ({ role, label }) => (
   <article className="experience-primary">
@@ -87,7 +87,7 @@ const Experience: React.FC = () => (
         <p>
           The front-line proof is MW communications and 24/7 strategic communications operations: issue confirmation,
           network/security/server/CCTV/VMS/NVR operation, access-log and visitor-record handling, intrusion-alert monitoring,
-          emergency initial action, security readiness, and handoff discipline. The current InterX role extends that base into
+          emergency initial action, security readiness, and handoff discipline. The InterX role extended that base into
           data center, IDC, workspace, vendor, and service-desk operations.
         </p>
       </div>
@@ -110,21 +110,21 @@ const Experience: React.FC = () => (
         icon={ShieldCheck}
       />
 
-      <div className="current-role-panel">
-        <RoleCard role={CURRENT_ROLE} label="Current infrastructure operations" />
+      <div className="infrastructure-role-panel">
+        <RoleCard role={INTERX_ROLE} label="InterX infrastructure operations" />
         <DetailDisclosure
           title="Infrastructure scope"
-          caption={`${CURRENT_ROLE.focus.length} active operating lanes`}
-          items={CURRENT_ROLE.focus}
-          icons={currentIcons}
+          caption={`${INTERX_ROLE.focus.length} operating lanes`}
+          items={INTERX_ROLE.focus}
+          icons={infrastructureIcons}
           fallback={ShieldCheck}
         />
       </div>
 
       <OutcomeDisclosure
         title="Infrastructure outcomes"
-        caption={`${CURRENT_ROLE.outcomes.length} operating results`}
-        items={CURRENT_ROLE.outcomes}
+        caption={`${INTERX_ROLE.outcomes.length} operating results`}
+        items={INTERX_ROLE.outcomes}
         icon={Workflow}
       />
 

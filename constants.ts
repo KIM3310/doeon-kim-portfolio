@@ -7,7 +7,7 @@ export const PROFILE: Profile = {
   github: 'https://github.com/KIM3310',
   linkedin: 'https://www.linkedin.com/in/doeon-kim-4742a2388',
   intro:
-    'A neutral gallery of runnable systems anchored in 24/7 military MW communications, CCTV/VMS/NVR operation, access-control and intrusion-alert monitoring, current infrastructure operations, and reviewable software evidence. The focus is architecture, verification, security boundaries, digital workspace operations, and UI surfaces that can be inspected without private data.',
+    'A neutral gallery of runnable systems anchored in 24/7 military MW communications, CCTV/VMS/NVR operation, access-control and intrusion-alert monitoring, infrastructure operations, and reviewable software evidence. The focus is architecture, verification, security boundaries, digital workspace operations, and UI surfaces that can be inspected without private data.',
 };
 
 export const PORTFOLIO_STATS = [
@@ -17,13 +17,13 @@ export const PORTFOLIO_STATS = [
   { label: 'Open PRs', value: '0' },
 ] as const;
 
-export const CURRENT_ROLE: WorkExperience = {
+export const INTERX_ROLE: WorkExperience = {
   company: 'InterX',
   title: 'IT Infrastructure Operations Manager',
-  period: 'Apr 2026 - Present',
+  period: 'Apr 2026 - May 2026',
   location: 'Seoul, South Korea',
   summary:
-    'Operates and supports data-center, IDC, security, network, collaboration, and service-desk workflows for an internal business environment.',
+    'Operated and supported data-center, IDC, security, network, collaboration, and service-desk workflows for an internal business environment.',
   focus: [
     'Data center and IDC infrastructure operations',
     'Security and network operations: UTM, IPsec VPN, DRM, DLP, NAC, firewall monitoring',
@@ -31,9 +31,9 @@ export const CURRENT_ROLE: WorkExperience = {
     'IT asset, license, backup, access-right, onboarding, and helpdesk controls',
   ],
   outcomes: [
-    'Maintains digital workspace permissions, workflows, and new-hire IT onboarding setup',
-    'Improves recurring operations through Jira automation rules, process reports, and vendor coordination',
-    'Researches and test-beds new IT/SaaS solutions for security posture and operational efficiency',
+    'Maintained digital workspace permissions, workflows, and new-hire IT onboarding setup',
+    'Improved recurring operations through Jira automation rules, process reports, and vendor coordination',
+    'Researched and test-bedded new IT/SaaS solutions for security posture and operational efficiency',
   ],
 };
 

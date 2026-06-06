@@ -30,10 +30,12 @@ describe('App component', () => {
     expect(screen.getByRole('button', { name: 'Overview' })).toHaveAttribute('aria-current', 'page');
   });
 
-  it('renders the current InterX role section', () => {
+  it('renders the completed InterX role section', () => {
     render(<App />);
     expect(screen.getByText('InterX')).toBeInTheDocument();
     expect(screen.getByText('IT Infrastructure Operations Manager')).toBeInTheDocument();
+    expect(screen.getByText('Apr 2026 - May 2026')).toBeInTheDocument();
+    expect(screen.queryByText('Apr 2026 - Present')).not.toBeInTheDocument();
     expect(screen.getAllByText(/Google Workspace/).length).toBeGreaterThan(0);
   });
 

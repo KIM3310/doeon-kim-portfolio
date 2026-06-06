@@ -549,7 +549,7 @@ textarea:focus-visible,
 }
 
 .experience-layout,
-.current-role-panel {
+.infrastructure-role-panel {
   display: grid;
   grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
   gap: 16px;
@@ -708,7 +708,7 @@ textarea:focus-visible,
   margin-top: 0;
 }
 
-.current-role-panel,
+.infrastructure-role-panel,
 .credentials-grid {
   margin-top: 18px;
 }
@@ -1309,7 +1309,7 @@ textarea:focus-visible,
 @media (max-width: 900px) {
   .hero-section,
   .experience-layout,
-  .current-role-panel,
+  .infrastructure-role-panel,
   .credentials-grid,
   .outcome-row,
   .evidence-reel,
