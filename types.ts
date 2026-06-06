@@ -17,6 +17,20 @@ export interface RepositoryCoverageLane {
   repositories: string[];
 }
 
+export interface CommercialOffer {
+  id: string;
+  title: string;
+  buyer: string;
+  entryPrice: string;
+  pilotPrice: string;
+  recurring: string;
+  timeline: string;
+  outcome: string;
+  deliverables: string[];
+  proofRepos: string[];
+  ctaSubject: string;
+}
+
 export interface LiveServiceScreen {
   title: string;
   url: string;

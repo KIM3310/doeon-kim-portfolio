@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { CERTIFICATIONS, EDUCATION, INTERX_ROLE, LIVE_SERVICE_SCREENS, MILITARY_ROLE, PROFILE, PROJECTS, REPOSITORY_DEMO_URLS, SKILLS, PORTFOLIO_REEL, PORTFOLIO_STATS, REPOSITORY_COVERAGE } from '../constants';
+import { CERTIFICATIONS, COMMERCIAL_OFFERS, EDUCATION, INTERX_ROLE, LIVE_SERVICE_SCREENS, MILITARY_ROLE, PROFILE, PROJECTS, REPOSITORY_DEMO_URLS, SKILLS, PORTFOLIO_REEL, PORTFOLIO_STATS, REPOSITORY_COVERAGE } from '../constants';
 
 describe('PROFILE', () => {
   it('contains required fields', () => {
@@ -39,6 +39,29 @@ describe('REPOSITORY_DEMO_URLS', () => {
     }
     expect(REPOSITORY_DEMO_URLS['agent-runtime-go']).toBe('https://kim3310.github.io/agent-runtime-go/');
     expect(REPOSITORY_DEMO_URLS['weld-defect-vision']).toBe('https://kim3310.github.io/weld-defect-vision/');
+  });
+});
+
+describe('COMMERCIAL_OFFERS', () => {
+  it('packages the portfolio into four buyer-ready paid offers', () => {
+    expect(COMMERCIAL_OFFERS).toHaveLength(4);
+    expect(COMMERCIAL_OFFERS.map(offer => offer.title)).toEqual([
+      'Enterprise AI adoption sprint',
+      'Agent runtime reliability audit',
+      'Security and network operations cockpit',
+      'Governed data and document automation pilot',
+    ]);
+
+    for (const offer of COMMERCIAL_OFFERS) {
+      expect(offer.entryPrice).toMatch(/\$/);
+      expect(offer.pilotPrice).toMatch(/\$/);
+      expect(offer.recurring).toContain('/mo');
+      expect(offer.deliverables.length).toBeGreaterThanOrEqual(4);
+      expect(offer.proofRepos.length).toBeGreaterThanOrEqual(3);
+      for (const repo of offer.proofRepos) {
+        expect(REPOSITORY_DEMO_URLS[repo], repo).toMatch(/^https:\/\//);
+      }
+    }
   });
 });
 

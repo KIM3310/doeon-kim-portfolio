@@ -1,4 +1,4 @@
-import { Project, SkillCategory, Profile, WorkExperience, EducationItem, Certification, RepositoryCoverageLane, LiveServiceScreen, PortfolioReel } from './types';
+import { Project, SkillCategory, Profile, WorkExperience, EducationItem, Certification, RepositoryCoverageLane, CommercialOffer, LiveServiceScreen, PortfolioReel } from './types';
 
 export const PROFILE: Profile = {
   name: 'KIM3310 Systems Gallery',
@@ -16,6 +16,61 @@ export const PORTFOLIO_STATS = [
   { label: 'Product demos', value: '36 live' },
   { label: 'Open PRs', value: '0' },
 ] as const;
+
+export const COMMERCIAL_OFFERS: CommercialOffer[] = [
+  {
+    id: 'enterprise-ai-adoption',
+    title: 'Enterprise AI adoption sprint',
+    buyer: 'AI, data, security, and platform leaders rolling out GenAI under governance pressure.',
+    entryPrice: '$8k-$35k readiness sprint',
+    pilotPrice: '$50k-$150k implementation pilot',
+    recurring: '$2k-$12k/mo governance and evaluation support',
+    timeline: '2-week assessment, then 4-8 week pilot',
+    outcome: 'A controlled GenAI rollout path with RAG quality checks, DLP posture, approval gates, eval reporting, and operating handoff.',
+    deliverables: ['Readiness map', 'Risk and data-boundary review', 'Pilot acceptance criteria', 'Executive KPI readout'],
+    proofRepos: ['aix-pilot', 'enterprise-llm-adoption-kit', 'llm-onprem-deployment-kit'],
+    ctaSubject: 'Enterprise AI adoption sprint',
+  },
+  {
+    id: 'agent-runtime-reliability',
+    title: 'Agent runtime reliability audit',
+    buyer: 'Engineering teams shipping tool-calling agents, workflow automation, or internal copilots.',
+    entryPrice: '$5k-$20k reliability audit',
+    pilotPrice: '$25k-$75k eval and hardening sprint',
+    recurring: '$1k-$8k/mo benchmark and regression support',
+    timeline: '1-week failure review, then 3-6 week hardening sprint',
+    outcome: 'A clearer path from agent prototype to production with parser recovery, trace evidence, benchmark fixtures, and red-team boundaries.',
+    deliverables: ['Failure-mode report', 'Eval fixture pack', 'Trace and cost review', 'CI-ready acceptance gate'],
+    proofRepos: ['stage-pilot', 'agent-runtime-go', 'agent-orchestration-benchmark', 'ai-agent-production-lab', 'ai-security-redteam-lab'],
+    ctaSubject: 'Agent runtime reliability audit',
+  },
+  {
+    id: 'security-ops-handoff',
+    title: 'Security and network operations cockpit',
+    buyer: 'SOC, NOC, MSP, IDC, and infrastructure teams that need cleaner incident review and shift handoff.',
+    entryPrice: '$7k-$25k tabletop and workflow audit',
+    pilotPrice: '$30k-$90k operations cockpit pilot',
+    recurring: '$1.5k-$10k/mo runbook and reporting support',
+    timeline: '2-week tabletop, then 4-6 week cockpit pilot',
+    outcome: 'A practical operator surface for triage, service visibility, escalation evidence, incident replay, and post-incident reporting.',
+    deliverables: ['Tabletop scenario pack', 'Runbook export', 'Shift handoff board', 'SLA and incident report template'],
+    proofRepos: ['AegisOps', 'security-threat-response-workbench', 'nw-service-assurance-workbench', 'ops-reliability-workbench'],
+    ctaSubject: 'Security and network operations cockpit',
+  },
+  {
+    id: 'governed-data-automation',
+    title: 'Governed data and document automation pilot',
+    buyer: 'Analytics, manufacturing, Korean back-office, and regulated workflow teams with audit-heavy operations.',
+    entryPrice: '$10k-$30k diagnostic',
+    pilotPrice: '$40k-$120k workflow pilot',
+    recurring: '$2k-$15k/mo controls, templates, and support',
+    timeline: '2-week diagnostic, then 4-10 week pilot',
+    outcome: 'A buyer-specific workflow for data contracts, local document automation, manufacturing handoff, or governed analytics with reviewable evidence.',
+    deliverables: ['Workflow map', 'Data and template boundary review', 'Signed evidence export', 'Pilot success scorecard'],
+    proofRepos: ['Nexus-Hive', 'lakehouse-contract-lab', 'fab-ops-yield-control-tower', 'secure-xl2hwp-local', 'regulated-case-workbench'],
+    ctaSubject: 'Governed data and document automation pilot',
+  },
+];
 
 export const REPOSITORY_DEMO_URLS: Record<string, string> = {
   KIM3310: 'https://kim3310.github.io/doeon-kim-portfolio/',

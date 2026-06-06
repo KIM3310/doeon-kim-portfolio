@@ -30,6 +30,15 @@ describe('App component', () => {
     expect(screen.getByText('36 live demos')).toBeInTheDocument();
   });
 
+  it('renders the paid offer menu before the system gallery', () => {
+    render(<App />);
+    expect(screen.getByRole('button', { name: 'Offers' })).toBeInTheDocument();
+    expect(screen.getByText('Four packages buyers can evaluate now')).toBeInTheDocument();
+    expect(screen.getByText('Enterprise AI adoption sprint')).toBeInTheDocument();
+    expect(screen.getByText('Agent runtime reliability audit')).toBeInTheDocument();
+    expect(screen.getAllByRole('link', { name: /Discuss pilot/ })).toHaveLength(4);
+  });
+
   it('marks the overview navigation item as the initial active section', () => {
     render(<App />);
     expect(screen.getByRole('button', { name: 'Overview' })).toHaveAttribute('aria-current', 'page');
@@ -78,7 +87,7 @@ describe('App component', () => {
 
   it('links coverage repositories to public demos', () => {
     render(<App />);
-    expect(screen.getByRole('link', { name: /agent-runtime-go/ })).toHaveAttribute('href', 'https://kim3310.github.io/agent-runtime-go/');
-    expect(screen.getByRole('link', { name: /weld-defect-vision/ })).toHaveAttribute('href', 'https://kim3310.github.io/weld-defect-vision/');
+    expect(screen.getAllByRole('link', { name: /agent-runtime-go/ })[0]).toHaveAttribute('href', 'https://kim3310.github.io/agent-runtime-go/');
+    expect(screen.getAllByRole('link', { name: /weld-defect-vision/ })[0]).toHaveAttribute('href', 'https://kim3310.github.io/weld-defect-vision/');
   });
 });

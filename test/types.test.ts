@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import type { Project, Profile, SkillCategory } from '../types';
+import type { CommercialOffer, Project, Profile, SkillCategory } from '../types';
 
 describe('TypeScript type contracts', () => {
   it('Project type enforces required fields', () => {
@@ -28,6 +28,23 @@ describe('TypeScript type contracts', () => {
       commercialPath: 'Packaged starter kit',
     };
     expect(project.demo).toBe('https://example.com');
+  });
+
+  it('CommercialOffer type enforces pricing and proof fields', () => {
+    const offer: CommercialOffer = {
+      id: 'test-offer',
+      title: 'Test offer',
+      buyer: 'Technical buyers',
+      entryPrice: '$5k diagnostic',
+      pilotPrice: '$25k pilot',
+      recurring: '$2k/mo support',
+      timeline: '2 weeks',
+      outcome: 'A scoped workflow improvement',
+      deliverables: ['Review pack'],
+      proofRepos: ['demo-repo'],
+      ctaSubject: 'Test offer',
+    };
+    expect(offer.proofRepos).toContain('demo-repo');
   });
 
   it('Profile type enforces all fields', () => {
