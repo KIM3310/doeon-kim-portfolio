@@ -49,6 +49,17 @@ describe('App component', () => {
     expect(document.body.textContent).not.toMatch(/(?:\$[0-9]|expected\s+(?:revenue|profit)|net\s+profit)/i);
   });
 
+  it('renders the service package matrix for all repository packages', () => {
+    render(<App />);
+    expect(screen.getByRole('button', { name: 'Packages' })).toBeInTheDocument();
+    expect(screen.getByText('Every repository now has a buyer-ready package and polish path')).toBeInTheDocument();
+    expect(screen.getByText('35 repository packages')).toBeInTheDocument();
+    expect(screen.getByText('Governed GenAI adoption sprint')).toBeInTheDocument();
+    expect(screen.getByText('Playable launch readiness')).toBeInTheDocument();
+    expect(document.querySelectorAll('.service-package-actions a[href*="service-package.md"]').length).toBe(35);
+    expect(document.body.textContent).not.toMatch(/(?:\$[0-9]|expected\s+(?:revenue|profit)|net\s+profit)/i);
+  });
+
   it('marks the overview navigation item as the initial active section', () => {
     render(<App />);
     expect(screen.getByRole('button', { name: 'Overview' })).toHaveAttribute('aria-current', 'page');

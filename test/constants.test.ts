@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { CERTIFICATIONS, COMMERCIAL_OFFERS, EDUCATION, INTERX_ROLE, LIVE_SERVICE_SCREENS, MILITARY_ROLE, PROFILE, PROJECTS, REPOSITORY_DEMO_URLS, REVENUE_CHANNELS, SKILLS, PORTFOLIO_REEL, PORTFOLIO_STATS, REPOSITORY_COVERAGE } from '../constants';
+import { CERTIFICATIONS, COMMERCIAL_OFFERS, EDUCATION, INTERX_ROLE, LIVE_SERVICE_SCREENS, MILITARY_ROLE, PROFILE, PROJECTS, REPOSITORY_DEMO_URLS, REVENUE_CHANNELS, SERVICE_PACKAGES, SKILLS, PORTFOLIO_REEL, PORTFOLIO_STATS, REPOSITORY_COVERAGE } from '../constants';
 
 describe('PROFILE', () => {
   it('contains required fields', () => {
@@ -96,6 +96,34 @@ describe('REVENUE_CHANNELS', () => {
       for (const repo of channel.proofRepos) {
         expect(REPOSITORY_DEMO_URLS[repo], repo).toMatch(/^https:\/\//);
       }
+    }
+  });
+});
+
+describe('SERVICE_PACKAGES', () => {
+  it('packages every editable repository into a buyer-ready service path', () => {
+    const coverageRepos = new Set(REPOSITORY_COVERAGE.flatMap(lane => lane.repositories));
+    const packageRepos = new Set(SERVICE_PACKAGES.map(servicePackage => servicePackage.repo));
+    const packageText = SERVICE_PACKAGES
+      .map(servicePackage => Object.values(servicePackage).flat().join(' '))
+      .join(' ');
+
+    expect(SERVICE_PACKAGES).toHaveLength(35);
+    expect(packageRepos).toEqual(coverageRepos);
+    expect(packageText).toContain('Governed GenAI adoption sprint');
+    expect(packageText).toContain('Playable launch readiness');
+    expect(packageText).toContain('Non-diagnostic validation study');
+    expect(packageText).not.toMatch(/(?:\$[0-9]|expected\s+(?:revenue|profit)|net\s+profit)/i);
+
+    for (const servicePackage of SERVICE_PACKAGES) {
+      expect(REPOSITORY_DEMO_URLS[servicePackage.repo], servicePackage.repo).toMatch(/^https:\/\//);
+      expect(servicePackage.lane).toBeTruthy();
+      expect(servicePackage.buyer).toBeTruthy();
+      expect(servicePackage.offer).toBeTruthy();
+      expect(servicePackage.outcome).toBeTruthy();
+      expect(servicePackage.polish.length).toBeGreaterThanOrEqual(3);
+      expect(servicePackage.deliverables.length).toBeGreaterThanOrEqual(3);
+      expect(servicePackage.margin).toBeTruthy();
     }
   });
 });

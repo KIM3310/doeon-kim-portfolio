@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import type { CommercialOffer, Project, Profile, RevenueChannel, SkillCategory } from '../types';
+import type { CommercialOffer, Project, Profile, RevenueChannel, ServicePackage, SkillCategory } from '../types';
 
 describe('TypeScript type contracts', () => {
   it('Project type enforces required fields', () => {
@@ -60,6 +60,20 @@ describe('TypeScript type contracts', () => {
       nextStep: 'Connect an intake form',
     };
     expect(channel.proofRepos).toContain('demo-repo');
+  });
+
+  it('ServicePackage type enforces offer, polish, and deliverable fields', () => {
+    const servicePackage: ServicePackage = {
+      repo: 'demo-repo',
+      lane: 'Demo lane',
+      buyer: 'Technical buyers',
+      offer: 'Proof review',
+      outcome: 'A bounded service outcome',
+      polish: ['Improve onboarding', 'Clarify risk boundary', 'Add handoff checklist'],
+      deliverables: ['Review pack', 'Checklist', 'Proof link'],
+      margin: 'Reuse templates before adding infrastructure',
+    };
+    expect(servicePackage.polish).toHaveLength(3);
   });
 
   it('Profile type enforces all fields', () => {

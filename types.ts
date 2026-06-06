@@ -43,6 +43,17 @@ export interface RevenueChannel {
   nextStep: string;
 }
 
+export interface ServicePackage {
+  repo: string;
+  lane: string;
+  buyer: string;
+  offer: string;
+  outcome: string;
+  polish: string[];
+  deliverables: string[];
+  margin: string;
+}
+
 export interface LiveServiceScreen {
   title: string;
   url: string;

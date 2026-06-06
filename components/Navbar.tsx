@@ -5,6 +5,7 @@ const navItems = [
   { name: 'Overview', href: '#about' },
   { name: 'Offers', href: '#offers' },
   { name: 'Revenue', href: '#revenue-architecture' },
+  { name: 'Packages', href: '#service-packages' },
   { name: 'Experience', href: '#experience' },
   { name: 'Systems', href: '#projects' },
   { name: 'Capabilities', href: '#skills' },
