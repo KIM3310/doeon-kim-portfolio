@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">DistrictPilot AI public API readiness map</title>
+  <desc id="desc">A Snowflake feature mart readiness map linking Korean public APIs to DistrictPilot staging tables and forecast features.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f8fbff"/>
+      <stop offset="0.58" stop-color="#eef6f4"/>
+      <stop offset="1" stop-color="#fff7eb"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.86"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.58"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#34515a" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="720" rx="0" fill="url(#bg)"/>
+  <path d="M130 155 C230 86 338 108 454 144 C575 182 671 147 770 105 C894 52 1029 83 1132 168 C1225 245 1249 360 1190 468 C1125 589 970 643 794 638 C658 634 566 586 466 603 C313 629 190 590 118 498 C36 394 50 244 130 155Z" fill="#d6e9f0" opacity="0.34"/>
+  <rect x="78" y="64" width="1124" height="592" rx="34" fill="url(#glass)" stroke="#d9e5e8" filter="url(#softShadow)"/>
+  <text x="126" y="128" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="700" fill="#17252b">DistrictPilot AI</text>
+  <text x="126" y="164" font-family="Inter, Arial, sans-serif" font-size="18" fill="#51656b">Korean public API readiness mapped to Snowflake staging objects</text>
+  <rect x="958" y="92" width="150" height="42" rx="21" fill="#17333c"/>
+  <text x="982" y="119" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff">public-apis-4Kr</text>
+
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="126" y="222" width="258" height="122" rx="22" fill="#ffffff" opacity="0.82" stroke="#d8e4e7"/>
+    <text x="154" y="262" font-size="16" font-weight="700" fill="#12313a">Source Registry</text>
+    <text x="154" y="294" font-size="15" fill="#51656b">DATA_GO_KR_SERVICE_KEY</text>
+    <text x="154" y="320" font-size="15" fill="#51656b">KOSIS / TourAPI / KMA</text>
+
+    <rect x="464" y="222" width="258" height="122" rx="22" fill="#ffffff" opacity="0.82" stroke="#d8e4e7"/>
+    <text x="492" y="262" font-size="16" font-weight="700" fill="#12313a">Snowflake Staging</text>
+    <text x="492" y="294" font-size="15" fill="#51656b">STG_HOLIDAY / DEMOGRAPHICS</text>
+    <text x="492" y="320" font-size="15" fill="#51656b">STG_TOURISM / COMMERCIAL</text>
+
+    <rect x="802" y="222" width="258" height="122" rx="22" fill="#ffffff" opacity="0.82" stroke="#d8e4e7"/>
+    <text x="830" y="262" font-size="16" font-weight="700" fill="#12313a">Feature Mart</text>
+    <text x="830" y="294" font-size="15" fill="#51656b">FEATURE_MART_V2</text>
+    <text x="830" y="320" font-size="15" fill="#51656b">FORECAST_INPUT_E</text>
+
+    <path d="M394 283 H448" stroke="#6e8d94" stroke-width="3" stroke-linecap="round"/>
+    <path d="M438 273 L450 283 L438 293" fill="none" stroke="#6e8d94" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M732 283 H786" stroke="#6e8d94" stroke-width="3" stroke-linecap="round"/>
+    <path d="M776 273 L788 283 L776 293" fill="none" stroke="#6e8d94" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <rect x="126" y="420" width="1014" height="104" rx="24" fill="#17333c"/>
+    <text x="158" y="462" font-size="18" font-weight="700" fill="#ffffff">Review objects</text>
+    <text x="158" y="496" font-size="16" fill="#d7edf1">PUBLIC_API_SOURCE_REGISTRY</text>
+    <text x="448" y="496" font-size="16" fill="#d7edf1">V_PUBLIC_API_INTEGRATION_READINESS</text>
+    <text x="804" y="496" font-size="16" fill="#d7edf1">V_PUBLIC_API_SIGNAL_GROUP_COVERAGE</text>
+
+    <rect x="126" y="560" width="236" height="44" rx="22" fill="#eef8f5" stroke="#c4ddd6"/>
+    <text x="156" y="588" font-size="15" font-weight="700" fill="#265047">synthetic demo stays stable</text>
+    <rect x="390" y="560" width="236" height="44" rx="22" fill="#fff5e3" stroke="#ead6ac"/>
+    <text x="426" y="588" font-size="15" font-weight="700" fill="#6a4b18">live API keys stay external</text>
+    <rect x="654" y="560" width="236" height="44" rx="22" fill="#edf4ff" stroke="#c9d9f2"/>
+    <text x="690" y="588" font-size="15" font-weight="700" fill="#29476e">forecast retrain is gated</text>
+  </g>
+</svg>

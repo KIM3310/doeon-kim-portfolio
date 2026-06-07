@@ -30,12 +30,12 @@ const requiredFiles = [
 ];
 
 const checks = [
-  { file: 'constants.ts', mustInclude: ['PROFILE', 'PROJECTS', 'LIVE_SERVICE_SCREENS', 'PORTFOLIO_REEL', 'REPOSITORY_COVERAGE', 'REPOSITORY_DEMO_URLS', 'SKILLS', 'INTERX_ROLE', 'MILITARY_ROLE', 'CERTIFICATIONS', 'BDES', 'Korea National Open University', 'InterX', 'Apr 2026 - May 2026', 'https://kim3310.github.io/agent-runtime-go/', 'https://kim3310.github.io/weld-defect-vision/', 'evidence/live/aix-pilot.png', 'evidence/live/twincity-ui.png', 'evidence/portfolio-reel/kim3310-systems-gallery-reel.mp4', 'proofPath', 'reviewSignal', 'Product demos', '2026-06-07 KST'] },
+  { file: 'constants.ts', mustInclude: ['PROFILE', 'PROJECTS', 'LIVE_SERVICE_SCREENS', 'PORTFOLIO_REEL', 'REPOSITORY_COVERAGE', 'REPOSITORY_DEMO_URLS', 'SKILLS', 'INTERX_ROLE', 'MILITARY_ROLE', 'CERTIFICATIONS', 'BDES', 'Korea National Open University', 'InterX', 'Apr 2026 - May 2026', 'https://kim3310.github.io/agent-runtime-go/', 'https://kim3310.github.io/weld-defect-vision/', 'evidence/live/aix-pilot.png', 'evidence/live/twincity-ui.png', 'evidence/districtpilot-public-api-readiness.svg', 'evidence/portfolio-reel/kim3310-systems-gallery-reel.mp4', 'public API readiness map', 'Korean public API readiness', '/api/public-apis', '/integrations/public-apis', '15_public_api_integration_readiness.sql', 'proofPath', 'reviewSignal', 'Product demos', '2026-06-07 KST'] },
   { file: 'scripts/capture-portfolio-evidence.mjs', mustInclude: ['systems-gallery.png', '#projects', 'Expected project cards before capture'] },
   { file: 'components/Projects.tsx', mustInclude: ['PORTFOLIO_REEL', 'REPOSITORY_DEMO_URLS', '<video', 'type="video/mp4"', 'isLivePngEvidence', 'evidence/live/preview/', 'evidence/live/preview-sm/', 'type="image/webp"', 'livePreviewFor', 'liveProofPreviewFor'] },
   { file: 'components/Hero.tsx', mustInclude: ['36 live demos', 'evidence/live/preview/aix-pilot.webp', 'type="image/webp"'] },
-  { file: 'docs/final-readiness-scorecard.md', mustInclude: ['Total: 100 / 100', '37 public URLs', '35 editable coverage repositories'] },
-  { file: 'docs/repository-service-architectures.md', mustInclude: ['Repository Service Architectures', 'Shared Resource Stack', 'aix-pilot', 'weld-defect-vision', 'Account Information Needed'] },
+  { file: 'docs/final-readiness-scorecard.md', mustInclude: ['Total: 100 / 100', '37 public URLs', '35 editable coverage repositories', 'public API readiness proof cards'] },
+  { file: 'docs/repository-service-architectures.md', mustInclude: ['Repository Service Architectures', 'Shared Resource Stack', 'aix-pilot', 'weld-defect-vision', 'Korean public API rollout mapping', 'merchant/public-data enrichment readiness', 'Account Information Needed'] },
   { file: 'docs/service-launch-plan.md', mustInclude: ['Service Launch Plan', 'Configure First', '14-Day Readiness Push', 'Calendly', 'Cloudflare', 'Sentry'] },
   { file: 'App.tsx', mustInclude: ['Hero', 'Experience', 'Projects', 'Skills'] },
 ];

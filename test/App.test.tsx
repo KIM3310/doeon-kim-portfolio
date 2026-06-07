@@ -73,7 +73,11 @@ describe('App component', () => {
     render(<App />);
     expect(screen.queryByText('Latest live proof')).not.toBeInTheDocument();
     expect(screen.getByAltText('agent-runtime-go visual evidence')).toBeInTheDocument();
+    expect(screen.getByAltText('districtpilot-ai visual evidence')).toBeInTheDocument();
+    expect(screen.getByAltText('twincity-ui visual evidence')).toBeInTheDocument();
     expect(screen.getByAltText('retina-scan-ai visual evidence')).toBeInTheDocument();
+    expect(screen.getByText(/public API readiness map/)).toBeInTheDocument();
+    expect(screen.getByText(/Korean public API readiness/)).toBeInTheDocument();
   });
 
   it('links coverage repositories to public demos', () => {

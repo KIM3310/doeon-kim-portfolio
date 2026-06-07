@@ -76,6 +76,7 @@ A compact public gallery that makes each system read like a product, not a scatt
 - Added a final 100/100 readiness scorecard based on clean worktrees, live demos, homepage metadata, portfolio verification, and deployed UX checks.
 - Added a per-repository review audit covering service direction, architecture priority, critical blockers, and priority fixes for all 35 editable coverage repositories.
 - Added an architecture plan so visitors can evaluate scoped proof surfaces before browsing the full repository gallery.
+- Added public API readiness proof for `twincity-ui`, `smallbiz-ops-copilot`, and `districtpilot-ai` using provider metadata aligned with `public-apis-4Kr` without storing provider secrets.
 
 ## Project Lanes
 

@@ -1,8 +1,10 @@
 # Public Demo Catalog
 
-Date: 2026-06-06 KST
+Date: 2026-06-07 KST
 
 These supporting repositories now have credential-free GitHub Pages demo surfaces. The demos use synthetic data and are meant for quick reviewer inspection before a deeper repository or local verification pass.
+
+Latest polish: `twincity-ui`, `smallbiz-ops-copilot`, and `districtpilot-ai` now expose Korean public API readiness surfaces aligned with `public-apis-4Kr` without storing provider secret values in the repository.
 
 | Repository | Demo |
 | --- | --- |

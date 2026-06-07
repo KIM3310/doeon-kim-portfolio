@@ -402,6 +402,18 @@ export const PROJECTS: Project[] = [
     proofPath: 'Live demo, repository evidence, architecture notes, and local quality gate',
   },
   {
+    title: 'districtpilot-ai',
+    description:
+      'Snowflake-native district operations planner with forecast action cards, semantic views, and a public API readiness map for live data rollout.',
+    tech: ['Snowflake', 'Forecasting', 'Public API readiness', 'Civic analytics'],
+    github: 'https://github.com/KIM3310/districtpilot-ai',
+    demo: 'https://kim3310.github.io/districtpilot-ai/',
+    evidence: 'evidence/districtpilot-public-api-readiness.svg',
+    market: 'Local governments, field-service planners, and civic analytics teams',
+    reviewSignal: 'Forecast-to-action loop, Snowflake feature mart, public-data lineage',
+    proofPath: 'Live demo, 15_public_api_integration_readiness.sql, repository validators, and architecture notes',
+  },
+  {
     title: 'fab-ops-yield-control-tower',
     description:
       'Manufacturing operations surface with fab monitoring, scanner qualification, incident queues, and shift handoff evidence.',
@@ -412,6 +424,18 @@ export const PROJECTS: Project[] = [
     market: 'Manufacturing operations and semiconductor support teams',
     reviewSignal: 'Yield monitoring, shift handoff, qualification analytics',
     proofPath: 'Live demo, repository evidence, architecture notes, and local quality gate',
+  },
+  {
+    title: 'twincity-ui',
+    description:
+      'Digital twin operations UI with event triage, dispatch reports, runtime scorecards, and Korean public API readiness for city-context overlays.',
+    tech: ['Next.js', 'Digital twin', 'Public API readiness', 'Operations UI'],
+    github: 'https://github.com/KIM3310/twincity-ui',
+    demo: 'https://twincity-ui.pages.dev',
+    evidence: 'evidence/live/twincity-ui.png',
+    market: 'Facilities, city operations, industrial command centers, and spatial event teams',
+    reviewSignal: 'Spatial operations UX, report contracts, public-data enrichment readiness',
+    proofPath: 'Live demo, /api/public-apis, /api/runtime-scorecard, repository tests, and architecture notes',
   },
   {
     title: 'weld-defect-vision',
@@ -440,11 +464,11 @@ export const PROJECTS: Project[] = [
   {
     title: 'smallbiz-ops-copilot',
     description:
-      'Operations inbox for small teams with queue triage, draft approval, KPI cards, and bounded runtime controls.',
-    tech: ['Workers', 'Operations inbox', 'Approval flow', 'Private case study'],
+      'Operations inbox for small teams with queue triage, draft approval, KPI cards, bounded runtime controls, and public-data enrichment readiness.',
+    tech: ['Workers', 'Operations inbox', 'Approval flow', 'Public API readiness', 'Private case study'],
     market: 'Small support teams with repetitive inbox operations',
-    reviewSignal: 'Cloudflare Workers, queue UX, approval boundaries',
-    proofPath: 'Live demo, repository evidence, architecture notes, and local quality gate',
+    reviewSignal: 'Cloudflare Workers, queue UX, approval boundaries, merchant and operating-risk enrichment',
+    proofPath: 'Live demo, /integrations/public-apis, review pack, repository tests, and architecture notes',
     access: 'private',
     demo: 'https://smallbiz-ops-copilot.pages.dev',
     evidence: 'evidence/live/smallbiz-ops-copilot.png',
@@ -524,7 +548,7 @@ export const SKILLS: SkillCategory[] = [
   },
   {
     category: 'Data Systems',
-    skills: ['medallion pipelines', 'data contracts', 'quality gates', 'rejected-row review', 'analytics adapters'],
+    skills: ['medallion pipelines', 'data contracts', 'quality gates', 'rejected-row review', 'analytics adapters', 'public API readiness'],
   },
   {
     category: 'Applied ML',

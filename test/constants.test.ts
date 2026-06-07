@@ -112,12 +112,18 @@ describe('PROJECTS', () => {
     expect(PROJECTS.find(p => p.title === 'agent-runtime-go')?.demo).toContain('github.io/agent-runtime-go');
     expect(PROJECTS.find(p => p.title === 'ai-agent-production-lab')?.evidence).toContain('ai-agent-production-report');
     expect(PROJECTS.find(p => p.title === 'lakehouse-contract-lab')?.evidence).toContain('lakehouse-contract-board');
+    expect(PROJECTS.find(p => p.title === 'districtpilot-ai')?.description).toContain('public API readiness map');
+    expect(PROJECTS.find(p => p.title === 'districtpilot-ai')?.evidence).toContain('districtpilot-public-api-readiness');
+    expect(PROJECTS.find(p => p.title === 'districtpilot-ai')?.proofPath).toContain('15_public_api_integration_readiness.sql');
     expect(PROJECTS.find(p => p.title === 'AegisOps')?.evidence).toContain('live/aegisops');
+    expect(PROJECTS.find(p => p.title === 'twincity-ui')?.description).toContain('Korean public API readiness');
+    expect(PROJECTS.find(p => p.title === 'twincity-ui')?.proofPath).toContain('/api/public-apis');
     expect(PROJECTS.find(p => p.title === 'weld-defect-vision')?.evidence).toContain('weld-defect-vision-board');
     expect(PROJECTS.find(p => p.title === 'retina-scan-ai')?.description).toContain('Medical-image research workflow');
     expect(PROJECTS.find(p => p.title === 'retina-scan-ai')?.evidence).toContain('retina-scan-ai-research');
     expect(PROJECTS.find(p => p.title === 'retina-scan-ai')?.demo).toContain('github.io/retina-scan-ai');
     expect(PROJECTS.find(p => p.title === 'SteadyTap')?.description).toContain('Accessibility coaching app');
+    expect(PROJECTS.find(p => p.title === 'smallbiz-ops-copilot')?.proofPath).toContain('/integrations/public-apis');
   });
 });
 
@@ -171,5 +177,6 @@ describe('SKILLS', () => {
       expect(g.category).toBeTruthy();
       expect(g.skills.length).toBeGreaterThan(0);
     }
+    expect(SKILLS.find(group => group.category === 'Data Systems')?.skills).toContain('public API readiness');
   });
 });
