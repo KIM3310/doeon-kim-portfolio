@@ -19,8 +19,8 @@ const narrationLines = [
   'StagePilot shows tool-call reliability through parser recovery, bounded retries, and benchmark evidence for malformed model output.',
   'AegisOps turns incident logs and monitoring screenshots into structured reports, replay evaluations, and operator handoff artifacts.',
   'The Enterprise LLM Adoption Kit demonstrates governance with role-based access, prompt-injection checks, PII redaction, audit logging, and evaluation gates.',
-  'The systems gallery connects all thirty-five editable repositories to review lanes, proof routes, and current demo evidence.',
-  'The gallery closes with a clean coverage ledger: thirty-five editable repositories, zero open pull requests, and current CI evidence for every active lane.',
+  'The systems gallery connects all thirty-five editable repositories to review lanes, proof routes, and recorded demo evidence.',
+  'The gallery closes with a clean coverage ledger: thirty-five editable repositories with recorded pull-request and CI evidence from the audit pass.',
 ];
 const narration = narrationLines.join(' ');
 
@@ -63,8 +63,8 @@ const slides = [
   },
   {
     title: 'Coverage Ledger',
-    kicker: 'Current repository posture',
-    body: '35 editable repos, 0 open PRs, green current-HEAD CI evidence.',
+    kicker: 'Recorded audit posture',
+    body: '35 editable repositories with recorded pull-request and CI evidence from the audit pass.',
     image: '/evidence/live/secure-xl2hwp-local.png',
   },
 ];
@@ -241,7 +241,7 @@ function renderRecorderPage() {
       ctx.fill();
       ctx.fillStyle = '#6e6e73';
       ctx.font = '740 15px -apple-system, BlinkMacSystemFont, sans-serif';
-      ctx.fillText('35 editable repos · 0 open PRs · current CI evidence', 92, 586);
+      ctx.fillText('35 editable repos · recorded PR and CI audit', 92, 586);
 
       ctx.fillStyle = 'rgba(0,113,227,.12)';
       roundRect(72, 648, 1110, 8, 5);

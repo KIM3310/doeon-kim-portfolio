@@ -14,7 +14,7 @@ export const PORTFOLIO_STATS = [
   { label: 'Public repos', value: '44' },
   { label: 'Editable repos', value: '35' },
   { label: 'Product demos', value: '36 live' },
-  { label: 'Open PRs', value: '0' },
+  { label: 'PR audit', value: '0 open' },
 ] as const;
 
 export const REPOSITORY_DEMO_URLS: Record<string, string> = {
@@ -248,7 +248,7 @@ export const LIVE_SERVICE_SCREENS: LiveServiceScreen[] = [
 export const PORTFOLIO_REEL: PortfolioReel = {
   title: 'Narrated Systems Gallery Reel',
   summary:
-    'English TTS evidence reel generated from the current live service screenshots and the audited repository posture.',
+    'English TTS evidence reel generated from representative service screenshots and the recorded 35-repository audit posture.',
   video: 'evidence/portfolio-reel/kim3310-systems-gallery-reel.mp4',
   poster: 'evidence/portfolio-reel/kim3310-systems-gallery-reel-poster.png',
   transcript: 'evidence/portfolio-reel/transcript.txt',

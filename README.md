@@ -52,7 +52,7 @@ A compact public gallery that makes each system read like a product, not a scatt
 - [Review guide](docs/reviewer-evidence-map.md) summarizes the project angle, first files to inspect, verification commands, and known boundaries.
 - [Quality notes](docs/quality-gate.md) lists the local checks, CI surface, and release expectations for this repository.
 - [Enterprise readiness notes](docs/enterprise-readiness.md) outlines security, data, operations, integration, and handoff expectations.
-- [Final readiness scorecard](docs/final-readiness-scorecard.md) records the 100/100 verification standard and current pass result.
+- [Readiness snapshot](docs/final-readiness-scorecard.md) records the latest local verification and the external checks that should be rerun before an important review.
 
 ## What Changed
 
@@ -73,7 +73,7 @@ A compact public gallery that makes each system read like a product, not a scatt
 - Tightened filter chips, disclosure controls, and responsive glass surfaces for cleaner keyboard and mobile behavior.
 - Added active-section navigation polish so the gallery keeps orientation while visitors move through project evidence and the repository ledger.
 - Added GitHub Pages demo surfaces for 18 previously demo-less supporting repositories and turned the coverage ledger into clickable demo routes.
-- Added a final 100/100 readiness scorecard based on clean worktrees, live demos, homepage metadata, portfolio verification, and deployed UX checks.
+- Added a readiness snapshot based on local verification, recorded demo checks, homepage metadata, portfolio verification, and UX checks.
 - Added a per-repository review audit covering service direction, architecture priority, critical blockers, and priority fixes for all 35 editable coverage repositories.
 - Added an architecture plan so visitors can evaluate scoped proof surfaces before browsing the full repository gallery.
 - Added public API readiness proof for `twincity-ui`, `smallbiz-ops-copilot`, and `districtpilot-ai` using provider metadata aligned with `public-apis-4Kr` without storing provider secrets.

@@ -1,24 +1,24 @@
-# Final Readiness Scorecard
+# Readiness Snapshot
 
 Date: 2026-06-07 KST
 
-This scorecard records the current verification standard for treating the portfolio and editable repository set as reviewer-ready. The score is based on observable checks, not a permanent guarantee that external services will never change.
+This snapshot records the latest local verification and the external checks that were recorded during the audit pass. It is intentionally phrased as a point-in-time review surface, not a permanent claim that hosting, GitHub Actions, or public URLs will stay healthy.
 
-## Score
+## Verification State
 
-| Area | Points | Result |
-| --- | ---: | --- |
-| Local repository hygiene | 20 / 20 | 35 of 35 editable repositories have clean local worktrees. |
-| Public demo availability | 20 / 20 | 37 public URLs referenced by the portfolio constants returned HTTP 200. |
-| GitHub homepage metadata | 20 / 20 | 35 of 35 editable coverage repositories point to the expected public demo URL. |
-| Portfolio verification | 20 / 20 | TypeScript, Vitest, gallery content verification, and production build passed. |
-| Deployed portfolio UX | 20 / 20 | Portfolio shows `36 live demos`, 35 coverage demo links, HTTPS routes, progressive disclosure, and updated public API readiness proof cards. |
+| Area | Status | Evidence |
+| --- | --- | --- |
+| Local repository hygiene | Passed at audit | 35 editable repositories were clean in the local workspace during the audit pass. |
+| Public demo availability | Recorded pass | 37 public URLs referenced by the portfolio constants were recorded as HTTP 200 during the audit pass; rerun before presentation. |
+| GitHub homepage metadata | Recorded pass | 35 editable coverage repositories were recorded with the expected public demo URL. |
+| Portfolio verification | Passed locally | TypeScript, Vitest, gallery content verification, and production build passed for this repository state. |
+| Portfolio UX | Passed local browser check | Local desktop and mobile browser checks showed `36 live demos`, 35 coverage demo links, HTTPS routes, progressive disclosure, and public API readiness proof cards without horizontal overflow. |
 
-**Total: 100 / 100**
+**Local verification status: passed**
 
 ## Verification Commands
 
-The final local pass used:
+The latest local pass used:
 
 ```bash
 node node_modules/typescript/bin/tsc --noEmit
@@ -27,15 +27,15 @@ node scripts/verify-gallery.mjs
 node node_modules/vite/bin/vite.js build
 ```
 
-The latest recorded external pass checked:
+The recorded external audit pass checked:
 
 - 35 editable repository worktrees: no local changes.
 - 35 editable coverage repository homepage URLs: all matched the expected demo URL.
-- 37 public portfolio URLs: all returned HTTP 200.
-- Open pull requests across the 35 editable repositories: 0.
-- Latest portfolio GitHub Actions at the recorded external pass: all successful.
+- 37 public portfolio URLs: recorded as HTTP 200 during that pass.
+- Open pull requests across the 35 editable repositories: recorded as 0 during that pass.
+- Portfolio GitHub Actions: recorded successful during that pass.
 - 3 latest service upgrades are reflected in the portfolio proof surface: `twincity-ui`, `smallbiz-ops-copilot`, and `districtpilot-ai`.
 
 ## Boundary
 
-This is a point-in-time readiness score. External hosting, GitHub, Cloudflare, or future repository edits can change the score, so rerun the verification before using the portfolio for an important review or outreach push.
+This is a point-in-time readiness snapshot. External hosting, GitHub, Cloudflare, or future repository edits can change the result, so rerun the verification before using the portfolio for an important review or outreach push.

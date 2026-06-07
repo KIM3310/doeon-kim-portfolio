@@ -24,7 +24,7 @@ describe('PORTFOLIO_STATS', () => {
       { label: 'Public repos', value: '44' },
       { label: 'Editable repos', value: '35' },
       { label: 'Product demos', value: '36 live' },
-      { label: 'Open PRs', value: '0' },
+      { label: 'PR audit', value: '0 open' },
     ]);
   });
 });
@@ -142,6 +142,7 @@ describe('PORTFOLIO_REEL', () => {
   it('tracks the narrated evidence reel assets', () => {
     expect(PORTFOLIO_REEL.title).toBe('Narrated Systems Gallery Reel');
     expect(PORTFOLIO_REEL.summary).toContain('English TTS');
+    expect(PORTFOLIO_REEL.summary).toContain('recorded 35-repository audit posture');
     expect(PORTFOLIO_REEL.video).toBe('evidence/portfolio-reel/kim3310-systems-gallery-reel.mp4');
     expect(PORTFOLIO_REEL.poster).toContain('kim3310-systems-gallery-reel-poster.png');
     expect(PORTFOLIO_REEL.transcript).toContain('transcript.txt');
