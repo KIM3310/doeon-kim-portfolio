@@ -2,7 +2,7 @@
 
 Updated: 2026-05-30
 
-This note defines what an enterprise buyer, public-sector reviewer, serious user, or technical evaluator can safely infer from this repository today. It is intentionally conservative: public proof is separated from production claims.
+This note defines what an enterprise reviewer, public-sector reviewer, serious user, or technical evaluator can safely infer from this repository today. It is intentionally conservative: public proof is separated from production claims.
 
 ## Scope
 
@@ -10,21 +10,21 @@ This note defines what an enterprise buyer, public-sector reviewer, serious user
 |---|---|
 | Repository | `doeon-kim-portfolio` |
 | Lane | Portfolio-to-lead router |
-| Primary reader or buyer | Founders, enterprise AI leaders, technical buyers, and talent partners. |
-| Core wedge | A productized gallery that routes viewers into flagship demos and commercial proof lanes. |
+| Primary reader or reviewer | Founders, enterprise AI leaders, technical reviewers, and talent partners. |
+| Core wedge | A productized gallery that routes viewers into flagship demos and technical proof lanes. |
 | Stack | TypeScript/JavaScript |
-| Readiness posture | Portfolio control plane for review routing, commercial positioning, and evidence navigation. |
+| Readiness posture | Portfolio control plane for review routing, technical positioning, and evidence navigation. |
 
 ## Enterprise Controls
 
 | Control | Current expectation |
 |---|---|
-| Data boundary | Public artifacts should use demo, fixture, or synthetic data until the buyer approves data handling, retention, and access controls. |
+| Data boundary | Public artifacts should use demo, fixture, or synthetic data until the reviewer approves data handling, retention, and access controls. |
 | Identity and access | No runtime identity is needed for the public profile; inbound forms or calendars should use spam protection and privacy-conscious routing. |
 | Auditability | Keep decision logs, generated reports, CI results, eval outputs, and operator handoff artifacts reviewable. |
 | Observability | Track link health, demo availability, repository CI status, and route-level interest from the portfolio front door. |
 | Release gate | Full local gate: npm run verify; Test suite: npm test; Typecheck: npm run typecheck; Production build: npm run build |
-| Support handoff | Name the owner, escalation path, rollback path, known limits, and review cadence before a paid or production pilot. |
+| Support handoff | Name the owner, escalation path, rollback path, known limits, and review cadence before production testing. |
 
 ## Verification Surface
 
@@ -51,7 +51,7 @@ This note defines what an enterprise buyer, public-sector reviewer, serious user
 
 - npm run verify can be run or the equivalent CI gate is visible.
 - README, review guide, quality notes, service model, and this readiness note agree on the same scope.
-- Demo, fixture, synthetic, or public-data boundaries are explicit before a buyer sees outputs.
+- Demo, fixture, synthetic, or public-data boundaries are explicit before a reviewer sees outputs.
 - A reviewer can identify the first useful outcome without reading implementation details.
 - Production claims stay behind customer-specific validation, access control, monitoring, and support handoff.
 

@@ -9,8 +9,8 @@ Use this page as the short path through the repository. It keeps the review grou
 | Field | Notes |
 |---|---|
 | Lane | Portfolio-to-lead router |
-| Core idea | A productized gallery that routes viewers into flagship demos and commercial proof lanes. |
-| Primary reader | Founders, enterprise AI leaders, technical buyers, and talent partners. |
+| Core idea | A productized gallery that routes viewers into flagship demos and technical proof lanes. |
+| Primary reader | Founders, enterprise AI leaders, technical reviewers, and talent partners. |
 | Stack | TypeScript/JavaScript |
 
 ## Open First
@@ -49,13 +49,13 @@ Use this page as the short path through the repository. It keeps the review grou
 - All repo links are current
 - Coverage ledger maps active works
 
-## Commercial Notes
+## Review Notes
 
-| Possible offer | Working scope assumption |
+| Review angle | Working scope assumption |
 |---|---|
-| Consulting lead-gen site | Not sold directly |
-| Talent-facing proof surface | Scope after buyer intake |
-| Partnership demo router | buyer-approved implementation diagnostic from flagship lane |
+| Technical proof surface | Evaluate only what the demo, code, and docs verify. |
+| Operator workflow | Confirm data and access boundaries before external use. |
+| Architecture review | Check runtime, storage, secret, and rollback paths. |
 
 ## Boundaries
 
@@ -67,4 +67,4 @@ Use this page as the short path through the repository. It keeps the review grou
 
 - Demo clicks
 - Talent partner conversion
-- Pilot inquiries
+- Review inquiries

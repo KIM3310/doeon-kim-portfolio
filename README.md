@@ -16,8 +16,8 @@ A compact public gallery that makes each system read like a product, not a scatt
 
 | Lens | Definition |
 |---|---|
-| Buyer or user | Technical reviewers, AI platform teams, operations leaders, and partners evaluating product judgment. |
-| Commercial route | Route visitors into scoped service conversations for GenAI operations, reliability audits, security operations, and governed analytics. |
+| Audience | Technical reviewers, AI platform teams, operations leaders, and partners evaluating product judgment. |
+| Review path | Validate the demo, README, architecture notes, and quality gate before deeper workflow review. |
 | Review signal | Each card exposes market, review signal, service path, live evidence, demos, and verification-friendly repository links. |
 | Safety boundary | The site avoids client secrets and only displays public-safe project summaries and generated visual assets. |
 | Fast proof | `npm run verify` checks type safety, content guarantees, tests, and production build before deployment. |
@@ -42,21 +42,17 @@ A compact public gallery that makes each system read like a product, not a scatt
 
 ## Service Architecture
 
-- [Service architecture](docs/service-architecture.md) defines the cloud resources, account information, cost controls, and production guardrails needed to turn this repo into a scoped service without publishing public financial assumptions.
+- [Service architecture](docs/service-architecture.md) defines cloud resources, account information, operational controls, and production guardrails for a scoped technical workflow.
 - [Repository service architectures](docs/repository-service-architectures.md) maps all 35 editable repos to resource needs, launch sequencing, and account information.
-- [Service launch plan](docs/service-launch-plan.md) defines the account setup and 14-day launch path without public financial or value readiness assumptions.
-- [Service launch playbook](docs/service-launch-playbook.md) maps the repository to buyer segments, offer ladder, proof gates, and risk boundaries without public financial projections.
+- [Service launch plan](docs/service-launch-plan.md) defines the account setup and 14-day technical readiness path.
+- [Service launch playbook](docs/service-launch-playbook.md) maps the repository to review audiences, proof gates, launch steps, and risk boundaries.
 
 ## Review Notes
 
 - [Review guide](docs/reviewer-evidence-map.md) summarizes the project angle, first files to inspect, verification commands, and known boundaries.
 - [Quality notes](docs/quality-gate.md) lists the local checks, CI surface, and release expectations for this repository.
-- [Growth model](docs/service-growth-model.md) maps the project to an ethical activation loop, service validation path, and growth experiments.
 - [Enterprise readiness notes](docs/enterprise-readiness.md) outlines security, data, operations, integration, and handoff expectations.
-- [Conversion UX model](docs/conversion-ux-model.md) maps the buyer path, behavioral design, UI/UX direction, and ethical conversion guardrails.
-- [Commercial offer](docs/commercial-offer.md) packages the repository into a buyer-ready offer ladder, proof gate, outreach angle, and close path.
 - [Final readiness scorecard](docs/final-readiness-scorecard.md) records the 100/100 verification standard and current pass result.
-- [Per-repository commercialization audit](docs/per-repository-commercialization-audit.md) maps each editable repo to a service direction, architecture priority, fatal blocker, and highest-value fixes.
 
 ## What Changed
 
@@ -78,8 +74,8 @@ A compact public gallery that makes each system read like a product, not a scatt
 - Added active-section navigation polish so the gallery keeps orientation while visitors move through project evidence and the repository ledger.
 - Added GitHub Pages demo surfaces for 18 previously demo-less supporting repositories and turned the coverage ledger into clickable demo routes.
 - Added a final 100/100 readiness scorecard based on clean worktrees, live demos, homepage metadata, portfolio verification, and deployed UX checks.
-- Added a per-repository commercialization audit covering service direction, architecture priority, critical blockers, and priority fixes for all 35 editable coverage repositories.
-- Added a service launch menu and architecture plan so visitors can evaluate four scoped packages before browsing the full repository gallery.
+- Added a per-repository review audit covering service direction, architecture priority, critical blockers, and priority fixes for all 35 editable coverage repositories.
+- Added an architecture plan so visitors can evaluate scoped proof surfaces before browsing the full repository gallery.
 
 ## Project Lanes
 
@@ -135,8 +131,8 @@ This repository includes a neutral cloud and AI engineering blueprint that maps 
 
 ## Enterprise Productization
 
-- [Product operating model](docs/product-operating-model.md) defines the buyer, paid wedge, trust boundary, operating checks, and service path for this repository.
+- [Product operating model](docs/product-operating-model.md) defines the reviewer, trust boundary, operating checks, and service path for this repository.
 
 ## Service Architecture
 
-- [Service architecture](docs/service-architecture.md) defines the cloud resources, account information, cost controls, and production guardrails needed to turn this repo into a scoped service without publishing public financial assumptions.
+- [Service architecture](docs/service-architecture.md) defines cloud resources, account information, operational controls, and production guardrails for a scoped technical workflow.

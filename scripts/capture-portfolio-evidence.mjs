@@ -7,7 +7,7 @@ import { spawn } from 'node:child_process';
 const root = process.cwd();
 const distDir = resolve(root, 'dist');
 const outputDir = resolve(root, 'public/evidence/portfolio-reel');
-const outputPath = join(outputDir, 'service-package-matrix.png');
+const outputPath = join(outputDir, 'systems-gallery.png');
 
 const mimeTypes = {
   '.css': 'text/css; charset=utf-8',
@@ -85,7 +85,7 @@ async function main() {
 
   const chromePort = 43000 + Math.floor(Math.random() * 10000);
   const userDataDir = `/tmp/kim3310-portfolio-capture-${Date.now()}`;
-  const targetUrl = `http://127.0.0.1:${port}/#service-packages`;
+  const targetUrl = `http://127.0.0.1:${port}/#projects`;
   const chrome = spawn('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', [
     '--headless=new',
     '--no-first-run',
@@ -122,8 +122,8 @@ async function main() {
       returnByValue: true,
       expression: `(async () => {
         await document.fonts?.ready;
-        const section = document.querySelector('#service-packages');
-        if (!section) throw new Error('Service package section was not found');
+        const section = document.querySelector('#projects');
+        if (!section) throw new Error('Projects section was not found');
         section.querySelectorAll('details').forEach((details, index) => { details.open = index < 2; });
         section.scrollIntoView({ block: 'start' });
         await new Promise(resolve => setTimeout(resolve, 700));
@@ -133,7 +133,7 @@ async function main() {
           y: Math.max(0, window.scrollY + rect.top),
           width: Math.min(document.documentElement.clientWidth, rect.width),
           height: Math.min(rect.height, 1180),
-          packageRows: document.querySelectorAll('.service-package-row').length,
+          projectCards: document.querySelectorAll('.project-card').length,
         };
       })()`,
     });
@@ -143,8 +143,8 @@ async function main() {
     }
 
     const clip = sectionResult.result.value;
-    if (clip.packageRows !== 35) {
-      throw new Error(`Expected 35 package rows before capture, found ${clip.packageRows}`);
+    if (clip.projectCards < 12) {
+      throw new Error(`Expected project cards before capture, found ${clip.projectCards}`);
     }
 
     const screenshot = await session.send('Page.captureScreenshot', {

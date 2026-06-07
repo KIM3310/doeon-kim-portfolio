@@ -20,7 +20,7 @@
 <text x="430" y="382" fill="#caefdd" font-family="Arial,sans-serif" font-size="18">Latest duplicate survives</text>
 <text x="430" y="414" fill="#caefdd" font-family="Arial,sans-serif" font-size="18">Rejected rows retained for review</text>
 <text x="830" y="350" fill="#fbe9bc" font-family="Arial,sans-serif" font-size="18">Region KPI contract for platform teams</text>
-<text x="830" y="382" fill="#fbe9bc" font-family="Arial,sans-serif" font-size="18">Revenue, completed orders, active pipeline</text>
+<text x="830" y="382" fill="#fbe9bc" font-family="Arial,sans-serif" font-size="18">Accepted orders, completed work, active pipeline</text>
 <text x="830" y="414" fill="#fbe9bc" font-family="Arial,sans-serif" font-size="18">Delta-backed gold table summary</text>
 <path d="M340 380 L400 380" stroke="#d7b268" stroke-width="4" marker-end="url(#arrow)"/>
 <path d="M740 380 L800 380" stroke="#d7b268" stroke-width="4" marker-end="url(#arrow)"/>

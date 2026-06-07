@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { CERTIFICATIONS, COMMERCIAL_OFFERS, EDUCATION, INTERX_ROLE, LIVE_SERVICE_SCREENS, MILITARY_ROLE, PROFILE, PROJECTS, REPOSITORY_DEMO_URLS, REVENUE_CHANNELS, SERVICE_PACKAGES, SKILLS, PORTFOLIO_REEL, PORTFOLIO_STATS, REPOSITORY_COVERAGE } from '../constants';
+import { CERTIFICATIONS, EDUCATION, INTERX_ROLE, LIVE_SERVICE_SCREENS, MILITARY_ROLE, PROFILE, PROJECTS, REPOSITORY_DEMO_URLS, SKILLS, PORTFOLIO_REEL, PORTFOLIO_STATS, REPOSITORY_COVERAGE } from '../constants';
 
 describe('PROFILE', () => {
   it('contains required fields', () => {
@@ -39,92 +39,6 @@ describe('REPOSITORY_DEMO_URLS', () => {
     }
     expect(REPOSITORY_DEMO_URLS['agent-runtime-go']).toBe('https://kim3310.github.io/agent-runtime-go/');
     expect(REPOSITORY_DEMO_URLS['weld-defect-vision']).toBe('https://kim3310.github.io/weld-defect-vision/');
-  });
-});
-
-describe('COMMERCIAL_OFFERS', () => {
-  it('packages the portfolio into four buyer-ready paid offers', () => {
-    expect(COMMERCIAL_OFFERS).toHaveLength(4);
-    expect(COMMERCIAL_OFFERS.map(offer => offer.title)).toEqual([
-      'Enterprise AI adoption sprint',
-      'Agent runtime reliability audit',
-      'Security and network operations cockpit',
-      'Governed data and document automation pilot',
-    ]);
-
-    for (const offer of COMMERCIAL_OFFERS) {
-      expect(offer.entryStep).toBeTruthy();
-      expect(offer.pilotStep).toBeTruthy();
-      expect(offer.supportModel).toBeTruthy();
-      expect(`${offer.entryStep} ${offer.pilotStep} ${offer.supportModel}`).not.toMatch(/\$/);
-      expect(offer.deliverables.length).toBeGreaterThanOrEqual(4);
-      expect(offer.proofRepos.length).toBeGreaterThanOrEqual(3);
-      for (const repo of offer.proofRepos) {
-        expect(REPOSITORY_DEMO_URLS[repo], repo).toMatch(/^https:\/\//);
-      }
-    }
-  });
-});
-
-describe('REVENUE_CHANNELS', () => {
-  it('maps the portfolio into public-safe monetization channels', () => {
-    expect(REVENUE_CHANNELS).toHaveLength(6);
-    expect(REVENUE_CHANNELS.map(channel => channel.title)).toEqual([
-      'B2B diagnostics and pilots',
-      'B2B managed support retainers',
-      'B2B workflow and data automation',
-      'B2C content, ads, and affiliate surfaces',
-      'B2C app and game distribution',
-      'YouTube and proof-led distribution',
-    ]);
-
-    const channelText = REVENUE_CHANNELS
-      .map(channel => Object.values(channel).flat().join(' '))
-      .join(' ');
-    expect(channelText).toContain('AdSense');
-    expect(channelText).toContain('YouTube');
-    expect(channelText).not.toMatch(/(?:\$[0-9]|expected\s+(?:revenue|profit)|net\s+profit)/i);
-
-    for (const channel of REVENUE_CHANNELS) {
-      expect(channel.mode).toBeTruthy();
-      expect(channel.buyer).toBeTruthy();
-      expect(channel.route).toBeTruthy();
-      expect(channel.activation).toBeTruthy();
-      expect(channel.marginModel).toBeTruthy();
-      expect(channel.nextStep).toBeTruthy();
-      expect(channel.proofRepos.length).toBeGreaterThanOrEqual(2);
-      for (const repo of channel.proofRepos) {
-        expect(REPOSITORY_DEMO_URLS[repo], repo).toMatch(/^https:\/\//);
-      }
-    }
-  });
-});
-
-describe('SERVICE_PACKAGES', () => {
-  it('packages every editable repository into a buyer-ready service path', () => {
-    const coverageRepos = new Set(REPOSITORY_COVERAGE.flatMap(lane => lane.repositories));
-    const packageRepos = new Set(SERVICE_PACKAGES.map(servicePackage => servicePackage.repo));
-    const packageText = SERVICE_PACKAGES
-      .map(servicePackage => Object.values(servicePackage).flat().join(' '))
-      .join(' ');
-
-    expect(SERVICE_PACKAGES).toHaveLength(35);
-    expect(packageRepos).toEqual(coverageRepos);
-    expect(packageText).toContain('Governed GenAI adoption sprint');
-    expect(packageText).toContain('Playable launch readiness');
-    expect(packageText).toContain('Non-diagnostic validation study');
-    expect(packageText).not.toMatch(/(?:\$[0-9]|expected\s+(?:revenue|profit)|net\s+profit)/i);
-
-    for (const servicePackage of SERVICE_PACKAGES) {
-      expect(REPOSITORY_DEMO_URLS[servicePackage.repo], servicePackage.repo).toMatch(/^https:\/\//);
-      expect(servicePackage.lane).toBeTruthy();
-      expect(servicePackage.buyer).toBeTruthy();
-      expect(servicePackage.offer).toBeTruthy();
-      expect(servicePackage.outcome).toBeTruthy();
-      expect(servicePackage.polish.length).toBeGreaterThanOrEqual(3);
-      expect(servicePackage.deliverables.length).toBeGreaterThanOrEqual(3);
-      expect(servicePackage.margin).toBeTruthy();
-    }
   });
 });
 
@@ -175,7 +89,7 @@ describe('PROJECTS', () => {
       expect(p.evidence).toBeTruthy();
       expect(p.market).toBeTruthy();
       expect(p.reviewSignal).toBeTruthy();
-      expect(p.commercialPath).toBeTruthy();
+      expect(p.proofPath).toBeTruthy();
       if (p.github) expect(p.github).toMatch(/github\.com/);
     }
   });
@@ -192,7 +106,7 @@ describe('PROJECTS', () => {
     expect(PROJECTS.at(0)?.title).toBe('aix-pilot');
     expect(PROJECTS.find(p => p.title === 'aix-pilot')?.description).toContain('Enterprise GenAI pilot console');
     expect(PROJECTS.find(p => p.title === 'aix-pilot')?.evidence).toContain('live/aix-pilot');
-    expect(PROJECTS.find(p => p.title === 'aix-pilot')?.commercialPath).toContain('subscription');
+    expect(PROJECTS.find(p => p.title === 'aix-pilot')?.proofPath).toContain('quality gate');
     expect(PROJECTS.find(p => p.title === 'stage-pilot')?.description).toContain('Tool-call reliability runtime');
     expect(PROJECTS.find(p => p.title === 'agent-runtime-go')?.evidence).toContain('agent-runtime-trace');
     expect(PROJECTS.find(p => p.title === 'agent-runtime-go')?.demo).toContain('github.io/agent-runtime-go');
@@ -230,7 +144,7 @@ describe('PORTFOLIO_REEL', () => {
 });
 
 describe('REPOSITORY_COVERAGE', () => {
-  it('maps every active repository into a visible commercial lane', () => {
+  it('maps every active repository into a visible review lane', () => {
     const covered = REPOSITORY_COVERAGE.flatMap(lane => lane.repositories);
 
     expect(covered).toHaveLength(35);

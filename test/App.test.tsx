@@ -30,36 +30,6 @@ describe('App component', () => {
     expect(screen.getByText('36 live demos')).toBeInTheDocument();
   });
 
-  it('renders the service launch menu before the system gallery', () => {
-    render(<App />);
-    expect(screen.getByRole('button', { name: 'Offers' })).toBeInTheDocument();
-    expect(screen.getByText('Four packages buyers can evaluate without public financial assumptions')).toBeInTheDocument();
-    expect(screen.getByText('Enterprise AI adoption sprint')).toBeInTheDocument();
-    expect(screen.getByText('Agent runtime reliability audit')).toBeInTheDocument();
-    expect(screen.getAllByRole('link', { name: /Discuss pilot/ })).toHaveLength(4);
-  });
-
-  it('renders the revenue architecture channels without public financial estimates', () => {
-    render(<App />);
-    expect(screen.getByRole('button', { name: 'Revenue' })).toBeInTheDocument();
-    expect(screen.getByText('Proof surfaces grouped into realistic revenue channels')).toBeInTheDocument();
-    expect(screen.getByText('B2B diagnostics and pilots')).toBeInTheDocument();
-    expect(screen.getByText('B2C content, ads, and affiliate surfaces')).toBeInTheDocument();
-    expect(screen.getByText('YouTube and proof-led distribution')).toBeInTheDocument();
-    expect(document.body.textContent).not.toMatch(/(?:\$[0-9]|expected\s+(?:revenue|profit)|net\s+profit)/i);
-  });
-
-  it('renders the service package matrix for all repository packages', () => {
-    render(<App />);
-    expect(screen.getByRole('button', { name: 'Packages' })).toBeInTheDocument();
-    expect(screen.getByText('Every repository now has a buyer-ready package and polish path')).toBeInTheDocument();
-    expect(screen.getByText('35 repository packages')).toBeInTheDocument();
-    expect(screen.getByText('Governed GenAI adoption sprint')).toBeInTheDocument();
-    expect(screen.getByText('Playable launch readiness')).toBeInTheDocument();
-    expect(document.querySelectorAll('.service-package-actions a[href*="service-package.md"]').length).toBe(35);
-    expect(document.body.textContent).not.toMatch(/(?:\$[0-9]|expected\s+(?:revenue|profit)|net\s+profit)/i);
-  });
-
   it('marks the overview navigation item as the initial active section', () => {
     render(<App />);
     expect(screen.getByRole('button', { name: 'Overview' })).toHaveAttribute('aria-current', 'page');
@@ -88,7 +58,7 @@ describe('App component', () => {
     expect(screen.getByText('Operational scope')).toBeInTheDocument();
     expect(screen.getByText('Infrastructure scope')).toBeInTheDocument();
     expect(screen.getByText('Military outcomes')).toBeInTheDocument();
-    expect(screen.getAllByText('Business fit').length).toBeGreaterThan(0);
+    expect(screen.getAllByText('Review fit').length).toBeGreaterThan(0);
     expect(screen.getByText('Education and Training')).toBeInTheDocument();
   });
 

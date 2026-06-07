@@ -9,7 +9,7 @@
   <rect x="72" y="172" width="210" height="116" rx="18" fill="#16323A" stroke="#14B8A6"/>
   <text x="96" y="210" fill="#99F6E4" font-family="Arial, sans-serif" font-size="14" font-weight="700">CERTIFIED METRICS</text>
   <text x="96" y="252" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="42" font-weight="700">4</text>
-  <text x="96" y="278" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="16">Net revenue, gross revenue, profit, units sold</text>
+  <text x="96" y="278" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="16">Net metric, gross metric, quality score, units sold</text>
 
   <rect x="306" y="172" width="210" height="116" rx="18" fill="#16323A" stroke="#F59E0B"/>
   <text x="330" y="210" fill="#FCD34D" font-family="Arial, sans-serif" font-size="14" font-weight="700">APPROVAL-REQUIRED</text>

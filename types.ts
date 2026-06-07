@@ -7,7 +7,7 @@ export interface Project {
   evidence?: string;
   market: string;
   reviewSignal: string;
-  commercialPath: string;
+  proofPath: string;
   access?: 'public' | 'private';
 }
 
@@ -15,43 +15,6 @@ export interface RepositoryCoverageLane {
   lane: string;
   role: string;
   repositories: string[];
-}
-
-export interface CommercialOffer {
-  id: string;
-  title: string;
-  buyer: string;
-  entryStep: string;
-  pilotStep: string;
-  supportModel: string;
-  timeline: string;
-  outcome: string;
-  deliverables: string[];
-  proofRepos: string[];
-  ctaSubject: string;
-}
-
-export interface RevenueChannel {
-  id: string;
-  title: string;
-  mode: string;
-  buyer: string;
-  route: string;
-  activation: string;
-  marginModel: string;
-  proofRepos: string[];
-  nextStep: string;
-}
-
-export interface ServicePackage {
-  repo: string;
-  lane: string;
-  buyer: string;
-  offer: string;
-  outcome: string;
-  polish: string[];
-  deliverables: string[];
-  margin: string;
 }
 
 export interface LiveServiceScreen {

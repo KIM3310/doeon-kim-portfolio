@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import { PORTFOLIO_REEL, PROJECTS, REPOSITORY_COVERAGE, REPOSITORY_DEMO_URLS } from '../constants';
-import { BadgeDollarSign, BriefcaseBusiness, ChevronDown, ChevronUp, ExternalLink, FileText, Film, Github, LockKeyhole, Target, Volume2 } from 'lucide-react';
+import { BriefcaseBusiness, ChevronDown, ChevronUp, ExternalLink, FileText, Film, Github, LockKeyhole, Route, Target, Volume2 } from 'lucide-react';
 
 const TOP_TAGS = 8;
 const LIVE_IMAGE_WIDTH = 1440;
@@ -85,8 +85,8 @@ const Projects: React.FC = () => {
       <div className="section-inner">
         <div className="section-heading">
           <p className="eyebrow">Systems</p>
-          <h2>Built surfaces, with a market thesis</h2>
-          <p>Each card links to a runnable or inspectable system, then states the likely buyer, review signal, and revenue path behind the build.</p>
+          <h2>Built systems, with evidence</h2>
+          <p>Each card links to a runnable or inspectable system, then states the intended audience, review signal, and proof path behind the build.</p>
         </div>
 
         <div className="evidence-reel" aria-label="Narrated systems gallery evidence reel">
@@ -169,17 +169,17 @@ const Projects: React.FC = () => {
               <h3>{project.title}</h3>
               <p className="project-copy">{project.description}</p>
               <details className="project-business-disclosure">
-                <summary aria-label={`Show ${project.title} business and review fit`}>
+                <summary aria-label={`Show ${project.title} audience and review fit`}>
                   <span>
-                    <strong>Business fit</strong>
-                    <em>market, review signal, revenue path</em>
+                    <strong>Review fit</strong>
+                    <em>audience, review signal, proof path</em>
                   </span>
                   <ChevronDown size={16} className="disclosure-icon" aria-hidden="true" />
                 </summary>
-                <div className="project-business" aria-label={`${project.title} business and review fit`}>
+                <div className="project-business" aria-label={`${project.title} audience and review fit`}>
                   <div className="project-business-item">
                     <Target size={15} aria-hidden="true" />
-                    <span>Market</span>
+                    <span>Audience</span>
                     <strong>{project.market}</strong>
                   </div>
                   <div className="project-business-item">
@@ -188,9 +188,9 @@ const Projects: React.FC = () => {
                     <strong>{project.reviewSignal}</strong>
                   </div>
                   <div className="project-business-item">
-                    <BadgeDollarSign size={15} aria-hidden="true" />
-                    <span>Revenue path</span>
-                    <strong>{project.commercialPath}</strong>
+                    <Route size={15} aria-hidden="true" />
+                    <span>Proof path</span>
+                    <strong>{project.proofPath}</strong>
                   </div>
                 </div>
               </details>
@@ -229,8 +229,8 @@ const Projects: React.FC = () => {
         <div id="coverage" className="coverage-ledger" aria-label="Active repository coverage ledger">
           <div className="coverage-intro">
             <span>Coverage ledger</span>
-            <h3>35 editable repositories, one commercial story</h3>
-            <p>The visual cards carry the proof surface; this ledger tracks the current editable repo set, buyer route, review signal, and safety boundary.</p>
+            <h3>35 editable repositories, one evidence map</h3>
+            <p>The visual cards carry the proof surface; this ledger tracks the current editable repo set, review route, technical signal, and safety boundary.</p>
           </div>
           <div className="coverage-list">
             {REPOSITORY_COVERAGE.map(lane => (

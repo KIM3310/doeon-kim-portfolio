@@ -19,7 +19,7 @@ const narrationLines = [
   'StagePilot shows tool-call reliability through parser recovery, bounded retries, and benchmark evidence for malformed model output.',
   'AegisOps turns incident logs and monitoring screenshots into structured reports, replay evaluations, and operator handoff artifacts.',
   'The Enterprise LLM Adoption Kit demonstrates governance with role-based access, prompt-injection checks, PII redaction, audit logging, and evaluation gates.',
-  'The new service package matrix connects all thirty-five editable repositories to a buyer, offer, polish path, deliverables, and margin guardrails.',
+  'The systems gallery connects all thirty-five editable repositories to review lanes, proof routes, and current demo evidence.',
   'The gallery closes with a clean coverage ledger: thirty-five editable repositories, zero open pull requests, and current CI evidence for every active lane.',
 ];
 const narration = narrationLines.join(' ');
@@ -50,10 +50,10 @@ const slides = [
     image: '/evidence/live/enterprise-llm-adoption-kit.png',
   },
   {
-    title: 'Service Package Matrix',
-    kicker: 'Buyer-ready repository packaging',
-    body: '35 packages now tie each repo to a buyer, front-door offer, polish path, deliverables, and support boundary.',
-    image: '/evidence/portfolio-reel/service-package-matrix.png',
+    title: 'Systems Gallery',
+    kicker: 'Evidence-first repository map',
+    body: '35 editable repositories now connect to review lanes, demo proof, architecture notes, and quality gates.',
+    image: '/evidence/portfolio-reel/systems-gallery.png',
   },
   {
     title: 'TwinCity UI',
