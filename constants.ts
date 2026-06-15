@@ -2,19 +2,19 @@ import { Project, SkillCategory, Profile, WorkExperience, EducationItem, Certifi
 
 export const PROFILE: Profile = {
   name: 'KIM3310 Systems Gallery',
-  title: 'Enterprise GenAI, data center security operations, military communications, IT infrastructure, secure automation, and AI/data systems',
+  title: 'Operations-first AI systems engineer: incident workflows, agent reliability, data quality, and secure automation',
   email: 'ehdjs1351@gmail.com',
   github: 'https://github.com/KIM3310',
   linkedin: 'https://www.linkedin.com/in/doeon-kim-4742a2388',
   intro:
-    'A neutral gallery of runnable systems anchored in 24/7 military MW communications, CCTV/VMS/NVR operation, access-control and intrusion-alert monitoring, infrastructure operations, and reviewable software evidence. The focus is architecture, verification, security boundaries, digital workspace operations, and UI surfaces that can be inspected without private data.',
+    'I build reviewable systems from incident-room habits: confirm the signal, bound the data, write the handoff, and keep a runnable verification path. The gallery connects 24/7 MW communications, CCTV/VMS/NVR, access-control, intrusion-alert, and IT infrastructure operations work to AI runtime reliability, enterprise governance, data-quality gates, and operator-facing UI surfaces without private data.',
 };
 
 export const PORTFOLIO_STATS = [
-  { label: 'Public repos', value: '44' },
-  { label: 'Editable repos', value: '35' },
-  { label: 'Product demos', value: '36 live' },
-  { label: 'PR audit', value: '0 open' },
+  { label: 'Reviewed repos', value: '35' },
+  { label: 'Live demos', value: '36' },
+  { label: 'Current checks', value: '0 failing' },
+  { label: 'Dependabot', value: '0 open' },
 ] as const;
 
 export const REPOSITORY_DEMO_URLS: Record<string, string> = {

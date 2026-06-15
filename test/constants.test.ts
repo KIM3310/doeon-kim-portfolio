@@ -11,8 +11,9 @@ describe('PROFILE', () => {
     expect(PROFILE.intro).toBeTruthy();
   });
 
-  it('states the current neutral gallery boundary', () => {
-    expect(PROFILE.intro).toContain('neutral gallery');
+  it('states the current operations-first review boundary', () => {
+    expect(PROFILE.title).toContain('Operations-first');
+    expect(PROFILE.intro).toContain('incident-room habits');
     expect(PROFILE.intro).toContain('infrastructure operations');
     expect(PROFILE.intro).toContain('without private data');
   });
@@ -21,10 +22,10 @@ describe('PROFILE', () => {
 describe('PORTFOLIO_STATS', () => {
   it('surfaces the latest audit metrics', () => {
     expect(PORTFOLIO_STATS).toEqual([
-      { label: 'Public repos', value: '44' },
-      { label: 'Editable repos', value: '35' },
-      { label: 'Product demos', value: '36 live' },
-      { label: 'PR audit', value: '0 open' },
+      { label: 'Reviewed repos', value: '35' },
+      { label: 'Live demos', value: '36' },
+      { label: 'Current checks', value: '0 failing' },
+      { label: 'Dependabot', value: '0 open' },
     ]);
   });
 });

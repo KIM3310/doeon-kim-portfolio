@@ -25,8 +25,10 @@ describe('App component', () => {
     expect(screen.getAllByText('KIM3310').length).toBeGreaterThan(0);
   });
 
-  it('renders the current demo coverage proof strip', () => {
+  it('renders the current review proof strip', () => {
     render(<App />);
+    expect(screen.getByText('0 failing checks')).toBeInTheDocument();
+    expect(screen.getByText('35 reviewed repos')).toBeInTheDocument();
     expect(screen.getByText('36 live demos')).toBeInTheDocument();
   });
 

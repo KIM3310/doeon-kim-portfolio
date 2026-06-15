@@ -6,9 +6,9 @@
 
 # KIM3310 Systems Gallery
 
-Neutral technical systems gallery for enterprise GenAI, data-center security operations, military MW communications, IT infrastructure operations, secure automation, AI runtimes, operations workbenches, data contracts, and applied ML workflows. Built with React + TypeScript and deployed on GitHub Pages.
+Operations-first systems gallery for enterprise GenAI, data-center security operations, military MW communications, IT infrastructure operations, secure automation, AI runtimes, operations workbenches, data contracts, and applied ML workflows. Built with React + TypeScript and deployed on GitHub Pages.
 
-The page is product-focused: military 24/7 communications and security monitoring, CCTV/VMS/NVR operation, access-control and intrusion-alert handling, completed InterX infrastructure role context, education, certifications, project cards, capability lanes, verification posture, and repository links. It avoids private data, credential requirements, and external tenant assumptions. Private case studies are labeled without exposing repository links that public visitors cannot open.
+The page is product-focused: military 24/7 communications and security monitoring, CCTV/VMS/NVR operation, access-control and intrusion-alert handling, completed InterX infrastructure role context, education, certifications, project cards, capability lanes, verification posture, and repository links. It is written to show the working habit behind each system: define the operator problem, bound the data and trust model, leave a runnable verification path, and document the gap between demo evidence and production claims. It avoids private data, credential requirements, and external tenant assumptions. Private case studies are labeled without exposing repository links that public visitors cannot open.
 
 ## Product and Review Surface
 
@@ -39,6 +39,13 @@ A compact public gallery that makes each system read like a product, not a scatt
 - **Repo audit:** The 35 editable-repo validation pass is recorded in [docs/repository-upgrade-audit.md](docs/repository-upgrade-audit.md).
 - **Demo catalog:** Supporting repos without service URLs now have GitHub Pages demos listed in [docs/public-demo-catalog.md](docs/public-demo-catalog.md).
 - **Service read:** Use the gallery as the portfolio router for GenAI operations, incident ops, runtime reliability, and governed analytics.
+
+## Technical Review Fit
+
+- **AI platform / agent reliability:** Start with `aix-pilot`, `stage-pilot`, `agent-runtime-go`, and the verification notes behind each card.
+- **Security and infrastructure operations:** Start with `AegisOps`, `security-threat-response-workbench`, `nw-service-assurance-workbench`, and the military/InterX experience sections.
+- **Data and analytics engineering:** Start with `lakehouse-contract-lab`, `fab-ops-yield-control-tower`, `districtpilot-ai`, and `twincity-ui`.
+- **Reviewer questions:** how I decide a demo is review-safe, how I separate generated fixtures from real operator data, how I make a repo easy to verify after handoff, and what I would productionize next.
 
 ## Service Architecture
 

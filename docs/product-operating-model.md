@@ -5,7 +5,7 @@ Last reviewed: 2026-06-03 KST
 
 ## Enterprise Product Position
 
-Neutral technical systems gallery for AI runtimes, operations workbenches, data contracts, and applied ML workflows
+Operations-first systems gallery for AI runtimes, operations workbenches, data contracts, and applied ML workflows
 
 This repository is packaged as a concrete system surface, not a loose code sample. The enterprise value is a narrow proof that can be inspected, run, tested, and reviewed as an implementation motion.
 
