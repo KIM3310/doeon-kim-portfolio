@@ -14,7 +14,7 @@
   <rect x="628" y="170" width="516" height="220" rx="20" fill="#11241E" stroke="#355848"/>
   <text x="656" y="214" fill="#F8FAFC" font-family="Helvetica, Arial, sans-serif" font-size="26" font-weight="700">Lakehouse Delivery Contract Preview</text>
   <text x="656" y="252" fill="#DCE6E1" font-family="Helvetica, Arial, sans-serif" font-size="18">Execution mode: contract-preview</text>
-  <text x="656" y="284" fill="#DCE6E1" font-family="Helvetica, Arial, sans-serif" font-size="18">Tag transport: medallion / lakehouse governance review mapping</text>
+  <text x="656" y="284" fill="#DCE6E1" font-family="Helvetica, Arial, sans-serif" font-size="18">Tag transport: medallion / lakehouse governance architecture mapping</text>
   <text x="656" y="316" fill="#DCE6E1" font-family="Helvetica, Arial, sans-serif" font-size="18">Proof chain: metric certification -> approval boundary -> delivery posture</text>
   <text x="656" y="350" fill="#92E0C7" font-family="Helvetica, Arial, sans-serif" font-size="18">Honest blocker: live connector not configured</text>
 

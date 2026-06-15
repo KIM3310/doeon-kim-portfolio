@@ -2,7 +2,7 @@
 
 Date: 2026-06-07 KST
 
-This snapshot records the latest local verification and the external checks that were recorded during the audit pass. It is intentionally phrased as a point-in-time review surface, not a permanent claim that hosting, GitHub Actions, or public URLs will stay healthy.
+This snapshot records the latest local verification and the external checks that were recorded during the audit pass. It is intentionally phrased as a point-in-time architecture surface, not a permanent claim that hosting, GitHub Actions, or public URLs will stay healthy.
 
 ## Verification State
 
@@ -12,11 +12,11 @@ This snapshot records the latest local verification and the external checks that
 | Public demo availability | Current pass | 34 unique public demo URLs from the portfolio constants returned HTTP 200; `KIM3310` and `doeon-kim-portfolio` intentionally share the same portfolio URL. |
 | GitHub homepage metadata | Recorded pass | 35 editable coverage repositories were recorded with the expected public demo URL. |
 | Portfolio verification | Passed locally | TypeScript, Vitest, gallery content verification, and production build passed for this repository state. |
-| Portfolio UX | Passed local browser check | Local desktop and mobile browser checks showed stack chips, architecture links, coverage demo links, HTTPS routes, progressive disclosure, and public API readiness proof cards without horizontal overflow. |
+| Portfolio UX | Passed local browser check | Local desktop and mobile browser checks showed stack chips, architecture links, coverage demo links, HTTPS routes, progressive disclosure, and public API architecture cards without horizontal overflow. |
 
-**Local verification status: passed**
+**Local build notes are captured in the repository scripts and build workflow.**
 
-## Verification Commands
+## Runtime Commands
 
 The latest local pass used:
 
@@ -38,4 +38,4 @@ The recorded external audit pass checked:
 
 ## Boundary
 
-This is a point-in-time readiness snapshot. External hosting, GitHub, Cloudflare, or future repository edits can change the result, so rerun the verification before using the portfolio for an important review or outreach push.
+This is a point-in-time readiness snapshot. External hosting, GitHub, Cloudflare, or future repository edits can change the result, so rerun the verification before using the portfolio for an important architecture or outreach push.

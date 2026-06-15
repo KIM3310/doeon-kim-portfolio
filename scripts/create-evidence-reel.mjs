@@ -63,7 +63,7 @@ const slides = [
   },
   {
     title: 'Coverage Ledger',
-    kicker: 'Recorded audit posture',
+    kicker: 'Recorded operating posture',
     body: '35 editable repositories with recorded pull-request and CI evidence from the audit pass.',
     image: '/evidence/live/secure-xl2hwp-local.png',
   },

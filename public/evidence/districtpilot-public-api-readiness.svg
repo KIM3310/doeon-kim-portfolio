@@ -45,7 +45,7 @@
     <path d="M776 273 L788 283 L776 293" fill="none" stroke="#6e8d94" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
 
     <rect x="126" y="420" width="1014" height="104" rx="24" fill="#17333c"/>
-    <text x="158" y="462" font-size="18" font-weight="700" fill="#ffffff">Review objects</text>
+    <text x="158" y="462" font-size="18" font-weight="700" fill="#ffffff">Architecture objects</text>
     <text x="158" y="496" font-size="16" fill="#d7edf1">PUBLIC_API_SOURCE_REGISTRY</text>
     <text x="448" y="496" font-size="16" fill="#d7edf1">V_PUBLIC_API_INTEGRATION_READINESS</text>
     <text x="804" y="496" font-size="16" fill="#d7edf1">V_PUBLIC_API_SIGNAL_GROUP_COVERAGE</text>

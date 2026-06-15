@@ -18,9 +18,9 @@
   <text x="538" y="470" fill="#A86D00" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="800">not clinical advice</text>
 
   <rect x="836" y="252" width="298" height="276" rx="18" fill="#F8FFFC" stroke="#BFE8D9"/>
-  <text x="868" y="302" fill="#1D1D1F" font-family="Helvetica, Arial, sans-serif" font-size="26" font-weight="800">Review Flow</text>
+  <text x="868" y="302" fill="#1D1D1F" font-family="Helvetica, Arial, sans-serif" font-size="26" font-weight="800">Architecture Flow</text>
   <text x="868" y="356" fill="#3A3A3C" font-family="Helvetica, Arial, sans-serif" font-size="20">1. ingest image</text>
   <text x="868" y="394" fill="#3A3A3C" font-family="Helvetica, Arial, sans-serif" font-size="20">2. classify research label</text>
   <text x="868" y="432" fill="#3A3A3C" font-family="Helvetica, Arial, sans-serif" font-size="20">3. attach risk note</text>
-  <text x="868" y="470" fill="#12805C" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="800">4. reviewer signoff</text>
+  <text x="868" y="470" fill="#12805C" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="800">4. architecture signoff</text>
 </svg>

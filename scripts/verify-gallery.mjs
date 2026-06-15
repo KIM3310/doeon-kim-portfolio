@@ -23,7 +23,7 @@ const requiredFiles = [
   'components/Navbar.tsx',
   'scripts/create-evidence-reel.mjs',
   'scripts/capture-portfolio-evidence.mjs',
-  'docs/final-readiness-scorecard.md',
+  'docs/final-architecture-notes.md',
   'docs/repository-service-architectures.md',
   'docs/service-architecture.md',
   'docs/service-launch-plan.md',
@@ -35,7 +35,7 @@ const checks = [
   { file: 'components/Projects.tsx', mustInclude: ['PORTFOLIO_REEL', 'REPOSITORY_DEMO_URLS', '<video', 'type="video/mp4"', 'isLivePngEvidence', 'evidence/live/preview/', 'evidence/live/preview-sm/', 'type="image/webp"', 'livePreviewFor', 'liveProofPreviewFor'] },
   { file: 'components/Hero.tsx', mustInclude: ['TypeScript + React', 'Python + FastAPI', 'SQL + Spark', 'Terraform + Docker', 'evidence/live/preview/aix-pilot.webp', 'type="image/webp"'] },
   { file: 'components/Projects.tsx', mustInclude: ['STACK_ARCHITECTURE_LANES', 'SYSTEM_ARCHITECTURE_URLS', 'System architecture by stack lane', 'docs/system-architecture.md', 'Architecture'] },
-  { file: 'docs/final-readiness-scorecard.md', mustInclude: ['Local verification status: passed', '34 unique public demo URLs', '35 editable coverage repositories', 'public API readiness proof cards', 'KIM3310', 'doeon-kim-portfolio'] },
+  { file: 'docs/final-architecture-notes.md', mustInclude: ['Local build notes are captured in the repository scripts and build workflow.', '34 unique public demo URLs', '35 editable coverage repositories', 'public API architecture cards', 'KIM3310', 'doeon-kim-portfolio'] },
   { file: 'docs/repository-service-architectures.md', mustInclude: ['Repository Service Architectures', 'Shared Resource Stack', 'aix-pilot', 'weld-defect-vision', 'Korean public API rollout mapping', 'merchant/public-data enrichment readiness', 'Account Information Needed'] },
   { file: 'docs/service-launch-plan.md', mustInclude: ['Service Launch Plan', 'Configure First', '14-Day Readiness Push', 'Calendly', 'Cloudflare', 'Sentry'] },
   { file: 'App.tsx', mustInclude: ['Hero', 'Experience', 'Projects', 'Skills'] },
@@ -137,7 +137,7 @@ if (!existsSync(reelTranscript)) {
   if (!transcript.includes('Welcome to the KIM3310 Systems Gallery')) failures.push('Evidence reel transcript is missing the opening narration');
   if (!transcript.includes('thirty-five editable repositories')) failures.push('Evidence reel transcript is missing the repository posture line');
   if (transcript.includes('current CI evidence')) failures.push('Evidence reel transcript must not imply live CI status');
-  if (transcript.includes('zero open pull requests')) failures.push('Evidence reel transcript must frame PR counts as recorded audit evidence');
+  if (transcript.includes('zero open pull requests')) failures.push('Evidence reel transcript must frame PR counts as repository history marker');
   if (!transcript.endsWith('\n')) failures.push('Evidence reel transcript must end with a newline');
   if (transcript.split('\n').filter(Boolean).length < 7) failures.push('Evidence reel transcript should keep each narration sentence on its own line');
 }

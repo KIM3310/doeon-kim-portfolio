@@ -121,7 +121,7 @@ The final pass ran each repository's strongest available local check after norma
 
 ## Enterprise Service Readiness Pass
 
-Every editable repository now has `docs/product-operating-model.md` linked from its README. Each model names the target reviewer, service wedge, review signal, delivery shape, trust boundary, local verification command, debug checklist, and smallest service next step.
+Every editable repository now has `docs/product-operating-model.md` linked from its README. Each model names the target users, service wedge, architecture signal, delivery shape, trust boundary, local verification command, debug checklist, and smallest service next step.
 
 ## Public Demo Expansion
 
@@ -131,7 +131,7 @@ The deployed supporting-demo catalog is tracked in [public-demo-catalog.md](publ
 
 ## Follow-Up Queue
 
-- Keep generated dependency mega-bumps closed until dependency-review failures are resolved and migrations are split.
+- Keep generated dependency mega-bumps closed until dependency-architecture failures are resolved and migrations are split.
 
 ## Homepage Cleanup
 
