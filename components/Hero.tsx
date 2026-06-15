@@ -13,10 +13,11 @@ const Hero: React.FC = () => (
       <h1>{PROFILE.name}</h1>
       <p className="hero-subtitle">{PROFILE.title}</p>
       <p className="hero-summary">{PROFILE.intro}</p>
-      <div className="hero-proof-strip" aria-label="Portfolio verification summary">
-        <span>0 failing checks</span>
-        <span>35 reviewed repos</span>
-        <span>36 live demos</span>
+      <div className="hero-proof-strip" aria-label="Portfolio stack summary">
+        <span>TypeScript + React</span>
+        <span>Python + FastAPI</span>
+        <span>SQL + Spark</span>
+        <span>Terraform + Docker</span>
       </div>
       <div className="hero-actions">
         <a href="#projects" className="primary-action">
@@ -75,7 +76,7 @@ const Hero: React.FC = () => (
           <h2>AIX Pilot leads the gallery as a deployed Enterprise GenAI console.</h2>
         </div>
       </div>
-      <p className="hero-panel-note">A public review surface for live systems, repository health, and operating boundaries a reviewer can verify.</p>
+      <p className="hero-panel-note">A public systems surface for stack lanes, architecture attachments, and operating boundaries a technical reader can inspect.</p>
       <dl className="stat-grid">
         {PORTFOLIO_STATS.map(stat => (
           <div key={stat.label}>
@@ -86,7 +87,7 @@ const Hero: React.FC = () => (
       </dl>
       <div className="system-strip">
         <ShieldCheck aria-hidden="true" />
-        <span>deployed systems, reviewable tests, explicit operating boundaries</span>
+        <span>stack lanes, system architecture attachments, explicit operating boundaries</span>
       </div>
     </aside>
   </section>

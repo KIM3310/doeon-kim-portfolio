@@ -18,14 +18,14 @@ A compact public gallery that makes each system read like a product, not a scatt
 |---|---|
 | Audience | Technical reviewers, AI platform teams, operations leaders, and partners evaluating product judgment. |
 | Review path | Validate the demo, README, architecture notes, and quality gate before deeper workflow review. |
-| Review signal | Each card exposes market, review signal, service path, live evidence, demos, and verification-friendly repository links. |
+| Architecture signal | Each card exposes stack tags, runtime boundaries, architecture links, live evidence, demos, and repository routes. |
 | Safety boundary | The site avoids client secrets and only displays public-safe project summaries and generated visual assets. |
 | Fast proof | `npm run verify` checks type safety, content guarantees, tests, and production build before deployment. |
 
 ## Three-Minute Proof
 
 1. Open the live gallery and scan the first flagship lane.
-2. Expand one project card and confirm it exposes market, review signal, service path, and verification evidence.
+2. Expand one project card and confirm it exposes stack tags, runtime boundary, architecture route, and live evidence.
 3. Open [docs/live-service-screenshots.md](docs/live-service-screenshots.md) and [docs/repository-upgrade-audit.md](docs/repository-upgrade-audit.md).
 4. Run `npm run verify` before treating the gallery as current.
 
@@ -40,12 +40,17 @@ A compact public gallery that makes each system read like a product, not a scatt
 - **Demo catalog:** Supporting repos without service URLs now have GitHub Pages demos listed in [docs/public-demo-catalog.md](docs/public-demo-catalog.md).
 - **Service read:** Use the gallery as the portfolio router for GenAI operations, incident ops, runtime reliability, and governed analytics.
 
-## Technical Review Fit
+## Technology Stack And Architecture
 
-- **AI platform / agent reliability:** Start with `aix-pilot`, `stage-pilot`, `agent-runtime-go`, and the verification notes behind each card.
-- **Security and infrastructure operations:** Start with `AegisOps`, `security-threat-response-workbench`, `nw-service-assurance-workbench`, and the military/InterX experience sections.
-- **Data and analytics engineering:** Start with `lakehouse-contract-lab`, `fab-ops-yield-control-tower`, `districtpilot-ai`, and `twincity-ui`.
-- **Reviewer questions:** how I decide a demo is review-safe, how I separate generated fixtures from real operator data, how I make a repo easy to verify after handoff, and what I would productionize next.
+- **Frontend/runtime:** React, Vite, Next.js, TypeScript, Vitest, Cloudflare Pages, and package/runtime surfaces.
+- **Backend/automation:** Python, FastAPI, controlled scripts, report generation, audit paths, and local-first services.
+- **Data systems:** SQL, Spark, Snowflake, data contracts, semantic views, quality gates, and export boundaries.
+- **Infrastructure:** Terraform, Docker, local compose, GitHub Actions, private deployment notes, and secrets outside source.
+- **Architecture route:** each active public repository now links to `docs/system-architecture.md` from the portfolio Architecture section.
+
+## System Architecture
+
+- [System architecture](docs/system-architecture.md) maps the runtime boundary, data/control flow, cloud or local deployment surface, and operating assumptions for this repository.
 
 ## Service Architecture
 

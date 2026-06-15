@@ -12,7 +12,7 @@ This snapshot records the latest local verification and the external checks that
 | Public demo availability | Current pass | 34 unique public demo URLs from the portfolio constants returned HTTP 200; `KIM3310` and `doeon-kim-portfolio` intentionally share the same portfolio URL. |
 | GitHub homepage metadata | Recorded pass | 35 editable coverage repositories were recorded with the expected public demo URL. |
 | Portfolio verification | Passed locally | TypeScript, Vitest, gallery content verification, and production build passed for this repository state. |
-| Portfolio UX | Passed local browser check | Local desktop and mobile browser checks showed `36 live demos`, 35 coverage demo links, HTTPS routes, progressive disclosure, and public API readiness proof cards without horizontal overflow. |
+| Portfolio UX | Passed local browser check | Local desktop and mobile browser checks showed stack chips, architecture links, coverage demo links, HTTPS routes, progressive disclosure, and public API readiness proof cards without horizontal overflow. |
 
 **Local verification status: passed**
 

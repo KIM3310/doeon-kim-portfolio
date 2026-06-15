@@ -15,7 +15,7 @@ This repository is packaged as a concrete system surface, not a loose code sampl
 | --- | --- |
 | Target reviewer | operations leaders and platform owners |
 | Service wedge | operations workbench, integration sprint, and support plan |
-| Review signal | architecture clarity, local verification, trust boundaries, and repeatable operator workflow |
+| Architecture signal | architecture clarity, trust boundaries, runtime/data notes, and repeatable operator workflow |
 | Delivery shape | Fixed-scope pilot, integration sprint, and handoff-ready operating pack |
 | Expansion path | Add customer-specific adapters, policy controls, observability, and support SLAs after the pilot proves value |
 

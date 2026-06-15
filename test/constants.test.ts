@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { CERTIFICATIONS, EDUCATION, INTERX_ROLE, LIVE_SERVICE_SCREENS, MILITARY_ROLE, PROFILE, PROJECTS, REPOSITORY_DEMO_URLS, SKILLS, PORTFOLIO_REEL, PORTFOLIO_STATS, REPOSITORY_COVERAGE } from '../constants';
+import { CERTIFICATIONS, EDUCATION, INTERX_ROLE, LIVE_SERVICE_SCREENS, MILITARY_ROLE, PROFILE, PROJECTS, REPOSITORY_DEMO_URLS, SKILLS, PORTFOLIO_REEL, PORTFOLIO_STATS, REPOSITORY_COVERAGE, STACK_ARCHITECTURE_LANES, SYSTEM_ARCHITECTURE_URLS } from '../constants';
 
 describe('PROFILE', () => {
   it('contains required fields', () => {
@@ -20,13 +20,23 @@ describe('PROFILE', () => {
 });
 
 describe('PORTFOLIO_STATS', () => {
-  it('surfaces the latest audit metrics', () => {
+  it('surfaces stack categories rather than status metrics', () => {
     expect(PORTFOLIO_STATS).toEqual([
-      { label: 'Reviewed repos', value: '35' },
-      { label: 'Live demos', value: '36' },
-      { label: 'Current checks', value: '0 failing' },
-      { label: 'Dependabot', value: '0 open' },
+      { label: 'Frontend', value: 'React / Vite' },
+      { label: 'Backend', value: 'FastAPI / Workers' },
+      { label: 'Data', value: 'SQL / Spark' },
+      { label: 'Infra', value: 'Terraform / Docker' },
     ]);
+  });
+});
+
+describe('STACK_ARCHITECTURE_LANES', () => {
+  it('links public repositories to system architecture attachments', () => {
+    expect(STACK_ARCHITECTURE_LANES.length).toBeGreaterThan(0);
+    expect(STACK_ARCHITECTURE_LANES.map(lane => lane.lane).join(' ')).toContain('TypeScript');
+    expect(STACK_ARCHITECTURE_LANES.map(lane => lane.lane).join(' ')).toContain('Python');
+    expect(SYSTEM_ARCHITECTURE_URLS['stage-pilot']).toContain('/docs/system-architecture.md');
+    expect(SYSTEM_ARCHITECTURE_URLS['enterprise-llm-adoption-kit']).toContain('/docs/system-architecture.md');
   });
 });
 
@@ -143,7 +153,7 @@ describe('PORTFOLIO_REEL', () => {
   it('tracks the narrated evidence reel assets', () => {
     expect(PORTFOLIO_REEL.title).toBe('Narrated Systems Gallery Reel');
     expect(PORTFOLIO_REEL.summary).toContain('English TTS');
-    expect(PORTFOLIO_REEL.summary).toContain('recorded 35-repository audit posture');
+    expect(PORTFOLIO_REEL.summary).toContain('public architecture routes');
     expect(PORTFOLIO_REEL.video).toBe('evidence/portfolio-reel/kim3310-systems-gallery-reel.mp4');
     expect(PORTFOLIO_REEL.poster).toContain('kim3310-systems-gallery-reel-poster.png');
     expect(PORTFOLIO_REEL.transcript).toContain('transcript.txt');

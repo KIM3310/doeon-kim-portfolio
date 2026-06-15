@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useMemo } from 'react';
-import { PORTFOLIO_REEL, PROJECTS, REPOSITORY_COVERAGE, REPOSITORY_DEMO_URLS } from '../constants';
-import { BriefcaseBusiness, ChevronDown, ChevronUp, ExternalLink, FileText, Film, Github, LockKeyhole, Route, Target, Volume2 } from 'lucide-react';
+import { PORTFOLIO_REEL, PROJECTS, REPOSITORY_COVERAGE, REPOSITORY_DEMO_URLS, STACK_ARCHITECTURE_LANES, SYSTEM_ARCHITECTURE_URLS } from '../constants';
+import { ChevronDown, ChevronUp, Cpu, ExternalLink, FileText, Film, Github, Layers3, LockKeyhole, Network, Volume2 } from 'lucide-react';
 
 const TOP_TAGS = 8;
 const LIVE_IMAGE_WIDTH = 1440;
@@ -8,6 +8,10 @@ const LIVE_IMAGE_HEIGHT = 1000;
 const livePreviewFor = (asset: string) => asset.replace('evidence/live/', 'evidence/live/preview/').replace(/\.png$/, '.webp');
 const liveProofPreviewFor = (asset: string) => asset.replace('evidence/live/', 'evidence/live/preview-sm/').replace(/\.png$/, '.webp');
 const isLivePngEvidence = (asset: string) => asset.startsWith('evidence/live/') && asset.endsWith('.png');
+const repoNameFromGithub = (url?: string) => {
+  const parts = url?.split('/').filter(Boolean);
+  return parts?.[parts.length - 1];
+};
 const projectEvidenceClassName = (evidence?: string) => [
   'project-evidence',
   !evidence ? 'project-evidence-placeholder' : '',
@@ -86,7 +90,7 @@ const Projects: React.FC = () => {
         <div className="section-heading">
           <p className="eyebrow">Systems</p>
           <h2>Built systems, with evidence</h2>
-          <p>Each card links to a runnable or inspectable system, then states the intended audience, review signal, and proof path behind the build.</p>
+          <p>Each card links to a runnable or inspectable system, then exposes the stack, runtime boundary, and system architecture route behind the build.</p>
         </div>
 
         <div className="evidence-reel" aria-label="Narrated systems gallery evidence reel">
@@ -154,7 +158,11 @@ const Projects: React.FC = () => {
         </div>
 
         <div className="project-grid">
-          {filtered.map((project, idx) => (
+          {filtered.map((project, idx) => {
+            const repoName = repoNameFromGithub(project.github);
+            const architectureUrl = repoName ? SYSTEM_ARCHITECTURE_URLS[repoName] : undefined;
+
+            return (
             <article key={idx} className="project-card">
               <div className="project-card-top">
                 <span>{String(idx + 1).padStart(2, '0')}</span>
@@ -169,28 +177,28 @@ const Projects: React.FC = () => {
               <h3>{project.title}</h3>
               <p className="project-copy">{project.description}</p>
               <details className="project-business-disclosure">
-                <summary aria-label={`Show ${project.title} audience and review fit`}>
+                <summary aria-label={`Show ${project.title} stack and architecture`}>
                   <span>
-                    <strong>Review fit</strong>
-                    <em>audience, review signal, proof path</em>
+                    <strong>Architecture</strong>
+                    <em>stack, runtime boundary, system doc</em>
                   </span>
                   <ChevronDown size={16} className="disclosure-icon" aria-hidden="true" />
                 </summary>
-                <div className="project-business" aria-label={`${project.title} audience and review fit`}>
+                <div className="project-business" aria-label={`${project.title} stack and architecture`}>
                   <div className="project-business-item">
-                    <Target size={15} aria-hidden="true" />
-                    <span>Audience</span>
-                    <strong>{project.market}</strong>
+                    <Cpu size={15} aria-hidden="true" />
+                    <span>Stack</span>
+                    <strong>{project.tech.join(', ')}</strong>
                   </div>
                   <div className="project-business-item">
-                    <BriefcaseBusiness size={15} aria-hidden="true" />
-                    <span>Review signal</span>
+                    <Network size={15} aria-hidden="true" />
+                    <span>Runtime boundary</span>
                     <strong>{project.reviewSignal}</strong>
                   </div>
                   <div className="project-business-item">
-                    <Route size={15} aria-hidden="true" />
-                    <span>Proof path</span>
-                    <strong>{project.proofPath}</strong>
+                    <FileText size={15} aria-hidden="true" />
+                    <span>System doc</span>
+                    <strong>{architectureUrl ? 'docs/system-architecture.md' : 'Architecture route listed in the service matrix'}</strong>
                   </div>
                 </div>
               </details>
@@ -218,19 +226,59 @@ const Projects: React.FC = () => {
                     <ExternalLink size={14} /> Demo
                   </a>
                 )}
+                {architectureUrl && (
+                  <a href={architectureUrl} target="_blank" rel="noopener noreferrer">
+                    <FileText size={14} /> Architecture
+                  </a>
+                )}
               </div>
             </article>
-          ))}
+          );})}
         </div>
         {filtered.length === 0 && (
           <p className="empty-state">No projects match this filter.</p>
         )}
 
+        <div id="architecture" className="architecture-ledger" aria-label="System architecture by technology stack">
+          <div className="coverage-intro">
+            <span>Architecture</span>
+            <h3>System architecture by stack lane</h3>
+            <p>The portfolio is organized by implementation surface: frontend, backend, data, deployment, native runtime, and applied ML. Each linked repository carries a `docs/system-architecture.md` attachment.</p>
+          </div>
+          <div className="architecture-grid">
+            {STACK_ARCHITECTURE_LANES.map(lane => (
+              <article key={lane.lane} className="architecture-card">
+                <div className="architecture-card-header">
+                  <Layers3 aria-hidden="true" />
+                  <div>
+                    <h4>{lane.lane}</h4>
+                    <p>{lane.stack}</p>
+                  </div>
+                </div>
+                <p className="architecture-card-copy">{lane.architecture}</p>
+                <div className="architecture-repo-list">
+                  {lane.repositories.map(repo => {
+                    const architectureUrl = SYSTEM_ARCHITECTURE_URLS[repo];
+                    return architectureUrl ? (
+                      <a key={repo} href={architectureUrl} target="_blank" rel="noopener noreferrer">
+                        {repo}
+                        <FileText size={12} aria-hidden="true" />
+                      </a>
+                    ) : (
+                      <span key={repo}>{repo}</span>
+                    );
+                  })}
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+
         <div id="coverage" className="coverage-ledger" aria-label="Active repository coverage ledger">
           <div className="coverage-intro">
             <span>Coverage ledger</span>
-            <h3>35 editable repositories, one evidence map</h3>
-            <p>The visual cards carry the proof surface; this ledger tracks the current editable repo set, review route, technical signal, and safety boundary.</p>
+            <h3>Repository coverage by technical surface</h3>
+            <p>The visual cards carry the product surface; this ledger tracks stack groups, repository routes, and architecture attachments.</p>
           </div>
           <div className="coverage-list">
             {REPOSITORY_COVERAGE.map(lane => (

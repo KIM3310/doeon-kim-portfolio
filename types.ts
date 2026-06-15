@@ -17,6 +17,13 @@ export interface RepositoryCoverageLane {
   repositories: string[];
 }
 
+export interface StackArchitectureLane {
+  lane: string;
+  stack: string;
+  architecture: string;
+  repositories: string[];
+}
+
 export interface LiveServiceScreen {
   title: string;
   url: string;

@@ -25,11 +25,11 @@ describe('App component', () => {
     expect(screen.getAllByText('KIM3310').length).toBeGreaterThan(0);
   });
 
-  it('renders the current review proof strip', () => {
+  it('renders the current stack strip', () => {
     render(<App />);
-    expect(screen.getByText('0 failing checks')).toBeInTheDocument();
-    expect(screen.getByText('35 reviewed repos')).toBeInTheDocument();
-    expect(screen.getByText('36 live demos')).toBeInTheDocument();
+    expect(screen.getByText('TypeScript + React')).toBeInTheDocument();
+    expect(screen.getByText('Python + FastAPI')).toBeInTheDocument();
+    expect(screen.getByText('SQL + Spark')).toBeInTheDocument();
   });
 
   it('marks the overview navigation item as the initial active section', () => {
@@ -60,7 +60,7 @@ describe('App component', () => {
     expect(screen.getByText('Operational scope')).toBeInTheDocument();
     expect(screen.getByText('Infrastructure scope')).toBeInTheDocument();
     expect(screen.getByText('Military outcomes')).toBeInTheDocument();
-    expect(screen.getAllByText('Review fit').length).toBeGreaterThan(0);
+    expect(screen.getAllByText('Architecture').length).toBeGreaterThan(0);
     expect(screen.getByText('Education and Training')).toBeInTheDocument();
   });
 
@@ -84,7 +84,14 @@ describe('App component', () => {
 
   it('links coverage repositories to public demos', () => {
     render(<App />);
-    expect(screen.getAllByRole('link', { name: /agent-runtime-go/ })[0]).toHaveAttribute('href', 'https://kim3310.github.io/agent-runtime-go/');
-    expect(screen.getAllByRole('link', { name: /weld-defect-vision/ })[0]).toHaveAttribute('href', 'https://kim3310.github.io/weld-defect-vision/');
+    expect(screen.getAllByRole('link', { name: /agent-runtime-go/ }).some(link => link.getAttribute('href') === 'https://kim3310.github.io/agent-runtime-go/')).toBe(true);
+    expect(screen.getAllByRole('link', { name: /weld-defect-vision/ }).some(link => link.getAttribute('href') === 'https://kim3310.github.io/weld-defect-vision/')).toBe(true);
+  });
+
+  it('renders stack architecture links', () => {
+    render(<App />);
+    expect(screen.getByRole('button', { name: 'Architecture' })).toBeInTheDocument();
+    expect(screen.getByText('System architecture by stack lane')).toBeInTheDocument();
+    expect(screen.getAllByRole('link', { name: /stage-pilot/ }).some(link => link.getAttribute('href')?.includes('/docs/system-architecture.md'))).toBe(true);
   });
 });

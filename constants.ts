@@ -1,4 +1,4 @@
-import { Project, SkillCategory, Profile, WorkExperience, EducationItem, Certification, RepositoryCoverageLane, LiveServiceScreen, PortfolioReel } from './types';
+import { Project, SkillCategory, Profile, WorkExperience, EducationItem, Certification, RepositoryCoverageLane, StackArchitectureLane, LiveServiceScreen, PortfolioReel } from './types';
 
 export const PROFILE: Profile = {
   name: 'KIM3310 Systems Gallery',
@@ -11,11 +11,43 @@ export const PROFILE: Profile = {
 };
 
 export const PORTFOLIO_STATS = [
-  { label: 'Reviewed repos', value: '35' },
-  { label: 'Live demos', value: '36' },
-  { label: 'Current checks', value: '0 failing' },
-  { label: 'Dependabot', value: '0 open' },
+  { label: 'Frontend', value: 'React / Vite' },
+  { label: 'Backend', value: 'FastAPI / Workers' },
+  { label: 'Data', value: 'SQL / Spark' },
+  { label: 'Infra', value: 'Terraform / Docker' },
 ] as const;
+
+export const SYSTEM_ARCHITECTURE_URLS: Record<string, string> = {
+  AegisOps: 'https://github.com/KIM3310/AegisOps/blob/main/docs/system-architecture.md',
+  KIM3310: 'https://github.com/KIM3310/KIM3310/blob/main/docs/system-architecture.md',
+  'Nexus-Hive': 'https://github.com/KIM3310/Nexus-Hive/blob/main/docs/system-architecture.md',
+  SteadyTap: 'https://github.com/KIM3310/SteadyTap/blob/main/docs/system-architecture.md',
+  'agent-orchestration-benchmark': 'https://github.com/KIM3310/agent-orchestration-benchmark/blob/main/docs/system-architecture.md',
+  'agent-runtime-go': 'https://github.com/KIM3310/agent-runtime-go/blob/main/docs/system-architecture.md',
+  'ai-agent-production-lab': 'https://github.com/KIM3310/ai-agent-production-lab/blob/main/docs/system-architecture.md',
+  'ai-security-redteam-lab': 'https://github.com/KIM3310/ai-security-redteam-lab/blob/main/docs/system-architecture.md',
+  'aix-pilot': 'https://github.com/KIM3310/aix-pilot/blob/main/docs/system-architecture.md',
+  'beaver-study-orchestrator': 'https://github.com/KIM3310/beaver-study-orchestrator/blob/main/docs/system-architecture.md',
+  'districtpilot-ai': 'https://github.com/KIM3310/districtpilot-ai/blob/main/docs/system-architecture.md',
+  'doeon-kim-portfolio': 'https://github.com/KIM3310/doeon-kim-portfolio/blob/main/docs/system-architecture.md',
+  'dream-interpretation-pages': 'https://github.com/KIM3310/dream-interpretation-pages/blob/main/docs/system-architecture.md',
+  'enterprise-llm-adoption-kit': 'https://github.com/KIM3310/enterprise-llm-adoption-kit/blob/main/docs/system-architecture.md',
+  'fab-ops-yield-control-tower': 'https://github.com/KIM3310/fab-ops-yield-control-tower/blob/main/docs/system-architecture.md',
+  'kbbq-idle-unity': 'https://github.com/KIM3310/kbbq-idle-unity/blob/main/docs/system-architecture.md',
+  'lakehouse-contract-lab': 'https://github.com/KIM3310/lakehouse-contract-lab/blob/main/docs/system-architecture.md',
+  'llm-onprem-deployment-kit': 'https://github.com/KIM3310/llm-onprem-deployment-kit/blob/main/docs/system-architecture.md',
+  'multi-cli-pilot': 'https://github.com/KIM3310/multi-cli-pilot/blob/main/docs/system-architecture.md',
+  'nw-service-assurance-workbench': 'https://github.com/KIM3310/nw-service-assurance-workbench/blob/main/docs/system-architecture.md',
+  'quantum-workbench': 'https://github.com/KIM3310/quantum-workbench/blob/main/docs/system-architecture.md',
+  'retina-scan-ai': 'https://github.com/KIM3310/retina-scan-ai/blob/main/docs/system-architecture.md',
+  'secure-xl2hwp-local': 'https://github.com/KIM3310/secure-xl2hwp-local/blob/main/docs/system-architecture.md',
+  'security-threat-response-workbench': 'https://github.com/KIM3310/security-threat-response-workbench/blob/main/docs/system-architecture.md',
+  'stage-pilot': 'https://github.com/KIM3310/stage-pilot/blob/main/docs/system-architecture.md',
+  'the-savior': 'https://github.com/KIM3310/the-savior/blob/main/docs/system-architecture.md',
+  'tool-call-finetune-lab': 'https://github.com/KIM3310/tool-call-finetune-lab/blob/main/docs/system-architecture.md',
+  'twincity-ui': 'https://github.com/KIM3310/twincity-ui/blob/main/docs/system-architecture.md',
+  'weld-defect-vision': 'https://github.com/KIM3310/weld-defect-vision/blob/main/docs/system-architecture.md',
+};
 
 export const REPOSITORY_DEMO_URLS: Record<string, string> = {
   KIM3310: 'https://kim3310.github.io/doeon-kim-portfolio/',
@@ -248,7 +280,7 @@ export const LIVE_SERVICE_SCREENS: LiveServiceScreen[] = [
 export const PORTFOLIO_REEL: PortfolioReel = {
   title: 'Narrated Systems Gallery Reel',
   summary:
-    'English TTS evidence reel generated from representative service screenshots and the recorded 35-repository audit posture.',
+    'English TTS systems reel generated from representative service screenshots and the public architecture routes.',
   video: 'evidence/portfolio-reel/kim3310-systems-gallery-reel.mp4',
   poster: 'evidence/portfolio-reel/kim3310-systems-gallery-reel-poster.png',
   transcript: 'evidence/portfolio-reel/transcript.txt',
@@ -487,40 +519,73 @@ export const PROJECTS: Project[] = [
   },
 ];
 
+export const STACK_ARCHITECTURE_LANES: StackArchitectureLane[] = [
+  {
+    lane: 'TypeScript / React / Vite / Next.js',
+    stack: 'React, Vite, Next.js, TypeScript, Vitest, Cloudflare Pages',
+    architecture: 'Public product surfaces, operations consoles, dashboard flows, and edge-ready UI boundaries.',
+    repositories: ['aix-pilot', 'stage-pilot', 'AegisOps', 'twincity-ui', 'security-threat-response-workbench'],
+  },
+  {
+    lane: 'Python / FastAPI / automation',
+    stack: 'Python, FastAPI, pytest, report generation, controlled automation scripts',
+    architecture: 'Governance APIs, local-first services, document automation, analytics adapters, and generated artifact boundaries.',
+    repositories: ['enterprise-llm-adoption-kit', 'Nexus-Hive', 'secure-xl2hwp-local', 'ai-agent-production-lab'],
+  },
+  {
+    lane: 'Data / SQL / Spark / Snowflake',
+    stack: 'SQL, Spark, Snowflake, data contracts, semantic views, quality gates',
+    architecture: 'Contracted data flows, feature marts, rejected-row review, export boundaries, and public-data rollout maps.',
+    repositories: ['lakehouse-contract-lab', 'districtpilot-ai', 'fab-ops-yield-control-tower'],
+  },
+  {
+    lane: 'Infrastructure / deployment',
+    stack: 'Terraform, Docker, local compose, GitHub Actions, private deployment notes',
+    architecture: 'Environment boundaries, infrastructure modules, secrets outside source, local/staging/runtime separation.',
+    repositories: ['llm-onprem-deployment-kit', 'stage-pilot', 'enterprise-llm-adoption-kit'],
+  },
+  {
+    lane: 'Go / SwiftUI / Unity / applied ML',
+    stack: 'Go, SwiftUI, Unity WebGL, model-serving notes, explainability artifacts',
+    architecture: 'Compact runtime boundaries, native/mobile surfaces, playable WebGL distribution, and human-reviewed model outputs.',
+    repositories: ['agent-runtime-go', 'SteadyTap', 'kbbq-idle-unity', 'weld-defect-vision', 'retina-scan-ai'],
+  },
+];
+
 export const REPOSITORY_COVERAGE: RepositoryCoverageLane[] = [
   {
     lane: 'Front door and flagship products',
-    role: 'Turns the account into one coherent product and engineering story.',
+    role: 'React/Vite portfolio router, enterprise GenAI console, and Python/FastAPI governance kit.',
     repositories: ['KIM3310', 'doeon-kim-portfolio', 'aix-pilot', 'enterprise-llm-adoption-kit'],
   },
   {
     lane: 'Agent and runtime reliability',
-    role: 'Shows deterministic execution, eval discipline, safety checks, and package/runtime judgment.',
+    role: 'TypeScript package runtime, Go runtime, Python eval harnesses, and controlled CLI automation.',
     repositories: ['stage-pilot', 'agent-runtime-go', 'agent-orchestration-benchmark', 'ai-agent-production-lab', 'ai-security-redteam-lab', 'tool-call-finetune-lab', 'multi-cli-pilot'],
   },
   {
     lane: 'Security, incident, and network operations',
-    role: 'Shows operator-grade incident response, service visibility, handoff, and signed evidence.',
+    role: 'React operations boards, security workflows, service assurance surfaces, and signed evidence paths.',
     repositories: ['AegisOps', 'security-threat-response-workbench', 'nw-service-assurance-workbench', 'ops-reliability-workbench'],
   },
   {
     lane: 'Enterprise deployment and document automation',
-    role: 'Shows controlled knowledge, document, and support-queue workflows with clear review boundaries.',
+    role: 'Terraform deployment notes, local-first document automation, queue workflows, and controlled adapters.',
     repositories: ['llm-onprem-deployment-kit', 'secure-xl2hwp-local', 'honeypot', 'Upstage-DocuAgent', 'smallbiz-ops-copilot'],
   },
   {
     lane: 'Governed analytics and data quality',
-    role: 'Shows policy-checked analytics, forecast/action loops, data contracts, and auditable research.',
+    role: 'Python, SQL, Spark, Snowflake, semantic views, data contracts, and export boundaries.',
     repositories: ['Nexus-Hive', 'lakehouse-contract-lab', 'districtpilot-ai'],
   },
   {
     lane: 'Manufacturing, inspection, and regulated review',
-    role: 'Shows high-trust operations, model validation, approval gates, and safety-aware boundaries.',
+    role: 'Manufacturing analytics, model-serving notes, approval gates, and human-reviewed output boundaries.',
     repositories: ['fab-ops-yield-control-tower', 'memory-test-master-change-gate', 'weld-defect-vision', 'regulated-case-workbench', 'retina-scan-ai'],
   },
   {
     lane: 'Consumer, mobile, game, and research tools',
-    role: 'Shows product taste, native/mobile craft, distribution experiments, and controlled research tools.',
+    role: 'SwiftUI, Unity WebGL, static content systems, digital twin UI, and research workbench surfaces.',
     repositories: ['the-savior', 'dream-interpretation-pages', 'SteadyTap', 'kbbq-idle-unity', 'quantum-workbench', 'twincity-ui', 'beaver-study-orchestrator'],
   },
 ];
