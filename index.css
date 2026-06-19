@@ -1144,6 +1144,13 @@ textarea:focus-visible,
   border-top: 1px solid var(--line);
 }
 
+.service-offer-ledger {
+  scroll-margin-top: 82px;
+  margin-top: 34px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+
 .architecture-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1213,6 +1220,117 @@ textarea:focus-visible,
 }
 
 .architecture-repo-list a:hover {
+  border-color: rgba(0, 113, 227, 0.28);
+  background: rgba(0, 113, 227, 0.08);
+  color: var(--blue);
+}
+
+.service-offer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.service-offer-card {
+  min-width: 0;
+  display: grid;
+  gap: 14px;
+  padding: 18px;
+  border: 1px solid rgba(228, 228, 231, 0.82);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.58);
+  -webkit-backdrop-filter: blur(18px) saturate(1.14);
+  backdrop-filter: blur(18px) saturate(1.14);
+  box-shadow: var(--inner-highlight);
+}
+
+.service-offer-card-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.service-offer-card-head span,
+.service-offer-meta span {
+  color: var(--blue);
+  font-size: 0.73rem;
+  font-weight: 820;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.service-offer-card-head h4 {
+  margin: 6px 0 0;
+  color: var(--ink);
+  font-size: 1.02rem;
+  line-height: 1.24;
+}
+
+.service-offer-card-head svg {
+  flex: 0 0 auto;
+  color: var(--green);
+}
+
+.service-offer-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.58;
+}
+
+.service-offer-meta {
+  display: grid;
+  gap: 8px;
+}
+
+.service-offer-meta div {
+  min-width: 0;
+  display: grid;
+  gap: 4px;
+  padding-top: 8px;
+  border-top: 1px solid var(--line);
+}
+
+.service-offer-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--muted-2);
+  font-size: 0.7rem;
+}
+
+.service-offer-meta strong {
+  min-width: 0;
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.service-offer-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: auto;
+}
+
+.service-offer-actions a {
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 10px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.66);
+  color: var(--ink-soft);
+  font-size: 0.77rem;
+  font-weight: 760;
+  text-decoration: none;
+}
+
+.service-offer-actions a:hover {
   border-color: rgba(0, 113, 227, 0.28);
   background: rgba(0, 113, 227, 0.08);
   color: var(--blue);
@@ -1384,6 +1502,7 @@ textarea:focus-visible,
   .evidence-reel-link,
   .evidence-reel-meta span,
   .architecture-card,
+  .service-offer-card,
   .coverage-list {
     background: rgba(255, 255, 255, 0.9);
   }
@@ -1391,6 +1510,7 @@ textarea:focus-visible,
 
 @media (max-width: 1080px) {
   .architecture-grid,
+  .service-offer-grid,
   .project-grid,
   .capability-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1409,6 +1529,7 @@ textarea:focus-visible,
   .outcome-row,
   .evidence-reel,
   .architecture-grid,
+  .service-offer-grid,
   .coverage-row,
   .project-grid,
   .capability-grid {
@@ -1576,6 +1697,11 @@ textarea:focus-visible,
   .project-actions a {
     min-width: 0;
     flex: 1 1 130px;
+  }
+
+  .service-offer-actions a {
+    flex: 1 1 120px;
+    justify-content: center;
   }
 }
 

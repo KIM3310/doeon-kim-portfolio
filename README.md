@@ -150,3 +150,17 @@ This repository includes a neutral cloud and AI engineering blueprint that maps 
 ## Service Architecture
 
 - [Service architecture](docs/service-architecture.md) defines cloud resources, account information, operational controls, and production guardrails for a scoped technical workflow.
+
+<!-- search-growth-readme:start -->
+
+## Search And Service Surface
+
+- Public entry: free systems gallery with live demos and architecture links
+- Paid boundary: paid architecture pack bundle, implementation sprint, or private adaptation of a repo
+- Canonical URL: https://kim3310.github.io/doeon-kim-portfolio/
+- Lead capture: mailto:ehdjs1351@gmail.com?subject=KIM3310%20Systems%20Gallery%20private%20workspace&body=I%20am%20interested%20in%20paid%20architecture%20pack%20bundle%2C%20implementation%20sprint%2C%20or%20private%20adaptation%20of%20a%20repo%20for%20KIM3310%20Systems%20Gallery.
+- Machine-readable offer: [docs/service-offer.json](docs/service-offer.json)
+- Search growth implementation: [docs/search-growth-implementation.md](docs/search-growth-implementation.md)
+- Revenue architecture: [docs/revenue-architecture.md](docs/revenue-architecture.md)
+
+<!-- search-growth-readme:end -->

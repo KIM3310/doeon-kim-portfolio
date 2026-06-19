@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import { PORTFOLIO_REEL, PROJECTS, REPOSITORY_COVERAGE, REPOSITORY_DEMO_URLS, STACK_ARCHITECTURE_LANES, SYSTEM_ARCHITECTURE_URLS } from '../constants';
-import { ChevronDown, ChevronUp, Cpu, ExternalLink, FileText, Film, Github, Layers3, LockKeyhole, Network, Volume2 } from 'lucide-react';
+import { SERVICE_OFFERS } from '../serviceOffers';
+import { ChevronDown, ChevronUp, Cpu, ExternalLink, FileText, Film, Github, Layers3, LockKeyhole, Network, Search, WalletCards, Volume2 } from 'lucide-react';
 
 const TOP_TAGS = 8;
 const LIVE_IMAGE_WIDTH = 1440;
@@ -268,6 +269,56 @@ const Projects: React.FC = () => {
                       <span key={repo}>{repo}</span>
                     );
                   })}
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+
+        <div id="service-offers" className="service-offer-ledger" aria-label="Searchable service offers by repository">
+          <div className="coverage-intro">
+            <span>Services</span>
+            <h3>Searchable launch catalog</h3>
+            <p>Each repository now has a crawlable service offer, a free entry point, a paid boundary, and machine-readable metadata that can feed search engines, AI answer surfaces, and a later checkout or lead-capture route.</p>
+          </div>
+          <div className="service-offer-grid">
+            {SERVICE_OFFERS.map(offer => (
+              <article key={offer.repo} className="service-offer-card">
+                <div className="service-offer-card-head">
+                  <div>
+                    <span>{offer.category.replace('Application', '')}</span>
+                    <h4>{offer.name}</h4>
+                  </div>
+                  <WalletCards size={18} aria-hidden="true" />
+                </div>
+                <p>{offer.offer}</p>
+                <div className="service-offer-meta">
+                  <div>
+                    <span>Free entry</span>
+                    <strong>{offer.freeEntry}</strong>
+                  </div>
+                  <div>
+                    <span>Paid boundary</span>
+                    <strong>{offer.paidSku}</strong>
+                  </div>
+                  <div>
+                    <span><Search size={13} aria-hidden="true" /> Query</span>
+                    <strong>{offer.primaryQuery}</strong>
+                  </div>
+                </div>
+                <div className="service-offer-actions">
+                  <a href={offer.leadCaptureUrl}>
+                    <WalletCards size={13} /> Private workspace
+                  </a>
+                  <a href={offer.canonicalUrl} target="_blank" rel="noopener noreferrer">
+                    <ExternalLink size={13} /> Demo
+                  </a>
+                  <a href={offer.architectureUrl} target="_blank" rel="noopener noreferrer">
+                    <FileText size={13} /> Architecture
+                  </a>
+                  <a href={offer.revenueUrl} target="_blank" rel="noopener noreferrer">
+                    <WalletCards size={13} /> Revenue
+                  </a>
                 </div>
               </article>
             ))}

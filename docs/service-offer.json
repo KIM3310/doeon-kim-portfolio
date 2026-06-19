@@ -1,0 +1,73 @@
+{
+  "name": "KIM3310 Systems Gallery",
+  "slug": "doeon-kim-portfolio",
+  "canonical_url": "https://kim3310.github.io/doeon-kim-portfolio/",
+  "repository_url": "https://github.com/KIM3310/doeon-kim-portfolio",
+  "architecture_url": "https://github.com/KIM3310/doeon-kim-portfolio/blob/main/docs/system-architecture.md",
+  "revenue_architecture_url": "https://github.com/KIM3310/doeon-kim-portfolio/blob/main/docs/revenue-architecture.md",
+  "lead_capture_url": "mailto:ehdjs1351@gmail.com?subject=KIM3310%20Systems%20Gallery%20private%20workspace&body=I%20am%20interested%20in%20paid%20architecture%20pack%20bundle%2C%20implementation%20sprint%2C%20or%20private%20adaptation%20of%20a%20repo%20for%20KIM3310%20Systems%20Gallery.",
+  "productized_offer": "product storefront for architecture packs, demos, and implementation-ready systems",
+  "first_paid_sku": "paid architecture pack bundle, implementation sprint, or private adaptation of a repo",
+  "free_lead_magnet": "free systems gallery with live demos and architecture links",
+  "search_positioning": {
+    "primary_query": "KIM3310 Systems Gallery product storefront architecture",
+    "secondary_queries": [
+      "KIM3310 Systems Gallery demo",
+      "KIM3310 Systems Gallery system architecture",
+      "KIM3310 Systems Gallery developer tool",
+      "product storefront for architecture packs, demos, and implementation-ready systems service"
+    ],
+    "audience_intent": "Find a runnable demo, inspect the system architecture, and decide whether a private workspace or implementation package is useful."
+  },
+  "monetization_boundary": {
+    "free": "free systems gallery with live demos and architecture links",
+    "paid": "paid architecture pack bundle, implementation sprint, or private adaptation of a repo",
+    "metering_hooks": [
+      "workspace_id",
+      "plan",
+      "quota_day",
+      "export_count",
+      "lead_source"
+    ],
+    "cost_guardrails": [
+      "static first",
+      "edge functions",
+      "customer API keys",
+      "cached AI outputs",
+      "synthetic public data"
+    ]
+  },
+  "structured_data": {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "KIM3310 Systems Gallery",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Web, serverless, and local development environments",
+    "url": "https://kim3310.github.io/doeon-kim-portfolio/",
+    "codeRepository": "https://github.com/KIM3310/doeon-kim-portfolio",
+    "description": "KIM3310 Systems Gallery: product storefront for architecture packs, demos, and implementation-ready systems. Free entry point: free systems gallery with live demos and architecture links. Paid path: paid architecture.",
+    "creator": {
+      "@type": "Person",
+      "name": "KIM3310",
+      "url": "https://github.com/KIM3310"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "free systems gallery with live demos and architecture links",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://kim3310.github.io/doeon-kim-portfolio/"
+      },
+      {
+        "@type": "Offer",
+        "name": "paid architecture pack bundle, implementation sprint, or private adaptation of a repo",
+        "availability": "https://schema.org/LimitedAvailability",
+        "url": "https://github.com/KIM3310/doeon-kim-portfolio/blob/main/docs/revenue-architecture.md"
+      }
+    ],
+    "isAccessibleForFree": true,
+    "keywords": "doeon-kim-portfolio, KIM3310, Systems, Gallery, product, storefront, architecture, packs, demos, implementation-ready, systems, pack, bundle, implementation, sprint, adaptation, repo, gallery, live, links"
+  }
+}
