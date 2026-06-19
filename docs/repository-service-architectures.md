@@ -4,6 +4,8 @@ Date: 2026-06-07 KST
 
 This index keeps repository planning focused on deployment shape, resource needs, account information, operational controls, and public-safe boundaries.
 
+For the revenue-oriented overlay, see [Revenue Architecture Index](revenue-architecture-index.md). It maps every active repository to a productized offer, first paid SKU, free lead magnet, and free-tier-first launch path.
+
 ## Principles
 
 - Keep private assumptions out of public repository docs.

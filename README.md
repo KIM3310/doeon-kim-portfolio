@@ -56,6 +56,7 @@ A compact public gallery that makes each system read like a product, not a scatt
 
 - [Service architecture](docs/service-architecture.md) defines cloud resources, account information, operational controls, and production guardrails for a scoped technical workflow.
 - [Repository service architectures](docs/repository-service-architectures.md) maps all 35 editable repos to resource needs, launch sequencing, and account information.
+- [Revenue architecture index](docs/revenue-architecture-index.md) maps every active repository to a productized offer, first paid SKU, free lead magnet, free-tier-first launch stack, and upgrade boundary.
 - [Service launch plan](docs/service-launch-plan.md) defines the account setup and 14-day technical readiness path.
 - [Service launch playbook](docs/service-launch-playbook.md) maps the repository to architecture audiences, operating gates, launch steps, and risk boundaries.
 
