@@ -3,7 +3,8 @@ import { Project, SkillCategory, Profile, WorkExperience, EducationItem, Certifi
 export const PROFILE: Profile = {
   name: 'KIM3310 Systems Gallery',
   title: 'Operations-first AI systems engineer: incident workflows, agent reliability, data quality, and secure automation',
-  email: 'ehdjs1351@gmail.com',
+  contactUrl:
+    'https://github.com/KIM3310/doeon-kim-portfolio/issues/new?template=service-inquiry.yml&title=Private+workspace+inquiry%3A+KIM3310+Systems+Gallery',
   github: 'https://github.com/KIM3310',
   linkedin: 'https://www.linkedin.com/in/doeon-kim-4742a2388',
   intro:

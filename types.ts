@@ -71,7 +71,7 @@ export interface Certification {
 export interface Profile {
   name: string;
   title: string;
-  email: string;
+  contactUrl: string;
   github: string;
   linkedin: string;
   intro: string;

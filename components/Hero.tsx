@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Github, Linkedin, Mail, ShieldCheck, Sparkles } from 'lucide-react';
+import { ArrowRight, Github, Linkedin, MessageSquare, ShieldCheck, Sparkles } from 'lucide-react';
 import { PORTFOLIO_STATS, PROFILE } from '../constants';
 
 const featuredScreenshot = `${import.meta.env.BASE_URL}evidence/live/aix-pilot.png`;
@@ -29,8 +29,8 @@ const Hero: React.FC = () => (
         <a href={PROFILE.linkedin} target="_blank" rel="noopener noreferrer" className="secondary-action">
           <Linkedin size={18} /> LinkedIn
         </a>
-        <a href={`mailto:${PROFILE.email}`} className="secondary-action">
-          <Mail size={18} /> Email
+        <a href={PROFILE.contactUrl} target="_blank" rel="noopener noreferrer" className="secondary-action">
+          <MessageSquare size={18} /> Service inquiry
         </a>
       </div>
       <div className="hero-showcase hero-mobile-showcase">

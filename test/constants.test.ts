@@ -4,7 +4,8 @@ import { CERTIFICATIONS, EDUCATION, INTERX_ROLE, LIVE_SERVICE_SCREENS, MILITARY_
 describe('PROFILE', () => {
   it('contains required fields', () => {
     expect(PROFILE.name).toBeTruthy();
-    expect(PROFILE.email).toMatch(/@/);
+    expect(PROFILE.contactUrl).toMatch(/github\.com\/KIM3310\/doeon-kim-portfolio\/issues\/new/);
+    expect(PROFILE.contactUrl).toContain('template=service-inquiry.yml');
     expect(PROFILE.github).toMatch(/github\.com/);
     expect(PROFILE.linkedin).toMatch(/linkedin\.com/);
     expect(PROFILE.title).toBeTruthy();

@@ -34,7 +34,7 @@ describe('TypeScript type contracts', () => {
     const profile: Profile = {
       name: 'Test User',
       title: 'Engineer',
-      email: 'test@test.com',
+      contactUrl: 'https://github.com/test/example/issues/new',
       github: 'https://github.com/test',
       linkedin: 'https://linkedin.com/in/test',
       intro: 'Hello',
