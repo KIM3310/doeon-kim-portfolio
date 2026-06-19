@@ -99,7 +99,7 @@ describe('PROJECTS', () => {
       expect(p.tech.length).toBeGreaterThan(0);
       expect(p.evidence).toBeTruthy();
       expect(p.market).toBeTruthy();
-      expect(p.reviewSignal).toBeTruthy();
+      expect(p.architectureSignal).toBeTruthy();
       expect(p.proofPath).toBeTruthy();
       if (p.github) expect(p.github).toMatch(/github\.com/);
     }

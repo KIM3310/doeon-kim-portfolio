@@ -46,7 +46,7 @@ A compact public gallery that makes each system read like a product, not a scatt
 - **Backend/automation:** Python, FastAPI, controlled scripts, report generation, audit paths, and local-first services.
 - **Data systems:** SQL, Spark, Snowflake, data contracts, semantic views, quality gates, and export boundaries.
 - **Infrastructure:** Terraform, Docker, local compose, GitHub Actions, private deployment notes, and secrets outside source.
-- **Architecture route:** each active public repository now links to `docs/system-architecture.md` from the portfolio Architecture section.
+- **Architecture route:** each active public repository now links to `docs/system-architecture.md` from the project index Architecture section.
 
 ## System Architecture
 
@@ -144,7 +144,7 @@ This repository includes a neutral cloud and AI engineering blueprint that maps 
 
 ## Enterprise Productization
 
-- [Product operating model](docs/product-operating-model.md) defines the technical reader, trust boundary, operating checks, and service path for this repository.
+- [Product operating model](docs/product-operating-model.md) defines the architecture inspection, trust boundary, operating checks, and service path for this repository.
 
 ## Service Architecture
 

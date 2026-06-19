@@ -52,7 +52,7 @@ Healthy public surfaces are stored under `public/evidence/live/`.
 
 ## Recovered Supporting Demo Homepages
 
-These repositories previously had unhealthy or missing homepage URLs. They now point to healthy GitHub Pages demos and are linked from the portfolio coverage ledger:
+These repositories previously had unhealthy or missing homepage URLs. They now point to healthy GitHub Pages demos and are linked from the project index coverage ledger:
 
 - `honeypot` - `https://kim3310.github.io/honeypot/`
 - `memory-test-master-change-gate` - `https://kim3310.github.io/memory-test-master-change-gate/`

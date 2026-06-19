@@ -7,7 +7,7 @@ export const PROFILE: Profile = {
   github: 'https://github.com/KIM3310',
   linkedin: 'https://www.linkedin.com/in/doeon-kim-4742a2388',
   intro:
-    'I build reviewable systems from incident-room habits: confirm the signal, bound the data, write the handoff, and keep a runnable verification path. The gallery connects 24/7 MW communications, CCTV/VMS/NVR, access-control, intrusion-alert, and IT infrastructure operations work to AI runtime reliability, enterprise governance, data-quality gates, and operator-facing UI surfaces without private data.',
+    'I build inspectable systems from incident-room habits: confirm the signal, bound the data, write the handoff, and keep a runnable verification path. The gallery connects 24/7 MW communications, CCTV/VMS/NVR, access-control, intrusion-alert, and IT infrastructure operations work to AI runtime reliability, enterprise governance, data-quality gates, and operator-facing UI surfaces without private data.',
 };
 
 export const PORTFOLIO_STATS = [
@@ -298,7 +298,7 @@ export const PROJECTS: Project[] = [
     demo: 'https://aix-pilot.pages.dev',
     evidence: 'evidence/live/aix-pilot.png',
     market: 'Mid-market support teams and internal knowledge operations',
-    reviewSignal: 'Enterprise GenAI product architecture, RAG evaluation, and security gates',
+    architectureSignal: 'Enterprise GenAI product architecture, RAG evaluation, and security gates',
     proofPath: 'Runtime walkthrough, repository evidence, architecture notes, and local quality gate',
   },
   {
@@ -310,7 +310,7 @@ export const PROJECTS: Project[] = [
     demo: 'https://stage-pilot.pages.dev',
     evidence: 'evidence/live/stage-pilot.png',
     market: 'AI platform teams shipping tool-calling agents',
-    reviewSignal: 'Runtime reliability, parser recovery, benchmark discipline',
+    architectureSignal: 'Runtime reliability, parser recovery, benchmark discipline',
     proofPath: 'Runtime walkthrough, repository evidence, architecture notes, and local quality gate',
   },
   {
@@ -322,7 +322,7 @@ export const PROJECTS: Project[] = [
     demo: 'https://kim3310.github.io/agent-runtime-go/',
     evidence: 'evidence/agent-runtime-trace.svg',
     market: 'Backend teams needing controlled agent execution',
-    reviewSignal: 'Go systems design, deterministic orchestration, provider boundaries',
+    architectureSignal: 'Go systems design, deterministic orchestration, provider boundaries',
     proofPath: 'Runtime walkthrough, repository evidence, architecture notes, and local quality gate',
   },
   {
@@ -334,7 +334,7 @@ export const PROJECTS: Project[] = [
     demo: 'https://kim3310.github.io/ai-agent-production-lab/',
     evidence: 'evidence/ai-agent-production-report.svg',
     market: 'Teams moving agents from demo to production',
-    reviewSignal: 'Tracing, cost accounting, eval assertions, report automation',
+    architectureSignal: 'Tracing, cost accounting, eval assertions, report automation',
     proofPath: 'Runtime walkthrough, repository evidence, architecture notes, and local quality gate',
   },
   {
@@ -346,7 +346,7 @@ export const PROJECTS: Project[] = [
     demo: 'https://aegisops-ai-incident-doctor.pages.dev',
     evidence: 'evidence/live/aegisops.png',
     market: 'Security and operations teams managing incident handoff',
-    reviewSignal: 'Operator UX, replay evals, multimodal incident workflow',
+    architectureSignal: 'Operator UX, replay evals, multimodal incident workflow',
     proofPath: 'Runtime walkthrough, repository evidence, architecture notes, and local quality gate',
   },
   {
@@ -358,7 +358,7 @@ export const PROJECTS: Project[] = [
     demo: 'https://security-threat-response-workbench.ehdjs1351.workers.dev',
     evidence: 'evidence/live/security-threat-response-workbench.png',
     market: 'Cloud security teams and managed service providers',
-    reviewSignal: 'Threat triage, runbook design, analyst handoff',
+    architectureSignal: 'Threat triage, runbook design, analyst handoff',
     proofPath: 'Runtime walkthrough, repository evidence, architecture notes, and local quality gate',
   },
   {
@@ -370,7 +370,7 @@ export const PROJECTS: Project[] = [
     demo: 'https://nw-service-assurance-workbench.ehdjs1351.workers.dev',
     evidence: 'evidence/live/nw-service-assurance-workbench.png',
     market: 'Telecom, IDC, and enterprise network operations teams',
-    reviewSignal: 'Service assurance, outage triage, SLA visibility',
+    architectureSignal: 'Service assurance, outage triage, SLA visibility',
     proofPath: 'Runtime walkthrough, repository evidence, architecture notes, and local quality gate',
   },
   {
@@ -382,7 +382,7 @@ export const PROJECTS: Project[] = [
     demo: 'https://enterprise-llm-kit.pages.dev',
     evidence: 'evidence/live/enterprise-llm-adoption-kit.png',
     market: 'Enterprises adopting LLMs under governance pressure',
-    reviewSignal: 'RBAC, audit logging, evals, redaction, rollout controls',
+    architectureSignal: 'RBAC, audit logging, evals, redaction, rollout controls',
     proofPath: 'Runtime walkthrough, repository evidence, architecture notes, and local quality gate',
   },
   {
@@ -394,7 +394,7 @@ export const PROJECTS: Project[] = [
     demo: 'https://secure-xl2hwp-local.pages.dev',
     evidence: 'evidence/live/secure-xl2hwp-local.png',
     market: 'Korean back-office teams with local document workflows',
-    reviewSignal: 'Local-first security, signed exports, auditability',
+    architectureSignal: 'Local-first security, signed exports, auditability',
     proofPath: 'Runtime walkthrough, repository evidence, architecture notes, and local quality gate',
   },
   {
@@ -403,7 +403,7 @@ export const PROJECTS: Project[] = [
       'Case workflow desk with redaction preview, approval gates, policy checks, signed export proof, and cross-case audit feeds.',
     tech: ['FastAPI', 'Approval gates', 'Redaction', 'Private case study'],
     market: 'Compliance-heavy legal, finance, and review teams',
-    reviewSignal: 'Approval gates, redaction, audit workflow design',
+    architectureSignal: 'Approval gates, redaction, audit workflow design',
     proofPath: 'Runtime walkthrough, repository evidence, architecture notes, and local quality gate',
     access: 'private',
     demo: 'https://regulated-case-workbench.pages.dev',
@@ -418,7 +418,7 @@ export const PROJECTS: Project[] = [
     demo: 'https://kim3310.github.io/lakehouse-contract-lab/',
     evidence: 'evidence/lakehouse-contract-board.svg',
     market: 'Data teams modernizing batch quality and contracts',
-    reviewSignal: 'Spark, data contracts, quality gates, warehouse export boundaries',
+    architectureSignal: 'Spark, data contracts, quality gates, warehouse export boundaries',
     proofPath: 'Runtime walkthrough, repository evidence, architecture notes, and local quality gate',
   },
   {
@@ -430,7 +430,7 @@ export const PROJECTS: Project[] = [
     demo: 'https://nexus-hive.pages.dev',
     evidence: 'evidence/live/nexus-hive.png',
     market: 'Analytics teams needing governed self-service SQL',
-    reviewSignal: 'NL-to-query boundaries, policy checks, audit trails',
+    architectureSignal: 'NL-to-query boundaries, policy checks, audit trails',
     proofPath: 'Runtime walkthrough, repository evidence, architecture notes, and local quality gate',
   },
   {
@@ -442,7 +442,7 @@ export const PROJECTS: Project[] = [
     demo: 'https://kim3310.github.io/districtpilot-ai/',
     evidence: 'evidence/districtpilot-public-api-readiness.svg',
     market: 'Local governments, field-service planners, and civic analytics teams',
-    reviewSignal: 'Forecast-to-action loop, Snowflake feature mart, public-data lineage',
+    architectureSignal: 'Forecast-to-action loop, Snowflake feature mart, public-data lineage',
     proofPath: 'Runtime walkthrough, 15_public_api_integration_readiness.sql, repository validators, and architecture notes',
   },
   {
@@ -454,7 +454,7 @@ export const PROJECTS: Project[] = [
     demo: 'https://fab-ops-yield-control-tower.pages.dev',
     evidence: 'evidence/live/fab-ops-yield-control-tower.png',
     market: 'Manufacturing operations and semiconductor support teams',
-    reviewSignal: 'Yield monitoring, shift handoff, qualification analytics',
+    architectureSignal: 'Yield monitoring, shift handoff, qualification analytics',
     proofPath: 'Runtime walkthrough, repository evidence, architecture notes, and local quality gate',
   },
   {
@@ -466,7 +466,7 @@ export const PROJECTS: Project[] = [
     demo: 'https://twincity-ui.pages.dev',
     evidence: 'evidence/live/twincity-ui.png',
     market: 'Facilities, city operations, industrial command centers, and spatial event teams',
-    reviewSignal: 'Spatial operations UX, report contracts, public-data enrichment readiness',
+    architectureSignal: 'Spatial operations UX, report contracts, public-data enrichment readiness',
     proofPath: 'Runtime walkthrough, /api/public-apis, /api/runtime-scorecard, repository tests, and architecture notes',
   },
   {
@@ -478,7 +478,7 @@ export const PROJECTS: Project[] = [
     demo: 'https://kim3310.github.io/weld-defect-vision/',
     evidence: 'evidence/weld-defect-vision-board.svg',
     market: 'Industrial inspection and quality teams',
-    reviewSignal: 'Vision governance, model serving, validation notes',
+    architectureSignal: 'Vision governance, model serving, validation notes',
     proofPath: 'Runtime walkthrough, repository evidence, architecture notes, and local quality gate',
   },
   {
@@ -490,7 +490,7 @@ export const PROJECTS: Project[] = [
     demo: 'https://kim3310.github.io/retina-scan-ai/',
     evidence: 'evidence/retina-scan-ai-research.svg',
     market: 'Health AI research and validation teams',
-    reviewSignal: 'Risk notes, explainability, model cards, compliance caution',
+    architectureSignal: 'Risk notes, explainability, model cards, compliance caution',
     proofPath: 'Runtime walkthrough, repository evidence, architecture notes, and local quality gate',
   },
   {
@@ -499,7 +499,7 @@ export const PROJECTS: Project[] = [
       'Operations inbox for small teams with queue triage, draft approval, KPI cards, bounded runtime controls, and public-data enrichment readiness.',
     tech: ['Workers', 'Operations inbox', 'Approval flow', 'Public API readiness', 'Private case study'],
     market: 'Small support teams with repetitive inbox operations',
-    reviewSignal: 'Cloudflare Workers, queue UX, approval boundaries, merchant and operating-risk enrichment',
+    architectureSignal: 'Cloudflare Workers, queue UX, approval boundaries, merchant and operating-risk enrichment',
     proofPath: 'Runtime walkthrough, /integrations/public-apis, architecture pack, repository tests, and architecture notes',
     access: 'private',
     demo: 'https://smallbiz-ops-copilot.pages.dev',
@@ -514,7 +514,7 @@ export const PROJECTS: Project[] = [
     demo: 'https://steadytap.pages.dev',
     evidence: 'evidence/live/steadytap.png',
     market: 'Accessibility and habit coaching users',
-    reviewSignal: 'SwiftUI, inclusive UX, optional backend sync',
+    architectureSignal: 'SwiftUI, inclusive UX, optional backend sync',
     proofPath: 'Runtime walkthrough, repository evidence, architecture notes, and local quality gate',
   },
 ];

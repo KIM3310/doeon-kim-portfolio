@@ -193,7 +193,7 @@ const Projects: React.FC = () => {
                   <div className="project-business-item">
                     <Network size={15} aria-hidden="true" />
                     <span>Runtime boundary</span>
-                    <strong>{project.reviewSignal}</strong>
+                    <strong>{project.architectureSignal}</strong>
                   </div>
                   <div className="project-business-item">
                     <FileText size={15} aria-hidden="true" />

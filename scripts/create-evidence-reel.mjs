@@ -14,7 +14,7 @@ const transcriptPath = join(outputDir, 'transcript.txt');
 
 const narrationLines = [
   'Welcome to the KIM3310 Systems Gallery.',
-  'This portfolio is built around reviewable AI systems, not static case studies.',
+  'This portfolio is built around inspectable AI systems, not static case studies.',
   'AIX Pilot leads with a deployed enterprise GenAI console for retrieval, agent workflows, data-loss prevention, evaluations, and KPI reporting.',
   'StagePilot shows tool-call reliability through parser recovery, bounded retries, and benchmark evidence for malformed model output.',
   'AegisOps turns incident logs and monitoring screenshots into structured reports, replay evaluations, and operator handoff artifacts.',

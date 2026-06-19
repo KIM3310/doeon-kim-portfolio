@@ -6,9 +6,9 @@ This plan keeps the launch path focused on architecture, account setup, workflow
 
 ## Current Position
 
-The portfolio should route technical readers into four scoped technical lanes:
+The portfolio should route architecture inspection paths into four scoped technical lanes:
 
-| Service lane | First technical reader | First motion | Architecture anchor |
+| Service lane | First architecture inspection | First motion | Architecture anchor |
 | --- | --- | --- | --- |
 | Enterprise AI adoption | AI, data, security, and platform leaders | Readiness and data-boundary architecture | `aix-pilot`, `enterprise-llm-adoption-kit`, `llm-onprem-deployment-kit` |
 | Agent runtime reliability | Teams shipping tool-calling systems | Failure-mode and trace architecture | `stage-pilot`, `agent-runtime-go`, `agent-orchestration-benchmark` |
@@ -44,14 +44,14 @@ Do not add compute, database capacity, GPU capacity, CRM seats, or enterprise ho
 | 2 | Add calendar links to the portfolio constants only after the account is ready. | CTA path moves from email-only to schedule-ready. |
 | 3-5 | Build a target-architecture list across the four service lanes. | Each account has one specific workflow pain. |
 | 6-10 | Send targeted messages with one proof repo and one architecture-backed workflow. | Replies or calls show which lane has demand. |
-| 11-14 | Run calls and pitch the smallest scoped workflow, not a vague custom build. | One technical reader gives enough scope to justify backend resources. |
+| 11-14 | Run calls and pitch the smallest scoped workflow, not a vague custom build. | One architecture inspection gives enough scope to justify backend resources. |
 
 ## Guardrails
 
-- Present diagnostics first when data access, security architecture, or technical reader authority is unclear.
+- Present diagnostics first when data access, security architecture, or architecture inspection authority is unclear.
 - Do not promise autonomous medical, safety, industrial inspection, or security outcomes.
 - Keep regulated, medical, and manufacturing workflows scoped as human-approved support unless expert architecture and approved data exist.
-- Do not build more features until a technical reader confirms the workflow.
+- Do not build more features until a architecture inspection confirms the workflow.
 - Keep private assumptions out of public repository docs.
 
 ## Account Setup Checklist

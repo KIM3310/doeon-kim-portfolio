@@ -6,7 +6,7 @@ export interface Project {
   demo?: string;
   evidence?: string;
   market: string;
-  reviewSignal: string;
+  architectureSignal: string;
   proofPath: string;
   access?: 'public' | 'private';
 }
