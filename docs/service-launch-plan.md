@@ -21,7 +21,7 @@ The portfolio should route architecture inspection paths into four scoped techni
 | --- | --- | --- |
 | Custom domain | Makes architecture and sharing cleaner than a GitHub subpath. | After the public brand/domain name is chosen. |
 | Scheduling page | Removes friction from qualified architecture walkthroughs. | After calendar availability and intake questions are ready. |
-| Privacy-safe analytics | Shows which lane gets qualified clicks without collecting private payloads. | After the domain is connected. |
+| Privacy-safe analytics | Shows which lane gets qualified clicks without collecting private payloads. | Connected with Cloudflare Web Analytics and GA4 for the portfolio domain. |
 | Professional email alias | Improves trust in outbound and inbound conversations. | With the domain. |
 | Observability project | Tracks page errors, demo health, and runtime failures where applicable. | Before broader external testing. |
 
@@ -61,5 +61,5 @@ Do not add compute, database capacity, GPU capacity, CRM seats, or enterprise ho
 | Cloudflare | Domain, DNS, SSL, analytics, optional Pages redirect from current GitHub Pages. |
 | Calendly or Cal.com | Four event types: AI adoption, runtime reliability, security ops, governed automation. |
 | Email | Domain alias that forwards to the existing email, plus a simple signature with portfolio and GitHub links. |
-| Analytics | Track proof repo clicks, demo clicks, and contact clicks without collecting private visitor data. |
+| Analytics | Cloudflare Web Analytics is enabled on Pages, and GA4 uses measurement ID `G-D28LWX2JXQ` for portfolio traffic reporting. |
 | Sentry or equivalent | Capture runtime errors where a deployed app has client or server execution. |

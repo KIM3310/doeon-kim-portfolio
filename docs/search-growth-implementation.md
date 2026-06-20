@@ -11,6 +11,7 @@ This repository now exposes a search-readable service surface in addition to the
 | System architecture | [docs/system-architecture.md](./system-architecture.md) |
 | Public canonical URL | https://kim3310-doeon-kim-portfolio.pages.dev/ |
 | Lead capture URL | https://github.com/KIM3310/doeon-kim-portfolio/issues/new?template=service-inquiry.yml&title=Private+workspace+inquiry%3A+KIM3310+Systems+Gallery |
+| Traffic measurement | Cloudflare Web Analytics and GA4 measurement ID `G-D28LWX2JXQ` |
 
 ## Search Positioning
 
@@ -29,3 +30,4 @@ The public surface stays crawlable and free. Paid value starts when a visitor wa
 - Submit the canonical URL and sitemap in Google Search Console after the domain is connected.
 - The lead-capture path is a GitHub Issue Form so private workspace and paid-package requests create a trackable queue before payment infrastructure is added.
 - Keep exact free-tier quotas out of public promises because provider limits change.
+- Use Cloudflare Web Analytics for privacy-safe site traffic and GA4 for Google Search/lead-funnel reporting.
