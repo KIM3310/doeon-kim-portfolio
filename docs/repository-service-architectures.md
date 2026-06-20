@@ -9,7 +9,7 @@ For the revenue-oriented overlay, see [Revenue Architecture Index](revenue-archi
 ## Principles
 
 - Keep private assumptions out of public repository docs.
-- Keep workflow scope private until a operator-approved boundary exists.
+- Keep workflow scope private until an operator-approved boundary exists.
 - Start with static proof surfaces and serverless hosting.
 - Buy stateful resources only after a real workflow needs auth, data, reports, jobs, or integrations.
 - Use spend limits, usage alerts, and manual approval gates before architecture inspection testing.

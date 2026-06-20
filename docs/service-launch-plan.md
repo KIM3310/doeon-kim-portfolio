@@ -40,7 +40,7 @@ Do not add compute, database capacity, GPU capacity, CRM seats, or enterprise ho
 | ---: | --- | --- |
 | 1 | Pick one domain and connect it to the portfolio. | Domain resolves to the portfolio and SSL is active. |
 | 1 | Create scheduling event types matching the four technical lanes. | Each event has narrow intake questions. |
-| 2 | Draft private workflow scope and architecture boundary. | Scope is ready for a architecture walkthrough call. |
+| 2 | Draft private workflow scope and architecture boundary. | Scope is ready for an architecture walkthrough call. |
 | 2 | Add calendar links to the portfolio constants only after the account is ready. | CTA path moves from email-only to schedule-ready. |
 | 3-5 | Build a target-architecture list across the four service lanes. | Each account has one specific workflow pain. |
 | 6-10 | Send targeted messages with one proof repo and one architecture-backed workflow. | Replies or calls show which lane has demand. |
@@ -51,7 +51,7 @@ Do not add compute, database capacity, GPU capacity, CRM seats, or enterprise ho
 - Present diagnostics first when data access, security architecture, or architecture inspection authority is unclear.
 - Do not promise autonomous medical, safety, industrial inspection, or security outcomes.
 - Keep regulated, medical, and manufacturing workflows scoped as human-approved support unless expert architecture and approved data exist.
-- Do not build more features until a architecture inspection confirms the workflow.
+- Do not build more features until an architecture inspection confirms the workflow.
 - Keep private assumptions out of public repository docs.
 
 ## Account Setup Checklist

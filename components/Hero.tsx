@@ -76,7 +76,7 @@ const Hero: React.FC = () => (
           <h2>AIX Pilot leads the gallery as a deployed Enterprise GenAI console.</h2>
         </div>
       </div>
-      <p className="hero-panel-note">A public systems surface for stack lanes, architecture attachments, and operating boundaries a architecture inspection can inspect.</p>
+      <p className="hero-panel-note">A public systems surface for stack lanes, architecture attachments, and operating boundaries that can be inspected together.</p>
       <dl className="stat-grid">
         {PORTFOLIO_STATS.map(stat => (
           <div key={stat.label}>
