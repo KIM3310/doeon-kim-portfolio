@@ -16,7 +16,7 @@ export const SERVICE_OFFERS = [
   {
     "repo": "KIM3310",
     "name": "KIM3310",
-    "canonicalUrl": "https://kim3310.github.io/doeon-kim-portfolio/",
+    "canonicalUrl": "https://kim3310-doeon-kim-portfolio.pages.dev/",
     "leadCaptureUrl": "https://github.com/KIM3310/KIM3310/issues/new?template=service-inquiry.yml&title=Private+workspace+inquiry%3A+KIM3310",
     "repositoryUrl": "https://github.com/KIM3310/KIM3310",
     "architectureUrl": "https://github.com/KIM3310/KIM3310/blob/main/docs/system-architecture.md",
@@ -156,7 +156,7 @@ export const SERVICE_OFFERS = [
   {
     "repo": "doeon-kim-portfolio",
     "name": "KIM3310 Systems Gallery",
-    "canonicalUrl": "https://kim3310.github.io/doeon-kim-portfolio/",
+    "canonicalUrl": "https://kim3310-doeon-kim-portfolio.pages.dev/",
     "leadCaptureUrl": "https://github.com/KIM3310/doeon-kim-portfolio/issues/new?template=service-inquiry.yml&title=Private+workspace+inquiry%3A+KIM3310+Systems+Gallery",
     "repositoryUrl": "https://github.com/KIM3310/doeon-kim-portfolio",
     "architectureUrl": "https://github.com/KIM3310/doeon-kim-portfolio/blob/main/docs/system-architecture.md",

@@ -3,7 +3,7 @@
 Purpose: product storefront for architecture packs, demos, and implementation-ready systems
 Free entry point: free systems gallery with live demos and architecture links
 Paid boundary: paid architecture pack bundle, implementation sprint, or private adaptation of a repo
-Canonical URL: https://kim3310.github.io/doeon-kim-portfolio/
+Canonical URL: https://kim3310-doeon-kim-portfolio.pages.dev/
 Repository: https://github.com/KIM3310/doeon-kim-portfolio
 System architecture: https://github.com/KIM3310/doeon-kim-portfolio/blob/main/docs/system-architecture.md
 Revenue architecture: https://github.com/KIM3310/doeon-kim-portfolio/blob/main/docs/revenue-architecture.md

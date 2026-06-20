@@ -1,7 +1,7 @@
 {
   "name": "KIM3310 Systems Gallery",
   "slug": "doeon-kim-portfolio",
-  "canonical_url": "https://kim3310.github.io/doeon-kim-portfolio/",
+  "canonical_url": "https://kim3310-doeon-kim-portfolio.pages.dev/",
   "repository_url": "https://github.com/KIM3310/doeon-kim-portfolio",
   "architecture_url": "https://github.com/KIM3310/doeon-kim-portfolio/blob/main/docs/system-architecture.md",
   "revenue_architecture_url": "https://github.com/KIM3310/doeon-kim-portfolio/blob/main/docs/revenue-architecture.md",
@@ -43,7 +43,7 @@
     "name": "KIM3310 Systems Gallery",
     "applicationCategory": "DeveloperApplication",
     "operatingSystem": "Web, serverless, and local development environments",
-    "url": "https://kim3310.github.io/doeon-kim-portfolio/",
+    "url": "https://kim3310-doeon-kim-portfolio.pages.dev/",
     "codeRepository": "https://github.com/KIM3310/doeon-kim-portfolio",
     "description": "KIM3310 Systems Gallery: product storefront for architecture packs, demos, and implementation-ready systems. Free entry point: free systems gallery with live demos and architecture links. Paid path: paid architecture.",
     "creator": {
@@ -58,7 +58,7 @@
         "price": "0",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://kim3310.github.io/doeon-kim-portfolio/"
+        "url": "https://kim3310-doeon-kim-portfolio.pages.dev/"
       },
       {
         "@type": "Offer",

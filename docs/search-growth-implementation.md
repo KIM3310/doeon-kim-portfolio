@@ -9,7 +9,7 @@ This repository now exposes a search-readable service surface in addition to the
 | Machine-readable offer | [docs/service-offer.json](./service-offer.json) |
 | Revenue architecture | [docs/revenue-architecture.md](./revenue-architecture.md) |
 | System architecture | [docs/system-architecture.md](./system-architecture.md) |
-| Public canonical URL | https://kim3310.github.io/doeon-kim-portfolio/ |
+| Public canonical URL | https://kim3310-doeon-kim-portfolio.pages.dev/ |
 | Lead capture URL | https://github.com/KIM3310/doeon-kim-portfolio/issues/new?template=service-inquiry.yml&title=Private+workspace+inquiry%3A+KIM3310+Systems+Gallery |
 
 ## Search Positioning

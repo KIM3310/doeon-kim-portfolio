@@ -51,8 +51,8 @@ export const SYSTEM_ARCHITECTURE_URLS: Record<string, string> = {
 };
 
 export const REPOSITORY_DEMO_URLS: Record<string, string> = {
-  KIM3310: 'https://kim3310.github.io/doeon-kim-portfolio/',
-  'doeon-kim-portfolio': 'https://kim3310.github.io/doeon-kim-portfolio/',
+  KIM3310: 'https://kim3310-doeon-kim-portfolio.pages.dev/',
+  'doeon-kim-portfolio': 'https://kim3310-doeon-kim-portfolio.pages.dev/',
   'aix-pilot': 'https://aix-pilot.pages.dev',
   'enterprise-llm-adoption-kit': 'https://enterprise-llm-kit.pages.dev',
   'stage-pilot': 'https://stage-pilot.pages.dev',

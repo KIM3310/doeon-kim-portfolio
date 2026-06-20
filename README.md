@@ -133,7 +133,7 @@ The command above runs typecheck, tests, content verification, and the productio
 
 ## Deploy
 
-The site is deployed at `https://kim3310.github.io/doeon-kim-portfolio/` via GitHub Pages.
+The site is deployed at `https://kim3310-doeon-kim-portfolio.pages.dev/` via Cloudflare Pages.
 
 ## Cloud + AI Architecture
 
@@ -157,7 +157,7 @@ This repository includes a neutral cloud and AI engineering blueprint that maps 
 
 - Public entry: free systems gallery with live demos and architecture links
 - Paid boundary: paid architecture pack bundle, implementation sprint, or private adaptation of a repo
-- Canonical URL: https://kim3310.github.io/doeon-kim-portfolio/
+- Canonical URL: https://kim3310-doeon-kim-portfolio.pages.dev/
 - Lead capture: https://github.com/KIM3310/doeon-kim-portfolio/issues/new?template=service-inquiry.yml&title=Private+workspace+inquiry%3A+KIM3310+Systems+Gallery
 - Machine-readable offer: [docs/service-offer.json](docs/service-offer.json)
 - Search growth implementation: [docs/search-growth-implementation.md](docs/search-growth-implementation.md)
