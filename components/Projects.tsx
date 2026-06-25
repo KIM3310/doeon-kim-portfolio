@@ -1,7 +1,9 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import { PORTFOLIO_REEL, PROJECTS, REPOSITORY_COVERAGE, REPOSITORY_DEMO_URLS, STACK_ARCHITECTURE_LANES, SYSTEM_ARCHITECTURE_URLS } from '../constants';
 import { SERVICE_OFFERS } from '../serviceOffers';
-import { ChevronDown, ChevronUp, Cpu, ExternalLink, FileText, Film, Github, Layers3, LockKeyhole, Network, Search, WalletCards, Volume2 } from 'lucide-react';
+import { RESOURCE_WIRING } from '../resourceWiring';
+import { COMMERCIAL_LANES } from '../commercialLanes';
+import { ChevronDown, ChevronUp, Cpu, ExternalLink, FileText, Film, Github, Layers3, LockKeyhole, Network, Search, ShieldCheck, WalletCards, Volume2 } from 'lucide-react';
 
 const TOP_TAGS = 8;
 const LIVE_IMAGE_WIDTH = 1440;
@@ -277,9 +279,69 @@ const Projects: React.FC = () => {
 
         <div id="service-offers" className="service-offer-ledger" aria-label="Searchable service offers by repository">
           <div className="coverage-intro">
-            <span>Services</span>
-            <h3>Searchable launch catalog</h3>
-            <p>Each repository now has a crawlable service offer, a free entry point, a paid boundary, and machine-readable metadata that can feed search engines, AI answer surfaces, and a later checkout or lead-capture route.</p>
+            <span>Commercial lanes</span>
+            <h3>Six buyer-facing service bundles</h3>
+            <p>The public storefront now leads with commercial operating names instead of a flat experiment list. Low-ROI consumer, medical, finance-signal, and game surfaces stay parked or guarded until real demand appears.</p>
+          </div>
+          <div className="commercial-lane-grid" aria-label="Money-focused commercial service bundles">
+            {COMMERCIAL_LANES.map((lane, index) => (
+              <article key={lane.id} className="commercial-lane-card">
+                <div className="commercial-lane-head">
+                  <div>
+                    <span>{lane.buyer}</span>
+                    <h4>{lane.name}</h4>
+                  </div>
+                  <strong className="commercial-lane-number" aria-label={`Commercial lane ${index + 1}`}>
+                    {String(index + 1).padStart(2, '0')}
+                  </strong>
+                </div>
+                <p>{lane.tagline}</p>
+                <div className="commercial-lane-proof">
+                  <ShieldCheck size={15} aria-hidden="true" />
+                  <span>{lane.proofSignal}</span>
+                </div>
+                <div className="commercial-lane-meta">
+                  <div>
+                    <span>Paid motion</span>
+                    <strong>{lane.paidMotion}</strong>
+                  </div>
+                  <div>
+                    <span>Primary repos</span>
+                    <strong>{lane.primaryRepos.join(' · ')}</strong>
+                  </div>
+                  <div>
+                    <span>Support proof</span>
+                    <strong>{lane.supportRepos.join(' · ')}</strong>
+                  </div>
+                </div>
+                <a className="commercial-lane-cta" href={lane.ctaUrl}>
+                  <WalletCards size={13} /> Private workspace
+                </a>
+              </article>
+            ))}
+          </div>
+
+          <div className="coverage-intro service-catalog-intro">
+            <span>Service catalog</span>
+            <h3>Searchable repository-level offers</h3>
+            <p>Each repository still has a crawlable service offer, a free entry point, a paid boundary, and machine-readable metadata, but buyer CTAs route through the commercial lanes above first.</p>
+          </div>
+          <div className="resource-wiring-panel" aria-label="Free API resource and payment wiring overlay">
+            {RESOURCE_WIRING.map(item => (
+              <article key={item.label} className="resource-wiring-card">
+                <div className="resource-wiring-card-head">
+                  <span>{item.source}</span>
+                  <h4>{item.label}</h4>
+                </div>
+                <p>{item.summary}</p>
+                <div className="resource-chip-list">
+                  {item.resources.map(resource => (
+                    <span key={resource}>{resource}</span>
+                  ))}
+                </div>
+                <strong>{item.path}</strong>
+              </article>
+            ))}
           </div>
           <div className="service-offer-grid">
             {SERVICE_OFFERS.map(offer => (

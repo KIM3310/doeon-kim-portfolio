@@ -12,6 +12,7 @@ const MAX_REEL_VIDEO_BYTES = 12_000_000;
 const MAX_REEL_POSTER_BYTES = 800_000;
 
 const requiredFiles = [
+  'DESIGN.md',
   'index.html',
   'constants.ts',
   'types.ts',
@@ -30,12 +31,18 @@ const requiredFiles = [
 ];
 
 const checks = [
+  { file: 'DESIGN.md', mustInclude: ['# Design', 'Status: Active', 'quiet premium', 'Commercial clarity over repository volume', 'WCAG 2.2 AA', 'npm audit --audit-level=high', 'Chrome desktop/mobile audit'] },
+  { file: 'commercialLanes.ts', mustInclude: ['COMMERCIAL_LANES', 'AIX Governance Sprint', 'StagePilot Reliability Lab', 'AegisOps Response Room', 'Nexus Data Contract Lab', 'SmallBiz Checkout Ops Pilot', 'Industrial Validation Pack', 'proofSignal'] },
+  { file: 'docs/service-consolidation.md', mustInclude: ['Service Consolidation', 'commercial operating names', 'parked or guarded', 'service-consolidation-2026-06-25.md'] },
+  { file: 'resourceWiring.ts', mustInclude: ['RESOURCE_WIRING', 'DaesikPage', 'public-apis-4Kr', 'Cloudflare Pages', 'Toss Payments', 'PortOne V2', 'Stripe Checkout'] },
   { file: 'constants.ts', mustInclude: ['PROFILE', 'PROJECTS', 'LIVE_SERVICE_SCREENS', 'PORTFOLIO_REEL', 'REPOSITORY_COVERAGE', 'REPOSITORY_DEMO_URLS', 'SYSTEM_ARCHITECTURE_URLS', 'STACK_ARCHITECTURE_LANES', 'SKILLS', 'INTERX_ROLE', 'MILITARY_ROLE', 'CERTIFICATIONS', 'BDES', 'Korea National Open University', 'InterX', 'Apr 2026 - May 2026', 'https://kim3310.github.io/agent-runtime-go/', 'https://kim3310.github.io/weld-defect-vision/', 'evidence/live/aix-pilot.png', 'evidence/live/twincity-ui.png', 'evidence/districtpilot-public-api-readiness.svg', 'evidence/portfolio-reel/kim3310-systems-gallery-reel.mp4', 'public architecture routes', 'public API readiness map', 'Korean public API readiness', '/api/public-apis', '/integrations/public-apis', '15_public_api_integration_readiness.sql', 'proofPath', 'architectureSignal', 'React / Vite', 'FastAPI / Workers', 'Terraform / Docker', '2026-06-07 KST'] },
   { file: 'scripts/capture-portfolio-evidence.mjs', mustInclude: ['systems-gallery.png', '#projects', 'Expected project cards before capture'] },
-  { file: 'components/Projects.tsx', mustInclude: ['PORTFOLIO_REEL', 'REPOSITORY_DEMO_URLS', '<video', 'type="video/mp4"', 'isLivePngEvidence', 'evidence/live/preview/', 'evidence/live/preview-sm/', 'type="image/webp"', 'livePreviewFor', 'liveProofPreviewFor'] },
+  { file: 'index.css', mustInclude: ['--premium-shadow', '--radius-xl', 'commercial-lane-number', 'commercial-lane-proof', 'backdrop-filter: blur(26px)', 'prefers-reduced-motion'] },
+  { file: 'components/Projects.tsx', mustInclude: ['COMMERCIAL_LANES', 'commercial-lane-grid', 'RESOURCE_WIRING', 'resource-wiring-panel', 'PORTFOLIO_REEL', 'REPOSITORY_DEMO_URLS', '<video', 'type="video/mp4"', 'isLivePngEvidence', 'evidence/live/preview/', 'evidence/live/preview-sm/', 'type="image/webp"', 'livePreviewFor', 'liveProofPreviewFor'] },
   { file: 'components/Hero.tsx', mustInclude: ['TypeScript + React', 'Python + FastAPI', 'SQL + Spark', 'Terraform + Docker', 'evidence/live/preview/aix-pilot.webp', 'type="image/webp"'] },
+  { file: 'index.css', mustInclude: ['--premium-shadow', '--radius-xl', 'commercial-lane-number', 'commercial-lane-proof', 'backdrop-filter: blur(26px)', 'prefers-reduced-motion'] },
   { file: 'components/Projects.tsx', mustInclude: ['STACK_ARCHITECTURE_LANES', 'SYSTEM_ARCHITECTURE_URLS', 'System architecture by stack lane', 'docs/system-architecture.md', 'Architecture'] },
-  { file: 'docs/final-architecture-notes.md', mustInclude: ['Local build notes are captured in the repository scripts and build workflow.', '34 unique public demo URLs', '35 editable coverage repositories', 'public API architecture cards', 'KIM3310', 'doeon-kim-portfolio'] },
+  { file: 'docs/final-architecture-notes.md', mustInclude: ['six commercial operating names', 'DaesikPage', 'Toss/PortOne/Stripe', 'Local build notes are captured in the repository scripts and build workflow.', '34 unique public demo URLs', '35 editable coverage repositories', 'public API architecture cards', 'KIM3310', 'doeon-kim-portfolio'] },
   { file: 'docs/repository-service-architectures.md', mustInclude: ['Repository Service Architectures', 'Shared Resource Stack', 'aix-pilot', 'weld-defect-vision', 'Korean public API rollout mapping', 'merchant/public-data enrichment readiness', 'Account Information Needed'] },
   { file: 'docs/service-launch-plan.md', mustInclude: ['Service Launch Plan', 'Configure First', '14-Day Readiness Push', 'Calendly', 'Cloudflare', 'Sentry'] },
   { file: 'App.tsx', mustInclude: ['Hero', 'Experience', 'Projects', 'Skills'] },

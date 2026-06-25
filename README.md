@@ -58,6 +58,9 @@ A compact public gallery that makes each system read like a product, not a scatt
 - [Repository service architectures](docs/repository-service-architectures.md) maps all 35 editable repos to resource needs, launch sequencing, and account information.
 - [Revenue architecture index](docs/revenue-architecture-index.md) maps every active repository to a productized offer, first paid SKU, free lead magnet, free-tier-first launch stack, and upgrade boundary.
 - [Service launch plan](docs/service-launch-plan.md) defines the account setup and 14-day technical readiness path.
+- [Free resource and payment wiring](docs/free-resource-payment-wiring.md) explains the DaesikPage/public-apis-4Kr overlay, Cloudflare deployment path, and payment-account secret boundaries.
+- [Service consolidation](docs/service-consolidation.md) explains the six buyer-facing operating names and which low-ROI surfaces are parked or guarded.
+- [Design source of truth](DESIGN.md) defines the premium storefront design contract, visual language, accessibility, responsive rules, and verification expectations.
 - [Service launch playbook](docs/service-launch-playbook.md) maps the repository to architecture audiences, operating gates, launch steps, and risk boundaries.
 
 ## Architecture Notes
@@ -90,6 +93,9 @@ A compact public gallery that makes each system read like a product, not a scatt
 - Added a per-repository architecture audit covering service direction, architecture priority, critical blockers, and priority fixes for all 35 editable coverage repositories.
 - Added an architecture plan so visitors can evaluate scoped proof surfaces before browsing the full repository gallery.
 - Added public API readiness proof for `twincity-ui`, `smallbiz-ops-copilot`, and `districtpilot-ai` using provider metadata aligned with `public-apis-4Kr` without storing provider secrets.
+- Added a storefront-level free-resource/payment wiring panel from DaesikPage and `public-apis-4Kr`, with Cloudflare-first deployment and Toss/PortOne/Stripe secret-slot boundaries.
+- Added commercial lane cards so buyers see AIX Governance Sprint, StagePilot Reliability Lab, AegisOps Response Room, Nexus Data Contract Lab, SmallBiz Checkout Ops Pilot, and Industrial Validation Pack before raw repo browsing.
+- Upgraded the storefront visual system with a premium design contract, commercial-lane ordinal cards, proof chips, refined glass/elevation tokens, and mobile-first touch rhythm.
 
 ## Project Lanes
 

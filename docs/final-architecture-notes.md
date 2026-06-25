@@ -35,6 +35,9 @@ The recorded external audit pass checked:
 - Open pull requests across the 35 editable repositories: recorded as 0 during that pass.
 - Portfolio GitHub Actions: recorded successful during that pass.
 - 3 latest service upgrades are reflected in the portfolio proof surface: `twincity-ui`, `smallbiz-ops-copilot`, and `districtpilot-ai`.
+- Storefront free-resource/payment wiring now shows DaesikPage, `public-apis-4Kr`, Cloudflare-first deployment, and Toss/PortOne/Stripe secret-slot boundaries without exposing payout data.
+- Storefront service consolidation now leads with six commercial operating names and parks low-ROI/guarded surfaces below the first-click buyer path.
+- Premium UI/UX pass now uses `DESIGN.md` as the source of truth and upgrades commercial-lane cards with ordinal badges, proof chips, refined glass/elevation tokens, and mobile-first touch targets.
 
 ## Boundary
 
