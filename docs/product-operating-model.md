@@ -1,7 +1,7 @@
 # Product Operating Model
 
 Repository: `doeon-kim-portfolio`
-Last updated: 2026-06-03 KST
+Last reviewed: 2026-06-03 KST
 
 ## Enterprise Product Position
 
@@ -9,7 +9,7 @@ Operations-first systems gallery for AI runtimes, operations workbenches, data c
 
 This repository is packaged as a concrete system surface, not a loose code sample. The enterprise value is a narrow proof that can be inspected, run, tested, and scoped as an implementation motion.
 
-## Architecture inspection And Service Path
+## Technical Review And Service Path
 
 | Area | Position |
 | --- | --- |

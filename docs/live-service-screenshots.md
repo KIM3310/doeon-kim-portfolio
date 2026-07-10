@@ -7,7 +7,7 @@ Date: 2026-06-03 KST
 Captured current public service screenshots with Playwright/Chromium and kept only healthy public surfaces for portfolio use.
 
 Latest refresh: 2026-06-03 14:47 KST. All 18 listed service screens were recaptured at 1440x1000 from their deployed URLs.
-Display captures are stored as optimized WebP files under `public/evidence/live/captures/`, with smaller proof-strip previews under `public/evidence/live/captures-sm/`; the PNG files remain the architecture-grade originals.
+Display captures are stored as optimized WebP files under `public/evidence/live/captures/`, with smaller proof-strip previews under `public/evidence/live/captures-sm/`; the PNG files remain the source-quality originals.
 
 UI validation: 2026-06-06 KST. The portfolio now presents visual proof inside project cards and the narrated evidence reel while keeping dense technical details behind progressive disclosure controls.
 

@@ -131,7 +131,7 @@ The deployed supporting-demo catalog is tracked in [public-demo-catalog.md](publ
 
 ## Follow-Up Queue
 
-- Keep generated dependency mega-bumps closed until dependency-architecture failures are resolved and migrations are split.
+- Keep generated dependency mega-bumps closed until dependency-review failures are resolved and migrations are split.
 
 ## Homepage Cleanup
 

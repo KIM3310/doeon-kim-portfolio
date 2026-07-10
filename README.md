@@ -10,17 +10,17 @@ Operations-first systems gallery for enterprise GenAI, data-center security oper
 
 The page is product-focused: military 24/7 communications and security monitoring, CCTV/VMS/NVR operation, access-control and intrusion-alert handling, completed InterX infrastructure role context, education, certifications, project cards, capability lanes, verification posture, and repository links. It is written to show the working habit behind each system: define the operator problem, bound the data and trust model, leave a runnable verification path, and document the gap between demo evidence and production claims. It avoids private data, credential requirements, and external tenant assumptions. Private case studies are labeled without exposing repository links that public visitors cannot open.
 
-## Product and System Surface
+## System Overview
 
 A compact public gallery that makes each system read like a product, not a scattered project list.
 
-| Lens | Definition |
+| Area | Details |
 |---|---|
-| Audience | Technical operators, AI platform teams, operations leaders, and partners evaluating product judgment. |
-| Architecture path | Validate the demo, README, architecture notes, and quality gate before deeper workflow architecture. |
-| System signal | Each card exposes stack tags, runtime boundaries, architecture links, live evidence, demos, and repository routes. |
-| Safety boundary | The site avoids client secrets and only displays public-safe project summaries and generated visual assets. |
-| Fast path | `npm run verify` checks type safety, content guarantees, tests, and production build before deployment. |
+| Users | Technical evaluators, AI platform teams, operations leaders, and partners evaluating product judgment. |
+| Technical path | Validate the demo, README, architecture notes, and quality gate before deeper workflow review. |
+| System scope | Each card exposes stack tags, runtime boundaries, architecture links, live evidence, demos, and repository routes. |
+| Operating boundary | The site avoids client secrets and only displays public-safe project summaries and generated visual assets. |
+| Evaluation path | `npm run verify` checks type safety, content guarantees, tests, and production build before deployment. |
 
 ## Three-Minute Proof
 
@@ -29,11 +29,11 @@ A compact public gallery that makes each system read like a product, not a scatt
 3. Open [docs/live-service-screenshots.md](docs/live-service-screenshots.md) and [docs/repository-upgrade-audit.md](docs/repository-upgrade-audit.md).
 4. Run `npm run verify` before treating the gallery as current.
 
-## System Fast Path
+## Evaluation Path
 
-- **First minute:** Open the live gallery, scan flagship lanes, then jump to the repository coverage ledger.
+- **Start here:** Open the live gallery, scan flagship lanes, then jump to the repository coverage ledger.
 - **Local demo:** Run `npm install && npm run dev`, then open `http://localhost:5173`.
-- **Verification:** Run `npm run verify`; it covers type safety, tests, content guarantees, and production build.
+- **Checks:** Run `npm run verify`; it covers type safety, tests, content guarantees, and production build.
 - **Chrome audit:** Run `npm run audit:chrome` to open every portfolio demo in Google Chrome and record desktop/mobile layout signals.
 - **Live proof:** Current service screenshots are tracked in [docs/live-service-screenshots.md](docs/live-service-screenshots.md).
 - **Repo audit:** The 35 editable-repo validation pass is recorded in [docs/repository-upgrade-audit.md](docs/repository-upgrade-audit.md).
@@ -61,14 +61,14 @@ A compact public gallery that makes each system read like a product, not a scatt
 - [Free resource and payment wiring](docs/free-resource-payment-wiring.md) explains the DaesikPage/public-apis-4Kr overlay, Cloudflare deployment path, and payment-account secret boundaries.
 - [Service consolidation](docs/service-consolidation.md) explains the six buyer-facing operating names and which low-ROI surfaces are parked or guarded.
 - [Design source of truth](DESIGN.md) defines the premium storefront design contract, visual language, accessibility, responsive rules, and verification expectations.
-- [Service launch playbook](docs/service-launch-playbook.md) maps the repository to architecture audiences, operating gates, launch steps, and risk boundaries.
+- [Service launch playbook](docs/service-launch-playbook.md) maps the repository to its product scope, operating gates, launch steps, and risk boundaries.
 
 ## Architecture Notes
 
-- [Architecture guide](docs/architecture-evidence-map.md) summarizes the project angle, first files to inspect, runtime commands, and known boundaries.
+- [Architecture guide](docs/architecture-evidence-map.md) summarizes the system scope, first files to inspect, runtime commands, and known boundaries.
 - [Quality notes](docs/quality-gate.md) lists the local checks, CI surface, and release expectations for this repository.
 - [Enterprise readiness notes](docs/enterprise-readiness.md) outlines security, data, operations, integration, and handoff expectations.
-- [Readiness snapshot](docs/final-architecture-notes.md) records the latest local verification and the external checks that should be rerun before an important architecture.
+- [Readiness snapshot](docs/final-architecture-notes.md) records the latest local verification and the external checks that should be rerun before an important external review.
 
 ## What Changed
 
@@ -143,15 +143,13 @@ The site is deployed at `https://kim3310-doeon-kim-portfolio.pages.dev/` via Clo
 
 ## Cloud + AI Architecture
 
-This repository includes a neutral cloud and AI engineering blueprint that maps the current proof surface to runtime boundaries, data contracts, model-risk controls, deployment posture, and validation hooks.
-
 - [Cloud + AI architecture blueprint](docs/cloud-ai-architecture.md)
 - [Machine-readable architecture manifest](docs/architecture/blueprint.json)
 - Validation command: `python3 scripts/validate_architecture_blueprint.py`
 
 ## Enterprise Productization
 
-- [Product operating model](docs/product-operating-model.md) defines the architecture inspection, trust boundary, operating checks, and service path for this repository.
+- [Product operating model](docs/product-operating-model.md) defines the product scope, trust boundary, operating checks, and service path for this repository.
 
 ## Service Architecture
 
