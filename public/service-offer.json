@@ -6,6 +6,7 @@
   "architecture_url": "https://github.com/KIM3310/doeon-kim-portfolio/blob/main/docs/system-architecture.md",
   "revenue_architecture_url": "https://github.com/KIM3310/doeon-kim-portfolio/blob/main/docs/revenue-architecture.md",
   "lead_capture_url": "https://github.com/KIM3310/doeon-kim-portfolio/issues/new?template=service-inquiry.yml&title=Private+workspace+inquiry%3A+KIM3310+Systems+Gallery",
+  "commerce_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=doeon-kim-portfolio#service-offers",
   "productized_offer": "product storefront for architecture packs, demos, and implementation-ready systems",
   "first_paid_sku": "paid architecture pack bundle, implementation sprint, or private adaptation of a repo",
   "free_lead_magnet": "free systems gallery with live demos and architecture links",
@@ -69,5 +70,29 @@
     ],
     "isAccessibleForFree": true,
     "keywords": "doeon-kim-portfolio, KIM3310, Systems, Gallery, product, storefront, architecture, packs, demos, implementation-ready, systems, pack, bundle, implementation, sprint, adaptation, repo, gallery, live, links"
+  },
+  "commerce": {
+    "gateway_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=doeon-kim-portfolio#service-offers",
+    "lane_id": "storefront-architecture-packs",
+    "lane_name": "Storefront Architecture Packs",
+    "billing_mode": "one-time",
+    "price_unit": "architecture adaptation pack from USD 300",
+    "fulfillment_kind": "repo-to-roadmap brief, architecture diagram, risk notes, and scoped backlog",
+    "risk_bucket": "standard",
+    "checkout": {
+      "provider": "lemon-squeezy",
+      "status": "account-onboarding-required",
+      "fallback_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=doeon-kim-portfolio#service-offers"
+    },
+    "sponsorship": {
+      "provider": "github-sponsors",
+      "eligible": true,
+      "status": "account-onboarding-required"
+    },
+    "advertising": {
+      "provider": null,
+      "eligible": false,
+      "status": "not-applicable"
+    }
   }
 }

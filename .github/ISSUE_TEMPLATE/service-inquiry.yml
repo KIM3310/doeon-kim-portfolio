@@ -9,7 +9,7 @@ body:
 
         Public entry: free systems gallery with live demos and architecture links
         Paid boundary: paid architecture pack bundle, implementation sprint, or private adaptation of a repo
-        Canonical URL: https://kim3310.github.io/doeon-kim-portfolio/
+        Canonical URL: https://kim3310-doeon-kim-portfolio.pages.dev/
   - type: input
     id: organization
     attributes:

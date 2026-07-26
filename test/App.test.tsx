@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest';
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
+import { vi } from 'vitest';
 import App from '../App';
 
 describe('App component', () => {
@@ -93,5 +94,45 @@ describe('App component', () => {
     expect(screen.getByRole('button', { name: 'Architecture' })).toBeInTheDocument();
     expect(screen.getByText('System architecture by stack lane')).toBeInTheDocument();
     expect(screen.getAllByRole('link', { name: /stage-pilot/ }).some(link => link.getAttribute('href')?.includes('/docs/system-architecture.md'))).toBe(true);
+  });
+
+  it('renders privacy and terms links plus analytics consent controls', () => {
+    render(<App />);
+
+    expect(screen.getByRole('link', { name: 'Privacy' })).toHaveAttribute('href', '/privacy.html');
+    expect(screen.getByRole('link', { name: 'Terms' })).toHaveAttribute('href', '/terms.html');
+    expect(screen.getByRole('button', { name: 'Enable analytics' })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Keep off' })).toBeInTheDocument();
+  });
+
+  it('stores analytics consent without requiring gtag to exist', () => {
+    render(<App />);
+
+    fireEvent.click(screen.getByRole('button', { name: 'Keep off' }));
+    expect(window.localStorage.getItem('kim3310-analytics-consent')).toBe('denied');
+    expect(screen.getByRole('button', { name: 'Keep off' })).toHaveAttribute('aria-pressed', 'true');
+  });
+
+  it('fails closed when analytics consent cannot be stored', () => {
+    const storageWrite = vi
+      .spyOn(Storage.prototype, 'setItem')
+      .mockImplementation(() => {
+        throw new DOMException('Storage blocked');
+      });
+
+    render(<App />);
+    fireEvent.click(screen.getByRole('button', { name: 'Enable analytics' }));
+
+    expect(screen.getByRole('button', { name: 'Keep off' })).toHaveAttribute('aria-pressed', 'true');
+    storageWrite.mockRestore();
+  });
+
+  it('highlights the commercial lane for an offer query parameter', () => {
+    window.history.pushState(null, '', '/?offer=stage-pilot#service-offers');
+
+    render(<App />);
+
+    expect(screen.getByText(/Offer route:/)).toBeInTheDocument();
+    expect(screen.getAllByText('StagePilot Reliability Lab').length).toBeGreaterThan(0);
   });
 });

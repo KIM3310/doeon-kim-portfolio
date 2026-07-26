@@ -1,4 +1,5 @@
 import '@testing-library/jest-dom/vitest';
+import { afterEach } from 'vitest';
 
 // Mock IntersectionObserver for framer-motion's whileInView
 class MockIntersectionObserver implements IntersectionObserver {
@@ -14,3 +15,8 @@ class MockIntersectionObserver implements IntersectionObserver {
 }
 
 globalThis.IntersectionObserver = MockIntersectionObserver;
+
+afterEach(() => {
+  window.localStorage.clear();
+  window.history.pushState(null, '', '/');
+});

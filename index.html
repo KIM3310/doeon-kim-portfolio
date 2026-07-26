@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D28LWX2JXQ"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      var analyticsConsent = 'denied';
+      try {
+        if (window.localStorage.getItem('kim3310-analytics-consent') === 'granted') {
+          analyticsConsent = 'granted';
+        }
+      } catch (error) {
+        analyticsConsent = 'denied';
+      }
+      gtag('consent', 'default', {
+        analytics_storage: analyticsConsent,
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied'
+      });
       gtag('js', new Date());
-      gtag('config', 'G-D28LWX2JXQ');
+      gtag('config', 'G-D28LWX2JXQ', {
+        allow_google_signals: false,
+        allow_ad_personalization_signals: false
+      });
     </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D28LWX2JXQ"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KIM3310 Systems Gallery | product storefront architecture packs demos</title>

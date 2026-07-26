@@ -2,7 +2,8 @@ import React, { useEffect, useState, useMemo } from 'react';
 import { PORTFOLIO_REEL, PROJECTS, REPOSITORY_COVERAGE, REPOSITORY_DEMO_URLS, STACK_ARCHITECTURE_LANES, SYSTEM_ARCHITECTURE_URLS } from '../constants';
 import { SERVICE_OFFERS } from '../serviceOffers';
 import { RESOURCE_WIRING } from '../resourceWiring';
-import { COMMERCIAL_LANES } from '../commercialLanes';
+import { COMMERCIAL_LANES, commerceUrlForRepo, laneForRepo, resolveCheckoutUrl } from '../commercialLanes';
+import { trackCommerceCtaClick } from '../analytics';
 import { ChevronDown, ChevronUp, Cpu, ExternalLink, FileText, Film, Github, Layers3, LockKeyhole, Network, Search, ShieldCheck, WalletCards, Volume2 } from 'lucide-react';
 
 const TOP_TAGS = 8;
@@ -20,18 +21,34 @@ const projectEvidenceClassName = (evidence?: string) => [
   !evidence ? 'project-evidence-placeholder' : '',
   evidence && !isLivePngEvidence(evidence) ? 'is-diagram' : '',
 ].filter(Boolean).join(' ');
+const offerParamFromLocation = () => new URLSearchParams(window.location.search).get('offer');
 
 const Projects: React.FC = () => {
   const [filter, setFilter] = useState<string | null>(null);
   const [showAllTags, setShowAllTags] = useState(false);
+  const [offerRepo, setOfferRepo] = useState<string | null>(offerParamFromLocation);
 
   useEffect(() => {
-    if (window.location.hash !== '#coverage') return;
+    const onLocationChange = () => setOfferRepo(offerParamFromLocation());
+    window.addEventListener('popstate', onLocationChange);
+    return () => window.removeEventListener('popstate', onLocationChange);
+  }, []);
+
+  const highlightedLane = useMemo(() => (offerRepo ? laneForRepo(offerRepo) : undefined), [offerRepo]);
+
+  useEffect(() => {
+    if (window.location.hash !== '#coverage' && window.location.hash !== '#service-offers' && !highlightedLane) return;
 
     requestAnimationFrame(() => {
-      document.getElementById('coverage')?.scrollIntoView();
+      if (highlightedLane) {
+        document.getElementById(`lane-${highlightedLane.id}`)?.scrollIntoView({ block: 'center' });
+        return;
+      }
+
+      const targetId = window.location.hash === '#service-offers' ? 'service-offers' : 'coverage';
+      document.getElementById(targetId)?.scrollIntoView();
     });
-  }, []);
+  }, [highlightedLane]);
 
   const allTags = useMemo(() => {
     const counts = new Map<string, number>();
@@ -280,12 +297,22 @@ const Projects: React.FC = () => {
         <div id="service-offers" className="service-offer-ledger" aria-label="Searchable service offers by repository">
           <div className="coverage-intro">
             <span>Commercial lanes</span>
-            <h3>Six buyer-facing service bundles</h3>
-            <p>The public storefront now leads with commercial operating names instead of a flat experiment list. Low-ROI consumer, medical, finance-signal, and game surfaces stay parked or guarded until real demand appears.</p>
+            <h3>Nine buyer-facing service bundles</h3>
+            <p>The public storefront now routes every covered repository through exactly one paid lane or supporting proof role. Hosted checkout URLs can be injected by environment, with GitHub issue inquiry as the safe fallback.</p>
           </div>
+          {offerRepo && (
+            <p className="offer-route-note" role="status">
+              Offer route: <strong>{offerRepo}</strong>
+              {highlightedLane ? <> is mapped to <strong>{highlightedLane.name}</strong>.</> : <> has no active commercial lane mapping.</>}
+            </p>
+          )}
           <div className="commercial-lane-grid" aria-label="Money-focused commercial service bundles">
             {COMMERCIAL_LANES.map((lane, index) => (
-              <article key={lane.id} className="commercial-lane-card">
+              <article
+                key={lane.id}
+                id={`lane-${lane.id}`}
+                className={`commercial-lane-card ${highlightedLane?.id === lane.id ? 'is-highlighted' : ''}`}
+              >
                 <div className="commercial-lane-head">
                   <div>
                     <span>{lane.buyer}</span>
@@ -302,6 +329,18 @@ const Projects: React.FC = () => {
                 </div>
                 <div className="commercial-lane-meta">
                   <div>
+                    <span>Billing mode</span>
+                    <strong>{lane.billingMode}</strong>
+                  </div>
+                  <div>
+                    <span>Price anchor</span>
+                    <strong>{lane.priceAnchor}</strong>
+                  </div>
+                  <div>
+                    <span>Concrete deliverable</span>
+                    <strong>{lane.concreteDeliverable}</strong>
+                  </div>
+                  <div>
                     <span>Paid motion</span>
                     <strong>{lane.paidMotion}</strong>
                   </div>
@@ -311,11 +350,17 @@ const Projects: React.FC = () => {
                   </div>
                   <div>
                     <span>Support proof</span>
-                    <strong>{lane.supportRepos.join(' · ')}</strong>
+                    <strong>{lane.supportRepos.length > 0 ? lane.supportRepos.join(' · ') : 'No separate support repos'}</strong>
                   </div>
                 </div>
-                <a className="commercial-lane-cta" href={lane.ctaUrl}>
-                  <WalletCards size={13} /> Private workspace
+                <a
+                  className="commercial-lane-cta"
+                  href={resolveCheckoutUrl(lane)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => trackCommerceCtaClick(lane.id, lane.billingMode, 'lane_checkout')}
+                >
+                  <WalletCards size={13} /> {lane.ctaLabel}
                 </a>
               </article>
             ))}
@@ -345,7 +390,7 @@ const Projects: React.FC = () => {
           </div>
           <div className="service-offer-grid">
             {SERVICE_OFFERS.map(offer => (
-              <article key={offer.repo} className="service-offer-card">
+              <article key={offer.repo} className={`service-offer-card ${offerRepo?.toLowerCase() === offer.repo.toLowerCase() ? 'is-highlighted' : ''}`}>
                 <div className="service-offer-card-head">
                   <div>
                     <span>{offer.category.replace('Application', '')}</span>
@@ -367,10 +412,20 @@ const Projects: React.FC = () => {
                     <span><Search size={13} aria-hidden="true" /> Query</span>
                     <strong>{offer.primaryQuery}</strong>
                   </div>
+                  <div>
+                    <span>Commerce route</span>
+                    <strong>{commerceUrlForRepo(offer.repo)}</strong>
+                  </div>
                 </div>
                 <div className="service-offer-actions">
-                  <a href={offer.leadCaptureUrl}>
-                    <WalletCards size={13} /> Private workspace
+                  <a
+                    href={commerceUrlForRepo(offer.repo)}
+                    onClick={() => {
+                      const lane = laneForRepo(offer.repo);
+                      if (lane) trackCommerceCtaClick(lane.id, lane.billingMode, 'repo_router');
+                    }}
+                  >
+                    <WalletCards size={13} /> Choose lane
                   </a>
                   <a href={offer.canonicalUrl} target="_blank" rel="noopener noreferrer">
                     <ExternalLink size={13} /> Demo

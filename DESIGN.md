@@ -14,7 +14,7 @@
 ## Product goals
 - Goals:
   - Convert a broad GitHub portfolio into a high-trust commercial storefront.
-  - Make six buyer-facing service lanes visible before raw repository browsing.
+  - Make nine buyer-facing service lanes visible before raw repository browsing.
   - Show free-resource/payment readiness without exposing secrets or payout data.
   - Preserve inspectability with architecture links and verification artifacts.
 - Non-goals:
@@ -23,7 +23,7 @@
   - Build a heavy design-system dependency layer.
 - Success signals:
   - No mobile horizontal overflow.
-  - Fast first read of the six commercial lanes.
+  - Fast first read of the nine commercial lanes.
   - Clear private-workspace CTA.
   - `npm run verify`, `npm audit --audit-level=high`, and Chrome desktop/mobile audit pass.
 
