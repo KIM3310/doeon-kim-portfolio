@@ -369,7 +369,7 @@ const Projects: React.FC = () => {
           <div className="coverage-intro service-catalog-intro">
             <span>Service catalog</span>
             <h3>Searchable repository-level offers</h3>
-            <p>Each repository still has a crawlable service offer, a free entry point, a paid boundary, and machine-readable metadata, but buyer CTAs route through the commercial lanes above first.</p>
+            <p>Each public repository has a crawlable service offer, a free entry point, a paid boundary, and machine-readable metadata. Private repositories are represented through the commercial lanes above without exposing source URLs.</p>
           </div>
           <div className="resource-wiring-panel" aria-label="Free API resource and payment wiring overlay">
             {RESOURCE_WIRING.map(item => (
