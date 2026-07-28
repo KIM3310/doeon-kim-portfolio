@@ -59,7 +59,7 @@ A compact public gallery that makes each system read like a product, not a scatt
 - [Revenue architecture index](docs/revenue-architecture-index.md) maps every active repository to a productized offer, first paid SKU, free lead magnet, free-tier-first launch stack, and upgrade boundary.
 - [Service launch plan](docs/service-launch-plan.md) defines the account setup and 14-day technical readiness path.
 - [Free resource and payment wiring](docs/free-resource-payment-wiring.md) explains the DaesikPage/public-apis-4Kr overlay, Cloudflare deployment path, and payment-account secret boundaries.
-- [Service consolidation](docs/service-consolidation.md) explains the nine buyer-facing operating names and which low-ROI surfaces are parked or guarded.
+- [Service consolidation](docs/service-consolidation.md) explains the seven outcome-focused offers and which experimental surfaces stay guarded.
 - [Design source of truth](DESIGN.md) defines the premium storefront design contract, visual language, accessibility, responsive rules, and verification expectations.
 - [Service launch playbook](docs/service-launch-playbook.md) maps the repository to its product scope, operating gates, launch steps, and risk boundaries.
 
@@ -94,7 +94,7 @@ A compact public gallery that makes each system read like a product, not a scatt
 - Added an architecture plan so visitors can evaluate scoped proof surfaces before browsing the full repository gallery.
 - Added public API readiness proof for `twincity-ui`, `smallbiz-ops-copilot`, and `districtpilot-ai` using provider metadata aligned with `public-apis-4Kr` without storing provider secrets.
 - Added a storefront-level free-resource/payment wiring panel from DaesikPage and `public-apis-4Kr`, with Cloudflare-first deployment and Toss/PortOne/Stripe secret-slot boundaries.
-- Added commercial lane cards so buyers see nine revenue lanes before raw repo browsing, with architecture packs, governance, reliability, response, data, document/SMB, validation, supporter, and digital-twin routes.
+- Consolidated 35 repositories into seven outcome-focused offers and added a Cloudflare D1-backed private inquiry route with repository-to-service validation, atomic email/network/global rate limits, one-way abuse-prevention fingerprints, and an independent daily retention Worker.
 - Upgraded the storefront visual system with a premium design contract, commercial-lane ordinal cards, proof chips, refined glass/elevation tokens, and mobile-first touch rhythm.
 
 ## Project Lanes
@@ -162,7 +162,7 @@ The site is deployed at `https://kim3310-doeon-kim-portfolio.pages.dev/` via Clo
 - Public entry: free systems gallery with live demos and architecture links
 - Paid boundary: paid architecture pack bundle, implementation sprint, or private adaptation of a repo
 - Canonical URL: https://kim3310-doeon-kim-portfolio.pages.dev/
-- Lead capture: https://github.com/KIM3310/doeon-kim-portfolio/issues/new?template=service-inquiry.yml&title=Private+workspace+inquiry%3A+KIM3310+Systems+Gallery
+- Lead capture: https://kim3310-doeon-kim-portfolio.pages.dev/?offer=doeon-kim-portfolio&inquiry=architecture-scope-sprint#private-inquiry
 - Commercial route: https://kim3310-doeon-kim-portfolio.pages.dev/?offer=doeon-kim-portfolio#service-offers
 - Machine-readable offer: [docs/service-offer.json](docs/service-offer.json)
 - Search growth implementation: [docs/search-growth-implementation.md](docs/search-growth-implementation.md)

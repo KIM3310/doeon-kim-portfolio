@@ -10,7 +10,7 @@ This repository now exposes a search-readable service surface in addition to the
 | Revenue architecture | [docs/revenue-architecture.md](./revenue-architecture.md) |
 | System architecture | [docs/system-architecture.md](./system-architecture.md) |
 | Public canonical URL | https://kim3310-doeon-kim-portfolio.pages.dev/ |
-| Lead capture URL | https://github.com/KIM3310/doeon-kim-portfolio/issues/new?template=service-inquiry.yml&title=Private+workspace+inquiry%3A+KIM3310+Systems+Gallery |
+| Lead capture URL | https://kim3310-doeon-kim-portfolio.pages.dev/?offer=doeon-kim-portfolio&inquiry=architecture-scope-sprint#private-inquiry |
 | Commercial route | https://kim3310-doeon-kim-portfolio.pages.dev/?offer=doeon-kim-portfolio#service-offers |
 | Traffic measurement | Cloudflare Web Analytics and consent-gated GA4 measurement ID `G-D28LWX2JXQ` |
 
@@ -29,6 +29,6 @@ The public surface stays crawlable and free. Paid value starts when a visitor wa
 
 - Keep the sitemap and robots file aligned with the final production domain.
 - Submit the canonical URL and sitemap in Google Search Console after the domain is connected.
-- The lead-capture path is a GitHub Issue Form so private workspace and paid-package requests create a trackable queue before payment infrastructure is added.
+- The lead-capture path is the central Cloudflare D1 private inquiry form at https://kim3310-doeon-kim-portfolio.pages.dev/?offer=doeon-kim-portfolio&inquiry=architecture-scope-sprint#private-inquiry; public GitHub issues are not used for confidential or commercial scoping.
 - Keep exact free-tier quotas out of public promises because provider limits change.
 - Use Cloudflare Web Analytics for privacy-safe site traffic and consent-gated GA4 for Google Search and lead-funnel reporting.

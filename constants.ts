@@ -1,14 +1,14 @@
 import { Project, SkillCategory, Profile, WorkExperience, EducationItem, Certification, RepositoryCoverageLane, StackArchitectureLane, LiveServiceScreen, PortfolioReel } from './types';
 
 export const PROFILE: Profile = {
-  name: 'KIM3310 Systems Gallery',
-  title: 'Operations-first AI systems engineer: incident workflows, agent reliability, data quality, and secure automation',
+  name: 'KIM3310 Systems',
+  title: 'Operational AI, agent reliability, and secure workflow services backed by runnable systems',
   contactUrl:
-    'https://github.com/KIM3310/doeon-kim-portfolio/issues/new?template=service-inquiry.yml&title=Private+workspace+inquiry%3A+KIM3310+Systems+Gallery',
+    'https://kim3310-doeon-kim-portfolio.pages.dev/?offer=doeon-kim-portfolio&inquiry=architecture-scope-sprint#private-inquiry',
   github: 'https://github.com/KIM3310',
   linkedin: 'https://www.linkedin.com/in/doeon-kim-4742a2388',
   intro:
-    'I build inspectable systems from incident-room habits: confirm the signal, bound the data, write the handoff, and keep a runnable verification path. The gallery connects 24/7 MW communications, CCTV/VMS/NVR, access-control, intrusion-alert, and IT infrastructure operations work to AI runtime reliability, enterprise governance, data-quality gates, and operator-facing UI surfaces without private data.',
+    'Fixed-scope audits, readiness sprints, and workflow pilots for teams that need stronger operating evidence before they commit to AI infrastructure or automation. Each offer is grounded in inspectable architecture, tests, and explicit human-control boundaries.',
 };
 
 export const PORTFOLIO_STATS = [

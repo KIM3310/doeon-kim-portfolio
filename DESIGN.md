@@ -2,8 +2,8 @@
 
 ## Source of truth
 - Status: Active
-- Last refreshed: 2026-06-25
-- Primary product surfaces: `App.tsx`, `components/Hero.tsx`, `components/Projects.tsx`, `components/Navbar.tsx`, `components/Experience.tsx`, `components/Skills.tsx`, `index.css`, `commercialLanes.ts`, `resourceWiring.ts`.
+- Last refreshed: 2026-07-28
+- Primary product surfaces: `App.tsx`, `components/Hero.tsx`, `components/Projects.tsx`, `components/InquiryForm.tsx`, `components/Navbar.tsx`, `components/Experience.tsx`, `components/Skills.tsx`, `index.css`, `commercialLanes.ts`, `resourceWiring.ts`.
 - Evidence reviewed: `README.md`, `docs/service-consolidation.md`, `docs/free-resource-payment-wiring.md`, `docs/final-architecture-notes.md`, `docs/live-service-screenshots.md`, `docs/public-demo-catalog.md`, `public/evidence/live/*`, `public/evidence/portfolio-reel/*`, Chrome audit artifacts under ignored `tmp/`.
 
 ## Brand
@@ -14,7 +14,8 @@
 ## Product goals
 - Goals:
   - Convert a broad GitHub portfolio into a high-trust commercial storefront.
-  - Make nine buyer-facing service lanes visible before raw repository browsing.
+  - Make seven outcome-focused service offers visible before repository-level proof.
+  - Capture commercial interest through a private, retention-bounded inquiry path.
   - Show free-resource/payment readiness without exposing secrets or payout data.
   - Preserve inspectability with architecture links and verification artifacts.
 - Non-goals:
@@ -23,7 +24,7 @@
   - Build a heavy design-system dependency layer.
 - Success signals:
   - No mobile horizontal overflow.
-  - Fast first read of the nine commercial lanes.
+  - Fast first read of the seven commercial offers.
   - Clear private-workspace CTA.
   - `npm run verify`, `npm audit --audit-level=high`, and Chrome desktop/mobile audit pass.
 
@@ -33,7 +34,7 @@
 - Key contexts of use: mobile preview from social/GitHub, desktop review before outreach, technical buyer scanning architecture evidence.
 
 ## Information architecture
-- Primary navigation: Overview, Experience, Systems, Architecture, Services, Capabilities, Contact.
+- Primary navigation: Overview, Services, Systems, Architecture, Experience, Capabilities, Contact.
 - Core routes/screens: Hero, experience proof, project gallery, architecture ledger, commercial lanes, free-resource/payment wiring, repo-level service catalog, coverage ledger, capabilities, contact footer.
 - Content hierarchy:
   1. Identity and deployed flagship proof.
@@ -58,7 +59,7 @@
 
 ## Components
 - Existing components to reuse: `Hero`, `Projects`, `Navbar`, `Experience`, `Skills`, commercial lane data in `commercialLanes.ts`, resource wiring data in `resourceWiring.ts`.
-- New/changed components: commercial lane cards, resource wiring cards, premium CTA capsules, proof chips, card ordinal badges.
+- New/changed components: commercial lane cards, private inquiry form, resource wiring cards, proof chips, and card ordinal badges.
 - Variants and states: default, hover, focus-visible, mobile single-column, reduced-motion fallback.
 - Token/component ownership: `index.css` owns visual tokens and component styling; data files own commercial copy.
 
@@ -89,11 +90,11 @@
 
 ## Implementation constraints
 - Framework/styling system: React + Vite + TypeScript + repo-native CSS.
-- Design-token constraints: no new dependencies; extend `:root` tokens and existing component classes.
+- Design-token constraints: no new runtime UI dependencies; extend `:root` tokens and existing component classes.
 - Performance constraints: keep static build lightweight, reuse existing screenshots/previews, no runtime-heavy animation library.
 - Compatibility constraints: Safari/Chrome-friendly CSS, backdrop-filter fallback already present.
 - Test/screenshot expectations: `npm audit --audit-level=high`, `npm run verify`, and Chrome desktop/mobile audit for `#service-offers` before claiming done.
 
 ## Open questions
-- [ ] Replace GitHub issue CTAs with real booking/payment links after provider dashboards and account verification are complete / owner / affects checkout conversion.
-- [ ] Re-capture live service screenshots after PR merge and deployment / owner / affects visual freshness.
+- [ ] Connect a verified hosted checkout only after price and fulfillment are validated with real buyers / owner / affects direct payment conversion.
+- [ ] Re-capture live service screenshots after deployment / owner / affects visual freshness.

@@ -1,28 +1,28 @@
 {
-  "name": "KIM3310 Systems Gallery",
+  "name": "KIM3310 Systems",
   "slug": "doeon-kim-portfolio",
   "canonical_url": "https://kim3310-doeon-kim-portfolio.pages.dev/",
   "repository_url": "https://github.com/KIM3310/doeon-kim-portfolio",
   "architecture_url": "https://github.com/KIM3310/doeon-kim-portfolio/blob/main/docs/system-architecture.md",
   "revenue_architecture_url": "https://github.com/KIM3310/doeon-kim-portfolio/blob/main/docs/revenue-architecture.md",
-  "lead_capture_url": "https://github.com/KIM3310/doeon-kim-portfolio/issues/new?template=service-inquiry.yml&title=Private+workspace+inquiry%3A+KIM3310+Systems+Gallery",
+  "lead_capture_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=doeon-kim-portfolio&inquiry=architecture-scope-sprint#private-inquiry",
   "commerce_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=doeon-kim-portfolio#service-offers",
-  "productized_offer": "product storefront for architecture packs, demos, and implementation-ready systems",
-  "first_paid_sku": "paid architecture pack bundle, implementation sprint, or private adaptation of a repo",
-  "free_lead_magnet": "free systems gallery with live demos and architecture links",
+  "productized_offer": "evidence-backed operational AI, reliability, incident, workflow, and validation services",
+  "first_paid_sku": "Architecture Scope Sprint from USD 900",
+  "free_lead_magnet": "runnable systems, architecture documents, and explicit operating boundaries",
   "search_positioning": {
-    "primary_query": "KIM3310 Systems Gallery product storefront architecture",
+    "primary_query": "agent reliability and operational AI services",
     "secondary_queries": [
-      "KIM3310 Systems Gallery demo",
-      "KIM3310 Systems Gallery system architecture",
-      "KIM3310 Systems Gallery developer tool",
-      "product storefront for architecture packs, demos, and implementation-ready systems service"
+      "agent reliability audit",
+      "private AI readiness sprint",
+      "incident operations exercise",
+      "secure workflow automation pilot"
     ],
-    "audience_intent": "Find a runnable demo, inspect the system architecture, and decide whether a private workspace or implementation package is useful."
+    "audience_intent": "Inspect technical proof and request a bounded paid audit, sprint, exercise, discovery, or workflow pilot."
   },
   "monetization_boundary": {
-    "free": "free systems gallery with live demos and architecture links",
-    "paid": "paid architecture pack bundle, implementation sprint, or private adaptation of a repo",
+    "free": "runnable systems, architecture documents, and explicit operating boundaries",
+    "paid": "seven fixed-scope service outcomes with separately scoped implementation follow-ons",
     "metering_hooks": [
       "workspace_id",
       "plan",
@@ -40,13 +40,11 @@
   },
   "structured_data": {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "KIM3310 Systems Gallery",
-    "applicationCategory": "DeveloperApplication",
-    "operatingSystem": "Web, serverless, and local development environments",
+    "@type": "ProfessionalService",
+    "name": "KIM3310 Systems",
     "url": "https://kim3310-doeon-kim-portfolio.pages.dev/",
     "codeRepository": "https://github.com/KIM3310/doeon-kim-portfolio",
-    "description": "KIM3310 Systems Gallery: product storefront for architecture packs, demos, and implementation-ready systems. Free entry point: free systems gallery with live demos and architecture links. Paid path: paid architecture.",
+    "description": "Evidence-backed operational AI, agent reliability, incident operations, and secure workflow services.",
     "creator": {
       "@type": "Person",
       "name": "KIM3310",
@@ -55,7 +53,7 @@
     "offers": [
       {
         "@type": "Offer",
-        "name": "free systems gallery with live demos and architecture links",
+        "name": "runnable systems and architecture evidence",
         "price": "0",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
@@ -63,30 +61,30 @@
       },
       {
         "@type": "Offer",
-        "name": "paid architecture pack bundle, implementation sprint, or private adaptation of a repo",
+        "name": "Architecture Scope Sprint",
         "availability": "https://schema.org/LimitedAvailability",
-        "url": "https://github.com/KIM3310/doeon-kim-portfolio/blob/main/docs/revenue-architecture.md"
+        "url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=doeon-kim-portfolio&inquiry=architecture-scope-sprint#private-inquiry"
       }
     ],
     "isAccessibleForFree": true,
-    "keywords": "doeon-kim-portfolio, KIM3310, Systems, Gallery, product, storefront, architecture, packs, demos, implementation-ready, systems, pack, bundle, implementation, sprint, adaptation, repo, gallery, live, links"
+    "keywords": "agent reliability audit, private AI readiness, incident operations exercise, secure workflow pilot, industrial AI validation"
   },
   "commerce": {
     "gateway_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=doeon-kim-portfolio#service-offers",
-    "lane_id": "storefront-architecture-packs",
-    "lane_name": "Storefront Architecture Packs",
+    "lane_id": "architecture-scope-sprint",
+    "lane_name": "Architecture Scope Sprint",
     "billing_mode": "one-time",
-    "price_unit": "architecture adaptation pack from USD 300",
-    "fulfillment_kind": "repo-to-roadmap brief, architecture diagram, risk notes, and scoped backlog",
+    "price_unit": "fixed scope from USD 900",
+    "fulfillment_kind": "system context map, architecture diagram, risk register, delivery slices, and implementation estimate",
     "risk_bucket": "standard",
     "checkout": {
-      "provider": "lemon-squeezy",
-      "status": "account-onboarding-required",
-      "fallback_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=doeon-kim-portfolio#service-offers"
+      "provider": null,
+      "status": "not-configured",
+      "fallback_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=doeon-kim-portfolio&inquiry=architecture-scope-sprint#private-inquiry"
     },
     "sponsorship": {
       "provider": "github-sponsors",
-      "eligible": true,
+      "eligible": false,
       "status": "sponsors-listing-not-configured"
     },
     "advertising": {

@@ -1,10 +1,9 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import { PORTFOLIO_REEL, PROJECTS, REPOSITORY_COVERAGE, REPOSITORY_DEMO_URLS, STACK_ARCHITECTURE_LANES, SYSTEM_ARCHITECTURE_URLS } from '../constants';
-import { SERVICE_OFFERS } from '../serviceOffers';
-import { RESOURCE_WIRING } from '../resourceWiring';
-import { COMMERCIAL_LANES, commerceUrlForRepo, laneForRepo, resolveCheckoutUrl } from '../commercialLanes';
-import { trackCommerceCtaClick } from '../analytics';
-import { ChevronDown, ChevronUp, Cpu, ExternalLink, FileText, Film, Github, Layers3, LockKeyhole, Network, Search, ShieldCheck, WalletCards, Volume2 } from 'lucide-react';
+import { laneForRepo } from '../commercialLanes';
+import { ChevronDown, ChevronUp, Cpu, ExternalLink, FileText, Film, Github, Layers3, LockKeyhole, Network, Volume2 } from 'lucide-react';
+import RepositoryCatalog from './RepositoryCatalog';
+import ServiceOffers from './ServiceOffers';
 
 const TOP_TAGS = 8;
 const LIVE_IMAGE_WIDTH = 1440;
@@ -23,6 +22,16 @@ const projectEvidenceClassName = (evidence?: string) => [
 ].filter(Boolean).join(' ');
 const offerParamFromLocation = () => new URLSearchParams(window.location.search).get('offer');
 
+export const resolveProjectScrollTargetId = (
+  hashTarget: string,
+  highlightedLaneId?: string,
+): string | null => {
+  if (hashTarget === 'private-inquiry') return hashTarget;
+  if (highlightedLaneId) return `lane-${highlightedLaneId}`;
+  if (hashTarget === 'coverage' || hashTarget === 'service-offers') return hashTarget;
+  return null;
+};
+
 const Projects: React.FC = () => {
   const [filter, setFilter] = useState<string | null>(null);
   const [showAllTags, setShowAllTags] = useState(false);
@@ -37,16 +46,14 @@ const Projects: React.FC = () => {
   const highlightedLane = useMemo(() => (offerRepo ? laneForRepo(offerRepo) : undefined), [offerRepo]);
 
   useEffect(() => {
-    if (window.location.hash !== '#coverage' && window.location.hash !== '#service-offers' && !highlightedLane) return;
+    const hashTarget = window.location.hash.slice(1);
+    const targetId = resolveProjectScrollTargetId(hashTarget, highlightedLane?.id);
+    if (!targetId) return;
 
     requestAnimationFrame(() => {
-      if (highlightedLane) {
-        document.getElementById(`lane-${highlightedLane.id}`)?.scrollIntoView({ block: 'center' });
-        return;
-      }
-
-      const targetId = window.location.hash === '#service-offers' ? 'service-offers' : 'coverage';
-      document.getElementById(targetId)?.scrollIntoView();
+      document.getElementById(targetId)?.scrollIntoView(
+        targetId.startsWith('lane-') ? { block: 'center' } : undefined,
+      );
     });
   }, [highlightedLane]);
 
@@ -108,6 +115,14 @@ const Projects: React.FC = () => {
     <section id="projects" className="section-shell">
       <div className="section-inner">
         <div className="section-heading">
+          <p className="eyebrow">Services</p>
+          <h2>Buy a bounded technical outcome</h2>
+          <p>Start with a fixed audit, sprint, exercise, discovery, or pilot. Repository evidence supports the offer; it is not the offer itself.</p>
+        </div>
+
+        <ServiceOffers offerRepo={offerRepo} highlightedLane={highlightedLane} />
+
+        <div id="systems" className="section-heading systems-heading">
           <p className="eyebrow">Systems</p>
           <h2>Built systems, with evidence</h2>
           <p>Each card links to a runnable or inspectable system, then exposes the stack, runtime boundary, and system architecture route behind the build.</p>
@@ -294,153 +309,7 @@ const Projects: React.FC = () => {
           </div>
         </div>
 
-        <div id="service-offers" className="service-offer-ledger" aria-label="Searchable service offers by repository">
-          <div className="coverage-intro">
-            <span>Commercial lanes</span>
-            <h3>Nine buyer-facing service bundles</h3>
-            <p>The public storefront now routes every covered repository through exactly one paid lane or supporting proof role. Hosted checkout URLs can be injected by environment, with GitHub issue inquiry as the safe fallback.</p>
-          </div>
-          {offerRepo && (
-            <p className="offer-route-note" role="status">
-              Offer route: <strong>{offerRepo}</strong>
-              {highlightedLane ? <> is mapped to <strong>{highlightedLane.name}</strong>.</> : <> has no active commercial lane mapping.</>}
-            </p>
-          )}
-          <div className="commercial-lane-grid" aria-label="Money-focused commercial service bundles">
-            {COMMERCIAL_LANES.map((lane, index) => (
-              <article
-                key={lane.id}
-                id={`lane-${lane.id}`}
-                className={`commercial-lane-card ${highlightedLane?.id === lane.id ? 'is-highlighted' : ''}`}
-              >
-                <div className="commercial-lane-head">
-                  <div>
-                    <span>{lane.buyer}</span>
-                    <h4>{lane.name}</h4>
-                  </div>
-                  <strong className="commercial-lane-number" aria-label={`Commercial lane ${index + 1}`}>
-                    {String(index + 1).padStart(2, '0')}
-                  </strong>
-                </div>
-                <p>{lane.tagline}</p>
-                <div className="commercial-lane-proof">
-                  <ShieldCheck size={15} aria-hidden="true" />
-                  <span>{lane.proofSignal}</span>
-                </div>
-                <div className="commercial-lane-meta">
-                  <div>
-                    <span>Billing mode</span>
-                    <strong>{lane.billingMode}</strong>
-                  </div>
-                  <div>
-                    <span>Price anchor</span>
-                    <strong>{lane.priceAnchor}</strong>
-                  </div>
-                  <div>
-                    <span>Concrete deliverable</span>
-                    <strong>{lane.concreteDeliverable}</strong>
-                  </div>
-                  <div>
-                    <span>Paid motion</span>
-                    <strong>{lane.paidMotion}</strong>
-                  </div>
-                  <div>
-                    <span>Primary repos</span>
-                    <strong>{lane.primaryRepos.join(' · ')}</strong>
-                  </div>
-                  <div>
-                    <span>Support proof</span>
-                    <strong>{lane.supportRepos.length > 0 ? lane.supportRepos.join(' · ') : 'No separate support repos'}</strong>
-                  </div>
-                </div>
-                <a
-                  className="commercial-lane-cta"
-                  href={resolveCheckoutUrl(lane)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => trackCommerceCtaClick(lane.id, lane.billingMode, 'lane_checkout')}
-                >
-                  <WalletCards size={13} /> {lane.ctaLabel}
-                </a>
-              </article>
-            ))}
-          </div>
-
-          <div className="coverage-intro service-catalog-intro">
-            <span>Service catalog</span>
-            <h3>Searchable repository-level offers</h3>
-            <p>Each public repository has a crawlable service offer, a free entry point, a paid boundary, and machine-readable metadata. Private repositories are represented through the commercial lanes above without exposing source URLs.</p>
-          </div>
-          <div className="resource-wiring-panel" aria-label="Free API resource and payment wiring overlay">
-            {RESOURCE_WIRING.map(item => (
-              <article key={item.label} className="resource-wiring-card">
-                <div className="resource-wiring-card-head">
-                  <span>{item.source}</span>
-                  <h4>{item.label}</h4>
-                </div>
-                <p>{item.summary}</p>
-                <div className="resource-chip-list">
-                  {item.resources.map(resource => (
-                    <span key={resource}>{resource}</span>
-                  ))}
-                </div>
-                <strong>{item.path}</strong>
-              </article>
-            ))}
-          </div>
-          <div className="service-offer-grid">
-            {SERVICE_OFFERS.map(offer => (
-              <article key={offer.repo} className={`service-offer-card ${offerRepo?.toLowerCase() === offer.repo.toLowerCase() ? 'is-highlighted' : ''}`}>
-                <div className="service-offer-card-head">
-                  <div>
-                    <span>{offer.category.replace('Application', '')}</span>
-                    <h4>{offer.name}</h4>
-                  </div>
-                  <WalletCards size={18} aria-hidden="true" />
-                </div>
-                <p>{offer.offer}</p>
-                <div className="service-offer-meta">
-                  <div>
-                    <span>Free entry</span>
-                    <strong>{offer.freeEntry}</strong>
-                  </div>
-                  <div>
-                    <span>Paid boundary</span>
-                    <strong>{offer.paidSku}</strong>
-                  </div>
-                  <div>
-                    <span><Search size={13} aria-hidden="true" /> Query</span>
-                    <strong>{offer.primaryQuery}</strong>
-                  </div>
-                  <div>
-                    <span>Commerce route</span>
-                    <strong>{commerceUrlForRepo(offer.repo)}</strong>
-                  </div>
-                </div>
-                <div className="service-offer-actions">
-                  <a
-                    href={commerceUrlForRepo(offer.repo)}
-                    onClick={() => {
-                      const lane = laneForRepo(offer.repo);
-                      if (lane) trackCommerceCtaClick(lane.id, lane.billingMode, 'repo_router');
-                    }}
-                  >
-                    <WalletCards size={13} /> Choose lane
-                  </a>
-                  <a href={offer.canonicalUrl} target="_blank" rel="noopener noreferrer">
-                    <ExternalLink size={13} /> Demo
-                  </a>
-                  <a href={offer.architectureUrl} target="_blank" rel="noopener noreferrer">
-                    <FileText size={13} /> Architecture
-                  </a>
-                  <a href={offer.revenueUrl} target="_blank" rel="noopener noreferrer">
-                    <WalletCards size={13} /> Revenue
-                  </a>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
+        <RepositoryCatalog offerRepo={offerRepo} />
 
         <div id="coverage" className="coverage-ledger" aria-label="Active repository coverage ledger">
           <div className="coverage-intro">

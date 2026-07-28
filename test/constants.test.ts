@@ -4,19 +4,19 @@ import { CERTIFICATIONS, EDUCATION, INTERX_ROLE, LIVE_SERVICE_SCREENS, MILITARY_
 describe('PROFILE', () => {
   it('contains required fields', () => {
     expect(PROFILE.name).toBeTruthy();
-    expect(PROFILE.contactUrl).toMatch(/github\.com\/KIM3310\/doeon-kim-portfolio\/issues\/new/);
-    expect(PROFILE.contactUrl).toContain('template=service-inquiry.yml');
+    expect(PROFILE.contactUrl).toContain('kim3310-doeon-kim-portfolio.pages.dev');
+    expect(PROFILE.contactUrl).toContain('#private-inquiry');
     expect(PROFILE.github).toMatch(/github\.com/);
     expect(PROFILE.linkedin).toMatch(/linkedin\.com/);
     expect(PROFILE.title).toBeTruthy();
     expect(PROFILE.intro).toBeTruthy();
   });
 
-  it('states the current operations-first review boundary', () => {
-    expect(PROFILE.title).toContain('Operations-first');
-    expect(PROFILE.intro).toContain('incident-room habits');
-    expect(PROFILE.intro).toContain('infrastructure operations');
-    expect(PROFILE.intro).toContain('without private data');
+  it('states the current service and verification boundary', () => {
+    expect(PROFILE.title).toContain('Operational AI');
+    expect(PROFILE.intro).toContain('Fixed-scope');
+    expect(PROFILE.intro).toContain('tests');
+    expect(PROFILE.intro).toContain('human-control boundaries');
   });
 });
 

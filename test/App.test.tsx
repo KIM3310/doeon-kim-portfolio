@@ -2,6 +2,7 @@ import { describe, it, expect } from 'vitest';
 import { fireEvent, render, screen } from '@testing-library/react';
 import { vi } from 'vitest';
 import App from '../App';
+import { resolveProjectScrollTargetId } from '../components/Projects';
 
 describe('App component', () => {
   it('renders without crashing', () => {
@@ -133,6 +134,17 @@ describe('App component', () => {
     render(<App />);
 
     expect(screen.getByText(/Offer route:/)).toBeInTheDocument();
-    expect(screen.getAllByText('StagePilot Reliability Lab').length).toBeGreaterThan(0);
+    expect(screen.getAllByText('Agent Reliability Audit').length).toBeGreaterThan(0);
+  });
+
+  it('keeps private inquiry deep links focused on the form', () => {
+    expect(resolveProjectScrollTargetId(
+      'private-inquiry',
+      'agent-reliability-audit',
+    )).toBe('private-inquiry');
+    expect(resolveProjectScrollTargetId(
+      'service-offers',
+      'agent-reliability-audit',
+    )).toBe('lane-agent-reliability-audit');
   });
 });

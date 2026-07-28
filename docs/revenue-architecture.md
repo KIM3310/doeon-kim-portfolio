@@ -6,12 +6,13 @@ This document turns the repository architecture into a zero-to-low-cost service 
 
 | Layer | Decision |
 | --- | --- |
-| Target buyer / user | operator, founder, or team selecting one of the repository systems as an implementation starting point |
-| Productized offer | product storefront for architecture packs, demos, and implementation-ready systems |
-| First paid SKU | paid architecture pack bundle, implementation sprint, or private adaptation of a repo |
-| Free lead magnet | free systems gallery with live demos and architecture links |
-| Paid expansion | service package checkout, sponsored template pack, and private workspace setup |
+| Target buyer / user | product, AI platform, operations, security, data, and industrial teams purchasing a bounded technical outcome |
+| Productized offer | seven fixed-scope audits, readiness sprints, exercises, discoveries, and workflow pilots |
+| First paid SKU | Architecture Scope Sprint from USD 900 or Agent Reliability Audit from USD 1,500 |
+| Free lead magnet | runnable demos, architecture documents, and explicit system boundaries |
+| Paid expansion | implementation milestone, private deployment, regression harness, recurring assurance, or workflow adaptation |
 | Data / workflow moat | cross-repo evidence, live screenshot catalog, system architecture index, and reusable deployment recipes |
+| Private inquiry | https://kim3310-doeon-kim-portfolio.pages.dev/?offer=doeon-kim-portfolio&inquiry=architecture-scope-sprint#private-inquiry |
 
 ## Free-Tier-First Launch Stack
 
@@ -19,10 +20,10 @@ This document turns the repository architecture into a zero-to-low-cost service 
 | --- | --- |
 | Build and coding loop | OpenCode, Kimi Code CLI, Freebuff, Lovable, Ollama-assisted local agents |
 | Public front door | Cloudflare Pages first, with Vercel/Netlify as alternate static front doors |
-| Backend / state | Cloudflare Workers for thin APIs, Supabase/Firebase for managed auth and data, Render/Oracle/GCP free VM only when a long-running process is unavoidable |
+| Backend / state | Cloudflare Pages Functions with D1 for commercial inquiry, product research, and support intake; repository-to-service validation plus email, date-scoped network, and global rate checks run in the same atomic insert, while delivery systems use customer-owned or separately scoped state |
 | AI inference | OpenRouter, Groq, Cerebras, Cloudflare Workers AI, NVIDIA NIM, Ollama local fallback |
 | Storage / exports | Supabase Storage, Firebase Storage, Cloudflare R2/KV/D1 depending on data shape |
-| Repo-specific launch path | Cloudflare Pages gallery, Workers lead capture, Supabase CRM, R2 downloadable packs, optional Stripe/Polar/Lemon Squeezy checkout later |
+| Repo-specific launch path | Cloudflare Pages storefront, Pages Functions + D1 lead capture, optional hosted Stripe/Polar/Lemon Squeezy checkout later |
 
 Keep exact provider quotas out of the product contract. Free-tier limits change; the architecture should degrade gracefully through caching, daily quotas, customer-supplied API keys, and an explicit paid workspace switch.
 
@@ -30,20 +31,23 @@ Keep exact provider quotas out of the product contract. Free-tier limits change;
 
 ```mermaid
 flowchart LR
-  Visitor["Visitor or operator"] --> Demo["Free public demo / docs"]
-  Demo --> Capture["Lead capture or anonymous workspace"]
-  Capture --> Workspace["Free-tier workspace state"]
-  Workspace --> Meter["Quota, rate limit, and entitlement checks"]
-  Meter --> Core["Repository core workflow"]
-  Core --> AI["Free or customer-key AI inference"]
-  Core --> Export["Reports, traces, bundles, or templates"]
-  Export --> Upgrade["Paid SKU: private workspace / support / connector / export pack"]
-  Upgrade --> Retention["Saved history, private data, team controls, and recurring reports"]
+  Buyer["Technical buyer"] --> Offer["Seven bounded service offers"]
+  Offer --> Proof["Runnable demo, architecture, and tests"]
+  Proof --> Intake["Private Pages Function"]
+  Intake --> Gate["Intent, repository, and atomic abuse gate"]
+  Gate --> D1["D1 inquiry record, scheduled for deletion at 90 days"]
+  Cron["Daily Cloudflare Cron Worker"] --> D1
+  D1 --> Scope["Scope and commercial review"]
+  Scope --> Delivery["Paid audit, sprint, exercise, discovery, or pilot"]
+  Delivery --> FollowOn["Optional implementation or recurring assurance"]
 ```
 
 ## Metering And Paywall Hooks
 
 - Start with anonymous read-only demos and synthetic data so traffic costs stay near zero.
+- Enforce email, date-scoped network-fingerprint, and global submission ceilings inside the same D1 statement that creates the inquiry; do not separate the capacity check from the write.
+- Transform the edge-provided network address in memory with a secret salt and UTC date, store only the one-way fingerprint, and rotate its identity daily.
+- Run the independent Cloudflare Cron Worker daily so retention does not depend on future form submissions.
 - Add `workspace_id`, `plan`, `quota_day`, and `export_count` fields before adding payment; this lets the app enforce limits without redesign.
 - Cache AI outputs by normalized prompt, scenario, model, and version. Paid users can bypass cache with their own provider key.
 - Keep exports, private connectors, longer retention, branded reports, team seats, and SLA support behind the paid boundary.
@@ -52,7 +56,7 @@ flowchart LR
 ## 30-Day Revenue Test
 
 1. Publish the public demo or architecture page with one clear CTA: request private workspace, download a pack, or run a sample report.
-2. Add a lead capture route using Workers + D1/KV, Supabase, Firebase, or a GitHub issue form.
+2. Measure completed private inquiries through the deployed Pages Function and D1 table; keep GitHub issues public and non-commercial.
 3. Create one downloadable artifact: report PDF, template pack, runbook, dataset sample, or export bundle.
 4. Offer a fixed-scope paid package before building subscription complexity.
 5. Track activation manually first: visits, CTA clicks, export requests, email replies, and paid pilot conversations.

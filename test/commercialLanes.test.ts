@@ -3,21 +3,29 @@ import {
   COMMERCIAL_LANES,
   checkoutEnvKeyForLane,
   commerceUrlForRepo,
+  inquiryUrlForLane,
+  isExternalCommerceUrl,
   laneForRepo,
   resolveCheckoutUrl,
 } from '../commercialLanes';
 import { REPOSITORY_COVERAGE } from '../constants';
 
 describe('COMMERCIAL_LANES', () => {
-  it('expands the commercial hub to nine revenue lanes', () => {
-    expect(COMMERCIAL_LANES).toHaveLength(9);
+  it('keeps the commercial hub focused on seven sellable outcomes', () => {
+    expect(COMMERCIAL_LANES).toHaveLength(7);
 
     for (const lane of COMMERCIAL_LANES) {
       expect(['quote', 'one-time', 'supporter']).toContain(lane.billingMode);
       expect(lane.priceAnchor).toBeTruthy();
       expect(lane.concreteDeliverable).toBeTruthy();
       expect(lane.ctaLabel).toBeTruthy();
-      expect(lane.fallbackCtaUrl).toContain('github.com/KIM3310/doeon-kim-portfolio/issues/new');
+      const primaryRepo = lane.primaryRepos[0];
+      expect(primaryRepo).toBeDefined();
+      if (!primaryRepo) continue;
+      expect(lane.fallbackCtaUrl).toBe(
+        inquiryUrlForLane(lane.id, primaryRepo),
+      );
+      expect(lane.fallbackCtaUrl).toContain('#private-inquiry');
       expect([...lane.primaryRepos, ...lane.supportRepos].every(repo => !repo.includes('https://'))).toBe(true);
     }
   });
@@ -33,9 +41,9 @@ describe('COMMERCIAL_LANES', () => {
   });
 
   it('maps offer query repo slugs to their commercial lane', () => {
-    expect(laneForRepo('aix-pilot')?.id).toBe('aix-governance-sprint');
-    expect(laneForRepo('DOEON-KIM-PORTFOLIO')?.id).toBe('storefront-architecture-packs');
-    expect(laneForRepo('twincity-ui')?.id).toBe('digital-twin-ops-readiness');
+    expect(laneForRepo('aix-pilot')?.id).toBe('private-ai-readiness-sprint');
+    expect(laneForRepo('DOEON-KIM-PORTFOLIO')?.id).toBe('architecture-scope-sprint');
+    expect(laneForRepo('twincity-ui')?.id).toBe('architecture-scope-sprint');
     expect(laneForRepo('not-a-repo')).toBeUndefined();
   });
 
@@ -64,5 +72,15 @@ describe('COMMERCIAL_LANES', () => {
     expect(resolveCheckoutUrl(quoteLane, {
       [checkoutEnvKeyForLane(quoteLane.id)]: 'https://checkout.example/unsafe-quote',
     })).toBe(quoteLane.fallbackCtaUrl);
+  });
+
+  it('opens only hosted provider URLs as external commerce', () => {
+    expect(
+      isExternalCommerceUrl(
+        inquiryUrlForLane('agent-reliability-audit', 'stage-pilot'),
+      ),
+    ).toBe(false);
+    expect(isExternalCommerceUrl('https://checkout.example/agent-audit')).toBe(true);
+    expect(isExternalCommerceUrl('not-a-url')).toBe(false);
   });
 });

@@ -29,8 +29,16 @@
     "audit:chrome": "node scripts/chrome-service-audit.mjs",
     "evidence:capture": "node scripts/capture-portfolio-evidence.mjs",
     "evidence:reel": "node scripts/create-evidence-reel.mjs",
-    "verify": "npm run typecheck && npm test && npm run verify:content && npm run build",
+    "verify": "npm run typecheck && npm run types:workers:check && npm test && npm run verify:content && npm run build",
     "verify:content": "node scripts/verify-gallery.mjs",
+    "types:workers:check": "wrangler types types/pages-env.d.ts --config wrangler.jsonc --env-interface PagesEnv --include-runtime false --check && wrangler types types/retention-env.d.ts --config wrangler.retention.jsonc --env-interface RetentionEnv --include-runtime false --check",
+    "pages:dev": "npm run build && wrangler pages dev dist",
+    "pages:deploy": "npm run build && wrangler pages deploy dist --project-name=kim3310-doeon-kim-portfolio --branch=main",
+    "leads:migrate:local": "wrangler d1 migrations apply portfolio-leads-prod --local",
+    "leads:migrate:remote": "wrangler d1 migrations apply portfolio-leads-prod --remote",
+    "leads:list": "wrangler d1 execute portfolio-leads-prod --remote --command \"SELECT id, created_at, expires_at, intent, email, organization, lane_id, source_repo, budget_range, status FROM private_inquiries ORDER BY created_at DESC LIMIT 25\"",
+    "retention:deploy": "wrangler deploy --config wrangler.retention.jsonc",
+    "retention:dev": "wrangler dev --config wrangler.retention.jsonc --test-scheduled",
     "fabtwin:runtime": "node server/index.mjs",
     "fabtwin:runtime:mock": "FABPILOT_ALLOW_MOCK=1 node server/index.mjs",
     "fabpilot:runtime": "node server/index.mjs",
@@ -43,6 +51,7 @@
     "react-dom": "^19.2.8"
   },
   "devDependencies": {
+    "@cloudflare/workers-types": "^5.20260727.1",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
     "@testing-library/user-event": "^14.6.1",
@@ -53,12 +62,13 @@
     "jsdom": "^29.1.1",
     "typescript": "~5.9.3",
     "vite": "^8.1.5",
-    "vitest": "^4.1.10"
+    "vitest": "^4.1.10",
+    "wrangler": "^4.114.0"
   },
   "overrides": {
     "esbuild": "^0.28.1"
   },
   "engines": {
-    "node": "^20.19.0 || >=22.12.0"
+    "node": "^22.12.0 || >=24.0.0"
   }
 }

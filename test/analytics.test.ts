@@ -13,7 +13,7 @@ describe('commerce analytics consent', () => {
   it('does not emit commerce events before analytics consent', () => {
     window.gtag = vi.fn();
 
-    trackCommerceCtaClick('stagepilot-reliability-lab', 'one-time', 'lane_checkout');
+    trackCommerceCtaClick('agent-reliability-audit', 'one-time', 'lane_checkout');
 
     expect(window.gtag).not.toHaveBeenCalled();
   });
@@ -22,10 +22,10 @@ describe('commerce analytics consent', () => {
     window.gtag = vi.fn();
     window.localStorage.setItem(ANALYTICS_CONSENT_STORAGE_KEY, 'granted');
 
-    trackCommerceCtaClick('stagepilot-reliability-lab', 'one-time', 'repo_router');
+    trackCommerceCtaClick('agent-reliability-audit', 'one-time', 'repo_router');
 
     expect(window.gtag).toHaveBeenCalledWith('event', 'commerce_cta_click', {
-      lane_id: 'stagepilot-reliability-lab',
+      lane_id: 'agent-reliability-audit',
       billing_mode: 'one-time',
       cta_kind: 'repo_router',
     });

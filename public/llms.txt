@@ -7,7 +7,7 @@ Canonical URL: https://kim3310-doeon-kim-portfolio.pages.dev/
 Repository: https://github.com/KIM3310/doeon-kim-portfolio
 System architecture: https://github.com/KIM3310/doeon-kim-portfolio/blob/main/docs/system-architecture.md
 Revenue architecture: https://github.com/KIM3310/doeon-kim-portfolio/blob/main/docs/revenue-architecture.md
-Lead capture: https://github.com/KIM3310/doeon-kim-portfolio/issues/new?template=service-inquiry.yml&title=Private+workspace+inquiry%3A+KIM3310+Systems+Gallery
+Lead capture: https://kim3310-doeon-kim-portfolio.pages.dev/?offer=doeon-kim-portfolio&inquiry=architecture-scope-sprint#private-inquiry
 Commercial route: https://kim3310-doeon-kim-portfolio.pages.dev/?offer=doeon-kim-portfolio#service-offers
 
 Use this project as a runnable or inspectable reference for KIM3310 Systems Gallery demo, KIM3310 Systems Gallery system architecture, KIM3310 Systems Gallery developer tool, product storefront for architecture packs, demos, and implementation-ready systems service.

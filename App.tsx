@@ -88,7 +88,7 @@ const App: React.FC = () => (
         <div className="footer-links">
           <a href={PROFILE.github} target="_blank" rel="noopener noreferrer"><Github size={18} /> GitHub</a>
           <a href={PROFILE.linkedin} target="_blank" rel="noopener noreferrer"><Linkedin size={18} /> LinkedIn</a>
-          <a href={PROFILE.contactUrl} target="_blank" rel="noopener noreferrer"><MessageSquare size={18} /> Service inquiry</a>
+          <a href={PROFILE.contactUrl}><MessageSquare size={18} /> Private inquiry</a>
         </div>
       </div>
     </footer>

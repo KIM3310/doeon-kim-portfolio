@@ -1,6 +1,6 @@
 # Readiness Snapshot
 
-Date: 2026-06-07 KST
+Date: 2026-07-28 KST
 
 This snapshot records the latest local verification and the external checks that were recorded during the audit pass. It is a point-in-time verification snapshot, not a permanent claim that hosting, GitHub Actions, or public URLs will stay healthy.
 
@@ -36,7 +36,8 @@ The recorded external audit pass checked:
 - Portfolio GitHub Actions: recorded successful during that pass.
 - 3 latest service upgrades are reflected in the portfolio proof surface: `twincity-ui`, `smallbiz-ops-copilot`, and `districtpilot-ai`.
 - Storefront free-resource/payment wiring now shows DaesikPage, `public-apis-4Kr`, Cloudflare-first deployment, and Toss/PortOne/Stripe secret-slot boundaries without exposing payout data.
-- Storefront service consolidation now leads with nine commercial operating names and parks low-ROI/guarded surfaces below the first-click buyer path.
+- Storefront service consolidation now leads with seven commercial operating names and parks low-ROI/guarded surfaces below the first-click buyer path.
+- Commercial fallback now uses a private Cloudflare Pages Function and D1 record with intent and repository-to-service validation, atomic email/network/global rate limits, no raw network-address storage, and a separately deployed daily retention Worker instead of a public GitHub issue.
 - Premium UI/UX pass now uses `DESIGN.md` as the source of truth and upgrades commercial-lane cards with ordinal badges, proof chips, refined glass/elevation tokens, and mobile-first touch targets.
 
 ## Boundary

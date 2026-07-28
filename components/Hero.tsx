@@ -9,7 +9,7 @@ const featuredScreenshotPreviewSmall = `${import.meta.env.BASE_URL}evidence/live
 const Hero: React.FC = () => (
   <section id="about" className="hero-section">
     <div className="hero-copy">
-      <p className="eyebrow">Technical Systems Gallery</p>
+      <p className="eyebrow">Operational AI & Reliability Services</p>
       <h1>{PROFILE.name}</h1>
       <p className="hero-subtitle">{PROFILE.title}</p>
       <p className="hero-summary">{PROFILE.intro}</p>
@@ -20,8 +20,11 @@ const Hero: React.FC = () => (
         <span>Terraform + Docker</span>
       </div>
       <div className="hero-actions">
-        <a href="#projects" className="primary-action">
-          Browse systems <ArrowRight size={18} />
+        <a href="#service-offers" className="primary-action">
+          View paid services <ArrowRight size={18} />
+        </a>
+        <a href="#systems" className="secondary-action">
+          Review systems
         </a>
         <a href={PROFILE.github} target="_blank" rel="noopener noreferrer" className="secondary-action">
           <Github size={18} /> GitHub
@@ -29,8 +32,8 @@ const Hero: React.FC = () => (
         <a href={PROFILE.linkedin} target="_blank" rel="noopener noreferrer" className="secondary-action">
           <Linkedin size={18} /> LinkedIn
         </a>
-        <a href={PROFILE.contactUrl} target="_blank" rel="noopener noreferrer" className="secondary-action">
-          <MessageSquare size={18} /> Service inquiry
+        <a href={PROFILE.contactUrl} className="secondary-action">
+          <MessageSquare size={18} /> Private inquiry
         </a>
       </div>
       <div className="hero-showcase hero-mobile-showcase">
@@ -72,11 +75,11 @@ const Hero: React.FC = () => (
       <div className="hero-panel-header">
         <Sparkles aria-hidden="true" />
         <div>
-          <p className="eyebrow">Featured System</p>
-          <h2>AIX Pilot leads the gallery as a deployed Enterprise GenAI console.</h2>
+          <p className="eyebrow">Featured Offer</p>
+          <h2>Agent Reliability Audit for teams shipping tool-using AI systems.</h2>
         </div>
       </div>
-      <p className="hero-panel-note">A public systems surface for stack lanes, architecture attachments, and operating boundaries that can be inspected together.</p>
+      <p className="hero-panel-note">A fixed audit turns private scenarios and traces into a failure taxonomy, provider scorecard, and prioritized remediation plan.</p>
       <dl className="stat-grid">
         {PORTFOLIO_STATS.map(stat => (
           <div key={stat.label}>
@@ -87,7 +90,7 @@ const Hero: React.FC = () => (
       </dl>
       <div className="system-strip">
         <ShieldCheck aria-hidden="true" />
-        <span>stack lanes, system architecture attachments, explicit operating boundaries</span>
+        <span>bounded scope, inspectable evidence, explicit operating limits</span>
       </div>
     </aside>
   </section>

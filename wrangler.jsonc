@@ -1,0 +1,14 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "kim3310-doeon-kim-portfolio",
+  "compatibility_date": "2026-07-28",
+  "pages_build_output_dir": "./dist",
+  "d1_databases": [
+    {
+      "binding": "LEADS_DB",
+      "database_name": "portfolio-leads-prod",
+      "database_id": "0e04a267-8258-4687-8975-229d0db4a1c0",
+      "migrations_dir": "migrations"
+    }
+  ]
+}
