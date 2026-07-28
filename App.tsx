@@ -79,8 +79,8 @@ const App: React.FC = () => (
         <h2>{PROFILE.name}</h2>
         <p>{PROFILE.title}</p>
         <div className="footer-policy-links">
-          <a href={`${import.meta.env.BASE_URL}privacy.html`}>Privacy</a>
-          <a href={`${import.meta.env.BASE_URL}terms.html`}>Terms</a>
+          <a href={`${import.meta.env.BASE_URL}privacy`}>Privacy</a>
+          <a href={`${import.meta.env.BASE_URL}terms`}>Terms</a>
         </div>
       </div>
       <div className="footer-stack">

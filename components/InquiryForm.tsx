@@ -283,7 +283,7 @@ const InquiryForm: React.FC = () => {
             onChange={event => setConsent(event.target.checked)}
           />
           <span>
-            I consent to processing this inquiry under the <a href="/privacy.html">privacy notice</a>
+            I consent to processing this inquiry under the <a href={`${import.meta.env.BASE_URL}privacy`}>privacy notice</a>
             {' '}({INQUIRY_CONSENT_VERSION}).
           </span>
         </label>

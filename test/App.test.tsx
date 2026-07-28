@@ -100,8 +100,8 @@ describe('App component', () => {
   it('renders privacy and terms links plus analytics consent controls', () => {
     render(<App />);
 
-    expect(screen.getByRole('link', { name: 'Privacy' })).toHaveAttribute('href', '/privacy.html');
-    expect(screen.getByRole('link', { name: 'Terms' })).toHaveAttribute('href', '/terms.html');
+    expect(screen.getByRole('link', { name: 'Privacy' })).toHaveAttribute('href', '/privacy');
+    expect(screen.getByRole('link', { name: 'Terms' })).toHaveAttribute('href', '/terms');
     expect(screen.getByRole('button', { name: 'Enable analytics' })).toBeInTheDocument();
     expect(screen.getByRole('button', { name: 'Keep off' })).toBeInTheDocument();
   });

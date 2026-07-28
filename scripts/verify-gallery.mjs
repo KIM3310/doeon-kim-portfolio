@@ -72,12 +72,17 @@ const checks = [
   {
     file: 'public/privacy.html',
     mustInclude: [
+      'href="https://kim3310-doeon-kim-portfolio.pages.dev/privacy"',
       'Cloudflare D1',
       '90 days',
       'one-way email hash',
       'date-scoped, secret-salted one-way network fingerprint',
       'network address is transformed in memory and is not inserted',
     ],
+  },
+  {
+    file: 'public/terms.html',
+    mustInclude: ['href="https://kim3310-doeon-kim-portfolio.pages.dev/terms"', 'Prices are starting anchors'],
   },
   { file: 'components/Hero.tsx', mustInclude: ['TypeScript + React', 'Python + FastAPI', 'SQL + Spark', 'Terraform + Docker', 'evidence/live/preview/aix-pilot.webp', 'type="image/webp"'] },
   { file: 'index.css', mustInclude: ['--premium-shadow', '--radius-xl', 'commercial-lane-number', 'commercial-lane-proof', 'backdrop-filter: blur(26px)', 'prefers-reduced-motion'] },

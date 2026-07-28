@@ -11,12 +11,12 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://kim3310-doeon-kim-portfolio.pages.dev/privacy.html</loc>
+    <loc>https://kim3310-doeon-kim-portfolio.pages.dev/privacy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://kim3310-doeon-kim-portfolio.pages.dev/terms.html</loc>
+    <loc>https://kim3310-doeon-kim-portfolio.pages.dev/terms</loc>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
