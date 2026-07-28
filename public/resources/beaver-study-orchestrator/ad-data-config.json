@@ -3,7 +3,7 @@
   "endpoint": "https://kim3310-doeon-kim-portfolio.pages.dev/api/events",
   "benchmarkEndpoint": "https://kim3310-doeon-kim-portfolio.pages.dev/api/benchmarks",
   "consentVersion": "2026-07-28",
-  "consentStorageKey": "kim3310-aggregate-consent",
+  "consentStorageName": "kim3310-aggregate-consent",
   "consentDefault": false,
   "dntGpcFailClosed": true,
   "allowedEvents": [

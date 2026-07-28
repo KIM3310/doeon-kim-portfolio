@@ -16,7 +16,7 @@
   function readStoredConsent() {
     if (!config || privacySignalBlocksCollection()) return false;
     try {
-      return window.localStorage.getItem(config.consentStorageKey) === "granted";
+      return window.localStorage.getItem(config.consentStorageName) === "granted";
     } catch {
       return false;
     }
@@ -24,7 +24,7 @@
 
   function writeStoredConsent(value) {
     try {
-      window.localStorage.setItem(config.consentStorageKey, value ? "granted" : "denied");
+      window.localStorage.setItem(config.consentStorageName, value ? "granted" : "denied");
       return true;
     } catch {
       return false;
