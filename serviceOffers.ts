@@ -53,11 +53,11 @@ export const SERVICE_OFFERS = [
     "repositoryUrl": "https://github.com/KIM3310/SteadyTap",
     "architectureUrl": "https://github.com/KIM3310/SteadyTap/blob/main/docs/system-architecture.md",
     "revenueUrl": "https://github.com/KIM3310/SteadyTap/blob/main/docs/revenue-architecture.md",
-    "offer": "local-first touch calibration and adaptive challenge toolkit with optional coach handoff support",
+    "offer": "on-device touch-practice utility and adaptive control prototype",
     "freeEntry": "free local-first mobile demo and static explainer",
     "paidSku": "fixed-scope private prototype customization for one audience-specific workflow",
     "primaryQuery": "SteadyTap calibration adaptive touch",
-    "category": "AccessibilityApplication"
+    "category": "UtilitiesApplication"
   },
   {
     "repo": "Upstage-DocuAgent",
