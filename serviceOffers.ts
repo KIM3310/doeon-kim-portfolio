@@ -77,7 +77,7 @@ export const SERVICE_OFFERS = [
   {
     "repo": "agent-orchestration-benchmark",
     "name": "Agent Orchestration Benchmark",
-    "canonicalUrl": "https://kim3310.github.io/agent-orchestration-benchmark/",
+    "canonicalUrl": "https://agent-orchestration-benchmark.pages.dev/",
     "leadCaptureUrl": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=agent-orchestration-benchmark&inquiry=agent-reliability-audit#private-inquiry",
     "laneId": "agent-reliability-audit",
     "repositoryUrl": "https://github.com/KIM3310/agent-orchestration-benchmark",
@@ -92,7 +92,7 @@ export const SERVICE_OFFERS = [
   {
     "repo": "agent-runtime-go",
     "name": "Agent Runtime Go",
-    "canonicalUrl": "https://kim3310.github.io/agent-runtime-go/",
+    "canonicalUrl": "https://agent-runtime-go.pages.dev/",
     "leadCaptureUrl": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=agent-runtime-go&inquiry=agent-reliability-audit#private-inquiry",
     "laneId": "agent-reliability-audit",
     "repositoryUrl": "https://github.com/KIM3310/agent-runtime-go",
@@ -107,7 +107,7 @@ export const SERVICE_OFFERS = [
   {
     "repo": "ai-agent-production-lab",
     "name": "AI Agent Production Lab",
-    "canonicalUrl": "https://kim3310.github.io/ai-agent-production-lab/",
+    "canonicalUrl": "https://ai-agent-production-lab.pages.dev/",
     "leadCaptureUrl": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=ai-agent-production-lab&inquiry=agent-reliability-audit#private-inquiry",
     "laneId": "agent-reliability-audit",
     "repositoryUrl": "https://github.com/KIM3310/ai-agent-production-lab",
@@ -122,7 +122,7 @@ export const SERVICE_OFFERS = [
   {
     "repo": "ai-security-redteam-lab",
     "name": "AI Security Redteam Lab",
-    "canonicalUrl": "https://kim3310.github.io/ai-security-redteam-lab/",
+    "canonicalUrl": "https://ai-security-redteam-lab.pages.dev/",
     "leadCaptureUrl": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=ai-security-redteam-lab&inquiry=agent-reliability-audit#private-inquiry",
     "laneId": "agent-reliability-audit",
     "repositoryUrl": "https://github.com/KIM3310/ai-security-redteam-lab",
@@ -152,7 +152,7 @@ export const SERVICE_OFFERS = [
   {
     "repo": "beaver-study-orchestrator",
     "name": "Beaver Study Orchestrator",
-    "canonicalUrl": "https://kim3310.github.io/beaver-study-orchestrator/",
+    "canonicalUrl": "https://beaver-study-orchestrator.pages.dev/",
     "leadCaptureUrl": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=beaver-study-orchestrator&inquiry=consumer-prototype-customization#private-inquiry",
     "laneId": "consumer-prototype-customization",
     "repositoryUrl": "https://github.com/KIM3310/beaver-study-orchestrator",
@@ -167,7 +167,7 @@ export const SERVICE_OFFERS = [
   {
     "repo": "districtpilot-ai",
     "name": "Districtpilot AI",
-    "canonicalUrl": "https://kim3310.github.io/districtpilot-ai/",
+    "canonicalUrl": "https://districtpilot-ai.pages.dev/",
     "leadCaptureUrl": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=districtpilot-ai&inquiry=private-ai-readiness-sprint#private-inquiry",
     "laneId": "private-ai-readiness-sprint",
     "repositoryUrl": "https://github.com/KIM3310/districtpilot-ai",
@@ -272,7 +272,7 @@ export const SERVICE_OFFERS = [
   {
     "repo": "lakehouse-contract-lab",
     "name": "Lakehouse Contract Lab",
-    "canonicalUrl": "https://kim3310.github.io/lakehouse-contract-lab/",
+    "canonicalUrl": "https://lakehouse-contract-lab.pages.dev/",
     "leadCaptureUrl": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=lakehouse-contract-lab&inquiry=private-ai-readiness-sprint#private-inquiry",
     "laneId": "private-ai-readiness-sprint",
     "repositoryUrl": "https://github.com/KIM3310/lakehouse-contract-lab",
@@ -287,7 +287,7 @@ export const SERVICE_OFFERS = [
   {
     "repo": "llm-onprem-deployment-kit",
     "name": "LLM On-Prem Deployment Kit",
-    "canonicalUrl": "https://kim3310.github.io/llm-onprem-deployment-kit/",
+    "canonicalUrl": "https://llm-onprem-deployment-kit.pages.dev/",
     "leadCaptureUrl": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=llm-onprem-deployment-kit&inquiry=private-ai-readiness-sprint#private-inquiry",
     "laneId": "private-ai-readiness-sprint",
     "repositoryUrl": "https://github.com/KIM3310/llm-onprem-deployment-kit",
@@ -302,7 +302,7 @@ export const SERVICE_OFFERS = [
   {
     "repo": "memory-test-master-change-gate",
     "name": "Memory Test Master Change Impact Gate",
-    "canonicalUrl": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=memory-test-master-change-gate#service-offers",
+    "canonicalUrl": "https://memory-test-master-change-gate.pages.dev/",
     "leadCaptureUrl": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=memory-test-master-change-gate&inquiry=industrial-validation-discovery#private-inquiry",
     "laneId": "industrial-validation-discovery",
     "repositoryUrl": "https://github.com/KIM3310/memory-test-master-change-gate",
@@ -317,7 +317,7 @@ export const SERVICE_OFFERS = [
   {
     "repo": "multi-cli-pilot",
     "name": "Multi-CLI Pilot",
-    "canonicalUrl": "https://kim3310.github.io/multi-cli-pilot/",
+    "canonicalUrl": "https://multi-cli-pilot.pages.dev/",
     "leadCaptureUrl": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=multi-cli-pilot&inquiry=agent-reliability-audit#private-inquiry",
     "laneId": "agent-reliability-audit",
     "repositoryUrl": "https://github.com/KIM3310/multi-cli-pilot",
@@ -332,7 +332,7 @@ export const SERVICE_OFFERS = [
   {
     "repo": "nw-service-assurance-workbench",
     "name": "NW Service Assurance Workbench",
-    "canonicalUrl": "https://nw-service-assurance-workbench.ehdjs1351.workers.dev/",
+    "canonicalUrl": "https://nw-service-assurance-workbench.pages.dev/",
     "leadCaptureUrl": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=nw-service-assurance-workbench&inquiry=incident-operations-exercise#private-inquiry",
     "laneId": "incident-operations-exercise",
     "repositoryUrl": "https://github.com/KIM3310/nw-service-assurance-workbench",
@@ -347,7 +347,7 @@ export const SERVICE_OFFERS = [
   {
     "repo": "ops-reliability-workbench",
     "name": "Operations Reliability and Data Governance Workbench",
-    "canonicalUrl": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=ops-reliability-workbench#service-offers",
+    "canonicalUrl": "https://ops-reliability-workbench.pages.dev/",
     "leadCaptureUrl": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=ops-reliability-workbench&inquiry=incident-operations-exercise#private-inquiry",
     "laneId": "incident-operations-exercise",
     "repositoryUrl": "https://github.com/KIM3310/ops-reliability-workbench",
@@ -362,7 +362,7 @@ export const SERVICE_OFFERS = [
   {
     "repo": "quantum-workbench",
     "name": "Quantum Workbench",
-    "canonicalUrl": "https://kim3310.github.io/quantum-workbench/",
+    "canonicalUrl": "https://quantum-workbench.pages.dev/",
     "leadCaptureUrl": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=quantum-workbench&inquiry=consumer-prototype-customization#private-inquiry",
     "laneId": "consumer-prototype-customization",
     "repositoryUrl": "https://github.com/KIM3310/quantum-workbench",
@@ -392,7 +392,7 @@ export const SERVICE_OFFERS = [
   {
     "repo": "retina-scan-ai",
     "name": "Retina Scan AI",
-    "canonicalUrl": "https://kim3310.github.io/retina-scan-ai/",
+    "canonicalUrl": "https://retina-scan-ai.pages.dev/",
     "leadCaptureUrl": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=retina-scan-ai&inquiry=industrial-validation-discovery#private-inquiry",
     "laneId": "industrial-validation-discovery",
     "repositoryUrl": "https://github.com/KIM3310/retina-scan-ai",
@@ -422,7 +422,7 @@ export const SERVICE_OFFERS = [
   {
     "repo": "security-threat-response-workbench",
     "name": "Security Threat Response Workbench",
-    "canonicalUrl": "https://security-threat-response-workbench.ehdjs1351.workers.dev/",
+    "canonicalUrl": "https://security-threat-response-workbench.pages.dev/",
     "leadCaptureUrl": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=security-threat-response-workbench&inquiry=incident-operations-exercise#private-inquiry",
     "laneId": "incident-operations-exercise",
     "repositoryUrl": "https://github.com/KIM3310/security-threat-response-workbench",
@@ -482,7 +482,7 @@ export const SERVICE_OFFERS = [
   {
     "repo": "tool-call-finetune-lab",
     "name": "Tool-Call Fine-Tune Lab",
-    "canonicalUrl": "https://kim3310.github.io/tool-call-finetune-lab/",
+    "canonicalUrl": "https://tool-call-finetune-lab.pages.dev/",
     "leadCaptureUrl": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=tool-call-finetune-lab&inquiry=agent-reliability-audit#private-inquiry",
     "laneId": "agent-reliability-audit",
     "repositoryUrl": "https://github.com/KIM3310/tool-call-finetune-lab",
@@ -512,7 +512,7 @@ export const SERVICE_OFFERS = [
   {
     "repo": "weld-defect-vision",
     "name": "Weld Defect Vision",
-    "canonicalUrl": "https://kim3310.github.io/weld-defect-vision/",
+    "canonicalUrl": "https://weld-defect-vision.pages.dev/",
     "leadCaptureUrl": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=weld-defect-vision&inquiry=industrial-validation-discovery#private-inquiry",
     "laneId": "industrial-validation-discovery",
     "repositoryUrl": "https://github.com/KIM3310/weld-defect-vision",
