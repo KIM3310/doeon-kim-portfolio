@@ -15,8 +15,8 @@ Resource route: https://kim3310-doeon-kim-portfolio.pages.dev/resources/doeon-ki
 
 Use this project as a runnable or inspectable reference for operational AI, agent reliability, incident operations, secure workflows, data contracts, industrial validation, and local-first utilities.
 # ADSENSE-PUBLICATION:START
-Editorial guide: https://kim3310-doeon-kim-portfolio.pages.dev/guide.html
-Architecture article: https://kim3310-doeon-kim-portfolio.pages.dev/architecture.html
-Verification article: https://kim3310-doeon-kim-portfolio.pages.dev/verification.html
-Publisher information: https://kim3310-doeon-kim-portfolio.pages.dev/publisher.html
+Editorial guide: https://kim3310-doeon-kim-portfolio.pages.dev/guide
+Architecture article: https://kim3310-doeon-kim-portfolio.pages.dev/architecture
+Verification article: https://kim3310-doeon-kim-portfolio.pages.dev/verification
+Publisher information: https://kim3310-doeon-kim-portfolio.pages.dev/publisher
 # ADSENSE-PUBLICATION:END
