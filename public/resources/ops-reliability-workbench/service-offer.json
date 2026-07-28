@@ -1,7 +1,7 @@
 {
   "name": "Operations Reliability and Data Governance Workbench",
   "slug": "ops-reliability-workbench",
-  "canonical_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=ops-reliability-workbench#service-offers",
+  "canonical_url": "https://ops-reliability-workbench.pages.dev/",
   "repository_url": "https://github.com/KIM3310/ops-reliability-workbench",
   "architecture_url": "https://github.com/KIM3310/ops-reliability-workbench/blob/main/docs/service-architecture.md",
   "revenue_architecture_url": "https://github.com/KIM3310/ops-reliability-workbench/blob/main/docs/revenue-architecture.md",
@@ -68,7 +68,7 @@
     "name": "Operations Reliability and Data Governance Workbench",
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "Web, serverless, and local development environments",
-    "url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=ops-reliability-workbench#service-offers",
+    "url": "https://ops-reliability-workbench.pages.dev/",
     "codeRepository": "https://github.com/KIM3310/ops-reliability-workbench",
     "description": "Operations Reliability and Data Governance Workbench: operations reliability desk with incident logs, data governance signals, signed bundles, and optional AI assist. Free entry point: synthetic demo. Paid path: private workshop, pilot, or implementation.",
     "creator": {
@@ -83,7 +83,7 @@
         "price": "0",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://kim3310.github.io/ops-reliability-workbench/"
+        "url": "https://ops-reliability-workbench.pages.dev/"
       },
       {
         "@type": "Offer",

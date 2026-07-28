@@ -1,7 +1,7 @@
 {
   "name": "Memory Test Master Change Impact Gate",
   "slug": "memory-test-master-change-gate",
-  "canonical_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=memory-test-master-change-gate#service-offers",
+  "canonical_url": "https://memory-test-master-change-gate.pages.dev/",
   "repository_url": "https://github.com/KIM3310/memory-test-master-change-gate",
   "architecture_url": "https://github.com/KIM3310/memory-test-master-change-gate/blob/main/docs/service-architecture.md",
   "revenue_architecture_url": "https://github.com/KIM3310/memory-test-master-change-gate/blob/main/docs/REVENUE_READINESS.md",
@@ -68,7 +68,7 @@
     "name": "Memory Test Master Change Impact Gate",
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "Web, serverless, and local development environments",
-    "url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=memory-test-master-change-gate#service-offers",
+    "url": "https://memory-test-master-change-gate.pages.dev/",
     "codeRepository": "https://github.com/KIM3310/memory-test-master-change-gate",
     "description": "Memory Test Master Change Impact Gate: manufacturing change-control gate that dry-runs memory test master data changes before downstream semantic breakage. Free entry point: synthetic demo and review evidence. Paid path: private evaluation or implementation sprint.",
     "creator": {
@@ -83,7 +83,7 @@
         "price": "0",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=memory-test-master-change-gate#service-offers"
+        "url": "https://memory-test-master-change-gate.pages.dev/"
       },
       {
         "@type": "Offer",
