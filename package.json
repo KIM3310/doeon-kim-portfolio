@@ -33,7 +33,7 @@
     "verify:content": "node scripts/verify-gallery.mjs",
     "types:workers:check": "wrangler types types/pages-env.d.ts --config wrangler.jsonc --env-interface PagesEnv --include-runtime false --check && wrangler types types/retention-env.d.ts --config wrangler.retention.jsonc --env-interface RetentionEnv --include-runtime false --check",
     "pages:dev": "npm run build && wrangler pages dev dist",
-    "pages:deploy": "npm run build && wrangler pages deploy dist --project-name=kim3310-doeon-kim-portfolio --branch=main",
+    "pages:deploy": "npm run build && npx --yes wrangler@latest pages deploy dist --project-name=kim3310-doeon-kim-portfolio --branch=main",
     "leads:migrate:local": "wrangler d1 migrations apply portfolio-leads-prod --local",
     "leads:migrate:remote": "wrangler d1 migrations apply portfolio-leads-prod --remote",
     "leads:list": "wrangler d1 execute portfolio-leads-prod --remote --command \"SELECT id, created_at, expires_at, intent, email, organization, lane_id, source_repo, budget_range, status FROM private_inquiries ORDER BY created_at DESC LIMIT 25\"",
