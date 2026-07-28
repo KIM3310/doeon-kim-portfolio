@@ -168,7 +168,7 @@ for (const repo of resourceDirs) {
     'What the architecture proves',
     'data-benchmark',
     'data-consent-panel',
-    '/privacy-support/ad-data.html',
+    '/privacy-support/ad-data',
   ]) {
     if (!html.includes(token)) failures.push(`${repo} resource must include: ${token}`);
   }

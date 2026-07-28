@@ -9,7 +9,7 @@ Repository: https://github.com/KIM3310/doeon-kim-portfolio
 System architecture: https://github.com/KIM3310/doeon-kim-portfolio/blob/main/docs/system-architecture.md
 Revenue architecture: https://github.com/KIM3310/doeon-kim-portfolio/blob/main/docs/revenue-architecture.md
 Resource sitemap: https://kim3310-doeon-kim-portfolio.pages.dev/resources/ad-data-sitemap.xml
-Advertising and aggregate data policy: https://kim3310-doeon-kim-portfolio.pages.dev/privacy-support/ad-data.html
+Advertising and aggregate data policy: https://kim3310-doeon-kim-portfolio.pages.dev/privacy-support/ad-data
 Lead capture: https://kim3310-doeon-kim-portfolio.pages.dev/?offer=doeon-kim-portfolio&inquiry=architecture-scope-sprint#private-inquiry
 Resource route: https://kim3310-doeon-kim-portfolio.pages.dev/resources/doeon-kim-portfolio/
 
