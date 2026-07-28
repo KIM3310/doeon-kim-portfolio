@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Github, Linkedin, MessageSquare, ShieldCheck, Sparkles } from 'lucide-react';
+import { ArrowRight, DatabaseZap, Github, Linkedin, MessageSquare, ShieldCheck, Sparkles } from 'lucide-react';
 import { PORTFOLIO_STATS, PROFILE } from '../constants';
 
 const featuredScreenshot = `${import.meta.env.BASE_URL}evidence/live/aix-pilot.png`;
@@ -9,7 +9,7 @@ const featuredScreenshotPreviewSmall = `${import.meta.env.BASE_URL}evidence/live
 const Hero: React.FC = () => (
   <section id="about" className="hero-section">
     <div className="hero-copy">
-      <p className="eyebrow">Operational AI & Reliability Services</p>
+      <p className="eyebrow">Free AI utilities & benchmark data lab</p>
       <h1>{PROFILE.name}</h1>
       <p className="hero-subtitle">{PROFILE.title}</p>
       <p className="hero-summary">{PROFILE.intro}</p>
@@ -21,7 +21,7 @@ const Hero: React.FC = () => (
       </div>
       <div className="hero-actions">
         <a href="#service-offers" className="primary-action">
-          View paid services <ArrowRight size={18} />
+          Explore free resources <ArrowRight size={18} />
         </a>
         <a href="#systems" className="secondary-action">
           Review systems
@@ -75,11 +75,11 @@ const Hero: React.FC = () => (
       <div className="hero-panel-header">
         <Sparkles aria-hidden="true" />
         <div>
-          <p className="eyebrow">Featured Offer</p>
-          <h2>Agent Reliability Audit for teams shipping tool-using AI systems.</h2>
+          <p className="eyebrow">Featured Lab</p>
+          <h2>Agent Benchmark Lab for builders comparing tool-using AI systems.</h2>
         </div>
       </div>
-      <p className="hero-panel-note">A fixed audit turns private scenarios and traces into a failure taxonomy, provider scorecard, and prioritized remediation plan.</p>
+      <p className="hero-panel-note">Free public resources turn synthetic scenarios and traces into failure taxonomies, provider scorecards, and aggregate reliability signals without selling personal data.</p>
       <dl className="stat-grid">
         {PORTFOLIO_STATS.map(stat => (
           <div key={stat.label}>
@@ -89,8 +89,12 @@ const Hero: React.FC = () => (
         ))}
       </dl>
       <div className="system-strip">
+        <DatabaseZap aria-hidden="true" />
+        <span>contextual ads only on public resource pages; sensitive workflows stay ad-free</span>
+      </div>
+      <div className="system-strip">
         <ShieldCheck aria-hidden="true" />
-        <span>bounded scope, inspectable evidence, explicit operating limits</span>
+        <span>inspectable evidence, anonymous aggregate insights, explicit privacy limits</span>
       </div>
     </aside>
   </section>

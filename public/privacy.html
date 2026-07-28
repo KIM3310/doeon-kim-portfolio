@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Privacy | KIM3310 Systems</title>
-    <meta name="description" content="How KIM3310 Systems processes private service inquiries, analytics consent, retention, and checkout handoffs." />
+    <meta name="description" content="How KIM3310 Systems handles advertising consent, anonymous aggregate resource counts, private inquiries, storage, and retention." />
     <meta name="robots" content="index,follow" />
     <link rel="canonical" href="https://kim3310-doeon-kim-portfolio.pages.dev/privacy" />
     <style>
@@ -19,10 +19,18 @@
     <main>
       <p><a href="/">Back to KIM3310 Systems</a></p>
       <h1>Privacy</h1>
-      <p>Effective July 28, 2026. This notice covers the KIM3310 Systems website and its private inquiry form. Do not submit credentials, private datasets, health records, payment details, or other sensitive material.</p>
+      <p>Effective July 28, 2026. This notice covers the KIM3310 Systems website, its public repository resources, anonymous aggregate measurement, and its private inquiry form. Do not submit credentials, private datasets, health records, payment details, or other sensitive material.</p>
       <section>
-        <h2>Analytics</h2>
-        <p>Google Analytics starts with Consent Mode denied. The footer consent control can enable aggregate analytics. Commerce CTA events, when enabled, use lane-level metadata only.</p>
+        <h2>Analytics and Aggregate Resource Counts</h2>
+        <p>Google Analytics starts with Consent Mode denied. The footer control can enable aggregate analytics. Public resource measurement is also off by default and remains off when DNT or Global Privacy Control is enabled.</p>
+        <p>The resource event API accepts only repository, one of four allowlisted events, the fixed public-resource surface, and the consent-policy version. It rejects extra fields. Cloudflare D1 stores daily aggregate counters. Firebase Firestore stores curated public aggregate snapshots and denies every client write.</p>
+        <p>Personal, sensitive, raw, event-level, and re-identifiable data is not sold. Aggregate counts are used to publish benchmark summaries, prioritize useful resources, and improve public content.</p>
+      </section>
+      <section>
+        <h2>Advertising</h2>
+        <p>Google AdSense may serve ads only on policy-eligible public repository resource pages after Google site approval. Application, upload, result, account, inquiry, payment, dashboard, admin, medical, incident, security, and private workflow surfaces remain ad-free.</p>
+        <p>Regional advertising consent is handled through the Google-certified consent platform configured for the publisher account. Advertising availability and revenue depend on provider review, policy, traffic quality, consent, and advertiser demand.</p>
+        <p><a href="/privacy-support/ad-data.html">Read the detailed advertising and aggregate data policy.</a></p>
       </section>
       <section>
         <h2>Private Inquiries</h2>

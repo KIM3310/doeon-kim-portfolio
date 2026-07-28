@@ -1,0 +1,112 @@
+{
+  "name": "Regulated Case Workbench",
+  "slug": "regulated-case-workbench",
+  "canonical_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=regulated-case-workbench#service-offers",
+  "repository_url": "https://github.com/KIM3310/regulated-case-workbench",
+  "architecture_url": "https://github.com/KIM3310/regulated-case-workbench/blob/main/docs/service-architecture.md",
+  "revenue_architecture_url": "https://github.com/KIM3310/regulated-case-workbench/blob/main/docs/REVENUE_READINESS.md",
+  "lead_capture_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=regulated-case-workbench&inquiry=secure-workflow-pilot#private-inquiry",
+  "productized_offer": "regulated workflow desk for case intake, grounded evidence review, redaction preview, reviewer assignment, policy gating, and signed export proof",
+  "first_paid_sku": "paid private regulated workflow pilot or implementation sprint for approval gates, signed exports, and audit trail design",
+  "free_lead_magnet": "staged public proof with signed export, audit trail, runtime scorecard, and architecture notes",
+  "commerce": {
+    "gateway_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=regulated-case-workbench#service-offers",
+    "lane_id": "secure-workflow-pilot",
+    "lane_name": "Secure Workflow Pilot",
+    "billing_mode": "quote",
+    "price_unit": "pilot scope from USD 2,000",
+    "fulfillment_kind": "one bounded workflow, private processing boundary, approval gate, audit trail, and deployment runbook",
+    "risk_bucket": "privacy-high-trust",
+    "checkout": {
+      "provider": null,
+      "status": "not-configured",
+      "fallback_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=regulated-case-workbench&inquiry=secure-workflow-pilot#private-inquiry"
+    },
+    "sponsorship": {
+      "provider": "github-sponsors",
+      "eligible": false,
+      "status": "sponsors-listing-not-configured"
+    },
+    "advertising": {
+      "provider": "google-adsense",
+      "eligible": true,
+      "delivery_surface": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/regulated-case-workbench/",
+      "status": "central-resource-site-review-dependent"
+    }
+  },
+  "search_positioning": {
+    "primary_query": "Regulated Case Workbench signed export audit trail",
+    "secondary_queries": [
+      "regulated workflow desk approval gates",
+      "case intake redaction preview workbench",
+      "signed export proof audit trail demo",
+      "regulated workflow implementation service"
+    ],
+    "audience_intent": "Inspect a staged regulated workflow proof and decide whether a private pilot can map gates, retention, and review authority to internal policy."
+  },
+  "monetization_boundary": {
+    "free": "staged public proof with signed export, audit trail, runtime scorecard, and architecture notes",
+    "paid": "paid private regulated workflow pilot or implementation sprint for approval gates, signed exports, and audit trail design",
+    "metering_hooks": [
+      "workspace_id",
+      "plan",
+      "quota_day",
+      "export_count",
+      "lead_source"
+    ],
+    "cost_guardrails": [
+      "static first",
+      "staged data only",
+      "customer-specific policy mapping",
+      "approved retention controls",
+      "privacy-safe telemetry"
+    ]
+  },
+  "structured_data": {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Regulated Case Workbench",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web, serverless, and local development environments",
+    "url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=regulated-case-workbench#service-offers",
+    "codeRepository": "https://github.com/KIM3310/regulated-case-workbench",
+    "description": "Regulated Case Workbench: regulated workflow desk for case intake, grounded evidence review, redaction preview, reviewer assignment, policy gating, and signed export proof. Free entry point: staged public proof. Paid path: private pilot or implementation sprint.",
+    "creator": {
+      "@type": "Person",
+      "name": "KIM3310",
+      "url": "https://github.com/KIM3310"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "staged public proof with signed export, audit trail, runtime scorecard, and architecture notes",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=regulated-case-workbench#service-offers"
+      },
+      {
+        "@type": "Offer",
+        "name": "paid private regulated workflow pilot or implementation sprint for approval gates, signed exports, and audit trail design",
+        "availability": "https://schema.org/LimitedAvailability",
+        "url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=regulated-case-workbench&inquiry=secure-workflow-pilot#private-inquiry"
+      }
+    ],
+    "isAccessibleForFree": true,
+    "keywords": "regulated-case-workbench, regulated workflow, case intake, redaction preview, policy gate, signed export, audit trail, private pilot"
+  },
+  "monetization_strategy": {
+    "primary_model": "free-public-resource-with-contextual-advertising",
+    "public_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/regulated-case-workbench/",
+    "advertising_provider": "google-adsense",
+    "advertising_status": "code-ready-site-review-dependent",
+    "aggregate_data_value": "anonymous aggregate regulated workflow control interest and boundary-sheet opens",
+    "aggregate_insight_use": [
+      "publish privacy-safe benchmark summaries",
+      "prioritize useful public resources",
+      "improve search content from aggregate topic demand"
+    ],
+    "data_sale_boundary": "forbid sale of personal, sensitive, raw, event-level, or re-identifiable data",
+    "sensitive_flow_boundary": "ads allowed only on public workflow-boundary pages; intake, case notes, decisions, and dashboards are ad-free"
+  }
+}

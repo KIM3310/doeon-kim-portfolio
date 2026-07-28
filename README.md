@@ -163,9 +163,20 @@ The site is deployed at `https://kim3310-doeon-kim-portfolio.pages.dev/` via Clo
 - Paid boundary: paid architecture pack bundle, implementation sprint, or private adaptation of a repo
 - Canonical URL: https://kim3310-doeon-kim-portfolio.pages.dev/
 - Lead capture: https://kim3310-doeon-kim-portfolio.pages.dev/?offer=doeon-kim-portfolio&inquiry=architecture-scope-sprint#private-inquiry
+- Resource route: https://kim3310-doeon-kim-portfolio.pages.dev/resources/doeon-kim-portfolio/
 - Commercial route: https://kim3310-doeon-kim-portfolio.pages.dev/?offer=doeon-kim-portfolio#service-offers
 - Machine-readable offer: [docs/service-offer.json](docs/service-offer.json)
 - Search growth implementation: [docs/search-growth-implementation.md](docs/search-growth-implementation.md)
 - Revenue architecture: [docs/revenue-architecture.md](docs/revenue-architecture.md)
 
 <!-- search-growth-readme:end -->
+
+<!-- KIM3310:AD-DATA-PIVOT:START -->
+## Free Resource, Advertising, and Aggregate Data
+
+- [Public utility and architecture checklist](https://kim3310-doeon-kim-portfolio.pages.dev/resources/doeon-kim-portfolio/)
+- Revenue model: contextual advertising on the policy-eligible central resource page.
+- Aggregate value: anonymous aggregate resource hub navigation and service-offer interest counts
+- Boundary: ads allowed only on public resource pages; inquiry, private routing, admin, and analytics support flows are ad-free
+- Consent defaults off, DNT/GPC fail closed, and personal or sensitive data is never sold.
+<!-- KIM3310:AD-DATA-PIVOT:END -->

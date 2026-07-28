@@ -1,0 +1,17 @@
+{
+  "repo": "AegisOps",
+  "endpoint": "https://kim3310-doeon-kim-portfolio.pages.dev/api/events",
+  "benchmarkEndpoint": "https://kim3310-doeon-kim-portfolio.pages.dev/api/benchmarks",
+  "consentVersion": "2026-07-28",
+  "consentStorageKey": "kim3310-aggregate-consent",
+  "consentDefault": false,
+  "dntGpcFailClosed": true,
+  "allowedEvents": [
+    "resource_view",
+    "resource_cta_click",
+    "architecture_doc_open",
+    "privacy_support_open"
+  ],
+  "dataAsset": "anonymous aggregate incident-readiness topic demand and checklist completion counts",
+  "adPlacementBoundary": "ads allowed only on public incident-readiness articles and resource pages; replay boards, reports, evidence views, and operator handoff flows are ad-free"
+}

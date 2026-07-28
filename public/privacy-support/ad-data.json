@@ -1,0 +1,264 @@
+{
+  "generated_at": "2026-07-28",
+  "consent_version": "2026-07-28",
+  "policy": {
+    "all_repositories_participate_in_ad_supported_revenue": true,
+    "ad_scope": "central policy-eligible public resource pages only",
+    "sensitive_flow_boundary": "app, upload, result, account, inquiry, payment, dashboard, admin, diagnostic, incident, medical, security, and private workflow flows remain ad-free",
+    "ad_personalization": "Google-certified consent platform with contextual or limited ads where required",
+    "consent_default": "off",
+    "dnt_gpc": "fail-closed",
+    "data_value": "consented anonymous aggregate benchmarks and content-demand insights only",
+    "forbidden_data_sale": "forbid sale of personal, sensitive, raw, event-level, or re-identifiable data",
+    "runtime_transport": "exact four-field POST JSON to the central event API",
+    "runtime_forbidden_fields": [
+      "raw_input",
+      "prompt",
+      "file",
+      "upload",
+      "url",
+      "referrer",
+      "title",
+      "email",
+      "name",
+      "phone",
+      "account_id",
+      "user_id",
+      "session_id",
+      "ip_address",
+      "device_id",
+      "cookie_id",
+      "precise_location",
+      "medical_detail",
+      "security_incident_detail",
+      "payment_detail"
+    ],
+    "max_allowlisted_events": [
+      "resource_view",
+      "resource_cta_click",
+      "architecture_doc_open",
+      "privacy_support_open"
+    ]
+  },
+  "firebase": {
+    "project_id": "kim3310-free-tools",
+    "database": "(default)",
+    "region": "asia-northeast3",
+    "plan": "Spark (no billing linked)",
+    "public_collection": "publicAggregates",
+    "client_access": "public aggregate reads only; all client writes denied",
+    "free_tier_note": "1 GiB storage, 50,000 reads/day, 20,000 writes/day, 20,000 deletes/day, 10 GiB/month outbound transfer; quotas are provider-controlled and must be monitored"
+  },
+  "repositories": [
+    {
+      "repo": "AegisOps",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/AegisOps/",
+      "data_asset": "anonymous aggregate incident-readiness topic demand and checklist completion counts",
+      "sensitivity_class": "security-high-trust"
+    },
+    {
+      "repo": "KIM3310",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/KIM3310/",
+      "data_asset": "anonymous aggregate portfolio lane interest and resource navigation counts",
+      "sensitivity_class": "portfolio-public"
+    },
+    {
+      "repo": "Nexus-Hive",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/Nexus-Hive/",
+      "data_asset": "anonymous aggregate analytics governance topics and adapter-interest counts",
+      "sensitivity_class": "data-high-trust"
+    },
+    {
+      "repo": "SteadyTap",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/SteadyTap/",
+      "data_asset": "anonymous aggregate habit-design resource demand and CTA counts",
+      "sensitivity_class": "consumer-guarded"
+    },
+    {
+      "repo": "Upstage-DocuAgent",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/Upstage-DocuAgent/",
+      "data_asset": "anonymous aggregate document-workflow control interest and checklist usage counts",
+      "sensitivity_class": "privacy-high-trust"
+    },
+    {
+      "repo": "agent-orchestration-benchmark",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/agent-orchestration-benchmark/",
+      "data_asset": "anonymous aggregate benchmark scenario interest and methodology downloads",
+      "sensitivity_class": "agent-reliability-public"
+    },
+    {
+      "repo": "agent-runtime-go",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/agent-runtime-go/",
+      "data_asset": "anonymous aggregate runtime reliability topic interest and checklist usage counts",
+      "sensitivity_class": "agent-reliability-public"
+    },
+    {
+      "repo": "ai-agent-production-lab",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/ai-agent-production-lab/",
+      "data_asset": "anonymous aggregate production-agent readiness gaps and CTA counts",
+      "sensitivity_class": "agent-reliability-public"
+    },
+    {
+      "repo": "ai-security-redteam-lab",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/ai-security-redteam-lab/",
+      "data_asset": "anonymous aggregate AI security control interest and checklist-open counts",
+      "sensitivity_class": "security-high-trust"
+    },
+    {
+      "repo": "aix-pilot",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/aix-pilot/",
+      "data_asset": "anonymous aggregate enterprise AI readiness topic interest and scorecard-open counts",
+      "sensitivity_class": "high-trust-b2b"
+    },
+    {
+      "repo": "beaver-study-orchestrator",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/beaver-study-orchestrator/",
+      "data_asset": "anonymous aggregate study-template demand and resource CTA counts",
+      "sensitivity_class": "consumer-guarded"
+    },
+    {
+      "repo": "districtpilot-ai",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/districtpilot-ai/",
+      "data_asset": "anonymous aggregate civic analytics rollout topic interest and worksheet usage counts",
+      "sensitivity_class": "data-high-trust"
+    },
+    {
+      "repo": "doeon-kim-portfolio",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/doeon-kim-portfolio/",
+      "data_asset": "anonymous aggregate resource hub navigation and service-offer interest counts",
+      "sensitivity_class": "portfolio-public"
+    },
+    {
+      "repo": "dream-interpretation-pages",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/dream-interpretation-pages/",
+      "data_asset": "anonymous aggregate topic-level dream-symbol page demand and content navigation counts",
+      "sensitivity_class": "consumer-guarded"
+    },
+    {
+      "repo": "enterprise-llm-adoption-kit",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/enterprise-llm-adoption-kit/",
+      "data_asset": "anonymous aggregate LLM governance control interest and checklist usage counts",
+      "sensitivity_class": "high-trust-b2b"
+    },
+    {
+      "repo": "fab-ops-yield-control-tower",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/fab-ops-yield-control-tower/",
+      "data_asset": "anonymous aggregate manufacturing readiness topic interest and worksheet usage counts",
+      "sensitivity_class": "industrial-high-trust"
+    },
+    {
+      "repo": "honeypot",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/honeypot/",
+      "data_asset": "anonymous aggregate tabletop-security planning interest and resource-open counts",
+      "sensitivity_class": "security-high-trust"
+    },
+    {
+      "repo": "kbbq-idle-unity",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/kbbq-idle-unity/",
+      "data_asset": "anonymous aggregate game-economy resource interest and CTA counts",
+      "sensitivity_class": "consumer-guarded"
+    },
+    {
+      "repo": "lakehouse-contract-lab",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/lakehouse-contract-lab/",
+      "data_asset": "anonymous aggregate lakehouse contract topic interest and checklist usage counts",
+      "sensitivity_class": "data-high-trust"
+    },
+    {
+      "repo": "llm-onprem-deployment-kit",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/llm-onprem-deployment-kit/",
+      "data_asset": "anonymous aggregate private deployment topic demand and guide-open counts",
+      "sensitivity_class": "high-trust-b2b"
+    },
+    {
+      "repo": "memory-test-master-change-gate",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/memory-test-master-change-gate/",
+      "data_asset": "anonymous aggregate change-gate template interest and resource-open counts",
+      "sensitivity_class": "industrial-high-trust"
+    },
+    {
+      "repo": "multi-cli-pilot",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/multi-cli-pilot/",
+      "data_asset": "anonymous aggregate CLI reliability topic interest and worksheet usage counts",
+      "sensitivity_class": "agent-reliability-public"
+    },
+    {
+      "repo": "nw-service-assurance-workbench",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/nw-service-assurance-workbench/",
+      "data_asset": "anonymous aggregate service-assurance topic interest and checklist usage counts",
+      "sensitivity_class": "security-high-trust"
+    },
+    {
+      "repo": "ops-reliability-workbench",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/ops-reliability-workbench/",
+      "data_asset": "anonymous aggregate reliability exercise interest and planner-open counts",
+      "sensitivity_class": "security-high-trust"
+    },
+    {
+      "repo": "quantum-workbench",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/quantum-workbench/",
+      "data_asset": "anonymous aggregate quantum-learning topic interest and resource CTA counts",
+      "sensitivity_class": "consumer-guarded"
+    },
+    {
+      "repo": "regulated-case-workbench",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/regulated-case-workbench/",
+      "data_asset": "anonymous aggregate regulated workflow control interest and boundary-sheet opens",
+      "sensitivity_class": "regulated-high-trust"
+    },
+    {
+      "repo": "retina-scan-ai",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/retina-scan-ai/",
+      "data_asset": "anonymous aggregate model-card topic interest and validation-template usage counts",
+      "sensitivity_class": "medical-high-trust"
+    },
+    {
+      "repo": "secure-xl2hwp-local",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/secure-xl2hwp-local/",
+      "data_asset": "anonymous aggregate local-document automation interest and checklist usage counts",
+      "sensitivity_class": "privacy-high-trust"
+    },
+    {
+      "repo": "security-threat-response-workbench",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/security-threat-response-workbench/",
+      "data_asset": "anonymous aggregate threat-response topic interest and packet-open counts",
+      "sensitivity_class": "security-high-trust"
+    },
+    {
+      "repo": "smallbiz-ops-copilot",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/smallbiz-ops-copilot/",
+      "data_asset": "anonymous aggregate small-business workflow interest and checklist usage counts",
+      "sensitivity_class": "privacy-high-trust"
+    },
+    {
+      "repo": "stage-pilot",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/stage-pilot/",
+      "data_asset": "anonymous aggregate parser-recovery topic interest and guide-open counts",
+      "sensitivity_class": "agent-reliability-public"
+    },
+    {
+      "repo": "the-savior",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/the-savior/",
+      "data_asset": "anonymous aggregate narrative-design topic interest and resource CTA counts",
+      "sensitivity_class": "consumer-guarded"
+    },
+    {
+      "repo": "tool-call-finetune-lab",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/tool-call-finetune-lab/",
+      "data_asset": "anonymous aggregate tool-call dataset-control interest and checklist usage counts",
+      "sensitivity_class": "agent-reliability-public"
+    },
+    {
+      "repo": "twincity-ui",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/twincity-ui/",
+      "data_asset": "anonymous aggregate public-API readiness topic interest and worksheet usage counts",
+      "sensitivity_class": "data-high-trust"
+    },
+    {
+      "repo": "weld-defect-vision",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/weld-defect-vision/",
+      "data_asset": "anonymous aggregate industrial vision validation interest and worksheet usage counts",
+      "sensitivity_class": "industrial-high-trust"
+    }
+  ]
+}

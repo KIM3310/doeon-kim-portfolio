@@ -1,0 +1,112 @@
+{
+  "name": "Memory Test Master Change Impact Gate",
+  "slug": "memory-test-master-change-gate",
+  "canonical_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=memory-test-master-change-gate#service-offers",
+  "repository_url": "https://github.com/KIM3310/memory-test-master-change-gate",
+  "architecture_url": "https://github.com/KIM3310/memory-test-master-change-gate/blob/main/docs/service-architecture.md",
+  "revenue_architecture_url": "https://github.com/KIM3310/memory-test-master-change-gate/blob/main/docs/REVENUE_READINESS.md",
+  "lead_capture_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=memory-test-master-change-gate&inquiry=industrial-validation-discovery#private-inquiry",
+  "productized_offer": "manufacturing change-control gate that dry-runs memory test master data changes before downstream semantic breakage",
+  "first_paid_sku": "paid private evaluation or implementation sprint for staged master data impact analysis and release-gate evidence",
+  "free_lead_magnet": "synthetic public-lite demo with review pack, rollback plan, and deterministic release-gate evidence",
+  "commerce": {
+    "gateway_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=memory-test-master-change-gate#service-offers",
+    "lane_id": "industrial-validation-discovery",
+    "lane_name": "Industrial Validation Discovery",
+    "billing_mode": "quote",
+    "price_unit": "discovery scope from USD 2,500",
+    "fulfillment_kind": "data suitability review, baseline evaluation, model-card draft, human-review boundary, and pilot acceptance criteria",
+    "risk_bucket": "industrial-high-trust",
+    "checkout": {
+      "provider": null,
+      "status": "not-configured",
+      "fallback_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=memory-test-master-change-gate&inquiry=industrial-validation-discovery#private-inquiry"
+    },
+    "sponsorship": {
+      "provider": "github-sponsors",
+      "eligible": false,
+      "status": "sponsors-listing-not-configured"
+    },
+    "advertising": {
+      "provider": "google-adsense",
+      "eligible": true,
+      "delivery_surface": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/memory-test-master-change-gate/",
+      "status": "central-resource-site-review-dependent"
+    }
+  },
+  "search_positioning": {
+    "primary_query": "Memory Test Master Change Impact Gate release gate",
+    "secondary_queries": [
+      "memory test master data change impact",
+      "manufacturing release gate review pack",
+      "semiconductor master data governance workflow",
+      "change impact analysis implementation service"
+    ],
+    "audience_intent": "Inspect staged manufacturing change-gate evidence and decide whether a private evaluation can map the pattern to controlled internal systems."
+  },
+  "monetization_boundary": {
+    "free": "synthetic public-lite demo with review pack, rollback plan, and deterministic release-gate evidence",
+    "paid": "paid private evaluation or implementation sprint for staged master data impact analysis and release-gate evidence",
+    "metering_hooks": [
+      "workspace_id",
+      "plan",
+      "quota_day",
+      "export_count",
+      "lead_source"
+    ],
+    "cost_guardrails": [
+      "static first",
+      "synthetic public data",
+      "staged data only",
+      "customer approval authority",
+      "privacy-safe telemetry"
+    ]
+  },
+  "structured_data": {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Memory Test Master Change Impact Gate",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web, serverless, and local development environments",
+    "url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=memory-test-master-change-gate#service-offers",
+    "codeRepository": "https://github.com/KIM3310/memory-test-master-change-gate",
+    "description": "Memory Test Master Change Impact Gate: manufacturing change-control gate that dry-runs memory test master data changes before downstream semantic breakage. Free entry point: synthetic demo and review evidence. Paid path: private evaluation or implementation sprint.",
+    "creator": {
+      "@type": "Person",
+      "name": "KIM3310",
+      "url": "https://github.com/KIM3310"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "synthetic public-lite demo with review pack, rollback plan, and deterministic release-gate evidence",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=memory-test-master-change-gate#service-offers"
+      },
+      {
+        "@type": "Offer",
+        "name": "paid private evaluation or implementation sprint for staged master data impact analysis and release-gate evidence",
+        "availability": "https://schema.org/LimitedAvailability",
+        "url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=memory-test-master-change-gate&inquiry=industrial-validation-discovery#private-inquiry"
+      }
+    ],
+    "isAccessibleForFree": true,
+    "keywords": "memory-test-master-change-gate, master data governance, manufacturing IT, release gate, impact analysis, rollback plan, review pack, private evaluation"
+  },
+  "monetization_strategy": {
+    "primary_model": "free-public-resource-with-contextual-advertising",
+    "public_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/memory-test-master-change-gate/",
+    "advertising_provider": "google-adsense",
+    "advertising_status": "code-ready-site-review-dependent",
+    "aggregate_data_value": "anonymous aggregate change-gate template interest and resource-open counts",
+    "aggregate_insight_use": [
+      "publish privacy-safe benchmark summaries",
+      "prioritize useful public resources",
+      "improve search content from aggregate topic demand"
+    ],
+    "data_sale_boundary": "forbid sale of personal, sensitive, raw, event-level, or re-identifiable data",
+    "sensitive_flow_boundary": "ads allowed only on public change-gate templates; test results, release dashboards, and private gate decisions are ad-free"
+  }
+}

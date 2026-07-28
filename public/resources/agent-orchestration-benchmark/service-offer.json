@@ -1,0 +1,112 @@
+{
+  "name": "Agent Orchestration Benchmark",
+  "slug": "agent-orchestration-benchmark",
+  "canonical_url": "https://kim3310.github.io/agent-orchestration-benchmark/",
+  "repository_url": "https://github.com/KIM3310/agent-orchestration-benchmark",
+  "architecture_url": "https://github.com/KIM3310/agent-orchestration-benchmark/blob/main/docs/system-architecture.md",
+  "revenue_architecture_url": "https://github.com/KIM3310/agent-orchestration-benchmark/blob/main/docs/revenue-architecture.md",
+  "lead_capture_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=agent-orchestration-benchmark&inquiry=agent-reliability-audit#private-inquiry",
+  "productized_offer": "benchmark harness and report generator for agent orchestration reliability",
+  "first_paid_sku": "paid benchmark report pack, private scenario suite, and recurring provider regression dashboard",
+  "free_lead_magnet": "free benchmark methodology and sample leaderboard",
+  "search_positioning": {
+    "primary_query": "Agent Orchestration Benchmark harness generator reliability",
+    "secondary_queries": [
+      "Agent Orchestration Benchmark demo",
+      "Agent Orchestration Benchmark system architecture",
+      "Agent Orchestration Benchmark developer tool",
+      "benchmark harness and report generator for agent orchestration reliability service"
+    ],
+    "audience_intent": "Find a runnable demo, inspect the system architecture, and decide whether a private workspace or implementation package is useful."
+  },
+  "monetization_boundary": {
+    "free": "free benchmark methodology and sample leaderboard",
+    "paid": "paid benchmark report pack, private scenario suite, and recurring provider regression dashboard",
+    "metering_hooks": [
+      "workspace_id",
+      "plan",
+      "quota_day",
+      "export_count",
+      "lead_source"
+    ],
+    "cost_guardrails": [
+      "static first",
+      "edge functions",
+      "customer API keys",
+      "cached AI outputs",
+      "synthetic public data"
+    ]
+  },
+  "structured_data": {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Agent Orchestration Benchmark",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Web, serverless, and local development environments",
+    "url": "https://kim3310.github.io/agent-orchestration-benchmark/",
+    "codeRepository": "https://github.com/KIM3310/agent-orchestration-benchmark",
+    "description": "Agent Orchestration Benchmark: benchmark harness and report generator for agent orchestration reliability. Free entry point: free benchmark methodology and sample leaderboard. Paid path: paid benchmark report pack.",
+    "creator": {
+      "@type": "Person",
+      "name": "KIM3310",
+      "url": "https://github.com/KIM3310"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "free benchmark methodology and sample leaderboard",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://kim3310.github.io/agent-orchestration-benchmark/"
+      },
+      {
+        "@type": "Offer",
+        "name": "paid benchmark report pack, private scenario suite, and recurring provider regression dashboard",
+        "availability": "https://schema.org/LimitedAvailability",
+        "url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=agent-orchestration-benchmark&inquiry=agent-reliability-audit#private-inquiry"
+      }
+    ],
+    "isAccessibleForFree": true,
+    "keywords": "agent-orchestration-benchmark, Agent, Orchestration, Benchmark, benchmark, harness, generator, agent, orchestration, reliability, pack, scenario, suite, recurring, provider, regression, dashboard, methodology, sample, leaderboard, tier, Cloudflare"
+  },
+  "commerce": {
+    "gateway_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=agent-orchestration-benchmark#service-offers",
+    "lane_id": "agent-reliability-audit",
+    "lane_name": "Agent Reliability Audit",
+    "billing_mode": "one-time",
+    "price_unit": "fixed audit from USD 1,500",
+    "fulfillment_kind": "private scenario suite, trace review, failure taxonomy, provider scorecard, and prioritized remediation plan",
+    "risk_bucket": "standard-b2b",
+    "checkout": {
+      "provider": null,
+      "status": "not-configured",
+      "fallback_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=agent-orchestration-benchmark&inquiry=agent-reliability-audit#private-inquiry"
+    },
+    "sponsorship": {
+      "provider": "github-sponsors",
+      "eligible": false,
+      "status": "sponsors-listing-not-configured"
+    },
+    "advertising": {
+      "provider": "google-adsense",
+      "eligible": true,
+      "delivery_surface": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/agent-orchestration-benchmark/",
+      "status": "central-resource-site-review-dependent"
+    }
+  },
+  "monetization_strategy": {
+    "primary_model": "free-public-resource-with-contextual-advertising",
+    "public_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/agent-orchestration-benchmark/",
+    "advertising_provider": "google-adsense",
+    "advertising_status": "code-ready-site-review-dependent",
+    "aggregate_data_value": "anonymous aggregate benchmark scenario interest and methodology downloads",
+    "aggregate_insight_use": [
+      "publish privacy-safe benchmark summaries",
+      "prioritize useful public resources",
+      "improve search content from aggregate topic demand"
+    ],
+    "data_sale_boundary": "forbid sale of personal, sensitive, raw, event-level, or re-identifiable data",
+    "sensitive_flow_boundary": "ads allowed only on public benchmark methodology pages; private traces, scenario runs, and score dashboards are ad-free"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "repo": "districtpilot-ai",
+  "endpoint": "https://kim3310-doeon-kim-portfolio.pages.dev/api/events",
+  "benchmarkEndpoint": "https://kim3310-doeon-kim-portfolio.pages.dev/api/benchmarks",
+  "consentVersion": "2026-07-28",
+  "consentStorageKey": "kim3310-aggregate-consent",
+  "consentDefault": false,
+  "dntGpcFailClosed": true,
+  "allowedEvents": [
+    "resource_view",
+    "resource_cta_click",
+    "architecture_doc_open",
+    "privacy_support_open"
+  ],
+  "dataAsset": "anonymous aggregate civic analytics rollout topic interest and worksheet usage counts",
+  "adPlacementBoundary": "ads allowed only on public rollout explainers; civic data workspaces, exports, and dashboards are ad-free"
+}

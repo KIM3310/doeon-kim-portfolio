@@ -1,0 +1,112 @@
+{
+  "name": "KIM3310",
+  "slug": "KIM3310",
+  "canonical_url": "https://kim3310-doeon-kim-portfolio.pages.dev/",
+  "repository_url": "https://github.com/KIM3310/KIM3310",
+  "architecture_url": "https://github.com/KIM3310/KIM3310/blob/main/docs/system-architecture.md",
+  "revenue_architecture_url": "https://github.com/KIM3310/KIM3310/blob/main/docs/revenue-architecture.md",
+  "lead_capture_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=KIM3310&inquiry=architecture-scope-sprint#private-inquiry",
+  "productized_offer": "systems catalog that routes visitors to runnable demos, architecture packs, and productized service templates",
+  "first_paid_sku": "paid implementation package, architecture adaptation package, or template bundle attached to selected systems",
+  "free_lead_magnet": "public architecture index with free system diagrams and deployment notes",
+  "search_positioning": {
+    "primary_query": "KIM3310 systems catalog routes",
+    "secondary_queries": [
+      "KIM3310 demo",
+      "KIM3310 system architecture",
+      "KIM3310 developer tool",
+      "systems catalog that routes visitors to runnable demos, architecture packs, and productized service templates service"
+    ],
+    "audience_intent": "Find a runnable demo, inspect the system architecture, and decide whether a private workspace or implementation package is useful."
+  },
+  "monetization_boundary": {
+    "free": "public architecture index with free system diagrams and deployment notes",
+    "paid": "paid implementation package, architecture adaptation package, or template bundle attached to selected systems",
+    "metering_hooks": [
+      "workspace_id",
+      "plan",
+      "quota_day",
+      "export_count",
+      "lead_source"
+    ],
+    "cost_guardrails": [
+      "static first",
+      "edge functions",
+      "customer API keys",
+      "cached AI outputs",
+      "synthetic public data"
+    ]
+  },
+  "structured_data": {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "KIM3310",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Web, serverless, and local development environments",
+    "url": "https://kim3310-doeon-kim-portfolio.pages.dev/",
+    "codeRepository": "https://github.com/KIM3310/KIM3310",
+    "description": "KIM3310: systems catalog that routes visitors to runnable demos, architecture packs, and productized service templates. Free entry point: public architecture index with free system diagrams and deployment notes. Paid.",
+    "creator": {
+      "@type": "Person",
+      "name": "KIM3310",
+      "url": "https://github.com/KIM3310"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "public architecture index with free system diagrams and deployment notes",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://kim3310-doeon-kim-portfolio.pages.dev/"
+      },
+      {
+        "@type": "Offer",
+        "name": "paid implementation package, architecture adaptation package, or template bundle attached to selected systems",
+        "availability": "https://schema.org/LimitedAvailability",
+        "url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=KIM3310&inquiry=architecture-scope-sprint#private-inquiry"
+      }
+    ],
+    "isAccessibleForFree": true,
+    "keywords": "KIM3310, systems, catalog, routes, visitors, runnable, demos, architecture, packs, productized, templates, implementation, package, adaptation, template, bundle, attached, selected, index"
+  },
+  "commerce": {
+    "gateway_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=KIM3310#service-offers",
+    "lane_id": "architecture-scope-sprint",
+    "lane_name": "Architecture Scope Sprint",
+    "billing_mode": "one-time",
+    "price_unit": "fixed scope from USD 900",
+    "fulfillment_kind": "system context map, architecture diagram, risk register, delivery slices, and implementation estimate",
+    "risk_bucket": "standard",
+    "checkout": {
+      "provider": null,
+      "status": "not-configured",
+      "fallback_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=KIM3310&inquiry=architecture-scope-sprint#private-inquiry"
+    },
+    "sponsorship": {
+      "provider": "github-sponsors",
+      "eligible": false,
+      "status": "sponsors-listing-not-configured"
+    },
+    "advertising": {
+      "provider": "google-adsense",
+      "eligible": true,
+      "delivery_surface": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/KIM3310/",
+      "status": "central-resource-site-review-dependent"
+    }
+  },
+  "monetization_strategy": {
+    "primary_model": "free-public-resource-with-contextual-advertising",
+    "public_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/KIM3310/",
+    "advertising_provider": "google-adsense",
+    "advertising_status": "code-ready-site-review-dependent",
+    "aggregate_data_value": "anonymous aggregate portfolio lane interest and resource navigation counts",
+    "aggregate_insight_use": [
+      "publish privacy-safe benchmark summaries",
+      "prioritize useful public resources",
+      "improve search content from aggregate topic demand"
+    ],
+    "data_sale_boundary": "forbid sale of personal, sensitive, raw, event-level, or re-identifiable data",
+    "sensitive_flow_boundary": "ads allowed only on public portfolio index and resource pages; private inquiry, payment, and owner operations pages are ad-free"
+  }
+}

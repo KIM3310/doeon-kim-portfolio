@@ -1,0 +1,112 @@
+{
+  "name": "Weld Defect Vision",
+  "slug": "weld-defect-vision",
+  "canonical_url": "https://kim3310.github.io/weld-defect-vision/",
+  "repository_url": "https://github.com/KIM3310/weld-defect-vision",
+  "architecture_url": "https://github.com/KIM3310/weld-defect-vision/blob/main/docs/system-architecture.md",
+  "revenue_architecture_url": "https://github.com/KIM3310/weld-defect-vision/blob/main/docs/revenue-architecture.md",
+  "lead_capture_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=weld-defect-vision&inquiry=industrial-validation-discovery#private-inquiry",
+  "productized_offer": "synthetic-data weld-defect detection demo for industrial validation discovery, data suitability review, and human inspector acceptance criteria",
+  "first_paid_sku": "private industrial validation discovery for data suitability, baseline evaluation, model-card draft, and human-review acceptance criteria",
+  "free_lead_magnet": "free synthetic-data inspection demo and architecture page",
+  "search_positioning": {
+    "primary_query": "Weld Defect Vision industrial validation discovery",
+    "secondary_queries": [
+      "Weld Defect Vision demo",
+      "Weld Defect Vision system architecture",
+      "Weld Defect Vision synthetic inspection demo",
+      "weld defect data suitability validation discovery"
+    ],
+    "audience_intent": "Find a runnable synthetic demo, inspect the system architecture, and decide whether private validation discovery is useful."
+  },
+  "monetization_boundary": {
+    "free": "free synthetic-data inspection demo and architecture page",
+    "paid": "private industrial validation discovery for data suitability, baseline evaluation, model-card draft, and human-review acceptance criteria",
+    "metering_hooks": [
+      "workspace_id",
+      "plan",
+      "quota_day",
+      "export_count",
+      "lead_source"
+    ],
+    "cost_guardrails": [
+      "static first",
+      "edge functions",
+      "customer API keys",
+      "cached AI outputs",
+      "synthetic public data"
+    ]
+  },
+  "structured_data": {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Weld Defect Vision",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web, serverless, and local development environments",
+    "url": "https://kim3310.github.io/weld-defect-vision/",
+    "codeRepository": "https://github.com/KIM3310/weld-defect-vision",
+    "description": "Weld Defect Vision is a synthetic-data weld-defect detection demo for industrial validation discovery, data suitability review, and human inspector acceptance criteria.",
+    "creator": {
+      "@type": "Person",
+      "name": "KIM3310",
+      "url": "https://github.com/KIM3310"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "free synthetic-data inspection demo and architecture page",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://kim3310.github.io/weld-defect-vision/"
+      },
+      {
+        "@type": "Offer",
+        "name": "private industrial validation discovery",
+        "availability": "https://schema.org/LimitedAvailability",
+        "url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=weld-defect-vision&inquiry=industrial-validation-discovery#private-inquiry"
+      }
+    ],
+    "isAccessibleForFree": true,
+    "keywords": "weld-defect-vision, weld defect detection, synthetic data, industrial validation discovery, data suitability, model card, human inspector review, private inquiry"
+  },
+  "commerce": {
+    "gateway_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=weld-defect-vision#service-offers",
+    "lane_id": "industrial-validation-discovery",
+    "lane_name": "Industrial Validation Discovery",
+    "billing_mode": "quote",
+    "price_unit": "discovery scope from USD 2,500",
+    "fulfillment_kind": "data suitability review, baseline evaluation, model-card draft, human-review boundary, and pilot acceptance criteria",
+    "risk_bucket": "industrial-high-trust",
+    "checkout": {
+      "provider": null,
+      "status": "not-configured",
+      "fallback_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=weld-defect-vision&inquiry=industrial-validation-discovery#private-inquiry"
+    },
+    "sponsorship": {
+      "provider": "github-sponsors",
+      "eligible": false,
+      "status": "sponsors-listing-not-configured"
+    },
+    "advertising": {
+      "provider": "google-adsense",
+      "eligible": true,
+      "delivery_surface": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/weld-defect-vision/",
+      "status": "central-resource-site-review-dependent"
+    }
+  },
+  "monetization_strategy": {
+    "primary_model": "free-public-resource-with-contextual-advertising",
+    "public_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/weld-defect-vision/",
+    "advertising_provider": "google-adsense",
+    "advertising_status": "code-ready-site-review-dependent",
+    "aggregate_data_value": "anonymous aggregate industrial vision validation interest and worksheet usage counts",
+    "aggregate_insight_use": [
+      "publish privacy-safe benchmark summaries",
+      "prioritize useful public resources",
+      "improve search content from aggregate topic demand"
+    ],
+    "data_sale_boundary": "forbid sale of personal, sensitive, raw, event-level, or re-identifiable data",
+    "sensitive_flow_boundary": "ads allowed only on public validation resources; image uploads, inference results, defect records, and dashboards are ad-free"
+  }
+}

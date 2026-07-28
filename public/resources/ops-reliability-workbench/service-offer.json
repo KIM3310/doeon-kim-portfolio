@@ -1,0 +1,112 @@
+{
+  "name": "Operations Reliability and Data Governance Workbench",
+  "slug": "ops-reliability-workbench",
+  "canonical_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=ops-reliability-workbench#service-offers",
+  "repository_url": "https://github.com/KIM3310/ops-reliability-workbench",
+  "architecture_url": "https://github.com/KIM3310/ops-reliability-workbench/blob/main/docs/service-architecture.md",
+  "revenue_architecture_url": "https://github.com/KIM3310/ops-reliability-workbench/blob/main/docs/revenue-architecture.md",
+  "lead_capture_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=ops-reliability-workbench&inquiry=incident-operations-exercise#private-inquiry",
+  "productized_offer": "operations reliability desk that packages incident logs, data governance signals, signed bundles, and optional AI assist into a review loop",
+  "first_paid_sku": "paid private operations reliability workshop, workbench pilot, or signed evidence bundle implementation",
+  "free_lead_magnet": "credential-free synthetic demo with command center, incident review, release readiness, and signed bundle examples",
+  "commerce": {
+    "gateway_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=ops-reliability-workbench#service-offers",
+    "lane_id": "incident-operations-exercise",
+    "lane_name": "Incident Operations Exercise",
+    "billing_mode": "one-time",
+    "price_unit": "facilitated exercise from USD 1,800",
+    "fulfillment_kind": "scenario pack, incident replay board, role and handoff map, evidence checklist, and after-action report",
+    "risk_bucket": "security-high-trust",
+    "checkout": {
+      "provider": null,
+      "status": "not-configured",
+      "fallback_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=ops-reliability-workbench&inquiry=incident-operations-exercise#private-inquiry"
+    },
+    "sponsorship": {
+      "provider": "github-sponsors",
+      "eligible": false,
+      "status": "sponsors-listing-not-configured"
+    },
+    "advertising": {
+      "provider": "google-adsense",
+      "eligible": true,
+      "delivery_surface": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/ops-reliability-workbench/",
+      "status": "central-resource-site-review-dependent"
+    }
+  },
+  "search_positioning": {
+    "primary_query": "Operations Reliability Data Governance Workbench",
+    "secondary_queries": [
+      "ops reliability workbench signed bundle",
+      "incident review data governance workbench",
+      "operations reliability AI assist demo",
+      "data governance review loop implementation service"
+    ],
+    "audience_intent": "Review a synthetic operations reliability workbench and decide whether a private workshop or pilot can map the pattern to internal service data."
+  },
+  "monetization_boundary": {
+    "free": "credential-free synthetic demo with command center, incident review, release readiness, and signed bundle examples",
+    "paid": "paid private operations reliability workshop, workbench pilot, or signed evidence bundle implementation",
+    "metering_hooks": [
+      "workspace_id",
+      "plan",
+      "quota_day",
+      "export_count",
+      "lead_source"
+    ],
+    "cost_guardrails": [
+      "static first",
+      "synthetic public data",
+      "deterministic narrative fallback",
+      "customer API keys",
+      "privacy-safe telemetry"
+    ]
+  },
+  "structured_data": {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Operations Reliability and Data Governance Workbench",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web, serverless, and local development environments",
+    "url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=ops-reliability-workbench#service-offers",
+    "codeRepository": "https://github.com/KIM3310/ops-reliability-workbench",
+    "description": "Operations Reliability and Data Governance Workbench: operations reliability desk with incident logs, data governance signals, signed bundles, and optional AI assist. Free entry point: synthetic demo. Paid path: private workshop, pilot, or implementation.",
+    "creator": {
+      "@type": "Person",
+      "name": "KIM3310",
+      "url": "https://github.com/KIM3310"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "credential-free synthetic demo with command center, incident review, release readiness, and signed bundle examples",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://kim3310.github.io/ops-reliability-workbench/"
+      },
+      {
+        "@type": "Offer",
+        "name": "paid private operations reliability workshop, workbench pilot, or signed evidence bundle implementation",
+        "availability": "https://schema.org/LimitedAvailability",
+        "url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=ops-reliability-workbench&inquiry=incident-operations-exercise#private-inquiry"
+      }
+    ],
+    "isAccessibleForFree": true,
+    "keywords": "ops-reliability-workbench, operations reliability, data governance, incident review, signed bundle, release readiness, AI assist, workbench pilot"
+  },
+  "monetization_strategy": {
+    "primary_model": "free-public-resource-with-contextual-advertising",
+    "public_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/ops-reliability-workbench/",
+    "advertising_provider": "google-adsense",
+    "advertising_status": "code-ready-site-review-dependent",
+    "aggregate_data_value": "anonymous aggregate reliability exercise interest and planner-open counts",
+    "aggregate_insight_use": [
+      "publish privacy-safe benchmark summaries",
+      "prioritize useful public resources",
+      "improve search content from aggregate topic demand"
+    ],
+    "data_sale_boundary": "forbid sale of personal, sensitive, raw, event-level, or re-identifiable data",
+    "sensitive_flow_boundary": "ads allowed only on public reliability exercise pages; incidents, handoffs, reports, and dashboards are ad-free"
+  }
+}

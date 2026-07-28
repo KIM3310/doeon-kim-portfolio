@@ -1,0 +1,112 @@
+{
+  "name": "AI Agent Production Lab",
+  "slug": "ai-agent-production-lab",
+  "canonical_url": "https://kim3310.github.io/ai-agent-production-lab/",
+  "repository_url": "https://github.com/KIM3310/ai-agent-production-lab",
+  "architecture_url": "https://github.com/KIM3310/ai-agent-production-lab/blob/main/docs/system-architecture.md",
+  "revenue_architecture_url": "https://github.com/KIM3310/ai-agent-production-lab/blob/main/docs/revenue-architecture.md",
+  "lead_capture_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=ai-agent-production-lab&inquiry=agent-reliability-audit#private-inquiry",
+  "productized_offer": "agent reliability audit with guardrails, trace review, failure taxonomy, provider scorecard, and remediation plan",
+  "first_paid_sku": "Agent Reliability Audit fixed-scope private audit from USD 1,500",
+  "free_lead_magnet": "free production checklist and sample report",
+  "search_positioning": {
+    "primary_query": "AI Agent Production Lab production-readiness guardrails tracing",
+    "secondary_queries": [
+      "AI Agent Production Lab demo",
+      "AI Agent Production Lab system architecture",
+      "AI Agent Production Lab developer tool",
+      "Agent Reliability Audit service"
+    ],
+    "audience_intent": "Find a runnable demo, inspect the system architecture, and decide whether a private workspace or implementation package is useful."
+  },
+  "monetization_boundary": {
+    "free": "free production checklist and sample report",
+    "paid": "Agent Reliability Audit fixed-scope private audit from USD 1,500",
+    "metering_hooks": [
+      "workspace_id",
+      "plan",
+      "quota_day",
+      "export_count",
+      "lead_source"
+    ],
+    "cost_guardrails": [
+      "static first",
+      "edge functions",
+      "customer API keys",
+      "cached AI outputs",
+      "synthetic public data"
+    ]
+  },
+  "structured_data": {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "AI Agent Production Lab",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Web, serverless, and local development environments",
+    "url": "https://kim3310.github.io/ai-agent-production-lab/",
+    "codeRepository": "https://github.com/KIM3310/ai-agent-production-lab",
+    "description": "AI Agent Production Lab: synthetic public reliability demo for traces, eval assertions, and cost accounting. Paid path: Agent Reliability Audit private scenario and trace review.",
+    "creator": {
+      "@type": "Person",
+      "name": "KIM3310",
+      "url": "https://github.com/KIM3310"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "free production checklist and sample report",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://kim3310.github.io/ai-agent-production-lab/"
+      },
+      {
+        "@type": "Offer",
+        "name": "Agent Reliability Audit",
+        "availability": "https://schema.org/LimitedAvailability",
+        "url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=ai-agent-production-lab&inquiry=agent-reliability-audit#private-inquiry"
+      }
+    ],
+    "isAccessibleForFree": true,
+    "keywords": "ai-agent-production-lab, Agent, Production, Lab, production-readiness, lab, guardrails, tracing, deployment, checklist, artifacts, readiness, hardened, template, pack, hosted, scorecard, dashboard, production, sample, tier, Cloudflare, Pages"
+  },
+  "commerce": {
+    "gateway_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=ai-agent-production-lab#service-offers",
+    "lane_id": "agent-reliability-audit",
+    "lane_name": "Agent Reliability Audit",
+    "billing_mode": "one-time",
+    "price_unit": "fixed audit from USD 1,500",
+    "fulfillment_kind": "private scenario suite, trace review, failure taxonomy, provider scorecard, and prioritized remediation plan",
+    "risk_bucket": "standard-b2b",
+    "checkout": {
+      "provider": null,
+      "status": "not-configured",
+      "fallback_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=ai-agent-production-lab&inquiry=agent-reliability-audit#private-inquiry"
+    },
+    "sponsorship": {
+      "provider": "github-sponsors",
+      "eligible": false,
+      "status": "sponsors-listing-not-configured"
+    },
+    "advertising": {
+      "provider": "google-adsense",
+      "eligible": true,
+      "delivery_surface": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/ai-agent-production-lab/",
+      "status": "central-resource-site-review-dependent"
+    }
+  },
+  "monetization_strategy": {
+    "primary_model": "free-public-resource-with-contextual-advertising",
+    "public_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/ai-agent-production-lab/",
+    "advertising_provider": "google-adsense",
+    "advertising_status": "code-ready-site-review-dependent",
+    "aggregate_data_value": "anonymous aggregate production-agent readiness gaps and CTA counts",
+    "aggregate_insight_use": [
+      "publish privacy-safe benchmark summaries",
+      "prioritize useful public resources",
+      "improve search content from aggregate topic demand"
+    ],
+    "data_sale_boundary": "forbid sale of personal, sensitive, raw, event-level, or re-identifiable data",
+    "sensitive_flow_boundary": "ads allowed only on public launch-readiness pages; production-lab runs, logs, and dashboards are ad-free"
+  }
+}

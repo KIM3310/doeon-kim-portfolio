@@ -1,0 +1,119 @@
+{
+  "name": "NW Service Assurance Workbench",
+  "slug": "nw-service-assurance-workbench",
+  "canonical_url": "https://nw-service-assurance-workbench.ehdjs1351.workers.dev/",
+  "repository_url": "https://github.com/KIM3310/nw-service-assurance-workbench",
+  "architecture_url": "https://github.com/KIM3310/nw-service-assurance-workbench/blob/main/docs/system-architecture.md",
+  "revenue_architecture_url": "https://github.com/KIM3310/nw-service-assurance-workbench/blob/main/docs/revenue-architecture.md",
+  "lead_capture_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=nw-service-assurance-workbench&inquiry=incident-operations-exercise#private-inquiry",
+  "productized_offer": "deterministic React and Vite service assurance workbench for carrier incident triage, service paths, runbooks, and operator handoff",
+  "first_paid_sku": "facilitated Incident Operations Exercise with a scenario pack, role and handoff map, evidence checklist, and after-action report",
+  "free_lead_magnet": "deterministic synthetic carrier-incident demo",
+  "search_positioning": {
+    "primary_query": "network service assurance incident response workbench",
+    "secondary_queries": [
+      "carrier incident response simulation",
+      "NOC recovery runbook",
+      "5G service path SLA impact",
+      "incident operations exercise"
+    ],
+    "audience_intent": "Inspect a deterministic carrier-incident workflow and decide whether a facilitated incident operations exercise is useful."
+  },
+  "monetization_boundary": {
+    "free": "deterministic browser demo using synthetic carrier incident fixtures",
+    "paid": "fixed-scope Incident Operations Exercise; live telemetry and production integrations require separate approval",
+    "metering_hooks": [
+      "workspace_id",
+      "plan",
+      "quota_day",
+      "export_count",
+      "lead_source"
+    ],
+    "cost_guardrails": [
+      "static first",
+      "edge functions",
+      "customer API keys",
+      "cached AI outputs",
+      "synthetic public data"
+    ]
+  },
+  "structured_data": {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "NW Service Assurance Workbench",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web browser",
+    "url": "https://nw-service-assurance-workbench.ehdjs1351.workers.dev/",
+    "codeRepository": "https://github.com/KIM3310/nw-service-assurance-workbench",
+    "description": "NW Service Assurance Workbench is a deterministic React demo for 5G access, transport, core, and IDC incident triage, service paths, runbooks, and operator handoff.",
+    "featureList": [
+      "Synthetic carrier incident scenarios",
+      "Access, transport, core, and IDC health board",
+      "End-to-end service path and SLA impact",
+      "Prioritized alarm queue and recovery timeline",
+      "Owner-based runbooks and handoff notes"
+    ],
+    "creator": {
+      "@type": "Person",
+      "name": "KIM3310",
+      "url": "https://github.com/KIM3310"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Interactive synthetic incident demo",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://nw-service-assurance-workbench.ehdjs1351.workers.dev/"
+      },
+      {
+        "@type": "Offer",
+        "name": "Incident Operations Exercise",
+        "availability": "https://schema.org/LimitedAvailability",
+        "url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=nw-service-assurance-workbench&inquiry=incident-operations-exercise#private-inquiry"
+      }
+    ],
+    "isAccessibleForFree": true,
+    "keywords": "network service assurance, carrier incident response, NOC runbook, SLA impact, 5G service path, transport network incident, IDC operations"
+  },
+  "commerce": {
+    "gateway_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=nw-service-assurance-workbench#service-offers",
+    "lane_id": "incident-operations-exercise",
+    "lane_name": "Incident Operations Exercise",
+    "billing_mode": "one-time",
+    "price_unit": "facilitated exercise from USD 1,800",
+    "fulfillment_kind": "scenario pack, incident replay board, role and handoff map, evidence checklist, and after-action report",
+    "risk_bucket": "security-high-trust",
+    "checkout": {
+      "provider": null,
+      "status": "not-configured",
+      "fallback_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=nw-service-assurance-workbench&inquiry=incident-operations-exercise#private-inquiry"
+    },
+    "sponsorship": {
+      "provider": "github-sponsors",
+      "eligible": false,
+      "status": "sponsors-listing-not-configured"
+    },
+    "advertising": {
+      "provider": "google-adsense",
+      "eligible": true,
+      "delivery_surface": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/nw-service-assurance-workbench/",
+      "status": "central-resource-site-review-dependent"
+    }
+  },
+  "monetization_strategy": {
+    "primary_model": "free-public-resource-with-contextual-advertising",
+    "public_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/nw-service-assurance-workbench/",
+    "advertising_provider": "google-adsense",
+    "advertising_status": "code-ready-site-review-dependent",
+    "aggregate_data_value": "anonymous aggregate service-assurance topic interest and checklist usage counts",
+    "aggregate_insight_use": [
+      "publish privacy-safe benchmark summaries",
+      "prioritize useful public resources",
+      "improve search content from aggregate topic demand"
+    ],
+    "data_sale_boundary": "forbid sale of personal, sensitive, raw, event-level, or re-identifiable data",
+    "sensitive_flow_boundary": "ads allowed only on public assurance resources; service maps, incident notes, SLA exports, and dashboards are ad-free"
+  }
+}

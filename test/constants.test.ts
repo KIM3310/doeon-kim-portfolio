@@ -12,9 +12,9 @@ describe('PROFILE', () => {
     expect(PROFILE.intro).toBeTruthy();
   });
 
-  it('states the current service and verification boundary', () => {
+  it('states the current utility and verification boundary', () => {
     expect(PROFILE.title).toContain('Operational AI');
-    expect(PROFILE.intro).toContain('Fixed-scope');
+    expect(PROFILE.intro).toContain('Free public utilities');
     expect(PROFILE.intro).toContain('tests');
     expect(PROFILE.intro).toContain('human-control boundaries');
   });

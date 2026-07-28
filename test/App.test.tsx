@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { fireEvent, render, screen } from '@testing-library/react';
+import { fireEvent, render, screen, within } from '@testing-library/react';
 import { vi } from 'vitest';
 import App from '../App';
 import { resolveProjectScrollTargetId } from '../components/Projects';
@@ -128,13 +128,25 @@ describe('App component', () => {
     storageWrite.mockRestore();
   });
 
-  it('highlights the commercial lane for an offer query parameter', () => {
+  it('highlights the resource lane for an offer query parameter', () => {
     window.history.pushState(null, '', '/?offer=stage-pilot#service-offers');
 
     render(<App />);
 
-    expect(screen.getByText(/Offer route:/)).toBeInTheDocument();
-    expect(screen.getAllByText('Agent Reliability Audit').length).toBeGreaterThan(0);
+    expect(screen.getByText(/Resource route:/)).toBeInTheDocument();
+    expect(screen.getAllByText('Agent Benchmark Lab').length).toBeGreaterThan(0);
+  });
+
+  it('keeps the inquiry form out of the main resource-lab section', () => {
+    render(<App />);
+
+    const resourceSection = document.getElementById('service-offers');
+    const footer = document.getElementById('contact');
+
+    expect(resourceSection).toBeInTheDocument();
+    expect(footer).toBeInTheDocument();
+    expect(within(resourceSection as HTMLElement).queryByRole('heading', { name: 'Contact about a resource or collaboration' })).not.toBeInTheDocument();
+    expect(within(footer as HTMLElement).getByRole('heading', { name: 'Contact about a resource or collaboration' })).toBeInTheDocument();
   });
 
   it('keeps private inquiry deep links focused on the form', () => {

@@ -3,6 +3,9 @@
   "name": "kim3310-doeon-kim-portfolio",
   "compatibility_date": "2026-07-28",
   "pages_build_output_dir": "./dist",
+  "vars": {
+    "FIREBASE_PROJECT_ID": "kim3310-free-tools"
+  },
   "d1_databases": [
     {
       "binding": "LEADS_DB",

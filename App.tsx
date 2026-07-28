@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
+import InquiryForm from './components/InquiryForm';
 import { PROFILE } from './constants';
 import { ANALYTICS_CONSENT_STORAGE_KEY, updateAnalyticsConsent } from './analytics';
 import type { AnalyticsConsent } from './analytics';
@@ -91,6 +92,7 @@ const App: React.FC = () => (
           <a href={PROFILE.contactUrl}><MessageSquare size={18} /> Private inquiry</a>
         </div>
       </div>
+      <InquiryForm />
     </footer>
   </div>
 );

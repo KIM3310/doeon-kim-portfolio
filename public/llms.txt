@@ -1,13 +1,16 @@
 # KIM3310 Systems Gallery
 
-Purpose: product storefront for architecture packs, demos, and implementation-ready systems
-Free entry point: free systems gallery with live demos and architecture links
-Paid boundary: paid architecture pack bundle, implementation sprint, or private adaptation of a repo
+Purpose: free resource atlas for architecture checks, runnable demos, benchmark notes, and implementation-ready systems
+Free entry point: 35 repository resource pages with live demos, architecture links, and browser-local readiness checks
+Revenue boundary: contextual ads only on policy-eligible public resource pages; sensitive workflows remain ad-free
+Aggregate data boundary: consented four-field event counters only; no personal, sensitive, raw, event-level, or re-identifiable data sale
 Canonical URL: https://kim3310-doeon-kim-portfolio.pages.dev/
 Repository: https://github.com/KIM3310/doeon-kim-portfolio
 System architecture: https://github.com/KIM3310/doeon-kim-portfolio/blob/main/docs/system-architecture.md
 Revenue architecture: https://github.com/KIM3310/doeon-kim-portfolio/blob/main/docs/revenue-architecture.md
+Resource sitemap: https://kim3310-doeon-kim-portfolio.pages.dev/resources/ad-data-sitemap.xml
+Advertising and aggregate data policy: https://kim3310-doeon-kim-portfolio.pages.dev/privacy-support/ad-data.html
 Lead capture: https://kim3310-doeon-kim-portfolio.pages.dev/?offer=doeon-kim-portfolio&inquiry=architecture-scope-sprint#private-inquiry
-Commercial route: https://kim3310-doeon-kim-portfolio.pages.dev/?offer=doeon-kim-portfolio#service-offers
+Resource route: https://kim3310-doeon-kim-portfolio.pages.dev/resources/doeon-kim-portfolio/
 
-Use this project as a runnable or inspectable reference for KIM3310 Systems Gallery demo, KIM3310 Systems Gallery system architecture, KIM3310 Systems Gallery developer tool, product storefront for architecture packs, demos, and implementation-ready systems service.
+Use this project as a runnable or inspectable reference for operational AI, agent reliability, incident operations, secure workflows, data contracts, industrial validation, and local-first utilities.

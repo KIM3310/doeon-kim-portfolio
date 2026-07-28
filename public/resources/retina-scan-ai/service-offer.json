@@ -1,0 +1,112 @@
+{
+  "name": "Retina Scan AI",
+  "slug": "retina-scan-ai",
+  "canonical_url": "https://kim3310.github.io/retina-scan-ai/",
+  "repository_url": "https://github.com/KIM3310/retina-scan-ai",
+  "architecture_url": "https://github.com/KIM3310/retina-scan-ai/blob/main/docs/system-architecture.md",
+  "revenue_architecture_url": "https://github.com/KIM3310/retina-scan-ai/blob/main/docs/revenue-architecture.md",
+  "lead_capture_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=retina-scan-ai&inquiry=industrial-validation-discovery#private-inquiry",
+  "productized_offer": "non-clinical synthetic-data retinal classification demo for industrial validation discovery, Grad-CAM review, and model-card scoping",
+  "first_paid_sku": "private industrial validation discovery for data suitability, baseline evaluation, model-card draft, and human-review acceptance criteria",
+  "free_lead_magnet": "free synthetic-data research demo with non-diagnostic framing",
+  "search_positioning": {
+    "primary_query": "Retina Scan AI industrial validation discovery",
+    "secondary_queries": [
+      "Retina Scan AI demo",
+      "Retina Scan AI system architecture",
+      "Retina Scan AI non-clinical demo",
+      "synthetic retinal classification validation discovery"
+    ],
+    "audience_intent": "Find a runnable synthetic demo, inspect the system architecture, and decide whether private validation discovery is useful."
+  },
+  "monetization_boundary": {
+    "free": "free synthetic-data research demo with non-diagnostic framing",
+    "paid": "private industrial validation discovery for data suitability, baseline evaluation, model-card draft, and human-review acceptance criteria",
+    "metering_hooks": [
+      "workspace_id",
+      "plan",
+      "quota_day",
+      "export_count",
+      "lead_source"
+    ],
+    "cost_guardrails": [
+      "static first",
+      "edge functions",
+      "customer API keys",
+      "cached AI outputs",
+      "synthetic public data"
+    ]
+  },
+  "structured_data": {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Retina Scan AI",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "Web, serverless, and local development environments",
+    "url": "https://kim3310.github.io/retina-scan-ai/",
+    "codeRepository": "https://github.com/KIM3310/retina-scan-ai",
+    "description": "Retina Scan AI is a non-clinical, synthetic-data retinal classification demo for industrial validation discovery, Grad-CAM review, and model-card scoping.",
+    "creator": {
+      "@type": "Person",
+      "name": "KIM3310",
+      "url": "https://github.com/KIM3310"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "free synthetic-data research demo with non-diagnostic framing",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://kim3310.github.io/retina-scan-ai/"
+      },
+      {
+        "@type": "Offer",
+        "name": "private industrial validation discovery",
+        "availability": "https://schema.org/LimitedAvailability",
+        "url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=retina-scan-ai&inquiry=industrial-validation-discovery#private-inquiry"
+      }
+    ],
+    "isAccessibleForFree": true,
+    "keywords": "retina-scan-ai, retinal classification, synthetic data, industrial validation discovery, non-clinical demo, Grad-CAM, model card, human review, private inquiry"
+  },
+  "commerce": {
+    "gateway_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=retina-scan-ai#service-offers",
+    "lane_id": "industrial-validation-discovery",
+    "lane_name": "Industrial Validation Discovery",
+    "billing_mode": "quote",
+    "price_unit": "discovery scope from USD 2,500",
+    "fulfillment_kind": "data suitability review, baseline evaluation, model-card draft, human-review boundary, and pilot acceptance criteria",
+    "risk_bucket": "industrial-high-trust",
+    "checkout": {
+      "provider": null,
+      "status": "not-configured",
+      "fallback_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=retina-scan-ai&inquiry=industrial-validation-discovery#private-inquiry"
+    },
+    "sponsorship": {
+      "provider": "github-sponsors",
+      "eligible": false,
+      "status": "sponsors-listing-not-configured"
+    },
+    "advertising": {
+      "provider": "google-adsense",
+      "eligible": true,
+      "delivery_surface": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/retina-scan-ai/",
+      "status": "central-resource-site-review-dependent"
+    }
+  },
+  "monetization_strategy": {
+    "primary_model": "free-public-resource-with-contextual-advertising",
+    "public_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/retina-scan-ai/",
+    "advertising_provider": "google-adsense",
+    "advertising_status": "code-ready-site-review-dependent",
+    "aggregate_data_value": "anonymous aggregate model-card topic interest and validation-template usage counts",
+    "aggregate_insight_use": [
+      "publish privacy-safe benchmark summaries",
+      "prioritize useful public resources",
+      "improve search content from aggregate topic demand"
+    ],
+    "data_sale_boundary": "forbid sale of personal, sensitive, raw, event-level, or re-identifiable data",
+    "sensitive_flow_boundary": "ads allowed only on public model-card education pages; uploads, scans, diagnostic outputs, and result dashboards are ad-free"
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "name": "DocFlow Agent",
+  "slug": "Upstage-DocuAgent",
+  "canonical_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=Upstage-DocuAgent#service-offers",
+  "repository_url": "https://github.com/KIM3310/Upstage-DocuAgent",
+  "architecture_url": "https://github.com/KIM3310/Upstage-DocuAgent/blob/main/docs/service-architecture.md",
+  "revenue_architecture_url": "https://github.com/KIM3310/Upstage-DocuAgent/blob/main/docs/REVENUE_READINESS.md",
+  "lead_capture_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=Upstage-DocuAgent&inquiry=secure-workflow-pilot#private-inquiry",
+  "productized_offer": "document-to-learning pipeline that turns uploaded files into grounded extraction, Q&A, and LMS-ready exports",
+  "first_paid_sku": "paid private evaluation or implementation sprint for document ingestion, grounded Q&A, and LMS export workflow setup",
+  "free_lead_magnet": "credential-free demo mode, health endpoints, runtime scorecards, schemas, and architecture notes",
+  "commerce": {
+    "gateway_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=Upstage-DocuAgent#service-offers",
+    "lane_id": "secure-workflow-pilot",
+    "lane_name": "Secure Workflow Pilot",
+    "billing_mode": "quote",
+    "price_unit": "pilot scope from USD 2,000",
+    "fulfillment_kind": "one bounded workflow, private processing boundary, approval gate, audit trail, and deployment runbook",
+    "risk_bucket": "privacy-high-trust",
+    "checkout": {
+      "provider": null,
+      "status": "not-configured",
+      "fallback_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=Upstage-DocuAgent&inquiry=secure-workflow-pilot#private-inquiry"
+    },
+    "sponsorship": {
+      "provider": "github-sponsors",
+      "eligible": false,
+      "status": "sponsors-listing-not-configured"
+    },
+    "advertising": {
+      "provider": "google-adsense",
+      "eligible": true,
+      "delivery_surface": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/Upstage-DocuAgent/",
+      "status": "central-resource-site-review-dependent"
+    }
+  },
+  "search_positioning": {
+    "primary_query": "DocFlow Agent document to LMS export workflow",
+    "secondary_queries": [
+      "DocFlow Agent demo",
+      "DocFlow Agent service architecture",
+      "document to learning pipeline with grounded Q&A",
+      "LMS export workflow implementation service"
+    ],
+    "audience_intent": "Inspect a private-ready document ingestion and LMS export proof, then decide whether a gated pilot or implementation package is useful."
+  },
+  "monetization_boundary": {
+    "free": "credential-free demo mode, health endpoints, runtime scorecards, schemas, and architecture notes",
+    "paid": "paid private evaluation or implementation sprint for document ingestion, grounded Q&A, and LMS export workflow setup",
+    "metering_hooks": [
+      "workspace_id",
+      "plan",
+      "quota_day",
+      "export_count",
+      "lead_source"
+    ],
+    "cost_guardrails": [
+      "static first",
+      "demo-safe verification",
+      "customer API keys",
+      "local provider fallback",
+      "privacy-safe telemetry"
+    ]
+  },
+  "structured_data": {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "DocFlow Agent",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "Web, serverless, and local development environments",
+    "url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=Upstage-DocuAgent#service-offers",
+    "codeRepository": "https://github.com/KIM3310/Upstage-DocuAgent",
+    "description": "DocFlow Agent: document-to-learning pipeline that turns uploaded files into grounded extraction, Q&A, and LMS-ready exports. Free entry point: credential-free demo mode and architecture notes. Paid path: private evaluation or implementation sprint.",
+    "creator": {
+      "@type": "Person",
+      "name": "KIM3310",
+      "url": "https://github.com/KIM3310"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "credential-free demo mode, health endpoints, runtime scorecards, schemas, and architecture notes",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=Upstage-DocuAgent#service-offers"
+      },
+      {
+        "@type": "Offer",
+        "name": "paid private evaluation or implementation sprint for document ingestion, grounded Q&A, and LMS export workflow setup",
+        "availability": "https://schema.org/LimitedAvailability",
+        "url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=Upstage-DocuAgent&inquiry=secure-workflow-pilot#private-inquiry"
+      }
+    ],
+    "isAccessibleForFree": true,
+    "keywords": "Upstage-DocuAgent, DocFlow Agent, document ingestion, grounded Q&A, LMS export, SCORM, IMS CC, learning content, implementation sprint, private pilot"
+  },
+  "monetization_strategy": {
+    "primary_model": "free-public-resource-with-contextual-advertising",
+    "public_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/Upstage-DocuAgent/",
+    "advertising_provider": "google-adsense",
+    "advertising_status": "code-ready-site-review-dependent",
+    "aggregate_data_value": "anonymous aggregate document-workflow control interest and checklist usage counts",
+    "aggregate_insight_use": [
+      "publish privacy-safe benchmark summaries",
+      "prioritize useful public resources",
+      "improve search content from aggregate topic demand"
+    ],
+    "data_sale_boundary": "forbid sale of personal, sensitive, raw, event-level, or re-identifiable data",
+    "sensitive_flow_boundary": "ads allowed only on public workflow-boundary explainers; document upload, extraction, approval, and result flows are ad-free"
+  }
+}

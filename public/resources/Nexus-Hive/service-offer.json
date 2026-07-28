@@ -1,0 +1,112 @@
+{
+  "name": "Nexus Hive",
+  "slug": "Nexus-Hive",
+  "canonical_url": "https://nexus-hive.pages.dev/",
+  "repository_url": "https://github.com/KIM3310/Nexus-Hive",
+  "architecture_url": "https://github.com/KIM3310/Nexus-Hive/blob/main/docs/system-architecture.md",
+  "revenue_architecture_url": "https://github.com/KIM3310/Nexus-Hive/blob/main/docs/revenue-architecture.md",
+  "lead_capture_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=Nexus-Hive&inquiry=private-ai-readiness-sprint#private-inquiry",
+  "productized_offer": "governed query gateway with policy checks, semantic metadata, audit logs, and warehouse adapter contracts",
+  "first_paid_sku": "quoted private AI readiness sprint for governed analytics connectors and audit export scoping",
+  "free_lead_magnet": "public governed analytics demo over synthetic sales data",
+  "search_positioning": {
+    "primary_query": "Nexus Hive governed query gateway",
+    "secondary_queries": [
+      "Nexus Hive demo",
+      "Nexus Hive system architecture",
+      "Nexus Hive business tool",
+      "governed query gateway with policy checks, semantic metadata, audit logs, and warehouse adapter contracts service"
+    ],
+    "audience_intent": "Find a runnable demo, inspect the system architecture, and decide whether a private workspace or implementation package is useful."
+  },
+  "monetization_boundary": {
+    "free": "public governed analytics demo over synthetic sales data",
+    "paid": "quoted private AI readiness sprint for governed analytics connectors and audit export scoping",
+    "metering_hooks": [
+      "workspace_id",
+      "plan",
+      "quota_day",
+      "export_count",
+      "lead_source"
+    ],
+    "cost_guardrails": [
+      "static first",
+      "edge functions",
+      "customer API keys",
+      "cached AI outputs",
+      "synthetic public data"
+    ]
+  },
+  "structured_data": {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Nexus Hive",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web, serverless, and local development environments",
+    "url": "https://nexus-hive.pages.dev/",
+    "codeRepository": "https://github.com/KIM3310/Nexus-Hive",
+    "description": "Nexus Hive is a public synthetic governed analytics demo. Paid work is a quoted private AI readiness sprint for connector, policy, audit-export, and deployment scoping; no self-serve checkout is configured.",
+    "creator": {
+      "@type": "Person",
+      "name": "KIM3310",
+      "url": "https://github.com/KIM3310"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "public governed analytics demo over synthetic sales data",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://nexus-hive.pages.dev/"
+      },
+      {
+        "@type": "Offer",
+        "name": "quoted private AI readiness sprint for governed analytics connectors and audit export scoping",
+        "availability": "https://schema.org/LimitedAvailability",
+        "url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=Nexus-Hive&inquiry=private-ai-readiness-sprint#private-inquiry"
+      }
+    ],
+    "isAccessibleForFree": true,
+    "keywords": "Nexus-Hive, Nexus, Hive, governed, query, gateway, policy, checks, semantic, metadata, audit, logs, warehouse, adapter, contracts, private AI readiness sprint, connector scoping, audit export"
+  },
+  "commerce": {
+    "gateway_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=Nexus-Hive#service-offers",
+    "lane_id": "private-ai-readiness-sprint",
+    "lane_name": "Private AI Readiness Sprint",
+    "billing_mode": "quote",
+    "price_unit": "typical discovery scope from USD 2,500",
+    "fulfillment_kind": "use-case scorecard, data and policy boundaries, evaluation plan, deployment options, and go or no-go roadmap",
+    "risk_bucket": "high-trust-b2b",
+    "checkout": {
+      "provider": null,
+      "status": "not-configured",
+      "fallback_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=Nexus-Hive&inquiry=private-ai-readiness-sprint#private-inquiry"
+    },
+    "sponsorship": {
+      "provider": "github-sponsors",
+      "eligible": false,
+      "status": "sponsors-listing-not-configured"
+    },
+    "advertising": {
+      "provider": "google-adsense",
+      "eligible": true,
+      "delivery_surface": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/Nexus-Hive/",
+      "status": "central-resource-site-review-dependent"
+    }
+  },
+  "monetization_strategy": {
+    "primary_model": "free-public-resource-with-contextual-advertising",
+    "public_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/Nexus-Hive/",
+    "advertising_provider": "google-adsense",
+    "advertising_status": "code-ready-site-review-dependent",
+    "aggregate_data_value": "anonymous aggregate analytics governance topics and adapter-interest counts",
+    "aggregate_insight_use": [
+      "publish privacy-safe benchmark summaries",
+      "prioritize useful public resources",
+      "improve search content from aggregate topic demand"
+    ],
+    "data_sale_boundary": "forbid sale of personal, sensitive, raw, event-level, or re-identifiable data",
+    "sensitive_flow_boundary": "ads allowed only on public analytics-readiness resources; query workbench, saved SQL, exports, and dashboards are ad-free"
+  }
+}

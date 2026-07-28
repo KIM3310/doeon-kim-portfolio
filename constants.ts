@@ -2,13 +2,13 @@ import { Project, SkillCategory, Profile, WorkExperience, EducationItem, Certifi
 
 export const PROFILE: Profile = {
   name: 'KIM3310 Systems',
-  title: 'Operational AI, agent reliability, and secure workflow services backed by runnable systems',
+  title: 'Operational AI, agent reliability, and secure workflow utilities backed by runnable systems',
   contactUrl:
     'https://kim3310-doeon-kim-portfolio.pages.dev/?offer=doeon-kim-portfolio&inquiry=architecture-scope-sprint#private-inquiry',
   github: 'https://github.com/KIM3310',
   linkedin: 'https://www.linkedin.com/in/doeon-kim-4742a2388',
   intro:
-    'Fixed-scope audits, readiness sprints, and workflow pilots for teams that need stronger operating evidence before they commit to AI infrastructure or automation. Each offer is grounded in inspectable architecture, tests, and explicit human-control boundaries.',
+    'Free public utilities, benchmark labs, and architecture resources for teams that need stronger operating evidence before they commit to AI infrastructure or automation. The portfolio preserves technical credibility through inspectable systems, tests, and explicit human-control boundaries.',
 };
 
 export const PORTFOLIO_STATS = [

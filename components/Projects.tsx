@@ -115,9 +115,9 @@ const Projects: React.FC = () => {
     <section id="projects" className="section-shell">
       <div className="section-inner">
         <div className="section-heading">
-          <p className="eyebrow">Services</p>
-          <h2>Buy a bounded technical outcome</h2>
-          <p>Start with a fixed audit, sprint, exercise, discovery, or pilot. Repository evidence supports the offer; it is not the offer itself.</p>
+          <p className="eyebrow">Utilities</p>
+          <h2>Free resource labs with aggregate benchmark evidence</h2>
+          <p>Start with public utilities, synthetic demos, benchmark notes, and architecture routes. The portfolio proves technical depth and operating credibility through runnable systems instead of a checkout catalog.</p>
         </div>
 
         <ServiceOffers offerRepo={offerRepo} highlightedLane={highlightedLane} />
@@ -233,7 +233,7 @@ const Projects: React.FC = () => {
                   <div className="project-business-item">
                     <FileText size={15} aria-hidden="true" />
                     <span>System doc</span>
-                    <strong>{architectureUrl ? 'docs/system-architecture.md' : 'Architecture route listed in the service matrix'}</strong>
+                    <strong>{architectureUrl ? 'docs/system-architecture.md' : 'Architecture route listed in the resource matrix'}</strong>
                   </div>
                 </div>
               </details>

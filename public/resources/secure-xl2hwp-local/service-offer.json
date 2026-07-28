@@ -1,0 +1,139 @@
+{
+  "name": "Secure XL2HWP Local",
+  "slug": "secure-xl2hwp-local",
+  "canonical_url": "https://secure-xl2hwp-local.pages.dev/",
+  "repository_url": "https://github.com/KIM3310/secure-xl2hwp-local",
+  "architecture_url": "https://github.com/KIM3310/secure-xl2hwp-local/blob/main/docs/system-architecture.md",
+  "revenue_architecture_url": "https://github.com/KIM3310/secure-xl2hwp-local/blob/main/docs/revenue-architecture.md",
+  "lead_capture_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=secure-xl2hwp-local&inquiry=secure-workflow-pilot#private-inquiry",
+  "productized_offer": "local-only spreadsheet cleanup and Hancom handoff workflow with signed audit/export evidence",
+  "first_paid_sku": "fixed-scope customer-owned pilot for one approved Excel-to-Hancom workflow",
+  "free_lead_magnet": "public architecture page that explains trust boundary and handoff path",
+  "search_positioning": {
+    "primary_query": "Secure XL2HWP Local local-only spreadsheet cleanup",
+    "secondary_queries": [
+      "Secure XL2HWP Local demo",
+      "Secure XL2HWP Local system architecture",
+      "Secure XL2HWP Local business tool",
+      "local-only spreadsheet cleanup and Hancom handoff workflow with signed audit/export evidence service"
+    ],
+    "audience_intent": "Inspect the local trust boundary and decide whether one customer-owned secure workflow pilot is worth scoping."
+  },
+  "monetization_boundary": {
+    "free": "public architecture page that explains trust boundary and handoff path",
+    "paid": "customer-owned secure workflow pilot with template adaptation, deployment gates, signed handoff verification, and operator runbook",
+    "metering_hooks": [
+      "workspace_id",
+      "plan",
+      "quota_day",
+      "export_count",
+      "lead_source"
+    ],
+    "cost_guardrails": [
+      "static first",
+      "edge functions",
+      "customer API keys",
+      "cached AI outputs",
+      "synthetic public data"
+    ]
+  },
+  "structured_data": {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Secure XL2HWP Local",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web, serverless, and local development environments",
+    "url": "https://secure-xl2hwp-local.pages.dev/",
+    "codeRepository": "https://github.com/KIM3310/secure-xl2hwp-local",
+    "description": "Secure XL2HWP Local is a pilot-ready, customer-owned Excel-to-Hancom workflow with explicit single-process, secret-management, audit-storage, and shared-access boundaries.",
+    "creator": {
+      "@type": "Person",
+      "name": "KIM3310",
+      "url": "https://github.com/KIM3310"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "public architecture page that explains trust boundary and handoff path",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://secure-xl2hwp-local.pages.dev/"
+      },
+      {
+        "@type": "Offer",
+        "name": "fixed-scope customer-owned secure workflow pilot",
+        "availability": "https://schema.org/LimitedAvailability",
+        "url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=secure-xl2hwp-local&inquiry=secure-workflow-pilot#private-inquiry"
+      }
+    ],
+    "isAccessibleForFree": true,
+    "keywords": "secure-xl2hwp-local, Secure, XL2HWP, Local, local-only, spreadsheet, cleanup, Hancom, handoff, workflow, signed, audit, export, evidence, local, license, deployment, package, template, adaptation, support, architecture, page, explains"
+  },
+  "delivery_boundary": {
+    "runtime_owner": "customer",
+    "supported_topology": "single-process",
+    "shared_access_requires": "upstream rate limiting and customer identity controls",
+    "state": "customer-persistent filesystem; no vendor-hosted document storage"
+  },
+  "pilot_deliverables": [
+    "one approved Excel-to-Hancom workflow and template mapping",
+    "customer-owned single-process installation profile",
+    "secret generation and rotation checklist",
+    "upstream rate-limit and persistent audit-storage acceptance checks",
+    "signed export verification evidence and operator runbook",
+    "pilot acceptance report with production gap list"
+  ],
+  "acceptance_gates": [
+    "synthetic-data walkthrough passes before approved customer files are used",
+    "customer creates and retains all runtime and signing secrets",
+    "shared access stays closed until upstream throttling and identity controls are verified",
+    "audit and output directories use customer-approved persistent storage and retention",
+    "template ownership, backup, rollback, and support owners are named"
+  ],
+  "production_exclusions": [
+    "no multi-worker or horizontally scaled application runtime",
+    "no bundled SSO, OIDC, WAF, or shared rate-limit backend",
+    "no vendor-hosted document or audit-log storage",
+    "no production SLA, compliance certification, or unattended rollout"
+  ],
+  "commerce": {
+    "gateway_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=secure-xl2hwp-local#service-offers",
+    "lane_id": "secure-workflow-pilot",
+    "lane_name": "Secure Workflow Pilot",
+    "billing_mode": "quote",
+    "price_unit": "pilot scope from USD 2,000",
+    "fulfillment_kind": "one bounded workflow, private processing boundary, approval gate, audit trail, and deployment runbook",
+    "risk_bucket": "privacy-high-trust",
+    "checkout": {
+      "provider": null,
+      "status": "not-configured",
+      "fallback_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=secure-xl2hwp-local&inquiry=secure-workflow-pilot#private-inquiry"
+    },
+    "sponsorship": {
+      "provider": "github-sponsors",
+      "eligible": false,
+      "status": "sponsors-listing-not-configured"
+    },
+    "advertising": {
+      "provider": "google-adsense",
+      "eligible": true,
+      "delivery_surface": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/secure-xl2hwp-local/",
+      "status": "central-resource-site-review-dependent"
+    }
+  },
+  "monetization_strategy": {
+    "primary_model": "free-public-resource-with-contextual-advertising",
+    "public_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/secure-xl2hwp-local/",
+    "advertising_provider": "google-adsense",
+    "advertising_status": "code-ready-site-review-dependent",
+    "aggregate_data_value": "anonymous aggregate local-document automation interest and checklist usage counts",
+    "aggregate_insight_use": [
+      "publish privacy-safe benchmark summaries",
+      "prioritize useful public resources",
+      "improve search content from aggregate topic demand"
+    ],
+    "data_sale_boundary": "forbid sale of personal, sensitive, raw, event-level, or re-identifiable data",
+    "sensitive_flow_boundary": "ads allowed only on public local-first security resources; file conversion, signatures, results, and audit logs are ad-free"
+  }
+}

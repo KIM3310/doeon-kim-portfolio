@@ -1,0 +1,112 @@
+{
+  "name": "Lakehouse Contract Lab",
+  "slug": "lakehouse-contract-lab",
+  "canonical_url": "https://kim3310.github.io/lakehouse-contract-lab/",
+  "repository_url": "https://github.com/KIM3310/lakehouse-contract-lab",
+  "architecture_url": "https://github.com/KIM3310/lakehouse-contract-lab/blob/main/docs/system-architecture.md",
+  "revenue_architecture_url": "https://github.com/KIM3310/lakehouse-contract-lab/blob/main/docs/revenue-architecture.md",
+  "lead_capture_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=lakehouse-contract-lab&inquiry=private-ai-readiness-sprint#private-inquiry",
+  "productized_offer": "lakehouse contract compiler, quality gate, artifact builder, and export adapter lab",
+  "first_paid_sku": "quoted private AI readiness sprint for lakehouse contract migration and quality reporting scope",
+  "free_lead_magnet": "free synthetic pipeline and contract examples",
+  "search_positioning": {
+    "primary_query": "Lakehouse Contract Lab compiler quality gate",
+    "secondary_queries": [
+      "Lakehouse Contract Lab demo",
+      "Lakehouse Contract Lab system architecture",
+      "Lakehouse Contract Lab developer tool",
+      "lakehouse contract compiler, quality gate, artifact builder, and export adapter lab service"
+    ],
+    "audience_intent": "Find a runnable demo, inspect the system architecture, and decide whether a private workspace or implementation package is useful."
+  },
+  "monetization_boundary": {
+    "free": "free synthetic pipeline and contract examples",
+    "paid": "quoted private AI readiness sprint for lakehouse contract migration and quality reporting scope",
+    "metering_hooks": [
+      "workspace_id",
+      "plan",
+      "quota_day",
+      "export_count",
+      "lead_source"
+    ],
+    "cost_guardrails": [
+      "static first",
+      "edge functions",
+      "customer API keys",
+      "cached AI outputs",
+      "synthetic public data"
+    ]
+  },
+  "structured_data": {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Lakehouse Contract Lab",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Web, serverless, and local development environments",
+    "url": "https://kim3310.github.io/lakehouse-contract-lab/",
+    "codeRepository": "https://github.com/KIM3310/lakehouse-contract-lab",
+    "description": "Lakehouse Contract Lab is a public synthetic data-contract pipeline demo. Paid work is a quoted private AI readiness sprint for migration, quality-reporting, connector, and deployment scoping; no self-serve checkout is configured.",
+    "creator": {
+      "@type": "Person",
+      "name": "KIM3310",
+      "url": "https://github.com/KIM3310"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "free synthetic pipeline and contract examples",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://kim3310.github.io/lakehouse-contract-lab/"
+      },
+      {
+        "@type": "Offer",
+        "name": "quoted private AI readiness sprint for lakehouse contract migration and quality reporting scope",
+        "availability": "https://schema.org/LimitedAvailability",
+        "url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=lakehouse-contract-lab&inquiry=private-ai-readiness-sprint#private-inquiry"
+      }
+    ],
+    "isAccessibleForFree": true,
+    "keywords": "lakehouse-contract-lab, Lakehouse, Contract, Lab, lakehouse, contract, compiler, quality, gate, artifact, builder, export, adapter, private AI readiness sprint, migration scoping, quality reporting"
+  },
+  "commerce": {
+    "gateway_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=lakehouse-contract-lab#service-offers",
+    "lane_id": "private-ai-readiness-sprint",
+    "lane_name": "Private AI Readiness Sprint",
+    "billing_mode": "quote",
+    "price_unit": "typical discovery scope from USD 2,500",
+    "fulfillment_kind": "use-case scorecard, data and policy boundaries, evaluation plan, deployment options, and go or no-go roadmap",
+    "risk_bucket": "high-trust-b2b",
+    "checkout": {
+      "provider": null,
+      "status": "not-configured",
+      "fallback_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=lakehouse-contract-lab&inquiry=private-ai-readiness-sprint#private-inquiry"
+    },
+    "sponsorship": {
+      "provider": "github-sponsors",
+      "eligible": false,
+      "status": "sponsors-listing-not-configured"
+    },
+    "advertising": {
+      "provider": "google-adsense",
+      "eligible": true,
+      "delivery_surface": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/lakehouse-contract-lab/",
+      "status": "central-resource-site-review-dependent"
+    }
+  },
+  "monetization_strategy": {
+    "primary_model": "free-public-resource-with-contextual-advertising",
+    "public_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/lakehouse-contract-lab/",
+    "advertising_provider": "google-adsense",
+    "advertising_status": "code-ready-site-review-dependent",
+    "aggregate_data_value": "anonymous aggregate lakehouse contract topic interest and checklist usage counts",
+    "aggregate_insight_use": [
+      "publish privacy-safe benchmark summaries",
+      "prioritize useful public resources",
+      "improve search content from aggregate topic demand"
+    ],
+    "data_sale_boundary": "forbid sale of personal, sensitive, raw, event-level, or re-identifiable data",
+    "sensitive_flow_boundary": "ads allowed only on public lakehouse contract resources; data-quality runs, rejected rows, exports, and dashboards are ad-free"
+  }
+}

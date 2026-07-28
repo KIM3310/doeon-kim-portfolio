@@ -1,0 +1,112 @@
+{
+  "name": "Quantum Workbench",
+  "slug": "quantum-workbench",
+  "canonical_url": "https://kim3310.github.io/quantum-workbench/",
+  "repository_url": "https://github.com/KIM3310/quantum-workbench",
+  "architecture_url": "https://github.com/KIM3310/quantum-workbench/blob/main/docs/system-architecture.md",
+  "revenue_architecture_url": "https://github.com/KIM3310/quantum-workbench/blob/main/docs/revenue-architecture.md",
+  "lead_capture_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=quantum-workbench&inquiry=consumer-prototype-customization#private-inquiry",
+  "productized_offer": "quantum experiment workbench with provider adapters, job inspection, and educational reports",
+  "first_paid_sku": "private prototype customization for simulator-first lab workspaces, course bundles, and provider-cost planning reports",
+  "free_lead_magnet": "free simulator-first demo and static architecture page",
+  "search_positioning": {
+    "primary_query": "Quantum Workbench experiment provider adapters",
+    "secondary_queries": [
+      "Quantum Workbench demo",
+      "Quantum Workbench system architecture",
+      "Quantum Workbench educational tool",
+      "quantum experiment workbench with provider adapters, job inspection, and educational reports service"
+    ],
+    "audience_intent": "Find a runnable demo, inspect the system architecture, and decide whether a private workspace or implementation package is useful."
+  },
+  "monetization_boundary": {
+    "free": "free simulator-first demo and static architecture page",
+    "paid": "private prototype customization for simulator-first lab workspaces, course bundles, and provider-cost planning reports",
+    "metering_hooks": [
+      "workspace_id",
+      "plan",
+      "quota_day",
+      "export_count",
+      "lead_source"
+    ],
+    "cost_guardrails": [
+      "static first",
+      "edge functions",
+      "customer API keys",
+      "cached AI outputs",
+      "synthetic public data"
+    ]
+  },
+  "structured_data": {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Quantum Workbench",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "Web, serverless, and local development environments",
+    "url": "https://kim3310.github.io/quantum-workbench/",
+    "codeRepository": "https://github.com/KIM3310/quantum-workbench",
+    "description": "Quantum Workbench: simulator-first quantum experiment workbench with provider adapters, job inspection, and educational reports. Hardware routes require provider credentials and an operator token. Private customization is handled through inquiry, not live checkout.",
+    "creator": {
+      "@type": "Person",
+      "name": "KIM3310",
+      "url": "https://github.com/KIM3310"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "free simulator-first demo and static architecture page",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://kim3310.github.io/quantum-workbench/"
+      },
+      {
+        "@type": "Offer",
+        "name": "private prototype customization for simulator-first lab workspaces, course bundles, and provider-cost planning reports",
+        "availability": "https://schema.org/LimitedAvailability",
+        "url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=quantum-workbench&inquiry=consumer-prototype-customization#private-inquiry"
+      }
+    ],
+    "isAccessibleForFree": true,
+    "keywords": "quantum-workbench, Quantum, Workbench, quantum, experiment, workbench, provider, adapters, job, inspection, educational, lab, course, bundle, provider-cost, planning, simulator-first, static, architecture, page, tier, Cloudflare, Pages, serverless"
+  },
+  "commerce": {
+    "gateway_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=quantum-workbench#service-offers",
+    "lane_id": "consumer-prototype-customization",
+    "lane_name": "Consumer Prototype Customization",
+    "billing_mode": "one-time",
+    "price_unit": "fixed customization from USD 1,000",
+    "fulfillment_kind": "one audience-specific flow, branded content set, privacy and claim boundary, deployment package, and handoff notes",
+    "risk_bucket": "consumer-guarded",
+    "checkout": {
+      "provider": null,
+      "status": "not-configured",
+      "fallback_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=quantum-workbench&inquiry=consumer-prototype-customization#private-inquiry"
+    },
+    "sponsorship": {
+      "provider": "github-sponsors",
+      "eligible": false,
+      "status": "sponsors-listing-not-configured"
+    },
+    "advertising": {
+      "provider": "google-adsense",
+      "eligible": true,
+      "delivery_surface": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/quantum-workbench/",
+      "status": "central-resource-site-review-dependent"
+    }
+  },
+  "monetization_strategy": {
+    "primary_model": "free-public-resource-with-contextual-advertising",
+    "public_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/quantum-workbench/",
+    "advertising_provider": "google-adsense",
+    "advertising_status": "code-ready-site-review-dependent",
+    "aggregate_data_value": "anonymous aggregate quantum-learning topic interest and resource CTA counts",
+    "aggregate_insight_use": [
+      "publish privacy-safe benchmark summaries",
+      "prioritize useful public resources",
+      "improve search content from aggregate topic demand"
+    ],
+    "data_sale_boundary": "forbid sale of personal, sensitive, raw, event-level, or re-identifiable data",
+    "sensitive_flow_boundary": "ads allowed only on public learning pages; experiment state, saved notes, and result flows are ad-free"
+  }
+}

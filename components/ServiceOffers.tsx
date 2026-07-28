@@ -1,16 +1,15 @@
 import React from 'react';
 import {
+  ArrowRight,
+  DatabaseZap,
   ShieldCheck,
-  WalletCards,
 } from 'lucide-react';
 import { trackCommerceCtaClick } from '../analytics';
 import {
   COMMERCIAL_LANES,
-  isExternalCommerceUrl,
-  resolveCheckoutUrl,
+  resourceUrlForLane,
   type CommercialLane,
 } from '../commercialLanes';
-import InquiryForm from './InquiryForm';
 
 interface ServiceOffersProps {
   offerRepo: string | null;
@@ -18,25 +17,22 @@ interface ServiceOffersProps {
 }
 
 const ServiceOffers: React.FC<ServiceOffersProps> = ({ offerRepo, highlightedLane }) => (
-  <div id="service-offers" className="service-offer-ledger" aria-label="Searchable service offers by repository">
+  <div id="service-offers" className="service-offer-ledger" aria-label="Free utility and benchmark data-lab lanes by repository">
     <div className="coverage-intro">
-      <span>Commercial lanes</span>
-      <h2>Seven focused, evidence-backed offers</h2>
-      <p>Every repository has one role: a primary delivery surface or supporting proof for a bounded paid outcome. Unconfigured checkout routes move into the private inquiry pipeline instead of a public issue.</p>
+      <span>Free utilities</span>
+      <h2>Seven public labs backed by runnable systems</h2>
+      <p>Each lane routes to free resource pages for utilities, benchmarks, architecture notes, and synthetic demos. Revenue is limited to contextual ads on public resource pages plus consented anonymous aggregate insights; sensitive workflows remain ad-free and personal data is never sold.</p>
     </div>
     {offerRepo && (
       <p className="offer-route-note" role="status">
-        Offer route: <strong>{offerRepo}</strong>
-        {highlightedLane ? <> is mapped to <strong>{highlightedLane.name}</strong>.</> : <> has no active commercial lane mapping.</>}
+        Resource route: <strong>{offerRepo}</strong>
+        {highlightedLane ? <> is mapped to <strong>{highlightedLane.name}</strong>.</> : <> has no active lab mapping.</>}
       </p>
     )}
 
-    <InquiryForm />
-
-    <div className="commercial-lane-grid" aria-label="Money-focused commercial service bundles">
+    <div className="commercial-lane-grid" aria-label="Free utility and aggregate benchmark lanes">
       {COMMERCIAL_LANES.map((lane, index) => {
-        const checkoutUrl = resolveCheckoutUrl(lane);
-        const opensHostedCheckout = isExternalCommerceUrl(checkoutUrl);
+        const resourceUrl = resourceUrlForLane(lane);
 
         return (
           <article
@@ -49,7 +45,7 @@ const ServiceOffers: React.FC<ServiceOffersProps> = ({ offerRepo, highlightedLan
                 <span>{lane.buyer}</span>
                 <h3>{lane.name}</h3>
               </div>
-              <strong className="commercial-lane-number" aria-label={`Commercial lane ${index + 1}`}>
+              <strong className="commercial-lane-number" aria-label={`Resource lane ${index + 1}`}>
                 {String(index + 1).padStart(2, '0')}
               </strong>
             </div>
@@ -60,20 +56,28 @@ const ServiceOffers: React.FC<ServiceOffersProps> = ({ offerRepo, highlightedLan
             </div>
             <div className="commercial-lane-meta">
               <div>
-                <span>Billing mode</span>
+                <span>Access model</span>
                 <strong>{lane.billingMode}</strong>
               </div>
               <div>
-                <span>Price anchor</span>
+                <span>Public utility</span>
                 <strong>{lane.priceAnchor}</strong>
               </div>
               <div>
-                <span>Concrete deliverable</span>
+                <span>Resource package</span>
                 <strong>{lane.concreteDeliverable}</strong>
               </div>
               <div>
-                <span>Paid motion</span>
+                <span>Revenue boundary</span>
                 <strong>{lane.paidMotion}</strong>
+              </div>
+              <div>
+                <span>Aggregate insight</span>
+                <strong>{lane.dataLabSignal}</strong>
+              </div>
+              <div>
+                <span>Privacy line</span>
+                <strong>{lane.privacyBoundary}</strong>
               </div>
               <div>
                 <span>Primary repos</span>
@@ -86,12 +90,10 @@ const ServiceOffers: React.FC<ServiceOffersProps> = ({ offerRepo, highlightedLan
             </div>
             <a
               className="commercial-lane-cta"
-              href={checkoutUrl}
-              target={opensHostedCheckout ? '_blank' : undefined}
-              rel={opensHostedCheckout ? 'noopener noreferrer' : undefined}
+              href={resourceUrl}
               onClick={() => trackCommerceCtaClick(lane.id, lane.billingMode, 'lane_checkout')}
             >
-              <WalletCards size={13} /> {lane.ctaLabel}
+              <DatabaseZap size={13} /> {lane.ctaLabel} <ArrowRight size={13} />
             </a>
           </article>
         );

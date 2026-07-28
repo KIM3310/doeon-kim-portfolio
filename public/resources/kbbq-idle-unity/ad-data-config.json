@@ -1,0 +1,17 @@
+{
+  "repo": "kbbq-idle-unity",
+  "endpoint": "https://kim3310-doeon-kim-portfolio.pages.dev/api/events",
+  "benchmarkEndpoint": "https://kim3310-doeon-kim-portfolio.pages.dev/api/benchmarks",
+  "consentVersion": "2026-07-28",
+  "consentStorageKey": "kim3310-aggregate-consent",
+  "consentDefault": false,
+  "dntGpcFailClosed": true,
+  "allowedEvents": [
+    "resource_view",
+    "resource_cta_click",
+    "architecture_doc_open",
+    "privacy_support_open"
+  ],
+  "dataAsset": "anonymous aggregate game-economy resource interest and CTA counts",
+  "adPlacementBoundary": "ads allowed only on public game-design resource pages; gameplay telemetry, saves, and purchase-related flows are ad-free"
+}

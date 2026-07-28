@@ -29,7 +29,7 @@ describe('InquiryForm', () => {
 
     render(<InquiryForm />);
 
-    expect(screen.getByLabelText('Service')).toHaveValue('agent-reliability-audit');
+    expect(screen.getByLabelText('Resource lane')).toHaveValue('agent-reliability-audit');
   });
 
   it('keeps legacy lane-only CTA links on the intended service', () => {
@@ -41,7 +41,7 @@ describe('InquiryForm', () => {
 
     render(<InquiryForm />);
 
-    expect(screen.getByLabelText('Service')).toHaveValue('agent-reliability-audit');
+    expect(screen.getByLabelText('Resource lane')).toHaveValue('agent-reliability-audit');
   });
 
   it('ignores a lane that does not match the selected product', () => {
@@ -53,7 +53,7 @@ describe('InquiryForm', () => {
 
     render(<InquiryForm />);
 
-    expect(screen.getByLabelText('Service')).toHaveValue('agent-reliability-audit');
+    expect(screen.getByLabelText('Resource lane')).toHaveValue('agent-reliability-audit');
   });
 
   it('adapts the form for Jalhae founding learner research', () => {
@@ -84,7 +84,7 @@ describe('InquiryForm', () => {
     fireEvent.change(screen.getByLabelText('Work email'), {
       target: { value: 'buyer@example.com' },
     });
-    fireEvent.change(screen.getByLabelText('Problem and desired outcome'), {
+    fireEvent.change(screen.getByLabelText('Resource question or desired outcome'), {
       target: { value: 'We need a production reliability audit for our agent workflow.' },
     });
     fireEvent.click(screen.getByRole('checkbox'));
@@ -113,7 +113,7 @@ describe('InquiryForm', () => {
     fireEvent.change(screen.getByLabelText('Work email'), {
       target: { value: 'buyer@example.com' },
     });
-    fireEvent.change(screen.getByLabelText('Problem and desired outcome'), {
+    fireEvent.change(screen.getByLabelText('Resource question or desired outcome'), {
       target: { value: 'We need a production reliability audit for our agent workflow.' },
     });
     fireEvent.click(screen.getByRole('checkbox'));

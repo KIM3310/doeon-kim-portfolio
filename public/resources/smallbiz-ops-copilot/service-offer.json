@@ -1,0 +1,113 @@
+{
+  "name": "SmallBiz Ops Copilot",
+  "slug": "smallbiz-ops-copilot",
+  "canonical_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=smallbiz-ops-copilot#service-offers",
+  "repository_url": "https://github.com/KIM3310/smallbiz-ops-copilot",
+  "architecture_url": "https://github.com/KIM3310/smallbiz-ops-copilot/blob/main/docs/service-architecture.md",
+  "revenue_architecture_url": "https://github.com/KIM3310/smallbiz-ops-copilot/blob/main/docs/REVENUE_READINESS.md",
+  "lead_capture_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=smallbiz-ops-copilot&inquiry=secure-workflow-pilot#private-inquiry",
+  "productized_offer": "Approval-safe support control tower pilot for one signed intake, queue policy, assisted draft workflow, manual approval gate, and auditable webhook handoff",
+  "first_paid_sku": "Secure Workflow Pilot for one support queue with agreed baseline, private data boundary, approval evidence, and deployment runbook",
+  "free_lead_magnet": "synthetic local demo, D1 schema, product boundary contract, approval trace, and architecture notes",
+  "commerce": {
+    "gateway_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=smallbiz-ops-copilot#service-offers",
+    "lane_id": "secure-workflow-pilot",
+    "lane_name": "Secure Workflow Pilot",
+    "billing_mode": "quote",
+    "price_unit": "pilot scope from USD 2,000",
+    "fulfillment_kind": "one bounded workflow, private processing boundary, approval gate, audit trail, and deployment runbook",
+    "risk_bucket": "privacy-high-trust",
+    "checkout": {
+      "provider": null,
+      "status": "not-configured",
+      "fallback_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=smallbiz-ops-copilot&inquiry=secure-workflow-pilot#private-inquiry"
+    },
+    "sponsorship": {
+      "provider": "github-sponsors",
+      "eligible": false,
+      "status": "sponsors-listing-not-configured"
+    },
+    "advertising": {
+      "provider": "google-adsense",
+      "eligible": true,
+      "delivery_surface": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/smallbiz-ops-copilot/",
+      "status": "central-resource-site-review-dependent"
+    }
+  },
+  "search_positioning": {
+    "primary_query": "approval safe support operations control tower",
+    "secondary_queries": [
+      "small business support approval workflow",
+      "Cloudflare D1 support control tower",
+      "human in the loop customer support pilot",
+      "auditable AI draft approval workflow"
+    ],
+    "audience_intent": "Evaluate whether one approval-sensitive support queue is suitable for a private Secure Workflow Pilot without assuming autonomous sending or production readiness."
+  },
+  "monetization_boundary": {
+    "free": "synthetic local demo, D1 schema, product boundary contract, approval trace, and architecture notes",
+    "paid": "customer-specific Secure Workflow Pilot for one signed intake, approval policy, webhook handoff, and operating runbook",
+    "metering_hooks": [
+      "workspace_id",
+      "plan",
+      "quota_day",
+      "ticket_count",
+      "lead_source"
+    ],
+    "cost_guardrails": [
+      "static first",
+      "edge functions",
+      "customer API keys",
+      "operator approval before external handoff",
+      "no customer-channel delivery claim without receipt evidence",
+      "privacy-safe telemetry"
+    ]
+  },
+  "structured_data": {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "SmallBiz Ops Copilot",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web, serverless, and local development environments",
+    "url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=smallbiz-ops-copilot#service-offers",
+    "codeRepository": "https://github.com/KIM3310/smallbiz-ops-copilot",
+    "description": "SmallBiz Ops Copilot is an approval-safe support operations control tower proof with signed intake, operator-invoked triage and drafts, mandatory approval, and an auditable Maltbook webhook handoff. It does not claim autonomous or verified customer-channel delivery.",
+    "creator": {
+      "@type": "Person",
+      "name": "KIM3310",
+      "url": "https://github.com/KIM3310"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "synthetic local demo, D1 schema, product boundary contract, approval trace, and architecture notes",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=smallbiz-ops-copilot#service-offers"
+      },
+      {
+        "@type": "Offer",
+        "name": "Secure Workflow Pilot for one support queue with agreed baseline, private data boundary, approval evidence, and deployment runbook",
+        "availability": "https://schema.org/LimitedAvailability",
+        "url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=smallbiz-ops-copilot&inquiry=secure-workflow-pilot#private-inquiry"
+      }
+    ],
+    "isAccessibleForFree": true,
+    "keywords": "smallbiz-ops-copilot, approval-safe support operations, Cloudflare Pages, D1, human-in-the-loop drafts, approval gate, secure workflow pilot"
+  },
+  "monetization_strategy": {
+    "primary_model": "free-public-resource-with-contextual-advertising",
+    "public_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/smallbiz-ops-copilot/",
+    "advertising_provider": "google-adsense",
+    "advertising_status": "code-ready-site-review-dependent",
+    "aggregate_data_value": "anonymous aggregate small-business workflow interest and checklist usage counts",
+    "aggregate_insight_use": [
+      "publish privacy-safe benchmark summaries",
+      "prioritize useful public resources",
+      "improve search content from aggregate topic demand"
+    ],
+    "data_sale_boundary": "forbid sale of personal, sensitive, raw, event-level, or re-identifiable data",
+    "sensitive_flow_boundary": "ads allowed only on public operations-readiness pages; merchant data, checkout readiness, support queues, and dashboards are ad-free"
+  }
+}

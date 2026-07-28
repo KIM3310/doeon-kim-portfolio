@@ -112,10 +112,10 @@ const InquiryForm: React.FC = () => {
         }
       : {
           eyebrow: 'Private inquiry',
-          title: 'Start with one bounded, paid outcome',
-          body: 'Share the business problem and current system boundary. Do not include credentials, private datasets, health records, or other sensitive material.',
+          title: 'Contact about a resource or collaboration',
+          body: 'Share the resource, benchmark, or system boundary you want to discuss. Do not include credentials, private datasets, health records, or other sensitive material.',
           emailLabel: 'Work email',
-          summaryLabel: 'Problem and desired outcome',
+          summaryLabel: 'Resource question or desired outcome',
           buttonLabel: 'Submit private inquiry',
         };
   const visibleBudgetRanges = isProductResearch
@@ -182,7 +182,7 @@ const InquiryForm: React.FC = () => {
       <form className="inquiry-form" onSubmit={submitInquiry} aria-busy={submitState.phase === 'submitting'}>
         {intent === 'commercial' ? (
           <div className="inquiry-field inquiry-field-wide">
-            <label htmlFor="inquiry-lane">Service</label>
+            <label htmlFor="inquiry-lane">Resource lane</label>
             <select
               id="inquiry-lane"
               value={laneId}
@@ -235,7 +235,7 @@ const InquiryForm: React.FC = () => {
         {!isSupport && (
           <div className="inquiry-field inquiry-field-wide">
             <label htmlFor="inquiry-budget">
-              {isProductResearch ? 'Plus price comfort' : 'Expected budget'}
+              {isProductResearch ? 'Plus price comfort' : 'Optional collaboration budget'}
             </label>
             <select
               id="inquiry-budget"

@@ -1,6 +1,6 @@
-# Service Consolidation
+# Prior Service Consolidation Plan
 
-The storefront leads with seven purchasable outcomes instead of presenting 35 repositories as 35 separate products.
+This document preserves the earlier seven-service planning model for history. The current public front door uses seven free resource labs and 35 repository-specific architecture utilities; it does not lead with checkout.
 
 ## Commercial lanes
 
@@ -16,6 +16,6 @@ The storefront leads with seven purchasable outcomes instead of presenting 35 re
 
 Each repository is either a primary delivery surface or supporting proof. Consumer, game, medical-adjacent, wellness, crypto/finance-signal, and low-ticket education experiments remain guarded unless buyer evidence justifies a dedicated product.
 
-Commercial inquiries use the Cloudflare D1-backed private form. GitHub issues remain public and are limited to non-confidential product questions.
+These names remain compatibility identifiers for the existing private inquiry schema. Public navigation now routes to `/resources/<repo>/`. The Cloudflare D1-backed form remains isolated in the footer for optional contact, and GitHub issues remain public.
 
 The full 50-repository consolidation map lives in the profile repository: https://github.com/KIM3310/KIM3310/blob/main/docs/service-consolidation-2026-06-25.md

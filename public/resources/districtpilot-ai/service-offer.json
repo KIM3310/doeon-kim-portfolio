@@ -1,0 +1,112 @@
+{
+  "name": "Districtpilot AI",
+  "slug": "districtpilot-ai",
+  "canonical_url": "https://kim3310.github.io/districtpilot-ai/",
+  "repository_url": "https://github.com/KIM3310/districtpilot-ai",
+  "architecture_url": "https://github.com/KIM3310/districtpilot-ai/blob/main/docs/system-architecture.md",
+  "revenue_architecture_url": "https://github.com/KIM3310/districtpilot-ai/blob/main/docs/revenue-architecture.md",
+  "lead_capture_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=districtpilot-ai&inquiry=private-ai-readiness-sprint#private-inquiry",
+  "productized_offer": "district operations planning and public API readiness explorer",
+  "first_paid_sku": "paid readiness report, data connector pack, and private planning workspace",
+  "free_lead_magnet": "public static district planning demo with architecture notes",
+  "search_positioning": {
+    "primary_query": "Districtpilot AI district operations planning",
+    "secondary_queries": [
+      "Districtpilot AI demo",
+      "Districtpilot AI system architecture",
+      "Districtpilot AI business tool",
+      "district operations planning and public API readiness explorer service"
+    ],
+    "audience_intent": "Find a runnable demo, inspect the system architecture, and decide whether a private workspace or implementation package is useful."
+  },
+  "monetization_boundary": {
+    "free": "public static district planning demo with architecture notes",
+    "paid": "paid readiness report, data connector pack, and private planning workspace",
+    "metering_hooks": [
+      "workspace_id",
+      "plan",
+      "quota_day",
+      "export_count",
+      "lead_source"
+    ],
+    "cost_guardrails": [
+      "static first",
+      "edge functions",
+      "customer API keys",
+      "cached AI outputs",
+      "synthetic public data"
+    ]
+  },
+  "structured_data": {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Districtpilot AI",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web, serverless, and local development environments",
+    "url": "https://kim3310.github.io/districtpilot-ai/",
+    "codeRepository": "https://github.com/KIM3310/districtpilot-ai",
+    "description": "Districtpilot AI: district operations planning and public API readiness explorer. Free entry point: public static district planning demo with architecture notes. Paid path: paid readiness report, data connector pack.",
+    "creator": {
+      "@type": "Person",
+      "name": "KIM3310",
+      "url": "https://github.com/KIM3310"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "public static district planning demo with architecture notes",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://kim3310.github.io/districtpilot-ai/"
+      },
+      {
+        "@type": "Offer",
+        "name": "paid readiness report, data connector pack, and private planning workspace",
+        "availability": "https://schema.org/LimitedAvailability",
+        "url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=districtpilot-ai&inquiry=private-ai-readiness-sprint#private-inquiry"
+      }
+    ],
+    "isAccessibleForFree": true,
+    "keywords": "districtpilot-ai, Districtpilot, district, operations, planning, API, readiness, explorer, data, connector, pack, static, architecture, notes, tier, Cloudflare, Pages, serverless, launch, system"
+  },
+  "commerce": {
+    "gateway_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=districtpilot-ai#service-offers",
+    "lane_id": "private-ai-readiness-sprint",
+    "lane_name": "Private AI Readiness Sprint",
+    "billing_mode": "quote",
+    "price_unit": "typical discovery scope from USD 2,500",
+    "fulfillment_kind": "use-case scorecard, data and policy boundaries, evaluation plan, deployment options, and go or no-go roadmap",
+    "risk_bucket": "high-trust-b2b",
+    "checkout": {
+      "provider": null,
+      "status": "not-configured",
+      "fallback_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=districtpilot-ai&inquiry=private-ai-readiness-sprint#private-inquiry"
+    },
+    "sponsorship": {
+      "provider": "github-sponsors",
+      "eligible": false,
+      "status": "sponsors-listing-not-configured"
+    },
+    "advertising": {
+      "provider": "google-adsense",
+      "eligible": true,
+      "delivery_surface": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/districtpilot-ai/",
+      "status": "central-resource-site-review-dependent"
+    }
+  },
+  "monetization_strategy": {
+    "primary_model": "free-public-resource-with-contextual-advertising",
+    "public_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/districtpilot-ai/",
+    "advertising_provider": "google-adsense",
+    "advertising_status": "code-ready-site-review-dependent",
+    "aggregate_data_value": "anonymous aggregate civic analytics rollout topic interest and worksheet usage counts",
+    "aggregate_insight_use": [
+      "publish privacy-safe benchmark summaries",
+      "prioritize useful public resources",
+      "improve search content from aggregate topic demand"
+    ],
+    "data_sale_boundary": "forbid sale of personal, sensitive, raw, event-level, or re-identifiable data",
+    "sensitive_flow_boundary": "ads allowed only on public rollout explainers; civic data workspaces, exports, and dashboards are ad-free"
+  }
+}

@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://kim3310-doeon-kim-portfolio.pages.dev/sitemap.xml
+Sitemap: https://kim3310-doeon-kim-portfolio.pages.dev/resources/ad-data-sitemap.xml

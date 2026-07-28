@@ -1,0 +1,112 @@
+{
+  "name": "Security Threat Response Workbench",
+  "slug": "security-threat-response-workbench",
+  "canonical_url": "https://security-threat-response-workbench.ehdjs1351.workers.dev/",
+  "repository_url": "https://github.com/KIM3310/security-threat-response-workbench",
+  "architecture_url": "https://github.com/KIM3310/security-threat-response-workbench/blob/main/docs/system-architecture.md",
+  "revenue_architecture_url": "https://github.com/KIM3310/security-threat-response-workbench/blob/main/docs/revenue-architecture.md",
+  "lead_capture_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=security-threat-response-workbench&inquiry=incident-operations-exercise#private-inquiry",
+  "productized_offer": "threat response workbench with scenario board, runbooks, indicators, and snapshot reports",
+  "first_paid_sku": "Incident Operations Exercise facilitated exercise from USD 1,800",
+  "free_lead_magnet": "public synthetic threat-response demo",
+  "search_positioning": {
+    "primary_query": "Security Threat Response Workbench scenario board runbooks",
+    "secondary_queries": [
+      "Security Threat Response Workbench demo",
+      "Security Threat Response Workbench system architecture",
+      "Security Threat Response Workbench security tool",
+      "threat response workbench with scenario board, runbooks, indicators, and snapshot reports service"
+    ],
+    "audience_intent": "Find a runnable demo, inspect the system architecture, and decide whether a private workspace or implementation package is useful."
+  },
+  "monetization_boundary": {
+    "free": "public synthetic threat-response demo",
+    "paid": "Incident Operations Exercise facilitated exercise from USD 1,800",
+    "metering_hooks": [
+      "workspace_id",
+      "plan",
+      "quota_day",
+      "export_count",
+      "lead_source"
+    ],
+    "cost_guardrails": [
+      "static first",
+      "edge functions",
+      "customer API keys",
+      "cached AI outputs",
+      "synthetic public data"
+    ]
+  },
+  "structured_data": {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Security Threat Response Workbench",
+    "applicationCategory": "SecurityApplication",
+    "operatingSystem": "Web, serverless, and local development environments",
+    "url": "https://security-threat-response-workbench.ehdjs1351.workers.dev/",
+    "codeRepository": "https://github.com/KIM3310/security-threat-response-workbench",
+    "description": "Security Threat Response Workbench: synthetic incident-operations exercise demo with scenario board, runbooks, indicators, and snapshot reports. Paid path: Incident Operations Exercise private facilitation.",
+    "creator": {
+      "@type": "Person",
+      "name": "KIM3310",
+      "url": "https://github.com/KIM3310"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "public synthetic threat-response demo",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://security-threat-response-workbench.ehdjs1351.workers.dev/"
+      },
+      {
+        "@type": "Offer",
+        "name": "Incident Operations Exercise",
+        "availability": "https://schema.org/LimitedAvailability",
+        "url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=security-threat-response-workbench&inquiry=incident-operations-exercise#private-inquiry"
+      }
+    ],
+    "isAccessibleForFree": true,
+    "keywords": "security-threat-response-workbench, Security, Threat, Response, Workbench, threat, response, workbench, scenario, board, runbooks, indicators, snapshot, recurring, exercise, synthetic, threat-response, tier, Cloudflare, Pages, serverless, launch"
+  },
+  "commerce": {
+    "gateway_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=security-threat-response-workbench#service-offers",
+    "lane_id": "incident-operations-exercise",
+    "lane_name": "Incident Operations Exercise",
+    "billing_mode": "one-time",
+    "price_unit": "facilitated exercise from USD 1,800",
+    "fulfillment_kind": "scenario pack, incident replay board, role and handoff map, evidence checklist, and after-action report",
+    "risk_bucket": "security-high-trust",
+    "checkout": {
+      "provider": null,
+      "status": "not-configured",
+      "fallback_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=security-threat-response-workbench&inquiry=incident-operations-exercise#private-inquiry"
+    },
+    "sponsorship": {
+      "provider": "github-sponsors",
+      "eligible": false,
+      "status": "sponsors-listing-not-configured"
+    },
+    "advertising": {
+      "provider": "google-adsense",
+      "eligible": true,
+      "delivery_surface": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/security-threat-response-workbench/",
+      "status": "central-resource-site-review-dependent"
+    }
+  },
+  "monetization_strategy": {
+    "primary_model": "free-public-resource-with-contextual-advertising",
+    "public_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/security-threat-response-workbench/",
+    "advertising_provider": "google-adsense",
+    "advertising_status": "code-ready-site-review-dependent",
+    "aggregate_data_value": "anonymous aggregate threat-response topic interest and packet-open counts",
+    "aggregate_insight_use": [
+      "publish privacy-safe benchmark summaries",
+      "prioritize useful public resources",
+      "improve search content from aggregate topic demand"
+    ],
+    "data_sale_boundary": "forbid sale of personal, sensitive, raw, event-level, or re-identifiable data",
+    "sensitive_flow_boundary": "ads allowed only on public tabletop resources; threat workbench, evidence, incident notes, and dashboards are ad-free"
+  }
+}

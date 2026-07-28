@@ -1,0 +1,112 @@
+{
+  "name": "Honeypot Kkuldanji",
+  "slug": "honeypot",
+  "canonical_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=honeypot#service-offers",
+  "repository_url": "https://github.com/KIM3310/honeypot",
+  "architecture_url": "https://github.com/KIM3310/honeypot/blob/main/docs/service-architecture.md",
+  "revenue_architecture_url": "https://github.com/KIM3310/honeypot/blob/main/docs/REVENUE_READINESS.md",
+  "lead_capture_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=honeypot&inquiry=incident-operations-exercise#private-inquiry",
+  "productized_offer": "synthetic-data document-to-handover workflow evaluation with cited Q&A, completeness gates, and a production security architecture backlog",
+  "first_paid_sku": "fixed-scope architecture review and synthetic workflow evaluation; no customer documents or hosted production service",
+  "free_lead_magnet": "credential-free synthetic handover demo, fail-closed security tests, and architecture notes",
+  "commerce": {
+    "gateway_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=honeypot#service-offers",
+    "lane_id": "incident-operations-exercise",
+    "lane_name": "Incident Operations Exercise",
+    "billing_mode": "one-time",
+    "price_unit": "facilitated exercise from USD 1,800",
+    "fulfillment_kind": "scenario pack, incident replay board, role and handoff map, evidence checklist, and after-action report",
+    "risk_bucket": "security-high-trust",
+    "checkout": {
+      "provider": null,
+      "status": "not-configured",
+      "fallback_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=honeypot&inquiry=incident-operations-exercise#private-inquiry"
+    },
+    "sponsorship": {
+      "provider": "github-sponsors",
+      "eligible": false,
+      "status": "sponsors-listing-not-configured"
+    },
+    "advertising": {
+      "provider": "google-adsense",
+      "eligible": true,
+      "delivery_surface": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/honeypot/",
+      "status": "central-resource-site-review-dependent"
+    }
+  },
+  "search_positioning": {
+    "primary_query": "Honeypot Kkuldanji document handover assistant",
+    "secondary_queries": [
+      "Kkuldanji handover document generator",
+      "Honeypot service architecture",
+      "document ingestion retrieval handover workflow",
+      "cited Q&A handover workflow service"
+    ],
+    "audience_intent": "Review a synthetic document-to-handover workflow and its explicit production blockers before requesting an architecture evaluation."
+  },
+  "monetization_boundary": {
+    "free": "credential-free synthetic handover demo, fail-closed security tests, and architecture notes",
+    "paid": "fixed-scope architecture review and synthetic workflow evaluation; customer data and production hosting are excluded",
+    "metering_hooks": [
+      "workspace_id",
+      "plan",
+      "quota_day",
+      "export_count",
+      "lead_source"
+    ],
+    "cost_guardrails": [
+      "static first",
+      "review-only fallback",
+      "customer API keys",
+      "synthetic data only",
+      "privacy-safe telemetry"
+    ]
+  },
+  "structured_data": {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Honeypot Kkuldanji",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web, serverless, and local development environments",
+    "url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=honeypot#service-offers",
+    "codeRepository": "https://github.com/KIM3310/honeypot",
+    "description": "Honeypot Kkuldanji is a synthetic-data document-to-handover prototype with cited Q&A, completeness gates, fail-closed deployment checks, and an explicit production architecture backlog.",
+    "creator": {
+      "@type": "Person",
+      "name": "KIM3310",
+      "url": "https://github.com/KIM3310"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "credential-free synthetic handover demo, fail-closed security tests, and architecture notes",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=honeypot#service-offers"
+      },
+      {
+        "@type": "Offer",
+        "name": "fixed-scope architecture review and synthetic workflow evaluation",
+        "availability": "https://schema.org/LimitedAvailability",
+        "url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=honeypot&inquiry=incident-operations-exercise#private-inquiry"
+      }
+    ],
+    "isAccessibleForFree": true,
+    "keywords": "honeypot, Kkuldanji, handover document generator, document ingestion, retrieval, cited Q&A, completeness gate, support handoff, private pilot"
+  },
+  "monetization_strategy": {
+    "primary_model": "free-public-resource-with-contextual-advertising",
+    "public_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/honeypot/",
+    "advertising_provider": "google-adsense",
+    "advertising_status": "code-ready-site-review-dependent",
+    "aggregate_data_value": "anonymous aggregate tabletop-security planning interest and resource-open counts",
+    "aggregate_insight_use": [
+      "publish privacy-safe benchmark summaries",
+      "prioritize useful public resources",
+      "improve search content from aggregate topic demand"
+    ],
+    "data_sale_boundary": "forbid sale of personal, sensitive, raw, event-level, or re-identifiable data",
+    "sensitive_flow_boundary": "ads allowed only on public tabletop planning pages; event collection, alerts, evidence, and dashboards are ad-free"
+  }
+}
