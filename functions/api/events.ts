@@ -5,13 +5,8 @@ import {
   isTelemetryOriginAllowedForRepo,
   validateTelemetryPayload,
 } from '../../telemetryContract';
-import {
-  type FirebaseAggregateEnv,
-  isFirebaseAggregateConfigured,
-  syncFirebaseAggregate,
-} from '../../firebaseAggregate';
 
-type TelemetryEnv = FirebaseAggregateEnv & {
+type TelemetryEnv = PagesEnv & {
   TELEMETRY_RATE_LIMIT_SALT?: string;
 };
 
@@ -148,18 +143,6 @@ export const onRequestPost: PagesFunction<TelemetryEnv> = async context => {
       message: error instanceof Error ? error.message : 'Unknown D1 error',
     }));
     return json({ error: 'Telemetry storage is temporarily unavailable.' }, 503, origin);
-  }
-
-  if (isFirebaseAggregateConfigured(env)) {
-    context.waitUntil(
-      syncFirebaseAggregate(env, validated.value, day).catch(error => {
-        console.error(JSON.stringify({
-          event: 'firebase_aggregate_sync_error',
-          repo: validated.value.repo,
-          message: error instanceof Error ? error.message : 'Unknown Firebase sync error',
-        }));
-      }),
-    );
   }
 
   return json({ accepted: true }, 202, origin);

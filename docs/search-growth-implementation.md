@@ -34,4 +34,4 @@ The public surface stays crawlable and free. AdSense eligibility is isolated to 
 - Submit both the main sitemap and the 35-page resource sitemap in Google Search Console.
 - The lead-capture path is the central Cloudflare D1 private inquiry form at https://kim3310-doeon-kim-portfolio.pages.dev/?offer=doeon-kim-portfolio&inquiry=architecture-scope-sprint#private-inquiry; public GitHub issues are not used for confidential or commercial scoping.
 - Keep exact free-tier quotas out of public promises because provider limits change.
-- Use Cloudflare Web Analytics for privacy-safe site traffic, consent-gated GA4 for search reporting, D1 for rate-limited aggregate counters, and deny-by-default Firestore for curated public snapshots.
+- Use Cloudflare Web Analytics for privacy-safe site traffic, consent-gated GA4 for search reporting, and D1 for rate-limited aggregate counters.

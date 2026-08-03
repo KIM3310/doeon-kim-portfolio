@@ -40,14 +40,10 @@
       "privacy_support_open"
     ]
   },
-  "firebase": {
-    "project_id": "kim3310-free-tools",
-    "database": "(default)",
-    "region": "asia-northeast3",
-    "plan": "Spark (no billing linked)",
-    "public_collection": "publicAggregates",
-    "client_access": "public aggregate reads only; all client writes denied",
-    "free_tier_note": "1 GiB storage, 50,000 reads/day, 20,000 writes/day, 20,000 deletes/day, 10 GiB/month outbound transfer; quotas are provider-controlled and must be monitored"
+  "storage": {
+    "provider": "Cloudflare D1",
+    "contents": "daily aggregate counters and expiring abuse-control counters",
+    "public_access": "aggregate benchmark API responses only"
   },
   "repositories": [
     {

@@ -24,7 +24,7 @@
       <section>
         <h2>Analytics and Aggregate Resource Counts</h2>
         <p>Google Analytics starts with Consent Mode denied. The footer control can enable aggregate analytics. Public resource measurement is also off by default and remains off when DNT or Global Privacy Control is enabled.</p>
-        <p>The resource event API accepts only repository, one of four allowlisted events, the fixed public-resource surface, and the consent-policy version. It rejects extra fields. Cloudflare D1 stores daily aggregate counters. Firebase Firestore stores curated public aggregate snapshots and denies every client write.</p>
+        <p>The resource event API accepts only repository, one of four allowlisted events, the fixed public-resource surface, and the consent-policy version. It rejects extra fields. Cloudflare D1 stores daily aggregate counters and expiring abuse-control counters.</p>
         <p>Personal, sensitive, raw, event-level, and re-identifiable data is not sold. Aggregate counts are used to publish benchmark summaries, prioritize useful resources, and improve public content.</p>
       </section>
       <section>
