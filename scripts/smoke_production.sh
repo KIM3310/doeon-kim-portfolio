@@ -14,13 +14,13 @@ check_endpoint() {
   local endpoint="$1"
   local expected_type="$2"
   local marker="$3"
+  local origin="${4:-$canonical_origin}"
   local expected_url="${base}${endpoint}"
   local attempt
   local result
   local code
   local content_type
   local effective_url
-
   for ((attempt = 1; attempt <= attempts; attempt += 1)); do
     result="$(
       curl --silent --show-error --location \
@@ -28,6 +28,7 @@ check_endpoint() {
         --max-time 25 \
         --output "$body_file" \
         --write-out $'%{http_code}\t%{content_type}\t%{url_effective}' \
+        --header "Origin: $origin" \
         "$expected_url" || true
     )"
     IFS=$'\t' read -r code content_type effective_url <<<"$result"
@@ -56,5 +57,6 @@ check_endpoint "/service-offer.json" "application/json" '"name": "KIM3310 System
 check_endpoint "/llms.txt" "text/plain" "Canonical URL: ${canonical_origin}/"
 check_endpoint "/robots.txt" "text/plain" "Sitemap: ${canonical_origin}/sitemap.xml"
 check_endpoint "/sitemap.xml" "application/xml" "<loc>${canonical_origin}/terms</loc>"
+check_endpoint "/api/benchmarks?repo=stage-pilot" "application/json" '"repo":"stage-pilot"' "https://stage-pilot.pages.dev"
 
-echo "Production policy, discovery, and commercial surface smoke passed."
+echo "Production policy, discovery, commercial surface, and Functions smoke passed."
