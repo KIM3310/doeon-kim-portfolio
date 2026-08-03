@@ -55,6 +55,6 @@ check_endpoint "/terms" "text/html" "<h1>Terms</h1>"
 check_endpoint "/service-offer.json" "application/json" '"name": "KIM3310 Systems"'
 check_endpoint "/llms.txt" "text/plain" "Canonical URL: ${canonical_origin}/"
 check_endpoint "/robots.txt" "text/plain" "Sitemap: ${canonical_origin}/sitemap.xml"
-check_endpoint "/sitemap.xml" "application/xml" "<loc>${canonical_origin}/service-offer.json</loc>"
+check_endpoint "/sitemap.xml" "application/xml" "<loc>${canonical_origin}/terms</loc>"
 
 echo "Production policy, discovery, and commercial surface smoke passed."
