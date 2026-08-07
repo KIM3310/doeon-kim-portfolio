@@ -15,7 +15,7 @@ check_endpoint() {
   local expected_type="$2"
   local marker="$3"
   local origin="${4:-$canonical_origin}"
-  local expected_url="${base}${endpoint}"
+  local expected_url="${origin}${endpoint}"
   local attempt
   local result
   local code
@@ -57,6 +57,6 @@ check_endpoint "/service-offer.json" "application/json" '"name": "KIM3310 System
 check_endpoint "/llms.txt" "text/plain" "Canonical URL: ${canonical_origin}/"
 check_endpoint "/robots.txt" "text/plain" "Sitemap: ${canonical_origin}/sitemap.xml"
 check_endpoint "/sitemap.xml" "application/xml" "<loc>${canonical_origin}/terms</loc>"
-check_endpoint "/api/benchmarks?repo=stage-pilot" "application/json" '"repo":"stage-pilot"' "https://stage-pilot.pages.dev"
+check_endpoint "/service-offer.json" "application/json" '"slug": "stage-pilot"' "https://stage-pilot.pages.dev"
 
-echo "Production policy, discovery, commercial surface, and Functions smoke passed."
+echo "Production policy, discovery, commercial surface, and linked project smoke passed."

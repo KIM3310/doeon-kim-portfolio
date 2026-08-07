@@ -15,9 +15,11 @@ describe('production smoke contract', () => {
     expect(smoke).toContain('/service-offer.json');
     expect(smoke).toContain('/robots.txt');
     expect(smoke).toContain('/sitemap.xml');
-    expect(smoke).toContain('/api/benchmarks?repo=stage-pilot');
+    expect(smoke).toContain('https://stage-pilot.pages.dev');
+    expect(smoke).toContain('\"slug\": \"stage-pilot\"');
     expect(smoke).toContain('Origin: $origin');
     expect(smoke).toContain('application/json');
+    expect(smoke).not.toContain('/api/benchmarks');
   });
 
   it('does not require an unissued advertising publisher record', () => {
