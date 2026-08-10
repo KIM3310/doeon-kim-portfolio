@@ -67,6 +67,7 @@
   },
   "overrides": {
     "esbuild": "^0.28.1",
+    "nanoid": "^3.3.17",
     "undici": "^7.29.0"
   },
   "engines": {
