@@ -1484,6 +1484,12 @@ textarea:focus-visible,
   overflow-wrap: anywhere;
 }
 
+.commercial-lane-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
 .commercial-lane-cta {
   min-height: 40px;
   width: fit-content;
@@ -1500,6 +1506,11 @@ textarea:focus-visible,
   text-decoration: none;
   box-shadow: var(--inner-highlight);
   transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
+}
+
+.commercial-lane-cta.is-secondary {
+  background: var(--surface);
+  color: var(--ink-soft);
 }
 
 .commercial-lane-cta:hover {
@@ -1583,6 +1594,37 @@ textarea:focus-visible,
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
+}
+
+.inquiry-unavailable {
+  align-content: center;
+  min-height: 220px;
+  padding: 28px;
+  border: 1px solid var(--line-strong);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.inquiry-unavailable strong,
+.inquiry-unavailable p,
+.inquiry-unavailable a {
+  grid-column: 1 / -1;
+}
+
+.inquiry-unavailable strong {
+  font-size: 1.05rem;
+}
+
+.inquiry-unavailable p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.inquiry-unavailable a {
+  width: fit-content;
+  color: var(--blue);
+  font-weight: 800;
 }
 
 .inquiry-field {
@@ -1918,7 +1960,8 @@ textarea:focus-visible,
   margin-top: auto;
 }
 
-.service-offer-actions a {
+.service-offer-actions a,
+.service-offer-actions .is-private {
   min-height: 32px;
   display: inline-flex;
   align-items: center;
@@ -1931,6 +1974,11 @@ textarea:focus-visible,
   font-size: 0.77rem;
   font-weight: 760;
   text-decoration: none;
+}
+
+.service-offer-actions .is-private {
+  color: var(--muted-2);
+  cursor: default;
 }
 
 .service-offer-actions a:hover {

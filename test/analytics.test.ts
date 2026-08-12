@@ -13,7 +13,7 @@ describe('commerce analytics consent', () => {
   it('does not emit commerce events before analytics consent', () => {
     window.gtag = vi.fn();
 
-    trackCommerceCtaClick('agent-reliability-audit', 'one-time', 'lane_checkout');
+    trackCommerceCtaClick('agent-reliability-audit', 'one-time', 'lane_inquiry');
 
     expect(window.gtag).not.toHaveBeenCalled();
   });

@@ -83,12 +83,11 @@ const Experience: React.FC = () => (
     <div className="section-inner">
       <div className="section-heading">
         <p className="eyebrow">Experience</p>
-        <h2>Military communications and security monitoring translated into infrastructure operations</h2>
+        <h2>From 24/7 military communications to IT infrastructure operations</h2>
         <p>
-          The front-line proof is MW communications and 24/7 strategic communications operations: issue confirmation,
-          network/security/server/CCTV/VMS/NVR operation, access-log and visitor-record handling, intrusion-alert monitoring,
-          emergency initial action, security readiness, and handoff discipline. The InterX role extended that base into
-          data center, IDC, workspace, vendor, and service-desk operations.
+          Military service covered microwave (MW) communications, network and server monitoring, CCTV/VMS/NVR checks,
+          access records, intrusion alerts, incident response, escalation, documentation, and shift handoff. The completed
+          InterX role extended that operating discipline into data-center, IDC, workspace, vendor, and service-desk work.
         </p>
       </div>
 
@@ -105,7 +104,7 @@ const Experience: React.FC = () => (
 
       <OutcomeDisclosure
         title="Military outcomes"
-        caption={`${MILITARY_ROLE.outcomes.length} proof points`}
+        caption={`${MILITARY_ROLE.outcomes.length} operating results`}
         items={MILITARY_ROLE.outcomes}
         icon={ShieldCheck}
       />
@@ -152,8 +151,8 @@ const Experience: React.FC = () => (
           <summary>
             <Award aria-hidden="true" />
             <span className="summary-copy">
-              <strong>Certifications</strong>
-              <em>{CERTIFICATIONS.length} active credentials</em>
+              <strong>Certifications and training credentials</strong>
+              <em>{CERTIFICATIONS.length} listed credentials</em>
             </span>
             <ChevronDown size={17} className="disclosure-icon" aria-hidden="true" />
           </summary>

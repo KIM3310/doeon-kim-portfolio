@@ -5,6 +5,7 @@ import { describe, expect, it } from 'vitest';
 const root = join(import.meta.dirname, '..');
 const smoke = readFileSync(join(root, 'scripts', 'smoke_production.sh'), 'utf8');
 const workflow = readFileSync(join(root, '.github', 'workflows', 'production-smoke.yml'), 'utf8');
+const deployWorkflow = readFileSync(join(root, '.github', 'workflows', 'deploy-pages.yml'), 'utf8');
 
 describe('production smoke contract', () => {
   it('targets the canonical deployment and validates response identity', () => {
@@ -19,7 +20,11 @@ describe('production smoke contract', () => {
     expect(smoke).toContain('\"slug\": \"stage-pilot\"');
     expect(smoke).toContain('Origin: $origin');
     expect(smoke).toContain('application/json');
-    expect(smoke).not.toContain('/api/benchmarks');
+    expect(smoke).toContain('/api/inquiries');
+    expect(smoke).toContain('/api/events');
+    expect(smoke).toContain('/api/benchmarks?repo=stage-pilot');
+    expect(smoke).toContain('SMOKE_REQUIRE_DYNAMIC');
+    expect(deployWorkflow).toContain('SMOKE_REQUIRE_DYNAMIC: "1"');
   });
 
   it('does not require an unissued advertising publisher record', () => {

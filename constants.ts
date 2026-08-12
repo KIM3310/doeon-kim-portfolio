@@ -1,14 +1,14 @@
 import { Project, SkillCategory, Profile, WorkExperience, EducationItem, Certification, RepositoryCoverageLane, StackArchitectureLane, LiveServiceScreen, PortfolioReel } from './types';
 
 export const PROFILE: Profile = {
-  name: 'KIM3310 Systems',
-  title: 'Operational AI, agent reliability, and secure workflow utilities backed by runnable systems',
+  name: 'Doeon Kim',
+  title: 'Operational AI and infrastructure engineer building reviewable agent, data, and secure-workflow systems',
   contactUrl:
     'https://kim3310-doeon-kim-portfolio.pages.dev/?offer=doeon-kim-portfolio&inquiry=architecture-scope-sprint#private-inquiry',
   github: 'https://github.com/KIM3310',
   linkedin: 'https://www.linkedin.com/in/doeon-kim-4742a2388',
   intro:
-    'Free public utilities, benchmark labs, and architecture resources for teams that need stronger operating evidence before they commit to AI infrastructure or automation. The portfolio preserves technical credibility through inspectable systems, tests, and explicit human-control boundaries.',
+    'Reviewable operational AI systems, benchmark labs, and architecture evidence for teams evaluating infrastructure or automation. Public proof stays separate from scoped services, with tests, synthetic-data boundaries, and explicit human-control gates.',
 };
 
 export const PORTFOLIO_STATS = [
@@ -103,18 +103,18 @@ export const INTERX_ROLE: WorkExperience = {
   ],
   outcomes: [
     'Maintained digital workspace permissions, workflows, and new teammate IT onboarding setup',
-    'Improved recurring operations through Jira automation rules, process reports, and vendor coordination',
-    'Researched and test-bedded new IT/SaaS solutions for security posture and operational efficiency',
+    'Created Jira automation rules and operating reports; coordinated vendors for recurring support work',
+    'Evaluated IT and SaaS tools in test environments for security and operational fit',
   ],
 };
 
 export const MILITARY_ROLE: WorkExperience = {
   company: 'ROK Defense Communication Command / 1st Information Communications Group',
-  title: 'MW Communications Soldier / Squad Leader',
+  title: 'Microwave (MW) Communications Soldier / Squad Leader',
   period: 'Nov 2023 - May 2025',
   location: 'Seongnam, South Korea',
   summary:
-    'MW communications soldier and 6-person squad leader in 24/7 strategic command communications operations, covering network, security, server, CCTV/VMS/NVR, access-control, intrusion-alert, and emergency-response workflows.',
+    'Led a six-person microwave (MW) communications squad in 24/7 strategic command operations, covering network, security, server, CCTV/VMS/NVR, access control, intrusion alerts, incident response, and shift handoff.',
   focus: [
     '24/7 national strategic command communications operations as an MW communications soldier',
     '6-person squad leadership with roughly 8-9 incidents or issue cases per month across response, mitigation, recovery, reporting, and follow-up',
@@ -124,9 +124,9 @@ export const MILITARY_ROLE: WorkExperience = {
     'Network, security, server, and communications-room monitoring with server-room fire response, 24-hour standby, and shift handoff',
   ],
   outcomes: [
-    'Built operator habits around access control, issue confirmation, initial action, escalation, documentation, recovery, and emergency response',
-    'Provides direct evidence for CCTV/VMS/NVR, access control, intrusion monitoring, network, security, server, and communications-room operations',
-    'Anchors network/security projects such as NW Service Assurance and Security Threat Response Workbench',
+    'Applied repeatable issue confirmation, initial action, escalation, documentation, recovery, and emergency-response procedures',
+    'Maintained access logs, visitor approval records, CCTV/VMS/NVR checks, and unauthorized-access alert monitoring',
+    'Coordinated recurring incident handling and shift handoff across network, security, server, and communications-room operations',
   ],
 };
 
@@ -135,7 +135,7 @@ export const EDUCATION: EducationItem[] = [
     institution: "Bachelor's Degree Examination for Self-Education (BDES)",
     program: 'Computer Science',
     period: 'Expected Nov 2027',
-    note: 'Bachelor degree track',
+    note: 'Computer Science degree candidate; separate from KNOU coursework',
   },
   {
     institution: 'Korea National Open University',
@@ -325,6 +325,18 @@ export const PROJECTS: Project[] = [
     market: 'Backend teams needing controlled agent execution',
     architectureSignal: 'Go systems design, deterministic orchestration, provider boundaries',
     proofPath: 'Runtime walkthrough, repository evidence, architecture notes, and local quality gate',
+  },
+  {
+    title: 'memoryflow-lab',
+    description:
+      'Reproducible KV-cache memory co-design lab with capacity gates, tiered placement policies, data-movement models, and measured-versus-analytical validation.',
+    tech: ['Python', 'PyTorch', 'KV cache', 'Memory systems'],
+    github: 'https://github.com/KIM3310/memoryflow-lab',
+    demo: 'https://kim3310.github.io/memoryflow-lab/',
+    evidence: 'evidence/memoryflow-evidence.svg',
+    market: 'AI systems and accelerator teams evaluating memory-capacity trade-offs',
+    architectureSignal: 'Memory hierarchy modeling, capacity constraints, and reproducible measurement boundaries',
+    proofPath: 'README experiment protocol, generated reports, unit tests, and held-out GPU comparison notes',
   },
   {
     title: 'ai-agent-production-lab',

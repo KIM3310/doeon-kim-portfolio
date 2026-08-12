@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { CheckCircle2, LockKeyhole, Send } from 'lucide-react';
 import { COMMERCIAL_LANES } from '../commercialLanes';
 import {
@@ -16,6 +16,9 @@ import {
 const CANONICAL_ORIGIN = 'https://kim3310-doeon-kim-portfolio.pages.dev';
 const CANONICAL_INQUIRY_API = `${CANONICAL_ORIGIN}/api/inquiries`;
 const LOCAL_HOSTS = new Set(['localhost', '127.0.0.1', '::1']);
+const LINKEDIN_CONTACT_URL = 'https://www.linkedin.com/in/doeon-kim-4742a2388';
+
+type InquiryAvailability = 'checking' | 'available' | 'unavailable';
 
 export const inquiryApiUrl = (
   location: Pick<Location, 'origin' | 'hostname'> = window.location,
@@ -24,6 +27,18 @@ export const inquiryApiUrl = (
     return '/api/inquiries';
   }
   return CANONICAL_INQUIRY_API;
+};
+
+export const probeInquiryApi = async (
+  location: Pick<Location, 'origin' | 'hostname'> = window.location,
+  fetcher: typeof fetch = fetch,
+): Promise<boolean> => {
+  try {
+    const response = await fetcher(inquiryApiUrl(location), { method: 'OPTIONS' });
+    return response.status === 204;
+  } catch {
+    return false;
+  }
 };
 
 const initialQueryValue = (key: string): string =>
@@ -80,6 +95,7 @@ const InquiryForm: React.FC = () => {
   const intent = useMemo(initialIntent, []);
   const isProductResearch = intent === 'product-research';
   const isSupport = intent === 'support';
+  const [availability, setAvailability] = useState<InquiryAvailability>('checking');
   const [laneId, setLaneId] = useState<InquiryLaneId>(initialLaneId);
   const [sourceRepo, setSourceRepo] = useState(initialSourceRepo);
   const [email, setEmail] = useState('');
@@ -121,6 +137,16 @@ const InquiryForm: React.FC = () => {
   const visibleBudgetRanges = isProductResearch
     ? PRODUCT_RESEARCH_BUDGET_RANGES
     : COMMERCIAL_BUDGET_RANGES;
+
+  useEffect(() => {
+    let active = true;
+    void probeInquiryApi().then(isAvailable => {
+      if (active) setAvailability(isAvailable ? 'available' : 'unavailable');
+    });
+    return () => {
+      active = false;
+    };
+  }, []);
 
   const submitInquiry = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -167,19 +193,22 @@ const InquiryForm: React.FC = () => {
         <span><LockKeyhole size={15} aria-hidden="true" /> {copy.eyebrow}</span>
         <h3 id="inquiry-title">{copy.title}</h3>
         <p>{copy.body}</p>
-        <dl>
-          <div>
-            <dt>Storage</dt>
-            <dd>Cloudflare D1, access restricted to the operator</dd>
-          </div>
-          <div>
-            <dt>Retention</dt>
-            <dd>Scheduled for deletion at 90 days and pruned by a daily retention job</dd>
-          </div>
-        </dl>
+        {availability === 'available' && (
+          <dl>
+            <div>
+              <dt>Storage</dt>
+              <dd>Cloudflare D1, access restricted to the operator</dd>
+            </div>
+            <div>
+              <dt>Retention</dt>
+              <dd>Scheduled for deletion at 90 days and pruned by a daily retention job</dd>
+            </div>
+          </dl>
+        )}
       </div>
 
-      <form className="inquiry-form" onSubmit={submitInquiry} aria-busy={submitState.phase === 'submitting'}>
+      {availability === 'available' ? (
+        <form className="inquiry-form" onSubmit={submitInquiry} aria-busy={submitState.phase === 'submitting'}>
         {intent === 'commercial' ? (
           <div className="inquiry-field inquiry-field-wide">
             <label htmlFor="inquiry-lane">Resource lane</label>
@@ -300,7 +329,26 @@ const InquiryForm: React.FC = () => {
             {submitState.phase === 'error' && submitState.message}
           </p>
         </div>
-      </form>
+        </form>
+      ) : (
+        <div className="inquiry-form inquiry-unavailable" role="status" aria-live="polite">
+          <strong>
+            {availability === 'checking'
+              ? 'Checking private form availability...'
+              : 'Private form temporarily unavailable'}
+          </strong>
+          <p>
+            {availability === 'checking'
+              ? 'No information is accepted until the dynamic endpoint is verified.'
+              : 'The dynamic endpoint is not currently verified, so this page is not accepting or storing inquiry data.'}
+          </p>
+          {availability === 'unavailable' && (
+            <a href={LINKEDIN_CONTACT_URL} target="_blank" rel="noopener noreferrer">
+              Contact privately on LinkedIn
+            </a>
+          )}
+        </div>
+      )}
     </section>
   );
 };

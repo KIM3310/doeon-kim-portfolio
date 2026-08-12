@@ -12,23 +12,25 @@ import {
 import { REPOSITORY_COVERAGE } from '../constants';
 
 describe('COMMERCIAL_LANES', () => {
-  it('keeps the public lab hub focused on seven free evidence-backed utility lanes', () => {
+  it('keeps seven bounded service lanes tied to separate public proof', () => {
     expect(COMMERCIAL_LANES).toHaveLength(7);
 
     for (const lane of COMMERCIAL_LANES) {
-      expect(lane.billingMode).toBe('free');
-      expect(lane.priceAnchor).toBeTruthy();
+      expect(['one-time', 'quote']).toContain(lane.billingMode);
+      expect(lane.priceAnchor).toMatch(/USD/);
+      expect(lane.priceAnchor).toMatch(/non-binding/i);
       expect(lane.concreteDeliverable).toBeTruthy();
-      expect(lane.ctaLabel).toBeTruthy();
-      expect(lane.dataLabSignal).toMatch(/aggregate|anonymous/i);
+      expect(lane.ctaLabel).toBe('Discuss scope privately');
+      expect(lane.dataLabSignal).toMatch(/synthetic|fixture/i);
+      expect(lane.paidMotion).toMatch(/No active checkout/);
       expect(lane.privacyBoundary).toMatch(/No sale|never|excluded|not sold|private/i);
       const primaryRepo = lane.primaryRepos[0];
       expect(primaryRepo).toBeDefined();
       if (!primaryRepo) continue;
       expect(lane.fallbackCtaUrl).toBe(
-        resourceUrlForRepo(primaryRepo),
+        inquiryUrlForLane(lane.id, primaryRepo),
       );
-      expect(lane.fallbackCtaUrl).toContain(`/resources/${primaryRepo}/`);
+      expect(resourceUrlForRepo(primaryRepo)).toContain(`/resources/${primaryRepo}/`);
       expect([...lane.primaryRepos, ...lane.supportRepos].every(repo => !repo.includes('https://'))).toBe(true);
     }
   });
@@ -56,15 +58,18 @@ describe('COMMERCIAL_LANES', () => {
     );
   });
 
-  it('keeps free lanes on public resource routes even when checkout env keys exist', () => {
-    const lane = COMMERCIAL_LANES[0];
-    expect(lane).toBeDefined();
-    if (!lane) return;
-    const laneEnvKey = checkoutEnvKeyForLane(lane.id);
+  it('uses private inquiry as the fallback and only accepts secure hosted checkout URLs', () => {
+    const oneTimeLane = COMMERCIAL_LANES.find(lane => lane.billingMode === 'one-time');
+    const quoteLane = COMMERCIAL_LANES.find(lane => lane.billingMode === 'quote');
+    expect(oneTimeLane).toBeDefined();
+    expect(quoteLane).toBeDefined();
+    if (!oneTimeLane || !quoteLane) return;
+    const laneEnvKey = checkoutEnvKeyForLane(oneTimeLane.id);
 
-    expect(resolveCheckoutUrl(lane, {})).toBe(lane.fallbackCtaUrl);
-    expect(resolveCheckoutUrl(lane, { [laneEnvKey]: 'https://checkout.example/lane' })).toBe(lane.fallbackCtaUrl);
-    expect(resolveCheckoutUrl(lane, { [laneEnvKey]: 'http://insecure.example/lane' })).toBe(lane.fallbackCtaUrl);
+    expect(resolveCheckoutUrl(oneTimeLane, {})).toBe(oneTimeLane.fallbackCtaUrl);
+    expect(resolveCheckoutUrl(oneTimeLane, { [laneEnvKey]: 'https://checkout.example/lane' })).toBe('https://checkout.example/lane');
+    expect(resolveCheckoutUrl(oneTimeLane, { [laneEnvKey]: 'http://insecure.example/lane' })).toBe(oneTimeLane.fallbackCtaUrl);
+    expect(resolveCheckoutUrl(quoteLane, { [checkoutEnvKeyForLane(quoteLane.id)]: 'https://checkout.example/quote' })).toBe(quoteLane.fallbackCtaUrl);
   });
 
   it('retains legacy private inquiry URL generation for footer contact compatibility', () => {
