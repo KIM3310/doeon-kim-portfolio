@@ -1,10 +1,19 @@
-import { describe, it, expect } from 'vitest';
+import { afterEach, beforeEach, describe, it, expect, vi } from 'vitest';
 import { fireEvent, render, screen, within } from '@testing-library/react';
-import { vi } from 'vitest';
 import App from '../App';
 import { resolveProjectScrollTargetId } from '../components/Projects';
 
 describe('App component', () => {
+  beforeEach(() => {
+    vi.spyOn(globalThis, 'fetch').mockImplementation(
+      () => new Promise<Response>(() => undefined),
+    );
+  });
+
+  afterEach(() => {
+    vi.restoreAllMocks();
+  });
+
   it('renders without crashing', () => {
     const { container } = render(<App />);
     expect(container.firstChild).toBeTruthy();
@@ -51,7 +60,7 @@ describe('App component', () => {
   it('renders military experience, education, and certifications', () => {
     render(<App />);
     expect(screen.getByText(/ROK Defense Communication Command/)).toBeInTheDocument();
-    expect(screen.getByText('MW Communications Soldier / Squad Leader')).toBeInTheDocument();
+    expect(screen.getByText('Microwave (MW) Communications Soldier / Squad Leader')).toBeInTheDocument();
     expect(screen.getByText("Bachelor's Degree Examination for Self-Education (BDES)")).toBeInTheDocument();
     expect(screen.getByText('Korea National Open University')).toBeInTheDocument();
     expect(screen.getByText(/Snowflake - SnowPro Associate/)).toBeInTheDocument();
@@ -133,8 +142,8 @@ describe('App component', () => {
 
     render(<App />);
 
-    expect(screen.getByText(/Resource route:/)).toBeInTheDocument();
-    expect(screen.getAllByText('Agent Benchmark Lab').length).toBeGreaterThan(0);
+    expect(screen.getByText(/Repository route:/)).toBeInTheDocument();
+    expect(screen.getAllByText('Agent Reliability Audit').length).toBeGreaterThan(0);
   });
 
   it('keeps the inquiry form out of the main resource-lab section', () => {

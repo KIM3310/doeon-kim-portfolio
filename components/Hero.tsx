@@ -9,7 +9,7 @@ const featuredScreenshotPreviewSmall = `${import.meta.env.BASE_URL}evidence/live
 const Hero: React.FC = () => (
   <section id="about" className="hero-section">
     <div className="hero-copy">
-      <p className="eyebrow">Free AI utilities & benchmark data lab</p>
+      <p className="eyebrow">Operational AI systems portfolio</p>
       <h1>{PROFILE.name}</h1>
       <p className="hero-subtitle">{PROFILE.title}</p>
       <p className="hero-summary">{PROFILE.intro}</p>
@@ -21,7 +21,7 @@ const Hero: React.FC = () => (
       </div>
       <div className="hero-actions">
         <a href="#service-offers" className="primary-action">
-          Explore free resources <ArrowRight size={18} />
+          Review proof and service lanes <ArrowRight size={18} />
         </a>
         <a href="#systems" className="secondary-action">
           Review systems
@@ -45,7 +45,7 @@ const Hero: React.FC = () => (
           />
           <img
             src={featuredScreenshot}
-            alt="AIX Pilot deployed product console screenshot"
+            alt="AIX Pilot deployed public demo screenshot"
             fetchPriority="high"
             decoding="async"
             width={1440}
@@ -64,7 +64,7 @@ const Hero: React.FC = () => (
           />
           <img
             src={featuredScreenshot}
-            alt="AIX Pilot deployed product console screenshot"
+            alt="AIX Pilot deployed public demo screenshot"
             fetchPriority="high"
             decoding="async"
             width={1440}
@@ -75,11 +75,11 @@ const Hero: React.FC = () => (
       <div className="hero-panel-header">
         <Sparkles aria-hidden="true" />
         <div>
-          <p className="eyebrow">Featured Lab</p>
-          <h2>Agent Benchmark Lab for builders comparing tool-using AI systems.</h2>
+          <p className="eyebrow">Featured system</p>
+          <h2>AIX Pilot: a reviewable enterprise AI adoption workspace.</h2>
         </div>
       </div>
-      <p className="hero-panel-note">Free public resources turn synthetic scenarios and traces into failure taxonomies, provider scorecards, and aggregate reliability signals without selling personal data.</p>
+      <p className="hero-panel-note">The screenshot shows the deployed AIX Pilot public demo. Synthetic scenarios, explicit governance boundaries, and repository tests keep the evidence reviewable without implying a customer deployment.</p>
       <dl className="stat-grid">
         {PORTFOLIO_STATS.map(stat => (
           <div key={stat.label}>
@@ -94,7 +94,7 @@ const Hero: React.FC = () => (
       </div>
       <div className="system-strip">
         <ShieldCheck aria-hidden="true" />
-        <span>inspectable evidence, anonymous aggregate insights, explicit privacy limits</span>
+        <span>inspectable evidence, coarse consented counters, explicit privacy limits</span>
       </div>
     </aside>
   </section>

@@ -115,9 +115,9 @@ const Projects: React.FC = () => {
     <section id="projects" className="section-shell">
       <div className="section-inner">
         <div className="section-heading">
-          <p className="eyebrow">Utilities</p>
-          <h2>Free resource labs with aggregate benchmark evidence</h2>
-          <p>Start with public utilities, synthetic demos, benchmark notes, and architecture routes. The portfolio proves technical depth and operating credibility through runnable systems instead of a checkout catalog.</p>
+          <p className="eyebrow">Proof and services</p>
+          <h2>Public evidence before private scoping</h2>
+          <p>Start with runnable systems, synthetic demos, benchmark notes, and architecture routes. Scoped services are separate, bounded engagements; no customer deployment or outcome is implied by the public proof.</p>
         </div>
 
         <ServiceOffers offerRepo={offerRepo} highlightedLane={highlightedLane} />
@@ -219,7 +219,17 @@ const Projects: React.FC = () => {
                   </span>
                   <ChevronDown size={16} className="disclosure-icon" aria-hidden="true" />
                 </summary>
-                <div className="project-business" aria-label={`${project.title} stack and architecture`}>
+                <div className="project-business" aria-label={`${project.title} target user, proof path, stack, and architecture`}>
+                  <div className="project-business-item">
+                    <Network size={15} aria-hidden="true" />
+                    <span>Target user</span>
+                    <strong>{project.market}</strong>
+                  </div>
+                  <div className="project-business-item">
+                    <FileText size={15} aria-hidden="true" />
+                    <span>How to verify</span>
+                    <strong>{project.proofPath}</strong>
+                  </div>
                   <div className="project-business-item">
                     <Cpu size={15} aria-hidden="true" />
                     <span>Stack</span>

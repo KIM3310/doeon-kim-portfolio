@@ -74,6 +74,14 @@ jobs:
           echo "Cloudflare deploy failed after retries"
           exit 1
 
-      - name: Skip optional Cloudflare deploy
+      - name: Verify deployed static and dynamic routes
+        if: steps.cloudflare.outputs.enabled == 'true'
+        env:
+          SMOKE_ATTEMPTS: "5"
+          SMOKE_REQUIRE_DYNAMIC: "1"
+        run: bash scripts/smoke_production.sh
+
+      - name: Record unavailable Cloudflare deployment
         if: steps.cloudflare.outputs.enabled != 'true'
-        run: echo "Cloudflare secrets are not configured; skipping optional Cloudflare Pages deploy."
+        run: |
+          echo "Cloudflare secrets are not configured; dynamic inquiry and telemetry routes were not deployed." | tee -a "$GITHUB_STEP_SUMMARY"

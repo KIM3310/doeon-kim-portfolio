@@ -16,15 +16,15 @@ export const RESOURCE_WIRING = [
   {
     label: 'Deployment stack',
     source: 'Cloudflare-first',
-    summary: 'Low-fixed-cost deployment lane for public demos, resource pages, consent controls, aggregate counters, and export storage.',
+    summary: 'Low-fixed-cost deployment lane for public demos, resource pages, consent controls, coarse interaction counters, and export storage.',
     resources: ['Cloudflare Pages', 'Workers', 'D1', 'KV', 'R2'],
-    path: 'Pages for resources, Workers for thin APIs, D1/KV/R2 only when state, consented aggregates, or exports are real.',
+    path: 'Pages for resources, Workers for thin APIs, and D1/KV/R2 only when state, consented coarse counters, or exports are required.',
   },
   {
     label: 'Revenue boundary',
     source: 'Privacy first',
-    summary: 'Contextual ads belong only on public resource pages; aggregate insights require consent and anonymization.',
-    resources: ['Consent state', 'Contextual ads', 'Anonymous aggregates', 'Synthetic datasets', 'Ad-free sensitive flows'],
+    summary: 'Public analytics is limited to consented coarse interaction counts; those counts are not customer benchmarks or a data product.',
+    resources: ['Consent state', 'Contextual ads', 'Coarse counters', 'Synthetic datasets', 'Ad-free sensitive flows'],
     path: 'Never sell personal data, private documents, traces, incident records, health imagery, or inquiry content.',
   },
 ] as const;

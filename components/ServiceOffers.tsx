@@ -17,22 +17,23 @@ interface ServiceOffersProps {
 }
 
 const ServiceOffers: React.FC<ServiceOffersProps> = ({ offerRepo, highlightedLane }) => (
-  <div id="service-offers" className="service-offer-ledger" aria-label="Free utility and benchmark data-lab lanes by repository">
+  <div id="service-offers" className="service-offer-ledger" aria-label="Scoped service lanes and public proof by repository">
     <div className="coverage-intro">
-      <span>Free utilities</span>
-      <h2>Seven public labs backed by runnable systems</h2>
-      <p>Each lane routes to free resource pages for utilities, benchmarks, architecture notes, and synthetic demos. Revenue is limited to contextual ads on public resource pages plus consented anonymous aggregate insights; sensitive workflows remain ad-free and personal data is never sold.</p>
+      <span>Public proof + scoped services</span>
+      <h2>Seven bounded service lanes backed by runnable systems</h2>
+      <p>Every lane starts with free public proof. Starting prices are non-binding, no checkout is active, and final scope, timing, and fees are confirmed privately in writing. Sensitive customer material is excluded from public demos and personal data is never sold.</p>
     </div>
     {offerRepo && (
       <p className="offer-route-note" role="status">
-        Resource route: <strong>{offerRepo}</strong>
-        {highlightedLane ? <> is mapped to <strong>{highlightedLane.name}</strong>.</> : <> has no active lab mapping.</>}
+        Repository route: <strong>{offerRepo}</strong>
+        {highlightedLane ? <> is mapped to <strong>{highlightedLane.name}</strong>.</> : <> has no active service mapping.</>}
       </p>
     )}
 
-    <div className="commercial-lane-grid" aria-label="Free utility and aggregate benchmark lanes">
+    <div className="commercial-lane-grid" aria-label="Scoped services with separate public proof routes">
       {COMMERCIAL_LANES.map((lane, index) => {
         const resourceUrl = resourceUrlForLane(lane);
+        const inquiryUrl = lane.fallbackCtaUrl;
 
         return (
           <article
@@ -60,23 +61,23 @@ const ServiceOffers: React.FC<ServiceOffersProps> = ({ offerRepo, highlightedLan
                 <strong>{lane.billingMode}</strong>
               </div>
               <div>
-                <span>Public utility</span>
+                <span>Starting point</span>
                 <strong>{lane.priceAnchor}</strong>
               </div>
               <div>
-                <span>Resource package</span>
+                <span>Scoped deliverable</span>
                 <strong>{lane.concreteDeliverable}</strong>
               </div>
               <div>
-                <span>Revenue boundary</span>
+                <span>Commercial boundary</span>
                 <strong>{lane.paidMotion}</strong>
               </div>
               <div>
-                <span>Aggregate insight</span>
+                <span>Public proof boundary</span>
                 <strong>{lane.dataLabSignal}</strong>
               </div>
               <div>
-                <span>Privacy line</span>
+                <span>Data boundary</span>
                 <strong>{lane.privacyBoundary}</strong>
               </div>
               <div>
@@ -84,17 +85,26 @@ const ServiceOffers: React.FC<ServiceOffersProps> = ({ offerRepo, highlightedLan
                 <strong>{lane.primaryRepos.join(' · ')}</strong>
               </div>
               <div>
-                <span>Support proof</span>
+                <span>Supporting repos</span>
                 <strong>{lane.supportRepos.length > 0 ? lane.supportRepos.join(' · ') : 'No separate support repos'}</strong>
               </div>
             </div>
-            <a
-              className="commercial-lane-cta"
-              href={resourceUrl}
-              onClick={() => trackCommerceCtaClick(lane.id, lane.billingMode, 'lane_checkout')}
-            >
-              <DatabaseZap size={13} /> {lane.ctaLabel} <ArrowRight size={13} />
-            </a>
+            <div className="commercial-lane-actions">
+              <a
+                className="commercial-lane-cta is-secondary"
+                href={resourceUrl}
+                onClick={() => trackCommerceCtaClick(lane.id, lane.billingMode, 'public_proof')}
+              >
+                <DatabaseZap size={13} /> Open public proof
+              </a>
+              <a
+                className="commercial-lane-cta"
+                href={inquiryUrl}
+                onClick={() => trackCommerceCtaClick(lane.id, lane.billingMode, 'lane_inquiry')}
+              >
+                {lane.ctaLabel} <ArrowRight size={13} />
+              </a>
+            </div>
           </article>
         );
       })}

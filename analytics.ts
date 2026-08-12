@@ -24,7 +24,7 @@ export const updateAnalyticsConsent = (consent: AnalyticsConsent): void => {
 export const trackCommerceCtaClick = (
   laneId: string,
   billingMode: string,
-  ctaKind: 'lane_checkout' | 'repo_router',
+  ctaKind: 'lane_inquiry' | 'public_proof' | 'repo_router',
 ): void => {
   if (typeof window.gtag !== 'function' || !hasAnalyticsConsent()) return;
 

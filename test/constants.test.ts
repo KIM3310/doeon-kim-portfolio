@@ -12,11 +12,12 @@ describe('PROFILE', () => {
     expect(PROFILE.intro).toBeTruthy();
   });
 
-  it('states the current utility and verification boundary', () => {
+  it('states the current proof and verification boundary', () => {
     expect(PROFILE.title).toContain('Operational AI');
-    expect(PROFILE.intro).toContain('Free public utilities');
+    expect(PROFILE.intro).toContain('Public proof stays separate from scoped services');
     expect(PROFILE.intro).toContain('tests');
-    expect(PROFILE.intro).toContain('human-control boundaries');
+    expect(PROFILE.intro).toContain('synthetic-data boundaries');
+    expect(PROFILE.intro).toContain('human-control gates');
   });
 });
 
@@ -70,9 +71,9 @@ describe('INTERX_ROLE', () => {
 describe('MILITARY_ROLE', () => {
   it('foregrounds strategic network security operations', () => {
     expect(MILITARY_ROLE.company).toContain('Defense Communication');
-    expect(MILITARY_ROLE.title).toContain('MW Communications');
+    expect(MILITARY_ROLE.title).toContain('Microwave (MW) Communications');
     expect(MILITARY_ROLE.period).toContain('Nov 2023');
-    expect(MILITARY_ROLE.summary).toContain('6-person squad');
+    expect(MILITARY_ROLE.summary).toContain('six-person microwave (MW) communications squad');
     expect(MILITARY_ROLE.focus.join(' ')).toContain('8-9 incidents');
     expect(MILITARY_ROLE.focus.join(' ')).toContain('CCTV');
   });
@@ -122,6 +123,8 @@ describe('PROJECTS', () => {
     expect(PROJECTS.find(p => p.title === 'stage-pilot')?.description).toContain('Tool-call reliability runtime');
     expect(PROJECTS.find(p => p.title === 'agent-runtime-go')?.evidence).toContain('agent-runtime-trace');
     expect(PROJECTS.find(p => p.title === 'agent-runtime-go')?.demo).toContain('github.io/agent-runtime-go');
+    expect(PROJECTS.find(p => p.title === 'memoryflow-lab')?.evidence).toContain('memoryflow-evidence');
+    expect(PROJECTS.find(p => p.title === 'memoryflow-lab')?.demo).toContain('github.io/memoryflow-lab');
     expect(PROJECTS.find(p => p.title === 'ai-agent-production-lab')?.evidence).toContain('ai-agent-production-report');
     expect(PROJECTS.find(p => p.title === 'lakehouse-contract-lab')?.evidence).toContain('lakehouse-contract-board');
     expect(PROJECTS.find(p => p.title === 'districtpilot-ai')?.description).toContain('public API readiness map');

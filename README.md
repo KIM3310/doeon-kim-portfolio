@@ -1,12 +1,14 @@
+# Doeon Kim — KIM3310 Systems Gallery
+
+**Live portfolio:** [kim3310-doeon-kim-portfolio.pages.dev](https://kim3310-doeon-kim-portfolio.pages.dev/)
+
 ![CI](https://github.com/KIM3310/doeon-kim-portfolio/actions/workflows/ci.yml/badge.svg)
 ![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white)
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-# KIM3310 Systems Gallery
-
-Operations-first systems gallery for enterprise GenAI, data-center security operations, military MW communications, IT infrastructure operations, secure automation, AI runtimes, operations workbenches, data contracts, and applied ML workflows. Built with React + TypeScript and deployed on GitHub Pages.
+Operations-first systems gallery for enterprise GenAI, data-center security operations, military microwave (MW) communications, IT infrastructure operations, secure automation, AI runtimes, operations workbenches, data contracts, and applied ML workflows. Static builds deploy to GitHub Pages and Cloudflare Pages; dynamic inquiry and telemetry routes require the Cloudflare deployment and are exposed only after a live endpoint check.
 
 The page is product-focused: military 24/7 communications and security monitoring, CCTV/VMS/NVR operation, access-control and intrusion-alert handling, completed InterX infrastructure role context, education, certifications, project cards, capability lanes, verification posture, and repository links. It is written to show the working habit behind each system: define the operator problem, bound the data and trust model, leave a runnable verification path, and document the gap between demo evidence and production claims. It avoids private data, credential requirements, and external tenant assumptions. Private case studies are labeled without exposing repository links that public visitors cannot open.
 
@@ -17,7 +19,6 @@ A compact public gallery that makes each system read like a product, not a scatt
 | Area | Details |
 |---|---|
 | Users | Technical evaluators, AI platform teams, operations leaders, and partners evaluating product judgment. |
-| Technical path | Validate the demo, README, architecture notes, and quality gate before deeper workflow review. |
 | System scope | Each card exposes stack tags, runtime boundaries, architecture links, live evidence, demos, and repository routes. |
 | Operating boundary | The site avoids client secrets and only displays public-safe project summaries and generated visual assets. |
 | Evaluation path | `npm run verify` checks type safety, content guarantees, tests, and production build before deployment. |
@@ -27,7 +28,8 @@ A compact public gallery that makes each system read like a product, not a scatt
 1. Open the live gallery and scan the first flagship lane.
 2. Expand one project card and confirm it exposes stack tags, runtime boundary, architecture route, and live evidence.
 3. Open [docs/live-service-screenshots.md](docs/live-service-screenshots.md) and [docs/repository-upgrade-audit.md](docs/repository-upgrade-audit.md).
-4. Run `npm run verify` before treating the gallery as current.
+4. Review [memoryflow-lab](https://kim3310.github.io/memoryflow-lab/) separately for measured-versus-analytical systems-performance evidence.
+5. Run `npm run verify` before treating the gallery as current.
 
 ## Evaluation Path
 
@@ -36,8 +38,8 @@ A compact public gallery that makes each system read like a product, not a scatt
 - **Checks:** Run `npm run verify`; it covers type safety, tests, content guarantees, and production build.
 - **Chrome audit:** Run `npm run audit:chrome` to open every portfolio demo in Google Chrome and record desktop/mobile layout signals.
 - **Live proof:** Current service screenshots are tracked in [docs/live-service-screenshots.md](docs/live-service-screenshots.md).
-- **Repo audit:** The 35 editable-repo validation pass is recorded in [docs/repository-upgrade-audit.md](docs/repository-upgrade-audit.md).
-- **Demo catalog:** Supporting repos without service URLs now have GitHub Pages demos listed in [docs/public-demo-catalog.md](docs/public-demo-catalog.md).
+- **Repo audit:** The dated 35-repository publication catalog is recorded in [docs/repository-upgrade-audit.md](docs/repository-upgrade-audit.md); `memoryflow-lab` is a separate research-depth project, making 36 active repositories account-wide.
+- **Demo catalog:** Supporting repositories have public static demos listed in [docs/public-demo-catalog.md](docs/public-demo-catalog.md).
 - **Service read:** Use the gallery as the portfolio router for GenAI operations, incident ops, runtime reliability, and governed analytics.
 
 ## Technology Stack And Architecture
@@ -70,32 +72,13 @@ A compact public gallery that makes each system read like a product, not a scatt
 - [Enterprise readiness notes](docs/enterprise-readiness.md) outlines security, data, operations, integration, and handoff expectations.
 - [Readiness snapshot](docs/final-architecture-notes.md) records the latest local verification and the external checks that should be rerun before an important external review.
 
-## What Changed
+## Current Portfolio Surface
 
-- Rebuilt the UI as a light, minimalist product gallery with tighter spacing, quieter contrast, and responsive proof-first layouts.
-- Rebuilt the first screen as a compact systems gallery.
-- Added market, architecture-signal, and service-path fields to every displayed project so the gallery reads as a product portfolio, not a loose demo list.
-- Foregrounded ROK Defense Communication Command MW communications squad leader experience.
-- Added InterX IT Infrastructure Operations Manager experience for Apr-May 2026.
-- Restored education, Microsoft AI School training, language, and certification details.
-- Removed legacy packets, generated documents, and archived runtime bridge files.
-- Consolidated the page around active repositories and reusable engineering patterns.
-- Promoted AIX Pilot as the current flagship enterprise GenAI product surface.
-- Added live service screenshots for the current public proof surfaces and refreshed repository coverage to the audited 35 editable repos.
-- Added a narrated English TTS evidence reel generated from the current live service screenshots and repository posture.
-- Cleaned public/private repository link handling and clarified consolidated-lane metrics.
-- Kept static evidence assets for visual context without requiring live credentials.
-- Added a liquid-glass progressive disclosure pass so dense project, experience, outcome, and credential details stay inspectable without overwhelming the first scan.
-- Tightened filter chips, disclosure controls, and responsive glass surfaces for cleaner keyboard and mobile behavior.
-- Added active-section navigation polish so the gallery keeps orientation while visitors move through project evidence and the repository ledger.
-- Added GitHub Pages demo surfaces for 18 previously demo-less supporting repositories and turned the coverage ledger into clickable demo routes.
-- Added a readiness snapshot based on local verification, recorded demo checks, homepage metadata, portfolio verification, and UX checks.
-- Added a per-repository architecture audit covering service direction, architecture priority, critical blockers, and priority fixes for all 35 editable coverage repositories.
-- Added an architecture plan so visitors can evaluate scoped proof surfaces before browsing the full repository gallery.
-- Added public API readiness proof for `twincity-ui`, `smallbiz-ops-copilot`, and `districtpilot-ai` using provider metadata aligned with `public-apis-4Kr` without storing provider secrets.
-- Added a storefront-level free-resource/payment wiring panel from DaesikPage and `public-apis-4Kr`, with Cloudflare-first deployment and Toss/PortOne/Stripe secret-slot boundaries.
-- Consolidated 35 repositories into seven outcome-focused offers and added a Cloudflare D1-backed private inquiry route with repository-to-service validation, atomic email/network/global rate limits, one-way abuse-prevention fingerprints, and an independent daily retention Worker.
-- Upgraded the storefront visual system with a premium design contract, commercial-lane ordinal cards, proof chips, refined glass/elevation tokens, and mobile-first touch rhythm.
+- Person-first systems gallery with live demos, architecture routes, and explicit public/private boundaries.
+- Seven bounded service lanes separated from their free public proof; starting prices are non-binding and no checkout is active.
+- Cloudflare inquiry form fails closed to a LinkedIn fallback unless the dynamic endpoint passes a live preflight check.
+- Project cards cover operational AI, runtime reliability, data systems, secure workflows, infrastructure, and applied ML.
+- The 35-repository publication catalog remains a dated commercial snapshot; `memoryflow-lab` is routed separately as systems-performance research evidence.
 
 ## Project Lanes
 
@@ -139,7 +122,7 @@ The command above runs typecheck, tests, content verification, and the productio
 
 ## Deploy
 
-The site is deployed at `https://kim3310-doeon-kim-portfolio.pages.dev/` via Cloudflare Pages.
+The canonical static site is `https://kim3310-doeon-kim-portfolio.pages.dev/`. Dynamic routes are usable only when the Cloudflare Functions deployment passes the semantic smoke gate; otherwise the UI displays a private LinkedIn fallback.
 
 ## Cloud + AI Architecture
 
@@ -150,10 +133,6 @@ The site is deployed at `https://kim3310-doeon-kim-portfolio.pages.dev/` via Clo
 ## Enterprise Productization
 
 - [Product operating model](docs/product-operating-model.md) defines the product scope, trust boundary, operating checks, and service path for this repository.
-
-## Service Architecture
-
-- [Service architecture](docs/service-architecture.md) defines cloud resources, account information, operational controls, and production guardrails for a scoped technical workflow.
 
 <!-- search-growth-readme:start -->
 
