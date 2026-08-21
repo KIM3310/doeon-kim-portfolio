@@ -354,7 +354,7 @@ export const SERVICE_OFFERS = [
   {
     "repo": "nw-service-assurance-workbench",
     "name": "NW Service Assurance Workbench",
-    "canonicalUrl": "https://nw-service-assurance-workbench.pages.dev/",
+    "canonicalUrl": "https://nw-service-assurance-workbench.ehdjs1351.workers.dev/",
     "leadCaptureUrl": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=nw-service-assurance-workbench&inquiry=incident-operations-exercise#private-inquiry",
     "laneId": "incident-operations-exercise",
     "sourceAccess": "public",
@@ -450,7 +450,7 @@ export const SERVICE_OFFERS = [
   {
     "repo": "security-threat-response-workbench",
     "name": "Security Threat Response Workbench",
-    "canonicalUrl": "https://security-threat-response-workbench.pages.dev/",
+    "canonicalUrl": "https://security-threat-response-workbench.ehdjs1351.workers.dev/",
     "leadCaptureUrl": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=security-threat-response-workbench&inquiry=incident-operations-exercise#private-inquiry",
     "laneId": "incident-operations-exercise",
     "sourceAccess": "public",

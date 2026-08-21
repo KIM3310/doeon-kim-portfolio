@@ -38,7 +38,7 @@ A compact public gallery that makes each system read like a product, not a scatt
 - **Checks:** Run `npm run verify`; it covers type safety, tests, content guarantees, and production build.
 - **Chrome audit:** Run `npm run audit:chrome` to open every portfolio demo in Google Chrome and record desktop/mobile layout signals.
 - **Live proof:** Current service screenshots are tracked in [docs/live-service-screenshots.md](docs/live-service-screenshots.md).
-- **Repo audit:** The dated 35-repository publication catalog is recorded in [docs/repository-upgrade-audit.md](docs/repository-upgrade-audit.md); `memoryflow-lab` is a separate research-depth project, making 36 active repositories account-wide.
+- **Repo audit:** The current public inventory contains **30 active public original repositories and 15 archived public original repositories**. The dated 35-repository publication catalog remains available at [docs/repository-upgrade-audit.md](docs/repository-upgrade-audit.md) as a historical snapshot.
 - **Demo catalog:** Supporting repositories have public static demos listed in [docs/public-demo-catalog.md](docs/public-demo-catalog.md).
 - **Service read:** Use the gallery as the portfolio router for GenAI operations, incident ops, runtime reliability, and governed analytics.
 
