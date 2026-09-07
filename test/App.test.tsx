@@ -4,15 +4,15 @@ import App from '../App';
 import { resolveProjectScrollTargetId } from '../components/Projects';
 
 describe('App component', () => {
-  it('shows eight selected projects first and preserves the wider project collection', () => {
+  it('shows thirteen selected projects first and preserves the wider project collection', () => {
     const { container } = render(<App />);
     const titles = () => Array.from(container.querySelectorAll('.project-card h3')).map(node => node.textContent);
-    expect(titles()).toEqual(['AegisOps', 'IdleMesh', 'MemoryFlow Lab', 'Nexus-Hive', 'StagePilot', 'Memory Change Gate', 'Secure XL2HWP', 'Tool-Call Fine-Tune Lab']);
+    expect(titles()).toEqual(["AegisOps", "IdleMesh", "MemoryFlow Lab", "Nexus-Hive", "StagePilot", "TwinCity UI", "Lakehouse Contract Lab", "SteadyTap", "Memory Change Gate", "Secure XL2HWP", "Tool-Call Fine-Tune Lab", "LLM On-Prem Deployment Kit", "KBBQ Idle Unity"]);
     fireEvent.click(screen.getByRole('button', { name: /Explore more projects/ }));
-    expect(titles().length).toBeGreaterThan(8);
-    expect(titles()).toContain('twincity-ui');
+    expect(titles().length).toBeGreaterThan(13);
+    expect(titles()).toContain('TwinCity UI');
     fireEvent.click(screen.getByRole('button', { name: 'Back to selected work' }));
-    expect(titles()).toHaveLength(8);
+    expect(titles()).toHaveLength(13);
   });
   it('keeps private selected work inspectable without publishing inaccessible source links', () => {
     const { container } = render(<App />);
@@ -115,7 +115,7 @@ describe('App component', () => {
     expect(screen.getByAltText('twincity-ui visual evidence')).toBeInTheDocument();
     expect(screen.getByAltText('retina-scan-ai visual evidence')).toBeInTheDocument();
     expect(screen.getByText(/public API readiness map/)).toBeInTheDocument();
-    expect(screen.getByText(/Korean public API readiness/)).toBeInTheDocument();
+    expect(screen.getByText(/survives connection failures/)).toBeInTheDocument();
   });
 
   it('links coverage repositories to public demos', () => {

@@ -1,0 +1,25 @@
+{
+  "schema": "llm-cluster-smoke-v1",
+  "scope": "real kind Kubernetes, chart, TLS and Traefik; synthetic inference HTTP fixture",
+  "checks": [
+    "helm rollout",
+    "HTTP redirects to HTTPS",
+    "trusted local TLS certificate",
+    "missing key rejected",
+    "wrong key rejected",
+    "secret reaches inference process",
+    "authenticated request routed",
+    "pod deletion recovery"
+  ],
+  "notValidated": [
+    "GPU inference",
+    "model quality",
+    "network policy enforcement",
+    "Qdrant persistence",
+    "airgap install",
+    "cloud provisioning"
+  ],
+  "sourceCommit": "a7441085b588f1598ae50fa4a420d0c914c02432",
+  "workflowUrl": "https://github.com/KIM3310/llm-onprem-deployment-kit/actions/runs/34116465234",
+  "status": "success"
+}

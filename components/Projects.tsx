@@ -6,6 +6,10 @@ import RepositoryCatalog from './RepositoryCatalog';
 import { SELECTED_WORK, selectedWorkFor } from "../selectedWork";
 import ServiceOffers from './ServiceOffers';
 
+const OBSERVED_RUNS: Record<string, string> = {
+  SteadyTap: 'evidence/steadytap-native-verification.json',
+  'llm-onprem-deployment-kit': 'evidence/onprem-cluster-verification.json',
+};
 const TOP_TAGS = 8;
 const LIVE_IMAGE_WIDTH = 1440;
 const LIVE_IMAGE_HEIGHT = 1000;
@@ -125,7 +129,7 @@ const Projects: React.FC = () => {
         <div id="systems" className="section-heading systems-heading">
           <p className="eyebrow">Selected work</p>
           <h2>Built systems, with evidence</h2>
-          <p>Eight implementations across AI workflows, systems, data, and evaluation. Public repositories link directly to tests; private work is identified on each card.</p>
+          <p>Thirteen implementations across AI, systems, data, native apps, infrastructure, and game logic. Public repositories link directly to tests; private work is identified on each card.</p>
         </div>
 
         <div className="filter-bar">
@@ -165,6 +169,7 @@ const Projects: React.FC = () => {
             const repoName = repoNameFromGithub(project.github);
             const work = selectedWorkFor(project.title);
             const architectureUrl = repoName ? SYSTEM_ARCHITECTURE_URLS[repoName] : undefined;
+            const evidenceDoc = work ? (['twincity-ui', 'lakehouse-contract-lab', 'SteadyTap', 'llm-onprem-deployment-kit', 'kbbq-idle-unity'].includes(work.repo) ? 'docs/VERIFICATION.md' : 'docs/IMPLEMENTATION_NOTES.md') : undefined;
 
             return (
             <article key={project.title} className={`project-card ${work ? "selected-project" : ""}`} id={`project-${project.title}`}>
@@ -246,6 +251,21 @@ const Projects: React.FC = () => {
                     <ExternalLink size={14} /> Demo
                   </a>
                 )}
+                {work && project.github && evidenceDoc && project.access !== 'private' && (
+                  <a href={`https://github.com/KIM3310/${work.repo}/blob/main/${evidenceDoc}`} target="_blank" rel="noopener noreferrer">
+                    <FileText size={14} /> Evidence
+                  </a>
+                )}
+                {OBSERVED_RUNS[project.title] && (
+                  <a href={`${import.meta.env.BASE_URL}${OBSERVED_RUNS[project.title]}`} target="_blank" rel="noopener noreferrer">
+                    <FileText size={14} /> Run result
+                  </a>
+                )}
+                {project.title === 'SteadyTap' && (
+                  <a href={`${import.meta.env.BASE_URL}evidence/steadytap-release.png`} target="_blank" rel="noopener noreferrer">
+                    <ExternalLink size={14} /> Simulator screen
+                  </a>
+                )}
                 {architectureUrl && (
                   <a href={architectureUrl} target="_blank" rel="noopener noreferrer">
                     <FileText size={14} /> Architecture
@@ -258,6 +278,16 @@ const Projects: React.FC = () => {
         {filtered.length === 0 && (
           <p className="empty-state">No projects match this filter.</p>
         )}
+
+        <details className="project-business-disclosure local-measurements">
+          <summary><span><strong>Local measurements</strong><em>Method, observed results, and limits</em></span><ChevronDown size={16} /></summary>
+          <div className="project-business">
+            <p><strong>AegisOps:</strong> uncached loopback HTTP, synthetic demo provider, 30 requests: p50 1.99 ms / p95 3.67 ms. No model inference.</p>
+            <p><strong>IdleMesh:</strong> one Mac, 24 SHA-256 tasks per run: 24.22 / 39.24 / 52.60 tasks per second at 1 / 2 / 4 local slots. Injected-failure recovery: 35.98 ms on a separate smaller task.</p>
+            <p>Single local runs on Apple M4; these are not fleet performance or production service guarantees.</p>
+            <a href={`${import.meta.env.BASE_URL}evidence/local-measurements.json`} target="_blank" rel="noopener noreferrer">Read the method and observations</a>
+          </div>
+        </details>
 
         <div className="archive-toggle"><button type="button" className="secondary-action" aria-expanded={showArchive} onClick={() => { setShowArchive(!showArchive); setFilter(null); setShowAllTags(false); }}>{showArchive ? "Back to selected work" : `Explore more projects (${PROJECTS.length - SELECTED_WORK.length})`}</button></div>
 

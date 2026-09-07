@@ -1,0 +1,6 @@
+{
+  "type": "external-project-preview",
+  "sourceRepository": "https://github.com/KIM3310/twincity-ui",
+  "url": "https://twincity-ui.pages.dev/",
+  "scope": "Production React components in synthetic preview mode, built and published by the TwinCity project. This gallery stores a stable navigation route, not a second vendor bundle."
+}

@@ -1,6 +1,6 @@
 # Doeon Kim — Selected Work
 
-A portfolio organized around implementation, design decisions, and evidence. Eight projects cover AI workflows, scheduling and recovery, memory systems, controlled SQL, runtime experiments, change integrity, document automation, and tool-call evaluation.
+A portfolio organized around implementation, design decisions, and evidence. Thirteen projects cover AI workflows, scheduling and recovery, memory systems, controlled SQL, runtime experiments, change integrity, document automation, tool-call evaluation, spatial UI, Spark data pipelines, native iOS, infrastructure deployment, and game economy.
 
 [Open the portfolio](https://kim3310.github.io/doeon-kim-portfolio/) · [Selection and evidence boundaries](docs/selected-work.md)
 
@@ -16,7 +16,7 @@ Use the local URL printed by Vite. Verification covers TypeScript, generated bin
 
 ## Read the implementation
 
-- `selectedWork.ts` defines the eight projects and their evidence boundaries.
+- `selectedWork.ts` defines the thirteen projects and their evidence boundaries.
 - `constants.ts` retains the larger collection and its public/private metadata.
 - `components/Projects.tsx` renders the selected cards, source links, filters, and collection toggle.
 - `test/App.test.tsx` checks the selection flow and suppresses inaccessible links for private source.
