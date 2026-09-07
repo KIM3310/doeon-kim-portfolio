@@ -31,7 +31,7 @@ Private source remains private; cards omit inaccessible Code/Tests links and loc
 - SteadyTap: Swift tests, native release build, simulator launch and actual tap/drag-to-practice flow passed. [Observed run](../public/evidence/steadytap-native-verification.json). No physical-device or clinical-outcome claim.
 - KBBQ: shared C# regression tests and checksummed historical WebGL files. No current-source Unity rebuild claim.
 
-[Raw local measurements](../public/evidence/local-measurements.json) include the method and limitations. The embedded [TwinCity preview](../public/demos/twincity/provenance.json) records the source revision and built-file hashes; it imports the real console implementation.
+[Raw local measurements](../public/evidence/local-measurements.json) include the method and limitations. The [TwinCity preview route](../public/demos/twincity/provenance.json) opens the console published by its own repository. It uses the production components; the portfolio does not duplicate generated Three.js/vendor bundles.
 
 ## Verification and hosting
 

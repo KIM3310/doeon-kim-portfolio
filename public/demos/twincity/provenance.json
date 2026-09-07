@@ -1,19 +1,6 @@
 {
+  "type": "external-project-preview",
   "sourceRepository": "https://github.com/KIM3310/twincity-ui",
-  "sourceCommit": "33d5a0bd69ed8410b4a943bd38a53dd873790ea9",
-  "command": "npm run build:preview",
-  "scope": "Built production React components in synthetic preview mode; no server API.",
-  "files": {
-    "3d/floorplan_wireframe_20241027.png": "8b86278d427f67d2a9c02f30f561817721364e9641f0f066cd1c7db4cdbe2bcc",
-    "3d/floorplan_wireframe_20241027_clean.png": "8b86278d427f67d2a9c02f30f561817721364e9641f0f066cd1c7db4cdbe2bcc",
-    "3d/models/store_13x13.glb": "e65b24a51fdb44fa853a7e118cd6331f67153d56b42b35c7a6f3ef1538fba15f",
-    "assets/MapWorld3D-D3SkbLyH.js": "62aca391039d7ee35d8c7d153d112c2b0f1756befee2a1e4b6fab1a97b086a15",
-    "assets/index-B_KjQZWv.js": "73c2cb580872ab9bc9165b4d95c604eebde70300f2ad1fc29fc3e94c01959283",
-    "assets/index-Dmpagz-7.css": "7da505e639ff24eb4ce752889e1c275c9db402f4f14fe30464bc01b2d85a2727",
-    "favicon.ico": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d",
-    "floorplan_s001.png": "d0600792122f833cf3f998018b4bcbdfc38e923d6b5168b5e3d97d1cef1f227b",
-    "floorplan_wireframe_20241027.png": "8b86278d427f67d2a9c02f30f561817721364e9641f0f066cd1c7db4cdbe2bcc",
-    "floorplan_wireframe_20241027_clean.png": "8b86278d427f67d2a9c02f30f561817721364e9641f0f066cd1c7db4cdbe2bcc",
-    "index.html": "21fe602a389c0a8bc207ec5740ee05a32588e1b02a031ae78ab4fa52f1f9b583"
-  }
+  "url": "https://twincity-ui.pages.dev/",
+  "scope": "Production React components in synthetic preview mode, built and published by the TwinCity project. This gallery stores a stable navigation route, not a second vendor bundle."
 }

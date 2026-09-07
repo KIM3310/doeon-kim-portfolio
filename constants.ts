@@ -546,7 +546,7 @@ export const PROJECTS: Project[] = [
     description: 'Unity idle-game systems with a shared C# economy implementation and historical WebGL provenance.',
     tech: ['Unity', 'C#', '.NET', 'Game systems'],
     github: 'https://github.com/KIM3310/kbbq-idle-unity',
-    demo: 'https://kim3310.github.io/kbbq-idle-unity/',
+    demo: 'https://kbbq-idle-unity.pages.dev',
     evidence: 'evidence/kbbq-economy.svg',
     market: 'Readers inspecting gameplay state and economy design',
     architectureSignal: 'Shared reward math, bounded offline earnings, separate backend sandbox',
