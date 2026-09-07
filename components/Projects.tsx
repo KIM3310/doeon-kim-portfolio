@@ -27,6 +27,7 @@ export const resolveProjectScrollTargetId = (
   hashTarget: string,
   highlightedLaneId?: string,
 ): string | null => {
+  if (hashTarget.startsWith('project-') && selectedWorkFor(hashTarget.slice(8))) return hashTarget;
   if (hashTarget === 'private-inquiry') return hashTarget;
   if (highlightedLaneId) return `lane-${highlightedLaneId}`;
   if (hashTarget === 'coverage' || hashTarget === 'service-offers') return hashTarget;
@@ -124,7 +125,7 @@ const Projects: React.FC = () => {
         <div id="systems" className="section-heading systems-heading">
           <p className="eyebrow">Selected work</p>
           <h2>Built systems, with evidence</h2>
-          <p>Five projects. Five different engineering problems. Open the code, run the checks, and inspect the decisions behind each result.</p>
+          <p>Eight implementations across AI workflows, systems, data, and evaluation. Public repositories link directly to tests; private work is identified on each card.</p>
         </div>
 
         <div className="filter-bar">
@@ -181,7 +182,7 @@ const Projects: React.FC = () => {
               <p className="project-copy">{work?.problem ?? project.description}</p>
               {work && <div className="project-engineering">
                 <p><strong>Design decision</strong>{work.decision}</p>
-                <p><strong>Reproduce</strong><code>{work.command}</code></p>
+                <p><strong>{project.access === 'private' ? 'Verification scope' : 'Reproduce'}</strong>{project.access === 'private' ? <span>{project.proofPath}</span> : <code>{work.command}</code>}</p>
                 <p className="project-boundary">{work.boundary}</p>
               </div>}
               <details className="project-business-disclosure">
@@ -216,7 +217,7 @@ const Projects: React.FC = () => {
                   <div className="project-business-item">
                     <FileText size={15} aria-hidden="true" />
                     <span>System doc</span>
-                    <strong>{architectureUrl ? 'docs/system-architecture.md' : 'Architecture route listed in the resource matrix'}</strong>
+                    <strong>{architectureUrl ? 'docs/system-architecture.md' : project.access === 'private' ? 'Private source; implementation summary above' : 'Architecture route listed in the resource matrix'}</strong>
                   </div>
                 </div>
               </details>
@@ -234,8 +235,8 @@ const Projects: React.FC = () => {
                 ))}
               </div>
               <div className="project-actions">
-                {work && <a href={`https://github.com/KIM3310/${work.repo}/blob/main/${work.proof}`} target="_blank" rel="noopener noreferrer"><FileText size={14} /> Tests</a>}
-                {project.github && (
+                {work && project.github && project.access !== 'private' && <a href={`https://github.com/KIM3310/${work.repo}/blob/main/${work.proof}`} target="_blank" rel="noopener noreferrer"><FileText size={14} /> Tests</a>}
+                {project.github && project.access !== 'private' && (
                   <a href={project.github} target="_blank" rel="noopener noreferrer">
                     <Github size={14} /> Code
                   </a>

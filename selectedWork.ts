@@ -8,7 +8,15 @@ export const SELECTED_WORK = [
     boundary: 'The public demo uses synthetic incidents. Provider-backed analysis runs through the local API.',
   },
   {
-    repo: 'memoryflow-lab', title: 'MemoryFlow Lab', discipline: '02 / Quantitative systems reasoning',
+    repo: 'idlemesh', title: 'IdleMesh', discipline: '02 / Scheduling & recovery',
+    problem: 'Recover interrupted compute shards without accepting results from an obsolete attempt.',
+    decision: 'SQLite transactions, a fresh token per lease, and capacity derived from live work.',
+    command: 'npm ci && npm run verify && npm run proof:recovery',
+    source: 'src/db.ts', proof: 'tests/lease-fencing.test.ts',
+    boundary: 'Private source. Local HTTP recovery uses real CPU work with an injected failure; multi-device throughput is unmeasured.',
+  },
+  {
+    repo: 'memoryflow-lab', title: 'MemoryFlow Lab', discipline: '03 / Quantitative systems reasoning',
     problem: 'Compare KV-cache placement when a workload exceeds the modeled memory budget.',
     decision: 'Page-aware capacity constraints, latency/energy trade-offs, and reproducible sensitivity analysis.',
     command: 'make install && make verify',
@@ -16,7 +24,7 @@ export const SELECTED_WORK = [
     boundary: 'HBM/CXL results are analytical estimates. Committed MPS measurements cover narrower copy and attention experiments.',
   },
   {
-    repo: 'Nexus-Hive', title: 'Nexus-Hive', discipline: '03 / Controlled data execution',
+    repo: 'Nexus-Hive', title: 'Nexus-Hive', discipline: '04 / Controlled data execution',
     problem: 'Convert a natural-language question into SQL without skipping the execution policy.',
     decision: 'Parse SQL structure; inspect columns and statements; stop denied and review-required queries before execution.',
     command: 'make install && make verify',
@@ -24,7 +32,7 @@ export const SELECTED_WORK = [
     boundary: 'SQLite is the local demo. SQL policy is an application gate; database permissions remain necessary.',
   },
   {
-    repo: 'stage-pilot', title: 'StagePilot', discipline: '04 / Runtime & experiment design',
+    repo: 'stage-pilot', title: 'StagePilot', discipline: '05 / Runtime & experiment design',
     problem: 'Recover malformed tool calls and show exactly which cases still fail.',
     decision: 'Bounded retries and a case-by-case benchmark make recovery behavior inspectable.',
     command: 'pnpm install --frozen-lockfile && pnpm verify',
@@ -32,12 +40,28 @@ export const SELECTED_WORK = [
     boundary: 'An attributed extension of upstream Apache-2.0 code. The benchmark uses synthetic inputs and prewritten retry responses.',
   },
   {
-    repo: 'secure-xl2hwp-local', title: 'Secure XL2HWP', discipline: '05 / Practical document automation',
+    repo: 'memory-test-master-change-gate', title: 'Memory Change Gate', discipline: '06 / Change integrity',
+    problem: 'Trace a master-data change through dependencies, approvals, release conditions, and rollback.',
+    decision: 'Bind decisions to exact source snapshots and reconstruct domain results when verifying an export.',
+    command: 'make install && make verify',
+    source: 'app/core/exports.py', proof: 'tests/test_bundle_resource_limits.py',
+    boundary: 'Private source. All master data and approvals are synthetic; unsigned bundles establish consistency, not publisher identity.',
+  },
+  {
+    repo: 'secure-xl2hwp-local', title: 'Secure XL2HWP', discipline: '07 / Practical document automation',
     problem: 'Clean spreadsheets and produce traceable Hancom template payloads on a local machine.',
     decision: 'Schema-driven cleanup, template checks, signed audit bundles, and distinct artifacts for every export.',
     command: 'make install && make verify',
     source: 'app/services/export_service.py', proof: 'tests/test_pipeline_service.py',
     boundary: 'Cross-platform checks cover normalized files and template payloads. Native HWP output needs Windows and Hancom.',
+  },
+  {
+    repo: 'tool-call-finetune-lab', title: 'Tool-Call Fine-Tune Lab', discipline: '08 / Evaluation & data integrity',
+    problem: 'Build a tool-call evaluation that cannot benefit from future answers or matching requests across data splits.',
+    decision: 'Context isolation, complete JSON comparison, grouped splits, and reproducible evaluator contracts.',
+    command: 'make install && make verify && make proof',
+    source: 'src/tool_call_finetune_lab/eval/bfcl_runner.py', proof: 'tests/test_evaluation_integrity.py',
+    boundary: 'CPU checks use synthetic cases. GPU training and model-quality gains are unverified; this is not an official BFCL score.',
   },
 ] as const;
 
