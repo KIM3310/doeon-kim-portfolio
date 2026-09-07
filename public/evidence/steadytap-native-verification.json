@@ -1,0 +1,74 @@
+{
+  "schema": "steadytap-native-verification-v1",
+  "sourceCommit": "b0c112dcddd2599fa0ba473872a108f78d157ff4",
+  "workflowUrl": "https://github.com/KIM3310/SteadyTap/actions/runs/34115757564",
+  "status": "success",
+  "scope": "Native iOS build, simulator launch and actual tap/drag calibration gestures; no physical device or clinical efficacy claim.",
+  "steps": [
+    {
+      "name": "Set up job",
+      "conclusion": "success"
+    },
+    {
+      "name": "Checkout",
+      "conclusion": "success"
+    },
+    {
+      "name": "Select Xcode",
+      "conclusion": "success"
+    },
+    {
+      "name": "Validate manifests and metadata",
+      "conclusion": "success"
+    },
+    {
+      "name": "Run Swift tests",
+      "conclusion": "success"
+    },
+    {
+      "name": "Build release package",
+      "conclusion": "success"
+    },
+    {
+      "name": "Generate native Xcode project",
+      "conclusion": "success"
+    },
+    {
+      "name": "Build unsigned iOS Release app",
+      "conclusion": "success"
+    },
+    {
+      "name": "Verify packaged App Store resources",
+      "conclusion": "success"
+    },
+    {
+      "name": "Build iOS Simulator Release app",
+      "conclusion": "success"
+    },
+    {
+      "name": "Launch Release app in iOS Simulator",
+      "conclusion": "success"
+    },
+    {
+      "name": "Exercise native calibration gestures",
+      "conclusion": "success"
+    },
+    {
+      "name": "Upload Release launch evidence",
+      "conclusion": "success"
+    },
+    {
+      "name": "Post Checkout",
+      "conclusion": "success"
+    },
+    {
+      "name": "Complete job",
+      "conclusion": "success"
+    }
+  ],
+  "screenshot": {
+    "path": "steadytap-release.png",
+    "sha256": "645d805883310407f364e8b97aa7c36e9a446d55b06d899404d01325909b60c9",
+    "scope": "Release launch screen, before the calibration UI test"
+  }
+}
