@@ -3,7 +3,6 @@ import { Menu, X } from 'lucide-react';
 
 const navItems = [
   { name: 'Overview', href: '#about' },
-  { name: 'Utilities', href: '#service-offers' },
   { name: 'Systems', href: '#systems' },
   { name: 'Architecture', href: '#architecture' },
   { name: 'Experience', href: '#experience' },
@@ -57,6 +56,7 @@ const Navbar: React.FC = () => {
     setActiveHref(href);
     const el = document.querySelector(href);
     if (el) {
+      el.closest('details')?.setAttribute('open', '');
       const top = el.getBoundingClientRect().top + window.scrollY - 80;
       window.scrollTo({ top, behavior: 'smooth' });
     }

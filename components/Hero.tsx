@@ -2,14 +2,14 @@ import React from 'react';
 import { ArrowRight, DatabaseZap, Github, Linkedin, MessageSquare, ShieldCheck, Sparkles } from 'lucide-react';
 import { PORTFOLIO_STATS, PROFILE } from '../constants';
 
-const featuredScreenshot = `${import.meta.env.BASE_URL}evidence/live/aix-pilot.png`;
-const featuredScreenshotPreview = `${import.meta.env.BASE_URL}evidence/live/preview/aix-pilot.webp`;
-const featuredScreenshotPreviewSmall = `${import.meta.env.BASE_URL}evidence/live/preview-sm/aix-pilot.webp`;
+const featuredScreenshot = `${import.meta.env.BASE_URL}evidence/live/aegisops.png`;
+const featuredScreenshotPreview = `${import.meta.env.BASE_URL}evidence/live/preview/aegisops.webp`;
+const featuredScreenshotPreviewSmall = `${import.meta.env.BASE_URL}evidence/live/preview-sm/aegisops.webp`;
 
 const Hero: React.FC = () => (
   <section id="about" className="hero-section">
     <div className="hero-copy">
-      <p className="eyebrow">Operational AI systems portfolio</p>
+      <p className="eyebrow">Selected work / Doeon Kim</p>
       <h1>{PROFILE.name}</h1>
       <p className="hero-subtitle">{PROFILE.title}</p>
       <p className="hero-summary">{PROFILE.intro}</p>
@@ -20,8 +20,8 @@ const Hero: React.FC = () => (
         <span>Terraform + Docker</span>
       </div>
       <div className="hero-actions">
-        <a href="#service-offers" className="primary-action">
-          Review proof and service lanes <ArrowRight size={18} />
+        <a href="#systems" className="primary-action">
+          Explore selected work <ArrowRight size={18} />
         </a>
         <a href="#systems" className="secondary-action">
           Review systems
@@ -45,7 +45,7 @@ const Hero: React.FC = () => (
           />
           <img
             src={featuredScreenshot}
-            alt="AIX Pilot deployed public demo screenshot"
+            alt="AegisOps incident review interface"
             fetchPriority="high"
             decoding="async"
             width={1440}
@@ -64,7 +64,7 @@ const Hero: React.FC = () => (
           />
           <img
             src={featuredScreenshot}
-            alt="AIX Pilot deployed public demo screenshot"
+            alt="AegisOps incident review interface"
             fetchPriority="high"
             decoding="async"
             width={1440}
@@ -76,10 +76,10 @@ const Hero: React.FC = () => (
         <Sparkles aria-hidden="true" />
         <div>
           <p className="eyebrow">Featured system</p>
-          <h2>AIX Pilot: a reviewable enterprise AI adoption workspace.</h2>
+          <h2>AegisOps — from incident evidence to a clear handoff.</h2>
         </div>
       </div>
-      <p className="hero-panel-note">The screenshot shows the deployed AIX Pilot public demo. Synthetic scenarios, explicit governance boundaries, and repository tests keep the evidence reviewable without implying a customer deployment.</p>
+      <p className="hero-panel-note">Logs and screenshots become a structured incident report. Inspect the deterministic replay suite, provider adapters, and persistent session handling behind the interface.</p>
       <dl className="stat-grid">
         {PORTFOLIO_STATS.map(stat => (
           <div key={stat.label}>
@@ -90,11 +90,11 @@ const Hero: React.FC = () => (
       </dl>
       <div className="system-strip">
         <DatabaseZap aria-hidden="true" />
-        <span>contextual ads only on public resource pages; sensitive workflows stay ad-free</span>
+        <span>Run the demo. Read the implementation. Reproduce the checks.</span>
       </div>
       <div className="system-strip">
         <ShieldCheck aria-hidden="true" />
-        <span>inspectable evidence, coarse consented counters, explicit privacy limits</span>
+        <span>Synthetic fixtures and measured results are labeled at their source.</span>
       </div>
     </aside>
   </section>

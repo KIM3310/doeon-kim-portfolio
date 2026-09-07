@@ -2,13 +2,13 @@ import { Project, SkillCategory, Profile, WorkExperience, EducationItem, Certifi
 
 export const PROFILE: Profile = {
   name: 'Doeon Kim',
-  title: 'Operational AI and infrastructure engineer building reviewable agent, data, and secure-workflow systems',
+  title: 'Software & AI systems',
   contactUrl:
     'https://kim3310-doeon-kim-portfolio.pages.dev/?offer=doeon-kim-portfolio&inquiry=architecture-scope-sprint#private-inquiry',
   github: 'https://github.com/KIM3310',
   linkedin: 'https://www.linkedin.com/in/doeon-kim-4742a2388',
   intro:
-    'Reviewable operational AI systems, benchmark labs, and architecture evidence for teams evaluating infrastructure or automation. Public proof stays separate from scoped services, with tests, synthetic-data boundaries, and explicit human-control gates.',
+    'I build software around difficult constraints: uncertain model output, limited memory, sensitive data, and failures that need a clear recovery path. Explore the implementations and reproduce the results.',
 };
 
 export const PORTFOLIO_STATS = [

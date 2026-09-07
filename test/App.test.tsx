@@ -4,6 +4,16 @@ import App from '../App';
 import { resolveProjectScrollTargetId } from '../components/Projects';
 
 describe('App component', () => {
+  it('shows five selected projects first and preserves the wider project collection', () => {
+    const { container } = render(<App />);
+    const titles = () => Array.from(container.querySelectorAll('.project-card h3')).map(node => node.textContent);
+    expect(titles()).toEqual(['AegisOps', 'MemoryFlow Lab', 'Nexus-Hive', 'StagePilot', 'Secure XL2HWP']);
+    fireEvent.click(screen.getByRole('button', { name: /Explore more projects/ }));
+    expect(titles().length).toBeGreaterThan(5);
+    expect(titles()).toContain('twincity-ui');
+    fireEvent.click(screen.getByRole('button', { name: 'Back to selected work' }));
+    expect(titles()).toHaveLength(5);
+  });
   beforeEach(() => {
     vi.spyOn(globalThis, 'fetch').mockImplementation(
       () => new Promise<Response>(() => undefined),
@@ -79,12 +89,13 @@ describe('App component', () => {
     render(<App />);
     expect(screen.getByText('Narrated Systems Gallery Reel')).toBeInTheDocument();
     expect(screen.getByText('English TTS')).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: /Transcript/ })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /Transcript/, hidden: true })).toBeInTheDocument();
   });
 
   it('keeps project evidence cards as the primary visual proof surface', () => {
     render(<App />);
     expect(screen.queryByText('Latest live proof')).not.toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: /Explore more projects/ }));
     expect(screen.getByAltText('agent-runtime-go visual evidence')).toBeInTheDocument();
     expect(screen.getByAltText('districtpilot-ai visual evidence')).toBeInTheDocument();
     expect(screen.getByAltText('twincity-ui visual evidence')).toBeInTheDocument();

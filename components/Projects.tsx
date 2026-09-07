@@ -3,6 +3,7 @@ import { PORTFOLIO_REEL, PROJECTS, REPOSITORY_COVERAGE, REPOSITORY_DEMO_URLS, ST
 import { laneForRepo } from '../commercialLanes';
 import { ChevronDown, ChevronUp, Cpu, ExternalLink, FileText, Film, Github, Layers3, LockKeyhole, Network, Volume2 } from 'lucide-react';
 import RepositoryCatalog from './RepositoryCatalog';
+import { SELECTED_WORK, selectedWorkFor } from "../selectedWork";
 import ServiceOffers from './ServiceOffers';
 
 const TOP_TAGS = 8;
@@ -34,6 +35,7 @@ export const resolveProjectScrollTargetId = (
 
 const Projects: React.FC = () => {
   const [filter, setFilter] = useState<string | null>(null);
+  const [showArchive, setShowArchive] = useState(false);
   const [showAllTags, setShowAllTags] = useState(false);
   const [offerRepo, setOfferRepo] = useState<string | null>(offerParamFromLocation);
 
@@ -51,22 +53,27 @@ const Projects: React.FC = () => {
     if (!targetId) return;
 
     requestAnimationFrame(() => {
-      document.getElementById(targetId)?.scrollIntoView(
+      const target = document.getElementById(targetId);
+      target?.closest("details")?.setAttribute("open", "");
+      target?.scrollIntoView(
         targetId.startsWith('lane-') ? { block: 'center' } : undefined,
       );
     });
   }, [highlightedLane]);
 
+  const curatedProjects = SELECTED_WORK.flatMap(work => PROJECTS.filter(project => project.title === work.repo));
+  const displayedProjects = showArchive ? [...curatedProjects, ...PROJECTS.filter(project => !selectedWorkFor(project.title))] : curatedProjects;
+
   const allTags = useMemo(() => {
     const counts = new Map<string, number>();
-    PROJECTS.forEach(p => p.tech.forEach(t => counts.set(t, (counts.get(t) || 0) + 1)));
+    displayedProjects.forEach(p => p.tech.forEach(t => counts.set(t, (counts.get(t) || 0) + 1)));
     return Array.from(counts.entries())
       .sort((a, b) => b[1] - a[1])
       .map(([tag, count]) => ({ tag, count }));
-  }, []);
+  }, [showArchive]);
 
   const visibleTags = showAllTags ? allTags : allTags.slice(0, TOP_TAGS);
-  const filtered = filter ? PROJECTS.filter(p => p.tech.includes(filter)) : PROJECTS;
+  const filtered = filter ? displayedProjects.filter(p => p.tech.includes(filter)) : displayedProjects;
 
   const renderProjectEvidence = (project: (typeof PROJECTS)[number]) => {
     if (!project.evidence) {
@@ -114,50 +121,10 @@ const Projects: React.FC = () => {
   return (
     <section id="projects" className="section-shell">
       <div className="section-inner">
-        <div className="section-heading">
-          <p className="eyebrow">Proof and services</p>
-          <h2>Public evidence before private scoping</h2>
-          <p>Start with runnable systems, synthetic demos, benchmark notes, and architecture routes. Scoped services are separate, bounded engagements; no customer deployment or outcome is implied by the public proof.</p>
-        </div>
-
-        <ServiceOffers offerRepo={offerRepo} highlightedLane={highlightedLane} />
-
         <div id="systems" className="section-heading systems-heading">
-          <p className="eyebrow">Systems</p>
+          <p className="eyebrow">Selected work</p>
           <h2>Built systems, with evidence</h2>
-          <p>Each card links to a runnable or inspectable system, then exposes the stack, runtime boundary, and system architecture route behind the build.</p>
-        </div>
-
-        <div className="evidence-reel" aria-label="Narrated systems gallery evidence reel">
-          <div className="evidence-reel-copy">
-            <span className="evidence-reel-eyebrow"><Film size={15} aria-hidden="true" /> Evidence reel</span>
-            <h3>{PORTFOLIO_REEL.title}</h3>
-            <p>{PORTFOLIO_REEL.summary}</p>
-            <div className="evidence-reel-meta" aria-label="Evidence reel metadata">
-              <span><Volume2 size={14} aria-hidden="true" /> English TTS</span>
-              <span>{PORTFOLIO_REEL.durationLabel}</span>
-              <span>{PORTFOLIO_REEL.generatedAt}</span>
-            </div>
-            <a
-              className="evidence-reel-link"
-              href={`${import.meta.env.BASE_URL}${PORTFOLIO_REEL.transcript}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FileText size={14} aria-hidden="true" /> Transcript
-            </a>
-          </div>
-          <div className="evidence-reel-media">
-            <video
-              controls
-              playsInline
-              preload="metadata"
-              poster={`${import.meta.env.BASE_URL}${PORTFOLIO_REEL.poster}`}
-              aria-label={PORTFOLIO_REEL.title}
-            >
-              <source src={`${import.meta.env.BASE_URL}${PORTFOLIO_REEL.video}`} type="video/mp4" />
-            </video>
-          </div>
+          <p>Five projects. Five different engineering problems. Open the code, run the checks, and inspect the decisions behind each result.</p>
         </div>
 
         <div className="filter-bar">
@@ -167,7 +134,7 @@ const Projects: React.FC = () => {
             className={`filter-button ${!filter ? 'is-active' : ''}`}
             aria-pressed={!filter}
           >
-            All ({PROJECTS.length})
+            All ({displayedProjects.length})
           </button>
           {visibleTags.map(({ tag, count }) => (
             <button
@@ -195,12 +162,13 @@ const Projects: React.FC = () => {
         <div className="project-grid">
           {filtered.map((project, idx) => {
             const repoName = repoNameFromGithub(project.github);
+            const work = selectedWorkFor(project.title);
             const architectureUrl = repoName ? SYSTEM_ARCHITECTURE_URLS[repoName] : undefined;
 
             return (
-            <article key={idx} className="project-card">
+            <article key={project.title} className={`project-card ${work ? "selected-project" : ""}`} id={`project-${project.title}`}>
               <div className="project-card-top">
-                <span>{String(idx + 1).padStart(2, '0')}</span>
+                <span>{work?.discipline ?? String(idx + 1).padStart(2, '0')}</span>
                 <div className="project-mark" />
               </div>
               <div className={projectEvidenceClassName(project.evidence)}>
@@ -209,8 +177,13 @@ const Projects: React.FC = () => {
               {project.access === 'private' && (
                 <span className="private-badge"><LockKeyhole size={13} /> Private case study</span>
               )}
-              <h3>{project.title}</h3>
-              <p className="project-copy">{project.description}</p>
+              <h3>{work?.title ?? project.title}</h3>
+              <p className="project-copy">{work?.problem ?? project.description}</p>
+              {work && <div className="project-engineering">
+                <p><strong>Design decision</strong>{work.decision}</p>
+                <p><strong>Reproduce</strong><code>{work.command}</code></p>
+                <p className="project-boundary">{work.boundary}</p>
+              </div>}
               <details className="project-business-disclosure">
                 <summary aria-label={`Show ${project.title} stack and architecture`}>
                   <span>
@@ -261,6 +234,7 @@ const Projects: React.FC = () => {
                 ))}
               </div>
               <div className="project-actions">
+                {work && <a href={`https://github.com/KIM3310/${work.repo}/blob/main/${work.proof}`} target="_blank" rel="noopener noreferrer"><FileText size={14} /> Tests</a>}
                 {project.github && (
                   <a href={project.github} target="_blank" rel="noopener noreferrer">
                     <Github size={14} /> Code
@@ -283,6 +257,8 @@ const Projects: React.FC = () => {
         {filtered.length === 0 && (
           <p className="empty-state">No projects match this filter.</p>
         )}
+
+        <div className="archive-toggle"><button type="button" className="secondary-action" aria-expanded={showArchive} onClick={() => { setShowArchive(!showArchive); setFilter(null); setShowAllTags(false); }}>{showArchive ? "Back to selected work" : `Explore more projects (${PROJECTS.length - SELECTED_WORK.length})`}</button></div>
 
         <div id="architecture" className="architecture-ledger" aria-label="System architecture by technology stack">
           <div className="coverage-intro">
@@ -319,7 +295,43 @@ const Projects: React.FC = () => {
           </div>
         </div>
 
-        <RepositoryCatalog offerRepo={offerRepo} />
+        <details className="secondary-work" open={Boolean(offerRepo) || undefined}>
+          <summary>More demos, resources, and collaboration</summary>
+        <div className="evidence-reel" aria-label="Narrated systems gallery evidence reel">
+          <div className="evidence-reel-copy">
+            <span className="evidence-reel-eyebrow"><Film size={15} aria-hidden="true" /> Evidence reel</span>
+            <h3>{PORTFOLIO_REEL.title}</h3>
+            <p>{PORTFOLIO_REEL.summary}</p>
+            <div className="evidence-reel-meta" aria-label="Evidence reel metadata">
+              <span><Volume2 size={14} aria-hidden="true" /> English TTS</span>
+              <span>{PORTFOLIO_REEL.durationLabel}</span>
+              <span>{PORTFOLIO_REEL.generatedAt}</span>
+            </div>
+            <a
+              className="evidence-reel-link"
+              href={`${import.meta.env.BASE_URL}${PORTFOLIO_REEL.transcript}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FileText size={14} aria-hidden="true" /> Transcript
+            </a>
+          </div>
+          <div className="evidence-reel-media">
+            <video
+              controls
+              playsInline
+              preload="metadata"
+              poster={`${import.meta.env.BASE_URL}${PORTFOLIO_REEL.poster}`}
+              aria-label={PORTFOLIO_REEL.title}
+            >
+              <source src={`${import.meta.env.BASE_URL}${PORTFOLIO_REEL.video}`} type="video/mp4" />
+            </video>
+          </div>
+        </div>
+
+          <ServiceOffers offerRepo={offerRepo} highlightedLane={highlightedLane} />
+          <RepositoryCatalog offerRepo={offerRepo} />
+        </details>
 
         <div id="coverage" className="coverage-ledger" aria-label="Active repository coverage ledger">
           <div className="coverage-intro">
