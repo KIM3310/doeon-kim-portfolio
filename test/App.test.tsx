@@ -4,16 +4,30 @@ import App from '../App';
 import { resolveProjectScrollTargetId } from '../components/Projects';
 
 describe('App component', () => {
-  it('shows five selected projects first and preserves the wider project collection', () => {
+  it('shows eight selected projects first and preserves the wider project collection', () => {
     const { container } = render(<App />);
     const titles = () => Array.from(container.querySelectorAll('.project-card h3')).map(node => node.textContent);
-    expect(titles()).toEqual(['AegisOps', 'MemoryFlow Lab', 'Nexus-Hive', 'StagePilot', 'Secure XL2HWP']);
+    expect(titles()).toEqual(['AegisOps', 'IdleMesh', 'MemoryFlow Lab', 'Nexus-Hive', 'StagePilot', 'Memory Change Gate', 'Secure XL2HWP', 'Tool-Call Fine-Tune Lab']);
     fireEvent.click(screen.getByRole('button', { name: /Explore more projects/ }));
-    expect(titles().length).toBeGreaterThan(5);
+    expect(titles().length).toBeGreaterThan(8);
     expect(titles()).toContain('twincity-ui');
     fireEvent.click(screen.getByRole('button', { name: 'Back to selected work' }));
-    expect(titles()).toHaveLength(5);
+    expect(titles()).toHaveLength(8);
   });
+  it('keeps private selected work inspectable without publishing inaccessible source links', () => {
+    const { container } = render(<App />);
+    for (const repo of ['idlemesh', 'memory-test-master-change-gate']) {
+      const card = container.querySelector(`#project-${repo}`) as HTMLElement;
+      expect(within(card).getByText('Private case study')).toBeInTheDocument();
+      expect(within(card).getByText('Verification scope')).toBeInTheDocument();
+      expect(within(card).queryByRole('link', { name: 'Code' })).not.toBeInTheDocument();
+      expect(within(card).queryByRole('link', { name: 'Tests' })).not.toBeInTheDocument();
+      expect(within(card).queryByText(/make install/)).not.toBeInTheDocument();
+    }
+    const publicCard = container.querySelector('#project-tool-call-finetune-lab') as HTMLElement;
+    expect(within(publicCard).getByRole('link', { name: 'Tests' })).toHaveAttribute('href', 'https://github.com/KIM3310/tool-call-finetune-lab/blob/main/tests/test_evaluation_integrity.py');
+  });
+
   beforeEach(() => {
     vi.spyOn(globalThis, 'fetch').mockImplementation(
       () => new Promise<Response>(() => undefined),
@@ -167,6 +181,12 @@ describe('App component', () => {
     expect(footer).toBeInTheDocument();
     expect(within(resourceSection as HTMLElement).queryByRole('heading', { name: 'Contact about a resource or collaboration' })).not.toBeInTheDocument();
     expect(within(footer as HTMLElement).getByRole('heading', { name: 'Contact about a resource or collaboration' })).toBeInTheDocument();
+  });
+
+  it('resolves selected-project deep links used by the profile', () => {
+    expect(resolveProjectScrollTargetId('project-idlemesh')).toBe('project-idlemesh');
+    expect(resolveProjectScrollTargetId('project-memory-test-master-change-gate')).toBe('project-memory-test-master-change-gate');
+    expect(resolveProjectScrollTargetId('project-unknown')).toBeNull();
   });
 
   it('keeps private inquiry deep links focused on the form', () => {

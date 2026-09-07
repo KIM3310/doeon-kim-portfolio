@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img">
+<title>Same task. Fresh lease.</title>
+<desc>Lease A → Interrupted → Lease B. Local HTTP recovery / real CPU work / injected failure</desc>
+<rect width="1280" height="720" fill="#f2f5fa"/>
+<g font-family="Arial, sans-serif" fill="#15243b">
+<text x="72" y="105" font-size="24" letter-spacing="3" fill="#3563a8">ATTEMPT OWNERSHIP</text>
+<text x="72" y="185" font-size="52" font-weight="700">Same task. Fresh lease.</text>
+<rect x="72" y="285" width="336" height="180" rx="18" fill="white" stroke="#bccae0" stroke-width="2"/>
+<text x="96" y="333" font-size="24" fill="#3563a8">01</text>
+<text x="96" y="385" font-size="29" font-weight="700">Lease A</text>
+<text x="96" y="427" font-size="20">Late result: rejected</text>
+<path d="M420 375h40m-10-10 10 10-10 10" fill="none" stroke="#3563a8" stroke-width="3"/>
+<rect x="472" y="285" width="336" height="180" rx="18" fill="white" stroke="#bccae0" stroke-width="2"/>
+<text x="496" y="333" font-size="24" fill="#3563a8">02</text>
+<text x="496" y="385" font-size="29" font-weight="700">Interrupted</text>
+<text x="496" y="427" font-size="20">New token assigned</text>
+<path d="M820 375h40m-10-10 10 10-10 10" fill="none" stroke="#3563a8" stroke-width="3"/>
+<rect x="872" y="285" width="336" height="180" rx="18" fill="white" stroke="#bccae0" stroke-width="2"/>
+<text x="896" y="333" font-size="24" fill="#3563a8">03</text>
+<text x="896" y="385" font-size="29" font-weight="700">Lease B</text>
+<text x="896" y="427" font-size="20">Current result: accepted</text>
+<text x="72" y="610" font-size="24" fill="#465971">Local HTTP recovery / real CPU work / injected failure</text>
+</g></svg>

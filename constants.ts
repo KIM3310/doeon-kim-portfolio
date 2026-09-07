@@ -530,6 +530,38 @@ export const PROJECTS: Project[] = [
     architectureSignal: 'SwiftUI, inclusive UX, optional backend sync',
     proofPath: 'Runtime walkthrough, repository evidence, architecture notes, and local quality gate',
   },
+  {
+    title: 'idlemesh',
+    description: 'Local compute coordination with attempt ownership, worker execution, and recovery.',
+    tech: ['TypeScript', 'SQLite', 'Scheduling', 'Recovery'],
+    evidence: 'evidence/idlemesh-recovery.svg',
+    access: 'private',
+    market: 'Operators coordinating trusted local compute devices',
+    architectureSignal: 'SQLite scheduler, HTTP control plane, worker threads, React dashboard',
+    proofPath: 'Private implementation: 17 tests and an isolated HTTP recovery exercise with real CPU work',
+  },
+  {
+    title: 'memory-test-master-change-gate',
+    description: 'Snapshot-bound dependency checks, approval gates, and reproducible review bundles.',
+    tech: ['Python', 'Data contracts', 'Integrity', 'Rollback'],
+    evidence: 'evidence/memory-change-gate.svg',
+    access: 'private',
+    market: 'Engineers reviewing master-data changes and downstream dependencies',
+    architectureSignal: 'Domain rules, source snapshots, approval digests, bounded archive verification',
+    proofPath: 'Private implementation: 127 tests and byte-for-byte exports across eight synthetic scenarios',
+  },
+  {
+    title: 'tool-call-finetune-lab',
+    description: 'Tool-call data preparation and strict evaluator contracts with a CPU reproduction path.',
+    tech: ['Python', 'Evaluation', 'Data integrity', 'QLoRA'],
+    github: 'https://github.com/KIM3310/tool-call-finetune-lab',
+    evidence: 'evidence/tool-call-evaluation.svg',
+    market: 'Engineers preparing tool-call training data and checking evaluator correctness',
+    architectureSignal: 'Leakage-aware context, complete JSON scoring, grouped splits, optional GPU pipeline',
+    proofPath: '199 CPU tests and source-fingerprinted synthetic contract evidence; no model-quality claim',
+  },
+
+
 ];
 
 export const STACK_ARCHITECTURE_LANES: StackArchitectureLane[] = [

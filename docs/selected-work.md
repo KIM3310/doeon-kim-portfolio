@@ -1,11 +1,11 @@
 # Selected work
 
-The gallery starts with five complementary implementations: AegisOps, MemoryFlow Lab, Nexus-Hive, StagePilot, and Secure XL2HWP. `selectedWork.ts` defines this order and the short problem, decision, reproduction command, and evidence links used by the project cards.
+The gallery leads with eight complementary implementations in this order: AegisOps, IdleMesh, MemoryFlow Lab, Nexus-Hive, StagePilot, Memory Change Gate, Secure XL2HWP, and Tool-Call Fine-Tune Lab. `selectedWork.ts` owns the order and each problem, design decision, reproduction command, and evidence boundary.
 
-The first card introduces a complete AI workflow. The next four show quantitative systems reasoning, controlled SQL execution, runtime experimentation, and local document automation. The default view shows five projects. The existing wider collection remains available through “Explore more projects”; returning to the selected view clears a stale filter.
+AegisOps introduces a complete AI workflow. The other projects show recovery and scheduling, quantitative systems reasoning, controlled SQL execution, runtime experimentation, change integrity, document automation, and evaluation/data integrity. IdleMesh and Memory Change Gate retain private source: their cards show a technical summary and the scope of completed local verification, with no inaccessible Code or Tests links. These summaries do not claim public reproducibility. Fine-Tune Lab demonstrates evaluator correctness, not measured model-quality gains.
 
-Existing service/resource routes, private inquiry handling, consent controls, and static assets are preserved. Service proposals and the previous narrated reel appear later in a disclosure. The project section precedes work history.
+The existing wider collection remains available through “Explore more projects”; returning clears stale filters. Service/resource routes, inquiry handling, consent controls, and older assets remain available. Project details precede work history.
 
-Run `npm run verify` for TypeScript, Cloudflare binding types, component and backend contract tests, content checks, and the static production build. The interaction test confirms the default order and both directions of the wider-project toggle.
+`npm run verify` covers types, component/backend contracts, content checks, and the static build. Interaction tests cover the ordered eight cards, both toggle directions, and private-source link handling.
 
-The Sites deployment is an owner-private preview of the static gallery. The original Cloudflare Pages deployment and its D1-backed APIs are separate; publishing this preview does not migrate that backend. The inquiry component retains the existing canonical API and its unavailable-state fallback.
+The public static gallery is served on GitHub Pages. The Sites copy is an owner-private preview. The older Cloudflare service and its D1 APIs are separate; these static deployments do not migrate that backend.

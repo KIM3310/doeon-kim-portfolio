@@ -1,3 +1,4 @@
+import { selectedWorkFor } from '../selectedWork';
 import { describe, it, expect } from 'vitest';
 import { CERTIFICATIONS, EDUCATION, INTERX_ROLE, LIVE_SERVICE_SCREENS, MILITARY_ROLE, PROFILE, PROJECTS, REPOSITORY_DEMO_URLS, SKILLS, PORTFOLIO_REEL, PORTFOLIO_STATS, REPOSITORY_COVERAGE, STACK_ARCHITECTURE_LANES, SYSTEM_ARCHITECTURE_URLS } from '../constants';
 
@@ -103,7 +104,11 @@ describe('PROJECTS', () => {
   it('does not expose GitHub links for private case studies', () => {
     for (const p of PROJECTS.filter(project => project.access === 'private')) {
       expect(p.github).toBeUndefined();
-      expect(p.demo).toBeTruthy();
+      if (p.demo) expect(p.demo).toMatch(/^https:\/\//);
+      else {
+        expect(selectedWorkFor(p.title)?.boundary).toContain('Private source');
+        expect(p.proofPath).toContain('Private implementation');
+      }
     }
   });
 
