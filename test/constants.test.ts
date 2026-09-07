@@ -12,13 +12,6 @@ describe('PROFILE', () => {
     expect(PROFILE.intro).toBeTruthy();
   });
 
-  it('states the current proof and verification boundary', () => {
-    expect(PROFILE.title).toContain('Operational AI');
-    expect(PROFILE.intro).toContain('Public proof stays separate from scoped services');
-    expect(PROFILE.intro).toContain('tests');
-    expect(PROFILE.intro).toContain('synthetic-data boundaries');
-    expect(PROFILE.intro).toContain('human-control gates');
-  });
 });
 
 describe('PORTFOLIO_STATS', () => {

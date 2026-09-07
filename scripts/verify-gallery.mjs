@@ -98,7 +98,7 @@ const checks = [
   { file: 'public/privacy-support/ad-data.html', mustInclude: ['Advertising and aggregate data policy', 'DNT or Global Privacy Control', 'Cloudflare D1', 'Personal, sensitive, raw, event-level, and re-identifiable data is not sold'] },
   { file: 'public/ads.txt', mustInclude: ['google.com, pub-4973160293737562, DIRECT, f08c47fec0942fa0'] },
   { file: 'public/robots.txt', mustInclude: ['/sitemap.xml', '/resources/ad-data-sitemap.xml'] },
-  { file: 'components/Hero.tsx', mustInclude: ['TypeScript + React', 'Python + FastAPI', 'SQL + Spark', 'Terraform + Docker', 'evidence/live/preview/aix-pilot.webp', 'type="image/webp"'] },
+  { file: 'components/Hero.tsx', mustInclude: ['TypeScript + React', 'Python + FastAPI', 'SQL + Spark', 'Terraform + Docker', 'evidence/live/preview/aegisops.webp', 'type="image/webp"'] },
   { file: 'index.css', mustInclude: ['--premium-shadow', '--radius-xl', 'commercial-lane-number', 'commercial-lane-proof', 'backdrop-filter: blur(26px)', 'prefers-reduced-motion'] },
   { file: 'components/Projects.tsx', mustInclude: ['STACK_ARCHITECTURE_LANES', 'SYSTEM_ARCHITECTURE_URLS', 'System architecture by stack lane', 'docs/system-architecture.md', 'Architecture'] },
   { file: 'docs/final-architecture-notes.md', mustInclude: ['seven commercial operating names', 'private Cloudflare Pages Function', 'DaesikPage', 'Toss/PortOne/Stripe', 'Local build notes are captured in the repository scripts and build workflow.', '34 unique public demo URLs', '35 editable coverage repositories', 'public API proof cards', 'KIM3310', 'doeon-kim-portfolio'] },

@@ -70,8 +70,8 @@ const App: React.FC = () => (
     <Navbar />
     <main id="main-content">
       <Hero />
-      <Experience />
       <Projects />
+      <Experience />
       <Skills />
     </main>
     <footer id="contact" className="footer-shell">
