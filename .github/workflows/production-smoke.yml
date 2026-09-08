@@ -5,6 +5,7 @@ on:
   workflow_run:
     workflows:
       - pages-auto-deploy
+      - github-pages-deploy
     types:
       - completed
   schedule:
@@ -29,6 +30,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
 
+      - name: Setup Node
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: "22"
+
       - name: Resolve production base URL
         run: |
           if [ -n "${PUBLIC_BASE_URL:-}" ]; then
@@ -39,3 +45,7 @@ jobs:
 
       - name: Smoke test production endpoints
         run: bash scripts/smoke_production.sh "$BASE_URL"
+
+      - name: Verify public selected-work gallery and built assets
+        if: always()
+        run: node scripts/smoke_static.mjs https://kim3310.github.io/doeon-kim-portfolio/ "Doeon Kim — Selected Work"
