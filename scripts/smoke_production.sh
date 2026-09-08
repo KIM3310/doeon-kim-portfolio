@@ -96,7 +96,8 @@ check_dynamic_request() {
   return 1
 }
 
-check_endpoint "/" "text/html" "<title>KIM3310 Systems | Agent Reliability &amp; Operational AI Services</title>"
+check_endpoint "/" "text/html" "<title>Doeon Kim — Selected Work</title>"
+node scripts/smoke_static.mjs "$base" "Doeon Kim — Selected Work"
 check_endpoint "/privacy" "text/html" "<h1>Privacy</h1>"
 check_endpoint "/terms" "text/html" "<h1>Terms</h1>"
 check_endpoint "/service-offer.json" "application/json" '"name": "KIM3310 Systems"'

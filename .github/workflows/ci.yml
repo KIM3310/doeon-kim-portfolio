@@ -32,3 +32,6 @@ jobs:
 
       - name: Verify
         run: npm run verify
+
+      - name: Test deployed asset validation
+        run: node --test scripts/smoke_static.test.mjs
